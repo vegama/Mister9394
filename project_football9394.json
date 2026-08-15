@@ -1,0 +1,30 @@
+{
+  "project": "Mister 93/94",
+  "checkpoint": "0.3.1",
+  "fork_stage": "foundation-gameplay-block-01",
+  "season_start": "1993-94",
+  "runtime_dataset": "data/football9394/historical_snapshot.json",
+  "principles": [
+    "football-only-repository",
+    "new-career-selects-league-and-team",
+    "manager-inbox-prioritises-real-decisions",
+    "persistent-user-lineup-drives-match-engine",
+    "fast-deterministic-background-simulation",
+    "persistent-results-never-recomputed-on-navigation",
+    "season-rollover-preserves-history",
+    "competition-specific-1993-94-rules",
+    "lowest-represented-domestic-division-does-not-relegate-into-missing-tier",
+    "player-age-frozen-until-aging-design-is-enabled",
+    "ai-market-and-contracts-persist-across-seasons",
+    "historical-small-portraits-are-used-compactly-not-upscaled-as-hero-images"
+  ],
+  "gates": {
+    "career_and_api_targeted": "PASS",
+    "selectable_league_creation": "18/18 selectable regular leagues create a valid career with legal XI",
+    "multiseason_rollover": "PASS 1993-94 -> 1994-95 -> 1995-96",
+    "background_daily_benchmark": "~1.092s -> ~0.110s mean across 3 seeds (~89.9% reduction)",
+    "frontend_sfc_structure": "PASS",
+    "vite_production_build": "NOT CERTIFIED until local npm dependencies can be materialized",
+    "targeted_test_groups": "48/48 passed (25 career+API, 16 economy/AI/market/development/pyramid/calendar, 7 tournaments/special/international/national)"
+  }
+}

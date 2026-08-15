@@ -1,0 +1,546 @@
+from __future__ import annotations
+
+from dataclasses import asdict
+import os
+from pathlib import Path
+from fastapi import FastAPI, HTTPException
+from pydantic import BaseModel, Field
+
+from .laws import LAWS_1993_94
+from .match_engine import (
+    FootballMatchEngine9394,
+    FootballTactics9394,
+    Footballer9394,
+    SPAIN_PRIMERA_SIMULATION_1993_94,
+    TeamSheet9394,
+)
+from .registry import UnresolvedHistoricalRulesError, default_registry_9394
+from .rules import SPAIN_PRIMERA_1993_94
+from .snapshot_runtime import default_runtime_snapshot
+from .team_builder import build_snapshot_team_sheet
+from .standings import LeagueMatch9394, build_league_table
+from .source_rules import audit_snapshot_competitions
+from .pyramid_activation import audit_competition_activation
+from .pyramid_floor import active_pyramid_floors, is_floor_league
+from .world_career import simulate_world_season_1993_94
+from .manager_career import ManagerCareerRuntime9394, ManagerCareerStore9394, career_selectable_leagues
+from .national_teams import national_team_catalog, national_team_snapshot
+
+app = FastAPI(title="Míster 93/94 API", version="0.3.1")
+
+
+class TacticsPayload(BaseModel):
+    formation: str = "4-4-2"
+    mentality: str = "balanced"
+    tempo: str = "normal"
+    pressing: str = "medium"
+    directness: str = "mixed"
+    defensive_line: str = "medium"
+    width: str = "normal"
+    offside_trap: bool = False
+    marking: str = "zonal"
+
+
+class SimulatePayload(BaseModel):
+    home_team_id: int | None = None
+    away_team_id: int | None = None
+    home_name: str = "Racing de Santander"
+    away_name: str = "Real Sociedad"
+    home_level: int = Field(72, ge=45, le=95)
+    away_level: int = Field(76, ge=45, le=95)
+    seed: int = 9394
+    home_tactics: TacticsPayload = Field(default_factory=TacticsPayload)
+    away_tactics: TacticsPayload = Field(default_factory=TacticsPayload)
+
+
+
+class WorldSeasonPayload(BaseModel):
+    seed: int = 9394
+
+
+class CreateManagerCareerPayload(BaseModel):
+    team_id: int = 16
+    league_id: int | None = None
+    seed: int = 9394
+    through_matchday: int = Field(7, ge=0, le=44)
+
+
+class CareerTacticsPayload(TacticsPayload):
+    pass
+
+
+class CareerSelectionPayload(BaseModel):
+    starter_ids: list[int] | None = None
+    bench_ids: list[int] | None = None
+    auto_select: bool = False
+
+
+class TransferOfferPayload(BaseModel):
+    fee_offer: int = Field(ge=0)
+    salary_offer: int = Field(default=0, ge=0)
+    contract_years: int = Field(default=3, ge=1, le=6)
+
+
+class ContractRenewalPayload(BaseModel):
+    years: int = Field(default=3, ge=1, le=6)
+    salary_offer: int | None = Field(default=None, ge=0)
+
+
+CAREER_SAVE_ROOT = Path(os.environ.get(
+    "MISTER9394_SAVE_DIR",
+    Path(__file__).resolve().parents[3] / "data" / "football9394" / "careers",
+))
+
+
+def _career_store() -> ManagerCareerStore9394:
+    return ManagerCareerStore9394(CAREER_SAVE_ROOT)
+
+
+def _load_manager_career(career_id: str) -> ManagerCareerRuntime9394:
+    try:
+        return ManagerCareerRuntime9394(_career_store().load(career_id))
+    except FileNotFoundError as exc:
+        raise HTTPException(status_code=404, detail="Carrera Míster 93/94 no encontrada") from exc
+    except ValueError as exc:
+        raise HTTPException(status_code=409, detail=str(exc)) from exc
+
+
+def _player(team: str, index: int, position: str, level: int) -> Footballer9394:
+    goalkeeper = level if position == "GK" else 8
+    return Footballer9394(
+        id=f"{team}-{index}", name=f"{team} {index+1}", position=position, overall=level,
+        pace=level, stamina=level, technique=level, short_pass=level, long_pass=level,
+        creativity=level, finishing=level, heading=level, tackling=level, marking=level,
+        positioning=level, discipline=72, leadership=70, goalkeeping=goalkeeper,
+    )
+
+
+def _sheet(name: str, level: int, tactics: TacticsPayload) -> TeamSheet9394:
+    safe = "-".join(name.casefold().split())
+    positions = ("GK", "RB", "CB", "CB", "LB", "RM", "CM", "CM", "LM", "ST", "ST")
+    bench_positions = ("GK", "DF", "DF", "MF", "ST")
+    starters = tuple(_player(safe, i, pos, level) for i, pos in enumerate(positions))
+    bench = tuple(_player(f"{safe}-b", i, pos, max(45, level - 3)) for i, pos in enumerate(bench_positions))
+    return TeamSheet9394(
+        team_id=safe,
+        team_name=name,
+        starters=starters,
+        bench=bench,
+        tactics=FootballTactics9394(**tactics.model_dump()),
+    )
+
+
+@app.get("/api/football9394/health")
+def health() -> dict:
+    return {
+        "ok": True,
+        "season": "1993-94",
+        "players_per_team": LAWS_1993_94.players_per_team,
+        "max_used_substitutes": LAWS_1993_94.max_used_substitutes,
+        "domain": "football-native",
+        "historical_data": {
+            "loaded": True,
+            "counts": default_runtime_snapshot().counts,
+        },
+    }
+
+
+@app.get("/api/football9394/universe")
+def universe() -> dict:
+    return default_runtime_snapshot().universe_summary()
+
+
+@app.get("/api/football9394/competitions")
+def competitions(include_blocked: bool = False, include_non_admitted: bool = False) -> list[dict]:
+    rows = default_runtime_snapshot().competitions()
+    audit_rows = audit_snapshot_competitions(rows)
+    audits = {(entry.ref.kind, entry.ref.source_id): entry for entry in audit_rows}
+    activation_rows, _ = audit_competition_activation(rows, audit_rows)
+    activation = {(entry.kind, entry.source_id): entry for entry in activation_rows}
+    floors = active_pyramid_floors(rows)
+    output = []
+    for row in rows:
+        key = (row["kind"], row["source_id"])
+        audit = audits[key]
+        active = activation[key]
+        if not include_non_admitted and not row.get("admitted", True):
+            continue
+        if not include_blocked and not active.active:
+            continue
+        floor = is_floor_league(row, floors)
+        output.append({**row, "rule_status": audit.status, "simulation_ready": audit.simulation_ready,
+                       "pyramid_eligible": active.pyramid_eligible, "active": active.active,
+                       "activation_reason": active.reason, "ruleset_id": audit.ruleset_id,
+                       "format_id": audit.format_id, "rule_notes": list(audit.notes),
+                       "pyramid_floor": floor, "sporting_relegation_enabled": not floor})
+    return output
+
+
+@app.get("/api/football9394/rule-audit")
+def rule_audit() -> dict:
+    rows = default_runtime_snapshot().competitions()
+    entries = audit_snapshot_competitions(rows)
+    activation, pyramids = audit_competition_activation(rows, entries)
+    floors = active_pyramid_floors(rows)
+    terminal_excluded = [entry for entry in activation if not entry.active and entry.reason == "source_not_admitted"]
+    unresolved = [entry for entry in activation if not entry.active and entry.reason != "source_not_admitted"]
+    return {
+        "season": "1993-94",
+        "total": len(entries),
+        "simulation_ready": sum(entry.simulation_ready for entry in entries),
+        "active": sum(entry.active for entry in activation),
+        "excluded": len(terminal_excluded),
+        "non_admitted": len(terminal_excluded),
+        "unresolved": len(unresolved),
+        "all_source_rows_closed": len(terminal_excluded) + sum(entry.active for entry in activation) == len(entries) and not unresolved,
+        "pyramid_floors": {country: {
+            "lowest_level": floor.lowest_level, "league_source_ids": list(floor.league_source_ids),
+            "sporting_relegation_enabled": False,
+        } for country, floor in sorted(floors.items())},
+        "pyramids": {country: {
+            "levels": list(state.league_levels), "active": state.active, "reason": state.reason
+        } for country, state in sorted(pyramids.items())},
+        "competitions": [
+            {**audit.to_dict(), "pyramid_eligible": active.pyramid_eligible,
+             "active": active.active, "activation_reason": active.reason}
+            for audit, active in zip(entries, activation, strict=True)
+        ],
+    }
+
+
+@app.get("/api/football9394/teams")
+def teams(league_id: int | None = None) -> list[dict]:
+    return default_runtime_snapshot().teams(league_id=league_id)
+
+
+@app.get("/api/football9394/teams/{team_id}")
+def team(team_id: int) -> dict:
+    row = default_runtime_snapshot().team(team_id)
+    if row is None:
+        raise HTTPException(status_code=404, detail=f"Equipo MDB {team_id} no encontrado en el snapshot 1993-94")
+    return row
+
+
+@app.get("/api/football9394/teams/{team_id}/squad")
+def team_squad(team_id: int) -> list[dict]:
+    universe = default_runtime_snapshot()
+    if universe.team(team_id) is None:
+        raise HTTPException(status_code=404, detail=f"Equipo MDB {team_id} no encontrado en el snapshot 1993-94")
+    return universe.squad(team_id)
+
+
+@app.get("/api/football9394/players")
+def players(query: str = "", limit: int = 20, exclude_team_id: int | None = None) -> list[dict]:
+    return default_runtime_snapshot().search_players(query, limit=limit, exclude_team_id=exclude_team_id)
+
+
+@app.get("/api/football9394/teams/{team_id}/calendar")
+def team_calendar(team_id: int) -> list[dict]:
+    universe = default_runtime_snapshot()
+    if universe.team(team_id) is None:
+        raise HTTPException(status_code=404, detail=f"Equipo MDB {team_id} no encontrado en el snapshot 1993-94")
+    return universe.team_calendar(team_id)
+
+
+@app.get("/api/football9394/players/{player_id}")
+def player(player_id: int) -> dict:
+    row = default_runtime_snapshot().player(player_id)
+    if row is None:
+        raise HTTPException(status_code=404, detail=f"Jugador MDB {player_id} no encontrado en el snapshot 1993-94")
+    return row
+
+
+@app.get("/api/football9394/leagues/{league_id}/calendar")
+def league_calendar(league_id: int) -> list[dict]:
+    universe = default_runtime_snapshot()
+    if league_id not in universe.leagues_by_id:
+        raise HTTPException(status_code=404, detail=f"Liga MDB {league_id} no encontrada en el snapshot 1993-94")
+    return universe.league_calendar(league_id)
+
+
+def _historical_team_level(team_id: int) -> int:
+    universe = default_runtime_snapshot()
+    values = sorted((int(p.get("overall") or 0) for p in universe.squad(team_id) if p.get("overall")), reverse=True)
+    if not values:
+        return 62
+    core = values[:11]
+    return max(45, min(95, round(sum(core) / len(core))))
+
+
+@app.get("/api/football9394/career-options")
+def manager_career_options() -> dict:
+    return {"season": "1993-94", "leagues": career_selectable_leagues(default_runtime_snapshot())}
+
+
+@app.post("/api/football9394/careers")
+def create_manager_career(payload: CreateManagerCareerPayload) -> dict:
+    try:
+        career = ManagerCareerRuntime9394.create(
+            team_id=payload.team_id, league_id=payload.league_id, seed=payload.seed, through_matchday=payload.through_matchday
+        )
+    except ValueError as exc:
+        raise HTTPException(status_code=409, detail=str(exc)) from exc
+    _career_store().save(career.state)
+    return career.snapshot()
+
+
+@app.get("/api/football9394/careers/{career_id}")
+def get_manager_career(career_id: str) -> dict:
+    return _load_manager_career(career_id).snapshot()
+
+
+@app.post("/api/football9394/careers/{career_id}/advance")
+def advance_manager_career(career_id: str) -> dict:
+    career = _load_manager_career(career_id)
+    result = career.advance_day()
+    _career_store().save(career.state)
+    return {**result, "career": career.snapshot()}
+
+
+@app.post("/api/football9394/careers/{career_id}/play-next")
+def play_next_manager_matchday(career_id: str) -> dict:
+    career = _load_manager_career(career_id)
+    try:
+        snapshot = career.play_next_matchday()
+    except ValueError as exc:
+        raise HTTPException(status_code=409, detail=str(exc)) from exc
+    _career_store().save(career.state)
+    return snapshot
+
+
+@app.put("/api/football9394/careers/{career_id}/tactics")
+def update_manager_tactics(career_id: str, payload: CareerTacticsPayload) -> dict:
+    career = _load_manager_career(career_id)
+    try:
+        career.set_tactics(payload.model_dump())
+    except (TypeError, ValueError) as exc:
+        raise HTTPException(status_code=422, detail=str(exc)) from exc
+    _career_store().save(career.state)
+    return career.snapshot()
+
+
+@app.put("/api/football9394/careers/{career_id}/selection")
+def update_manager_selection(career_id: str, payload: CareerSelectionPayload) -> dict:
+    career = _load_manager_career(career_id)
+    try:
+        if payload.auto_select:
+            auto = career._auto_selection()
+            selection = career.set_selection(auto["starter_ids"], auto["bench_ids"])
+        else:
+            if payload.starter_ids is None:
+                raise ValueError("Debes enviar el once titular o activar la selección automática.")
+            selection = career.set_selection(payload.starter_ids, payload.bench_ids)
+    except (KeyError, TypeError, ValueError) as exc:
+        raise HTTPException(status_code=422, detail=str(exc)) from exc
+    _career_store().save(career.state)
+    return {"selection": selection, "career": career.snapshot()}
+
+
+@app.get("/api/football9394/careers/{career_id}/dashboard")
+def manager_career_dashboard(career_id: str) -> dict:
+    return _load_manager_career(career_id).manager_dashboard()
+
+
+@app.get("/api/football9394/careers/{career_id}/calendar")
+def manager_career_calendar(career_id: str) -> list[dict]:
+    return _load_manager_career(career_id).career_calendar()
+
+
+@app.get("/api/football9394/careers/{career_id}/leagues/{source_id}/standings")
+def manager_career_league_standings(career_id: str, source_id: int) -> dict:
+    career = _load_manager_career(career_id)
+    rows = career.league_standings(source_id)
+    controlled = int(career.state.get("league_id") or 0)
+    progress = (career.state.get("world_leagues") or {}).get(str(source_id)) if source_id != controlled else None
+    if source_id != controlled and progress is None:
+        raise HTTPException(status_code=409, detail="competición con runtime especializado aún no incremental")
+    return {
+        "source_id": int(source_id), "rows": rows,
+        "completed_round": int(progress.get("completed_round") or 0) if progress else int(career.state.get("completed_matchday") or 0),
+        "result_count": len(progress.get("results") or []) if progress else len(career.state.get("results") or []),
+    }
+
+
+@app.get("/api/football9394/careers/{career_id}/market")
+def manager_career_market(career_id: str, query: str = "", limit: int = 20) -> list[dict]:
+    career = _load_manager_career(career_id)
+    return career.search_market(query, limit=limit)
+
+
+@app.post("/api/football9394/careers/{career_id}/transfers/{player_id}")
+def manager_career_transfer(career_id: str, player_id: int, payload: TransferOfferPayload) -> dict:
+    career = _load_manager_career(career_id)
+    try:
+        decision = career.negotiate_player(
+            player_id, fee_offer=payload.fee_offer, salary_offer=payload.salary_offer,
+            contract_years=payload.contract_years,
+        )
+    except KeyError as exc:
+        raise HTTPException(status_code=404, detail=str(exc)) from exc
+    except ValueError as exc:
+        raise HTTPException(status_code=409, detail=str(exc)) from exc
+    _career_store().save(career.state)
+    return {"decision": decision, "career": career.snapshot()}
+
+
+@app.post("/api/football9394/careers/{career_id}/contracts/{player_id}/renew")
+def manager_career_renew_contract(career_id: str, player_id: int, payload: ContractRenewalPayload) -> dict:
+    career = _load_manager_career(career_id)
+    try:
+        decision = career.renew_player_contract(player_id, years=payload.years, salary_offer=payload.salary_offer)
+    except KeyError as exc:
+        raise HTTPException(status_code=404, detail=str(exc)) from exc
+    except ValueError as exc:
+        raise HTTPException(status_code=409, detail=str(exc)) from exc
+    _career_store().save(career.state)
+    return {"decision": decision, "career": career.snapshot()}
+
+
+@app.get("/api/football9394/careers/{career_id}/economy")
+def manager_career_economy(career_id: str) -> dict:
+    career = _load_manager_career(career_id)
+    return {
+        "finances": dict(career.state.get("finances") or {}),
+        "ledger": list(career.state.get("economy_ledger") or [])[-100:],
+        "ai_transfers": list(career.state.get("ai_transfer_history") or [])[-100:],
+        "contracts": list(career.state.get("contract_history") or [])[-100:],
+    }
+
+
+@app.get("/api/football9394/careers/{career_id}/world")
+def manager_career_world(career_id: str) -> dict:
+    career = _load_manager_career(career_id)
+    snap = career.snapshot()
+    return {
+        "game_date": snap["game_date"],
+        "world_progress": snap["world_progress"],
+        "special_progress": snap["special_progress"],
+        "tournament_progress": snap["tournament_progress"],
+        "international_history": snap["international_history"],
+        "recent_world_events": snap["recent_world_events"],
+    }
+
+
+@app.get("/api/football9394/national-teams")
+def national_teams() -> list[dict]:
+    universe = default_runtime_snapshot()
+    return [
+        {"country_id": row.country_id, "name": row.name, "eligible_players": row.eligible_players,
+         "average_top_22": row.average_top_22}
+        for row in national_team_catalog(universe)
+    ]
+
+
+@app.get("/api/football9394/national-teams/{country_id}")
+def national_team(country_id: int, career_id: str | None = None) -> dict:
+    universe = default_runtime_snapshot()
+    development = None
+    if career_id:
+        development = _load_manager_career(career_id).state.get("player_development")
+    try:
+        return national_team_snapshot(universe, country_id, development=development)
+    except KeyError as exc:
+        raise HTTPException(status_code=404, detail=str(exc)) from exc
+    except ValueError as exc:
+        raise HTTPException(status_code=409, detail=str(exc)) from exc
+
+
+@app.get("/api/football9394/career/bootstrap")
+def career_bootstrap(team_id: int = 16, through_matchday: int = 7) -> dict:
+    universe = default_runtime_snapshot()
+    team = universe.team(team_id)
+    if team is None:
+        raise HTTPException(status_code=404, detail=f"Equipo MDB {team_id} no encontrado")
+    league = team.get("league")
+    if not league or int(league["source_id"]) != 1:
+        raise HTTPException(status_code=409, detail="El bootstrap jugable actual está certificado para Primera División española")
+    calendar = universe.league_calendar(1)
+    engine = FootballMatchEngine9394(profile=SPAIN_PRIMERA_SIMULATION_1993_94)
+    results: list[LeagueMatch9394] = []
+    sheet_cache: dict[int, TeamSheet9394] = {}
+    for fixture in calendar:
+        matchday = int(fixture["matchday"])
+        if matchday > through_matchday:
+            continue
+        home_id, away_id = int(fixture["home_team_id"]), int(fixture["away_team_id"])
+        home_team, away_team = universe.team(home_id), universe.team(away_id)
+        if home_team is None or away_team is None:
+            continue
+        home_sheet = sheet_cache.setdefault(home_id, build_snapshot_team_sheet(universe, home_id))
+        away_sheet = sheet_cache.setdefault(away_id, build_snapshot_team_sheet(universe, away_id))
+        simulated = engine.simulate(
+            home_sheet,
+            away_sheet,
+            seed=9394000 + matchday * 100 + int(fixture["id"]),
+        )
+        results.append(LeagueMatch9394(str(home_id), str(away_id), simulated.home.goals, simulated.away.goals))
+    team_ids = [str(row["source_id"]) for row in universe.teams(league_id=1)]
+    table = build_league_table(team_ids, results, SPAIN_PRIMERA_1993_94)
+    standings = []
+    for row in table:
+        club = universe.team(int(row.team_id))
+        standings.append({
+            "team_id": int(row.team_id), "team_name": club["name"] if club else row.team_id,
+            "position": row.position, "played": row.played, "wins": row.wins, "draws": row.draws,
+            "losses": row.losses, "goals_for": row.goals_for, "goals_against": row.goals_against,
+            "goal_difference": row.goal_difference, "points": row.points,
+        })
+    next_fixture = next((r for r in calendar if int(r["matchday"]) == through_matchday + 1 and team_id in (int(r["home_team_id"]), int(r["away_team_id"]))), None)
+    next_match = None
+    if next_fixture:
+        home_id, away_id = int(next_fixture["home_team_id"]), int(next_fixture["away_team_id"])
+        home, away = universe.team(home_id), universe.team(away_id)
+        next_match = {
+            **next_fixture, "home_team": home["name"], "away_team": away["name"],
+            "home_level": _historical_team_level(home_id), "away_level": _historical_team_level(away_id),
+        }
+    return {
+        "season": "1993-94", "game_date": "1993-10-23", "team": team, "squad": universe.squad(team_id),
+        "competition": {**league, "points_win": 2}, "through_matchday": through_matchday,
+        "standings": standings, "next_match": next_match,
+        "data_origin": "normalized_mdb_snapshot",
+    }
+
+
+@app.get("/api/football9394/rules/{competition}")
+def competition_rules(competition: str) -> dict:
+    registry = default_registry_9394()
+    try:
+        rules = registry.resolve(competition)
+    except UnresolvedHistoricalRulesError as exc:
+        raise HTTPException(status_code=409, detail=str(exc)) from exc
+    return asdict(rules)
+
+
+@app.post("/api/football9394/matches/simulate")
+def simulate_match(payload: SimulatePayload) -> dict:
+    engine = FootballMatchEngine9394(profile=SPAIN_PRIMERA_SIMULATION_1993_94)
+    if payload.home_team_id is not None or payload.away_team_id is not None:
+        if payload.home_team_id is None or payload.away_team_id is None:
+            raise HTTPException(status_code=422, detail="Deben indicarse ambos IDs de equipo MDB")
+        universe = default_runtime_snapshot()
+        try:
+            home_sheet = build_snapshot_team_sheet(
+                universe, payload.home_team_id, tactics=FootballTactics9394(**payload.home_tactics.model_dump())
+            )
+            away_sheet = build_snapshot_team_sheet(
+                universe, payload.away_team_id, tactics=FootballTactics9394(**payload.away_tactics.model_dump())
+            )
+        except (KeyError, ValueError) as exc:
+            raise HTTPException(status_code=409, detail=str(exc)) from exc
+    else:
+        # Compatibility route for isolated simulator/calibration tests. The
+        # playable career always sends source IDs and therefore real players.
+        home_sheet = _sheet(payload.home_name, payload.home_level, payload.home_tactics)
+        away_sheet = _sheet(payload.away_name, payload.away_level, payload.away_tactics)
+    result = engine.simulate(home_sheet, away_sheet, seed=payload.seed)
+    return asdict(result)
+
+
+@app.post("/api/football9394/world/seasons/simulate")
+def simulate_world_season(payload: WorldSeasonPayload) -> dict:
+    season = simulate_world_season_1993_94(seed=payload.seed)
+    # Web API returns the complete durable payload. Desktop packaging can point
+    # WorldCareerStore9394 at the user-data directory; the development API is
+    # intentionally stateless unless a caller explicitly persists it.
+    return season
