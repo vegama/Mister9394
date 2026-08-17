@@ -77,7 +77,6 @@ def fetch_dob(client: httpx.Client, bdfutbol_id: str) -> str | None:
 
 def match_club(
     client: httpx.Client,
-    country_name: str,
     team_name: str,
     pending_rows: list[dict[str, Any]],
     bootstrap_bdfutbol_id: str,
@@ -87,7 +86,7 @@ def match_club(
 ) -> dict[str, Any]:
     idclub = discover_idclub(client, bootstrap_bdfutbol_id)
     if not idclub:
-        return {"country": country_name, "team": team_name, "status": "idclub_not_found"}
+        return {"team": team_name, "status": "idclub_not_found"}
     time.sleep(delay)
     squad = fetch_squad(client, idclub)
     time.sleep(delay)
@@ -138,7 +137,6 @@ def match_club(
             needs_review.append(entry)
 
     return {
-        "country": country_name,
         "team": team_name,
         "status": "complete",
         "idclub": idclub,
@@ -155,31 +153,37 @@ def run(
     countries: set[str] | None = None,
     verify_dob: bool = True,
     delay: float = 0.6,
+    extra_bootstrap: dict[str, str] | None = None,
 ) -> dict[str, Any]:
     rows = _load_queue(queue_path)
     pending = [r for r in rows if r.get("photo_status") == "pending_identity_profile"]
     if countries:
         pending = [r for r in pending if r.get("country_name") in countries]
 
-    bootstrap: dict[tuple[str, str], str] = {}
+    # Bootstrap is keyed by club name only: BDFutbol's per-club id is the same
+    # regardless of which nationality of player we happen to already have
+    # confirmed there.
+    bootstrap: dict[str, str] = {}
     for r in rows:
-        key = (r.get("country_name"), r.get("team_name"))
-        if r.get("bdfutbol_id") and key not in bootstrap:
-            bootstrap[key] = str(r["bdfutbol_id"])
+        team = r.get("team_name")
+        if r.get("bdfutbol_id") and team and team not in bootstrap:
+            bootstrap[team] = str(r["bdfutbol_id"])
+    if extra_bootstrap:
+        bootstrap.update(extra_bootstrap)
 
-    by_club: dict[tuple[str, str], list[dict[str, Any]]] = {}
+    by_club: dict[str, list[dict[str, Any]]] = {}
     for r in pending:
-        by_club.setdefault((r.get("country_name"), r.get("team_name")), []).append(r)
+        by_club.setdefault(r.get("team_name"), []).append(r)
 
     results = []
     unresolved_clubs = []
     with httpx.Client() as client:
-        for (country, team), club_rows in by_club.items():
-            boot_id = bootstrap.get((country, team))
+        for team, club_rows in by_club.items():
+            boot_id = bootstrap.get(team)
             if not boot_id:
-                unresolved_clubs.append({"country": country, "team": team, "pending": len(club_rows)})
+                unresolved_clubs.append({"team": team, "pending": len(club_rows)})
                 continue
-            results.append(match_club(client, country, team, club_rows, boot_id, verify_dob=verify_dob, delay=delay))
+            results.append(match_club(client, team, club_rows, boot_id, verify_dob=verify_dob, delay=delay))
 
     return {
         "clubs_processed": len(results),
@@ -195,11 +199,13 @@ def main() -> None:
     parser.add_argument("--country", action="append", dest="countries")
     parser.add_argument("--no-verify-dob", action="store_true")
     parser.add_argument("--delay", type=float, default=0.6)
+    parser.add_argument("--extra-bootstrap", type=Path, help="JSON file mapping team_name -> a known bdfutbol_id for that club")
     parser.add_argument("--report", type=Path, required=True)
     args = parser.parse_args()
 
     countries = set(args.countries) if args.countries else None
-    report = run(args.queue, countries=countries, verify_dob=not args.no_verify_dob, delay=args.delay)
+    extra_bootstrap = json.loads(args.extra_bootstrap.read_text(encoding="utf-8")) if args.extra_bootstrap else None
+    report = run(args.queue, countries=countries, verify_dob=not args.no_verify_dob, delay=args.delay, extra_bootstrap=extra_bootstrap)
     args.report.parent.mkdir(parents=True, exist_ok=True)
     args.report.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     summary = {
