@@ -1,0 +1,9 @@
+{
+  "checkpoint": "0.42.0-belgium-waregem-lommel-deep",
+  "profiles_considered": 49,
+  "by_club": {
+    "Waregem": 27,
+    "Lommel": 22
+  },
+  "status": "pass"
+}

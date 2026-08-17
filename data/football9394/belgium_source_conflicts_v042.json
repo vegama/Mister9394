@@ -1,0 +1,16 @@
+{
+  "checkpoint": "0.42.0-belgium-waregem-lommel-deep",
+  "status": "pass",
+  "conflicts": [
+    {
+      "source_id": 9496330,
+      "display_name": "Raymond Atteveld",
+      "club": "Waregem"
+    }
+  ],
+  "historical_country_policy": {
+    "Zaire_1993": "Country source id 88 is the DR Congo state identity in the catalog but is rendered by historical_name_1993 as Zaire. Lommel/Waregem Congolese identities use Zaire for 1993 football context; modern DR Congo evidence remains source text, not a 1993 label.",
+    "Sabitov_USSR": "Ravil Sabitov was born in Moscow in 1968. historical_birth_place_text is Moscow (USSR), birth_country_id is intentionally absent, and Russia country id 40 is stored only as 1993 citizenship/football identity.",
+    "future_Russia": "Russia league remains untouched. The Russia pass must separate historical birthplace state, 1993 citizenship/nationality, represented selection and transliterations; USSR must never be auto-mapped to Russia."
+  }
+}

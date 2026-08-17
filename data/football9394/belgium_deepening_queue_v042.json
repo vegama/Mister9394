@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "checkpoint": "0.42.0-belgium-waregem-lommel-deep",
+  "queue": [
+    {
+      "priority": 1,
+      "club": "RFC Liège",
+      "team_id": 9352005,
+      "season_rows": 24,
+      "missing_birth_date": 23,
+      "missing_nationality": 23,
+      "missing_bdfutbol_id": 24,
+      "status": "queued_for_deep_profile_pass"
+    },
+    {
+      "priority": 2,
+      "club": "Cercle Brugge",
+      "team_id": 455,
+      "season_rows": 24,
+      "missing_birth_date": 24,
+      "missing_nationality": 24,
+      "missing_bdfutbol_id": 24,
+      "status": "queued_for_deep_profile_pass"
+    },
+    {
+      "priority": 3,
+      "club": "Oostende",
+      "team_id": 908,
+      "season_rows": 19,
+      "missing_birth_date": 19,
+      "missing_nationality": 19,
+      "missing_bdfutbol_id": 19,
+      "status": "queued_for_deep_profile_pass"
+    },
+    {
+      "priority": 4,
+      "club": "KV Mechelen",
+      "team_id": 459,
+      "season_rows": 24,
+      "missing_birth_date": 24,
+      "missing_nationality": 24,
+      "missing_bdfutbol_id": 23,
+      "status": "queued_for_deep_profile_pass"
+    },
+    {
+      "priority": 5,
+      "club": "Gent",
+      "team_id": 456,
+      "season_rows": 25,
+      "missing_birth_date": 25,
+      "missing_nationality": 25,
+      "missing_bdfutbol_id": 23,
+      "status": "queued_for_deep_profile_pass"
+    },
+    {
+      "priority": 6,
+      "club": "Lierse",
+      "team_id": 851,
+      "season_rows": 20,
+      "missing_birth_date": 20,
+      "missing_nationality": 20,
+      "missing_bdfutbol_id": 19,
+      "status": "queued_for_deep_profile_pass"
+    }
+  ],
+  "russia_status": "untouched_until_belgium_queue_complete"
+}

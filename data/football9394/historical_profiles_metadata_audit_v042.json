@@ -1,0 +1,689 @@
+{
+  "schema_version": 1,
+  "checkpoint": "0.42.0-belgium-waregem-lommel-deep",
+  "status": "pass",
+  "profile_gaps_before": {
+    "Russia": {
+      "active_players": 492,
+      "missing_birth_date": 465,
+      "missing_international_country_id": 455,
+      "missing_birth_country_id": 465,
+      "missing_height_cm": 479,
+      "missing_weight_kg": 483,
+      "profile_review_required": 0
+    },
+    "Greece": {
+      "active_players": 496,
+      "missing_birth_date": 34,
+      "missing_international_country_id": 0,
+      "missing_birth_country_id": 0,
+      "missing_height_cm": 491,
+      "missing_weight_kg": 494,
+      "profile_review_required": 2
+    },
+    "Belgium": {
+      "active_players": 414,
+      "missing_birth_date": 160,
+      "missing_international_country_id": 148,
+      "missing_birth_country_id": 176,
+      "missing_height_cm": 250,
+      "missing_weight_kg": 324,
+      "profile_review_required": 55
+    },
+    "Turkey": {
+      "active_players": 419,
+      "missing_birth_date": 23,
+      "missing_international_country_id": 19,
+      "missing_birth_country_id": 165,
+      "missing_height_cm": 330,
+      "missing_weight_kg": 397,
+      "profile_review_required": 168
+    }
+  },
+  "profile_gaps_after": {
+    "Russia": {
+      "active_players": 492,
+      "missing_birth_date": 465,
+      "missing_international_country_id": 455,
+      "missing_birth_country_id": 465,
+      "missing_height_cm": 479,
+      "missing_weight_kg": 483,
+      "profile_review_required": 0
+    },
+    "Greece": {
+      "active_players": 496,
+      "missing_birth_date": 34,
+      "missing_international_country_id": 0,
+      "missing_birth_country_id": 0,
+      "missing_height_cm": 491,
+      "missing_weight_kg": 494,
+      "profile_review_required": 2
+    },
+    "Belgium": {
+      "active_players": 414,
+      "missing_birth_date": 116,
+      "missing_international_country_id": 107,
+      "missing_birth_country_id": 137,
+      "missing_height_cm": 224,
+      "missing_weight_kg": 310,
+      "profile_review_required": 84
+    },
+    "Turkey": {
+      "active_players": 419,
+      "missing_birth_date": 23,
+      "missing_international_country_id": 19,
+      "missing_birth_country_id": 165,
+      "missing_height_cm": 330,
+      "missing_weight_kg": 397,
+      "profile_review_required": 168
+    }
+  },
+  "profiles": {
+    "curated_existing": 49,
+    "by_club": {
+      "Waregem": 27,
+      "Lommel": 22
+    },
+    "role_corrections": 35,
+    "review_required": 29,
+    "changes": [
+      {
+        "source_id": 9496342,
+        "club": "Waregem",
+        "display_name": "Marc Huysmans",
+        "role_before": 0,
+        "role_after": 0,
+        "nat_before": null,
+        "nat_after": 17,
+        "precision": "exact",
+        "preserved_prior_deep_profile": false
+      },
+      {
+        "source_id": 9496336,
+        "club": "Waregem",
+        "display_name": "Benny de Kneef",
+        "role_before": 1,
+        "role_after": 3,
+        "nat_before": null,
+        "nat_after": 17,
+        "precision": "broad_only",
+        "preserved_prior_deep_profile": false
+      },
+      {
+        "source_id": 9496340,
+        "club": "Waregem",
+        "display_name": "Yvan Desloover",
+        "role_before": 3,
+        "role_after": 3,
+        "nat_before": null,
+        "nat_after": 17,
+        "precision": "broad_only",
+        "preserved_prior_deep_profile": false
+      },
+      {
+        "source_id": 9496341,
+        "club": "Waregem",
+        "display_name": "Rudy Ducoulombier",
+        "role_before": 4,
+        "role_after": 3,
+        "nat_before": null,
+        "nat_after": 17,
+        "precision": "exact",
+        "preserved_prior_deep_profile": false
+      },
+      {
+        "source_id": 9496339,
+        "club": "Waregem",
+        "display_name": "Nick Descamps",
+        "role_before": 2,
+        "role_after": 7,
+        "nat_before": null,
+        "nat_after": 17,
+        "precision": "broad_only",
+        "preserved_prior_deep_profile": false
+      },
+      {
+        "source_id": 9496338,
+        "club": "Waregem",
+        "display_name": "Frank Dekenne",
+        "role_before": 9,
+        "role_after": 7,
+        "nat_before": null,
+        "nat_after": 17,
+        "precision": "broad_only",
+        "preserved_prior_deep_profile": false
+      },
+      {
+        "source_id": 9496346,
+        "club": "Waregem",
+        "display_name": "Patrick Stalmans",
+        "role_before": 7,
+        "role_after": 7,
+        "nat_before": null,
+        "nat_after": 17,
+        "precision": "broad_only",
+        "preserved_prior_deep_profile": false
+      },
+      {
+        "source_id": 9496349,
+        "club": "Waregem",
+        "display_name": "Jude Vandelannoite",
+        "role_before": 7,
+        "role_after": 7,
+        "nat_before": null,
+        "nat_after": 17,
+        "precision": "broad_only",
+        "preserved_prior_deep_profile": false
+      },
+      {
+        "source_id": 9496343,
+        "club": "Waregem",
+        "display_name": "Hendrie Krüzen",
+        "role_before": 13,
+        "role_after": 15,
+        "nat_before": 3,
+        "nat_after": 3,
+        "precision": "exact",
+        "preserved_prior_deep_profile": false
+      },
+      {
+        "source_id": 9495157,
+        "club": "Waregem",
+        "display_name": "Aurelio Vidmar",
+        "role_before": 17,
+        "role_after": 17,
+        "nat_before": 15,
+        "nat_after": 15,
+        "precision": "exact",
+        "preserved_prior_deep_profile": false
+      },
+      {
+        "source_id": 9496325,
+        "club": "Waregem",
+        "display_name": "Laurent Ballenghien",
+        "role_before": 17,
+        "role_after": 17,
+        "nat_before": 17,
+        "nat_after": 17,
+        "precision": "exact",
+        "preserved_prior_deep_profile": true
+      },
+      {
+        "source_id": 9496350,
+        "club": "Waregem",
+        "display_name": "Franck Vandendriessche",
+        "role_before": 0,
+        "role_after": 0,
+        "nat_before": null,
+        "nat_after": 17,
+        "precision": "exact",
+        "preserved_prior_deep_profile": false
+      },
+      {
+        "source_id": 9496332,
+        "club": "Waregem",
+        "display_name": "Marino Blancke",
+        "role_before": 1,
+        "role_after": 7,
+        "nat_before": null,
+        "nat_after": 17,
+        "precision": "broad_only",
+        "preserved_prior_deep_profile": false
+      },
+      {
+        "source_id": 9496333,
+        "club": "Waregem",
+        "display_name": "David Bossuyt",
+        "role_before": 7,
+        "role_after": 7,
+        "nat_before": null,
+        "nat_after": 17,
+        "precision": "broad_only",
+        "preserved_prior_deep_profile": false
+      },
+      {
+        "source_id": 9496337,
+        "club": "Waregem",
+        "display_name": "Sébastien De Meersman",
+        "role_before": 17,
+        "role_after": 15,
+        "nat_before": null,
+        "nat_after": 17,
+        "precision": "exact",
+        "preserved_prior_deep_profile": false
+      },
+      {
+        "source_id": 9496330,
+        "club": "Waregem",
+        "display_name": "Raymond Atteveld",
+        "role_before": 2,
+        "role_after": 3,
+        "nat_before": 3,
+        "nat_after": 3,
+        "precision": "source_conflict_review",
+        "preserved_prior_deep_profile": false
+      },
+      {
+        "source_id": 9494227,
+        "club": "Waregem",
+        "display_name": "Nacer Abdellah",
+        "role_before": 2,
+        "role_after": 3,
+        "nat_before": 56,
+        "nat_after": 56,
+        "precision": "broad_only",
+        "preserved_prior_deep_profile": false
+      },
+      {
+        "source_id": 9496351,
+        "club": "Waregem",
+        "display_name": "Dirk Vanderbeken",
+        "role_before": 1,
+        "role_after": 7,
+        "nat_before": null,
+        "nat_after": 17,
+        "precision": "broad_only",
+        "preserved_prior_deep_profile": false
+      },
+      {
+        "source_id": 9496335,
+        "club": "Waregem",
+        "display_name": "Hans Christiaens",
+        "role_before": 16,
+        "role_after": 17,
+        "nat_before": null,
+        "nat_after": 17,
+        "precision": "exact",
+        "preserved_prior_deep_profile": false
+      },
+      {
+        "source_id": 9496331,
+        "club": "Waregem",
+        "display_name": "Henri Mbala Balenga Mukuka",
+        "role_before": 8,
+        "role_after": 17,
+        "nat_before": null,
+        "nat_after": 88,
+        "precision": "broad_only",
+        "preserved_prior_deep_profile": false
+      },
+      {
+        "source_id": 9496329,
+        "club": "Waregem",
+        "display_name": "Flórián Urbán",
+        "role_before": 9,
+        "role_after": 6,
+        "nat_before": 93,
+        "nat_after": 93,
+        "precision": "exact",
+        "preserved_prior_deep_profile": false
+      },
+      {
+        "source_id": 9496348,
+        "club": "Waregem",
+        "display_name": "Chris van Geem",
+        "role_before": 2,
+        "role_after": 3,
+        "nat_before": null,
+        "nat_after": 17,
+        "precision": "broad_only",
+        "preserved_prior_deep_profile": false
+      },
+      {
+        "source_id": 9496345,
+        "club": "Waregem",
+        "display_name": "Ravil Rufailovich Sabitov",
+        "role_before": 4,
+        "role_after": 2,
+        "nat_before": null,
+        "nat_after": 40,
+        "precision": "exact",
+        "preserved_prior_deep_profile": false
+      },
+      {
+        "source_id": 9496344,
+        "club": "Waregem",
+        "display_name": "Patrick Pascal Onya",
+        "role_before": 4,
+        "role_after": 17,
+        "nat_before": null,
+        "nat_after": 59,
+        "precision": "broad_only",
+        "preserved_prior_deep_profile": false
+      },
+      {
+        "source_id": 9496334,
+        "club": "Waregem",
+        "display_name": "Fangio Buyse",
+        "role_before": 7,
+        "role_after": 7,
+        "nat_before": null,
+        "nat_after": 17,
+        "precision": "broad_only",
+        "preserved_prior_deep_profile": false
+      },
+      {
+        "source_id": 9496347,
+        "club": "Waregem",
+        "display_name": "Eddy Syx",
+        "role_before": 9,
+        "role_after": 3,
+        "nat_before": null,
+        "nat_after": 17,
+        "precision": "broad_only",
+        "preserved_prior_deep_profile": false
+      },
+      {
+        "source_id": 9496324,
+        "club": "Waregem",
+        "display_name": "Jean-Marie Abeels",
+        "role_before": 8,
+        "role_after": 8,
+        "nat_before": 17,
+        "nat_after": 17,
+        "precision": "exact",
+        "preserved_prior_deep_profile": true
+      },
+      {
+        "source_id": 9496212,
+        "club": "Lommel",
+        "display_name": "Jacky Mathijssen",
+        "role_before": 0,
+        "role_after": 0,
+        "nat_before": null,
+        "nat_after": 17,
+        "precision": "exact",
+        "preserved_prior_deep_profile": false
+      },
+      {
+        "source_id": 9496213,
+        "club": "Lommel",
+        "display_name": "Jean-Claude Mukanya Kabeya",
+        "role_before": 1,
+        "role_after": 3,
+        "nat_before": null,
+        "nat_after": 88,
+        "precision": "exact",
+        "preserved_prior_deep_profile": false
+      },
+      {
+        "source_id": 9496207,
+        "club": "Lommel",
+        "display_name": "Robert Gijbels",
+        "role_before": 3,
+        "role_after": 2,
+        "nat_before": null,
+        "nat_after": 17,
+        "precision": "exact",
+        "preserved_prior_deep_profile": false
+      },
+      {
+        "source_id": 9496219,
+        "club": "Lommel",
+        "display_name": "Ronny van Geneugden",
+        "role_before": 4,
+        "role_after": 7,
+        "nat_before": null,
+        "nat_after": 17,
+        "precision": "broad_only",
+        "preserved_prior_deep_profile": false
+      },
+      {
+        "source_id": 9496220,
+        "club": "Lommel",
+        "display_name": "Harm van Veldhoven",
+        "role_before": 2,
+        "role_after": 7,
+        "nat_before": null,
+        "nat_after": 3,
+        "precision": "broad_only",
+        "preserved_prior_deep_profile": false
+      },
+      {
+        "source_id": 9496221,
+        "club": "Lommel",
+        "display_name": "Vital Vanaken",
+        "role_before": 9,
+        "role_after": 7,
+        "nat_before": null,
+        "nat_after": 17,
+        "precision": "broad_only",
+        "preserved_prior_deep_profile": false
+      },
+      {
+        "source_id": 9496222,
+        "club": "Lommel",
+        "display_name": "Tom Vandervee",
+        "role_before": 7,
+        "role_after": 7,
+        "nat_before": null,
+        "nat_after": 17,
+        "precision": "broad_only",
+        "preserved_prior_deep_profile": false
+      },
+      {
+        "source_id": 9496204,
+        "club": "Lommel",
+        "display_name": "Gert Cannaerts",
+        "role_before": 7,
+        "role_after": 7,
+        "nat_before": null,
+        "nat_after": 17,
+        "precision": "broad_only",
+        "preserved_prior_deep_profile": false
+      },
+      {
+        "source_id": 9496223,
+        "club": "Lommel",
+        "display_name": "Ronny Vangompel",
+        "role_before": 13,
+        "role_after": 7,
+        "nat_before": null,
+        "nat_after": 17,
+        "precision": "broad_only",
+        "preserved_prior_deep_profile": false
+      },
+      {
+        "source_id": 9496216,
+        "club": "Lommel",
+        "display_name": "Mathieu Peeters",
+        "role_before": 17,
+        "role_after": 17,
+        "nat_before": null,
+        "nat_after": 17,
+        "precision": "broad_only",
+        "preserved_prior_deep_profile": false
+      },
+      {
+        "source_id": 6792,
+        "club": "Lommel",
+        "display_name": "Frank Berghuis",
+        "role_before": 16,
+        "role_after": 15,
+        "nat_before": null,
+        "nat_after": 3,
+        "precision": "exact",
+        "preserved_prior_deep_profile": false
+      },
+      {
+        "source_id": 9496215,
+        "club": "Lommel",
+        "display_name": "Bart Peeters",
+        "role_before": 1,
+        "role_after": 0,
+        "nat_before": null,
+        "nat_after": 17,
+        "precision": "exact",
+        "preserved_prior_deep_profile": false
+      },
+      {
+        "source_id": 9496203,
+        "club": "Lommel",
+        "display_name": "John Buana N'Galula",
+        "role_before": 2,
+        "role_after": 3,
+        "nat_before": null,
+        "nat_after": 88,
+        "precision": "exact",
+        "preserved_prior_deep_profile": false
+      },
+      {
+        "source_id": 9496217,
+        "club": "Lommel",
+        "display_name": "Daniël Scavone",
+        "role_before": 9,
+        "role_after": 3,
+        "nat_before": null,
+        "nat_after": 17,
+        "precision": "exact",
+        "preserved_prior_deep_profile": false
+      },
+      {
+        "source_id": 9496209,
+        "club": "Lommel",
+        "display_name": "Marc Hendrikx",
+        "role_before": 16,
+        "role_after": 13,
+        "nat_before": null,
+        "nat_after": 17,
+        "precision": "exact",
+        "preserved_prior_deep_profile": false
+      },
+      {
+        "source_id": 9496208,
+        "club": "Lommel",
+        "display_name": "Wilhelmus Edwin Gorter",
+        "role_before": 16,
+        "role_after": 7,
+        "nat_before": 3,
+        "nat_after": 3,
+        "precision": "broad_only",
+        "preserved_prior_deep_profile": false
+      },
+      {
+        "source_id": 9496211,
+        "club": "Lommel",
+        "display_name": "Frank Machiels",
+        "role_before": 2,
+        "role_after": 3,
+        "nat_before": null,
+        "nat_after": 17,
+        "precision": "exact",
+        "preserved_prior_deep_profile": false
+      },
+      {
+        "source_id": 9496214,
+        "club": "Lommel",
+        "display_name": "Nela Petrus N'Ganzadi Kimonekene",
+        "role_before": 13,
+        "role_after": 17,
+        "nat_before": null,
+        "nat_after": 88,
+        "precision": "broad_only",
+        "preserved_prior_deep_profile": false
+      },
+      {
+        "source_id": 9496205,
+        "club": "Lommel",
+        "display_name": "Dimitri De Condé",
+        "role_before": 16,
+        "role_after": 7,
+        "nat_before": null,
+        "nat_after": 17,
+        "precision": "broad_only",
+        "preserved_prior_deep_profile": false
+      },
+      {
+        "source_id": 9496210,
+        "club": "Lommel",
+        "display_name": "Bonide Isumgampala",
+        "role_before": 6,
+        "role_after": 7,
+        "nat_before": null,
+        "nat_after": 116,
+        "precision": "broad_only",
+        "preserved_prior_deep_profile": false
+      },
+      {
+        "source_id": 9496218,
+        "club": "Lommel",
+        "display_name": "Maarten Schops",
+        "role_before": 1,
+        "role_after": 7,
+        "nat_before": null,
+        "nat_after": 17,
+        "precision": "broad_only",
+        "preserved_prior_deep_profile": false
+      },
+      {
+        "source_id": 9496206,
+        "club": "Lommel",
+        "display_name": "Bart Gijbels",
+        "role_before": 2,
+        "role_after": 17,
+        "nat_before": null,
+        "nat_after": 17,
+        "precision": "broad_only",
+        "preserved_prior_deep_profile": false
+      }
+    ],
+    "preserved_prior_deep_profiles": [
+      9496324,
+      9496325
+    ]
+  },
+  "gap_closure": {
+    "Waregem": {
+      "incoming_missing_birth_date": 23,
+      "incoming_missing_nationality": 20,
+      "remaining_missing_birth_date": 0,
+      "remaining_missing_nationality": 0,
+      "season_rows": 27
+    },
+    "Lommel": {
+      "incoming_missing_birth_date": 21,
+      "incoming_missing_nationality": 21,
+      "remaining_missing_birth_date": 0,
+      "remaining_missing_nationality": 0,
+      "season_rows": 22
+    }
+  },
+  "source_conflicts": [
+    {
+      "source_id": 9496330,
+      "display_name": "Raymond Atteveld",
+      "club": "Waregem"
+    }
+  ],
+  "historical_country_policy": {
+    "Zaire_1993": "Country source id 88 is the DR Congo state identity in the catalog but is rendered by historical_name_1993 as Zaire. Lommel/Waregem Congolese identities use Zaire for 1993 football context; modern DR Congo evidence remains source text, not a 1993 label.",
+    "Sabitov_USSR": "Ravil Sabitov was born in Moscow in 1968. historical_birth_place_text is Moscow (USSR), birth_country_id is intentionally absent, and Russia country id 40 is stored only as 1993 citizenship/football identity.",
+    "future_Russia": "Russia league remains untouched. The Russia pass must separate historical birthplace state, 1993 citizenship/nationality, represented selection and transliterations; USSR must never be auto-mapped to Russia."
+  },
+  "photo_queue": {
+    "bdf_individual_profiles_linked": 49,
+    "policy": "Every Waregem and Lommel season identity is linked to its BDF individual profile and marked ready_for_download unless an already bundled normalized portrait exists; no portrait URL is fabricated."
+  },
+  "identity_integrity": {
+    "registry_rows": 2118,
+    "queue_rows": 2118,
+    "registry_queue_match": true,
+    "unique_registry_ids": true
+  },
+  "source_policy": [
+    "Continue Belgium club-by-club before Russia.",
+    "BDFutbol individual profiles anchor identity, DOB, birthplace and measurements.",
+    "Broad BDF positions are never silently converted into unsupported specialist roles.",
+    "Transfermarkt is used only for safe specialist corroboration or explicitly review-flagged conflicts.",
+    "Historical country naming is separated from modern source labels.",
+    "No basketball 75/25 rule is used."
+  ],
+  "next_front": [
+    "RFC Liège",
+    "Cercle Brugge",
+    "Oostende",
+    "KV Mechelen",
+    "Gent",
+    "Lierse"
+  ]
+}
