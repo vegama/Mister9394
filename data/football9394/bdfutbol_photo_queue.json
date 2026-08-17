@@ -7081,36 +7081,6 @@
       "photo_status": "ready_for_download"
     },
     {
-      "source_id": 9496680,
-      "display_name": "Mukhsin Muslimovich Mukhamadiev",
-      "first_name": "Mukhsin Muslimovich",
-      "surname1": "Mukhamadiev",
-      "surname2": null,
-      "birth_date": null,
-      "country_id": null,
-      "country_name": null,
-      "broad_position": "DEL",
-      "team_id": 9315004,
-      "team_name": "Lokomotiv Moskva",
-      "creation_batch": "russia_league_rosters_0.27",
-      "identity_source": "BDFutbol 1993 squad; identity/position audit v0.27",
-      "identity_source_url": "https://www.bdfutbol.com/en/t/t1993-9410040.html",
-      "verified_national_pool_year": null,
-      "historical_position_1993_94": "Centre Forward",
-      "historical_club_1994": "Lokomotiv Moskva",
-      "duplicate_check": "individual_profile_id_identity_gate_v045",
-      "matched_existing_id": null,
-      "bdfutbol_search_name": "Mukhsin Muslimovich Mukhamadiev",
-      "bdfutbol_id": "1159085",
-      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1159085.html",
-      "photo_filename": "9496680.jpg",
-      "photo_width": 40,
-      "photo_height": 55,
-      "photo_format": "JPEG",
-      "photo_mode": "RGB",
-      "photo_status": "ready_for_download"
-    },
-    {
       "source_id": 9496780,
       "display_name": "Murad Magomedov Makhachkala",
       "first_name": "Murad",
@@ -14482,13 +14452,13 @@
       "matched_existing_id": null,
       "bdfutbol_search_name": "Abdullah Al-Dosari",
       "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_url": "https://www.bdfutbol.com/es/c/jugador.html?id=180190",
       "photo_filename": "9494246.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "bundled_normalized_bdfutbol"
     },
     {
       "source_id": 9494248,
@@ -14512,13 +14482,13 @@
       "matched_existing_id": null,
       "bdfutbol_search_name": "Abdullah Sulaiman Zubromawi",
       "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_url": "https://www.bdfutbol.com/es/c/jugador.html?id=179376",
       "photo_filename": "9494248.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "bundled_normalized_bdfutbol"
     },
     {
       "source_id": 9494249,
@@ -14542,13 +14512,13 @@
       "matched_existing_id": null,
       "bdfutbol_search_name": "Ahmed Jamil Madani",
       "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_url": "https://www.bdfutbol.com/es/c/jugador.html?id=179781",
       "photo_filename": "9494249.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "bundled_normalized_bdfutbol"
     },
     {
       "source_id": 9494262,
@@ -14572,13 +14542,13 @@
       "matched_existing_id": null,
       "bdfutbol_search_name": "Awad Al-Anazi",
       "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_url": "https://www.bdfutbol.com/es/c/jugador.html?id=180196",
       "photo_filename": "9494262.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "bundled_normalized_bdfutbol"
     },
     {
       "source_id": 9494252,
@@ -14601,14 +14571,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Fahad Al-Bishi",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "57759",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j57759.html",
       "photo_filename": "9494252.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9494251,
@@ -14631,14 +14601,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Fahad Al-Ghesheyan",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "62793",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j62793.html",
       "photo_filename": "9494251.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9494255,
@@ -14661,14 +14631,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Fahad Al-Mehallel",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "57765",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j57765.html",
       "photo_filename": "9494255.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9494250,
@@ -14691,14 +14661,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Fuad Anwar",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "57758",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j57758.html",
       "photo_filename": "9494250.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9494264,
@@ -14721,14 +14691,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Hamzah Idris",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "57728",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j57728.html",
       "photo_filename": "9494264.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9494263,
@@ -14752,13 +14722,13 @@
       "matched_existing_id": null,
       "bdfutbol_search_name": "Hamzah Saleh",
       "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_url": "https://www.bdfutbol.com/es/c/jugador.html?id=179778",
       "photo_filename": "9494263.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "bundled_normalized_bdfutbol"
     },
     {
       "source_id": 9494265,
@@ -14781,14 +14751,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Hussein Al-Sadiq",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "57730",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j57730.html",
       "photo_filename": "9494265.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9494266,
@@ -14812,13 +14782,13 @@
       "matched_existing_id": null,
       "bdfutbol_search_name": "Ibrahim Al-Helwah",
       "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_url": "https://www.bdfutbol.com/es/c/jugador.html?id=180202",
       "photo_filename": "9494266.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "bundled_normalized_bdfutbol"
     },
     {
       "source_id": 9494258,
@@ -14842,13 +14812,13 @@
       "matched_existing_id": null,
       "bdfutbol_search_name": "Khalid Al-Muwallid",
       "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_url": "https://www.bdfutbol.com/es/c/jugador.html?id=180193",
       "photo_filename": "9494258.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "bundled_normalized_bdfutbol"
     },
     {
       "source_id": 9494253,
@@ -14872,13 +14842,13 @@
       "matched_existing_id": null,
       "bdfutbol_search_name": "Majed Abdullah",
       "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_url": "https://www.bdfutbol.com/es/c/jugador.html?id=180195",
       "photo_filename": "9494253.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9494257,
@@ -14902,13 +14872,13 @@
       "matched_existing_id": null,
       "bdfutbol_search_name": "Mohamed Abd Al-Jawad",
       "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_url": "https://www.bdfutbol.com/es/c/jugador.html?id=180191",
       "photo_filename": "9494257.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "bundled_normalized_bdfutbol"
     },
     {
       "source_id": 9494245,
@@ -14932,13 +14902,13 @@
       "matched_existing_id": null,
       "bdfutbol_search_name": "Mohamed Al-Deayea",
       "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_url": "https://www.bdfutbol.com/es/c/jugador.html?id=179184",
       "photo_filename": "9494245.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "bundled_normalized_bdfutbol"
     },
     {
       "source_id": 9494247,
@@ -14962,13 +14932,13 @@
       "matched_existing_id": null,
       "bdfutbol_search_name": "Mohammed Al-Khilaiwi",
       "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_url": "https://www.bdfutbol.com/es/c/jugador.html?id=179774",
       "photo_filename": "9494247.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "bundled_normalized_bdfutbol"
     },
     {
       "source_id": 9494254,
@@ -14992,13 +14962,13 @@
       "matched_existing_id": null,
       "bdfutbol_search_name": "Saeed Al-Owairan",
       "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_url": "https://www.bdfutbol.com/es/c/jugador.html?id=179777",
       "photo_filename": "9494254.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "bundled_normalized_bdfutbol"
     },
     {
       "source_id": 9494259,
@@ -15022,13 +14992,13 @@
       "matched_existing_id": null,
       "bdfutbol_search_name": "Saleh Al-Dawod",
       "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_url": "https://www.bdfutbol.com/es/c/jugador.html?id=180200",
       "photo_filename": "9494259.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "bundled_normalized_bdfutbol"
     },
     {
       "source_id": 9494256,
@@ -15052,13 +15022,13 @@
       "matched_existing_id": null,
       "bdfutbol_search_name": "Sami Al-Jaber",
       "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_url": "https://www.bdfutbol.com/es/c/jugador.html?id=93891",
       "photo_filename": "9494256.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "bundled_normalized_bdfutbol"
     },
     {
       "source_id": 9494260,
@@ -15082,13 +15052,13 @@
       "matched_existing_id": null,
       "bdfutbol_search_name": "Talal Jebreen",
       "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_url": "https://www.bdfutbol.com/es/c/jugador.html?id=180192",
       "photo_filename": "9494260.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "bundled_normalized_bdfutbol"
     },
     {
       "source_id": 9494261,
@@ -15112,13 +15082,13 @@
       "matched_existing_id": null,
       "bdfutbol_search_name": "Yassir Al-Taifi",
       "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_url": "https://www.bdfutbol.com/es/c/jugador.html?id=180201",
       "photo_filename": "9494261.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "bundled_normalized_bdfutbol"
     },
     {
       "source_id": 9495196,
@@ -15171,14 +15141,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Abdelhafid Tasfaout",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "85420",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j85420.html",
       "photo_filename": "9495206.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9495200,
@@ -15291,14 +15261,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Billel Dziri",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "87482",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j87482.html",
       "photo_filename": "9495198.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9495192,
@@ -15741,14 +15711,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Tarek Lazizi",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "1173752",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1173752.html",
       "photo_filename": "9495194.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9495203,
@@ -15891,14 +15861,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Sergio Vázquez",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "67340",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j67340.html",
       "photo_filename": "9494144.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9495147,
@@ -16011,14 +15981,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Carl Veart",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "99056",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j99056.html",
       "photo_filename": "9495165.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9497294,
@@ -16161,14 +16131,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Jason Polak",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "63300",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j63300.html",
       "photo_filename": "9495158.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9496286,
@@ -16221,14 +16191,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Mark Schwarzer",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "93634",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j93634.html",
       "photo_filename": "9495146.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9495154,
@@ -16281,14 +16251,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Milan Ivanović",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "710227",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j710227.html",
       "photo_filename": "9495148.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9495151,
@@ -16311,14 +16281,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Ned Zelić",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "90168",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j90168.html",
       "photo_filename": "9495151.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9496077,
@@ -16431,14 +16401,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Stan Lazaridis",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "94331",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j94331.html",
       "photo_filename": "9495161.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9495159,
@@ -16522,13 +16492,13 @@
       "matched_existing_id": null,
       "bdfutbol_search_name": "Carlos Borja",
       "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_url": "https://www.bdfutbol.com/es/c/jugador.html?id=180066",
       "photo_filename": "9494108.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "bundled_normalized_bdfutbol"
     },
     {
       "source_id": 9494103,
@@ -16552,13 +16522,13 @@
       "matched_existing_id": null,
       "bdfutbol_search_name": "Carlos Trucco",
       "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_url": "https://www.bdfutbol.com/es/c/jugador.html?id=180065",
       "photo_filename": "9494103.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "bundled_normalized_bdfutbol"
     },
     {
       "source_id": 9494114,
@@ -16582,13 +16552,13 @@
       "matched_existing_id": null,
       "bdfutbol_search_name": "Darío Rojas",
       "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_url": "https://www.bdfutbol.com/es/c/jugador.html?id=123041",
       "photo_filename": "9494114.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "bundled_normalized_bdfutbol"
     },
     {
       "source_id": 9494107,
@@ -16611,14 +16581,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Gustavo Quinteros",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "705507",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j705507.html",
       "photo_filename": "9494107.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9494113,
@@ -16641,14 +16611,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Jaime Moreno",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "99319",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j99319.html",
       "photo_filename": "9494113.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9494110,
@@ -16671,14 +16641,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "José Milton Melgar",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "320175",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j320175.html",
       "photo_filename": "9494110.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9494104,
@@ -16701,14 +16671,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Juan Manuel Peña",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "1502",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1502.html",
       "photo_filename": "9494104.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9494122,
@@ -16731,14 +16701,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Julio César Baldivieso",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "67406",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j67406.html",
       "photo_filename": "9494122.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9494118,
@@ -16761,14 +16731,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Luis Cristaldo",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "6602",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j6602.html",
       "photo_filename": "9494118.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9494121,
@@ -16792,13 +16762,13 @@
       "matched_existing_id": null,
       "bdfutbol_search_name": "Marcelo Torrico",
       "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_url": "https://www.bdfutbol.com/es/c/jugador.html?id=180073",
       "photo_filename": "9494121.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "bundled_normalized_bdfutbol"
     },
     {
       "source_id": 9494112,
@@ -16821,14 +16791,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Marco Etcheverry",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "1883",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1883.html",
       "photo_filename": "9494112.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9494105,
@@ -16882,13 +16852,13 @@
       "matched_existing_id": null,
       "bdfutbol_search_name": "Mario Pinedo",
       "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_url": "https://www.bdfutbol.com/es/c/jugador.html?id=180072",
       "photo_filename": "9494109.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "bundled_normalized_bdfutbol"
     },
     {
       "source_id": 9494116,
@@ -16912,13 +16882,13 @@
       "matched_existing_id": null,
       "bdfutbol_search_name": "Mauricio Ramos",
       "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_url": "https://www.bdfutbol.com/es/c/jugador.html?id=180071",
       "photo_filename": "9494116.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "bundled_normalized_bdfutbol"
     },
     {
       "source_id": 9494106,
@@ -16942,13 +16912,13 @@
       "matched_existing_id": null,
       "bdfutbol_search_name": "Miguel Rimba",
       "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_url": "https://www.bdfutbol.com/es/c/jugador.html?id=123038",
       "photo_filename": "9494106.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "bundled_normalized_bdfutbol"
     },
     {
       "source_id": 9494115,
@@ -16972,13 +16942,13 @@
       "matched_existing_id": null,
       "bdfutbol_search_name": "Modesto Soruco",
       "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_url": "https://www.bdfutbol.com/es/c/jugador.html?id=180070",
       "photo_filename": "9494115.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "bundled_normalized_bdfutbol"
     },
     {
       "source_id": 9494117,
@@ -17002,13 +16972,13 @@
       "matched_existing_id": null,
       "bdfutbol_search_name": "Vladimir Soria",
       "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_url": "https://www.bdfutbol.com/es/c/jugador.html?id=123035",
       "photo_filename": "9494117.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "bundled_normalized_bdfutbol"
     },
     {
       "source_id": 9494120,
@@ -17032,13 +17002,13 @@
       "matched_existing_id": null,
       "bdfutbol_search_name": "William Ramallo",
       "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_url": "https://www.bdfutbol.com/es/c/jugador.html?id=180068",
       "photo_filename": "9494120.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "bundled_normalized_bdfutbol"
     },
     {
       "source_id": 9494111,
@@ -17062,13 +17032,13 @@
       "matched_existing_id": null,
       "bdfutbol_search_name": "Álvaro Peña",
       "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_url": "https://www.bdfutbol.com/es/c/jugador.html?id=180069",
       "photo_filename": "9494111.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "bundled_normalized_bdfutbol"
     },
     {
       "source_id": 9494119,
@@ -17091,14 +17061,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Óscar Sánchez",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "66785",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j66785.html",
       "photo_filename": "9494119.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9495160,
@@ -18051,14 +18021,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Borislav Mihaylov",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "88870",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j88870.html",
       "photo_filename": "9494145.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9497141,
@@ -18111,14 +18081,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Daniel Borimirov",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "90176",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j90176.html",
       "photo_filename": "9494151.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9494146,
@@ -18141,14 +18111,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Emil Kremenliev",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "50165",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j50165.html",
       "photo_filename": "9494146.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9494155,
@@ -18171,14 +18141,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Georgi Georgiev",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "724453",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j724453.html",
       "photo_filename": "9494155.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9496577,
@@ -18321,14 +18291,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Ivaylo Andonov",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "1159",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1159.html",
       "photo_filename": "9494156.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9496471,
@@ -18381,14 +18351,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Nasko Sirakov",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "2069",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j2069.html",
       "photo_filename": "9494150.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9494153,
@@ -18411,14 +18381,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Nikolay Iliev",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "81626",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j81626.html",
       "photo_filename": "9494153.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9494154,
@@ -18441,14 +18411,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Petar Aleksandrov",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "720511",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j720511.html",
       "photo_filename": "9494154.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9494152,
@@ -18501,14 +18471,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Trifon Ivanov",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "2554",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j2554.html",
       "photo_filename": "9494147.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9494148,
@@ -18531,14 +18501,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Tsanko Tsvetanov",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "49411",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j49411.html",
       "photo_filename": "9494148.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9494149,
@@ -18561,14 +18531,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Zlatko Yankov",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "7203",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j7203.html",
       "photo_filename": "9494149.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9496210,
@@ -21831,14 +21801,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Gilles De Bilde",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "94010",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j94010.html",
       "photo_filename": "9495313.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9495300,
@@ -27321,14 +27291,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Alphonse Tchami",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "98285",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j98285.html",
       "photo_filename": "9494075.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9494070,
@@ -27352,13 +27322,13 @@
       "matched_existing_id": null,
       "bdfutbol_search_name": "Emmanuel Maboang",
       "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_url": "https://www.bdfutbol.com/es/c/jugador.html?id=179993",
       "photo_filename": "9494070.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "bundled_normalized_bdfutbol"
     },
     {
       "source_id": 9494078,
@@ -27382,13 +27352,13 @@
       "matched_existing_id": null,
       "bdfutbol_search_name": "Georges Mouyémé",
       "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_url": "https://www.bdfutbol.com/es/c/jugador.html?id=179994",
       "photo_filename": "9494078.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "bundled_normalized_bdfutbol"
     },
     {
       "source_id": 9494074,
@@ -27412,13 +27382,13 @@
       "matched_existing_id": null,
       "bdfutbol_search_name": "Hans Agbo",
       "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_url": "https://www.bdfutbol.com/es/c/jugador.html?id=179992",
       "photo_filename": "9494074.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "bundled_normalized_bdfutbol"
     },
     {
       "source_id": 9496066,
@@ -27472,13 +27442,13 @@
       "matched_existing_id": null,
       "bdfutbol_search_name": "Jean-Pierre Fiala",
       "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_url": "https://www.bdfutbol.com/es/c/jugador.html?id=179998",
       "photo_filename": "9494077.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "bundled_normalized_bdfutbol"
     },
     {
       "source_id": 9494069,
@@ -27501,14 +27471,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Louis-Paul M'Fédé",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "9175",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j9175.html",
       "photo_filename": "9494069.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9494076,
@@ -27531,14 +27501,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Marc-Vivien Foé",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "94300",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j94300.html",
       "photo_filename": "9494076.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9494071,
@@ -27562,13 +27532,13 @@
       "matched_existing_id": null,
       "bdfutbol_search_name": "Paul Loga",
       "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_url": "https://www.bdfutbol.com/es/c/jugador.html?id=179996",
       "photo_filename": "9494071.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "bundled_normalized_bdfutbol"
     },
     {
       "source_id": 9494072,
@@ -27591,14 +27561,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Raymond Kalla",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "2317",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j2317.html",
       "photo_filename": "9494072.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9494063,
@@ -27621,14 +27591,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Rigobert Song",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "90629",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j90629.html",
       "photo_filename": "9494063.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9494068,
@@ -27651,14 +27621,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Roger Milla",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "54300",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j54300.html",
       "photo_filename": "9494068.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9494064,
@@ -27682,13 +27652,13 @@
       "matched_existing_id": null,
       "bdfutbol_search_name": "Samuel Ekemé",
       "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_url": "https://www.bdfutbol.com/es/c/jugador.html?id=42243",
       "photo_filename": "9494064.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "bundled_normalized_bdfutbol"
     },
     {
       "source_id": 9494073,
@@ -27712,13 +27682,13 @@
       "matched_existing_id": null,
       "bdfutbol_search_name": "Stephen Tataw",
       "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_url": "https://www.bdfutbol.com/es/c/jugador.html?id=179991",
       "photo_filename": "9494073.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "bundled_normalized_bdfutbol"
     },
     {
       "source_id": 9494066,
@@ -27742,13 +27712,13 @@
       "matched_existing_id": null,
       "bdfutbol_search_name": "Thomas Libiih",
       "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_url": "https://www.bdfutbol.com/es/c/jugador.html?id=179990",
       "photo_filename": "9494066.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "bundled_normalized_bdfutbol"
     },
     {
       "source_id": 9494079,
@@ -27771,14 +27741,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Thomas N'Kono",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "2820",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j2820.html",
       "photo_filename": "9494079.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9494065,
@@ -27802,13 +27772,13 @@
       "matched_existing_id": null,
       "bdfutbol_search_name": "Victor N'Dip",
       "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_url": "https://www.bdfutbol.com/es/c/jugador.html?id=179995",
       "photo_filename": "9494065.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "bundled_normalized_bdfutbol"
     },
     {
       "source_id": 9494067,
@@ -27831,14 +27801,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Émile Mbouh",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "88777",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j88777.html",
       "photo_filename": "9494067.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9495104,
@@ -27861,14 +27831,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Eduardo Vilches",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "51314",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j51314.html",
       "photo_filename": "9495104.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9497531,
@@ -27921,14 +27891,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Fabián Estay",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "709302",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j709302.html",
       "photo_filename": "9495109.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9495113,
@@ -27981,14 +27951,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Gabriel Mendoza",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "51313",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j51313.html",
       "photo_filename": "9495102.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9495106,
@@ -28041,14 +28011,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Javier Margas",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "93610",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j93610.html",
       "photo_filename": "9495105.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9495112,
@@ -28071,14 +28041,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "José Luis Sierra",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "2735",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j2735.html",
       "photo_filename": "9495112.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9495107,
@@ -28161,14 +28131,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Marcelo Ramírez",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "51318",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j51318.html",
       "photo_filename": "9495101.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9495114,
@@ -28281,14 +28251,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Miguel Ramírez",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "2021",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j2021.html",
       "photo_filename": "9495103.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9495116,
@@ -28311,14 +28281,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Nelson Parraguéz",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "62380",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j62380.html",
       "photo_filename": "9495116.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9495100,
@@ -28432,13 +28402,13 @@
       "matched_existing_id": null,
       "bdfutbol_search_name": "Alexis Mendoza",
       "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_url": "https://www.bdfutbol.com/es/c/jugador.html?id=179925",
       "photo_filename": "9494002.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "bundled_normalized_bdfutbol"
     },
     {
       "source_id": 9494001,
@@ -28461,14 +28431,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Andrés Escobar",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "52176",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j52176.html",
       "photo_filename": "9494001.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9494006,
@@ -28491,14 +28461,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Antony de Ávila",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "320520",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j320520.html",
       "photo_filename": "9494006.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9494005,
@@ -28522,13 +28492,13 @@
       "matched_existing_id": null,
       "bdfutbol_search_name": "Gabriel Gómez",
       "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_url": "https://www.bdfutbol.com/es/c/jugador.html?id=179923",
       "photo_filename": "9494005.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "bundled_normalized_bdfutbol"
     },
     {
       "source_id": 9494004,
@@ -28552,13 +28522,13 @@
       "matched_existing_id": null,
       "bdfutbol_search_name": "Hermán Gaviria",
       "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_url": "https://www.bdfutbol.com/es/c/jugador.html?id=177605",
       "photo_filename": "9494004.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "bundled_normalized_bdfutbol"
     },
     {
       "source_id": 9494008,
@@ -28581,14 +28551,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Iván Valenciano",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "81262",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j81262.html",
       "photo_filename": "9494008.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9494007,
@@ -28611,14 +28581,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "John Harold Lozano",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "1300",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1300.html",
       "photo_filename": "9494007.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9494014,
@@ -28642,13 +28612,13 @@
       "matched_existing_id": null,
       "bdfutbol_search_name": "José María Pazo",
       "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_url": "https://www.bdfutbol.com/es/c/jugador.html?id=179929",
       "photo_filename": "9494014.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "bundled_normalized_bdfutbol"
     },
     {
       "source_id": 9494010,
@@ -28671,14 +28641,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Leonel Álvarez",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "1747",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1747.html",
       "photo_filename": "9494010.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9494003,
@@ -28701,14 +28671,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Luis Fernando Herrera",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "52174",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j52174.html",
       "photo_filename": "9494003.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9494011,
@@ -28731,14 +28701,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Mauricio Serna",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "50632",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j50632.html",
       "photo_filename": "9494011.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9494009,
@@ -28762,13 +28732,13 @@
       "matched_existing_id": null,
       "bdfutbol_search_name": "Néstor Ortiz",
       "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_url": "https://www.bdfutbol.com/es/c/jugador.html?id=179926",
       "photo_filename": "9494009.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "bundled_normalized_bdfutbol"
     },
     {
       "source_id": 9494013,
@@ -28822,13 +28792,13 @@
       "matched_existing_id": null,
       "bdfutbol_search_name": "Óscar Cortés",
       "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_url": "https://www.bdfutbol.com/es/c/jugador.html?id=179928",
       "photo_filename": "9494012.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "bundled_normalized_bdfutbol"
     },
     {
       "source_id": 9494000,
@@ -28851,14 +28821,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Óscar Córdoba",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "67962",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j67962.html",
       "photo_filename": "9494000.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9494134,
@@ -28882,13 +28852,13 @@
       "matched_existing_id": null,
       "bdfutbol_search_name": "An Ik-soo",
       "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_url": "https://www.bdfutbol.com/es/c/jugador.html?id=180083",
       "photo_filename": "9494134.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "bundled_normalized_bdfutbol"
     },
     {
       "source_id": 9494136,
@@ -28942,13 +28912,13 @@
       "matched_existing_id": null,
       "bdfutbol_search_name": "Choi Dae-shik",
       "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_url": "https://www.bdfutbol.com/es/c/jugador.html?id=180084",
       "photo_filename": "9494135.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "bundled_normalized_bdfutbol"
     },
     {
       "source_id": 9494123,
@@ -28972,13 +28942,13 @@
       "matched_existing_id": null,
       "bdfutbol_search_name": "Choi In-young",
       "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_url": "https://www.bdfutbol.com/es/c/jugador.html?id=180074",
       "photo_filename": "9494123.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "bundled_normalized_bdfutbol"
     },
     {
       "source_id": 9494140,
@@ -29002,13 +28972,13 @@
       "matched_existing_id": null,
       "bdfutbol_search_name": "Choi Moon-sik",
       "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_url": "https://www.bdfutbol.com/es/c/jugador.html?id=180086",
       "photo_filename": "9494140.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "bundled_normalized_bdfutbol"
     },
     {
       "source_id": 9494133,
@@ -29032,13 +29002,13 @@
       "matched_existing_id": null,
       "bdfutbol_search_name": "Choi Young-il",
       "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_url": "https://www.bdfutbol.com/es/c/jugador.html?id=179825",
       "photo_filename": "9494133.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "bundled_normalized_bdfutbol"
     },
     {
       "source_id": 9494124,
@@ -29062,13 +29032,13 @@
       "matched_existing_id": null,
       "bdfutbol_search_name": "Chung Jong-son",
       "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_url": "https://www.bdfutbol.com/es/c/jugador.html?id=180081",
       "photo_filename": "9494124.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "bundled_normalized_bdfutbol"
     },
     {
       "source_id": 9494138,
@@ -29092,13 +29062,13 @@
       "matched_existing_id": null,
       "bdfutbol_search_name": "Gu Sang-bum",
       "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_url": "https://www.bdfutbol.com/es/c/jugador.html?id=180085",
       "photo_filename": "9494138.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "bundled_normalized_bdfutbol"
     },
     {
       "source_id": 9494137,
@@ -29122,13 +29092,13 @@
       "matched_existing_id": null,
       "bdfutbol_search_name": "Ha Seok-ju",
       "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_url": "https://www.bdfutbol.com/es/c/jugador.html?id=179823",
       "photo_filename": "9494137.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "bundled_normalized_bdfutbol"
     },
     {
       "source_id": 9494141,
@@ -29152,13 +29122,13 @@
       "matched_existing_id": null,
       "bdfutbol_search_name": "Hong Myung-bo",
       "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_url": "https://www.bdfutbol.com/es/c/jugador.html?id=179189",
       "photo_filename": "9494141.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "bundled_normalized_bdfutbol"
     },
     {
       "source_id": 9494139,
@@ -29182,13 +29152,13 @@
       "matched_existing_id": null,
       "bdfutbol_search_name": "Hwang Sun-hong",
       "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_url": "https://www.bdfutbol.com/es/c/jugador.html?id=179360",
       "photo_filename": "9494139.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "bundled_normalized_bdfutbol"
     },
     {
       "source_id": 9494130,
@@ -29211,14 +29181,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Kim Joo-sung",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "80236",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j80236.html",
       "photo_filename": "9494130.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9494126,
@@ -29242,13 +29212,13 @@
       "matched_existing_id": null,
       "bdfutbol_search_name": "Kim Pan-keun",
       "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_url": "https://www.bdfutbol.com/es/c/jugador.html?id=180075",
       "photo_filename": "9494126.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "bundled_normalized_bdfutbol"
     },
     {
       "source_id": 9494131,
@@ -29272,13 +29242,13 @@
       "matched_existing_id": null,
       "bdfutbol_search_name": "Ko Jeong-woon",
       "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_url": "https://www.bdfutbol.com/es/c/jugador.html?id=180079",
       "photo_filename": "9494131.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "bundled_normalized_bdfutbol"
     },
     {
       "source_id": 9494125,
@@ -29302,13 +29272,13 @@
       "matched_existing_id": null,
       "bdfutbol_search_name": "Lee Jong-hwa",
       "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_url": "https://www.bdfutbol.com/es/c/jugador.html?id=180082",
       "photo_filename": "9494125.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "bundled_normalized_bdfutbol"
     },
     {
       "source_id": 9494143,
@@ -29332,13 +29302,13 @@
       "matched_existing_id": null,
       "bdfutbol_search_name": "Lee Woon-jae",
       "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_url": "https://www.bdfutbol.com/es/c/jugador.html?id=178784",
       "photo_filename": "9494143.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "bundled_normalized_bdfutbol"
     },
     {
       "source_id": 9494128,
@@ -29362,13 +29332,13 @@
       "matched_existing_id": null,
       "bdfutbol_search_name": "Lee Young-jin",
       "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_url": "https://www.bdfutbol.com/es/c/jugador.html?id=180077",
       "photo_filename": "9494128.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "bundled_normalized_bdfutbol"
     },
     {
       "source_id": 9494142,
@@ -29392,13 +29362,13 @@
       "matched_existing_id": null,
       "bdfutbol_search_name": "Park Chul-woo",
       "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_url": "https://www.bdfutbol.com/es/c/jugador.html?id=180088",
       "photo_filename": "9494142.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "bundled_normalized_bdfutbol"
     },
     {
       "source_id": 9494127,
@@ -29422,13 +29392,13 @@
       "matched_existing_id": null,
       "bdfutbol_search_name": "Park Jung-bae",
       "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_url": "https://www.bdfutbol.com/es/c/jugador.html?id=180076",
       "photo_filename": "9494127.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "bundled_normalized_bdfutbol"
     },
     {
       "source_id": 9494132,
@@ -29451,14 +29421,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Seo Jung-won",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "87596",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j87596.html",
       "photo_filename": "9494132.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9494129,
@@ -29482,13 +29452,13 @@
       "matched_existing_id": null,
       "bdfutbol_search_name": "Shin Hong-gi",
       "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_url": "https://www.bdfutbol.com/es/c/jugador.html?id=180078",
       "photo_filename": "9494129.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "bundled_normalized_bdfutbol"
     },
     {
       "source_id": 9497593,
@@ -29991,14 +29961,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Brad Friedel",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "94147",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j94147.html",
       "photo_filename": "9494059.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9494060,
@@ -30021,14 +29991,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Claudio Reyna",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "94241",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j94241.html",
       "photo_filename": "9494060.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9494056,
@@ -30051,14 +30021,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Cobi Jones",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "80558",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j80558.html",
       "photo_filename": "9494056.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9494054,
@@ -30081,14 +30051,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Eric Wynalda",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "80026",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j80026.html",
       "photo_filename": "9494054.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9494062,
@@ -30112,13 +30082,13 @@
       "matched_existing_id": null,
       "bdfutbol_search_name": "Fernando Clavijo",
       "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_url": "https://www.bdfutbol.com/es/c/jugador.html?id=179932",
       "photo_filename": "9494062.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "bundled_normalized_bdfutbol"
     },
     {
       "source_id": 9494057,
@@ -30141,14 +30111,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Frank Klopas",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "710194",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j710194.html",
       "photo_filename": "9494057.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9494053,
@@ -30172,13 +30142,13 @@
       "matched_existing_id": null,
       "bdfutbol_search_name": "Hugo Pérez",
       "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_url": "https://www.bdfutbol.com/es/c/jugador.html?id=179930",
       "photo_filename": "9494053.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "bundled_normalized_bdfutbol"
     },
     {
       "source_id": 9494058,
@@ -30201,14 +30171,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Joe-Max Moore",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "93705",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j93705.html",
       "photo_filename": "9494058.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9494052,
@@ -30231,14 +30201,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "John Harkes",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "98987",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j98987.html",
       "photo_filename": "9494052.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9494055,
@@ -30261,14 +30231,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Juergen Sommer",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "99328",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j99328.html",
       "photo_filename": "9494055.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9494050,
@@ -30292,13 +30262,13 @@
       "matched_existing_id": null,
       "bdfutbol_search_name": "Mike Burns",
       "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_url": "https://www.bdfutbol.com/es/c/jugador.html?id=42313",
       "photo_filename": "9494050.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "bundled_normalized_bdfutbol"
     },
     {
       "source_id": 9494049,
@@ -30322,13 +30292,13 @@
       "matched_existing_id": null,
       "bdfutbol_search_name": "Mike Lapper",
       "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_url": "https://www.bdfutbol.com/es/c/jugador.html?id=179933",
       "photo_filename": "9494049.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9494061,
@@ -30351,14 +30321,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Paul Caligiuri",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "98675",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j98675.html",
       "photo_filename": "9494061.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9494051,
@@ -30381,14 +30351,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Thomas Dooley",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "98602",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j98602.html",
       "photo_filename": "9494051.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9495129,
@@ -30411,14 +30381,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Aki Hyryläinen",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "701280",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j701280.html",
       "photo_filename": "9495129.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9495131,
@@ -30471,14 +30441,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Antti Niemi",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "94360",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j94360.html",
       "photo_filename": "9495123.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9495126,
@@ -30501,14 +30471,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Ari Heikkinen",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "720531",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j720531.html",
       "photo_filename": "9495126.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9495142,
@@ -30531,14 +30501,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Ari Hjelm",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "91609",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j91609.html",
       "photo_filename": "9495142.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9495130,
@@ -30771,14 +30741,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Kari Laukkanen",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "91601",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j91601.html",
       "photo_filename": "9495124.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9495133,
@@ -30861,14 +30831,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Mika Aaltonen",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "81727",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j81727.html",
       "photo_filename": "9495138.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9495143,
@@ -30891,14 +30861,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Mixu Paatelainen",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "99300",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j99300.html",
       "photo_filename": "9495143.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9495135,
@@ -30921,14 +30891,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Pasi Tauriainen",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "721436",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j721436.html",
       "photo_filename": "9495135.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9495122,
@@ -31041,14 +31011,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Tommi Paavola",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "69861",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j69861.html",
       "photo_filename": "9495139.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9496385,
@@ -31191,14 +31161,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Charles Akonnor",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "90088",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j90088.html",
       "photo_filename": "9495178.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9495176,
@@ -31221,14 +31191,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Eben Dugbatey",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "87631",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j87631.html",
       "photo_filename": "9495176.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9495168,
@@ -31491,14 +31461,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Kenny Achampong",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "1049695",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1049695.html",
       "photo_filename": "9495182.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9496048,
@@ -31581,14 +31551,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Prince Polley Opoku",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "63033",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j63033.html",
       "photo_filename": "9495187.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9495173,
@@ -31641,14 +31611,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Samuel Johnson",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "55560",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j55560.html",
       "photo_filename": "9495181.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9495175,
@@ -31671,14 +31641,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Samuel Kuffour",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "90326",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j90326.html",
       "photo_filename": "9495175.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9496034,
@@ -31731,14 +31701,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Yaw Acheampong",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "1272",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1272.html",
       "photo_filename": "9495179.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9496006,
@@ -45351,14 +45321,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "János Bánfi",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "68899",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j68899.html",
       "photo_filename": "9495004.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9495003,
@@ -45381,14 +45351,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "József Csábi",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "725521",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j725521.html",
       "photo_filename": "9495003.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9496294,
@@ -45561,14 +45531,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Alan McLoughlin",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "1035098",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1035098.html",
       "photo_filename": "9494192.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9494193,
@@ -45591,14 +45561,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "David Kelly",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "99182",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j99182.html",
       "photo_filename": "9494193.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9494194,
@@ -45621,14 +45591,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Jason McAteer",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "94202",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j94202.html",
       "photo_filename": "9494194.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9494191,
@@ -45651,14 +45621,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "John Aldridge",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "1301",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1301.html",
       "photo_filename": "9494191.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9495002,
@@ -45681,14 +45651,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Alan Fettis",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "98972",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j98972.html",
       "photo_filename": "9495002.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9496629,
@@ -46101,14 +46071,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Abdelkrim El Hadrioui",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "85935",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j85935.html",
       "photo_filename": "9494228.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9494240,
@@ -46131,14 +46101,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Abdelmajid Bouyboud",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "89476",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j89476.html",
       "photo_filename": "9494240.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9494238,
@@ -46162,13 +46132,13 @@
       "matched_existing_id": null,
       "bdfutbol_search_name": "Abdeslam Laghrissi",
       "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_url": "https://www.bdfutbol.com/es/c/jugador.html?id=180187",
       "photo_filename": "9494238.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "bundled_normalized_bdfutbol"
     },
     {
       "source_id": 9494235,
@@ -46191,14 +46161,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Ahmed Bahja",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "57756",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j57756.html",
       "photo_filename": "9494235.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9494236,
@@ -46222,13 +46192,13 @@
       "matched_existing_id": null,
       "bdfutbol_search_name": "Ahmed Masbahi",
       "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_url": "https://www.bdfutbol.com/es/c/jugador.html?id=180189",
       "photo_filename": "9494236.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "bundled_normalized_bdfutbol"
     },
     {
       "source_id": 9494237,
@@ -46252,13 +46222,13 @@
       "matched_existing_id": null,
       "bdfutbol_search_name": "El Arbi Hababi Hababi",
       "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_url": "https://www.bdfutbol.com/es/c/jugador.html?id=180184",
       "photo_filename": "9494237.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "bundled_normalized_bdfutbol"
     },
     {
       "source_id": 9494241,
@@ -46281,14 +46251,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Hassan Kachloul",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "93670",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j93670.html",
       "photo_filename": "9494241.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9496157,
@@ -46342,13 +46312,13 @@
       "matched_existing_id": null,
       "bdfutbol_search_name": "Khalil Azmi",
       "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_url": "https://www.bdfutbol.com/es/c/jugador.html?id=180183",
       "photo_filename": "9494226.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "bundled_normalized_bdfutbol"
     },
     {
       "source_id": 9494242,
@@ -46372,13 +46342,13 @@
       "matched_existing_id": null,
       "bdfutbol_search_name": "Mohamed Samadi",
       "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_url": "https://www.bdfutbol.com/es/c/jugador.html?id=180186",
       "photo_filename": "9494242.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "bundled_normalized_bdfutbol"
     },
     {
       "source_id": 9494232,
@@ -46401,14 +46371,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Mohammed Chaouch",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "87863",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j87863.html",
       "photo_filename": "9494232.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9494231,
@@ -46431,14 +46401,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Mustapha Hadji",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "2065",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j2065.html",
       "photo_filename": "9494231.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9494227,
@@ -46521,14 +46491,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Rachid Daoudi",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "6708",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j6708.html",
       "photo_filename": "9494233.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9494239,
@@ -46551,14 +46521,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Rachid Neqrouz",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "95793",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j95793.html",
       "photo_filename": "9494239.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9494234,
@@ -46582,13 +46552,13 @@
       "matched_existing_id": null,
       "bdfutbol_search_name": "Said Dghay",
       "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_url": "https://www.bdfutbol.com/es/c/jugador.html?id=180188",
       "photo_filename": "9494234.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "bundled_normalized_bdfutbol"
     },
     {
       "source_id": 9494230,
@@ -46611,14 +46581,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Smahi Triki",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "87627",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j87627.html",
       "photo_filename": "9494230.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9494229,
@@ -46641,14 +46611,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Tahar El Khalej",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "93669",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j93669.html",
       "photo_filename": "9494229.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9494243,
@@ -46672,13 +46642,13 @@
       "matched_existing_id": null,
       "bdfutbol_search_name": "Zakaria Alaoui",
       "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_url": "https://www.bdfutbol.com/es/c/jugador.html?id=180185",
       "photo_filename": "9494243.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "bundled_normalized_bdfutbol"
     },
     {
       "source_id": 9494188,
@@ -46701,14 +46671,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Alloysius Agu",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "63261",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j63261.html",
       "photo_filename": "9494188.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9497185,
@@ -46761,14 +46731,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Augustine Eguavoen",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "7028",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j7028.html",
       "photo_filename": "9494179.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9494182,
@@ -46852,13 +46822,13 @@
       "matched_existing_id": null,
       "bdfutbol_search_name": "Emeka Ezeugo",
       "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_url": "https://www.bdfutbol.com/es/c/jugador.html?id=179092",
       "photo_filename": "9494185.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "bundled_normalized_bdfutbol"
     },
     {
       "source_id": 9494184,
@@ -46881,14 +46851,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Emmanuel Amunike",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "676",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j676.html",
       "photo_filename": "9494184.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9496255,
@@ -46941,14 +46911,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Michael Emenalo",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "6724",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j6724.html",
       "photo_filename": "9494189.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9496344,
@@ -47091,14 +47061,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Thompson Oliha",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "1176197",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1176197.html",
       "photo_filename": "9494183.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9494190,
@@ -47121,44 +47091,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Uche Okafor",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "720561",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j720561.html",
       "photo_filename": "9494190.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
-    },
-    {
-      "source_id": 9494181,
-      "display_name": "Uche Okechukwu",
-      "first_name": "Uche",
-      "surname1": "Okechukwu",
-      "surname2": null,
-      "birth_date": "1967-09-27",
-      "country_id": 59,
-      "country_name": "Nigeria",
-      "broad_position": "DEF",
-      "team_id": 9400059,
-      "team_name": "Otros-Nigeria",
-      "creation_batch": "world_cup_1994",
-      "identity_source": "Fjelstul World Cup Database",
-      "identity_source_url": null,
-      "verified_national_pool_year": null,
-      "historical_position_1993_94": null,
-      "historical_club_1994": null,
-      "duplicate_check": "created_after_global_existing_player_comparison",
-      "matched_existing_id": null,
-      "bdfutbol_search_name": "Uche Okechukwu",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
-      "photo_filename": "9494181.jpg",
-      "photo_width": 40,
-      "photo_height": 55,
-      "photo_format": "JPEG",
-      "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9496364,
@@ -47211,14 +47151,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Alf-Inge Håland",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "93585",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j93585.html",
       "photo_filename": "9494203.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9494202,
@@ -47241,14 +47181,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Dan Eggen",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "474",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j474.html",
       "photo_filename": "9494202.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9494195,
@@ -47271,14 +47211,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Erik Mykland",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "90171",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j90171.html",
       "photo_filename": "9494195.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9494198,
@@ -47301,44 +47241,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Frode Grodås",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "908",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j908.html",
       "photo_filename": "9494198.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
-    },
-    {
-      "source_id": 9494201,
-      "display_name": "Gøran Sørloth",
-      "first_name": "Gøran",
-      "surname1": "Sørloth",
-      "surname2": null,
-      "birth_date": "1962-07-16",
-      "country_id": 60,
-      "country_name": "Noruega",
-      "broad_position": "DEL",
-      "team_id": 9400060,
-      "team_name": "Otros-Noruega",
-      "creation_batch": "world_cup_1994",
-      "identity_source": "Fjelstul World Cup Database",
-      "identity_source_url": null,
-      "verified_national_pool_year": null,
-      "historical_position_1993_94": null,
-      "historical_club_1994": null,
-      "duplicate_check": "created_after_global_existing_player_comparison",
-      "matched_existing_id": null,
-      "bdfutbol_search_name": "Gøran Sørloth",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
-      "photo_filename": "9494201.jpg",
-      "photo_width": 40,
-      "photo_height": 55,
-      "photo_format": "JPEG",
-      "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9496480,
@@ -47421,14 +47331,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Karl Petter Løken",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "709336",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j709336.html",
       "photo_filename": "9494200.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9494197,
@@ -47481,14 +47391,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Lars Bohinen",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "93991",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j93991.html",
       "photo_filename": "9494206.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9494199,
@@ -47511,14 +47421,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Ola By Rise",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "709316",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j709316.html",
       "photo_filename": "9494199.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9494204,
@@ -47541,14 +47451,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Roar Strand",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "43372",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j43372.html",
       "photo_filename": "9494204.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9494205,
@@ -47571,14 +47481,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Sigurd Rushfeldt",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "2510",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j2510.html",
       "photo_filename": "9494205.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9494196,
@@ -47601,14 +47511,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Øyvind Leonhardsen",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "93798",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j93798.html",
       "photo_filename": "9494196.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9495001,
@@ -47631,14 +47541,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Celso Ayala",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "403",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j403.html",
       "photo_filename": "9495001.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9496076,
@@ -48440,15 +48350,15 @@
       "historical_club_1994": "Royal Antwerp",
       "duplicate_check": "exact_name_birthdate_source_profile_gate_v037",
       "matched_existing_id": null,
-      "bdfutbol_search_name": "Stevan Stojanović",
-      "bdfutbol_id": null,
-      "bdfutbol_url": null,
+      "bdfutbol_search_name": "Stojanović (Stevan Stojanović)",
+      "bdfutbol_id": "44164",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j44164.html",
       "photo_filename": "9498014.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9496098,
@@ -48501,14 +48411,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Basarab Panduru",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "89199",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j89199.html",
       "photo_filename": "9494023.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9494020,
@@ -48561,14 +48471,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Constantin Gâlcă",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "452",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j452.html",
       "photo_filename": "9494026.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9496413,
@@ -48621,14 +48531,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Corneliu Papură",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "87580",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j87580.html",
       "photo_filename": "9494027.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9494016,
@@ -48651,14 +48561,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Daniel Prodan",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "499",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j499.html",
       "photo_filename": "9494016.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9496405,
@@ -48771,14 +48681,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Florin Prunea",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "701861",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j701861.html",
       "photo_filename": "9494015.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9494022,
@@ -48801,14 +48711,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Gheorghe Mihali",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "87730",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j87730.html",
       "photo_filename": "9494022.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9494019,
@@ -48831,14 +48741,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Ilie Dumitrescu",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "1094",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1094.html",
       "photo_filename": "9494019.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9494024,
@@ -48861,14 +48771,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Ion Vlădoiu",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "98480",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j98480.html",
       "photo_filename": "9494024.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9494018,
@@ -48892,13 +48802,13 @@
       "matched_existing_id": null,
       "bdfutbol_search_name": "Iulian Chiriță",
       "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_url": "https://www.bdfutbol.com/es/c/jugador.html?id=179089",
       "photo_filename": "9494018.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "bundled_normalized_bdfutbol"
     },
     {
       "source_id": 9494029,
@@ -48922,13 +48832,13 @@
       "matched_existing_id": null,
       "bdfutbol_search_name": "Marian Ivan",
       "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_url": "https://www.bdfutbol.com/es/c/jugador.html?id=179090",
       "photo_filename": "9494029.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9496036,
@@ -49101,14 +49011,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Ovidiu Stîngă",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "2146",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j2146.html",
       "photo_filename": "9494028.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9496148,
@@ -49251,14 +49161,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Viorel Moldovan",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "99130",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j99130.html",
       "photo_filename": "9494025.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9494030,
@@ -49282,13 +49192,13 @@
       "matched_existing_id": null,
       "bdfutbol_search_name": "Ștefan Preda",
       "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_url": "https://www.bdfutbol.com/es/c/jugador.html?id=179091",
       "photo_filename": "9494030.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "bundled_normalized_bdfutbol"
     },
     {
       "source_id": 9496319,
@@ -49881,39 +49791,9 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Rashid Rahimov",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "2861",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j2861.html",
       "photo_filename": "9495356.jpg",
-      "photo_width": 40,
-      "photo_height": 55,
-      "photo_format": "JPEG",
-      "photo_mode": "RGB",
-      "photo_status": "pending"
-    },
-    {
-      "source_id": 9496345,
-      "display_name": "Ravil Rufailovich Sabitov",
-      "first_name": "Ravil Rufailovich",
-      "surname1": "Sabitov",
-      "surname2": null,
-      "birth_date": "1968-03-08",
-      "country_id": 40,
-      "country_name": "Rusia",
-      "broad_position": "DEF",
-      "team_id": 466,
-      "team_name": "Waregem",
-      "creation_batch": "belgium_league_rosters_0.25",
-      "identity_source": "BDFutbol 1993-94 squad page; identity/position audit v0.25",
-      "identity_source_url": "https://www.bdfutbol.com/en/t/t1993-9410295.html",
-      "verified_national_pool_year": 1994,
-      "historical_position_1993_94": "Left Back",
-      "historical_club_1994": "Waregem",
-      "duplicate_check": "exact_name_birthdate_source_profile_gate_v042",
-      "matched_existing_id": null,
-      "bdfutbol_search_name": "Ravil Rufailovich Sabitov",
-      "bdfutbol_id": "69694",
-      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j69694.html",
-      "photo_filename": "9496345.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
@@ -49941,14 +49821,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Sergei Gorlukovich",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "80033",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j80033.html",
       "photo_filename": "9494080.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9496671,
@@ -50241,14 +50121,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Vladimir Tatarchuk",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "1071165",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1071165.html",
       "photo_filename": "9495359.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9494085,
@@ -50301,14 +50181,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Vladislav Ternavsky",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "1160387",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1160387.html",
       "photo_filename": "9494082.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9495358,
@@ -51411,14 +51291,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Håkan Mild",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "1018",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1018.html",
       "photo_filename": "9494099.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9494101,
@@ -51441,14 +51321,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Jesper Blomqvist",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "94242",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j94242.html",
       "photo_filename": "9494101.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9494092,
@@ -51471,14 +51351,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Joachim Björklund",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "2542",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j2542.html",
       "photo_filename": "9494092.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9494094,
@@ -51501,14 +51381,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Lars Eriksson",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "89364",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j89364.html",
       "photo_filename": "9494094.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9494100,
@@ -51531,14 +51411,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Magnus Erlingmark",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "701524",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j701524.html",
       "photo_filename": "9494100.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9494102,
@@ -51561,14 +51441,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Magnus Hedman",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "93621",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j93621.html",
       "photo_filename": "9494102.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9494095,
@@ -51591,14 +51471,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Mikael Nilsson",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "701525",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j701525.html",
       "photo_filename": "9494095.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9494096,
@@ -51621,14 +51501,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Pontus Kåmark",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "98939",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j98939.html",
       "photo_filename": "9494096.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9496010,
@@ -51711,14 +51591,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Stefan Rehn",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "1049786",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1049786.html",
       "photo_filename": "9494098.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9494097,
@@ -51741,14 +51621,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Teddy Lučić",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "92217",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j92217.html",
       "photo_filename": "9494097.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9494091,
@@ -51771,14 +51651,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Thomas Ravelli",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "1181165",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1181165.html",
       "photo_filename": "9494091.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9494035,
@@ -51801,14 +51681,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Alain Geiger",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "52998",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j52998.html",
       "photo_filename": "9494035.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9494039,
@@ -51831,14 +51711,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "André Egli",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "86249",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j86249.html",
       "photo_filename": "9494039.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9494037,
@@ -51861,14 +51741,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Christophe Ohrel",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "89099",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j89099.html",
       "photo_filename": "9494037.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9494034,
@@ -51892,13 +51772,13 @@
       "matched_existing_id": null,
       "bdfutbol_search_name": "Dominique Herr",
       "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_url": "https://www.bdfutbol.com/es/c/jugador.html?id=179087",
       "photo_filename": "9494034.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "bundled_normalized_bdfutbol"
     },
     {
       "source_id": 9494036,
@@ -51921,14 +51801,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Georges Bregy",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "710740",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j710740.html",
       "photo_filename": "9494036.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9494045,
@@ -51952,13 +51832,13 @@
       "matched_existing_id": null,
       "bdfutbol_search_name": "Jürg Studer",
       "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_url": "https://www.bdfutbol.com/es/c/jugador.html?id=179088",
       "photo_filename": "9494045.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "bundled_normalized_bdfutbol"
     },
     {
       "source_id": 9496358,
@@ -52011,14 +51891,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Marc Hottiger",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "99224",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j99224.html",
       "photo_filename": "9494032.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9494041,
@@ -52041,14 +51921,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Marco Grassi",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "87573",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j87573.html",
       "photo_filename": "9494041.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9494031,
@@ -52071,14 +51951,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Marco Pascolo",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "91255",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j91255.html",
       "photo_filename": "9494031.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9494048,
@@ -52101,14 +51981,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Martin Brunner",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "713195",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j713195.html",
       "photo_filename": "9494048.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9494044,
@@ -52131,14 +52011,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Martin Rueda",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "701914",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j701914.html",
       "photo_filename": "9494044.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9494040,
@@ -52161,14 +52041,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Nestor Subiat",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "87495",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j87495.html",
       "photo_filename": "9494040.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9494046,
@@ -52191,14 +52071,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Patrick Sylvestre",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "701527",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j701527.html",
       "photo_filename": "9494046.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9494038,
@@ -52221,14 +52101,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Stephan Lehmann",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "701856",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j701856.html",
       "photo_filename": "9494038.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9494043,
@@ -52251,14 +52131,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Sébastien Fournier",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "98596",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j98596.html",
       "photo_filename": "9494043.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9494042,
@@ -52281,14 +52161,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Thomas Bickel",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "713171",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j713171.html",
       "photo_filename": "9494042.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9494047,
@@ -52311,14 +52191,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Thomas Wyss",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "713316",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j713316.html",
       "photo_filename": "9494047.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9494033,
@@ -52341,14 +52221,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Yvan Quentin",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "701854",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j701854.html",
       "photo_filename": "9494033.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9496512,
@@ -54029,36 +53909,6 @@
       "photo_format": "JPEG",
       "photo_mode": "RGB",
       "photo_status": "ready_for_download"
-    },
-    {
-      "source_id": 9497314,
-      "display_name": "Cafer Aydın",
-      "first_name": "Cafer",
-      "surname1": "Aydın",
-      "surname2": null,
-      "birth_date": "1971-11-17",
-      "country_id": 84,
-      "country_name": "Turquía",
-      "broad_position": "DEL",
-      "team_id": 9357010,
-      "team_name": "Kayserispor",
-      "creation_batch": "turkey_league_rosters_0.26",
-      "identity_source": "BDFutbol 1993-94 squad; identity/position audit v0.26",
-      "identity_source_url": "https://www.bdfutbol.com/en/t/t1993-9410432.html",
-      "verified_national_pool_year": 1994,
-      "historical_position_1993_94": "Centre Forward",
-      "historical_club_1994": "Kayserispor",
-      "duplicate_check": "turkey_1993_94_explicit_identity_gate",
-      "matched_existing_id": null,
-      "bdfutbol_search_name": "Aydın",
-      "bdfutbol_id": "702562",
-      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j702562.html",
-      "photo_filename": "9497314.jpg",
-      "photo_width": 40,
-      "photo_height": 55,
-      "photo_format": "JPEG",
-      "photo_mode": "RGB",
-      "photo_status": "bundled_normalized_bdfutbol"
     },
     {
       "source_id": 9497327,
@@ -62871,14 +62721,14 @@
       "duplicate_check": "created_after_global_existing_player_comparison",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Dragoje Leković",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "625",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j625.html",
       "photo_filename": "9495000.jpg",
       "photo_width": 40,
       "photo_height": 55,
       "photo_format": "JPEG",
       "photo_mode": "RGB",
-      "photo_status": "pending"
+      "photo_status": "ready_for_download"
     },
     {
       "source_id": 9496091,

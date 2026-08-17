@@ -1,0 +1,675 @@
+{
+  "results": [
+    {
+      "country": "Arabia Saudí",
+      "squad_size": 22,
+      "confirmed": [
+        {
+          "source_id": 9494254,
+          "display_name": "Saeed Al-Owairan",
+          "expected_birth_date": "1967-08-19",
+          "candidates": [
+            {
+              "kind": "manager",
+              "id": "179777",
+              "surname": "Al-Dossari",
+              "full_name": "Saeed Ali Al-Owairan Al-Dossari",
+              "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/179777/6a3ed39ae75a1.jpg"
+            }
+          ],
+          "matched": {
+            "kind": "manager",
+            "id": "179777",
+            "surname": "Al-Dossari",
+            "full_name": "Saeed Ali Al-Owairan Al-Dossari",
+            "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/179777/6a3ed39ae75a1.jpg",
+            "dob": "1967-08-19"
+          }
+        }
+      ],
+      "needs_review": [],
+      "unmatched": []
+    },
+    {
+      "country": "Bolivia",
+      "squad_size": 22,
+      "confirmed": [],
+      "needs_review": [
+        {
+          "source_id": 9494105,
+          "display_name": "Marco Sandy",
+          "expected_birth_date": "1971-08-29",
+          "candidates": [
+            {
+              "kind": "main",
+              "id": "1887",
+              "surname": "Sandy",
+              "full_name": "Marco Antonio Sandy Sansusty",
+              "photo_url": "https://www.bdfutbol.com/i/m/1887.png"
+            },
+            {
+              "kind": "main",
+              "id": "1883",
+              "surname": "Etcheverry",
+              "full_name": "Marco Antonio Etcheverry Vargas",
+              "photo_url": "https://www.bdfutbol.com/i/m/1883.png"
+            }
+          ]
+        }
+      ],
+      "unmatched": []
+    },
+    {
+      "country": "Bulgaria",
+      "squad_size": 22,
+      "confirmed": [],
+      "needs_review": [
+        {
+          "source_id": 9494152,
+          "display_name": "Plamen Nikolov",
+          "expected_birth_date": "1961-08-20",
+          "candidates": [
+            {
+              "kind": "main",
+              "id": "721397",
+              "surname": "Nikolov",
+              "full_name": "Plamen Nikolov",
+              "photo_url": "https://www.bdfutbol.com/i/m/721397.png"
+            }
+          ]
+        }
+      ],
+      "unmatched": []
+    },
+    {
+      "country": "Colombia",
+      "squad_size": 22,
+      "confirmed": [
+        {
+          "source_id": 9494005,
+          "display_name": "Gabriel Gómez",
+          "expected_birth_date": "1959-12-08",
+          "candidates": [
+            {
+              "kind": "manager",
+              "id": "179923",
+              "surname": "Gabriel Gómez",
+              "full_name": "Gabriel Jaime Gómez Jaramillo",
+              "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/179923/6a404288bed88.jpg"
+            }
+          ],
+          "matched": {
+            "kind": "manager",
+            "id": "179923",
+            "surname": "Gabriel Gómez",
+            "full_name": "Gabriel Jaime Gómez Jaramillo",
+            "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/179923/6a404288bed88.jpg",
+            "dob": "1959-12-08"
+          }
+        }
+      ],
+      "needs_review": [
+        {
+          "source_id": 9494013,
+          "display_name": "Wilson Pérez",
+          "expected_birth_date": "1967-08-06",
+          "candidates": [
+            {
+              "kind": "manager",
+              "id": "179922",
+              "surname": "Wilson Pérez",
+              "full_name": "Wilson Enrique Pérez Pérez",
+              "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/179922/6a404200cc695.png"
+            },
+            {
+              "kind": "main",
+              "id": "81262",
+              "surname": "Valenciano",
+              "full_name": "Iván René Valenciano Pérez",
+              "photo_url": "https://www.bdfutbol.com/i/m/81262.png"
+            }
+          ]
+        }
+      ],
+      "unmatched": []
+    },
+    {
+      "country": "Corea del Sur",
+      "squad_size": 22,
+      "confirmed": [
+        {
+          "source_id": 9494134,
+          "display_name": "An Ik-soo",
+          "expected_birth_date": "1965-05-06",
+          "candidates": [
+            {
+              "kind": "manager",
+              "id": "180083",
+              "surname": "An Ik-soo",
+              "full_name": "Ik-soo An",
+              "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/180083/6a417f838e408.jpg"
+            }
+          ],
+          "matched": {
+            "kind": "manager",
+            "id": "180083",
+            "surname": "An Ik-soo",
+            "full_name": "Ik-soo An",
+            "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/180083/6a417f838e408.jpg",
+            "dob": "1965-05-06"
+          }
+        },
+        {
+          "source_id": 9494135,
+          "display_name": "Choi Dae-shik",
+          "expected_birth_date": "1965-01-10",
+          "candidates": [
+            {
+              "kind": "manager",
+              "id": "180074",
+              "surname": "Choi In-young",
+              "full_name": "In-young Choi",
+              "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/180074/6a417c2f229cd.jpg"
+            },
+            {
+              "kind": "manager",
+              "id": "179825",
+              "surname": "Choi Young-il",
+              "full_name": "Young-il Choi",
+              "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/179825/6a3ef102ae7b8.png"
+            },
+            {
+              "kind": "manager",
+              "id": "180084",
+              "surname": "Choi Dae-shik",
+              "full_name": "Dae-shik Choi",
+              "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/180084/6a417ff6d5c43.jpg"
+            },
+            {
+              "kind": "manager",
+              "id": "180086",
+              "surname": "Choi Moon-sik",
+              "full_name": "Moon-sik Choi",
+              "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/180086/6a4180e77aa4c.png"
+            }
+          ],
+          "matched": {
+            "kind": "manager",
+            "id": "180084",
+            "surname": "Choi Dae-shik",
+            "full_name": "Dae-shik Choi",
+            "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/180084/6a417ff6d5c43.jpg",
+            "dob": "1965-01-10"
+          }
+        },
+        {
+          "source_id": 9494123,
+          "display_name": "Choi In-young",
+          "expected_birth_date": "1962-03-05",
+          "candidates": [
+            {
+              "kind": "manager",
+              "id": "180074",
+              "surname": "Choi In-young",
+              "full_name": "In-young Choi",
+              "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/180074/6a417c2f229cd.jpg"
+            },
+            {
+              "kind": "manager",
+              "id": "179825",
+              "surname": "Choi Young-il",
+              "full_name": "Young-il Choi",
+              "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/179825/6a3ef102ae7b8.png"
+            },
+            {
+              "kind": "manager",
+              "id": "180084",
+              "surname": "Choi Dae-shik",
+              "full_name": "Dae-shik Choi",
+              "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/180084/6a417ff6d5c43.jpg"
+            },
+            {
+              "kind": "manager",
+              "id": "180086",
+              "surname": "Choi Moon-sik",
+              "full_name": "Moon-sik Choi",
+              "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/180086/6a4180e77aa4c.png"
+            }
+          ],
+          "matched": {
+            "kind": "manager",
+            "id": "180074",
+            "surname": "Choi In-young",
+            "full_name": "In-young Choi",
+            "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/180074/6a417c2f229cd.jpg",
+            "dob": "1962-03-05"
+          }
+        },
+        {
+          "source_id": 9494140,
+          "display_name": "Choi Moon-sik",
+          "expected_birth_date": "1971-01-06",
+          "candidates": [
+            {
+              "kind": "manager",
+              "id": "180074",
+              "surname": "Choi In-young",
+              "full_name": "In-young Choi",
+              "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/180074/6a417c2f229cd.jpg"
+            },
+            {
+              "kind": "manager",
+              "id": "179825",
+              "surname": "Choi Young-il",
+              "full_name": "Young-il Choi",
+              "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/179825/6a3ef102ae7b8.png"
+            },
+            {
+              "kind": "manager",
+              "id": "180084",
+              "surname": "Choi Dae-shik",
+              "full_name": "Dae-shik Choi",
+              "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/180084/6a417ff6d5c43.jpg"
+            },
+            {
+              "kind": "manager",
+              "id": "180086",
+              "surname": "Choi Moon-sik",
+              "full_name": "Moon-sik Choi",
+              "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/180086/6a4180e77aa4c.png"
+            }
+          ],
+          "matched": {
+            "kind": "manager",
+            "id": "180086",
+            "surname": "Choi Moon-sik",
+            "full_name": "Moon-sik Choi",
+            "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/180086/6a4180e77aa4c.png",
+            "dob": "1971-01-06"
+          }
+        },
+        {
+          "source_id": 9494133,
+          "display_name": "Choi Young-il",
+          "expected_birth_date": "1966-04-25",
+          "candidates": [
+            {
+              "kind": "manager",
+              "id": "180074",
+              "surname": "Choi In-young",
+              "full_name": "In-young Choi",
+              "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/180074/6a417c2f229cd.jpg"
+            },
+            {
+              "kind": "manager",
+              "id": "179825",
+              "surname": "Choi Young-il",
+              "full_name": "Young-il Choi",
+              "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/179825/6a3ef102ae7b8.png"
+            },
+            {
+              "kind": "manager",
+              "id": "180084",
+              "surname": "Choi Dae-shik",
+              "full_name": "Dae-shik Choi",
+              "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/180084/6a417ff6d5c43.jpg"
+            },
+            {
+              "kind": "manager",
+              "id": "180086",
+              "surname": "Choi Moon-sik",
+              "full_name": "Moon-sik Choi",
+              "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/180086/6a4180e77aa4c.png"
+            }
+          ],
+          "matched": {
+            "kind": "manager",
+            "id": "179825",
+            "surname": "Choi Young-il",
+            "full_name": "Young-il Choi",
+            "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/179825/6a3ef102ae7b8.png",
+            "dob": "1966-04-25"
+          }
+        },
+        {
+          "source_id": 9494124,
+          "display_name": "Chung Jong-son",
+          "expected_birth_date": "1966-03-20",
+          "candidates": [
+            {
+              "kind": "manager",
+              "id": "180081",
+              "surname": "Chung Jong-son",
+              "full_name": "Jong-son Chung",
+              "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/180081/6a417ef629a1a.jpg"
+            }
+          ],
+          "matched": {
+            "kind": "manager",
+            "id": "180081",
+            "surname": "Chung Jong-son",
+            "full_name": "Jong-son Chung",
+            "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/180081/6a417ef629a1a.jpg",
+            "dob": "1966-03-20"
+          }
+        },
+        {
+          "source_id": 9494138,
+          "display_name": "Gu Sang-bum",
+          "expected_birth_date": "1964-06-15",
+          "candidates": [
+            {
+              "kind": "manager",
+              "id": "180085",
+              "surname": "Gu Sang-bum",
+              "full_name": "Sang-bum Gu",
+              "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/180085/6a4180920556f.jpg"
+            }
+          ],
+          "matched": {
+            "kind": "manager",
+            "id": "180085",
+            "surname": "Gu Sang-bum",
+            "full_name": "Sang-bum Gu",
+            "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/180085/6a4180920556f.jpg",
+            "dob": "1964-06-15"
+          }
+        },
+        {
+          "source_id": 9494137,
+          "display_name": "Ha Seok-ju",
+          "expected_birth_date": "1968-02-20",
+          "candidates": [
+            {
+              "kind": "manager",
+              "id": "179823",
+              "surname": "Ha Seok-ju",
+              "full_name": "Seok-ju Ha",
+              "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/179823/6a3ef04f4dd2a.jpg"
+            }
+          ],
+          "matched": {
+            "kind": "manager",
+            "id": "179823",
+            "surname": "Ha Seok-ju",
+            "full_name": "Seok-ju Ha",
+            "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/179823/6a3ef04f4dd2a.jpg",
+            "dob": "1968-02-20"
+          }
+        },
+        {
+          "source_id": 9494139,
+          "display_name": "Hwang Sun-hong",
+          "expected_birth_date": "1968-07-14",
+          "candidates": [
+            {
+              "kind": "manager",
+              "id": "179360",
+              "surname": "Hwang Sun-hong",
+              "full_name": "Sun-hong Hwang",
+              "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/179360/6a3c30ddede70.jpg"
+            }
+          ],
+          "matched": {
+            "kind": "manager",
+            "id": "179360",
+            "surname": "Hwang Sun-hong",
+            "full_name": "Sun-hong Hwang",
+            "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/179360/6a3c30ddede70.jpg",
+            "dob": "1968-07-14"
+          }
+        },
+        {
+          "source_id": 9494126,
+          "display_name": "Kim Pan-keun",
+          "expected_birth_date": "1966-03-05",
+          "candidates": [
+            {
+              "kind": "manager",
+              "id": "180075",
+              "surname": "Kim Pan-keun",
+              "full_name": "Pan-keun Kim",
+              "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/180075/6a417c8c2af22.jpg"
+            },
+            {
+              "kind": "main",
+              "id": "80236",
+              "surname": "Kim",
+              "full_name": "Kim Joo-sung",
+              "photo_url": "https://www.bdfutbol.com/i/m/80236.png"
+            }
+          ],
+          "matched": {
+            "kind": "manager",
+            "id": "180075",
+            "surname": "Kim Pan-keun",
+            "full_name": "Pan-keun Kim",
+            "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/180075/6a417c8c2af22.jpg",
+            "dob": "1966-03-05"
+          }
+        },
+        {
+          "source_id": 9494131,
+          "display_name": "Ko Jeong-woon",
+          "expected_birth_date": "1966-06-27",
+          "candidates": [
+            {
+              "kind": "manager",
+              "id": "180079",
+              "surname": "Ko Jeong-woon",
+              "full_name": "Jeong-woon Ko",
+              "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/180079/6a417e2866cd0.jpg"
+            }
+          ],
+          "matched": {
+            "kind": "manager",
+            "id": "180079",
+            "surname": "Ko Jeong-woon",
+            "full_name": "Jeong-woon Ko",
+            "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/180079/6a417e2866cd0.jpg",
+            "dob": "1966-06-27"
+          }
+        },
+        {
+          "source_id": 9494125,
+          "display_name": "Lee Jong-hwa",
+          "expected_birth_date": "1963-07-20",
+          "candidates": [
+            {
+              "kind": "manager",
+              "id": "180077",
+              "surname": "Lee Young-jin",
+              "full_name": "Young-jin Lee",
+              "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/180077/6a417d976d6eb.jpg"
+            },
+            {
+              "kind": "manager",
+              "id": "178784",
+              "surname": "Woon-jae",
+              "full_name": "Lee Woon-jae",
+              "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10313/178784/6a3ab4a5d99a7.png"
+            },
+            {
+              "kind": "manager",
+              "id": "180082",
+              "surname": "Lee Jong-Hwa",
+              "full_name": "Jong-Hwa Lee",
+              "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/180082/6a417f3b86662.jpg"
+            }
+          ],
+          "matched": {
+            "kind": "manager",
+            "id": "180082",
+            "surname": "Lee Jong-Hwa",
+            "full_name": "Jong-Hwa Lee",
+            "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/180082/6a417f3b86662.jpg",
+            "dob": "1963-07-20"
+          }
+        },
+        {
+          "source_id": 9494128,
+          "display_name": "Lee Young-jin",
+          "expected_birth_date": "1963-10-27",
+          "candidates": [
+            {
+              "kind": "manager",
+              "id": "180077",
+              "surname": "Lee Young-jin",
+              "full_name": "Young-jin Lee",
+              "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/180077/6a417d976d6eb.jpg"
+            },
+            {
+              "kind": "manager",
+              "id": "178784",
+              "surname": "Woon-jae",
+              "full_name": "Lee Woon-jae",
+              "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10313/178784/6a3ab4a5d99a7.png"
+            },
+            {
+              "kind": "manager",
+              "id": "180082",
+              "surname": "Lee Jong-Hwa",
+              "full_name": "Jong-Hwa Lee",
+              "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/180082/6a417f3b86662.jpg"
+            }
+          ],
+          "matched": {
+            "kind": "manager",
+            "id": "180077",
+            "surname": "Lee Young-jin",
+            "full_name": "Young-jin Lee",
+            "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/180077/6a417d976d6eb.jpg",
+            "dob": "1963-10-27"
+          }
+        },
+        {
+          "source_id": 9494142,
+          "display_name": "Park Chul-woo",
+          "expected_birth_date": "1965-09-29",
+          "candidates": [
+            {
+              "kind": "manager",
+              "id": "180076",
+              "surname": "Park Jung-bae",
+              "full_name": "Jung-bae Park",
+              "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/180076/6a417d2a06377.jpg"
+            },
+            {
+              "kind": "manager",
+              "id": "180088",
+              "surname": "Park Chul-woo",
+              "full_name": "Chul-woo Park",
+              "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/180088/6a4181728d140.png"
+            }
+          ],
+          "matched": {
+            "kind": "manager",
+            "id": "180088",
+            "surname": "Park Chul-woo",
+            "full_name": "Chul-woo Park",
+            "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/180088/6a4181728d140.png",
+            "dob": "1965-09-29"
+          }
+        },
+        {
+          "source_id": 9494127,
+          "display_name": "Park Jung-bae",
+          "expected_birth_date": "1967-02-19",
+          "candidates": [
+            {
+              "kind": "manager",
+              "id": "180076",
+              "surname": "Park Jung-bae",
+              "full_name": "Jung-bae Park",
+              "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/180076/6a417d2a06377.jpg"
+            },
+            {
+              "kind": "manager",
+              "id": "180088",
+              "surname": "Park Chul-woo",
+              "full_name": "Chul-woo Park",
+              "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/180088/6a4181728d140.png"
+            }
+          ],
+          "matched": {
+            "kind": "manager",
+            "id": "180076",
+            "surname": "Park Jung-bae",
+            "full_name": "Jung-bae Park",
+            "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/180076/6a417d2a06377.jpg",
+            "dob": "1967-02-19"
+          }
+        },
+        {
+          "source_id": 9494129,
+          "display_name": "Shin Hong-gi",
+          "expected_birth_date": "1968-05-04",
+          "candidates": [
+            {
+              "kind": "manager",
+              "id": "180078",
+              "surname": "Shin Hong-gi",
+              "full_name": "Hong-gi Shin",
+              "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/180078/6a417de237b29.png"
+            }
+          ],
+          "matched": {
+            "kind": "manager",
+            "id": "180078",
+            "surname": "Shin Hong-gi",
+            "full_name": "Hong-gi Shin",
+            "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/180078/6a417de237b29.png",
+            "dob": "1968-05-04"
+          }
+        }
+      ],
+      "needs_review": [
+        {
+          "source_id": 9494136,
+          "display_name": "Cho Jin-ho",
+          "expected_birth_date": "1973-08-02",
+          "candidates": [
+            {
+              "kind": "manager",
+              "id": "180080",
+              "surname": "Cho Jin-ho",
+              "full_name": "JIn-ho Cho",
+              "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/180080/6a417ea59391f.jpg"
+            }
+          ]
+        }
+      ],
+      "unmatched": []
+    },
+    {
+      "country": "Estados Unidos",
+      "squad_size": 22,
+      "confirmed": [
+        {
+          "source_id": 9494053,
+          "display_name": "Hugo Pérez",
+          "expected_birth_date": "1963-11-08",
+          "candidates": [
+            {
+              "kind": "manager",
+              "id": "179930",
+              "surname": "Hugo Pérez",
+              "full_name": "Hugo Ernesto Pérez Granados",
+              "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/179930/6a40458647117.jpg"
+            }
+          ],
+          "matched": {
+            "kind": "manager",
+            "id": "179930",
+            "surname": "Hugo Pérez",
+            "full_name": "Hugo Ernesto Pérez Granados",
+            "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/179930/6a40458647117.jpg",
+            "dob": "1963-11-08"
+          }
+        }
+      ],
+      "needs_review": [],
+      "unmatched": []
+    }
+  ]
+}

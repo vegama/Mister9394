@@ -19,12 +19,13 @@ const props = defineProps({
   currentBoard:{type:Object,default:()=>({})},
   careerRecords:{type:Object,default:()=>({})},
   managerCareer:{type:Object,default:()=>({reputation:50,job_offers:[],tenures:[],current_tenure:{}})},
+  boardProject:{type:Object,default:()=>({objective:'',philosophy:[],requests:[],sale_pressure:null,support:55})},
   agePolicy:{type:String,default:'frozen_attributes_dynamic'},
   dashboard:{type:Object,default:()=>({})},
   jobStatus:{type:String,default:'active'},
   crestFor:{type:Function,required:true},stadiumFor:{type:Function,required:true},formatMoney:{type:Function,required:true},trendLabel:{type:Function,required:true},boardClass:{type:Function,required:true},formatDate:{type:Function,required:true},
 })
-const emit = defineEmits(['open-player','navigate','accept-job'])
+const emit = defineEmits(['open-player','navigate','accept-job','board-request'])
 
 const standing = computed(() => {
   const index = props.standings.findIndex(row => Number(row?.[8]) === Number(props.controlledTeamId))
@@ -129,9 +130,12 @@ const moneyPulse = computed(() => Number(props.finances.cash||0) - Number(props.
       </article>
 
       <article class="club-section board-compact">
-        <header><div><small>CONSEJO</small><h3>{{dashboard.board_expectation?.title || 'Objetivo del club'}}</h3></div><span class="board-mini-score" :class="boardClass(currentBoard.risk)">{{currentBoard.score ?? '—'}}</span></header>
-        <p>{{currentBoard.reasons?.[0]?.text || 'El consejo evaluará resultados, economía y evolución deportiva.'}}</p>
-        <div class="board-mini-components"><span><small>Deportivo</small><b>{{currentBoard.components?.sporting??'—'}}</b></span><span><small>Forma</small><b>{{currentBoard.components?.form??'—'}}</b></span><span><small>Economía</small><b>{{currentBoard.components?.economy??'—'}}</b></span></div>
+        <header><div><small>CONSEJO Y PROYECTO</small><h3>{{boardProject.objective || dashboard.board_expectation?.title || 'Objetivo del club'}}</h3></div><span class="board-mini-score" :class="boardClass(currentBoard.risk)">{{boardProject.support ?? currentBoard.score ?? '—'}}</span></header>
+        <p>{{currentBoard.reasons?.[0]?.text || 'El consejo evalúa resultados, sostenibilidad y construcción del proyecto.'}}</p>
+        <div class="board-mini-components"><span><small>Tope salarial</small><b>{{boardProject.wage_ceiling?formatMoney(boardProject.wage_ceiling):'—'}}</b></span><span><small>Staff máx.</small><b>{{boardProject.max_staff_size??'—'}}</b></span><span><small>Plantilla ideal</small><b>{{boardProject.preferred_squad_size??'—'}}</b></span></div>
+        <div v-if="boardProject.sale_pressure?.status==='active'" class="dismissed-banner">Venta exigida · faltan {{formatMoney(boardProject.sale_pressure.remaining)}} antes del {{formatDate(boardProject.sale_pressure.deadline)}}</div>
+        <ul v-if="boardProject.philosophy?.length" class="board-philosophy"><li v-for="item in boardProject.philosophy" :key="item.key">{{item.label}}</li></ul>
+        <div v-if="jobStatus==='active'" class="board-request-actions"><button type="button" class="text-action" @click="emit('board-request','extra_transfer_budget')">Pedir más presupuesto</button><button type="button" class="text-action" @click="emit('board-request','expand_staff')">Ampliar staff</button><button v-if="boardProject.sale_pressure?.status==='active'" type="button" class="text-action" @click="emit('board-request','delay_sale_pressure')">Pedir 30 días</button></div>
         <div v-if="jobStatus==='dismissed'" class="dismissed-banner">Etapa en este club finalizada · tu carrera sigue abierta</div>
       </article>
 

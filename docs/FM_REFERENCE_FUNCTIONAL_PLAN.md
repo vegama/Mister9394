@@ -94,7 +94,9 @@ Cadena real:
 
 **Primera vertical 0.48 (área médica):** el parte de un jugador propio pasa por el responsable sanitario. La fecha canónica deja de presentarse automáticamente: se muestran intervalo de recuperación, confianza, recomendación y responsable según su competencia.
 
-**Vertical jugable 0.49 (entrenamiento + carga):** plan semanal de siete días, intensidad colectiva y foco individual persistentes; cada sesión altera carga, fatiga, condición, riesgo y evidencia lenta de atributos. Los minutos de partido alimentan la misma carga y el parte médico consume ese mismo estado. Las lesiones de entrenamiento son eventos reales y una baja que invalida la convocatoria provoca reparación segura y explicación al usuario. Pendiente: familiaridad táctica, preparación rival más profunda y recuperación individual específica.
+**Vertical jugable 0.49 (entrenamiento + carga):** plan semanal de siete días, intensidad colectiva y foco individual persistentes; cada sesión altera carga, fatiga, condición, riesgo y evidencia lenta de atributos. Los minutos de partido alimentan la misma carga y el parte médico consume ese mismo estado. Las lesiones de entrenamiento son eventos reales y una baja que invalida la convocatoria provoca reparación segura y explicación al usuario.
+
+**Cierre funcional 0.50:** recuperación individual (`normal / reducida / recuperación / descanso`) y preparación específica del siguiente partido (`equilibrada / rival / ataque / defensa / balón parado`) comparten la misma carga y condición. El entrenamiento y los partidos hacen crecer familiaridad táctica según calidad del responsable; cambiar principios reduce temporalmente la asimilación. NF3 queda conectado de extremo a extremo con NF4 y NF8: preparar, entrenar, arriesgar y competir son ya un mismo estado persistente. Profundizaciones futuras podrán ampliar entrenamiento de nueva posición/rol, pero no bloquean el bucle funcional NF3.
 
 **Gate:** el usuario entiende por qué un jugador está cargado, qué puede hacer y qué riesgo acepta.
 
@@ -108,13 +110,25 @@ Separar comportamiento con balón y sin balón con lenguaje compatible con 1993.
 
 Toda orden debe producir un cambio observable en el motor.
 
+**Vertical funcional 0.50:** el plan persistente añade salida (`paciente / equilibrada / progresar pronto`), último tercio (`variar / centros / pase entre líneas`) y transición (`asegurar / equilibrada / contraatacar`) sobre la estructura táctica ya existente de mentalidad, ritmo, presión, línea, anchura, marcaje y fuera de juego. Se incorporan instrucciones individuales (función, libertad, presión), órdenes sobre amenazas rivales y lanzadores de córner/falta/penalti. La familiaridad tiene componentes de forma, posesión, presión y balón parado; cada orden llega al `TeamSheet` y modifica de forma trazable posesión, creación, selección de ocasión, presión, fatiga o balón parado. Los cambios de fase realizados durante el directo sincronizan el estado del motor para el siguiente tramo del partido.
+
+**Gate NF4:** no existe un control táctico nuevo puramente descriptivo: fases, instrucciones individuales, rival, lanzadores y familiaridad tienen pruebas de llegada al motor y efecto observable.
+
 ## NF5 — Staff que informa · P1
 
 Los empleados deben interpretar el mundo según su competencia: segundo entrenador, preparadores, médico, ojeador y secretario técnico. El usuario recibe opiniones de personas, no la verdad directa del motor.
 
+**Vertical funcional 0.50:** se genera un paquete de informes persistentes/accionables desde el estado real de salud, plantilla, scouting, vestuario, táctica y negociaciones. Cada informe identifica autor, función, calidad, confianza, evidencia, urgencia y destino recomendado. La UI permite saltar desde el consejo a la superficie donde se resuelve el asunto. La información sensible mantiene la incertidumbre de NF0/NF1 en vez de revelar el valor oculto del simulador.
+
+**Gate NF5:** cada informe debe poder responder quién lo firma, por qué lo cree, con qué confianza y qué acción concreta propone.
+
 ## NF6 — Gestión humana del vestuario · P1
 
 Conectar jerarquía, grupos sociales, liderazgo, minutos, fichajes, ventas, disciplina, renovaciones, salida y memoria. Las conversaciones nacen de hechos; no se generan para llenar una bandeja.
+
+**Vertical funcional 0.50:** el snapshot expone cohesión, grupos sociales y asuntos abiertos causados por hechos reales. Una renovación fallida puede abrir preocupación contractual; un fichaje puede preocupar al competidor directo por minutos/estatus; el usuario puede explicar, tranquilizar o ser firme, y también advertir/sancionar disciplinariamente. Las respuestas modifican satisfacción/relación y se archivan; nunca alteran la capacidad futbolística base. Los roles acordados al fichar se convierten en promesas que la selección real debe cumplir.
+
+**Gate NF6:** no se crea una conversación sin causa persistida y toda respuesta deja una consecuencia humana trazable.
 
 ## NF7 — Contratos y mercado 2.0 · P1
 
@@ -124,19 +138,37 @@ Proceso único:
 
 `scouting → interés → consulta → negociación club → negociación jugador → inscripción → anuncio → reacción`
 
+**Vertical funcional 0.50:** antes de ofertar puede hacerse una consulta de disponibilidad con rango de precio/salario, postura del vendedor, confianza y responsable. La negociación temporal soporta rol de plantilla, prima, cláusula, competencia rival, contraoferta y retirada; la calidad del responsable influye de forma moderada en tiempos y exigencias. Una operación cerrada genera contrato, promesa de rol, noticia y reacción de vestuario. Se añaden **cesiones reales** dentro del mismo flujo: cuota, porcentaje de ficha, rol prometido, contrato temporal, persistencia, devolución automática el 30 de junio y restauración del club/contrato de origen sin penalizar una promesa que termina con el préstamo.
+
+Pendiente de profundización posterior: ofrecer activamente jugadores a varios clubes y pruebas cuando el contexto histórico/competición lo permita. El núcleo negociación–contrato–reacción–cesión queda funcional.
+
+**Gate NF7:** una operación debe sobrevivir guardado/carga y recorrer el ciclo completo sin teletransportes ni borrar sus consecuencias.
+
 ## NF8 — Partido: dirección y diagnóstico · P1
 
 Prepartido con rival, tendencias, amenazas, bajas y plan del staff; directo con condición, rendimiento, ajustes, información del banquillo; postpartido causal: qué ocurrió, por qué y qué consecuencias deja.
 
 No se persigue 3D. Se persigue densidad de decisión y comprensión.
 
+**Vertical funcional 0.50:** la previa une rival, entrenador, calidad/confianza del informe, táctica conocida, amenazas, bajas, riesgos propios, familiaridad y foco de preparación. Durante el encuentro el banquillo expone consejo contextual, rendimiento de los once y fatiga; los cambios de fase táctica se aplican al estado vivo, no al siguiente partido. El cierre produce diagnóstico causal con razones y siguientes acciones apoyadas en lo sucedido realmente en el motor.
+
+**Gate NF8:** el usuario puede recorrer `preparar → decidir → observar → corregir → entender` sin abandonar el contexto de partido y sin recibir diagnósticos desconectados de los hechos.
+
 ## NF9 — Carrera profesional completa · P2
 
 Desempleo, búsqueda, candidatura, entrevista, contrato, proyecto, objetivos, reputación por países, relaciones con directivos, regreso, ofertas con contrato vigente, dimisión y memoria de etapas.
 
+**Vertical funcional 0.51:** el mánager humano dispone de un mercado de banquillos persistente que cruza ligas y países, con encaje según reputación global/local, dimensión del club, presión y etapas anteriores. Puede presentarse a una vacante, pasar entrevista, recibir/aceptar una oferta aun teniendo contrato, dimitir y regresar a un club. Los contratos, reputación por país, relaciones con clubes y memorias profesionales viajan con la persona. Cambiar de liga intercambia control con la liga de fondo en el punto exacto ya simulado: ningún resultado se reinicia ni se recalcula.
+
+**Gate NF9:** cambiar de empleo —incluido otro país— debe preservar mundo, historial, contrato, reputaciones, relaciones y etapas sin resetear resultados ni estado ajeno al club.
+
 ## NF10 — Consejo y construcción del proyecto · P2
 
 Expectativas, presupuesto, salarios, tamaño de staff, peticiones, presión por vender, filosofía del club y respaldo al entrenador. Sólo decisiones que repercutan en fútbol.
+
+**Vertical funcional 0.51:** cada club mantiene un proyecto con objetivo de temporada, filosofía, techo salarial, dimensión de plantilla/staff, respaldo y memoria de decisiones. Las peticiones de presupuesto, ampliación de estructura o prórroga ante una venta exigida dependen de respaldo y salud económica; no son botones gratuitos y una ampliación aprobada no puede explotarse repitiéndola en la misma temporada. Una crisis real puede generar presión de venta con cantidad y plazo; los ingresos de ventas reales reducen esa obligación. Al cambiar de temporada el proyecto conserva historia pero revisa objetivo y márgenes.
+
+**Gate NF10:** toda petición debe tener condición, resolución, memoria y consecuencia futbolística/económica visible; el consejo no puede generar recursos infinitos por repetición.
 
 ## NF11 — Mundo informativo: prensa, rumores y reputaciones · P2
 
@@ -144,9 +176,19 @@ Expectativas, presupuesto, salarios, tamaño de staff, peticiones, presión por 
 
 Los rumores deben nacer de operaciones, agentes, seguimiento, declaraciones y relaciones existentes; nunca de relleno aleatorio.
 
+**Vertical funcional 0.51:** consultas de mercado, negociaciones, ofertas, fichajes, candidaturas, cambios de entrenador, competiciones, lesiones y decisiones del consejo alimentan hilos causales persistentes. Un rumor conserva su hecho origen, nivel de certeza y actores; si no aparece un hecho confirmatorio se enfría y muere, nunca se convierte solo en verdad por tiempo. Cuando llega la confirmación, el mismo hilo avanza a noticia, reacción y consecuencia en vez de generar historias paralelas inconexas.
+
+**Gate NF11:** una noticia importante debe poder remontarse a un hecho persistido; un rumor no confirmado debe poder desaparecer sin crear hechos falsos.
+
 ## NF12 — Economía longitudinal 2.0 · P2
 
 Taquilla, socios, televisión, premios, patrocinio, salarios, primas, fichajes, deuda y estructura para permitir crisis, ascensos transformadores, descensos y ventas necesarias sin convertir el juego en contabilidad.
+
+**Vertical funcional 0.51:** la capa longitudinal reutiliza los movimientos de caja que ya ejecuta el motor y los clasifica por temporada —taquilla, socios, TV, patrocinio, premios, salarios, operaciones, deuda, primas y mercado— sin duplicar dinero. El cierre de temporada registra premios y los ascensos/descensos como cambios estructurales; el estado financiero produce una lectura de salud y, cuando la caja no aguanta, una reestructuración/deuda real puede desembocar en presión del consejo para vender. La interfaz resume causas y tendencia sin convertir la carrera en un libro mayor.
+
+**Gate NF12:** la suma longitudinal explica la economía real del club sin doble contabilización y debe conservar temporadas, crisis y cambios de categoría tras guardar/cargar.
+
+**Gate conjunto NF9–NF12 · 0.51:** carrera, consejo, información y economía deben compartir hechos y consecuencias. Un cambio de trabajo conserva el mundo; una crisis puede producir una exigencia del consejo y una noticia causal; una venta real altera simultáneamente caja, histórico económico y presión de proyecto.
 
 ## Orden de desarrollo aprobado
 

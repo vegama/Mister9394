@@ -152,6 +152,9 @@ class FootballTactics9394:
     width: str = "normal"  # narrow | normal | wide
     offside_trap: bool = False
     marking: str = "zonal"  # zonal | man
+    build_up: str = "balanced"  # patient | balanced | early
+    final_third: str = "mixed"  # mixed | crosses | through
+    transition: str = "balanced"  # hold | balanced | counter
 
     def __post_init__(self) -> None:
         allowed = {
@@ -163,6 +166,9 @@ class FootballTactics9394:
             "defensive_line": {"low", "medium", "high"},
             "width": {"narrow", "normal", "wide"},
             "marking": {"zonal", "man"},
+            "build_up": {"patient", "balanced", "early"},
+            "final_third": {"mixed", "crosses", "through"},
+            "transition": {"hold", "balanced", "counter"},
         }
         for field_name, values in allowed.items():
             if getattr(self, field_name) not in values:
@@ -203,6 +209,10 @@ def tactical_identity_9394(tactics: FootballTactics9394) -> dict[str, float | st
         "width_attack": {"narrow": -0.025, "normal": 0.0, "wide": 0.035}[tactics.width],
         "marking_contact": 0.035 if tactics.marking == "man" else 0.0,
         "offside_aggression": 0.045 if tactics.offside_trap else 0.0,
+        "build_up_control": {"patient": 0.045, "balanced": 0.0, "early": -0.025}[tactics.build_up],
+        "final_third_cross": {"mixed": 0.0, "crosses": 0.065, "through": -0.015}[tactics.final_third],
+        "final_third_through": {"mixed": 0.0, "crosses": -0.015, "through": 0.065}[tactics.final_third],
+        "transition_attack": {"hold": -0.045, "balanced": 0.0, "counter": 0.060}[tactics.transition],
     }
 
 
@@ -220,6 +230,10 @@ class TeamSheet9394:
     rotation_frequency: str = "normal"
     set_piece_usage: str = "normal"
     manager_discipline: str = "balanced"
+    tactical_familiarity: int = 70
+    individual_instructions: dict[str, dict[str, str]] = field(default_factory=dict)
+    opposition_instructions: dict[str, dict[str, object]] = field(default_factory=dict)
+    set_piece_takers: dict[str, str] = field(default_factory=dict)
     attacking_tactics: FootballTactics9394 | None = None
     defensive_tactics: FootballTactics9394 | None = None
 
@@ -468,6 +482,8 @@ class FootballMatchEngine9394:
         value += {"slow": -0.08, "normal": 0.0, "high": 0.07}[tactics.tempo]
         value += {"defensive": -0.05, "balanced": 0.0, "attacking": 0.05}[tactics.mentality]
         value += float(identity["attack"]) * 0.55
+        value += {"hold": -0.035, "balanced": 0.0, "counter": 0.035}[tactics.transition]
+        value += {"patient": -0.025, "balanced": 0.0, "early": 0.025}[tactics.build_up]
         if venue and venue.grass_quality is not None:
             # A poor surface suppresses clean high-tempo sequences a little; a
             # pristine one helps, but the team quality remains overwhelmingly
@@ -499,8 +515,10 @@ class FootballMatchEngine9394:
         away_mid = self._average(away, ("technique", "short_pass", "creativity", "positioning"))
         home_id = tactical_identity_9394(home.sheet.tactics)
         away_id = tactical_identity_9394(away.sheet.tactics)
-        home_style = float(home_id["possession"]) + ({"short": .035, "mixed": 0.0, "direct": -.025}[home.sheet.tactics.directness])
-        away_style = float(away_id["possession"]) + ({"short": .035, "mixed": 0.0, "direct": -.025}[away.sheet.tactics.directness])
+        home_style = float(home_id["possession"]) + ({"short": .035, "mixed": 0.0, "direct": -.025}[home.sheet.tactics.directness]) + float(home_id["build_up_control"])
+        away_style = float(away_id["possession"]) + ({"short": .035, "mixed": 0.0, "direct": -.025}[away.sheet.tactics.directness]) + float(away_id["build_up_control"])
+        home_style -= max(0.0, 62.0 - float(home.sheet.tactical_familiarity)) / 700.0
+        away_style -= max(0.0, 62.0 - float(away.sheet.tactical_familiarity)) / 700.0
         press_swing = ({"low": -.010, "medium": 0.0, "high": .018}[home.sheet.tactics.pressing] - {"low": -.010, "medium": 0.0, "high": .018}[away.sheet.tactics.pressing])
         # Source-backed ``conservar balón`` is a behavioural tendency, not a
         # hidden rating boost.  A side containing more such players is slightly
@@ -521,7 +539,11 @@ class FootballMatchEngine9394:
         attack_t = attack.sheet.tactics
         defend_t = defend.sheet.tactics
         press = {"low": -0.01, "medium": 0.01, "high": 0.04}.get(defend_t.pressing, 0.0)
-        marking_contact = 0.026 if defend_t.marking == "man" else -0.004
+        targeted_orders = [row for pid, row in (defend.sheet.opposition_instructions or {}).items() if any(str(p.id) == str(pid) for p in attack.available_players())]
+        extra_press = min(.018, sum(1 for row in targeted_orders if row.get("press")) * .0045)
+        extra_mark = min(.018, sum(1 for row in targeted_orders if row.get("tight_mark")) * .0045)
+        marking_contact = (0.026 if defend_t.marking == "man" else -0.004) + extra_mark
+        press += extra_press
         discipline = self._average(defend, ("discipline",))
         aggression = self._average(defend, ("aggression", "work_rate"))
         divers = sum(1 for p in attack.available_players() if p.dives)
@@ -572,6 +594,7 @@ class FootballMatchEngine9394:
         creation = self._average(attack, ("technique", "short_pass", "vision", "off_ball"))
         resistance = self._average(defend, ("tackling", "marking", "positioning", "anticipation"))
         attack_id = tactical_identity_9394(attack_t); defend_id = tactical_identity_9394(defend_t)
+        familiarity_penalty = max(0.0, 65.0 - float(attack.sheet.tactical_familiarity)) / 420.0
         mentality = {"defensive": -0.15, "balanced": 0.0, "attacking": 0.15}.get(attack_t.mentality, 0.0)
         directness = {"short": 0.018, "mixed": 0.0, "direct": 0.028}.get(attack_t.directness, 0.0)
         width = {"narrow": .018 if attack_t.directness == "short" else -.015, "normal": 0.0, "wide": .032}.get(attack_t.width, 0.0)
@@ -593,7 +616,12 @@ class FootballMatchEngine9394:
             defensive_error = True
             resistance -= 8.0
             events.append(MatchEvent9394(minute, "defensive_error", defend.sheet.team_id, detail=f"{defend.sheet.team_name} pierde el control bajo presión"))
-        shot_chance = _clamp(0.42 + (creation - resistance) / 210.0 + mentality + directness + width + shape_attack - shape_defence - defensive_marking + line_risk + (.035 if defensive_error else 0.0), 0.16, 0.74)
+        phase_bonus = float(attack_id["transition_attack"]) * .35
+        if attack_t.final_third == "through" and creation >= resistance:
+            phase_bonus += .018
+        elif attack_t.final_third == "crosses" and attack_t.width == "wide":
+            phase_bonus += .015
+        shot_chance = _clamp(0.42 + (creation - resistance) / 210.0 + mentality + directness + width + shape_attack - shape_defence - defensive_marking + line_risk + phase_bonus - familiarity_penalty + (.035 if defensive_error else 0.0), 0.16, 0.74)
         if rng.random() >= shot_chance:
             corner_chance = 0.13 + ({"narrow": -0.025, "normal": 0.0, "wide": 0.065}.get(attack_t.width, 0.0))
             if rng.random() < corner_chance:
@@ -683,11 +711,18 @@ class FootballMatchEngine9394:
             slot = p.squad_slot or p.position.upper()
             role = 1.55 if slot in {"CM", "AM", "RM", "LM", "RW", "LW"} else 1.0 if slot in {"DM", "ST"} else .55
             trait = 1.23 if p.killer_pass else .92 if p.individualist else 1.0
-            weights.append(max(.1, role * trait * (p.vision * .50 + p.short_pass * .34 + p.technique * .16)))
+            instruction = (side.sheet.individual_instructions or {}).get(str(p.id), {})
+            freedom = {"disciplined": .90, "balanced": 1.0, "expressive": 1.13}.get(str(instruction.get("freedom") or "balanced"), 1.0)
+            duty = {"hold": .88, "support": 1.0, "attack": 1.07}.get(str(instruction.get("duty") or "support"), 1.0)
+            weights.append(max(.1, role * trait * freedom * duty * (p.vision * .50 + p.short_pass * .34 + p.technique * .16)))
         return rng.choices(players, weights=weights, k=1)[0]
 
     def _chance_type(self, side: _SideState, shooter: Footballer9394, creator: Footballer9394, rng: Random) -> tuple[str, str]:
         t = side.sheet.tactics
+        if t.final_third == "crosses" and (shooter.heading >= 64 or creator.squad_slot in {"RM", "LM", "RW", "LW"}) and rng.random() < .58:
+            return "cross", f"{creator.name} ejecuta el plan y busca el área con un centro"
+        if t.final_third == "through" and (creator.killer_pass or creator.vision >= 70) and rng.random() < .58:
+            return "through_ball", f"{creator.name} insiste en el pase entre líneas previsto"
         if shooter.long_shots and rng.random() < .34:
             return "long_shot", f"{shooter.name} encuentra espacio para probar desde media distancia"
         if shooter.individualist and shooter.dribbling >= 70 and rng.random() < .30:
@@ -703,7 +738,8 @@ class FootballMatchEngine9394:
         return "open_play", f"{side.sheet.team_name} convierte la posesión en una ocasión clara"
 
     def _resolve_penalty(self, attack: _SideState, defend: _SideState, minute: int, rng: Random, events: list[MatchEvent9394]) -> None:
-        taker = max(attack.available_players(), key=lambda p: p.penalties * .70 + p.finishing * .20 + p.consistency * .10)
+        preferred = str((attack.sheet.set_piece_takers or {}).get("penalties") or "")
+        taker = next((p for p in attack.available_players() if str(p.id) == preferred), None) or max(attack.available_players(), key=lambda p: p.penalties * .70 + p.finishing * .20 + p.consistency * .10)
         keeper = defend.goalkeeper()
         attack.shots += 1; attack.shots_on_target += 1
         events.append(MatchEvent9394(minute, "penalty", attack.sheet.team_id, taker.id, taker.name, "Penalti"))
@@ -715,7 +751,8 @@ class FootballMatchEngine9394:
             events.append(MatchEvent9394(minute, "penalty_saved", defend.sheet.team_id, keeper.id, keeper.name, "El portero detiene el penalti"))
 
     def _resolve_free_kick(self, attack: _SideState, defend: _SideState, minute: int, rng: Random, events: list[MatchEvent9394]) -> None:
-        taker = max(attack.available_players(), key=lambda p: p.free_kicks * .68 + p.shot_power * .18 + p.technique * .14)
+        preferred = str((attack.sheet.set_piece_takers or {}).get("free_kicks") or "")
+        taker = next((p for p in attack.available_players() if str(p.id) == preferred), None) or max(attack.available_players(), key=lambda p: p.free_kicks * .68 + p.shot_power * .18 + p.technique * .14)
         keeper = defend.goalkeeper()
         attack.shots += 1
         events.append(MatchEvent9394(minute, "free_kick_chance", attack.sheet.team_id, taker.id, taker.name, "Falta directa en zona de remate"))
@@ -731,7 +768,8 @@ class FootballMatchEngine9394:
             events.append(MatchEvent9394(minute, "save", defend.sheet.team_id, keeper.id, keeper.name, "Parada en la falta"))
 
     def _resolve_corner(self, attack: _SideState, defend: _SideState, minute: int, rng: Random, events: list[MatchEvent9394]) -> None:
-        taker = max(attack.available_players(), key=lambda p: p.free_kicks * .38 + p.long_pass * .38 + p.technique * .24)
+        preferred = str((attack.sheet.set_piece_takers or {}).get("corners") or "")
+        taker = next((p for p in attack.available_players() if str(p.id) == preferred), None) or max(attack.available_players(), key=lambda p: p.free_kicks * .38 + p.long_pass * .38 + p.technique * .24)
         targets = [p for p in attack.available_players() if p.id != taker.id]
         if not targets: return
         target = max(targets, key=lambda p: p.heading * .48 + p.jumping * .30 + p.strength * .12 + p.positioning * .10)
@@ -763,6 +801,8 @@ class FootballMatchEngine9394:
             movement = .62 + p.finishing / 170.0 + p.off_ball / 260.0
             if p.cuts_inside and slot in {"RW", "LW", "RM", "LM"}: movement *= 1.16
             if p.individualist: movement *= 1.10
+            instruction = (side.sheet.individual_instructions or {}).get(str(p.id), {})
+            movement *= {"hold": .78, "support": 1.0, "attack": 1.24}.get(str(instruction.get("duty") or "support"), 1.0)
             weights.append(max(0.1, role_weight * movement))
         return rng.choices(players, weights=weights, k=1)[0]
 
@@ -809,13 +849,15 @@ class FootballMatchEngine9394:
         press = {"low": 0.82, "medium": 1.0, "high": 1.24}.get(t.pressing, 1.0)
         marking = 1.08 if t.marking == "man" else 1.0
         width = 1.04 if t.width == "wide" else .98 if t.width == "narrow" else 1.0
+        transition = {"hold": .94, "balanced": 1.0, "counter": 1.08}.get(t.transition, 1.0)
         pitch_load = 1.0
         if venue and venue.width_m and venue.length_m:
             pitch_load = _clamp((int(venue.width_m) * int(venue.length_m)) / (68 * 105), .94, 1.07)
         for player in side.available_players():
             stamina_factor = 1.24 - player.stamina / 190.0
             work_factor = 1.04 + max(0, player.work_rate - 70) / 650.0
-            side.fatigue[player.id] = min(100.0, side.fatigue.get(player.id, 0.0) + 0.43 * tempo * press * marking * width * pitch_load * stamina_factor * work_factor)
+            individual_press = {"low": .92, "normal": 1.0, "high": 1.10}.get(str((side.sheet.individual_instructions or {}).get(str(player.id), {}).get("pressing") or "normal"), 1.0)
+            side.fatigue[player.id] = min(100.0, side.fatigue.get(player.id, 0.0) + 0.43 * tempo * press * marking * width * transition * individual_press * pitch_load * stamina_factor * work_factor)
 
     def _maybe_substitute(self, side: _SideState, minute: int, rng: Random, events: list[MatchEvent9394]) -> None:
         if side.substitutions >= self.laws.max_used_substitutes or not side.bench:

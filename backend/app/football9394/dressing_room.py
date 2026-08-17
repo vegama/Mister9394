@@ -27,6 +27,8 @@ def ensure_dressing_room_state(state: dict[str, Any]) -> None:
     room.setdefault("competition_history", [])
     room.setdefault("role_promises", {})
     room.setdefault("promise_archive", [])
+    room.setdefault("concerns", [])
+    room.setdefault("concern_archive", [])
 
 
 def _dev(state: dict[str, Any], pid: int) -> dict[str, Any]:
@@ -271,6 +273,102 @@ def update_after_match(state: dict[str, Any], *, players: Iterable[dict[str, Any
     room['competition_history']=room['competition_history'][-20:]
 
 
+
+def _open_concern(state: dict[str, Any], *, player_id: int, kind: str, date_text: str, detail: str, severity: str = "normal") -> dict[str, Any]:
+    ensure_dressing_room_state(state)
+    room = state["dressing_room"]
+    existing = next((row for row in room.get("concerns") or [] if int(row.get("player_id") or 0) == int(player_id) and row.get("kind") == kind and row.get("status") == "open"), None)
+    if existing:
+        existing.update({"date": date_text, "detail": detail, "severity": severity})
+        return existing
+    row = {
+        "id": f"concern:{date_text}:{int(player_id)}:{kind}:{len(room.get('concerns') or [])}",
+        "date": date_text, "player_id": int(player_id), "kind": kind, "detail": detail,
+        "severity": severity, "status": "open",
+        "responses": ["reassure", "explain", "firm"],
+    }
+    room["concerns"].append(row)
+    room["concerns"] = room["concerns"][-30:]
+    _event(state, {"kind": "player_concern", "date": date_text, "player_id": int(player_id), "concern_kind": kind, "severity": severity})
+    return row
+
+
+def register_new_signing(state: dict[str, Any], *, player_id: int, players_after: Iterable[dict[str, Any]], date_text: str) -> list[dict[str, Any]]:
+    rows = list(players_after)
+    new_player = next((p for p in rows if int(p.get("source_id") or 0) == int(player_id)), None)
+    if new_player is None:
+        return []
+    room = sync_dressing_room(state, players=rows, game_date=date.fromisoformat(date_text))
+    slot = role_for_player(new_player).squad_slot
+    newcomer_level = _overall(state, new_player)
+    concerns: list[dict[str, Any]] = []
+    for other in rows:
+        oid = int(other.get("source_id") or 0)
+        if oid == int(player_id) or role_for_player(other).squad_slot != slot:
+            continue
+        other_level = _overall(state, other)
+        dyn = state.setdefault("player_dynamics", {}).setdefault(str(oid), {})
+        influence = int(dyn.get("influence") or 0)
+        if newcomer_level >= other_level - 2 and influence >= 42:
+            delta = -4 if newcomer_level >= other_level + 4 else -2
+            dyn["satisfaction"] = max(0, min(100, int(dyn.get("satisfaction") or 70) + delta))
+            concerns.append(_open_concern(
+                state, player_id=oid, kind="new_competition", date_text=date_text,
+                detail=f"La llegada de un competidor para {slot} puede reducir sus minutos.",
+                severity="high" if delta <= -4 else "normal",
+            ))
+    newcomer_dev = _dev(state, int(player_id)); newcomer_dev["morale"] = min(100, int(newcomer_dev.get("morale") or 70) + 2)
+    _event(state, {"kind": "new_signing_reaction", "date": date_text, "player_id": int(player_id), "slot": slot, "concern_count": len(concerns)})
+    return concerns
+
+
+def register_contract_decision(state: dict[str, Any], *, player_id: int, accepted: bool, date_text: str) -> None:
+    if accepted:
+        dyn = state.setdefault("player_dynamics", {}).setdefault(str(int(player_id)), {})
+        dyn["satisfaction"] = min(100, int(dyn.get("satisfaction") or 70) + 3)
+        _event(state, {"kind": "contract_agreed", "date": date_text, "player_id": int(player_id)})
+        return
+    _open_concern(state, player_id=int(player_id), kind="contract", date_text=date_text, detail="Considera insuficiente la propuesta de renovación y espera una decisión del club.", severity="high")
+
+
+def respond_to_concern(state: dict[str, Any], *, concern_id: str, response: str, date_text: str) -> dict[str, Any]:
+    ensure_dressing_room_state(state)
+    room = state["dressing_room"]
+    row = next((r for r in room.get("concerns") or [] if str(r.get("id")) == str(concern_id)), None)
+    if row is None:
+        raise KeyError("preocupación no encontrada")
+    if row.get("status") != "open":
+        raise ValueError("la preocupación ya está resuelta")
+    response = str(response)
+    if response not in {"reassure", "explain", "firm"}:
+        raise ValueError("respuesta de vestuario no válida")
+    pid = int(row["player_id"]); kind = str(row.get("kind") or "")
+    # No dialogue puzzle: consequences are broad and depend on what caused the concern.
+    delta = 2 if response == "explain" else 1 if response == "reassure" else -1
+    if kind == "contract" and response == "firm": delta = -3
+    if kind == "new_competition" and response == "firm": delta = -2
+    adjust_player_manager_relationship(state, player_id=pid, date_text=date_text, delta=delta, reason=f"gestiona preocupación: {kind}")
+    dyn = state.setdefault("player_dynamics", {}).setdefault(str(pid), {})
+    dyn["satisfaction"] = max(0, min(100, int(dyn.get("satisfaction") or 70) + delta))
+    row.update({"status": "resolved", "resolved_on": date_text, "response": response, "relationship_delta": delta})
+    room["concern_archive"].append(dict(row)); room["concern_archive"] = room["concern_archive"][-80:]
+    _event(state, {"kind": "player_concern_resolved", "date": date_text, "player_id": pid, "concern_kind": kind, "response": response, "delta": delta})
+    return dict(row)
+
+
+def register_discipline(state: dict[str, Any], *, player_id: int, action: str, date_text: str, justified: bool) -> dict[str, Any]:
+    action = str(action)
+    if action not in {"warning", "fine_week"}:
+        raise ValueError("medida disciplinaria no válida")
+    pid = int(player_id)
+    delta = (1 if justified else -2) if action == "warning" else (0 if justified else -4)
+    adjust_player_manager_relationship(state, player_id=pid, date_text=date_text, delta=delta, reason=f"disciplina: {action}")
+    dyn = state.setdefault("player_dynamics", {}).setdefault(str(pid), {})
+    dyn["satisfaction"] = max(0, min(100, int(dyn.get("satisfaction") or 70) + delta))
+    row = {"kind": "discipline", "date": date_text, "player_id": pid, "action": action, "justified": bool(justified), "relationship_delta": delta}
+    _event(state, row)
+    return row
+
 def register_important_departure(state: dict[str, Any], *, player_id: int, players_before: Iterable[dict[str, Any]], date_text: str) -> None:
     rows=list(players_before); room=sync_dressing_room(state,players=rows,game_date=date.fromisoformat(date_text))
     pid=int(player_id)
@@ -372,4 +470,20 @@ def dressing_room_snapshot(state: dict[str, Any], *, players: Iterable[dict[str,
             player=by_id.get(int(row.get('player_id') or key))
             if player:
                 active_promises.append({**role_promise_api(state,int(player['source_id'])),'player_name':player.get('display_name')})
-    return {'captain_id':room.get('captain_id'),'leaders':leaders,'competitions':_slot_competitions(state,rows),'mentorships':mentorships,'role_promises':active_promises,'recent_promises':list(room.get('promise_archive') or [])[-8:],'recent_events':list(room.get('events') or [])[-12:]}
+    social_groups=[]
+    buckets={}
+    for p in rows:
+        broad=str(p.get('broad_position') or p.get('position') or 'Otros').upper()
+        key='Porteros' if broad in {'GK','POR','PORTERO'} else 'Defensas' if broad.startswith(('D','DF','CB','LB','RB')) else 'Centrocampistas' if broad.startswith(('M','MC','DM','AM')) else 'Atacantes'
+        buckets.setdefault(key,[]).append(p)
+    for label,members in buckets.items():
+        if len(members)<2: continue
+        satisfaction=[int(dynamics_api(state,int(p['source_id'])).get('satisfaction') or 70) for p in members]
+        social_groups.append({'label':label,'member_ids':[int(p['source_id']) for p in members],'members':[p.get('display_name') for p in members[:6]],'cohesion':round(sum(satisfaction)/len(satisfaction))})
+    concerns=[]
+    for concern in room.get('concerns') or []:
+        if concern.get('status')!='open': continue
+        p=by_id.get(int(concern.get('player_id') or 0))
+        if p: concerns.append({**concern,'player_name':p.get('display_name')})
+    cohesion_rows=[int(dynamics_api(state,int(p['source_id'])).get('satisfaction') or 70) for p in rows]
+    return {'captain_id':room.get('captain_id'),'leaders':leaders,'competitions':_slot_competitions(state,rows),'mentorships':mentorships,'role_promises':active_promises,'recent_promises':list(room.get('promise_archive') or [])[-8:],'social_groups':social_groups,'squad_cohesion':round(sum(cohesion_rows)/max(1,len(cohesion_rows))),'concerns':concerns,'recent_concerns':list(room.get('concern_archive') or [])[-8:],'recent_events':list(room.get('events') or [])[-12:]}

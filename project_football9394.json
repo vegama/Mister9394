@@ -1,7 +1,7 @@
 {
   "project": "Mister 93/94",
-  "checkpoint": "0.49.0-training-load-scouting-capacity-flow",
-  "fork_stage": "nf0-nf3-functional-staff-scouting-planning-medical",
+  "checkpoint": "0.51.0-nf9-nf12-professional-world",
+  "fork_stage": "nf9-nf12-professional-world",
   "season_start": "1993-94",
   "runtime_dataset": "data/football9394/historical_snapshot.json",
   "principles": [
@@ -139,7 +139,22 @@
     "club-staff-is-persistent-per-club-and-survives-manager-mobility",
     "career-generated-staff-is-never-presented-as-historical-source-data",
     "club-responsibilities-can-be-owned-by-the-manager-or-only-eligible-staff",
-    "delegation-is-one-shared-state-to-be-consumed-by-scouting-training-medical-and-market-systems"
+    "delegation-is-one-shared-state-to-be-consumed-by-scouting-training-medical-and-market-systems",
+    "tactical-familiarity-is-persistent-and-changes-with-training-matches-and-plan-changes",
+    "staff-reports-identify-author-confidence-evidence-and-action-instead-of-exposing-engine-truth",
+    "dressing-room-conversations-come-from-persisted-causes-and-never-change-player-base-ability",
+    "transfer-role-promises-survive-signing-and-are-judged-by-real-selection",
+    "loan-deals-have-fee-wage-share-role-end-date-and-automatic-parent-club-return",
+    "prematch-live-postmatch-share-one-causal-football-context",
+    "human-manager-can-apply-interview-contract-resign-and-change-leagues-without-resetting-world-state",
+    "manager-reputation-is-global-and-country-aware-and-career-relationships-survive-employer-changes",
+    "board-project-connects-objectives-wages-staff-budget-requests-support-and-financial-sale-pressure",
+    "board-project-approved-expansions-cannot-be-spammed-within-the-same-season",
+    "rumours-only-originate-from-persisted-football-events-and-never-self-confirm",
+    "market-rumour-negotiation-news-reaction-and-consequence-share-one-causal-thread",
+    "longitudinal-economy-reuses-real-cash-flows-and-tracks-season-categories-without-double-booking",
+    "financial-crises-can-create-debt-draws-and-board-required-sales",
+    "promotion-relegation-and-prize-income-remain-visible-in-longitudinal-economic-history"
   ],
   "gates": {
     "manager_career": "12/12 PASS",
@@ -244,6 +259,15 @@
     "v0_49_selected_backend": "85/85 executed selected tests PASS across v0.49/v0.48/NF0/development/match/market/F1-F8/M4-M14/M15 four-profile/API/mobility groups",
     "v0_49_three_season_gate": "NOT RE-CERTIFIED IN THIS EXECUTION: test_m15_three_season_product_gate_preserves_history_world_and_playability exceeds 180s execution window before a result",
     "v0_49_frontend_contract": "PASS: SFC structure + UI quality + Vue syntax 25/25",
-    "vite_production_build_0_49": "NOT CERTIFIED IN THIS ENVIRONMENT: frontend/node_modules/.bin/vite is not materialized; SFC/UI/Vue pre-build gates pass"
+    "vite_production_build_0_49": "NOT CERTIFIED IN THIS ENVIRONMENT: frontend/node_modules/.bin/vite is not materialized; SFC/UI/Vue pre-build gates pass",
+    "v0_50_nf3_nf8_functional": "11/11 PASS: recovery/preparation, tactical phases/instructions/familiarity, staff reports, dressing-room concerns/discipline, market terms/loans, briefing/live advice/postmatch diagnosis/API",
+    "v0_50_selected_backend": "71/71 PASS across NF3-NF8 new functional tests (11), NF0-v0.49/market/match/context/dressing/F1-F8 regression (44), and web API (16)",
+    "v0_50_frontend_contract": "PASS: SFC structure + UI quality + Vue syntax 25/25 after NF3-NF8 workspaces and loan flow",
+    "v0_50_manager_career_heavy_gate": "NOT RE-CERTIFIED IN THIS EXECUTION: manager_career heavy file exceeds the execution window after five completed cases without an assertion failure; no PASS inferred from timeout",
+    "vite_production_build_0_50": "NOT CERTIFIED IN THIS ENVIRONMENT: frontend/node_modules/.bin/vite is not materialized; SFC/UI/Vue pre-build gates pass",
+    "v0_51_nf9_nf12_functional": "10/10 PASS: career application/interview/contracts/cross-league handover, resignation memory, board sale pressure and anti-exploit requests, causal rumour cooling/confirmation, longitudinal economy and save/API persistence.",
+    "v0_51_selected_backend": "81/81 PASS across explicitly executed NF9-NF12, web/API, NF3-NF8, mobility, economy, v0.49, v0.48, NF0 staff, market and F1-F8 groups.",
+    "v0_51_frontend_contract": "PASS: SFC structure + UI quality + Vue syntax; 26/26 SFCs parse.",
+    "vite_production_build_0_51": "NOT CERTIFIED in this environment: prebuild checks pass, then shell reports vite: not found; no production-build PASS inferred."
   }
 }

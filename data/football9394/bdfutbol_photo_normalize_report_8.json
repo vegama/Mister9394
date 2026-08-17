@@ -1,0 +1,45 @@
+{
+  "status": "complete",
+  "target_size": [
+    40,
+    55
+  ],
+  "format": "JPEG",
+  "mode": "RGB",
+  "converted": 2,
+  "skipped_existing": 381,
+  "unresolved": 0,
+  "invalid": 0,
+  "converted_rows": [
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\2820.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9494079.jpg",
+      "original_size": [
+        176,
+        279
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9494079
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\702562.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496515.jpg",
+      "original_size": [
+        137,
+        242
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496515
+    }
+  ],
+  "unresolved_files": [],
+  "invalid_files": []
+}

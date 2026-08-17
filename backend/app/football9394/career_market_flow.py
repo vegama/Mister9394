@@ -14,6 +14,8 @@ def ensure_market_flow_state(state: dict[str, Any]) -> None:
     state.setdefault("transfer_negotiations", {})
     state.setdefault("transfer_listings", {})
     state.setdefault("incoming_transfer_offers", [])
+    state.setdefault("market_inquiries", [])
+    state.setdefault("loan_deals", [])
 
 
 def market_flags(player: dict[str, Any], *, overall: int, team_id: int, contract: dict[str, Any], current_year: int, wants_move: bool = False, satisfaction: int | None = None) -> dict[str, Any]:

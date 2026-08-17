@@ -1,5 +1,5 @@
 <script setup>
-defineProps({categories:{type:Array,default:()=>[]},category:{type:String,default:'Todas'},news:{type:Array,default:()=>[]},managerWorld:{type:Object,default:()=>({history:[],pressure:{},unemployed_count:0})},formatDate:{type:Function,required:true}})
+defineProps({categories:{type:Array,default:()=>[]},category:{type:String,default:'Todas'},news:{type:Array,default:()=>[]},managerWorld:{type:Object,default:()=>({history:[],pressure:{},unemployed_count:0})},informationWorld:{type:Object,default:()=>({threads:[],media_reputation:{}})},formatDate:{type:Function,required:true}})
 const emit=defineEmits(['update:category'])
 </script>
 <template>
@@ -10,6 +10,7 @@ const emit=defineEmits(['update:category'])
   </article>
   <aside class="side-stack news-world-rail">
     <article class="football-panel editorial-note"><span class="editorial-mark">93</span><h2>Una partida, una historia</h2><p>Resultados, fichajes, lesiones, contratos, selecciones y transiciones de temporada alimentan esta portada. No hay noticias de relleno.</p></article>
+    <article class="football-panel"><small>CADENA CAUSAL</small><h2>De dónde salen las historias</h2><div class="manager-change-list"><article v-for="thread in (informationWorld.threads||[]).slice(0,5)" :key="thread.id"><time>{{formatDate(thread.date)}} · {{thread.stage}}</time><strong>{{thread.news?.headline || thread.rumour?.text || thread.fact?.kind}}</strong><span>{{thread.rumour ? `Rumor ${thread.certainty}%` : 'Hecho registrado'}}<template v-if="thread.reactions?.length"> · {{thread.reactions.length}} reacción{{thread.reactions.length===1?'':'es'}}</template><template v-if="thread.consequences?.length"> · {{thread.consequences.length}} consecuencia{{thread.consequences.length===1?'':'s'}}</template></span></article><p v-if="!informationWorld.threads?.length" class="rail-empty">Aún no hay una cadena causal que mostrar.</p></div></article>
     <article class="football-panel manager-carousel"><small>MUNDO TÉCNICO</small><h2>Mercado de banquillos</h2><p>{{managerWorld.unemployed_count||0}} entrenadores de la partida están actualmente libres.</p><div class="manager-change-list"><article v-for="m in [...(managerWorld.history||[])].reverse().slice(0,4)" :key="`${m.date}-${m.team_id}-${m.to_manager_id}`"><time>{{formatDate(m.date)}}</time><strong>{{m.team_name || `Club ${m.team_id}`}}</strong><span>{{m.from_manager_name || 'Anterior técnico'}} → {{m.to_manager_name || `Entrenador ${m.to_manager_id}`}}</span><em v-if="m.position">{{m.position}}º · expectativa {{m.expected_position}}º</em></article><p v-if="!managerWorld.history?.length" class="rail-empty">Los banquillos todavía conservan sus técnicos iniciales.</p></div></article>
   </aside>
 </section>

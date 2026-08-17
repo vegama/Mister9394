@@ -43,6 +43,17 @@ FOCUS_SPECS: dict[str, dict[str, Any]] = {
     "goalkeeping": {"label": "Portería", "attributes": ("goalkeeping", "reflexes", "positioning")},
 }
 
+RECOVERY_SPECS: dict[str, dict[str, Any]] = {
+    "normal": {"label": "Carga normal", "load_mult": 1.0, "condition_bonus": 0},
+    "reduced": {"label": "Carga reducida", "load_mult": 0.62, "condition_bonus": 1},
+    "recovery": {"label": "Recuperación", "load_mult": 0.28, "condition_bonus": 2},
+    "rest": {"label": "Descanso individual", "load_mult": 0.0, "condition_bonus": 3},
+}
+
+MATCH_PREP_SPECS: dict[str, str] = {
+    "balanced": "Equilibrada", "opponent": "Específica del rival", "attacking": "Ataque", "defensive": "Defensa", "set_pieces": "Balón parado",
+}
+
 # Monday..Sunday. It is intentionally a sensible football default rather than a
 # historical claim about any specific club's exact 1993 microcycle.
 _DEFAULT_WEEK = ["recovery", "physical", "tactical", "attack", "set_pieces", "match_preparation", "rest"]
@@ -55,6 +66,8 @@ def ensure_training_state(state: dict[str, Any]) -> dict[str, Any]:
     root.setdefault("intensity", "normal")
     root.setdefault("weekly_plan", list(_DEFAULT_WEEK))
     root.setdefault("individual_focus", {})
+    root.setdefault("individual_recovery", {})
+    root.setdefault("match_preparation_focus", "balanced")
     root.setdefault("history", [])
     root.setdefault("last_processed_on", None)
     plan = list(root.get("weekly_plan") or [])[:7]
@@ -93,6 +106,27 @@ def set_individual_focus(state: dict[str, Any], *, player_id: int, focus: str) -
         root["individual_focus"].pop(str(int(player_id)), None)
     else:
         root["individual_focus"][str(int(player_id))] = key
+    return root
+
+
+def set_individual_recovery(state: dict[str, Any], *, player_id: int, recovery: str) -> dict[str, Any]:
+    root = ensure_training_state(state)
+    key = str(recovery)
+    if key not in RECOVERY_SPECS:
+        raise ValueError("plan individual de recuperación no válido")
+    if key == "normal":
+        root["individual_recovery"].pop(str(int(player_id)), None)
+    else:
+        root["individual_recovery"][str(int(player_id))] = key
+    return root
+
+
+def set_match_preparation_focus(state: dict[str, Any], *, focus: str) -> dict[str, Any]:
+    root = ensure_training_state(state)
+    key = str(focus)
+    if key not in MATCH_PREP_SPECS:
+        raise ValueError("foco de preparación de partido no válido")
+    root["match_preparation_focus"] = key
     return root
 
 
@@ -193,8 +227,10 @@ def process_training_day(
             risk_rows.append((risk, pid))
             continue
 
-        load_add = round(float(spec["load"]) * float(intensity_spec["load_mult"]) * efficiency)
-        condition_delta = int(spec["condition"])
+        recovery = str(root.get("individual_recovery", {}).get(str(pid)) or "normal")
+        recovery_spec = RECOVERY_SPECS.get(recovery) or RECOVERY_SPECS["normal"]
+        load_add = round(float(spec["load"]) * float(intensity_spec["load_mult"]) * efficiency * float(recovery_spec["load_mult"]))
+        condition_delta = int(spec["condition"]) + int(recovery_spec["condition_bonus"])
         if session not in {"rest", "recovery"}:
             condition_delta -= max(0, round((float(intensity_spec["load_mult"]) - 1.0) * 3))
         row["training_load"] = max(0, min(100, int(row.get("training_load") or 0) + load_add))
@@ -202,7 +238,7 @@ def process_training_day(
         row["condition"] = max(0, min(100, int(row.get("condition") or 100) + condition_delta))
         row["last_training_session"] = session
         focus = str(root.get("individual_focus", {}).get(str(pid)) or "none")
-        evidence = float(spec["development"]) * float(intensity_spec["dev_mult"]) * dev_quality
+        evidence = float(spec["development"]) * float(intensity_spec["dev_mult"]) * dev_quality * max(.15, float(recovery_spec["load_mult"]))
         _focus_evidence(row, focus, evidence)
         risk = _player_risk(player, row)
         row["injury_risk"] = risk
@@ -211,7 +247,7 @@ def process_training_day(
         # Training injuries are deliberately uncommon. Workload and proneness do
         # not guarantee one; they only tilt a small deterministic daily chance.
         exposure = 1.25 if session == "physical" else 1.0 if session in {"attack", "defence", "tactical"} else .55
-        chance = max(0.0003, min(0.018, (0.0005 + max(0, risk - 24) * 0.00012) * exposure * float(intensity_spec["load_mult"])))
+        chance = max(0.00008, min(0.018, (0.0005 + max(0, risk - 24) * 0.00012) * exposure * float(intensity_spec["load_mult"]) * max(.18, float(recovery_spec["load_mult"]))))
         rng = Random(int(seed) ^ pid * 8191 ^ game_date.toordinal() * 131 ^ sum(map(ord, session)))
         if rng.random() < chance:
             injury = register_match_injury(row, player, seed=int(seed) + 700_000 + pid, game_date=game_date)
@@ -255,6 +291,7 @@ def training_snapshot(
         risk = _player_risk(player, row)
         row["injury_risk"] = risk
         focus = str(root.get("individual_focus", {}).get(str(pid)) or "none")
+        recovery = str(root.get("individual_recovery", {}).get(str(pid)) or "normal")
         condition = max(0, min(100, int(row.get("condition") or 100)))
         load = max(0, min(100, int(row.get("training_load") or 0)))
         player_rows.append({
@@ -264,6 +301,7 @@ def training_snapshot(
             "injury_days": max(0, int(row.get("injury_days") or 0)),
             "risk": risk, "risk_label": _risk_label(risk),
             "focus": focus, "focus_label": FOCUS_SPECS[focus]["label"],
+            "recovery": recovery, "recovery_label": RECOVERY_SPECS[recovery]["label"],
             "recommendation": _training_recommendation(injury_days=int(row.get("injury_days") or 0), condition=condition, load=load, risk=risk),
         })
     player_rows.sort(key=lambda item: (-int(item["risk"]), int(item["condition"]), item["name"]))
@@ -279,6 +317,10 @@ def training_snapshot(
         "session_options": [{"key": key, "label": value["label"]} for key, value in SESSION_SPECS.items()],
         "intensity_options": [{"key": key, "label": value["label"]} for key, value in INTENSITY_SPECS.items()],
         "focus_options": [{"key": key, "label": value["label"]} for key, value in FOCUS_SPECS.items()],
+        "recovery_options": [{"key": key, "label": value["label"]} for key, value in RECOVERY_SPECS.items()],
+        "match_preparation_focus": root.get("match_preparation_focus") or "balanced",
+        "match_preparation_focus_label": MATCH_PREP_SPECS.get(str(root.get("match_preparation_focus") or "balanced"), "Equilibrada"),
+        "match_preparation_options": [{"key": key, "label": label} for key, label in MATCH_PREP_SPECS.items()],
         "responsibility": dict(effectiveness),
         "players": player_rows,
         "high_risk_count": sum(1 for row in player_rows if int(row["risk"]) >= 52),

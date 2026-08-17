@@ -1,5 +1,21 @@
 # Míster 93/94
 
+## Estado · checkpoint 0.51.0-nf9-nf12-professional-world
+
+La pasada **NF9→NF12** conecta cuatro capas que ya comparten realidad: **carrera profesional, consejo/proyecto, mundo informativo causal y economía longitudinal**. El entrenador puede buscar empleo, presentar candidatura, pasar entrevista, firmar en otra liga sin resetear el mundo, recibir ofertas con contrato vigente o dimitir conservando reputación, relaciones y memoria. El consejo mantiene objetivos, filosofía y márgenes de proyecto, puede exigir una venta por una crisis real y resuelve peticiones con condiciones y memoria anti-exploit. Véase `docs/V051_NF9_NF12_PROFESSIONAL_WORLD.md` y `docs/FM_REFERENCE_FUNCTIONAL_PLAN.md`.
+
+La prensa deja de ser un feed aislado: consultas, negociaciones, fichajes, candidaturas y decisiones del consejo forman hilos `hecho → rumor → noticia → reacción → consecuencia`; un rumor no confirmado se enfría sin transformarse mágicamente en verdad. La economía longitudinal clasifica los flujos reales ya movidos por el motor —taquilla, comercial, salarios, mercado, deuda y premios— sin duplicar caja, conserva temporadas y conecta crisis, presión de venta y cambios estructurales como ascensos/descensos.
+
+Validación de cierre: **81/81 backend PASS** en los grupos seleccionados NF9–NF12, web/API, NF3–NF8, movilidad, economía, v0.49, v0.48, NF0 staff, mercado y F1–F8. Frontend: **SFC/UI/Vue PASS 26/26**. `vite build` no se certifica porque el binario Vite no está materializado en este entorno; los prechecks anteriores a Vite sí pasan.
+
+## Estado · checkpoint 0.50.0-nf3-nf8-functional-depth
+
+La pasada **NF3→NF8** convierte entrenamiento, táctica, staff, vestuario, mercado y partido en un flujo funcional conectado. NF3 añade recuperación individual y preparación específica; NF4 incorpora fases tácticas persistentes, familiaridad, órdenes individuales/rival y lanzadores con efectos reales en el motor; NF5 genera informes de staff con autor/confianza/evidencia/acción; NF6 abre preocupaciones causales, respuestas y disciplina; NF7 profundiza consulta/negociación/rol/prima/cláusula y añade cesiones completas; NF8 conecta briefing, consejo/rendimiento en vivo, ajustes inmediatos y diagnóstico postpartido. Véase `docs/V050_NF3_NF8_FUNCTIONAL_DEPTH.md` y el plan rector `docs/FM_REFERENCE_FUNCTIONAL_PLAN.md`.
+
+La cesión ya recorre el ciclo **negociación → plantilla → contrato temporal → promesa/noticia/reacción → devolución automática al club de origen**. Los roles prometidos en fichajes no se pierden al firmar y el vestuario los juzga mediante selecciones reales. Los cambios de fase táctica hechos durante el directo se sincronizan con el estado vivo del motor.
+
+Validación seleccionada: **71/71 backend PASS** (11 nuevas NF3–NF8 + 44 regresión funcional/motor/mercado/vestuario/F1–F8 + 16 web/API). Frontend: **SFC/UI/Vue PASS 25/25**. El fichero pesado `test_football9394_manager_career.py` no se recertifica: supera la ventana de ejecución tras cinco casos sin fallo, por lo que no se infiere un PASS. `vite build` tampoco se certifica porque el binario Vite no está materializado en este entorno.
+
 ## Estado · checkpoint 0.49.0-training-load-scouting-capacity-flow
 
 La nueva pasada conecta varias funciones a la vez: **entrenamiento semanal, carga/fatiga/condición, riesgo médico, capacidad de scouting, geografía y envejecimiento de informes**, además de enlazar las necesidades del planificador directamente con el mercado. El usuario ya puede editar intensidad/sesiones/focos individuales desde la nueva superficie **Entrenamiento** y esas decisiones alteran estado real del jugador.

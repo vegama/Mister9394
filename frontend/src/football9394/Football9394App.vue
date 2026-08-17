@@ -18,6 +18,7 @@ import StaffWorkspace from './components/StaffWorkspace.vue'
 import TrainingWorkspace from './components/TrainingWorkspace.vue'
 import HistoryWorkspace from './components/HistoryWorkspace.vue'
 import CalendarWorkspace from './components/CalendarWorkspace.vue'
+import CareerWorkspace from './components/CareerWorkspace.vue'
 import { football9394Api } from './api.js'
 
 const navigationGroups = [
@@ -36,6 +37,7 @@ const navigationGroups = [
   ] },
   { label: 'CLUB Y MUNDO', items: [
     { id: 'club', label: 'Club' },
+    { id: 'career', label: 'Carrera' },
     { id: 'economy', label: 'Economía' },
     { id: 'national', label: 'Selecciones' },
     { id: 'history', label: 'Historia' },
@@ -68,6 +70,9 @@ const defensiveLine = ref('medium')
 const marking = ref('zonal')
 const width = ref('normal')
 const offsideTrap = ref(false)
+const buildUp = ref('balanced')
+const finalThird = ref('mixed')
+const transition = ref('balanced')
 const tacticalIdentity = ref({formation_label:'Equilibrio clásico'})
 const liveMatch = ref(null)
 const liveOutgoingId = ref(null)
@@ -83,6 +88,11 @@ const selectedTarget = ref(null)
 const transferFee = ref(0)
 const transferSalary = ref(0)
 const transferYears = ref(3)
+const transferSquadRole = ref('rotation')
+const transferSigningBonus = ref(0)
+const transferReleaseClause = ref(null)
+const transferDealType = ref('transfer')
+const transferLoanWageShare = ref(100)
 const marketQuery = ref('')
 const marketPosition = ref('')
 const marketFreeAgents = ref(false)
@@ -135,12 +145,18 @@ const rivalries = ref([])
 const managerWorld = ref({history:[],pressure:{},unemployed_count:0})
 const careerRecords = ref({biggest_win:null,biggest_defeat:null,highest_scoring_match:null,longest_win_streak:0,longest_unbeaten_streak:0,matches_managed:0,wins:0,draws:0,losses:0})
 const userManager = ref({reputation:50,job_offers:[],tenures:[],current_tenure:{}})
+const professionalCareer = ref({employment_status:'employed',reputation:50,reputation_by_country:{},active_contract:{},available_jobs:[],career_offers:[],applications:[],interviews:[],relationships:[],career_memories:[],tenures:[]})
+const boardProject = ref({objective:'',philosophy:[],requests:[],sale_pressure:null,support:55})
+const informationWorld = ref({threads:[],media_reputation:{credibility:50,pressure:35,relationship:50}})
 const dressingRoom = ref({captain_id:null,leaders:[],competitions:[],mentorships:[],recent_events:[]})
 const reencounters = ref([])
 const staffState = ref({members:[],responsibilities:[],manager_responsibility_count:0,generated_count:0,provenance_note:''})
 const scoutingState = ref({active:[],recent_reports:[],responsibility:{}})
 const squadPlan = ref({priorities:[],expiring:[],succession:[],surplus:[]})
-const trainingState = ref({weekly_plan:[],players:[],session_options:[],intensity_options:[],focus_options:[],responsibility:{},high_risk_count:0,very_high_risk_count:0})
+const trainingState = ref({weekly_plan:[],players:[],session_options:[],intensity_options:[],focus_options:[],recovery_options:[],match_preparation_options:[],responsibility:{},high_risk_count:0,very_high_risk_count:0})
+const tacticalPlan = ref({build_up:'balanced',final_third:'mixed',transition:'balanced',familiarity:{overall:62,label:'Asimilando'},individual_instructions:[],opposition_instructions:[],set_piece_takers:{}})
+const staffReports = ref({reports:[],urgent_count:0})
+const matchBriefing = ref(null)
 
 const selectedCompetitionInfo = computed(()=>competitions.value.find(c=>`${c.kind}:${c.source_id}`===selectedCompetition.value)||null)
 const tableWindow = computed(()=>{
@@ -209,6 +225,7 @@ function applyCareerState(state){
   directness.value=state.tactics.directness||directness.value;defensiveLine.value=state.tactics.defensive_line||defensiveLine.value
   marking.value=state.tactics.marking||marking.value
   width.value=state.tactics.width||width.value;offsideTrap.value=Boolean(state.tactics.offside_trap)
+  buildUp.value=state.tactics.build_up||buildUp.value;finalThird.value=state.tactics.final_third||finalThird.value;transition.value=state.tactics.transition||transition.value
  }
  tacticalIdentity.value=state.tactical_identity||tacticalIdentity.value
  economy.value=state.economy||economy.value
@@ -230,12 +247,18 @@ function applyCareerState(state){
  if(state.manager_world)managerWorld.value=state.manager_world
  if(state.career_records)careerRecords.value=state.career_records
  if(state.user_manager)userManager.value=state.user_manager
+ if(state.professional_career)professionalCareer.value=state.professional_career
+ if(state.board_project)boardProject.value=state.board_project
+ if(state.information_world)informationWorld.value=state.information_world
  if(state.dressing_room)dressingRoom.value=state.dressing_room
  if(state.reencounters)reencounters.value=state.reencounters
  if(state.staff)staffState.value=state.staff
  if(state.scouting)scoutingState.value=state.scouting
  if(state.squad_plan)squadPlan.value=state.squad_plan
  if(state.training)trainingState.value=state.training
+ if(state.tactical_plan){tacticalPlan.value=state.tactical_plan;buildUp.value=state.tactical_plan.build_up||buildUp.value;finalThird.value=state.tactical_plan.final_third||finalThird.value;transition.value=state.tactical_plan.transition||transition.value}
+ if(state.staff_reports)staffReports.value=state.staff_reports
+ if(Object.prototype.hasOwnProperty.call(state,'match_briefing'))matchBriefing.value=state.match_briefing
 }
 function calendarRowsForUi(rows,state){
  const teamId=Number(state.team?.source_id||controlledTeamId.value)
@@ -248,13 +271,14 @@ function calendarRowsForUi(rows,state){
  })
 }
 async function refreshCareerData(state){
- const [calendarRows,marketRows,competitionRows,newsRows]=await Promise.all([
+ const [calendarRows,marketRows,competitionRows,newsRows,careerRows,projectRows,informationRows]=await Promise.all([
   football9394Api.careerCalendar(state.career_id),football9394Api.careerMarket(state.career_id,{limit:10}),football9394Api.careerCompetitions(state.career_id),football9394Api.careerNews(state.career_id,{limit:80}),
+  football9394Api.professionalCareer(state.career_id),football9394Api.boardProject(state.career_id),football9394Api.informationWorld(state.career_id,80),
  ])
  const recent=calendarRows.filter(m=>m.played).slice(-3);const upcoming=calendarRows.filter(m=>!m.played).slice(0,6)
  matches.value=calendarRowsForUi([...recent,...upcoming],state)
  targets.value=marketRows.map(p=>[p.display_name,p.position,p.team_name,p.overall??'—',p.estimated_transfer_value??0,p.id,p])
- competitions.value=competitionRows;newsFeed.value=newsRows
+ competitions.value=competitionRows;newsFeed.value=newsRows;professionalCareer.value=careerRows;boardProject.value=projectRows;informationWorld.value=informationRows
  if(!competitionRows.some(c=>`${c.kind}:${c.source_id}`===selectedCompetition.value)&&competitionRows.length)selectedCompetition.value=`${competitionRows[0].kind}:${competitionRows[0].source_id}`
  await loadSelectedCompetitionTable()
 }
@@ -334,6 +358,38 @@ async function setTrainingFocus(payload){
  if(!careerId.value||!payload?.playerId)return
  try{const result=await football9394Api.setTrainingFocus(careerId.value,payload.playerId,payload.focus);applyCareerState(result.career);flash('Trabajo individual actualizado.')}catch(error){flash(`No se pudo cambiar el foco: ${error.message}`)}
 }
+async function setTrainingRecovery(payload){
+ if(!careerId.value||!payload?.playerId)return
+ try{const result=await football9394Api.setTrainingRecovery(careerId.value,payload.playerId,payload.recovery);applyCareerState(result.career);flash('Recuperación individual actualizada.')}catch(error){flash(`No se pudo cambiar la recuperación: ${error.message}`)}
+}
+async function setMatchPreparation(focus){
+ if(!careerId.value)return
+ try{const result=await football9394Api.setMatchPreparation(careerId.value,focus);applyCareerState(result.career);flash('Preparación del rival actualizada.')}catch(error){flash(`No se pudo cambiar la preparación: ${error.message}`)}
+}
+async function saveTacticalPhase(payload){
+ if(!careerId.value)return
+ try{const result=await football9394Api.updateTacticalPlan(careerId.value,payload);applyCareerState(result.career);flash('Plan por fases actualizado.')}catch(error){flash(`No se pudo actualizar el plan: ${error.message}`)}
+}
+async function setTacticalPlayerInstruction(payload){
+ if(!careerId.value||!payload?.playerId)return
+ try{const result=await football9394Api.setTacticalPlayerInstruction(careerId.value,payload.playerId,payload.instruction||{});applyCareerState(result.career);flash('Instrucción individual guardada.')}catch(error){flash(`No se pudo guardar la instrucción: ${error.message}`)}
+}
+async function setOppositionInstruction(payload){
+ if(!careerId.value||!payload?.playerId)return
+ try{const result=await football9394Api.setOppositionInstruction(careerId.value,payload.playerId,payload.instruction||{});applyCareerState(result.career);flash('Instrucción sobre el rival guardada.')}catch(error){flash(`No se pudo preparar al rival: ${error.message}`)}
+}
+async function setSetPieceTaker(payload){
+ if(!careerId.value||!payload?.kind)return
+ try{const result=await football9394Api.setSetPieceTaker(careerId.value,payload.kind,payload.playerId||null);applyCareerState(result.career);flash('Lanzador actualizado.')}catch(error){flash(`No se pudo cambiar el lanzador: ${error.message}`)}
+}
+async function respondDressingConcern(payload){
+ if(!careerId.value||!payload?.id)return
+ try{const result=await football9394Api.respondDressingConcern(careerId.value,payload.id,payload.response);applyCareerState(result.career);flash('Situación de vestuario gestionada.')}catch(error){flash(`No se pudo gestionar: ${error.message}`)}
+}
+async function disciplineSquadPlayer(payload){
+ if(!careerId.value||!payload?.playerId)return
+ try{const result=await football9394Api.disciplinePlayer(careerId.value,payload.playerId,payload.action);applyCareerState(result.career);flash('Decisión disciplinaria registrada.')}catch(error){flash(`No se pudo aplicar la medida: ${error.message}`)}
+}
 async function applyPlanNeed(need){
  marketQuery.value=''
  marketPosition.value=need?.market_position||''
@@ -366,13 +422,13 @@ async function advance(){
  if(isAdvancing.value)return
  if(liveMatch.value){view.value='match';flash('Tienes un partido en directo pendiente.');return}
  if(!careerId.value){flash('La carrera todavía no está lista.');return}
- if(jobStatus.value==='dismissed'){view.value='club';flash('Estás sin club. Elige un nuevo proyecto para continuar tu carrera.');return}
+ if(jobStatus.value==='dismissed'){view.value='career';flash('Estás sin club. Elige un nuevo proyecto para continuar tu carrera.');return}
  isAdvancing.value=true
  try{
   const result=await football9394Api.advanceCareerUntilEvent(careerId.value,14)
   applyCareerState(result.career);await refreshCareerData(result.career)
   if(result.world_events?.some(e=>e.kind==='season_rollover'))await loadHistory()
-  if(result.career_over){view.value='club';flash('El consejo ha terminado tu etapa en el club.');return}
+  if(result.career_over){view.value='career';flash('El consejo ha terminado tu etapa en el club.');return}
   if(result.requires_match&&result.next_match)flash(`DÍA DE PARTIDO · ${result.next_match.home_team} - ${result.next_match.away_team}`)
   else if(result.advanced_days>1)flash(`Continuado ${result.advanced_days} días · ${result.date}`)
   else flash(`Día avanzado · ${result.date}`)
@@ -384,8 +440,20 @@ async function acceptManagerJob(offerId){
  if(!careerId.value)return
  try{const state=await football9394Api.acceptManagerJob(careerId.value,offerId);applyCareerState(state);await refreshCareerData(state);view.value='home';flash(`Nueva etapa: ${state.team?.name||'club aceptado'}.`)}catch(error){flash(`No se pudo aceptar el banquillo: ${error.message}`)}
 }
+async function applyManagerJob(opportunityId){
+ if(!careerId.value)return
+ try{const result=await football9394Api.applyManagerJob(careerId.value,opportunityId);professionalCareer.value=result.professional_career||professionalCareer.value;const passed=Boolean(result.passed);flash(passed?'Entrevista superada: tienes una oferta sobre la mesa.':'El club ha elegido otro perfil para este proyecto.')}catch(error){flash(`No se pudo presentar la candidatura: ${error.message}`)}
+}
+async function resignManagerJob(){
+ if(!careerId.value)return
+ try{const result=await football9394Api.resignManagerJob(careerId.value);const state=result.career;applyCareerState(state);await refreshCareerData(state);view.value='career';flash('Etapa cerrada. Tu historial y reputación continúan contigo.')}catch(error){flash(`No se pudo dimitir: ${error.message}`)}
+}
+async function requestBoardProject(requestType){
+ if(!careerId.value)return
+ try{const result=await football9394Api.boardRequest(careerId.value,requestType);if(result.career)applyCareerState(result.career);boardProject.value=result.project||boardProject.value;economy.value=result.economy||economy.value;flash(result.request?.status==='accepted'?'El consejo acepta la petición.':`El consejo rechaza la petición: ${result.request?.reason||'sin margen suficiente'}.`)}catch(error){flash(`No se pudo elevar la petición: ${error.message}`)}
+}
 
-function currentTactics(){return {formation:formation.value,mentality:mentality.value,tempo:tempo.value,pressing:pressing.value,directness:directness.value,defensive_line:defensiveLine.value,marking:marking.value,width:width.value,offside_trap:Boolean(offsideTrap.value)}}
+function currentTactics(){return {formation:formation.value,mentality:mentality.value,tempo:tempo.value,pressing:pressing.value,directness:directness.value,defensive_line:defensiveLine.value,marking:marking.value,width:width.value,offside_trap:Boolean(offsideTrap.value),build_up:buildUp.value,final_third:finalThird.value,transition:transition.value}}
 async function saveTactics(){
  if(!careerId.value)return
  try{const result=await football9394Api.updateCareerTactics(careerId.value,currentTactics());applyCareerState(result.career);flash('Táctica guardada. Sus efectos se aplicarán al próximo minuto jugado.')}catch(error){flash(`No se pudo guardar la táctica: ${error.message}`)}
@@ -457,12 +525,21 @@ async function scoutMarketPlayer(playerOrTarget){
   flash(`Informe encargado · previsto ${formatDateShort(result.assignment.due_on)}.`)
  }catch(error){flash(`No se pudo encargar el informe: ${error.message}`)}
 }
+async function inquireMarketPlayer(playerOrTarget){
+ if(!careerId.value)return
+ const id=Number(Array.isArray(playerOrTarget)?playerOrTarget[5]:playerOrTarget?.id)
+ if(!id)return
+ try{const result=await football9394Api.marketInquiry(careerId.value,id);applyCareerState(result.career);flash(`Consulta: ${result.inquiry.note}`)}catch(error){flash(`No se pudo consultar: ${error.message}`)}
+}
+async function withdrawNegotiation(row){
+ try{const result=await football9394Api.withdrawNegotiation(careerId.value,row.id);applyCareerState(result.career);flash('Negociación retirada.')}catch(error){flash(`No se pudo retirar: ${error.message}`)}
+}
 async function submitTransfer(){
  if(!selectedTarget.value||!careerId.value)return
- try{const result=await football9394Api.openNegotiation(careerId.value,{playerId:selectedTarget.value[5],feeOffer:Number(transferFee.value),salaryOffer:Number(transferSalary.value),contractYears:Number(transferYears.value)});applyCareerState(result.career);selectedTarget.value=null;flash(`Oferta enviada · respuesta prevista ${result.negotiation.response_date}`)}catch(error){flash(`Negociación fallida: ${error.message}`)}
+ try{const result=await football9394Api.openNegotiation(careerId.value,{playerId:selectedTarget.value[5],feeOffer:Number(transferFee.value),salaryOffer:Number(transferSalary.value),contractYears:Number(transferYears.value),squadRole:transferSquadRole.value,signingBonus:Number(transferSigningBonus.value||0),releaseClause:transferReleaseClause.value?Number(transferReleaseClause.value):null,dealType:transferDealType.value,loanWageShare:Number(transferLoanWageShare.value||0)});applyCareerState(result.career);selectedTarget.value=null;flash(`Oferta enviada · respuesta prevista ${result.negotiation.response_date}`)}catch(error){flash(`Negociación fallida: ${error.message}`)}
 }
 async function counterNegotiation(row){
- try{const result=await football9394Api.counterNegotiation(careerId.value,row.id,{feeOffer:Number(row.counter_fee??row.fee_offer),salaryOffer:Number(row.counter_salary??row.salary_offer),contractYears:Number(row.contract_years||3)});applyCareerState(result.career);flash(`Contraoferta enviada · respuesta ${result.negotiation.response_date}`)}catch(error){flash(`No se pudo responder: ${error.message}`)}
+ try{const result=await football9394Api.counterNegotiation(careerId.value,row.id,{feeOffer:Number(row.counter_fee??row.fee_offer),salaryOffer:Number(row.counter_salary??row.salary_offer),contractYears:Number(row.contract_years||3),loanWageShare:row.deal_type==='loan'?Number(row.counter_wage_share??row.loan_wage_share??100):null});applyCareerState(result.career);flash(`Contraoferta enviada · respuesta ${result.negotiation.response_date}`)}catch(error){flash(`No se pudo responder: ${error.message}`)}
 }
 async function toggleTransferListing(row){
  try{const listed=Boolean(row.profile?.transfer_listed);const result=listed?await football9394Api.unlistPlayer(careerId.value,row.id):await football9394Api.listPlayer(careerId.value,row.id,Number(row.profile?.estimated_transfer_value||0));applyCareerState(result.career);flash(listed?'Jugador retirado del mercado.':'Jugador puesto en el mercado.')}catch(error){flash(`No se pudo cambiar su situación: ${error.message}`)}
@@ -529,7 +606,7 @@ function handleShortcut(event){
  if(event.ctrlKey||event.metaKey||event.altKey)return
  const tag=String(event.target?.tagName||'').toLowerCase();if(['input','select','textarea','button'].includes(tag))return
  const key=String(event.key||'').toLowerCase()
- const routes={i:'home',p:'squad',t:'tactics',m:'market',f:'staff',g:'competitions',a:'calendar',n:'news',e:'economy',s:'national',h:'history'}
+ const routes={i:'home',p:'squad',t:'tactics',m:'market',f:'staff',g:'competitions',a:'calendar',n:'news',e:'economy',s:'national',h:'history',r:'career'}
  if(key==='c'||key===' '){event.preventDefault();advance()}
  else if(routes[key])view.value=routes[key]
 }
@@ -638,12 +715,16 @@ onBeforeUnmount(()=>{
       @save-selection="saveSelection"
       @open-tactics="view='tactics'"
       @set-captain="appointCaptain"
+      @respond-concern="respondDressingConcern"
+      @discipline="disciplineSquadPlayer"
     />
 
     <StaffWorkspace
       v-else-if="view==='staff'"
       :staff="staffState"
+      :reports="staffReports"
       @assign="assignStaffResponsibility"
+      @open-action="view=$event"
     />
 
     <TrainingWorkspace
@@ -651,6 +732,8 @@ onBeforeUnmount(()=>{
       :training="trainingState"
       @save-plan="saveTrainingPlan"
       @set-focus="setTrainingFocus"
+      @set-recovery="setTrainingRecovery"
+      @set-match-preparation="setMatchPreparation"
     />
 
     <TacticsWorkspace
@@ -665,6 +748,8 @@ onBeforeUnmount(()=>{
       :width="width"
       :offside-trap="offsideTrap"
       :identity="tacticalIdentity"
+      :plan="tacticalPlan"
+      :briefing="matchBriefing"
       :players="lineupDraftPlayers"
       :live="Boolean(liveMatch)"
       @update:formation="formation=$event"
@@ -677,6 +762,10 @@ onBeforeUnmount(()=>{
       @update:width="width=$event"
       @update:offside-trap="offsideTrap=$event"
       @save="saveTactics"
+      @save-phase="saveTacticalPhase"
+      @set-player-instruction="setTacticalPlayerInstruction"
+      @set-opposition-instruction="setOppositionInstruction"
+      @set-piece-taker="setSetPieceTaker"
       @apply-live="applyLiveTactics"
     />
 
@@ -732,6 +821,11 @@ onBeforeUnmount(()=>{
       :transfer-fee="transferFee"
       :transfer-salary="transferSalary"
       :transfer-years="transferYears"
+      :transfer-squad-role="transferSquadRole"
+      :transfer-signing-bonus="transferSigningBonus"
+      :transfer-release-clause="transferReleaseClause"
+      :transfer-deal-type="transferDealType"
+      :transfer-loan-wage-share="transferLoanWageShare"
       :transfer-room="economy.transfer_room"
       :market-flow="marketFlow"
       :active-negotiations="activeNegotiations"
@@ -746,14 +840,21 @@ onBeforeUnmount(()=>{
       @update:transfer-fee="transferFee=$event"
       @update:transfer-salary="transferSalary=$event"
       @update:transfer-years="transferYears=$event"
+      @update:transfer-squad-role="transferSquadRole=$event"
+      @update:transfer-signing-bonus="transferSigningBonus=$event"
+      @update:transfer-release-clause="transferReleaseClause=$event"
+      @update:transfer-deal-type="transferDealType=$event"
+      @update:transfer-loan-wage-share="transferLoanWageShare=$event"
       @search="searchMarket"
       @apply-plan="applyPlanNeed"
       @watch="toggleWatch"
       @scout="scoutMarketPlayer"
+      @inquire="inquireMarketPlayer"
       @open-player="openPlayer"
       @choose-target="chooseTarget"
       @submit="submitTransfer"
       @counter="counterNegotiation"
+      @withdraw="withdrawNegotiation"
       @accept-offer="acceptIncomingOffer"
     />
 
@@ -771,6 +872,7 @@ onBeforeUnmount(()=>{
       :category="newsCategory"
       :news="filteredNews"
       :manager-world="managerWorld"
+      :information-world="informationWorld"
       :format-date="formatDateShort"
       @update:category="newsCategory=$event"
     />
@@ -812,6 +914,7 @@ onBeforeUnmount(()=>{
       :rivalries="rivalries"
       :career-records="careerRecords"
       :manager-career="userManager"
+      :board-project="boardProject"
       :age-policy="careerAgePolicy"
       :dashboard="managerDashboard"
       :job-status="jobStatus"
@@ -824,6 +927,18 @@ onBeforeUnmount(()=>{
       @open-player="openPlayer"
       @navigate="view=$event"
       @accept-job="acceptManagerJob"
+      @board-request="requestBoardProject"
+    />
+
+    <CareerWorkspace
+      v-else-if="view==='career'"
+      :career="professionalCareer"
+      :job-status="jobStatus"
+      :format-money="formatSourceMoney"
+      :format-date="formatDateShort"
+      @apply-job="applyManagerJob"
+      @accept-job="acceptManagerJob"
+      @resign="resignManagerJob"
     />
 
     <HistoryWorkspace

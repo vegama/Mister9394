@@ -61,6 +61,7 @@ const refereeStyle = computed(() => {
   return `${discipline}${r.quality?` · calidad ${r.quality}`:''}`
 })
 const decisiveEvents = computed(() => [...(props.events||[])].filter(e=>['goal','penalty','penalty_saved','defensive_error','tactical_adjustment','red','second_yellow_red','set_piece_chance'].includes(e.kind)).slice(-6).reverse())
+const playerLabel = id => [...(props.match?.controlled_on_pitch||[]),...(props.match?.controlled_bench||[])].find(p=>Number(p.id)===Number(id))?.display_name || `Jugador #${id}`
 const resultSummary = computed(() => {
   if(props.match?.status!=='finished')return ''
   const gf=Number(ownStats.value?.goals||0), ga=Number(opponentStats.value?.goals||0)
@@ -108,6 +109,7 @@ const resultSummary = computed(() => {
           <div v-if="match.status==='finished'" class="match-post-v2 d7-match-post">
             <div class="post-verdict"><small>LECTURA INMEDIATA</small><strong>{{resultSummary}}</strong><span>{{ownStats?.possession ?? 50}}% posesión · {{ownStats?.shots ?? 0}} tiros · {{ownStats?.shots_on_target ?? 0}} a puerta</span></div>
             <div class="post-causes"><small>MOMENTOS QUE CAMBIARON EL PARTIDO</small><span v-for="(e,index) in decisiveEvents" :key="`${e.minute}-${e.kind}-${index}`"><b>{{e.minute}}'</b><em>{{e.detail || e.player_name || e.kind}}</em></span><span v-if="!decisiveEvents.length"><b>—</b><em>Partido sin un punto de ruptura claro.</em></span></div>
+            <div v-if="match.diagnosis" class="post-diagnosis"><small>DIAGNÓSTICO DEL CUERPO TÉCNICO</small><strong>{{match.diagnosis.verdict}} · {{match.diagnosis.score}}</strong><span v-for="reason in match.diagnosis.reasons || []" :key="reason">{{reason}}</span><em v-for="action in match.diagnosis.next_actions || []" :key="action">→ {{action}}</em></div>
           </div>
           <div v-if="match.minute>0" class="commentary-feed"><p v-for="(e,index) in events" :key="`${e.minute}-${e.kind}-${index}`" :class="[`event-${e.kind}`,eventClass(e)]"><b>{{e.minute}}'</b><span>{{e.detail || e.player_name || e.kind}}</span></p><div v-if="!events.length" class="match-kickoff-empty"><b>{{match.minute}}'</b><span>El relato aparecerá aquí cuando empiece a rodar el balón.</span></div></div>
         </article>
@@ -120,6 +122,9 @@ const resultSummary = computed(() => {
             <div class="live-stat-row"><b>{{match.home?.shots}}</b><span>Tiros</span><b>{{match.away?.shots}}</b></div><div class="live-stat-row"><b>{{match.home?.shots_on_target}}</b><span>A puerta</span><b>{{match.away?.shots_on_target}}</b></div><div class="live-stat-row"><b>{{match.home?.corners}}</b><span>Córners</span><b>{{match.away?.corners}}</b></div><div class="live-stat-row"><b>{{match.home?.fouls}}</b><span>Faltas</span><b>{{match.away?.fouls}}</b></div><div class="live-stat-row"><b>{{match.home?.yellow_cards}}</b><span>Amarillas</span><b>{{match.away?.yellow_cards}}</b></div><div class="live-stat-row"><b>{{match.home?.red_cards}}</b><span>Rojas</span><b>{{match.away?.red_cards}}</b></div><div class="live-stat-row"><b>{{match.home?.offsides}}</b><span>Fueras de juego</span><b>{{match.away?.offsides}}</b></div>
           </article>
 
+          <article v-if="match.minute>0 && match.status!=='finished' && (match.bench_advice||[]).length" class="football-panel bench-advice"><header class="simple-panel-head"><span><small>CUERPO TÉCNICO</small><strong>Lectura del partido</strong></span><b>{{match.bench_advice.length}}</b></header><div v-for="item in match.bench_advice" :key="`${item.kind}-${item.title}`" class="bench-advice-row" :class="item.priority"><strong>{{item.title}}</strong><span>{{item.detail}}</span><em v-if="item.suggested_change">Ajuste sugerido disponible en Tácticas</em></div></article>
+          <article v-if="match.minute>0 && (match.controlled_performance||[]).length" class="football-panel live-performance"><header class="simple-panel-head"><span><small>RENDIMIENTO</small><strong>Lectura individual</strong></span></header><div class="performance-grid"><span v-for="row in match.controlled_performance.slice(0,8)" :key="row.player_id"><b>{{playerLabel(row.player_id)}}</b><strong>{{row.rating}}</strong><em>fatiga {{row.fatigue}}%</em></span></div></article>
+
           <article v-if="match.status!=='finished'" class="football-panel live-bench modern-live-bench"><header class="simple-panel-head"><span><small>BANQUILLO</small><strong>Cambios</strong></span><b>Máx. 2</b></header>
             <label><span>Sale</span><select :value="outgoingId ?? ''" @change="emit('update:outgoingId', $event.target.value ? Number($event.target.value) : null)"><option value="">Selecciona titular</option><option v-for="p in match.controlled_on_pitch" :key="p.id" :value="p.id">{{p.display_name}} · {{p.position}} · {{p.match_condition}}%</option></select></label>
             <label><span>Entra</span><select :value="incomingId ?? ''" @change="emit('update:incomingId', $event.target.value ? Number($event.target.value) : null)"><option value="">Selecciona suplente</option><option v-for="p in match.controlled_bench" :key="p.id" :value="p.id">{{p.display_name}} · {{p.position}} · {{p.match_condition}}%</option></select></label>
@@ -131,3 +136,7 @@ const resultSummary = computed(() => {
     <div v-else class="football-panel empty-football-state">No hay partido en directo. <button class="football-button" @click="emit('back')">Volver</button></div>
   </section>
 </template>
+
+<style scoped>
+.bench-advice-row{display:grid;gap:4px;padding:10px 0;border-bottom:1px solid var(--line,#d7dde6)}.bench-advice-row:last-child{border-bottom:0}.bench-advice-row span,.bench-advice-row em{font-size:11px;color:var(--text-soft,#687386)}.bench-advice-row.high strong{font-weight:900}.performance-grid{display:grid;grid-template-columns:1fr 1fr;gap:7px}.performance-grid span{display:grid;grid-template-columns:1fr auto;gap:2px 8px;padding:7px;border-radius:8px;background:var(--surface-soft,#f5f7fa)}.performance-grid span em{grid-column:1/3;font-size:10px;color:var(--text-soft,#687386)}.post-diagnosis{display:grid;gap:5px;padding:12px;border-radius:10px;background:var(--surface-soft,#f5f7fa)}.post-diagnosis small{font-size:10px;font-weight:900;letter-spacing:.08em}.post-diagnosis span,.post-diagnosis em{font-size:11px}.post-diagnosis em{color:var(--text-soft,#687386)}
+</style>

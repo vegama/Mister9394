@@ -105,6 +105,23 @@ def ingest_events(state: dict[str, Any], events: list[dict[str, Any]], *,
                 headline=f"{team_name(tid)} cambia de entrenador",
                 detail=f"{old} deja el cargo y {new} toma el equipo. El cambio afectará al sistema y a las prioridades de plantilla.",
                 entity={"team_id":tid,"manager_id":event.get("to_manager_id")})
+        elif kind=="financial_restructuring":
+            tid=int(event.get("team_id") or 0); amount=int(event.get("amount") or 0)
+            item=publish(state,key=key,date=date,category="Economía",importance=4,
+                headline=f"{team_name(tid)} reestructura su deuda",
+                detail=f"El club necesita {amount:,} ptas. de financiación para sostener su operativa. La presión económica tendrá consecuencias deportivas.".replace(",","."),
+                entity={"team_id":tid})
+        elif kind=="board_sale_pressure":
+            tid=int(event.get("team_id") or 0); remaining=int(event.get("remaining") or event.get("required_income") or 0)
+            item=publish(state,key=key,date=date,category="Club",importance=4,
+                headline=f"El consejo de {team_name(tid)} pide una venta",
+                detail=f"La situación financiera obliga a generar {remaining:,} ptas. antes de ampliar el gasto.".replace(",","."),
+                entity={"team_id":tid})
+        elif kind=="board_sale_pressure_resolved":
+            tid=int(event.get("team_id") or 0)
+            item=publish(state,key=key,date=date,category="Club",importance=3,
+                headline=f"{team_name(tid)} cubre la exigencia de ingresos",
+                detail="La venta realizada cierra la presión extraordinaria del consejo y devuelve margen al proyecto.",entity={"team_id":tid})
         elif kind=="career_record":
             record=str(event.get("record") or "")
             if record=="biggest_win":

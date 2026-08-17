@@ -1,0 +1,1525 @@
+{
+  "results": [
+    {
+      "country": "Arabia Saudí",
+      "squad_size": 22,
+      "confirmed": [
+        {
+          "source_id": 9494246,
+          "display_name": "Abdullah Al-Dosari",
+          "expected_birth_date": "1969-11-01",
+          "candidates": [
+            {
+              "kind": "manager",
+              "id": "180195",
+              "surname": "Abdullah",
+              "full_name": "Majed Abdeh Abdullah Mohamed",
+              "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/180195/6a42246f68fd2.jpg"
+            },
+            {
+              "kind": "manager",
+              "id": "180190",
+              "surname": "Al-Dosari",
+              "full_name": "Abdullah Al-Dosari",
+              "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/180190/6a42229f5e0f7.jpg"
+            }
+          ],
+          "matched": {
+            "kind": "manager",
+            "id": "180190",
+            "surname": "Al-Dosari",
+            "full_name": "Abdullah Al-Dosari",
+            "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/180190/6a42229f5e0f7.jpg",
+            "dob": "1969-11-01"
+          }
+        },
+        {
+          "source_id": 9494248,
+          "display_name": "Abdullah Sulaiman Zubromawi",
+          "expected_birth_date": "1973-11-15",
+          "candidates": [
+            {
+              "kind": "manager",
+              "id": "180195",
+              "surname": "Abdullah",
+              "full_name": "Majed Abdeh Abdullah Mohamed",
+              "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/180195/6a42246f68fd2.jpg"
+            },
+            {
+              "kind": "manager",
+              "id": "179376",
+              "surname": "Zubromawi",
+              "full_name": "Abdullah Sulaiman Zubromawi",
+              "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/179376/6a3c3a98645bb.jpg"
+            }
+          ],
+          "matched": {
+            "kind": "manager",
+            "id": "179376",
+            "surname": "Zubromawi",
+            "full_name": "Abdullah Sulaiman Zubromawi",
+            "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/179376/6a3c3a98645bb.jpg",
+            "dob": "1973-11-15"
+          }
+        },
+        {
+          "source_id": 9494249,
+          "display_name": "Ahmed Jamil Madani",
+          "expected_birth_date": "1970-01-06",
+          "candidates": [
+            {
+              "kind": "manager",
+              "id": "179781",
+              "surname": "Jamil",
+              "full_name": "Ahmed Jamil Madani",
+              "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/179781/6a3ed4ea2975e.jpg"
+            }
+          ],
+          "matched": {
+            "kind": "manager",
+            "id": "179781",
+            "surname": "Jamil",
+            "full_name": "Ahmed Jamil Madani",
+            "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/179781/6a3ed4ea2975e.jpg",
+            "dob": "1970-01-06"
+          }
+        },
+        {
+          "source_id": 9494262,
+          "display_name": "Awad Al-Anazi",
+          "expected_birth_date": "1968-09-24",
+          "candidates": [
+            {
+              "kind": "manager",
+              "id": "180196",
+              "surname": "Al-Anazi",
+              "full_name": "Awad Al-Anazi",
+              "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/180196/6a4224bba2ed2.jpg"
+            }
+          ],
+          "matched": {
+            "kind": "manager",
+            "id": "180196",
+            "surname": "Al-Anazi",
+            "full_name": "Awad Al-Anazi",
+            "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/180196/6a4224bba2ed2.jpg",
+            "dob": "1968-09-24"
+          }
+        },
+        {
+          "source_id": 9494263,
+          "display_name": "Hamzah Saleh",
+          "expected_birth_date": "1967-04-19",
+          "candidates": [
+            {
+              "kind": "main",
+              "id": "57728",
+              "surname": "Hamzah",
+              "full_name": "Hamzah Idris Falatah",
+              "photo_url": "https://www.bdfutbol.com/i/m/57728.png"
+            },
+            {
+              "kind": "manager",
+              "id": "179778",
+              "surname": "Saleh",
+              "full_name": "Hamzah Saleh",
+              "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/179778/6a3ed3e548a84.jpg"
+            }
+          ],
+          "matched": {
+            "kind": "manager",
+            "id": "179778",
+            "surname": "Saleh",
+            "full_name": "Hamzah Saleh",
+            "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/179778/6a3ed3e548a84.jpg",
+            "dob": "1967-04-19"
+          }
+        },
+        {
+          "source_id": 9494266,
+          "display_name": "Ibrahim Al-Helwah",
+          "expected_birth_date": "1972-08-18",
+          "candidates": [
+            {
+              "kind": "manager",
+              "id": "180202",
+              "surname": "Al-Helwah",
+              "full_name": "Ibrahim Al-Helwah",
+              "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/180202/6a422672e047e.jpg"
+            }
+          ],
+          "matched": {
+            "kind": "manager",
+            "id": "180202",
+            "surname": "Al-Helwah",
+            "full_name": "Ibrahim Al-Helwah",
+            "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/180202/6a422672e047e.jpg",
+            "dob": "1972-08-18"
+          }
+        },
+        {
+          "source_id": 9494258,
+          "display_name": "Khalid Al-Muwallid",
+          "expected_birth_date": "1971-11-23",
+          "candidates": [
+            {
+              "kind": "manager",
+              "id": "180193",
+              "surname": "Al-Muwallid",
+              "full_name": "Khaled Massad Al-Muwallid",
+              "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/180193/6a4223b77a28d.jpg"
+            }
+          ],
+          "matched": {
+            "kind": "manager",
+            "id": "180193",
+            "surname": "Al-Muwallid",
+            "full_name": "Khaled Massad Al-Muwallid",
+            "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/180193/6a4223b77a28d.jpg",
+            "dob": "1971-11-23"
+          }
+        },
+        {
+          "source_id": 9494257,
+          "display_name": "Mohamed Abd Al-Jawad",
+          "expected_birth_date": "1962-11-28",
+          "candidates": [
+            {
+              "kind": "manager",
+              "id": "180191",
+              "surname": "Al-Jawad",
+              "full_name": "Mohamed Abed Abd Al-Jawad",
+              "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/180191/6a42230cd5df9.jpg"
+            }
+          ],
+          "matched": {
+            "kind": "manager",
+            "id": "180191",
+            "surname": "Al-Jawad",
+            "full_name": "Mohamed Abed Abd Al-Jawad",
+            "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/180191/6a42230cd5df9.jpg",
+            "dob": "1962-11-28"
+          }
+        },
+        {
+          "source_id": 9494245,
+          "display_name": "Mohamed Al-Deayea",
+          "expected_birth_date": "1972-08-02",
+          "candidates": [
+            {
+              "kind": "manager",
+              "id": "179184",
+              "surname": "Al-Deayea",
+              "full_name": "Mohamed Abdullaziz Al-Deayea Al-Shammari",
+              "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/179184/6a3ab44459f8c.jpg"
+            }
+          ],
+          "matched": {
+            "kind": "manager",
+            "id": "179184",
+            "surname": "Al-Deayea",
+            "full_name": "Mohamed Abdullaziz Al-Deayea Al-Shammari",
+            "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/179184/6a3ab44459f8c.jpg",
+            "dob": "1972-08-02"
+          }
+        },
+        {
+          "source_id": 9494247,
+          "display_name": "Mohammed Al-Khilaiwi",
+          "expected_birth_date": "1971-08-21",
+          "candidates": [
+            {
+              "kind": "manager",
+              "id": "179774",
+              "surname": "Al-Khilaiwi",
+              "full_name": "Mohammed Saleh Al-Khilaiwi",
+              "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/179774/6a3ed2e834165.jpg"
+            }
+          ],
+          "matched": {
+            "kind": "manager",
+            "id": "179774",
+            "surname": "Al-Khilaiwi",
+            "full_name": "Mohammed Saleh Al-Khilaiwi",
+            "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/179774/6a3ed2e834165.jpg",
+            "dob": "1971-08-21"
+          }
+        },
+        {
+          "source_id": 9494259,
+          "display_name": "Saleh Al-Dawod",
+          "expected_birth_date": "1968-09-24",
+          "candidates": [
+            {
+              "kind": "manager",
+              "id": "179778",
+              "surname": "Saleh",
+              "full_name": "Hamzah Saleh",
+              "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/179778/6a3ed3e548a84.jpg"
+            },
+            {
+              "kind": "manager",
+              "id": "180200",
+              "surname": "Al-Dawod",
+              "full_name": "Saleh Al-Dawod",
+              "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/180200/6a4225e6ac259.jpg"
+            }
+          ],
+          "matched": {
+            "kind": "manager",
+            "id": "180200",
+            "surname": "Al-Dawod",
+            "full_name": "Saleh Al-Dawod",
+            "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/180200/6a4225e6ac259.jpg",
+            "dob": "1968-09-24"
+          }
+        },
+        {
+          "source_id": 9494256,
+          "display_name": "Sami Al-Jaber",
+          "expected_birth_date": "1972-12-11",
+          "candidates": [
+            {
+              "kind": "manager",
+              "id": "93891",
+              "surname": "Al-Jaber",
+              "full_name": "Sami Abdullah Al-Jaber",
+              "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/246/93891/6422c984b93f3.jpg"
+            }
+          ],
+          "matched": {
+            "kind": "manager",
+            "id": "93891",
+            "surname": "Al-Jaber",
+            "full_name": "Sami Abdullah Al-Jaber",
+            "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/246/93891/6422c984b93f3.jpg",
+            "dob": "1972-12-11"
+          }
+        },
+        {
+          "source_id": 9494260,
+          "display_name": "Talal Jebreen",
+          "expected_birth_date": "1973-09-25",
+          "candidates": [
+            {
+              "kind": "manager",
+              "id": "180192",
+              "surname": "Jebreen",
+              "full_name": "Talal Jebreen",
+              "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/180192/6a422360c49d3.jpg"
+            }
+          ],
+          "matched": {
+            "kind": "manager",
+            "id": "180192",
+            "surname": "Jebreen",
+            "full_name": "Talal Jebreen",
+            "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/180192/6a422360c49d3.jpg",
+            "dob": "1973-09-25"
+          }
+        },
+        {
+          "source_id": 9494261,
+          "display_name": "Yassir Al-Taifi",
+          "expected_birth_date": "1971-05-10",
+          "candidates": [
+            {
+              "kind": "manager",
+              "id": "180201",
+              "surname": "Al-Taifi",
+              "full_name": "Yassir Al-Taifi",
+              "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/180201/6a42262876874.jpg"
+            }
+          ],
+          "matched": {
+            "kind": "manager",
+            "id": "180201",
+            "surname": "Al-Taifi",
+            "full_name": "Yassir Al-Taifi",
+            "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/180201/6a42262876874.jpg",
+            "dob": "1971-05-10"
+          }
+        }
+      ],
+      "needs_review": [
+        {
+          "source_id": 9494253,
+          "display_name": "Majed Abdullah",
+          "expected_birth_date": "1959-11-01",
+          "candidates": [
+            {
+              "kind": "manager",
+              "id": "180195",
+              "surname": "Abdullah",
+              "full_name": "Majed Abdeh Abdullah Mohamed",
+              "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/180195/6a42246f68fd2.jpg"
+            }
+          ]
+        }
+      ],
+      "unmatched": [
+        {
+          "source_id": 9494254,
+          "display_name": "Saeed Al-Owairan"
+        }
+      ]
+    },
+    {
+      "country": "Bolivia",
+      "squad_size": 22,
+      "confirmed": [
+        {
+          "source_id": 9494108,
+          "display_name": "Carlos Borja",
+          "expected_birth_date": "1956-12-25",
+          "candidates": [
+            {
+              "kind": "manager",
+              "id": "180066",
+              "surname": "Borja",
+              "full_name": "Carlos Fernando Borja Bolívar",
+              "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/180066/6a4178fce8eb3.jpg"
+            }
+          ],
+          "matched": {
+            "kind": "manager",
+            "id": "180066",
+            "surname": "Borja",
+            "full_name": "Carlos Fernando Borja Bolívar",
+            "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/180066/6a4178fce8eb3.jpg",
+            "dob": "1956-12-25"
+          }
+        },
+        {
+          "source_id": 9494103,
+          "display_name": "Carlos Trucco",
+          "expected_birth_date": "1957-08-11",
+          "candidates": [
+            {
+              "kind": "manager",
+              "id": "180065",
+              "surname": "Trucco",
+              "full_name": "Carlos Leonel Trucco Medina",
+              "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/180065/6a4178b955c26.jpg"
+            }
+          ],
+          "matched": {
+            "kind": "manager",
+            "id": "180065",
+            "surname": "Trucco",
+            "full_name": "Carlos Leonel Trucco Medina",
+            "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/180065/6a4178b955c26.jpg",
+            "dob": "1957-08-11"
+          }
+        },
+        {
+          "source_id": 9494114,
+          "display_name": "Darío Rojas",
+          "expected_birth_date": "1960-01-20",
+          "candidates": [
+            {
+              "kind": "manager",
+              "id": "123041",
+              "surname": "Rojas",
+              "full_name": "Rubén Darío Sebastián Rojas Dielma",
+              "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/13917/123041/66367f7300400.jpg"
+            }
+          ],
+          "matched": {
+            "kind": "manager",
+            "id": "123041",
+            "surname": "Rojas",
+            "full_name": "Rubén Darío Sebastián Rojas Dielma",
+            "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/13917/123041/66367f7300400.jpg",
+            "dob": "1960-01-20"
+          }
+        },
+        {
+          "source_id": 9494121,
+          "display_name": "Marcelo Torrico",
+          "expected_birth_date": "1972-01-11",
+          "candidates": [
+            {
+              "kind": "manager",
+              "id": "180073",
+              "surname": "Torrico",
+              "full_name": "Marcelo Ernesto Torrico Terán",
+              "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/180073/6a417b7343a76.jpg"
+            }
+          ],
+          "matched": {
+            "kind": "manager",
+            "id": "180073",
+            "surname": "Torrico",
+            "full_name": "Marcelo Ernesto Torrico Terán",
+            "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/180073/6a417b7343a76.jpg",
+            "dob": "1972-01-11"
+          }
+        },
+        {
+          "source_id": 9494109,
+          "display_name": "Mario Pinedo",
+          "expected_birth_date": "1964-04-09",
+          "candidates": [
+            {
+              "kind": "manager",
+              "id": "180072",
+              "surname": "Pinedo",
+              "full_name": "Mario Daniel Pinedo Chore",
+              "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/180072/6a417acf1d80c.jpg"
+            }
+          ],
+          "matched": {
+            "kind": "manager",
+            "id": "180072",
+            "surname": "Pinedo",
+            "full_name": "Mario Daniel Pinedo Chore",
+            "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/180072/6a417acf1d80c.jpg",
+            "dob": "1964-04-09"
+          }
+        },
+        {
+          "source_id": 9494116,
+          "display_name": "Mauricio Ramos",
+          "expected_birth_date": "1969-09-23",
+          "candidates": [
+            {
+              "kind": "manager",
+              "id": "180071",
+              "surname": "Ramos",
+              "full_name": "Juan Mauricio Ramos Méndez",
+              "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/180071/6a417a8434d76.jpg"
+            }
+          ],
+          "matched": {
+            "kind": "manager",
+            "id": "180071",
+            "surname": "Ramos",
+            "full_name": "Juan Mauricio Ramos Méndez",
+            "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/180071/6a417a8434d76.jpg",
+            "dob": "1969-09-23"
+          }
+        },
+        {
+          "source_id": 9494106,
+          "display_name": "Miguel Rimba",
+          "expected_birth_date": "1967-11-01",
+          "candidates": [
+            {
+              "kind": "manager",
+              "id": "123038",
+              "surname": "Rimba",
+              "full_name": "Miguel Ángel Rimba Alvis",
+              "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/13917/123038/66367e2e8b449.jpg"
+            }
+          ],
+          "matched": {
+            "kind": "manager",
+            "id": "123038",
+            "surname": "Rimba",
+            "full_name": "Miguel Ángel Rimba Alvis",
+            "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/13917/123038/66367e2e8b449.jpg",
+            "dob": "1967-11-01"
+          }
+        },
+        {
+          "source_id": 9494115,
+          "display_name": "Modesto Soruco",
+          "expected_birth_date": "1966-02-12",
+          "candidates": [
+            {
+              "kind": "manager",
+              "id": "180070",
+              "surname": "Soruco",
+              "full_name": "Modesto Soruco Saucedo",
+              "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/180070/6a417a4012088.jpg"
+            }
+          ],
+          "matched": {
+            "kind": "manager",
+            "id": "180070",
+            "surname": "Soruco",
+            "full_name": "Modesto Soruco Saucedo",
+            "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/180070/6a417a4012088.jpg",
+            "dob": "1966-02-12"
+          }
+        },
+        {
+          "source_id": 9494117,
+          "display_name": "Vladimir Soria",
+          "expected_birth_date": "1964-07-15",
+          "candidates": [
+            {
+              "kind": "manager",
+              "id": "123035",
+              "surname": "Soria",
+              "full_name": "Vladimir Soria Camacho",
+              "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/13917/123035/663662dfd2e34.jpg"
+            }
+          ],
+          "matched": {
+            "kind": "manager",
+            "id": "123035",
+            "surname": "Soria",
+            "full_name": "Vladimir Soria Camacho",
+            "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/13917/123035/663662dfd2e34.jpg",
+            "dob": "1964-07-15"
+          }
+        },
+        {
+          "source_id": 9494120,
+          "display_name": "William Ramallo",
+          "expected_birth_date": "1963-07-04",
+          "candidates": [
+            {
+              "kind": "manager",
+              "id": "180068",
+              "surname": "Ramallo",
+              "full_name": "William Luis Ramallo Fernández",
+              "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/180068/6a4179bc30964.jpg"
+            }
+          ],
+          "matched": {
+            "kind": "manager",
+            "id": "180068",
+            "surname": "Ramallo",
+            "full_name": "William Luis Ramallo Fernández",
+            "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/180068/6a4179bc30964.jpg",
+            "dob": "1963-07-04"
+          }
+        },
+        {
+          "source_id": 9494111,
+          "display_name": "Álvaro Peña",
+          "expected_birth_date": "1965-02-11",
+          "candidates": [
+            {
+              "kind": "main",
+              "id": "1502",
+              "surname": "Peña",
+              "full_name": "Juan Manuel Peña Montano",
+              "photo_url": "https://www.bdfutbol.com/i/m/1502.png"
+            },
+            {
+              "kind": "manager",
+              "id": "180069",
+              "surname": "Peña",
+              "full_name": "Guillermo Álvaro Peña Peña",
+              "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/180069/6a4179ffe4dab.jpg"
+            }
+          ],
+          "matched": {
+            "kind": "manager",
+            "id": "180069",
+            "surname": "Peña",
+            "full_name": "Guillermo Álvaro Peña Peña",
+            "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/180069/6a4179ffe4dab.jpg",
+            "dob": "1965-02-11"
+          }
+        }
+      ],
+      "needs_review": [
+        {
+          "source_id": 9494105,
+          "display_name": "Marco Sandy",
+          "expected_birth_date": "1971-08-29",
+          "candidates": [
+            {
+              "kind": "main",
+              "id": "1887",
+              "surname": "Sandy",
+              "full_name": "Marco Antonio Sandy Sansusty",
+              "photo_url": "https://www.bdfutbol.com/i/m/1887.png"
+            }
+          ]
+        }
+      ],
+      "unmatched": []
+    },
+    {
+      "country": "Bulgaria",
+      "squad_size": 22,
+      "confirmed": [],
+      "needs_review": [
+        {
+          "source_id": 9494152,
+          "display_name": "Plamen Nikolov",
+          "expected_birth_date": "1961-08-20",
+          "candidates": [
+            {
+              "kind": "main",
+              "id": "721397",
+              "surname": "Nikolov",
+              "full_name": "Plamen Nikolov",
+              "photo_url": "https://www.bdfutbol.com/i/m/721397.png"
+            }
+          ]
+        }
+      ],
+      "unmatched": []
+    },
+    {
+      "country": "Camerún",
+      "squad_size": 22,
+      "confirmed": [
+        {
+          "source_id": 9494070,
+          "display_name": "Emmanuel Maboang",
+          "expected_birth_date": "1968-11-27",
+          "candidates": [
+            {
+              "kind": "manager",
+              "id": "179993",
+              "surname": "Maboang",
+              "full_name": "Emmanuel Maboang Kessack",
+              "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/179993/6a4142640048d.jpg"
+            }
+          ],
+          "matched": {
+            "kind": "manager",
+            "id": "179993",
+            "surname": "Maboang",
+            "full_name": "Emmanuel Maboang Kessack",
+            "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/179993/6a4142640048d.jpg",
+            "dob": "1968-11-27"
+          }
+        },
+        {
+          "source_id": 9494078,
+          "display_name": "Georges Mouyémé",
+          "expected_birth_date": "1971-04-15",
+          "candidates": [
+            {
+              "kind": "manager",
+              "id": "179994",
+              "surname": "Mouyémé",
+              "full_name": "Georges L. Mouyémé-Elong",
+              "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/179994/6a4142dbad46b.jpg"
+            }
+          ],
+          "matched": {
+            "kind": "manager",
+            "id": "179994",
+            "surname": "Mouyémé",
+            "full_name": "Georges L. Mouyémé-Elong",
+            "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/179994/6a4142dbad46b.jpg",
+            "dob": "1971-04-15"
+          }
+        },
+        {
+          "source_id": 9494074,
+          "display_name": "Hans Agbo",
+          "expected_birth_date": "1967-09-26",
+          "candidates": [
+            {
+              "kind": "manager",
+              "id": "179992",
+              "surname": "Agbo",
+              "full_name": "Hans Agbo",
+              "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/179992/6a4141e45e0f8.jpg"
+            }
+          ],
+          "matched": {
+            "kind": "manager",
+            "id": "179992",
+            "surname": "Agbo",
+            "full_name": "Hans Agbo",
+            "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/179992/6a4141e45e0f8.jpg",
+            "dob": "1967-09-26"
+          }
+        },
+        {
+          "source_id": 9494077,
+          "display_name": "Jean-Pierre Fiala",
+          "expected_birth_date": "1969-04-22",
+          "candidates": [
+            {
+              "kind": "manager",
+              "id": "179998",
+              "surname": "Fiala",
+              "full_name": "Jean-Pierre Fiala Fiala",
+              "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/179998/6a4143b37f2b1.jpg"
+            }
+          ],
+          "matched": {
+            "kind": "manager",
+            "id": "179998",
+            "surname": "Fiala",
+            "full_name": "Jean-Pierre Fiala Fiala",
+            "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/179998/6a4143b37f2b1.jpg",
+            "dob": "1969-04-22"
+          }
+        },
+        {
+          "source_id": 9494071,
+          "display_name": "Paul Loga",
+          "expected_birth_date": "1969-08-14",
+          "candidates": [
+            {
+              "kind": "manager",
+              "id": "179996",
+              "surname": "Loga",
+              "full_name": "Serge-Paul Loga",
+              "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/179996/6a414376be33e.jpg"
+            }
+          ],
+          "matched": {
+            "kind": "manager",
+            "id": "179996",
+            "surname": "Loga",
+            "full_name": "Serge-Paul Loga",
+            "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/179996/6a414376be33e.jpg",
+            "dob": "1969-08-14"
+          }
+        },
+        {
+          "source_id": 9494064,
+          "display_name": "Samuel Ekemé",
+          "expected_birth_date": "1966-07-12",
+          "candidates": [
+            {
+              "kind": "manager",
+              "id": "42243",
+              "surname": "Ekemé",
+              "full_name": "Samuel Ekemé Ndiba",
+              "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/42243/6a4140c71d229.png"
+            }
+          ],
+          "matched": {
+            "kind": "manager",
+            "id": "42243",
+            "surname": "Ekemé",
+            "full_name": "Samuel Ekemé Ndiba",
+            "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/42243/6a4140c71d229.png",
+            "dob": "1966-07-12"
+          }
+        },
+        {
+          "source_id": 9494073,
+          "display_name": "Stephen Tataw",
+          "expected_birth_date": "1963-03-31",
+          "candidates": [
+            {
+              "kind": "manager",
+              "id": "179991",
+              "surname": "Tataw",
+              "full_name": "Stephen Tataw Eta",
+              "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/179991/6a414194e88a6.png"
+            }
+          ],
+          "matched": {
+            "kind": "manager",
+            "id": "179991",
+            "surname": "Tataw",
+            "full_name": "Stephen Tataw Eta",
+            "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/179991/6a414194e88a6.png",
+            "dob": "1963-03-31"
+          }
+        },
+        {
+          "source_id": 9494066,
+          "display_name": "Thomas Libiih",
+          "expected_birth_date": "1967-11-17",
+          "candidates": [
+            {
+              "kind": "manager",
+              "id": "179990",
+              "surname": "Libiih",
+              "full_name": "Thomas Libiih",
+              "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/179990/6a41413d1759f.png"
+            }
+          ],
+          "matched": {
+            "kind": "manager",
+            "id": "179990",
+            "surname": "Libiih",
+            "full_name": "Thomas Libiih",
+            "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/179990/6a41413d1759f.png",
+            "dob": "1967-11-17"
+          }
+        },
+        {
+          "source_id": 9494065,
+          "display_name": "Victor N'Dip",
+          "expected_birth_date": "1967-08-18",
+          "candidates": [
+            {
+              "kind": "manager",
+              "id": "179995",
+              "surname": "N'Dip",
+              "full_name": "Victor N'Dip Akem",
+              "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/179995/6a41432aac424.png"
+            }
+          ],
+          "matched": {
+            "kind": "manager",
+            "id": "179995",
+            "surname": "N'Dip",
+            "full_name": "Victor N'Dip Akem",
+            "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/179995/6a41432aac424.png",
+            "dob": "1967-08-18"
+          }
+        }
+      ],
+      "needs_review": [
+        {
+          "source_id": 9494079,
+          "display_name": "Thomas N'Kono",
+          "expected_birth_date": "1956-07-20",
+          "candidates": [
+            {
+              "kind": "main",
+              "id": "2820",
+              "surname": "N'Kono",
+              "full_name": "Thomas N'Kono",
+              "photo_url": "https://www.bdfutbol.com/i/m/2820.png"
+            }
+          ]
+        }
+      ],
+      "unmatched": []
+    },
+    {
+      "country": "Colombia",
+      "squad_size": 22,
+      "confirmed": [
+        {
+          "source_id": 9494002,
+          "display_name": "Alexis Mendoza",
+          "expected_birth_date": "1961-11-08",
+          "candidates": [
+            {
+              "kind": "manager",
+              "id": "179925",
+              "surname": "Mendoza",
+              "full_name": "Alexis Antonio Mendoza Barrina",
+              "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/179925/6a4042e2abc30.jpg"
+            }
+          ],
+          "matched": {
+            "kind": "manager",
+            "id": "179925",
+            "surname": "Mendoza",
+            "full_name": "Alexis Antonio Mendoza Barrina",
+            "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/179925/6a4042e2abc30.jpg",
+            "dob": "1961-11-08"
+          }
+        },
+        {
+          "source_id": 9494004,
+          "display_name": "Hermán Gaviria",
+          "expected_birth_date": "1969-11-27",
+          "candidates": [
+            {
+              "kind": "manager",
+              "id": "177605",
+              "surname": "Gaviria",
+              "full_name": "Herman Gaviria Carvajal",
+              "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10313/177605/6a27362f23c92.png"
+            }
+          ],
+          "matched": {
+            "kind": "manager",
+            "id": "177605",
+            "surname": "Gaviria",
+            "full_name": "Herman Gaviria Carvajal",
+            "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10313/177605/6a27362f23c92.png",
+            "dob": "1969-11-27"
+          }
+        },
+        {
+          "source_id": 9494014,
+          "display_name": "José María Pazo",
+          "expected_birth_date": "1964-04-04",
+          "candidates": [
+            {
+              "kind": "manager",
+              "id": "179929",
+              "surname": "Pazo",
+              "full_name": "José María Pazo Torres",
+              "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/179929/6a40440adec78.jpg"
+            }
+          ],
+          "matched": {
+            "kind": "manager",
+            "id": "179929",
+            "surname": "Pazo",
+            "full_name": "José María Pazo Torres",
+            "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/179929/6a40440adec78.jpg",
+            "dob": "1964-04-04"
+          }
+        },
+        {
+          "source_id": 9494009,
+          "display_name": "Néstor Ortiz",
+          "expected_birth_date": "1968-09-20",
+          "candidates": [
+            {
+              "kind": "manager",
+              "id": "179926",
+              "surname": "Ortiz",
+              "full_name": "Néstor Ortiz Mena",
+              "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/179926/6a40435092af5.jpg"
+            }
+          ],
+          "matched": {
+            "kind": "manager",
+            "id": "179926",
+            "surname": "Ortiz",
+            "full_name": "Néstor Ortiz Mena",
+            "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/179926/6a40435092af5.jpg",
+            "dob": "1968-09-20"
+          }
+        },
+        {
+          "source_id": 9494012,
+          "display_name": "Óscar Cortés",
+          "expected_birth_date": "1968-10-19",
+          "candidates": [
+            {
+              "kind": "manager",
+              "id": "179928",
+              "surname": "Cortés",
+              "full_name": "Óscar Fernando Cortés Corredor",
+              "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/179928/6a4043a47f2f9.jpg"
+            }
+          ],
+          "matched": {
+            "kind": "manager",
+            "id": "179928",
+            "surname": "Cortés",
+            "full_name": "Óscar Fernando Cortés Corredor",
+            "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/179928/6a4043a47f2f9.jpg",
+            "dob": "1968-10-19"
+          }
+        }
+      ],
+      "needs_review": [],
+      "unmatched": [
+        {
+          "source_id": 9494005,
+          "display_name": "Gabriel Gómez"
+        },
+        {
+          "source_id": 9494013,
+          "display_name": "Wilson Pérez"
+        }
+      ]
+    },
+    {
+      "country": "Corea del Sur",
+      "squad_size": 22,
+      "confirmed": [
+        {
+          "source_id": 9494141,
+          "display_name": "Hong Myung-bo",
+          "expected_birth_date": "1969-02-12",
+          "candidates": [
+            {
+              "kind": "manager",
+              "id": "179189",
+              "surname": "Myung-bo",
+              "full_name": "Hong Myung-bo",
+              "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10313/179189/6a3ab51799a74.png"
+            }
+          ],
+          "matched": {
+            "kind": "manager",
+            "id": "179189",
+            "surname": "Myung-bo",
+            "full_name": "Hong Myung-bo",
+            "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10313/179189/6a3ab51799a74.png",
+            "dob": "1969-02-12"
+          }
+        },
+        {
+          "source_id": 9494143,
+          "display_name": "Lee Woon-jae",
+          "expected_birth_date": "1973-04-26",
+          "candidates": [
+            {
+              "kind": "manager",
+              "id": "178784",
+              "surname": "Woon-jae",
+              "full_name": "Lee Woon-jae",
+              "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10313/178784/6a3ab4a5d99a7.png"
+            }
+          ],
+          "matched": {
+            "kind": "manager",
+            "id": "178784",
+            "surname": "Woon-jae",
+            "full_name": "Lee Woon-jae",
+            "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10313/178784/6a3ab4a5d99a7.png",
+            "dob": "1973-04-26"
+          }
+        }
+      ],
+      "needs_review": [
+        {
+          "source_id": 9494126,
+          "display_name": "Kim Pan-keun",
+          "expected_birth_date": "1966-03-05",
+          "candidates": [
+            {
+              "kind": "main",
+              "id": "80236",
+              "surname": "Kim",
+              "full_name": "Kim Joo-sung",
+              "photo_url": "https://www.bdfutbol.com/i/m/80236.png"
+            }
+          ]
+        }
+      ],
+      "unmatched": [
+        {
+          "source_id": 9494134,
+          "display_name": "An Ik-soo"
+        },
+        {
+          "source_id": 9494136,
+          "display_name": "Cho Jin-ho"
+        },
+        {
+          "source_id": 9494135,
+          "display_name": "Choi Dae-shik"
+        },
+        {
+          "source_id": 9494123,
+          "display_name": "Choi In-young"
+        },
+        {
+          "source_id": 9494140,
+          "display_name": "Choi Moon-sik"
+        },
+        {
+          "source_id": 9494133,
+          "display_name": "Choi Young-il"
+        },
+        {
+          "source_id": 9494124,
+          "display_name": "Chung Jong-son"
+        },
+        {
+          "source_id": 9494138,
+          "display_name": "Gu Sang-bum"
+        },
+        {
+          "source_id": 9494137,
+          "display_name": "Ha Seok-ju"
+        },
+        {
+          "source_id": 9494139,
+          "display_name": "Hwang Sun-hong"
+        },
+        {
+          "source_id": 9494131,
+          "display_name": "Ko Jeong-woon"
+        },
+        {
+          "source_id": 9494125,
+          "display_name": "Lee Jong-hwa"
+        },
+        {
+          "source_id": 9494128,
+          "display_name": "Lee Young-jin"
+        },
+        {
+          "source_id": 9494142,
+          "display_name": "Park Chul-woo"
+        },
+        {
+          "source_id": 9494127,
+          "display_name": "Park Jung-bae"
+        },
+        {
+          "source_id": 9494129,
+          "display_name": "Shin Hong-gi"
+        }
+      ]
+    },
+    {
+      "country": "Estados Unidos",
+      "squad_size": 22,
+      "confirmed": [
+        {
+          "source_id": 9494062,
+          "display_name": "Fernando Clavijo",
+          "expected_birth_date": "1956-01-23",
+          "candidates": [
+            {
+              "kind": "manager",
+              "id": "179932",
+              "surname": "Clavijo",
+              "full_name": "Fernando Caetano Clavijo Cedrés",
+              "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/179932/6a40469c29d61.jpg"
+            }
+          ],
+          "matched": {
+            "kind": "manager",
+            "id": "179932",
+            "surname": "Clavijo",
+            "full_name": "Fernando Caetano Clavijo Cedrés",
+            "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/179932/6a40469c29d61.jpg",
+            "dob": "1956-01-23"
+          }
+        },
+        {
+          "source_id": 9494050,
+          "display_name": "Mike Burns",
+          "expected_birth_date": "1970-09-14",
+          "candidates": [
+            {
+              "kind": "manager",
+              "id": "42313",
+              "surname": "Burns",
+              "full_name": "Michael Thomas Burns",
+              "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10310/42313/6070792df04ca.jpg"
+            }
+          ],
+          "matched": {
+            "kind": "manager",
+            "id": "42313",
+            "surname": "Burns",
+            "full_name": "Michael Thomas Burns",
+            "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10310/42313/6070792df04ca.jpg",
+            "dob": "1970-09-14"
+          }
+        }
+      ],
+      "needs_review": [
+        {
+          "source_id": 9494049,
+          "display_name": "Mike Lapper",
+          "expected_birth_date": "1970-09-28",
+          "candidates": [
+            {
+              "kind": "manager",
+              "id": "179933",
+              "surname": "Lapper",
+              "full_name": "Michael Steven Lapper",
+              "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/179933/6a4046f652f67.jpg"
+            }
+          ]
+        }
+      ],
+      "unmatched": [
+        {
+          "source_id": 9494053,
+          "display_name": "Hugo Pérez"
+        }
+      ]
+    },
+    {
+      "country": "Marruecos",
+      "squad_size": 22,
+      "confirmed": [
+        {
+          "source_id": 9494238,
+          "display_name": "Abdeslam Laghrissi",
+          "expected_birth_date": "1962-01-05",
+          "candidates": [
+            {
+              "kind": "manager",
+              "id": "180187",
+              "surname": "Laghrissi",
+              "full_name": "Abdeslam Laghrissi",
+              "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/180187/6a422139d335b.jpg"
+            }
+          ],
+          "matched": {
+            "kind": "manager",
+            "id": "180187",
+            "surname": "Laghrissi",
+            "full_name": "Abdeslam Laghrissi",
+            "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/180187/6a422139d335b.jpg",
+            "dob": "1962-01-05"
+          }
+        },
+        {
+          "source_id": 9494236,
+          "display_name": "Ahmed Masbahi",
+          "expected_birth_date": "1966-01-17",
+          "candidates": [
+            {
+              "kind": "manager",
+              "id": "180189",
+              "surname": "Masbahi",
+              "full_name": "Ahmed Masbahi",
+              "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/180189/6a422211e8154.jpg"
+            }
+          ],
+          "matched": {
+            "kind": "manager",
+            "id": "180189",
+            "surname": "Masbahi",
+            "full_name": "Ahmed Masbahi",
+            "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/180189/6a422211e8154.jpg",
+            "dob": "1966-01-17"
+          }
+        },
+        {
+          "source_id": 9494237,
+          "display_name": "El Arbi Hababi Hababi",
+          "expected_birth_date": "1967-08-12",
+          "candidates": [
+            {
+              "kind": "manager",
+              "id": "180184",
+              "surname": "Hababi",
+              "full_name": "El Arbi Hababi",
+              "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/180184/6a421fbd35c4c.png"
+            }
+          ],
+          "matched": {
+            "kind": "manager",
+            "id": "180184",
+            "surname": "Hababi",
+            "full_name": "El Arbi Hababi",
+            "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/180184/6a421fbd35c4c.png",
+            "dob": "1967-08-12"
+          }
+        },
+        {
+          "source_id": 9494226,
+          "display_name": "Khalil Azmi",
+          "expected_birth_date": "1964-08-23",
+          "candidates": [
+            {
+              "kind": "manager",
+              "id": "180183",
+              "surname": "Azmi",
+              "full_name": "Khalil Azmi",
+              "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/180183/6a421f0250b86.jpg"
+            }
+          ],
+          "matched": {
+            "kind": "manager",
+            "id": "180183",
+            "surname": "Azmi",
+            "full_name": "Khalil Azmi",
+            "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/180183/6a421f0250b86.jpg",
+            "dob": "1964-08-23"
+          }
+        },
+        {
+          "source_id": 9494242,
+          "display_name": "Mohamed Samadi",
+          "expected_birth_date": "1970-03-21",
+          "candidates": [
+            {
+              "kind": "manager",
+              "id": "180186",
+              "surname": "Samadi",
+              "full_name": "Mohamed Samadi",
+              "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/180186/6a4220d6a542a.jpg"
+            }
+          ],
+          "matched": {
+            "kind": "manager",
+            "id": "180186",
+            "surname": "Samadi",
+            "full_name": "Mohamed Samadi",
+            "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/180186/6a4220d6a542a.jpg",
+            "dob": "1970-03-21"
+          }
+        },
+        {
+          "source_id": 9494234,
+          "display_name": "Said Dghay",
+          "expected_birth_date": "1964-01-14",
+          "candidates": [
+            {
+              "kind": "manager",
+              "id": "180188",
+              "surname": "Dghay",
+              "full_name": "Said Dghay",
+              "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/180188/6a4221bc4e166.jpg"
+            }
+          ],
+          "matched": {
+            "kind": "manager",
+            "id": "180188",
+            "surname": "Dghay",
+            "full_name": "Said Dghay",
+            "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/180188/6a4221bc4e166.jpg",
+            "dob": "1964-01-14"
+          }
+        },
+        {
+          "source_id": 9494243,
+          "display_name": "Zakaria Alaoui",
+          "expected_birth_date": "1966-06-17",
+          "candidates": [
+            {
+              "kind": "manager",
+              "id": "180185",
+              "surname": "Alaoui",
+              "full_name": "Zakaria Allaoui El-Achraf",
+              "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/180185/6a42205aea2b0.jpg"
+            }
+          ],
+          "matched": {
+            "kind": "manager",
+            "id": "180185",
+            "surname": "Alaoui",
+            "full_name": "Zakaria Allaoui El-Achraf",
+            "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10/180185/6a42205aea2b0.jpg",
+            "dob": "1966-06-17"
+          }
+        }
+      ],
+      "needs_review": [],
+      "unmatched": []
+    },
+    {
+      "country": "Nigeria",
+      "squad_size": 22,
+      "confirmed": [
+        {
+          "source_id": 9494185,
+          "display_name": "Emeka Ezeugo",
+          "expected_birth_date": "1965-12-16",
+          "candidates": [
+            {
+              "kind": "manager",
+              "id": "179092",
+              "surname": "Ezeugo",
+              "full_name": "Emeka Ezeugo",
+              "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10313/179092/6a39ad934930f.png"
+            }
+          ],
+          "matched": {
+            "kind": "manager",
+            "id": "179092",
+            "surname": "Ezeugo",
+            "full_name": "Emeka Ezeugo",
+            "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10313/179092/6a39ad934930f.png",
+            "dob": "1965-12-16"
+          }
+        }
+      ],
+      "needs_review": [],
+      "unmatched": []
+    },
+    {
+      "country": "Rumanía",
+      "squad_size": 22,
+      "confirmed": [
+        {
+          "source_id": 9494018,
+          "display_name": "Iulian Chiriță",
+          "expected_birth_date": "1967-02-02",
+          "candidates": [
+            {
+              "kind": "manager",
+              "id": "179089",
+              "surname": "Chiriță",
+              "full_name": "Iulian Chiriță",
+              "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10313/179089/6a39ab9995ec9.png"
+            }
+          ],
+          "matched": {
+            "kind": "manager",
+            "id": "179089",
+            "surname": "Chiriță",
+            "full_name": "Iulian Chiriță",
+            "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10313/179089/6a39ab9995ec9.png",
+            "dob": "1967-02-02"
+          }
+        },
+        {
+          "source_id": 9494030,
+          "display_name": "Ștefan Preda",
+          "expected_birth_date": "1970-06-18",
+          "candidates": [
+            {
+              "kind": "manager",
+              "id": "179091",
+              "surname": "Preda",
+              "full_name": "Ștefan Gabriel Preda",
+              "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10313/179091/6a39ac57d2c9c.png"
+            }
+          ],
+          "matched": {
+            "kind": "manager",
+            "id": "179091",
+            "surname": "Preda",
+            "full_name": "Ștefan Gabriel Preda",
+            "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10313/179091/6a39ac57d2c9c.png",
+            "dob": "1970-06-18"
+          }
+        }
+      ],
+      "needs_review": [
+        {
+          "source_id": 9494029,
+          "display_name": "Marian Ivan",
+          "expected_birth_date": "1969-01-06",
+          "candidates": [
+            {
+              "kind": "manager",
+              "id": "179090",
+              "surname": "Ivan",
+              "full_name": "Marian Ivan",
+              "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10313/179090/6a39abd7e4ed5.png"
+            }
+          ]
+        }
+      ],
+      "unmatched": []
+    },
+    {
+      "country": "Suiza",
+      "squad_size": 22,
+      "confirmed": [
+        {
+          "source_id": 9494034,
+          "display_name": "Dominique Herr",
+          "expected_birth_date": "1965-10-25",
+          "candidates": [
+            {
+              "kind": "manager",
+              "id": "179087",
+              "surname": "Herr",
+              "full_name": "Dominique Herr",
+              "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10313/179087/6a39a94f96fea.png"
+            }
+          ],
+          "matched": {
+            "kind": "manager",
+            "id": "179087",
+            "surname": "Herr",
+            "full_name": "Dominique Herr",
+            "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10313/179087/6a39a94f96fea.png",
+            "dob": "1965-10-25"
+          }
+        },
+        {
+          "source_id": 9494045,
+          "display_name": "Jürg Studer",
+          "expected_birth_date": "1966-09-08",
+          "candidates": [
+            {
+              "kind": "manager",
+              "id": "179088",
+              "surname": "Studer",
+              "full_name": "Jürg Studer",
+              "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10313/179088/6a39aa5da47c5.png"
+            }
+          ],
+          "matched": {
+            "kind": "manager",
+            "id": "179088",
+            "surname": "Studer",
+            "full_name": "Jürg Studer",
+            "photo_url": "https://www.bdfutbol.com/manager/html/data/uploads/10313/179088/6a39aa5da47c5.png",
+            "dob": "1966-09-08"
+          }
+        }
+      ],
+      "needs_review": [],
+      "unmatched": []
+    }
+  ]
+}
