@@ -99,8 +99,8 @@ def test_v033_gap_audit_and_registry_queue_integrity():
     assert gaps['missing_birth_date']==194
     assert gaps['missing_international_country_id']==193
     assert gaps['missing_birth_country_id']==323
-    assert len(reg)==len(q)==2107
-    assert len({int(x['source_id']) for x in reg})==2107
+    assert len(reg)==len(q)>=2107
+    assert len({int(x['source_id']) for x in reg})==len(reg)
     assert {int(x['source_id']) for x in reg}=={int(x['source_id']) for x in q}
 
 

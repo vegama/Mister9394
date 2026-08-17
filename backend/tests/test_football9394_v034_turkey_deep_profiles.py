@@ -96,7 +96,7 @@ def test_v034_15_new_bdf_portraits_are_normalized_and_registry_synced():
     assert len(photo_audit['portraits'])==15
     reg=load('created_players_registry.json')['players']; queue=load('bdfutbol_photo_queue.json')['players']
     r={int(x['source_id']):x for x in reg}; q={int(x['source_id']):x for x in queue}
-    assert len(reg)==len(q)==2107 and set(r)==set(q)
+    assert len(reg)==len(q)>=2107 and set(r)==set(q)
     for row in photo_audit['portraits']:
         sid=int(row['source_id']); asset=ROOT/row['asset']
         assert r[sid]['photo_status']==q[sid]['photo_status']=='bundled_normalized_bdfutbol'

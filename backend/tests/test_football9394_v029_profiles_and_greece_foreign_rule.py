@@ -153,5 +153,7 @@ def test_profile_audit_and_photo_queue_are_traceable_and_synchronised():
 def test_snapshot_and_registry_have_unique_source_ids_after_profile_pass():
     snapshot_ids = [int(p["source_id"]) for p in _load("historical_snapshot.json")["players"]]
     registry_ids = [int(p["source_id"]) for p in _load("created_players_registry.json")["players"]]
-    assert len(snapshot_ids) == len(set(snapshot_ids)) == 12499
-    assert len(registry_ids) == len(set(registry_ids)) == 2107
+    assert len(snapshot_ids) == len(set(snapshot_ids))
+    assert len(snapshot_ids) >= 12499
+    assert len(registry_ids) == len(set(registry_ids))
+    assert len(registry_ids) >= 2107

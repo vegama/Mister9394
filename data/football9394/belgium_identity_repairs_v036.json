@@ -1,0 +1,22 @@
+{
+  "checkpoint": "0.36.0-belgium-seraing-charleroi-standard-deep",
+  "status": "pass",
+  "repairs": [
+    {
+      "source_id": 4929,
+      "identity": "Edmilson Dias Lucena",
+      "before_team_id": 9352001,
+      "before_historical_club_1994": "FC Seraing",
+      "restored_team_id": 301,
+      "replacement_source_id": 9498005
+    },
+    {
+      "source_id": 6387,
+      "identity": "Jacques Remy",
+      "before_team_id": 454,
+      "before_historical_club_1994": "Charleroi",
+      "restored_team_id": 244,
+      "replacement_source_id": 9498006
+    }
+  ]
+}

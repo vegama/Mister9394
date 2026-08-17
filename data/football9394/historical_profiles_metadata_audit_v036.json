@@ -1,0 +1,1745 @@
+{
+  "schema_version": 1,
+  "checkpoint": "0.36.0-belgium-seraing-charleroi-standard-deep",
+  "status": "pass",
+  "profile_gaps_before": {
+    "Russia": {
+      "active_players": 492,
+      "missing_birth_date": 465,
+      "missing_international_country_id": 455,
+      "missing_birth_country_id": 465,
+      "missing_height_cm": 479,
+      "missing_weight_kg": 483,
+      "profile_review_required": 0
+    },
+    "Greece": {
+      "active_players": 496,
+      "missing_birth_date": 34,
+      "missing_international_country_id": 0,
+      "missing_birth_country_id": 0,
+      "missing_height_cm": 491,
+      "missing_weight_kg": 494,
+      "profile_review_required": 2
+    },
+    "Belgium": {
+      "active_players": 406,
+      "missing_birth_date": 330,
+      "missing_international_country_id": 292,
+      "missing_birth_country_id": 302,
+      "missing_height_cm": 362,
+      "missing_weight_kg": 400,
+      "profile_review_required": 0
+    },
+    "Turkey": {
+      "active_players": 419,
+      "missing_birth_date": 23,
+      "missing_international_country_id": 19,
+      "missing_birth_country_id": 165,
+      "missing_height_cm": 330,
+      "missing_weight_kg": 397,
+      "profile_review_required": 168
+    }
+  },
+  "profile_gaps_after": {
+    "Russia": {
+      "active_players": 492,
+      "missing_birth_date": 465,
+      "missing_international_country_id": 455,
+      "missing_birth_country_id": 465,
+      "missing_height_cm": 479,
+      "missing_weight_kg": 483,
+      "profile_review_required": 0
+    },
+    "Greece": {
+      "active_players": 496,
+      "missing_birth_date": 34,
+      "missing_international_country_id": 0,
+      "missing_birth_country_id": 0,
+      "missing_height_cm": 491,
+      "missing_weight_kg": 494,
+      "profile_review_required": 2
+    },
+    "Belgium": {
+      "active_players": 413,
+      "missing_birth_date": 275,
+      "missing_international_country_id": 248,
+      "missing_birth_country_id": 268,
+      "missing_height_cm": 322,
+      "missing_weight_kg": 369,
+      "profile_review_required": 7
+    },
+    "Turkey": {
+      "active_players": 419,
+      "missing_birth_date": 23,
+      "missing_international_country_id": 19,
+      "missing_birth_country_id": 165,
+      "missing_height_cm": 330,
+      "missing_weight_kg": 397,
+      "profile_review_required": 168
+    }
+  },
+  "profiles": {
+    "curated_this_batch": 71,
+    "new_historical_identities": 9,
+    "by_club": {
+      "FC Seraing": 21,
+      "Charleroi": 22,
+      "Standard Liège": 27,
+      "RFC Liège": 1
+    },
+    "exact_specialist_roles": 64,
+    "broad_only_exact_role_unresolved": 7,
+    "role_corrections_this_batch": 37,
+    "changes": [
+      {
+        "source_id": 9496095,
+        "club": "FC Seraing",
+        "before": {
+          "display_name": "Stojić",
+          "role": 0,
+          "broad": "POR",
+          "position": "Goalkeeper",
+          "birth_date": null,
+          "country": null
+        },
+        "after": {
+          "display_name": "Ranko Stojić",
+          "role": 0,
+          "broad": "POR",
+          "position": "Goalkeeper",
+          "birth_date": "1959-01-18T00:00:00",
+          "country": 75
+        },
+        "role_changed": false,
+        "precision": "exact"
+      },
+      {
+        "source_id": 9496091,
+        "club": "FC Seraing",
+        "before": {
+          "display_name": "N'Gombo",
+          "role": 1,
+          "broad": "DEF",
+          "position": "Right Back",
+          "birth_date": null,
+          "country": null
+        },
+        "after": {
+          "display_name": "Danny N'Gombo",
+          "role": 3,
+          "broad": "DEF",
+          "position": "Centre Back",
+          "birth_date": "1963-10-25T00:00:00",
+          "country": 88
+        },
+        "role_changed": true,
+        "precision": "exact"
+      },
+      {
+        "source_id": 9496082,
+        "club": "FC Seraing",
+        "before": {
+          "display_name": "Debusschere",
+          "role": 3,
+          "broad": "DEF",
+          "position": "Centre Back",
+          "birth_date": null,
+          "country": null
+        },
+        "after": {
+          "display_name": "Benjamin Debusschere",
+          "role": 2,
+          "broad": "DEF",
+          "position": "Left Back",
+          "birth_date": "1968-12-07T00:00:00",
+          "country": 17
+        },
+        "role_changed": true,
+        "precision": "exact"
+      },
+      {
+        "source_id": 9496093,
+        "club": "FC Seraing",
+        "before": {
+          "display_name": "Olsen",
+          "role": 4,
+          "broad": "DEF",
+          "position": "Centre Back",
+          "birth_date": null,
+          "country": null
+        },
+        "after": {
+          "display_name": "Lars Christian Olsen",
+          "role": 5,
+          "broad": "DEF",
+          "position": "Libero",
+          "birth_date": "1961-02-02T00:00:00",
+          "country": 33
+        },
+        "role_changed": true,
+        "precision": "exact"
+      },
+      {
+        "source_id": 9496083,
+        "club": "FC Seraing",
+        "before": {
+          "display_name": "Doll",
+          "role": 2,
+          "broad": "DEF",
+          "position": "Left Back",
+          "birth_date": null,
+          "country": null
+        },
+        "after": {
+          "display_name": "Olivier Doll",
+          "role": 3,
+          "broad": "DEF",
+          "position": "Centre Back",
+          "birth_date": "1973-06-09T00:00:00",
+          "country": 17
+        },
+        "role_changed": true,
+        "precision": "exact"
+      },
+      {
+        "source_id": 9496097,
+        "club": "FC Seraing",
+        "before": {
+          "display_name": "Teppers",
+          "role": 9,
+          "broad": "MED",
+          "position": "Right Midfielder",
+          "birth_date": null,
+          "country": null
+        },
+        "after": {
+          "display_name": "Patrick Teppers",
+          "role": 13,
+          "broad": "MED",
+          "position": "Left Midfielder",
+          "birth_date": "1964-07-30T00:00:00",
+          "country": 17
+        },
+        "role_changed": true,
+        "precision": "exact"
+      },
+      {
+        "source_id": 9496088,
+        "club": "FC Seraing",
+        "before": {
+          "display_name": "Karagiannis",
+          "role": 7,
+          "broad": "MED",
+          "position": "Centre Midfielder",
+          "birth_date": null,
+          "country": 47
+        },
+        "after": {
+          "display_name": "Emmanuel Karagiannis",
+          "role": 6,
+          "broad": "MED",
+          "position": "Defensive Midfielder",
+          "birth_date": "1966-11-22T00:00:00",
+          "country": 17
+        },
+        "role_changed": true,
+        "precision": "exact"
+      },
+      {
+        "source_id": 9496087,
+        "club": "FC Seraing",
+        "before": {
+          "display_name": "Isaias",
+          "role": 7,
+          "broad": "MED",
+          "position": "Centre Midfielder",
+          "birth_date": null,
+          "country": null
+        },
+        "after": {
+          "display_name": "Isaias Magalhaes da Silva",
+          "role": 8,
+          "broad": "MED",
+          "position": "Attacking Midfielder",
+          "birth_date": "1973-11-29T00:00:00",
+          "country": 62
+        },
+        "role_changed": true,
+        "precision": "exact"
+      },
+      {
+        "source_id": 9498005,
+        "club": "FC Seraing",
+        "before": {
+          "display_name": "Edmilson Paulo da Silva",
+          "role": 16,
+          "broad": "DEL",
+          "position": null,
+          "birth_date": "1968-04-16T00:00:00",
+          "country": 62
+        },
+        "after": {
+          "display_name": "Edmilson Paulo da Silva",
+          "role": 16,
+          "broad": "DEL",
+          "position": "Left Winger",
+          "birth_date": "1968-04-16T00:00:00",
+          "country": 62
+        },
+        "role_changed": false,
+        "precision": "exact"
+      },
+      {
+        "source_id": 9496090,
+        "club": "FC Seraing",
+        "before": {
+          "display_name": "Lukaku",
+          "role": 17,
+          "broad": "DEL",
+          "position": "Centre Forward",
+          "birth_date": null,
+          "country": null
+        },
+        "after": {
+          "display_name": "Roger Menama Lukaku",
+          "role": 17,
+          "broad": "DEL",
+          "position": "Centre Forward",
+          "birth_date": "1967-06-06T00:00:00",
+          "country": 88
+        },
+        "role_changed": false,
+        "precision": "exact"
+      },
+      {
+        "source_id": 9496099,
+        "club": "FC Seraing",
+        "before": {
+          "display_name": "Wamberto",
+          "role": 17,
+          "broad": "DEL",
+          "position": "Centre Forward",
+          "birth_date": null,
+          "country": 62
+        },
+        "after": {
+          "display_name": "Wamberto de Jesus Sousa Campos",
+          "role": 12,
+          "broad": "DEL",
+          "position": "Right Winger",
+          "birth_date": "1974-12-13T00:00:00",
+          "country": 62
+        },
+        "role_changed": true,
+        "precision": "exact"
+      },
+      {
+        "source_id": 9496094,
+        "club": "FC Seraing",
+        "before": {
+          "display_name": "Sironval",
+          "role": 0,
+          "broad": "POR",
+          "position": "Goalkeeper",
+          "birth_date": null,
+          "country": null
+        },
+        "after": {
+          "display_name": "Serge Sironval",
+          "role": 0,
+          "broad": "POR",
+          "position": "Goalkeeper",
+          "birth_date": "1971-09-03T00:00:00",
+          "country": 17
+        },
+        "role_changed": false,
+        "precision": "exact"
+      },
+      {
+        "source_id": 9496085,
+        "club": "FC Seraing",
+        "before": {
+          "display_name": "Foguenne",
+          "role": 13,
+          "broad": "MED",
+          "position": "Left Midfielder",
+          "birth_date": null,
+          "country": null
+        },
+        "after": {
+          "display_name": "Ronald Foguenne",
+          "role": 13,
+          "broad": "MED",
+          "position": "Left Midfielder",
+          "birth_date": "1970-08-10T00:00:00",
+          "country": 17
+        },
+        "role_changed": false,
+        "precision": "exact"
+      },
+      {
+        "source_id": 9496098,
+        "club": "FC Seraing",
+        "before": {
+          "display_name": "Varga",
+          "role": 17,
+          "broad": "DEL",
+          "position": "Centre Forward",
+          "birth_date": null,
+          "country": 93
+        },
+        "after": {
+          "display_name": "Zvonko Varga",
+          "role": 17,
+          "broad": "DEL",
+          "position": "Centre Forward",
+          "birth_date": "1959-11-27T00:00:00",
+          "country": 75
+        },
+        "role_changed": false,
+        "precision": "exact"
+      },
+      {
+        "source_id": 9496086,
+        "club": "FC Seraing",
+        "before": {
+          "display_name": "Houben",
+          "role": 12,
+          "broad": "DEL",
+          "position": "Right Winger",
+          "birth_date": null,
+          "country": null
+        },
+        "after": {
+          "display_name": "Jean-Marie Houben",
+          "role": 3,
+          "broad": "DEF",
+          "position": "Defender (exact role unresolved)",
+          "birth_date": "1966-11-24T00:00:00",
+          "country": 17
+        },
+        "role_changed": true,
+        "precision": "broad_only"
+      },
+      {
+        "source_id": 9496089,
+        "club": "FC Seraing",
+        "before": {
+          "display_name": "Lawarée",
+          "role": 1,
+          "broad": "DEF",
+          "position": "Right Back",
+          "birth_date": null,
+          "country": null
+        },
+        "after": {
+          "display_name": "Axel Lawarée",
+          "role": 17,
+          "broad": "DEL",
+          "position": "Centre Forward",
+          "birth_date": "1973-10-09T00:00:00",
+          "country": 17
+        },
+        "role_changed": true,
+        "precision": "exact"
+      },
+      {
+        "source_id": 9496092,
+        "club": "FC Seraing",
+        "before": {
+          "display_name": "Olivieri",
+          "role": 9,
+          "broad": "MED",
+          "position": "Right Midfielder",
+          "birth_date": null,
+          "country": null
+        },
+        "after": {
+          "display_name": "Domenico Olivieri",
+          "role": 5,
+          "broad": "DEF",
+          "position": "Libero",
+          "birth_date": "1968-01-16T00:00:00",
+          "country": 17
+        },
+        "role_changed": true,
+        "precision": "exact"
+      },
+      {
+        "source_id": 9496084,
+        "club": "FC Seraing",
+        "before": {
+          "display_name": "Edson",
+          "role": 16,
+          "broad": "DEL",
+          "position": "Left Winger",
+          "birth_date": null,
+          "country": null
+        },
+        "after": {
+          "display_name": "Paulo Edson da Silva",
+          "role": 7,
+          "broad": "MED",
+          "position": "Midfielder (exact role unresolved)",
+          "birth_date": "1976-02-22T00:00:00",
+          "country": 62
+        },
+        "role_changed": true,
+        "precision": "broad_only"
+      },
+      {
+        "source_id": 9496096,
+        "club": "FC Seraing",
+        "before": {
+          "display_name": "Swerdtfegers",
+          "role": 3,
+          "broad": "DEF",
+          "position": "Centre Back",
+          "birth_date": null,
+          "country": null
+        },
+        "after": {
+          "display_name": "David Swerdtfegers",
+          "role": 3,
+          "broad": "DEF",
+          "position": "Defender (exact role unresolved)",
+          "birth_date": "1974-10-30T00:00:00",
+          "country": 17
+        },
+        "role_changed": false,
+        "precision": "broad_only"
+      },
+      {
+        "source_id": 9498009,
+        "club": "FC Seraing",
+        "before": {
+          "display_name": "Harald Heinen",
+          "role": 0,
+          "broad": "POR",
+          "position": null,
+          "birth_date": "1966-06-07T00:00:00",
+          "country": 17
+        },
+        "after": {
+          "display_name": "Harald Heinen",
+          "role": 0,
+          "broad": "POR",
+          "position": "Goalkeeper",
+          "birth_date": "1966-06-07T00:00:00",
+          "country": 17
+        },
+        "role_changed": false,
+        "precision": "exact"
+      },
+      {
+        "source_id": 9498010,
+        "club": "FC Seraing",
+        "before": {
+          "display_name": "Johan Vanheusden",
+          "role": 3,
+          "broad": "DEF",
+          "position": null,
+          "birth_date": "1968-04-25T00:00:00",
+          "country": 17
+        },
+        "after": {
+          "display_name": "Johan Vanheusden",
+          "role": 3,
+          "broad": "DEF",
+          "position": "Defender (exact role unresolved)",
+          "birth_date": "1968-04-25T00:00:00",
+          "country": 17
+        },
+        "role_changed": false,
+        "precision": "broad_only"
+      },
+      {
+        "source_id": 9496064,
+        "club": "Charleroi",
+        "before": {
+          "display_name": "Kerremans",
+          "role": 0,
+          "broad": "POR",
+          "position": "Goalkeeper",
+          "birth_date": null,
+          "country": null
+        },
+        "after": {
+          "display_name": "Peter Kerremans",
+          "role": 0,
+          "broad": "POR",
+          "position": "Goalkeeper",
+          "birth_date": "1961-02-02T00:00:00",
+          "country": 17
+        },
+        "role_changed": false,
+        "precision": "exact"
+      },
+      {
+        "source_id": 9496060,
+        "club": "Charleroi",
+        "before": {
+          "display_name": "Gérard",
+          "role": 1,
+          "broad": "DEF",
+          "position": "Right Back",
+          "birth_date": null,
+          "country": null
+        },
+        "after": {
+          "display_name": "Roch Gérard",
+          "role": 1,
+          "broad": "DEF",
+          "position": "Right Back",
+          "birth_date": "1972-01-04T00:00:00",
+          "country": 17
+        },
+        "role_changed": false,
+        "precision": "exact"
+      },
+      {
+        "source_id": 9496068,
+        "club": "Charleroi",
+        "before": {
+          "display_name": "Moury",
+          "role": 3,
+          "broad": "DEF",
+          "position": "Centre Back",
+          "birth_date": null,
+          "country": null
+        },
+        "after": {
+          "display_name": "Rudy Moury",
+          "role": 2,
+          "broad": "DEF",
+          "position": "Left Back",
+          "birth_date": "1966-03-01T00:00:00",
+          "country": 17
+        },
+        "role_changed": true,
+        "precision": "exact"
+      },
+      {
+        "source_id": 9494222,
+        "club": "Charleroi",
+        "before": {
+          "display_name": "Eric Van Meir",
+          "role": 3,
+          "broad": "DEF",
+          "position": "Centre Back",
+          "birth_date": "1968-02-28T00:00:00",
+          "country": 17
+        },
+        "after": {
+          "display_name": "Eric Van Meir",
+          "role": 5,
+          "broad": "DEF",
+          "position": "Libero",
+          "birth_date": "1968-02-28T00:00:00",
+          "country": 17
+        },
+        "role_changed": true,
+        "precision": "exact"
+      },
+      {
+        "source_id": 9496069,
+        "club": "Charleroi",
+        "before": {
+          "display_name": "Rasquin",
+          "role": 2,
+          "broad": "DEF",
+          "position": "Left Back",
+          "birth_date": null,
+          "country": null
+        },
+        "after": {
+          "display_name": "Michel Rasquin",
+          "role": 2,
+          "broad": "DEF",
+          "position": "Left Back",
+          "birth_date": "1964-02-20T00:00:00",
+          "country": 17
+        },
+        "role_changed": false,
+        "precision": "exact"
+      },
+      {
+        "source_id": 9496063,
+        "club": "Charleroi",
+        "before": {
+          "display_name": "Janevski",
+          "role": 9,
+          "broad": "MED",
+          "position": "Right Midfielder",
+          "birth_date": null,
+          "country": 75
+        },
+        "after": {
+          "display_name": "Cedomir Janevski",
+          "role": 5,
+          "broad": "DEF",
+          "position": "Libero",
+          "birth_date": "1961-07-03T00:00:00",
+          "country": 54
+        },
+        "role_changed": true,
+        "precision": "exact"
+      },
+      {
+        "source_id": 9496067,
+        "club": "Charleroi",
+        "before": {
+          "display_name": "Mommens",
+          "role": 7,
+          "broad": "MED",
+          "position": "Centre Midfielder",
+          "birth_date": null,
+          "country": null
+        },
+        "after": {
+          "display_name": "Raymond Mommens",
+          "role": 13,
+          "broad": "MED",
+          "position": "Left Midfielder",
+          "birth_date": "1958-12-27T00:00:00",
+          "country": 17
+        },
+        "role_changed": true,
+        "precision": "exact"
+      },
+      {
+        "source_id": 9496054,
+        "club": "Charleroi",
+        "before": {
+          "display_name": "Balog",
+          "role": 7,
+          "broad": "MED",
+          "position": "Centre Midfielder",
+          "birth_date": null,
+          "country": 93
+        },
+        "after": {
+          "display_name": "Tibor Balog",
+          "role": 7,
+          "broad": "MED",
+          "position": "Centre Midfielder",
+          "birth_date": "1966-03-01T00:00:00",
+          "country": 93
+        },
+        "role_changed": false,
+        "precision": "exact"
+      },
+      {
+        "source_id": 9496055,
+        "club": "Charleroi",
+        "before": {
+          "display_name": "Brogno",
+          "role": 13,
+          "broad": "MED",
+          "position": "Left Midfielder",
+          "birth_date": null,
+          "country": null
+        },
+        "after": {
+          "display_name": "Dante Brogno",
+          "role": 17,
+          "broad": "DEL",
+          "position": "Centre Forward",
+          "birth_date": "1966-05-02T00:00:00",
+          "country": 17
+        },
+        "role_changed": true,
+        "precision": "exact"
+      },
+      {
+        "source_id": 9496066,
+        "club": "Charleroi",
+        "before": {
+          "display_name": "Missé-Missé",
+          "role": 17,
+          "broad": "DEL",
+          "position": "Centre Forward",
+          "birth_date": null,
+          "country": 66
+        },
+        "after": {
+          "display_name": "Jean-Jacques Missé-Missé",
+          "role": 17,
+          "broad": "DEL",
+          "position": "Centre Forward",
+          "birth_date": "1968-08-07T00:00:00",
+          "country": 66
+        },
+        "role_changed": false,
+        "precision": "exact"
+      },
+      {
+        "source_id": 9496065,
+        "club": "Charleroi",
+        "before": {
+          "display_name": "Malbaša",
+          "role": 17,
+          "broad": "DEL",
+          "position": "Centre Forward",
+          "birth_date": null,
+          "country": 75
+        },
+        "after": {
+          "display_name": "Nebojša Malbaša",
+          "role": 17,
+          "broad": "DEL",
+          "position": "Centre Forward",
+          "birth_date": "1959-06-25T00:00:00",
+          "country": 75
+        },
+        "role_changed": false,
+        "precision": "exact"
+      },
+      {
+        "source_id": 9496061,
+        "club": "Charleroi",
+        "before": {
+          "display_name": "Gulyás",
+          "role": 0,
+          "broad": "POR",
+          "position": "Goalkeeper",
+          "birth_date": null,
+          "country": 93
+        },
+        "after": {
+          "display_name": "István Gulyás",
+          "role": 0,
+          "broad": "POR",
+          "position": "Goalkeeper",
+          "birth_date": "1960-05-01T00:00:00",
+          "country": 93
+        },
+        "role_changed": false,
+        "precision": "exact"
+      },
+      {
+        "source_id": 9496057,
+        "club": "Charleroi",
+        "before": {
+          "display_name": "Casto",
+          "role": 1,
+          "broad": "DEF",
+          "position": "Right Back",
+          "birth_date": null,
+          "country": null
+        },
+        "after": {
+          "display_name": "Marco Casto",
+          "role": 2,
+          "broad": "DEF",
+          "position": "Left Back",
+          "birth_date": "1972-06-02T00:00:00",
+          "country": 17
+        },
+        "role_changed": true,
+        "precision": "exact"
+      },
+      {
+        "source_id": 9496070,
+        "club": "Charleroi",
+        "before": {
+          "display_name": "Silvagni",
+          "role": 6,
+          "broad": "MED",
+          "position": "Defensive Midfielder",
+          "birth_date": null,
+          "country": 63
+        },
+        "after": {
+          "display_name": "Fabrice Silvagni",
+          "role": 3,
+          "broad": "DEF",
+          "position": "Centre Back",
+          "birth_date": "1966-08-26T00:00:00",
+          "country": 17
+        },
+        "role_changed": true,
+        "precision": "exact"
+      },
+      {
+        "source_id": 9496062,
+        "club": "Charleroi",
+        "before": {
+          "display_name": "Jacquemart",
+          "role": 17,
+          "broad": "DEL",
+          "position": "Centre Forward",
+          "birth_date": null,
+          "country": null
+        },
+        "after": {
+          "display_name": "Frédéric Jacquemart",
+          "role": 17,
+          "broad": "DEL",
+          "position": "Centre Forward",
+          "birth_date": "1972-06-12T00:00:00",
+          "country": 17
+        },
+        "role_changed": false,
+        "precision": "exact"
+      },
+      {
+        "source_id": 9496053,
+        "club": "Charleroi",
+        "before": {
+          "display_name": "Affo",
+          "role": 4,
+          "broad": "DEF",
+          "position": "Centre Back",
+          "birth_date": null,
+          "country": null
+        },
+        "after": {
+          "display_name": "Atty Affo",
+          "role": 7,
+          "broad": "MED",
+          "position": "Midfielder (exact role unresolved)",
+          "birth_date": "1971-08-27T00:00:00",
+          "country": 81
+        },
+        "role_changed": true,
+        "precision": "broad_only"
+      },
+      {
+        "source_id": 9498006,
+        "club": "Charleroi",
+        "before": {
+          "display_name": "Samuel Remy",
+          "role": 13,
+          "broad": "MED",
+          "position": null,
+          "birth_date": "1973-10-23T00:00:00",
+          "country": 17
+        },
+        "after": {
+          "display_name": "Samuel Remy",
+          "role": 13,
+          "broad": "MED",
+          "position": "Left Midfielder",
+          "birth_date": "1973-10-23T00:00:00",
+          "country": 17
+        },
+        "role_changed": false,
+        "precision": "exact"
+      },
+      {
+        "source_id": 9496056,
+        "club": "Charleroi",
+        "before": {
+          "display_name": "Bukran",
+          "role": 9,
+          "broad": "MED",
+          "position": "Right Midfielder",
+          "birth_date": null,
+          "country": null
+        },
+        "after": {
+          "display_name": "Gábor Bukrán",
+          "role": 7,
+          "broad": "MED",
+          "position": "Centre Midfielder",
+          "birth_date": "1975-11-16T00:00:00",
+          "country": 93
+        },
+        "role_changed": true,
+        "precision": "exact"
+      },
+      {
+        "source_id": 9496058,
+        "club": "Charleroi",
+        "before": {
+          "display_name": "Depireux",
+          "role": 17,
+          "broad": "DEL",
+          "position": "Centre Forward",
+          "birth_date": null,
+          "country": null
+        },
+        "after": {
+          "display_name": "Eric Depireux",
+          "role": 3,
+          "broad": "DEF",
+          "position": "Defender (exact role unresolved)",
+          "birth_date": "1972-02-18T00:00:00",
+          "country": 17
+        },
+        "role_changed": true,
+        "precision": "broad_only"
+      },
+      {
+        "source_id": 9496059,
+        "club": "Charleroi",
+        "before": {
+          "display_name": "Fasano",
+          "role": 16,
+          "broad": "DEL",
+          "position": "Left Winger",
+          "birth_date": null,
+          "country": null
+        },
+        "after": {
+          "display_name": "Mario Fasano",
+          "role": 2,
+          "broad": "DEF",
+          "position": "Left Back",
+          "birth_date": "1973-10-08T00:00:00",
+          "country": 17
+        },
+        "role_changed": true,
+        "precision": "exact"
+      },
+      {
+        "source_id": 9498011,
+        "club": "Charleroi",
+        "before": {
+          "display_name": "Olivier Desbruyeres",
+          "role": 0,
+          "broad": "POR",
+          "position": null,
+          "birth_date": "1975-02-21T00:00:00",
+          "country": 17
+        },
+        "after": {
+          "display_name": "Olivier Desbruyeres",
+          "role": 0,
+          "broad": "POR",
+          "position": "Goalkeeper",
+          "birth_date": "1975-02-21T00:00:00",
+          "country": 17
+        },
+        "role_changed": false,
+        "precision": "exact"
+      },
+      {
+        "source_id": 9498012,
+        "club": "Charleroi",
+        "before": {
+          "display_name": "Michael Paci",
+          "role": 17,
+          "broad": "DEL",
+          "position": null,
+          "birth_date": "1973-12-13T00:00:00",
+          "country": 17
+        },
+        "after": {
+          "display_name": "Michael Paci",
+          "role": 17,
+          "broad": "DEL",
+          "position": "Centre Forward",
+          "birth_date": "1973-12-13T00:00:00",
+          "country": 17
+        },
+        "role_changed": false,
+        "precision": "exact"
+      },
+      {
+        "source_id": 9495311,
+        "club": "Standard Liège",
+        "before": {
+          "display_name": "Gilbert Bodart",
+          "role": 0,
+          "broad": "POR",
+          "position": "Goalkeeper",
+          "birth_date": "1962-09-02T00:00:00",
+          "country": 17
+        },
+        "after": {
+          "display_name": "Gilbert Bodart",
+          "role": 0,
+          "broad": "POR",
+          "position": "Goalkeeper",
+          "birth_date": "1962-09-02T00:00:00",
+          "country": 17
+        },
+        "role_changed": false,
+        "precision": "exact"
+      },
+      {
+        "source_id": 9496318,
+        "club": "Standard Liège",
+        "before": {
+          "display_name": "Rednic",
+          "role": 1,
+          "broad": "DEF",
+          "position": "Right Back",
+          "birth_date": null,
+          "country": 72
+        },
+        "after": {
+          "display_name": "Mircea Rednic",
+          "role": 1,
+          "broad": "DEF",
+          "position": "Right Back",
+          "birth_date": "1962-04-09T00:00:00",
+          "country": 72
+        },
+        "role_changed": false,
+        "precision": "exact"
+      },
+      {
+        "source_id": 9496315,
+        "club": "Standard Liège",
+        "before": {
+          "display_name": "Léonard",
+          "role": 3,
+          "broad": "DEF",
+          "position": "Centre Back",
+          "birth_date": null,
+          "country": null
+        },
+        "after": {
+          "display_name": "Philippe Léonard",
+          "role": 2,
+          "broad": "DEF",
+          "position": "Left Back",
+          "birth_date": "1974-02-14T00:00:00",
+          "country": 17
+        },
+        "role_changed": true,
+        "precision": "exact"
+      },
+      {
+        "source_id": 9496308,
+        "club": "Standard Liège",
+        "before": {
+          "display_name": "André Cruz",
+          "role": 4,
+          "broad": "DEF",
+          "position": "Centre Back",
+          "birth_date": null,
+          "country": 62
+        },
+        "after": {
+          "display_name": "André Cruz",
+          "role": 3,
+          "broad": "DEF",
+          "position": "Centre Back",
+          "birth_date": "1968-09-20T00:00:00",
+          "country": 62
+        },
+        "role_changed": true,
+        "precision": "exact"
+      },
+      {
+        "source_id": 9496311,
+        "club": "Standard Liège",
+        "before": {
+          "display_name": "Dinga",
+          "role": 2,
+          "broad": "DEF",
+          "position": "Left Back",
+          "birth_date": null,
+          "country": null
+        },
+        "after": {
+          "display_name": "Dinga",
+          "role": 2,
+          "broad": "DEF",
+          "position": "Left Back",
+          "birth_date": "1972-11-11T00:00:00",
+          "country": 62
+        },
+        "role_changed": false,
+        "precision": "exact"
+      },
+      {
+        "source_id": 9495301,
+        "club": "Standard Liège",
+        "before": {
+          "display_name": "Régis Genaux",
+          "role": 1,
+          "broad": "DEF",
+          "position": "Right Back",
+          "birth_date": "1973-08-31T00:00:00",
+          "country": 17
+        },
+        "after": {
+          "display_name": "Régis Genaux",
+          "role": 1,
+          "broad": "DEF",
+          "position": "Right Back",
+          "birth_date": "1973-08-31T00:00:00",
+          "country": 17
+        },
+        "role_changed": false,
+        "precision": "exact"
+      },
+      {
+        "source_id": 9494221,
+        "club": "Standard Liège",
+        "before": {
+          "display_name": "Marc Wilmots",
+          "role": 8,
+          "broad": "MED",
+          "position": "Attacking Midfielder",
+          "birth_date": "1969-02-22T00:00:00",
+          "country": 17
+        },
+        "after": {
+          "display_name": "Marc Wilmots",
+          "role": 8,
+          "broad": "MED",
+          "position": "Attacking Midfielder",
+          "birth_date": "1969-02-22T00:00:00",
+          "country": 17
+        },
+        "role_changed": false,
+        "precision": "exact"
+      },
+      {
+        "source_id": 9496309,
+        "club": "Standard Liège",
+        "before": {
+          "display_name": "Asselman",
+          "role": 7,
+          "broad": "MED",
+          "position": "Centre Midfielder",
+          "birth_date": null,
+          "country": null
+        },
+        "after": {
+          "display_name": "Patrick Asselman",
+          "role": 8,
+          "broad": "MED",
+          "position": "Attacking Midfielder",
+          "birth_date": "1968-10-30T00:00:00",
+          "country": 17
+        },
+        "role_changed": true,
+        "precision": "exact"
+      },
+      {
+        "source_id": 9496313,
+        "club": "Standard Liège",
+        "before": {
+          "display_name": "Hellers",
+          "role": 13,
+          "broad": "MED",
+          "position": "Left Midfielder",
+          "birth_date": null,
+          "country": null
+        },
+        "after": {
+          "display_name": "Guy Hellers",
+          "role": 6,
+          "broad": "MED",
+          "position": "Defensive Midfielder",
+          "birth_date": "1964-10-10T00:00:00",
+          "country": 53
+        },
+        "role_changed": true,
+        "precision": "exact"
+      },
+      {
+        "source_id": 9496310,
+        "club": "Standard Liège",
+        "before": {
+          "display_name": "Bisconti",
+          "role": 17,
+          "broad": "DEL",
+          "position": "Centre Forward",
+          "birth_date": null,
+          "country": null
+        },
+        "after": {
+          "display_name": "Roberto Bisconti",
+          "role": 6,
+          "broad": "MED",
+          "position": "Defensive Midfielder",
+          "birth_date": "1973-07-21T00:00:00",
+          "country": 17
+        },
+        "role_changed": true,
+        "precision": "exact"
+      },
+      {
+        "source_id": 9495303,
+        "club": "Standard Liège",
+        "before": {
+          "display_name": "Michaël Goossens",
+          "role": 17,
+          "broad": "DEL",
+          "position": "Centre Forward",
+          "birth_date": "1973-11-30T00:00:00",
+          "country": 17
+        },
+        "after": {
+          "display_name": "Michaël Goossens",
+          "role": 17,
+          "broad": "DEL",
+          "position": "Centre Forward",
+          "birth_date": "1973-11-30T00:00:00",
+          "country": 17
+        },
+        "role_changed": false,
+        "precision": "exact"
+      },
+      {
+        "source_id": 9496316,
+        "club": "Standard Liège",
+        "before": {
+          "display_name": "Munaron",
+          "role": 0,
+          "broad": "POR",
+          "position": "Goalkeeper",
+          "birth_date": null,
+          "country": null
+        },
+        "after": {
+          "display_name": "Jacky Munaron",
+          "role": 0,
+          "broad": "POR",
+          "position": "Goalkeeper",
+          "birth_date": "1956-09-08T00:00:00",
+          "country": 17
+        },
+        "role_changed": false,
+        "precision": "exact"
+      },
+      {
+        "source_id": 9496328,
+        "club": "Standard Liège",
+        "before": {
+          "display_name": "Gunther Schepens",
+          "role": 1,
+          "broad": "DEF",
+          "position": "Right Back",
+          "birth_date": null,
+          "country": null
+        },
+        "after": {
+          "display_name": "Gunther Schepens",
+          "role": 8,
+          "broad": "MED",
+          "position": "Attacking Midfielder",
+          "birth_date": "1973-05-04T00:00:00",
+          "country": 17
+        },
+        "role_changed": true,
+        "precision": "exact"
+      },
+      {
+        "source_id": 9496319,
+        "club": "Standard Liège",
+        "before": {
+          "display_name": "Rytchkov",
+          "role": 12,
+          "broad": "DEL",
+          "position": "Right Winger",
+          "birth_date": null,
+          "country": 40
+        },
+        "after": {
+          "display_name": "Aleksandr Rytchkov",
+          "role": 8,
+          "broad": "MED",
+          "position": "Attacking Midfielder",
+          "birth_date": "1974-09-29T00:00:00",
+          "country": 40
+        },
+        "role_changed": true,
+        "precision": "exact"
+      },
+      {
+        "source_id": 9496322,
+        "club": "Standard Liège",
+        "before": {
+          "display_name": "Van Rooy",
+          "role": 2,
+          "broad": "DEF",
+          "position": "Left Back",
+          "birth_date": null,
+          "country": 3
+        },
+        "after": {
+          "display_name": "Frans van Rooy",
+          "role": 13,
+          "broad": "MED",
+          "position": "Left Midfielder",
+          "birth_date": "1963-07-03T00:00:00",
+          "country": 3
+        },
+        "role_changed": true,
+        "precision": "exact"
+      },
+      {
+        "source_id": 9496321,
+        "club": "Standard Liège",
+        "before": {
+          "display_name": "Soudan",
+          "role": 1,
+          "broad": "DEF",
+          "position": "Right Back",
+          "birth_date": null,
+          "country": null
+        },
+        "after": {
+          "display_name": "Yves Soudan",
+          "role": 17,
+          "broad": "DEL",
+          "position": "Centre Forward",
+          "birth_date": "1967-10-23T00:00:00",
+          "country": 17
+        },
+        "role_changed": true,
+        "precision": "exact"
+      },
+      {
+        "source_id": 9494020,
+        "club": "Standard Liège",
+        "before": {
+          "display_name": "Bogdan Stelea",
+          "role": 0,
+          "broad": "POR",
+          "position": "Goalkeeper",
+          "birth_date": "1967-12-05T00:00:00",
+          "country": 72
+        },
+        "after": {
+          "display_name": "Bogdan Stelea",
+          "role": 0,
+          "broad": "POR",
+          "position": "Goalkeeper",
+          "birth_date": "1967-12-05T00:00:00",
+          "country": 72
+        },
+        "role_changed": false,
+        "precision": "exact"
+      },
+      {
+        "source_id": 9496323,
+        "club": "Standard Liège",
+        "before": {
+          "display_name": "Vervoort",
+          "role": 13,
+          "broad": "MED",
+          "position": "Left Midfielder",
+          "birth_date": null,
+          "country": null
+        },
+        "after": {
+          "display_name": "Patrick Vervoort",
+          "role": 13,
+          "broad": "MED",
+          "position": "Left Midfielder",
+          "birth_date": "1965-01-17T00:00:00",
+          "country": 17
+        },
+        "role_changed": false,
+        "precision": "exact"
+      },
+      {
+        "source_id": 9496320,
+        "club": "Standard Liège",
+        "before": {
+          "display_name": "Smeets",
+          "role": 7,
+          "broad": "MED",
+          "position": "Centre Midfielder",
+          "birth_date": null,
+          "country": null
+        },
+        "after": {
+          "display_name": "Axel Smeets",
+          "role": 1,
+          "broad": "DEF",
+          "position": "Right Back",
+          "birth_date": "1974-07-12T00:00:00",
+          "country": 17
+        },
+        "role_changed": true,
+        "precision": "exact"
+      },
+      {
+        "source_id": 9496327,
+        "club": "Standard Liège",
+        "before": {
+          "display_name": "Thierry Pister",
+          "role": 2,
+          "broad": "DEF",
+          "position": "Left Back",
+          "birth_date": null,
+          "country": null
+        },
+        "after": {
+          "display_name": "Thierry Pister",
+          "role": 13,
+          "broad": "MED",
+          "position": "Left Midfielder",
+          "birth_date": "1965-09-02T00:00:00",
+          "country": 17
+        },
+        "role_changed": true,
+        "precision": "exact"
+      },
+      {
+        "source_id": 9496314,
+        "club": "Standard Liège",
+        "before": {
+          "display_name": "Lashaf",
+          "role": 3,
+          "broad": "DEF",
+          "position": "Centre Back",
+          "birth_date": null,
+          "country": null
+        },
+        "after": {
+          "display_name": "Mohamed Lashaf",
+          "role": 9,
+          "broad": "MED",
+          "position": "Right Midfielder",
+          "birth_date": "1967-10-07T00:00:00",
+          "country": 17
+        },
+        "role_changed": true,
+        "precision": "exact"
+      },
+      {
+        "source_id": 9495314,
+        "club": "Standard Liège",
+        "before": {
+          "display_name": "Alain Bettagno",
+          "role": 9,
+          "broad": "MED",
+          "position": "Right Midfielder",
+          "birth_date": "1968-11-09T00:00:00",
+          "country": 17
+        },
+        "after": {
+          "display_name": "Alain Bettagno",
+          "role": 9,
+          "broad": "MED",
+          "position": "Right Midfielder",
+          "birth_date": "1968-11-09T00:00:00",
+          "country": 17
+        },
+        "role_changed": false,
+        "precision": "exact"
+      },
+      {
+        "source_id": 9496312,
+        "club": "Standard Liège",
+        "before": {
+          "display_name": "Ernst",
+          "role": 12,
+          "broad": "DEL",
+          "position": "Right Winger",
+          "birth_date": null,
+          "country": null
+        },
+        "after": {
+          "display_name": "Didier Ernst",
+          "role": 1,
+          "broad": "DEF",
+          "position": "Right Back",
+          "birth_date": "1971-09-15T00:00:00",
+          "country": 17
+        },
+        "role_changed": true,
+        "precision": "exact"
+      },
+      {
+        "source_id": 9496317,
+        "club": "Standard Liège",
+        "before": {
+          "display_name": "Nuyens",
+          "role": 0,
+          "broad": "POR",
+          "position": "Goalkeeper",
+          "birth_date": null,
+          "country": null
+        },
+        "after": {
+          "display_name": "Tim Nuyens",
+          "role": 0,
+          "broad": "POR",
+          "position": "Goalkeeper",
+          "birth_date": "1974-07-16T00:00:00",
+          "country": 17
+        },
+        "role_changed": false,
+        "precision": "exact"
+      },
+      {
+        "source_id": 9498007,
+        "club": "Standard Liège",
+        "before": {
+          "display_name": "Daniel Marc Kimoni",
+          "role": 3,
+          "broad": "DEF",
+          "position": null,
+          "birth_date": "1971-08-18T00:00:00",
+          "country": 17
+        },
+        "after": {
+          "display_name": "Daniel Marc Kimoni",
+          "role": 3,
+          "broad": "DEF",
+          "position": "Centre Back",
+          "birth_date": "1971-08-18T00:00:00",
+          "country": 17
+        },
+        "role_changed": false,
+        "precision": "exact"
+      },
+      {
+        "source_id": 9498008,
+        "club": "Standard Liège",
+        "before": {
+          "display_name": "Emmanuel Duah",
+          "role": 16,
+          "broad": "DEL",
+          "position": null,
+          "birth_date": "1976-11-14T00:00:00",
+          "country": 42
+        },
+        "after": {
+          "display_name": "Emmanuel Duah",
+          "role": 16,
+          "broad": "DEL",
+          "position": "Left Winger",
+          "birth_date": "1976-11-14T00:00:00",
+          "country": 42
+        },
+        "role_changed": false,
+        "precision": "exact"
+      },
+      {
+        "source_id": 9498013,
+        "club": "Standard Liège",
+        "before": {
+          "display_name": "Dimitri Habran",
+          "role": 0,
+          "broad": "POR",
+          "position": null,
+          "birth_date": "1975-08-22T00:00:00",
+          "country": 17
+        },
+        "after": {
+          "display_name": "Dimitri Habran",
+          "role": 0,
+          "broad": "POR",
+          "position": "Goalkeeper",
+          "birth_date": "1975-08-22T00:00:00",
+          "country": 17
+        },
+        "role_changed": false,
+        "precision": "exact"
+      },
+      {
+        "source_id": 9496276,
+        "club": "RFC Liège",
+        "before": {
+          "display_name": "Kimoni",
+          "role": 3,
+          "broad": "DEF",
+          "position": "Centre Back",
+          "birth_date": null,
+          "country": null
+        },
+        "after": {
+          "display_name": "Donatien Kimoni",
+          "role": 7,
+          "broad": "MED",
+          "position": "Midfield (exact role unresolved)",
+          "birth_date": "1973-10-07T00:00:00",
+          "country": 17
+        },
+        "role_changed": true,
+        "precision": "broad_only"
+      }
+    ]
+  },
+  "identity_repairs": [
+    {
+      "source_id": 4929,
+      "identity": "Edmilson Dias Lucena",
+      "before_team_id": 9352001,
+      "before_historical_club_1994": "FC Seraing",
+      "restored_team_id": 301,
+      "replacement_source_id": 9498005
+    },
+    {
+      "source_id": 6387,
+      "identity": "Jacques Remy",
+      "before_team_id": 454,
+      "before_historical_club_1994": "Charleroi",
+      "restored_team_id": 244,
+      "replacement_source_id": 9498006
+    }
+  ],
+  "source_roster_union": {
+    "club_stage_counts_after": {
+      "FC Seraing": 21,
+      "Charleroi": 22,
+      "Standard Liège": 27,
+      "RFC Liège": 24
+    },
+    "source_visible_without_bdf_league_row": [
+      9498009,
+      9498010,
+      9498011,
+      9498012,
+      9498013
+    ],
+    "standard_bdf_league_row_additions": [
+      9498007,
+      9498008
+    ]
+  },
+  "biographies": {
+    "profiles_considered": 71,
+    "biographies_changed": 71,
+    "missing_stage_rows": 0
+  },
+  "photos": {
+    "new_portraits_bundled_this_batch": 4,
+    "rows": [
+      {
+        "source_id": 9498005,
+        "display_name": "Edmilson Paulo da Silva",
+        "photo_url": "https://www.bdfutbol.com/i/j/68668.jpg",
+        "asset": "frontend/public/historical9394/players/9498005.jpg"
+      },
+      {
+        "source_id": 9498006,
+        "display_name": "Samuel Remy",
+        "photo_url": "https://www.bdfutbol.com/i/j/68635.jpg",
+        "asset": "frontend/public/historical9394/players/9498006.jpg"
+      },
+      {
+        "source_id": 9498007,
+        "display_name": "Daniel Marc Kimoni",
+        "photo_url": "https://www.bdfutbol.com/i/j/701428.jpg?v=1698862581",
+        "asset": "frontend/public/historical9394/players/9498007.jpg"
+      },
+      {
+        "source_id": 9498008,
+        "display_name": "Emmanuel Duah",
+        "photo_url": "https://www.bdfutbol.com/i/j/6844.jpg?v=1230397300",
+        "asset": "frontend/public/historical9394/players/9498008.jpg"
+      }
+    ],
+    "bdf_individual_profiles_queued_ready_for_download": 65,
+    "total_bundled_normalized_bdfutbol": 93,
+    "note": "Only portraits retrieved from viewed BDFutbol individual-profile assets are bundled; remaining identified BDF profiles stay queued."
+  },
+  "identity_integrity": {
+    "registry_rows": 2116,
+    "unique_registry_ids": 2116,
+    "sets_match": true
+  },
+  "source_policy": [
+    "Full source-visible 1993-94 squad union is preferred over an arbitrary 18-player cap.",
+    "No league minutes are invented for players visible only in the season squad source.",
+    "Surname-only identity reuse is rejected when date/profile evidence identifies a different person.",
+    "Former USSR/Yugoslavia birth states are kept textually rather than retrofitted to modern successor-state birth_country_id values.",
+    "Broad source positions remain exact-role unresolved.",
+    "No basketball 75/25 rule is used."
+  ]
+}

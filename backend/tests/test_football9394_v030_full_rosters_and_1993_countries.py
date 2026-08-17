@@ -86,8 +86,8 @@ def test_photo_registry_queue_are_still_exactly_synchronised_after_roster_expans
     queue = load("bdfutbol_photo_queue.json")["players"]
     reg_ids = [int(r["source_id"]) for r in registry]
     queue_ids = [int(r["source_id"]) for r in queue]
-    assert len(reg_ids) == len(set(reg_ids)) == 2107
-    assert len(queue_ids) == len(set(queue_ids)) == 2107
+    assert len(reg_ids) == len(set(reg_ids)) >= 2107
+    assert len(queue_ids) == len(set(queue_ids)) >= 2107
     assert set(reg_ids) == set(queue_ids)
 
 

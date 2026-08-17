@@ -1,0 +1,126 @@
+{
+  "checkpoint": "0.35.0-turkey-zeytinburnu-karabuk-karsiyaka-sariyer-deep",
+  "status": "pass",
+  "portraits": [
+    {
+      "source_id": 9496541,
+      "display_name": "Miralem Ibrahimović",
+      "photo_url": "https://www.bdfutbol.com/en/i/j/44118.jpg?v=1659700905",
+      "asset": "frontend/public/historical9394/players/9496541.jpg"
+    },
+    {
+      "source_id": 9496547,
+      "display_name": "Ján Gabriel",
+      "photo_url": "https://www.bdfutbol.com/en/i/j/1179949.jpg?v=1782600126",
+      "asset": "frontend/public/historical9394/players/9496547.jpg"
+    },
+    {
+      "source_id": 9496553,
+      "display_name": "Serkan Reçber",
+      "photo_url": "https://www.bdfutbol.com/en/i/j/55595.jpg?v=1772710773",
+      "asset": "frontend/public/historical9394/players/9496553.jpg"
+    },
+    {
+      "source_id": 9496559,
+      "display_name": "Fevzi Layiç",
+      "photo_url": "https://www.bdfutbol.com/en/i/j/55591.jpg?v=1782459134",
+      "asset": "frontend/public/historical9394/players/9496559.jpg"
+    },
+    {
+      "source_id": 9496561,
+      "display_name": "Hakan Ünsal",
+      "photo_url": "https://www.bdfutbol.com/en/i/j/94265.jpg?v=1393712916",
+      "asset": "frontend/public/historical9394/players/9496561.jpg"
+    },
+    {
+      "source_id": 9496571,
+      "display_name": "Benyencef Haraoui",
+      "photo_url": "https://www.bdfutbol.com/en/i/j/88624.jpg?v=1780320302",
+      "asset": "frontend/public/historical9394/players/9496571.jpg"
+    },
+    {
+      "source_id": 9497328,
+      "display_name": "Innocent Linda Buthelezi",
+      "photo_url": "https://www.bdfutbol.com/en/i/j/1179818.jpg?v=1783001502",
+      "asset": "frontend/public/historical9394/players/9497328.jpg"
+    },
+    {
+      "source_id": 9496590,
+      "display_name": "Serdar Kahraman",
+      "photo_url": "https://www.bdfutbol.com/en/i/j/1179838.jpg?v=1782511782",
+      "asset": "frontend/public/historical9394/players/9496590.jpg"
+    },
+    {
+      "source_id": 9496591,
+      "display_name": "Dragi Kanatlarovski",
+      "photo_url": "https://www.bdfutbol.com/en/i/j/622.jpg?v=1303494774",
+      "asset": "frontend/public/historical9394/players/9496591.jpg"
+    },
+    {
+      "source_id": 9496592,
+      "display_name": "Bilal Şar",
+      "photo_url": "https://www.bdfutbol.com/en/i/j/45604.jpg?v=1660746472",
+      "asset": "frontend/public/historical9394/players/9496592.jpg"
+    },
+    {
+      "source_id": 9496593,
+      "display_name": "Nejat Topal",
+      "photo_url": "https://www.bdfutbol.com/en/i/j/1179841.jpg?v=1782512173",
+      "asset": "frontend/public/historical9394/players/9496593.jpg"
+    },
+    {
+      "source_id": 9496594,
+      "display_name": "Mustafa Fedai",
+      "photo_url": "https://www.bdfutbol.com/en/i/j/1136760.jpg?v=1783001675",
+      "asset": "frontend/public/historical9394/players/9496594.jpg"
+    },
+    {
+      "source_id": 9497336,
+      "display_name": "Jacek Cyzio",
+      "photo_url": "https://www.bdfutbol.com/en/i/j/702770.jpg?v=1706693814",
+      "asset": "frontend/public/historical9394/players/9497336.jpg"
+    },
+    {
+      "source_id": 9497337,
+      "display_name": "Mirza Golubica",
+      "photo_url": "https://www.bdfutbol.com/en/i/j/9263b.jpg?v=1245689820",
+      "asset": "frontend/public/historical9394/players/9497337.jpg"
+    },
+    {
+      "source_id": 9497339,
+      "display_name": "Yaşar Akçura",
+      "photo_url": "https://www.bdfutbol.com/en/i/j/1179836.jpg?v=1782510827",
+      "asset": "frontend/public/historical9394/players/9497339.jpg"
+    },
+    {
+      "source_id": 9496595,
+      "display_name": "Metin Mert",
+      "photo_url": "https://www.bdfutbol.com/i/j/701150.jpg?v=1738510703",
+      "asset": "frontend/public/historical9394/players/9496595.jpg"
+    },
+    {
+      "source_id": 9496597,
+      "display_name": "Evgeny Viktorovich Yarovenko",
+      "photo_url": "https://www.bdfutbol.com/i/j/1040412.jpg?v=1768308545",
+      "asset": "frontend/public/historical9394/players/9496597.jpg"
+    },
+    {
+      "source_id": 9496600,
+      "display_name": "Beyhan Çalışkan",
+      "photo_url": "https://www.bdfutbol.com/i/j/702938.jpg?v=1708332959",
+      "asset": "frontend/public/historical9394/players/9496600.jpg"
+    },
+    {
+      "source_id": 9496608,
+      "display_name": "Nermin Vazda",
+      "photo_url": "https://www.bdfutbol.com/i/j/1179948.jpg?v=1782599809",
+      "asset": "frontend/public/historical9394/players/9496608.jpg"
+    },
+    {
+      "source_id": 9496610,
+      "display_name": "Sinan Engin",
+      "photo_url": "https://www.bdfutbol.com/i/j/42714.jpg?v=1649326532",
+      "asset": "frontend/public/historical9394/players/9496610.jpg"
+    }
+  ]
+}

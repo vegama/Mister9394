@@ -1,0 +1,30 @@
+{
+  "checkpoint": "0.36.0-belgium-seraing-charleroi-standard-deep",
+  "status": "pass",
+  "portraits": [
+    {
+      "source_id": 9498005,
+      "display_name": "Edmilson Paulo da Silva",
+      "photo_url": "https://www.bdfutbol.com/i/j/68668.jpg",
+      "asset": "frontend/public/historical9394/players/9498005.jpg"
+    },
+    {
+      "source_id": 9498006,
+      "display_name": "Samuel Remy",
+      "photo_url": "https://www.bdfutbol.com/i/j/68635.jpg",
+      "asset": "frontend/public/historical9394/players/9498006.jpg"
+    },
+    {
+      "source_id": 9498007,
+      "display_name": "Daniel Marc Kimoni",
+      "photo_url": "https://www.bdfutbol.com/i/j/701428.jpg?v=1698862581",
+      "asset": "frontend/public/historical9394/players/9498007.jpg"
+    },
+    {
+      "source_id": 9498008,
+      "display_name": "Emmanuel Duah",
+      "photo_url": "https://www.bdfutbol.com/i/j/6844.jpg?v=1230397300",
+      "asset": "frontend/public/historical9394/players/9498008.jpg"
+    }
+  ]
+}

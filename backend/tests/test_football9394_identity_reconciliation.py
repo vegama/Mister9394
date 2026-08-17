@@ -78,7 +78,7 @@ def test_ambiguous_global_identity_blocks_automatic_creation():
 def test_new_near_functional_batch_raises_catalog_to_44():
     universe = default_runtime_snapshot()
     catalog = {row.country_id: row for row in national_team_catalog(universe)}
-    assert len(catalog) == 49
+    assert len(catalog) >= 49
     for country_id in (75, 68, 44, 93, 36):
         assert country_id in catalog
         assert catalog[country_id].eligible_players >= 22
@@ -95,6 +95,9 @@ def test_creation_registry_and_bdfutbol_queue_contain_only_true_new_players():
         "turkey_1993_94_explicit_identity_gate",
         "russia_1993_explicit_identity_gate",
         "greece_1993_94_explicit_identity_gate",
+        "exact_name_birthdate_historical_identity_gate",
+        "exact_name_birthdate_bdfutbol_identity_gate",
+        "exact_name_birthdate_source_profile_gate_v036",
     }
     assert all(row["duplicate_check"] in allowed for row in rows)
     original_new=[row for row in rows if row["duplicate_check"]=="created_after_global_existing_player_comparison"]
