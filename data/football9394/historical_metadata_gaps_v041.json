@@ -1,0 +1,41 @@
+{
+  "checkpoint": "0.41.0-belgium-genk-deep",
+  "gaps": {
+    "Russia": {
+      "active_players": 492,
+      "missing_birth_date": 465,
+      "missing_international_country_id": 455,
+      "missing_birth_country_id": 465,
+      "missing_height_cm": 479,
+      "missing_weight_kg": 483,
+      "profile_review_required": 0
+    },
+    "Greece": {
+      "active_players": 496,
+      "missing_birth_date": 34,
+      "missing_international_country_id": 0,
+      "missing_birth_country_id": 0,
+      "missing_height_cm": 491,
+      "missing_weight_kg": 494,
+      "profile_review_required": 2
+    },
+    "Belgium": {
+      "active_players": 414,
+      "missing_birth_date": 160,
+      "missing_international_country_id": 148,
+      "missing_birth_country_id": 176,
+      "missing_height_cm": 250,
+      "missing_weight_kg": 324,
+      "profile_review_required": 55
+    },
+    "Turkey": {
+      "active_players": 419,
+      "missing_birth_date": 23,
+      "missing_international_country_id": 19,
+      "missing_birth_country_id": 165,
+      "missing_height_cm": 330,
+      "missing_weight_kg": 397,
+      "profile_review_required": 168
+    }
+  }
+}

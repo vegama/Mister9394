@@ -1,0 +1,11 @@
+{
+  "checkpoint": "0.37.0-belgium-antwerp-deep",
+  "status": "pass",
+  "conflicts": [
+    {
+      "name": "Zsolt Muzsnay",
+      "decision": "not_added",
+      "reason": "Transfermarkt 93/94 displays him in Antwerp squad, but multiple career histories place his Antwerp spell earlier and/or at Videoton in 1992-93; held out pending stronger season-specific corroboration."
+    }
+  ]
+}

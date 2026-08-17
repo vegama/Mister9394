@@ -1,5 +1,11 @@
 # Míster 93/94
 
+## Estado · checkpoint 0.40.0-belgium-antwerp-germinal-beveren-molenbeek-deep
+
+Bélgica sigue **abierta**. Después de profundizar Royal Antwerp, Germinal Ekeren, Beveren y Molenbeek, los huecos belgas bajan de 275→**183** fechas de nacimiento y de 248→**169** nacionalidades internacionales; también se reducen país de nacimiento 268→194, altura 322→262 y peso 369→330. La pasada corrige posiciones inferidas, separa homónimos (Steve/Michael Laeremans), conserva Estados históricos como Zaire cuando corresponde y documenta conflictos en lugar de inventar precisión. La regresión específica v0.36-v0.40 + identidad queda 26/26 PASS.
+
+Rusia no se abre todavía: antes se continúa por Genk, Waregem, Lommel y el resto de clubes belgas pendientes. La futura pasada rusa deberá tratar URSS/ex-URSS con política histórica explícita de ciudadanía, lugar de nacimiento, selección, transliteraciones y Estados sucesores. Ver `docs/V040_BELGIUM_ANTWERP_GERMINAL_BEVEREN_MOLENBEEK_DEEP.md`.
+
 Manager de fútbol histórico centrado en la temporada 1993-94 y en carreras persistentes multitemporada.
 
 

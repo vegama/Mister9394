@@ -1,0 +1,324 @@
+{
+  "schema_version": 1,
+  "checkpoint": "0.39.0-belgium-beveren-deep",
+  "status": "pass",
+  "profile_gaps_before": {
+    "Russia": {
+      "active_players": 492,
+      "missing_birth_date": 465,
+      "missing_international_country_id": 455,
+      "missing_birth_country_id": 465,
+      "missing_height_cm": 479,
+      "missing_weight_kg": 483,
+      "profile_review_required": 0
+    },
+    "Greece": {
+      "active_players": 496,
+      "missing_birth_date": 34,
+      "missing_international_country_id": 0,
+      "missing_birth_country_id": 0,
+      "missing_height_cm": 491,
+      "missing_weight_kg": 494,
+      "profile_review_required": 2
+    },
+    "Belgium": {
+      "active_players": 414,
+      "missing_birth_date": 229,
+      "missing_international_country_id": 213,
+      "missing_birth_country_id": 238,
+      "missing_height_cm": 288,
+      "missing_weight_kg": 343,
+      "profile_review_required": 16
+    },
+    "Turkey": {
+      "active_players": 419,
+      "missing_birth_date": 23,
+      "missing_international_country_id": 19,
+      "missing_birth_country_id": 165,
+      "missing_height_cm": 330,
+      "missing_weight_kg": 397,
+      "profile_review_required": 168
+    }
+  },
+  "profile_gaps_after": {
+    "Russia": {
+      "active_players": 492,
+      "missing_birth_date": 465,
+      "missing_international_country_id": 455,
+      "missing_birth_country_id": 465,
+      "missing_height_cm": 479,
+      "missing_weight_kg": 483,
+      "profile_review_required": 0
+    },
+    "Greece": {
+      "active_players": 496,
+      "missing_birth_date": 34,
+      "missing_international_country_id": 0,
+      "missing_birth_country_id": 0,
+      "missing_height_cm": 491,
+      "missing_weight_kg": 494,
+      "profile_review_required": 2
+    },
+    "Belgium": {
+      "active_players": 414,
+      "missing_birth_date": 207,
+      "missing_international_country_id": 191,
+      "missing_birth_country_id": 216,
+      "missing_height_cm": 274,
+      "missing_weight_kg": 338,
+      "profile_review_required": 27
+    },
+    "Turkey": {
+      "active_players": 419,
+      "missing_birth_date": 23,
+      "missing_international_country_id": 19,
+      "missing_birth_country_id": 165,
+      "missing_height_cm": 330,
+      "missing_weight_kg": 397,
+      "profile_review_required": 168
+    }
+  },
+  "profiles": {
+    "curated_existing": 23,
+    "role_corrections": 17,
+    "review_required": 11,
+    "changes": [
+      {
+        "source_id": 9496017,
+        "display_name": "Geert de Vlieger",
+        "role_before": 0,
+        "role_after": 0,
+        "nat_before": null,
+        "nat_after": 17,
+        "precision": "exact"
+      },
+      {
+        "source_id": 9496022,
+        "display_name": "Carl Massagie",
+        "role_before": 1,
+        "role_after": 3,
+        "nat_before": null,
+        "nat_after": 17,
+        "precision": "exact"
+      },
+      {
+        "source_id": 9496011,
+        "display_name": "Hans Belligh",
+        "role_before": 3,
+        "role_after": 2,
+        "nat_before": null,
+        "nat_after": 17,
+        "precision": "exact"
+      },
+      {
+        "source_id": 9494182,
+        "display_name": "Chidi Nwanu",
+        "role_before": 3,
+        "role_after": 3,
+        "nat_before": 59,
+        "nat_after": 59,
+        "precision": "exact"
+      },
+      {
+        "source_id": 9496021,
+        "display_name": "Julien Lodders",
+        "role_before": 2,
+        "role_after": 3,
+        "nat_before": null,
+        "nat_after": 17,
+        "precision": "broad_only"
+      },
+      {
+        "source_id": 9496013,
+        "display_name": "Jacky Boonen",
+        "role_before": 9,
+        "role_after": 14,
+        "nat_before": null,
+        "nat_after": 17,
+        "precision": "exact"
+      },
+      {
+        "source_id": 9496025,
+        "display_name": "Dirk Thoelen",
+        "role_before": 7,
+        "role_after": 7,
+        "nat_before": null,
+        "nat_after": 17,
+        "precision": "broad_only"
+      },
+      {
+        "source_id": 9496030,
+        "display_name": "Hervé Van Overtvelt",
+        "role_before": 7,
+        "role_after": 7,
+        "nat_before": null,
+        "nat_after": 17,
+        "precision": "broad_only"
+      },
+      {
+        "source_id": 9496029,
+        "display_name": "Maurice van Ham",
+        "role_before": 13,
+        "role_after": 7,
+        "nat_before": null,
+        "nat_after": 3,
+        "precision": "broad_only"
+      },
+      {
+        "source_id": 9496027,
+        "display_name": "Marc Van Britsom",
+        "role_before": 17,
+        "role_after": 7,
+        "nat_before": null,
+        "nat_after": 17,
+        "precision": "broad_only"
+      },
+      {
+        "source_id": 9496026,
+        "display_name": "Sašo Udovič",
+        "role_before": 17,
+        "role_after": 17,
+        "nat_before": null,
+        "nat_after": 37,
+        "precision": "exact"
+      },
+      {
+        "source_id": 9496028,
+        "display_name": "Pascal van Gheem",
+        "role_before": 0,
+        "role_after": 0,
+        "nat_before": null,
+        "nat_after": 17,
+        "precision": "exact"
+      },
+      {
+        "source_id": 9496032,
+        "display_name": "Dirk Volckerick",
+        "role_before": 17,
+        "role_after": 5,
+        "nat_before": null,
+        "nat_after": 17,
+        "precision": "source_conflict_review"
+      },
+      {
+        "source_id": 9496024,
+        "display_name": "Souleymane Oulare",
+        "role_before": 1,
+        "role_after": 17,
+        "nat_before": null,
+        "nat_after": 91,
+        "precision": "exact"
+      },
+      {
+        "source_id": 9496012,
+        "display_name": "Marnik Bogaerts",
+        "role_before": 2,
+        "role_after": 17,
+        "nat_before": null,
+        "nat_after": 17,
+        "precision": "broad_only"
+      },
+      {
+        "source_id": 9496015,
+        "display_name": "Gary Colling",
+        "role_before": 13,
+        "role_after": 17,
+        "nat_before": null,
+        "nat_after": 17,
+        "precision": "broad_only"
+      },
+      {
+        "source_id": 9496023,
+        "display_name": "Peter Meeusen",
+        "role_before": 7,
+        "role_after": 1,
+        "nat_before": null,
+        "nat_after": 17,
+        "precision": "exact"
+      },
+      {
+        "source_id": 9496020,
+        "display_name": "Andy Janssens",
+        "role_before": 1,
+        "role_after": 7,
+        "nat_before": null,
+        "nat_after": 17,
+        "precision": "broad_only"
+      },
+      {
+        "source_id": 9496018,
+        "display_name": "Yves Essende-Liombi",
+        "role_before": 4,
+        "role_after": 17,
+        "nat_before": null,
+        "nat_after": 88,
+        "precision": "exact"
+      },
+      {
+        "source_id": 9496031,
+        "display_name": "Stefan van Rumst",
+        "role_before": 2,
+        "role_after": 17,
+        "nat_before": null,
+        "nat_after": 17,
+        "precision": "broad_only"
+      },
+      {
+        "source_id": 9496016,
+        "display_name": "Tomas Daumantas",
+        "role_before": 4,
+        "role_after": 8,
+        "nat_before": null,
+        "nat_after": 52,
+        "precision": "exact"
+      },
+      {
+        "source_id": 9496019,
+        "display_name": "Jurgen Heymans",
+        "role_before": 6,
+        "role_after": 7,
+        "nat_before": null,
+        "nat_after": 17,
+        "precision": "broad_only"
+      },
+      {
+        "source_id": 9496014,
+        "display_name": "Koen Caluwé",
+        "role_before": 4,
+        "role_after": 2,
+        "nat_before": null,
+        "nat_after": 17,
+        "precision": "exact"
+      }
+    ]
+  },
+  "source_conflicts": [
+    {
+      "name": "Dirk Volckerick",
+      "decision": "retain sweeper classification with review flag",
+      "note": "Transfermarkt consistently classifies Volckerick as sweeper in adjacent Beveren seasons, while BDFutbol labels him midfielder. Sweeper is retained with explicit review instead of silently treating the conflict as exact."
+    }
+  ],
+  "historical_country_policy": {
+    "Yves Essende-Liombi": "Zaire (country_id 88) is used for 1993-94; modern DR Congo is not back-projected.",
+    "Tomas Daumantas": "Lithuania (country_id 52) is valid as an independent state in 1993; later Belgian citizenship is secondary."
+  },
+  "photo_queue": {
+    "bdf_individual_profiles_linked": 23,
+    "policy": "Every Beveren staging identity is linked to its BDF individual profile and marked ready_for_download; no portrait URL is fabricated."
+  },
+  "identity_integrity": {
+    "registry_rows": 2117,
+    "queue_rows": 2117,
+    "registry_queue_match": true,
+    "unique_registry_ids": true
+  },
+  "source_policy": [
+    "Continue Belgium club-by-club before Russia.",
+    "BDFutbol individual profiles anchor identity, DOB, birthplace and measurements.",
+    "Transfermarkt season/adjacent-season data specializes roles only when identity is safe.",
+    "Historical country naming is frozen to the 1993-94 context.",
+    "Conflicting data is review-flagged rather than silently overwritten.",
+    "No basketball 75/25 rule is used."
+  ]
+}

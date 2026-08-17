@@ -1,0 +1,318 @@
+{
+  "schema_version": 1,
+  "checkpoint": "0.41.0-belgium-genk-deep",
+  "status": "pass",
+  "profile_gaps_before": {
+    "Russia": {
+      "active_players": 492,
+      "missing_birth_date": 465,
+      "missing_international_country_id": 455,
+      "missing_birth_country_id": 465,
+      "missing_height_cm": 479,
+      "missing_weight_kg": 483,
+      "profile_review_required": 0
+    },
+    "Greece": {
+      "active_players": 496,
+      "missing_birth_date": 34,
+      "missing_international_country_id": 0,
+      "missing_birth_country_id": 0,
+      "missing_height_cm": 491,
+      "missing_weight_kg": 494,
+      "profile_review_required": 2
+    },
+    "Belgium": {
+      "active_players": 414,
+      "missing_birth_date": 183,
+      "missing_international_country_id": 169,
+      "missing_birth_country_id": 194,
+      "missing_height_cm": 262,
+      "missing_weight_kg": 330,
+      "profile_review_required": 38
+    },
+    "Turkey": {
+      "active_players": 419,
+      "missing_birth_date": 23,
+      "missing_international_country_id": 19,
+      "missing_birth_country_id": 165,
+      "missing_height_cm": 330,
+      "missing_weight_kg": 397,
+      "profile_review_required": 168
+    }
+  },
+  "profile_gaps_after": {
+    "Russia": {
+      "active_players": 492,
+      "missing_birth_date": 465,
+      "missing_international_country_id": 455,
+      "missing_birth_country_id": 465,
+      "missing_height_cm": 479,
+      "missing_weight_kg": 483,
+      "profile_review_required": 0
+    },
+    "Greece": {
+      "active_players": 496,
+      "missing_birth_date": 34,
+      "missing_international_country_id": 0,
+      "missing_birth_country_id": 0,
+      "missing_height_cm": 491,
+      "missing_weight_kg": 494,
+      "profile_review_required": 2
+    },
+    "Belgium": {
+      "active_players": 414,
+      "missing_birth_date": 160,
+      "missing_international_country_id": 148,
+      "missing_birth_country_id": 176,
+      "missing_height_cm": 250,
+      "missing_weight_kg": 324,
+      "profile_review_required": 55
+    },
+    "Turkey": {
+      "active_players": 419,
+      "missing_birth_date": 23,
+      "missing_international_country_id": 19,
+      "missing_birth_country_id": 165,
+      "missing_height_cm": 330,
+      "missing_weight_kg": 397,
+      "profile_review_required": 168
+    }
+  },
+  "profiles": {
+    "curated_existing": 23,
+    "role_corrections": 15,
+    "review_required": 17,
+    "changes": [
+      {
+        "source_id": 9496109,
+        "display_name": "Ronald Louis Gaspercic",
+        "role_before": 0,
+        "role_after": 0,
+        "nat_before": null,
+        "nat_after": 17,
+        "precision": "exact"
+      },
+      {
+        "source_id": 9496122,
+        "display_name": "Dirk Verwimp",
+        "role_before": 1,
+        "role_after": 3,
+        "nat_before": null,
+        "nat_after": 17,
+        "precision": "broad_only"
+      },
+      {
+        "source_id": 9496111,
+        "display_name": "Suad Katana",
+        "role_before": 3,
+        "role_after": 5,
+        "nat_before": null,
+        "nat_after": 20,
+        "precision": "exact"
+      },
+      {
+        "source_id": 9496106,
+        "display_name": "Michael Delcampe",
+        "role_before": 4,
+        "role_after": 3,
+        "nat_before": null,
+        "nat_after": 17,
+        "precision": "broad_only"
+      },
+      {
+        "source_id": 9496102,
+        "display_name": "Luc Beyens",
+        "role_before": 2,
+        "role_after": 7,
+        "nat_before": null,
+        "nat_after": 17,
+        "precision": "broad_only"
+      },
+      {
+        "source_id": 9496117,
+        "display_name": "Marc Schaessens",
+        "role_before": 9,
+        "role_after": 7,
+        "nat_before": null,
+        "nat_after": 17,
+        "precision": "broad_only"
+      },
+      {
+        "source_id": 9496105,
+        "display_name": "Gert Claessens",
+        "role_before": 7,
+        "role_after": 7,
+        "nat_before": null,
+        "nat_after": 17,
+        "precision": "broad_only"
+      },
+      {
+        "source_id": 9496120,
+        "display_name": "Jürgen Van Deurzen",
+        "role_before": 7,
+        "role_after": 7,
+        "nat_before": null,
+        "nat_after": 17,
+        "precision": "broad_only"
+      },
+      {
+        "source_id": 9496100,
+        "display_name": "Arisvaldo Pereira",
+        "role_before": 13,
+        "role_after": 7,
+        "nat_before": null,
+        "nat_after": 62,
+        "precision": "broad_only"
+      },
+      {
+        "source_id": 9496110,
+        "display_name": "Patrick Goots",
+        "role_before": 17,
+        "role_after": 17,
+        "nat_before": null,
+        "nat_after": 17,
+        "precision": "broad_only"
+      },
+      {
+        "source_id": 9496104,
+        "display_name": "Carmel Busuttil",
+        "role_before": 17,
+        "role_after": 17,
+        "nat_before": null,
+        "nat_after": 55,
+        "precision": "broad_only"
+      },
+      {
+        "source_id": 9496107,
+        "display_name": "Gert Doumen",
+        "role_before": 0,
+        "role_after": 0,
+        "nat_before": null,
+        "nat_after": 17,
+        "precision": "exact"
+      },
+      {
+        "source_id": 9496114,
+        "display_name": "Davy Oyen",
+        "role_before": 3,
+        "role_after": 2,
+        "nat_before": null,
+        "nat_after": 17,
+        "precision": "exact"
+      },
+      {
+        "source_id": 9496101,
+        "display_name": "Norbert Beuls",
+        "role_before": 3,
+        "role_after": 3,
+        "nat_before": null,
+        "nat_after": 17,
+        "precision": "broad_only"
+      },
+      {
+        "source_id": 9496103,
+        "display_name": "Frane Bućan",
+        "role_before": 2,
+        "role_after": 7,
+        "nat_before": null,
+        "nat_after": 31,
+        "precision": "broad_only"
+      },
+      {
+        "source_id": 9496108,
+        "display_name": "Kurt Dreesen",
+        "role_before": 17,
+        "role_after": 7,
+        "nat_before": null,
+        "nat_after": 17,
+        "precision": "broad_only"
+      },
+      {
+        "source_id": 9496118,
+        "display_name": "Stijn Thijs",
+        "role_before": 0,
+        "role_after": 0,
+        "nat_before": null,
+        "nat_after": 17,
+        "precision": "exact"
+      },
+      {
+        "source_id": 9496119,
+        "display_name": "Peter van der Ven",
+        "role_before": 12,
+        "role_after": 7,
+        "nat_before": null,
+        "nat_after": 3,
+        "precision": "broad_only"
+      },
+      {
+        "source_id": 9496116,
+        "display_name": "Emmanuel Sarpong",
+        "role_before": 8,
+        "role_after": 17,
+        "nat_before": 42,
+        "nat_after": 42,
+        "precision": "broad_only"
+      },
+      {
+        "source_id": 9496121,
+        "display_name": "Marc Vangronsveld",
+        "role_before": 1,
+        "role_after": 2,
+        "nat_before": null,
+        "nat_after": 17,
+        "precision": "exact"
+      },
+      {
+        "source_id": 9496112,
+        "display_name": "Ismet Mulavdić",
+        "role_before": 9,
+        "role_after": 7,
+        "nat_before": null,
+        "nat_after": 20,
+        "precision": "broad_only"
+      },
+      {
+        "source_id": 9496113,
+        "display_name": "Sunny Nwachukwu",
+        "role_before": 8,
+        "role_after": 17,
+        "nat_before": 59,
+        "nat_after": 59,
+        "precision": "broad_only"
+      },
+      {
+        "source_id": 9496115,
+        "display_name": "Frank Reumers",
+        "role_before": 16,
+        "role_after": 7,
+        "nat_before": null,
+        "nat_after": 17,
+        "precision": "broad_only"
+      }
+    ]
+  },
+  "source_conflicts": [],
+  "historical_country_policy": {
+    "former_Yugoslavia": "Katana, Bućan and Mulavdić retain Yugoslavia in historical_birth_place_text and no modern successor-state birth_country_id; 1993 nationality/citizenship identity is stored separately.",
+    "future_Russia": "Russia remains untouched. The next Russia pass must separate historical birthplace state, 1993 citizenship/nationality, represented selection and transliterations; USSR must never be auto-mapped to Russia."
+  },
+  "photo_queue": {
+    "bdf_individual_profiles_linked": 23,
+    "policy": "Every Genk staging identity is linked to its BDF individual profile and marked ready_for_download; no portrait URL is fabricated."
+  },
+  "identity_integrity": {
+    "registry_rows": 2117,
+    "queue_rows": 2117,
+    "registry_queue_match": true,
+    "unique_registry_ids": true
+  },
+  "source_policy": [
+    "Continue Belgium club-by-club before Russia.",
+    "BDFutbol individual profiles anchor identity, DOB, birthplace and measurements.",
+    "Transfermarkt season/adjacent-season data specializes roles only when identity is safe.",
+    "Historical country naming is frozen to the 1993-94 context.",
+    "Conflicting data is review-flagged rather than silently overwritten.",
+    "No basketball 75/25 rule is used."
+  ]
+}

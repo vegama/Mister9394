@@ -1,0 +1,11 @@
+{
+  "checkpoint": "0.39.0-belgium-beveren-deep",
+  "status": "pass",
+  "conflicts": [
+    {
+      "name": "Dirk Volckerick",
+      "decision": "retain sweeper classification with review flag",
+      "note": "Transfermarkt consistently classifies Volckerick as sweeper in adjacent Beveren seasons, while BDFutbol labels him midfielder. Sweeper is retained with explicit review instead of silently treating the conflict as exact."
+    }
+  ]
+}

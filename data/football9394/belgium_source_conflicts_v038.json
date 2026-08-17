@@ -1,0 +1,16 @@
+{
+  "checkpoint": "0.38.0-belgium-germinal-deep",
+  "status": "pass",
+  "conflicts": [
+    {
+      "name": "Victor Diagne",
+      "decision": "retain season-safe interpretation with review flag",
+      "note": "BDFutbol and a season-specific 1993-94 squad source classify him as forward; Transfermarkt current profile lists central midfield. Season classification is retained with review flag."
+    },
+    {
+      "name": "Juha Jussila",
+      "decision": "retain season-safe interpretation with review flag",
+      "note": "BDFutbol and Finnish historical player-abroad records identify Juha Jussila as a midfielder with five 1993-94 league appearances. Transfermarkt 93/94 appears to list Jani Jussila as a defender; no cross-identity overwrite is applied."
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "checkpoint": "0.40.0-belgium-molenbeek-deep",
+  "status": "pass",
+  "conflicts": [
+    {
+      "name": "Mark Williams",
+      "decision": "correct birthplace to Cape Town and retain South Africa country_id 78",
+      "note": "BDFutbol correctly identifies South Africa but lists Rio de Janeiro as birthplace. South African biographical sources place Williams in Cape Town; Cape Town is retained and the conflict is audit-flagged."
+    }
+  ]
+}

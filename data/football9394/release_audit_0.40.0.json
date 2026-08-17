@@ -1,0 +1,55 @@
+{
+  "checkpoint": "0.40.0-belgium-antwerp-germinal-beveren-molenbeek-deep",
+  "status": "pass",
+  "created_at": "2026-08-17",
+  "base_checkpoint": "0.36.0-belgium-seraing-charleroi-standard-deep",
+  "belgium_active_players": 414,
+  "clubs_deepened": {
+    "Royal Antwerp": 25,
+    "Germinal Ekeren": 25,
+    "Beveren": 23,
+    "Molenbeek": 25
+  },
+  "profile_gaps": {
+    "missing_birth_date_before": 275,
+    "missing_birth_date_after": 183,
+    "missing_international_country_id_before": 248,
+    "missing_international_country_id_after": 169,
+    "missing_birth_country_id_before": 268,
+    "missing_birth_country_id_after": 194,
+    "missing_height_cm_before": 322,
+    "missing_height_cm_after": 262,
+    "missing_weight_kg_before": 369,
+    "missing_weight_kg_after": 330,
+    "profile_review_required_after": 38
+  },
+  "identity_and_history": {
+    "stevan_stojanovic_roster_member_added_without_invented_league_stats": true,
+    "zsolt_muzsnay_conflict_not_forced": true,
+    "juha_jussila_identity_kept_distinct_from_jani": true,
+    "steve_and_michael_laeremans_kept_distinct": true,
+    "zaire_1993_policy_applied": true,
+    "mark_williams_birthplace_conflict_audited": true,
+    "ussr_is_not_automatically_russia_policy_written_for_next_front": true
+  },
+  "integrity": {
+    "registry_queue_unique_and_synced": true,
+    "bdfutbol_profile_links_present_for_curated_molenbeek_rows": true,
+    "broad_only_uncertainty_explicit": true,
+    "role_corrections_rematerialize_attributes_with_same_broad_position_comparables": true
+  },
+  "tests": {
+    "selected_regression_passed": 26,
+    "selected_regression_failed": 0,
+    "scope": "Belgium v0.36-v0.40 specific tests plus identity reconciliation",
+    "full_repo_suite_run": false
+  },
+  "next_belgium_priority": ["Genk", "Waregem", "Lommel", "RFC Liège", "Cercle Brugge"],
+  "russia_status": "deferred_until_belgium_is_further_closed",
+  "policy": {
+    "football_75_25_rule": false,
+    "unknown_historical_values_are_invented": false,
+    "modern_successor_state_is_back_projected_without_evidence": false,
+    "broad_position_uncertainty_is_explicit": true
+  }
+}

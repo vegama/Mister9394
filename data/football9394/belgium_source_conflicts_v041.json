@@ -1,0 +1,9 @@
+{
+  "checkpoint": "0.41.0-belgium-genk-deep",
+  "status": "pass",
+  "conflicts": [],
+  "historical_country_policy": {
+    "former_Yugoslavia": "Katana, Bućan and Mulavdić retain Yugoslavia in historical_birth_place_text and no modern successor-state birth_country_id; 1993 nationality/citizenship identity is stored separately.",
+    "future_Russia": "Russia remains untouched. The next Russia pass must separate historical birthplace state, 1993 citizenship/nationality, represented selection and transliterations; USSR must never be auto-mapped to Russia."
+  }
+}

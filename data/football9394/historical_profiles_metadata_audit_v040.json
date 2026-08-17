@@ -1,0 +1,342 @@
+{
+  "schema_version": 1,
+  "checkpoint": "0.40.0-belgium-molenbeek-deep",
+  "status": "pass",
+  "profile_gaps_before": {
+    "Russia": {
+      "active_players": 492,
+      "missing_birth_date": 465,
+      "missing_international_country_id": 455,
+      "missing_birth_country_id": 465,
+      "missing_height_cm": 479,
+      "missing_weight_kg": 483,
+      "profile_review_required": 0
+    },
+    "Greece": {
+      "active_players": 496,
+      "missing_birth_date": 34,
+      "missing_international_country_id": 0,
+      "missing_birth_country_id": 0,
+      "missing_height_cm": 491,
+      "missing_weight_kg": 494,
+      "profile_review_required": 2
+    },
+    "Belgium": {
+      "active_players": 414,
+      "missing_birth_date": 207,
+      "missing_international_country_id": 191,
+      "missing_birth_country_id": 216,
+      "missing_height_cm": 274,
+      "missing_weight_kg": 338,
+      "profile_review_required": 27
+    },
+    "Turkey": {
+      "active_players": 419,
+      "missing_birth_date": 23,
+      "missing_international_country_id": 19,
+      "missing_birth_country_id": 165,
+      "missing_height_cm": 330,
+      "missing_weight_kg": 397,
+      "profile_review_required": 168
+    }
+  },
+  "profile_gaps_after": {
+    "Russia": {
+      "active_players": 492,
+      "missing_birth_date": 465,
+      "missing_international_country_id": 455,
+      "missing_birth_country_id": 465,
+      "missing_height_cm": 479,
+      "missing_weight_kg": 483,
+      "profile_review_required": 0
+    },
+    "Greece": {
+      "active_players": 496,
+      "missing_birth_date": 34,
+      "missing_international_country_id": 0,
+      "missing_birth_country_id": 0,
+      "missing_height_cm": 491,
+      "missing_weight_kg": 494,
+      "profile_review_required": 2
+    },
+    "Belgium": {
+      "active_players": 414,
+      "missing_birth_date": 183,
+      "missing_international_country_id": 169,
+      "missing_birth_country_id": 194,
+      "missing_height_cm": 262,
+      "missing_weight_kg": 330,
+      "profile_review_required": 38
+    },
+    "Turkey": {
+      "active_players": 419,
+      "missing_birth_date": 23,
+      "missing_international_country_id": 19,
+      "missing_birth_country_id": 165,
+      "missing_height_cm": 330,
+      "missing_weight_kg": 397,
+      "profile_review_required": 168
+    }
+  },
+  "profiles": {
+    "curated_existing": 25,
+    "role_corrections": 18,
+    "review_required": 11,
+    "changes": [
+      {
+        "source_id": 9496240,
+        "display_name": "Dirk Rosez",
+        "role_before": 0,
+        "role_after": 0,
+        "nat_before": null,
+        "nat_after": 17,
+        "precision": "exact"
+      },
+      {
+        "source_id": 9496233,
+        "display_name": "Steve Laeremans",
+        "role_before": 1,
+        "role_after": 1,
+        "nat_before": null,
+        "nat_after": 17,
+        "precision": "exact"
+      },
+      {
+        "source_id": 9496241,
+        "display_name": "Thierry Rouyr",
+        "role_before": 3,
+        "role_after": 2,
+        "nat_before": null,
+        "nat_after": 17,
+        "precision": "exact"
+      },
+      {
+        "source_id": 9496237,
+        "display_name": "Daniel Nassen",
+        "role_before": 4,
+        "role_after": 1,
+        "nat_before": null,
+        "nat_after": 17,
+        "precision": "exact"
+      },
+      {
+        "source_id": 9496244,
+        "display_name": "Guy Vandersmissen",
+        "role_before": 2,
+        "role_after": 9,
+        "nat_before": null,
+        "nat_after": 17,
+        "precision": "exact"
+      },
+      {
+        "source_id": 9496225,
+        "display_name": "Daniel Camus",
+        "role_before": 9,
+        "role_after": 6,
+        "nat_before": null,
+        "nat_after": 17,
+        "precision": "exact"
+      },
+      {
+        "source_id": 9496243,
+        "display_name": "Patrick Thairet",
+        "role_before": 7,
+        "role_after": 7,
+        "nat_before": null,
+        "nat_after": 17,
+        "precision": "broad_only"
+      },
+      {
+        "source_id": 9496230,
+        "display_name": "Gunther Jacob",
+        "role_before": 7,
+        "role_after": 7,
+        "nat_before": null,
+        "nat_after": 17,
+        "precision": "exact"
+      },
+      {
+        "source_id": 9496245,
+        "display_name": "Mark Williams",
+        "role_before": 13,
+        "role_after": 17,
+        "nat_before": null,
+        "nat_after": 78,
+        "precision": "exact"
+      },
+      {
+        "source_id": 9496246,
+        "display_name": "Marc Wuyts",
+        "role_before": 17,
+        "role_after": 8,
+        "nat_before": null,
+        "nat_after": 17,
+        "precision": "exact"
+      },
+      {
+        "source_id": 9496242,
+        "display_name": "Rubenilson Monteiro Ferreira",
+        "role_before": 17,
+        "role_after": 8,
+        "nat_before": 62,
+        "nat_after": 62,
+        "precision": "exact"
+      },
+      {
+        "source_id": 9496229,
+        "display_name": "Wilfried Godart",
+        "role_before": 0,
+        "role_after": 0,
+        "nat_before": null,
+        "nat_after": 17,
+        "precision": "exact"
+      },
+      {
+        "source_id": 9496235,
+        "display_name": "Emil Lörincz",
+        "role_before": 3,
+        "role_after": 5,
+        "nat_before": 93,
+        "nat_after": 93,
+        "precision": "exact"
+      },
+      {
+        "source_id": 9496326,
+        "display_name": "Luc Ernès",
+        "role_before": 16,
+        "role_after": 17,
+        "nat_before": null,
+        "nat_after": 17,
+        "precision": "broad_only"
+      },
+      {
+        "source_id": 9496228,
+        "display_name": "Étienne Delangre",
+        "role_before": 9,
+        "role_after": 3,
+        "nat_before": null,
+        "nat_after": 17,
+        "precision": "broad_only"
+      },
+      {
+        "source_id": 9496239,
+        "display_name": "Olivier Pijpens",
+        "role_before": 13,
+        "role_after": 7,
+        "nat_before": null,
+        "nat_after": 17,
+        "precision": "broad_only"
+      },
+      {
+        "source_id": 9496232,
+        "display_name": "Ilir Kepa",
+        "role_before": 3,
+        "role_after": 9,
+        "nat_before": null,
+        "nat_after": 8,
+        "precision": "exact"
+      },
+      {
+        "source_id": 9496231,
+        "display_name": "Pascal Jacobs",
+        "role_before": 3,
+        "role_after": 7,
+        "nat_before": null,
+        "nat_after": 17,
+        "precision": "broad_only"
+      },
+      {
+        "source_id": 9496238,
+        "display_name": "Alain Mvienna Ossomo",
+        "role_before": 17,
+        "role_after": 7,
+        "nat_before": null,
+        "nat_after": 66,
+        "precision": "broad_only"
+      },
+      {
+        "source_id": 9496234,
+        "display_name": "Michael Laeremans",
+        "role_before": 9,
+        "role_after": 3,
+        "nat_before": null,
+        "nat_after": 17,
+        "precision": "broad_only"
+      },
+      {
+        "source_id": 9494180,
+        "display_name": "Stephen Okechukwu Keshi",
+        "role_before": 3,
+        "role_after": 3,
+        "nat_before": 59,
+        "nat_after": 59,
+        "precision": "exact"
+      },
+      {
+        "source_id": 9496227,
+        "display_name": "Harold Deglas",
+        "role_before": 3,
+        "role_after": 17,
+        "nat_before": null,
+        "nat_after": 17,
+        "precision": "broad_only"
+      },
+      {
+        "source_id": 9496226,
+        "display_name": "Thierry de Jaegher",
+        "role_before": 3,
+        "role_after": 3,
+        "nat_before": null,
+        "nat_after": 17,
+        "precision": "broad_only"
+      },
+      {
+        "source_id": 9496224,
+        "display_name": "Didier Albert",
+        "role_before": 16,
+        "role_after": 17,
+        "nat_before": null,
+        "nat_after": 17,
+        "precision": "broad_only"
+      },
+      {
+        "source_id": 9496236,
+        "display_name": "Olivier Malcorps",
+        "role_before": 4,
+        "role_after": 3,
+        "nat_before": null,
+        "nat_after": 17,
+        "precision": "broad_only"
+      }
+    ]
+  },
+  "source_conflicts": [
+    {
+      "name": "Mark Williams",
+      "decision": "correct birthplace to Cape Town and retain South Africa country_id 78",
+      "note": "BDFutbol correctly identifies South Africa but lists Rio de Janeiro as birthplace. South African biographical sources place Williams in Cape Town; Cape Town is retained and the conflict is audit-flagged."
+    }
+  ],
+  "historical_country_policy": {
+    "Mark Williams": "South Africa (country_id 78) is retained for 1993-94; BDFutbol birthplace text is overridden by corroborated Cape Town evidence.",
+    "Rubenilson Monteiro Ferreira": "Brazil (country_id 62) remains primary for the historical 1993 identity; Belgian citizenship is stored secondary rather than back-projected as primary."
+  },
+  "photo_queue": {
+    "bdf_individual_profiles_linked": 25,
+    "policy": "Every Molenbeek staging identity is linked to its BDF individual profile and marked ready_for_download; no portrait URL is fabricated."
+  },
+  "identity_integrity": {
+    "registry_rows": 2117,
+    "queue_rows": 2117,
+    "registry_queue_match": true,
+    "unique_registry_ids": true
+  },
+  "source_policy": [
+    "Continue Belgium club-by-club before Russia.",
+    "BDFutbol individual profiles anchor identity, DOB, birthplace and measurements.",
+    "Transfermarkt season/adjacent-season data specializes roles only when identity is safe.",
+    "Historical country naming is frozen to the 1993-94 context.",
+    "Conflicting data is review-flagged rather than silently overwritten.",
+    "No basketball 75/25 rule is used."
+  ]
+}
