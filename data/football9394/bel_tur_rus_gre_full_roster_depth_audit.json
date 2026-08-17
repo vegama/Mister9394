@@ -1,0 +1,102 @@
+{
+  "status": "expanded_source_rosters",
+  "policy": "All historically documented season-roster rows are retained; 18 is a minimum safety floor, never a truncation target.",
+  "added": {
+    "Belgium": 0,
+    "Turkey": 0,
+    "Russia": 0,
+    "Greece": 0
+  },
+  "totals": {
+    "Belgium": 413,
+    "Turkey": 414,
+    "Russia": 492,
+    "Greece": 496
+  },
+  "minimums": {
+    "Belgium": 19,
+    "Turkey": 23,
+    "Russia": 22,
+    "Greece": 22
+  },
+  "counts": {
+    "Belgium": {
+      "Anderlecht": 24,
+      "Club Brugge": 21,
+      "FC Seraing": 19,
+      "Charleroi": 20,
+      "Royal Antwerp": 24,
+      "Standard Liège": 24,
+      "Oostende": 19,
+      "KV Mechelen": 24,
+      "Beveren": 23,
+      "Germinal Ekeren": 25,
+      "Lommel": 22,
+      "Cercle Brugge": 24,
+      "RFC Liège": 24,
+      "Lierse": 20,
+      "Gent": 25,
+      "Molenbeek": 25,
+      "Waregem": 27,
+      "Genk": 23
+    },
+    "Turkey": {
+      "Galatasaray": 25,
+      "Fenerbahçe": 25,
+      "Trabzonspor": 25,
+      "Beşiktaş": 23,
+      "Samsunspor": 27,
+      "Kocaelispor": 25,
+      "Gençlerbirliği": 25,
+      "Gaziantepspor": 26,
+      "Bursaspor": 30,
+      "Altay": 27,
+      "Ankaragücü": 27,
+      "Kayserispor": 27,
+      "Zeytinburnuspor": 26,
+      "Karabükspor": 27,
+      "Karşıyaka": 25,
+      "Sarıyer": 24
+    },
+    "Russia": {
+      "Spartak Moskva": 33,
+      "Rotor Volgograd": 23,
+      "Dynamo Moskva": 29,
+      "Tekstilshchik Kamyshin": 27,
+      "Lokomotiv Moskva": 29,
+      "Spartak Vladikavkaz": 22,
+      "Torpedo Moskva": 29,
+      "Uralmash": 25,
+      "CSKA Moskva": 29,
+      "KAMAZ": 29,
+      "Zhemchuzhina Sochi": 27,
+      "Dynamo Stavropol": 28,
+      "Lokomotiv Nizhny Novgorod": 23,
+      "Krylia Sovetov": 26,
+      "Luch Vladivostok": 24,
+      "Okean Nakhodka": 27,
+      "Rostselmash": 29,
+      "Asmaral Moskva": 33
+    },
+    "Greece": {
+      "AEK Athinon": 24,
+      "Panathinaikos": 24,
+      "Olympiakos Pireas": 28,
+      "Aris Thessalonikis": 29,
+      "PAOK Thessalonikis": 28,
+      "Iraklis Thessalonikis": 29,
+      "OFI Irakliou": 22,
+      "Skoda Xanthi": 30,
+      "Panionios": 27,
+      "AE Larisa": 28,
+      "Levadiakos": 28,
+      "Athinaikos": 29,
+      "Apollon Athinas": 32,
+      "Edessaikos": 28,
+      "Doxa Dramas": 28,
+      "Panachaiki": 26,
+      "Apollon Kalamarias": 27,
+      "Naousa": 29
+    }
+  }
+}

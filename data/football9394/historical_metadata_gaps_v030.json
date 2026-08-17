@@ -1,0 +1,160 @@
+{
+  "schema_version": 1,
+  "checkpoint": "0.30.0-full-rosters-1993-country-context",
+  "status": "pass",
+  "profile_comparable_coherence_repairs": [
+    {
+      "source_id": 9494214,
+      "display_name": "Marc Degryse",
+      "broad_position": "MED",
+      "comparables": [
+        115,
+        618
+      ]
+    },
+    {
+      "source_id": 9495157,
+      "display_name": "Aurelio Vidmar",
+      "broad_position": "DEL",
+      "comparables": [
+        935,
+        936
+      ]
+    },
+    {
+      "source_id": 9495160,
+      "display_name": "Branko Milošević",
+      "broad_position": "DEL",
+      "comparables": [
+        754,
+        2135
+      ]
+    },
+    {
+      "source_id": 9495172,
+      "display_name": "Isaac Asare",
+      "broad_position": "MED",
+      "comparables": [
+        713,
+        537
+      ]
+    },
+    {
+      "source_id": 9496355,
+      "display_name": "Nezih Ali Boloğlu",
+      "broad_position": "POR",
+      "comparables": [
+        221,
+        5982
+      ]
+    },
+    {
+      "source_id": 9496358,
+      "display_name": "Kubilay Türkyılmaz",
+      "broad_position": "DEL",
+      "comparables": [
+        294,
+        1016
+      ]
+    },
+    {
+      "source_id": 9496359,
+      "display_name": "Ahmet Bulut",
+      "broad_position": "POR",
+      "comparables": [
+        2489,
+        6718
+      ]
+    },
+    {
+      "source_id": 9496616,
+      "display_name": "Fyodor Cherenkov",
+      "broad_position": "MED",
+      "comparables": [
+        2213,
+        1013
+      ]
+    },
+    {
+      "source_id": 9496618,
+      "display_name": "Dmitri Ananko",
+      "broad_position": "DEF",
+      "comparables": [
+        1008,
+        927
+      ]
+    },
+    {
+      "source_id": 9496643,
+      "display_name": "Igor Vitalyevich Simutenkov",
+      "broad_position": "DEL",
+      "comparables": [
+        140,
+        2498
+      ]
+    }
+  ],
+  "unresolved_historical_venue_team_ids": [
+    9352001,
+    9352002,
+    9352003,
+    9352004,
+    9352005,
+    9352006,
+    9357001,
+    9357002,
+    9357003,
+    9357004,
+    9357005,
+    9357006,
+    9357007,
+    9357008,
+    9357009,
+    9357010,
+    9357011,
+    9357012,
+    9357013,
+    9357014,
+    9315001,
+    9315002,
+    9315003,
+    9315004,
+    9315005,
+    9315006,
+    9315007,
+    9315008,
+    9315009,
+    9315010,
+    9315011,
+    9315012,
+    9315013,
+    9315014,
+    9315015,
+    9315016,
+    9347001,
+    9347002,
+    9347003,
+    9347004,
+    9347005,
+    9347006,
+    9347007,
+    9347008,
+    9347009,
+    9347010,
+    9347011,
+    9347012,
+    9347013,
+    9347014,
+    9347015,
+    9347016,
+    9347017,
+    9347018
+  ],
+  "unresolved_historical_referee_pool_league_ids": [
+    930015,
+    930047,
+    930052,
+    930057
+  ],
+  "policy": "Known gaps are explicit and source-gated; no historical stadium/referee fact is invented merely to satisfy runtime metadata coverage."
+}

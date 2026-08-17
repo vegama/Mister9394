@@ -1,0 +1,3140 @@
+{
+  "schema_version": 1,
+  "checkpoint": "0.31.0-profiles-venues-referees-roster-hygiene",
+  "status": "pass",
+  "roster_hygiene": {
+    "removed_assignments": 142,
+    "by_country": {
+      "Belgium": 60,
+      "Turkey": 47,
+      "Russia": 35
+    },
+    "rows": [
+      {
+        "source_id": 10439,
+        "display_name": "Collins Garita",
+        "team_id": 409,
+        "country": "Belgium",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 10762,
+        "display_name": "Rodolfo",
+        "team_id": 644,
+        "country": "Turkey",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 11107,
+        "display_name": "Soslan",
+        "team_id": 617,
+        "country": "Russia",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 11119,
+        "display_name": "Sabitov",
+        "team_id": 617,
+        "country": "Russia",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 11206,
+        "display_name": "Ponikarov",
+        "team_id": 617,
+        "country": "Russia",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 11620,
+        "display_name": "Bulut",
+        "team_id": 645,
+        "country": "Turkey",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 11637,
+        "display_name": "Irtegün",
+        "team_id": 644,
+        "country": "Turkey",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 11678,
+        "display_name": "Zengin",
+        "team_id": 644,
+        "country": "Turkey",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 11693,
+        "display_name": "Hakan Bazee",
+        "team_id": 645,
+        "country": "Turkey",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 11695,
+        "display_name": "Gönül",
+        "team_id": 645,
+        "country": "Turkey",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 11710,
+        "display_name": "Güngör",
+        "team_id": 645,
+        "country": "Turkey",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 11712,
+        "display_name": "Darko Injac",
+        "team_id": 644,
+        "country": "Turkey",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 11720,
+        "display_name": "Albayrak",
+        "team_id": 645,
+        "country": "Turkey",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 11730,
+        "display_name": "Öztorun",
+        "team_id": 644,
+        "country": "Turkey",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 11832,
+        "display_name": "Chintaseli",
+        "team_id": 617,
+        "country": "Russia",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 11836,
+        "display_name": "Selikhov",
+        "team_id": 617,
+        "country": "Russia",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 12383,
+        "display_name": "Sevgi",
+        "team_id": 644,
+        "country": "Turkey",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 12557,
+        "display_name": "Elias",
+        "team_id": 644,
+        "country": "Turkey",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 13410,
+        "display_name": "Bakenga",
+        "team_id": 645,
+        "country": "Turkey",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 13657,
+        "display_name": "Mwepu",
+        "team_id": 409,
+        "country": "Belgium",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 13668,
+        "display_name": "Bakula",
+        "team_id": 409,
+        "country": "Belgium",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 13899,
+        "display_name": "Schoofs",
+        "team_id": 409,
+        "country": "Belgium",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 14158,
+        "display_name": "Wiele",
+        "team_id": 415,
+        "country": "Belgium",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 14380,
+        "display_name": "Martínez",
+        "team_id": 459,
+        "country": "Belgium",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 14597,
+        "display_name": "Stélvio",
+        "team_id": 645,
+        "country": "Turkey",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 14931,
+        "display_name": "Hümmet",
+        "team_id": 644,
+        "country": "Turkey",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 15046,
+        "display_name": "Gvalia",
+        "team_id": 617,
+        "country": "Russia",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 15047,
+        "display_name": "D. Georgievski",
+        "team_id": 617,
+        "country": "Russia",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 15244,
+        "display_name": "Aholou",
+        "team_id": 415,
+        "country": "Belgium",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 15563,
+        "display_name": "Vanzeir",
+        "team_id": 409,
+        "country": "Belgium",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 15573,
+        "display_name": "Bérenguer",
+        "team_id": 459,
+        "country": "Belgium",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 15785,
+        "display_name": "Aborah",
+        "team_id": 459,
+        "country": "Belgium",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 16076,
+        "display_name": "Bertram",
+        "team_id": 644,
+        "country": "Turkey",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 16163,
+        "display_name": "Nebel",
+        "team_id": 645,
+        "country": "Turkey",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 16257,
+        "display_name": "Gürgen",
+        "team_id": 644,
+        "country": "Turkey",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 16309,
+        "display_name": "Diego",
+        "team_id": 617,
+        "country": "Russia",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 16462,
+        "display_name": "Yuvakuran",
+        "team_id": 645,
+        "country": "Turkey",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 16463,
+        "display_name": "Thomas",
+        "team_id": 644,
+        "country": "Turkey",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 16468,
+        "display_name": "Akyüz",
+        "team_id": 644,
+        "country": "Turkey",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 16629,
+        "display_name": "Bittencourt",
+        "team_id": 645,
+        "country": "Turkey",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 16858,
+        "display_name": "Villalba",
+        "team_id": 617,
+        "country": "Russia",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 16862,
+        "display_name": "Zé Varela",
+        "team_id": 617,
+        "country": "Russia",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 16973,
+        "display_name": "Kownacki",
+        "team_id": 415,
+        "country": "Belgium",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 16975,
+        "display_name": "Lachman",
+        "team_id": 415,
+        "country": "Belgium",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 17169,
+        "display_name": "Koçaklı",
+        "team_id": 645,
+        "country": "Turkey",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 17189,
+        "display_name": "Kaçar",
+        "team_id": 645,
+        "country": "Turkey",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 17674,
+        "display_name": "Schär",
+        "team_id": 645,
+        "country": "Turkey",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 18175,
+        "display_name": "Ede",
+        "team_id": 617,
+        "country": "Russia",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 19030,
+        "display_name": "Diamanka",
+        "team_id": 415,
+        "country": "Belgium",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 19071,
+        "display_name": "Kolodin",
+        "team_id": 1087,
+        "country": "Russia",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 19073,
+        "display_name": "Grigorjev",
+        "team_id": 617,
+        "country": "Russia",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 19096,
+        "display_name": "Leverón",
+        "team_id": 415,
+        "country": "Belgium",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 19097,
+        "display_name": "Baba",
+        "team_id": 415,
+        "country": "Belgium",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 19098,
+        "display_name": "Acker",
+        "team_id": 415,
+        "country": "Belgium",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 19101,
+        "display_name": "Bidaoui",
+        "team_id": 415,
+        "country": "Belgium",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 19193,
+        "display_name": "Smolov",
+        "team_id": 617,
+        "country": "Russia",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 19225,
+        "display_name": "N´Guessan",
+        "team_id": 415,
+        "country": "Belgium",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 19296,
+        "display_name": "Corryn",
+        "team_id": 459,
+        "country": "Belgium",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 19420,
+        "display_name": "Cornet",
+        "team_id": 409,
+        "country": "Belgium",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 19473,
+        "display_name": "Carrasco",
+        "team_id": 409,
+        "country": "Belgium",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 19475,
+        "display_name": "De Buyl",
+        "team_id": 459,
+        "country": "Belgium",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 19829,
+        "display_name": "Imschoot",
+        "team_id": 459,
+        "country": "Belgium",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 19869,
+        "display_name": "Goris",
+        "team_id": 409,
+        "country": "Belgium",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 19875,
+        "display_name": "Ozdoev",
+        "team_id": 617,
+        "country": "Russia",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 19939,
+        "display_name": "Ntambwe",
+        "team_id": 459,
+        "country": "Belgium",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 19969,
+        "display_name": "Pereira",
+        "team_id": 644,
+        "country": "Turkey",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 20038,
+        "display_name": "Bekdemir",
+        "team_id": 459,
+        "country": "Belgium",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 20240,
+        "display_name": "Gorodov",
+        "team_id": 1087,
+        "country": "Russia",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 20559,
+        "display_name": "Zabolotnyi",
+        "team_id": 1087,
+        "country": "Russia",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 20702,
+        "display_name": "Anestis",
+        "team_id": 459,
+        "country": "Belgium",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 20817,
+        "display_name": "Lobov",
+        "team_id": 617,
+        "country": "Russia",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 20843,
+        "display_name": "Langlitz",
+        "team_id": 1087,
+        "country": "Russia",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 20943,
+        "display_name": "Ortega",
+        "team_id": 644,
+        "country": "Turkey",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 21444,
+        "display_name": "Vervoort",
+        "team_id": 459,
+        "country": "Belgium",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 21634,
+        "display_name": "Beto",
+        "team_id": 645,
+        "country": "Turkey",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 21738,
+        "display_name": "Vargić",
+        "team_id": 644,
+        "country": "Turkey",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 21937,
+        "display_name": "Trajkovic",
+        "team_id": 459,
+        "country": "Belgium",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 21942,
+        "display_name": "Aké",
+        "team_id": 617,
+        "country": "Russia",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 22036,
+        "display_name": "Bongonda",
+        "team_id": 415,
+        "country": "Belgium",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 22053,
+        "display_name": "Tielemans",
+        "team_id": 409,
+        "country": "Belgium",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 22079,
+        "display_name": "Naudts",
+        "team_id": 409,
+        "country": "Belgium",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 22135,
+        "display_name": "Belkalem",
+        "team_id": 409,
+        "country": "Belgium",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 22313,
+        "display_name": "Deaux",
+        "team_id": 415,
+        "country": "Belgium",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 22824,
+        "display_name": "Stanisavljevic",
+        "team_id": 409,
+        "country": "Belgium",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 22905,
+        "display_name": "Nazimov",
+        "team_id": 617,
+        "country": "Russia",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 22915,
+        "display_name": "Samsonov",
+        "team_id": 1087,
+        "country": "Russia",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 23042,
+        "display_name": "Garry Hoogma",
+        "team_id": 645,
+        "country": "Turkey",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 23501,
+        "display_name": "Nganga",
+        "team_id": 409,
+        "country": "Belgium",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 23502,
+        "display_name": "Sekulic",
+        "team_id": 459,
+        "country": "Belgium",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 23567,
+        "display_name": "Verkindere",
+        "team_id": 459,
+        "country": "Belgium",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 23573,
+        "display_name": "Verbist",
+        "team_id": 415,
+        "country": "Belgium",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 23799,
+        "display_name": "Mejač",
+        "team_id": 459,
+        "country": "Belgium",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 23847,
+        "display_name": "Smet",
+        "team_id": 415,
+        "country": "Belgium",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 23977,
+        "display_name": "Musonda",
+        "team_id": 409,
+        "country": "Belgium",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 23979,
+        "display_name": "Lemoine",
+        "team_id": 409,
+        "country": "Belgium",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 23982,
+        "display_name": "Onyilo",
+        "team_id": 459,
+        "country": "Belgium",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 24006,
+        "display_name": "Delcroix",
+        "team_id": 459,
+        "country": "Belgium",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 24135,
+        "display_name": "Argilashki",
+        "team_id": 1087,
+        "country": "Russia",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 24170,
+        "display_name": "Omeljanchuk",
+        "team_id": 1087,
+        "country": "Russia",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 24186,
+        "display_name": "Buyvolov",
+        "team_id": 1087,
+        "country": "Russia",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 24547,
+        "display_name": "Ay",
+        "team_id": 645,
+        "country": "Turkey",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 24549,
+        "display_name": "Kaplan",
+        "team_id": 645,
+        "country": "Turkey",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 24553,
+        "display_name": "Zeelst",
+        "team_id": 644,
+        "country": "Turkey",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 24608,
+        "display_name": "Altıntaş",
+        "team_id": 645,
+        "country": "Turkey",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 24643,
+        "display_name": "Tarakcı",
+        "team_id": 644,
+        "country": "Turkey",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 24732,
+        "display_name": "Görtler",
+        "team_id": 644,
+        "country": "Turkey",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 25314,
+        "display_name": "Poulain",
+        "team_id": 415,
+        "country": "Belgium",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 25530,
+        "display_name": "Dzhabrailov",
+        "team_id": 1087,
+        "country": "Russia",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 25553,
+        "display_name": "Ryzhkov",
+        "team_id": 1087,
+        "country": "Russia",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 25576,
+        "display_name": "Oparin",
+        "team_id": 1087,
+        "country": "Russia",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 25737,
+        "display_name": "Kritsyuk",
+        "team_id": 1087,
+        "country": "Russia",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 25871,
+        "display_name": "Šetkus",
+        "team_id": 1087,
+        "country": "Russia",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 25948,
+        "display_name": "Vaganov",
+        "team_id": 1087,
+        "country": "Russia",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 25949,
+        "display_name": "Qosimov",
+        "team_id": 1087,
+        "country": "Russia",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 26027,
+        "display_name": "Klostermann",
+        "team_id": 645,
+        "country": "Turkey",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 26092,
+        "display_name": "Kornilov",
+        "team_id": 1087,
+        "country": "Russia",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 26096,
+        "display_name": "Fomin",
+        "team_id": 1087,
+        "country": "Russia",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 26583,
+        "display_name": "Valencia",
+        "team_id": 409,
+        "country": "Belgium",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 27086,
+        "display_name": "Norre",
+        "team_id": 415,
+        "country": "Belgium",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 27324,
+        "display_name": "Parvulescu",
+        "team_id": 415,
+        "country": "Belgium",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 27327,
+        "display_name": "Grădinaru",
+        "team_id": 415,
+        "country": "Belgium",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 27683,
+        "display_name": "Artarslan",
+        "team_id": 645,
+        "country": "Turkey",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 27712,
+        "display_name": "Bastien",
+        "team_id": 459,
+        "country": "Belgium",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 28324,
+        "display_name": "Samy Gielen",
+        "team_id": 409,
+        "country": "Belgium",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 28602,
+        "display_name": "Damme",
+        "team_id": 459,
+        "country": "Belgium",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 28952,
+        "display_name": "Zeroual",
+        "team_id": 409,
+        "country": "Belgium",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 29079,
+        "display_name": "Dimata",
+        "team_id": 459,
+        "country": "Belgium",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 30991,
+        "display_name": "Ngombo",
+        "team_id": 409,
+        "country": "Belgium",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 31120,
+        "display_name": "Katrich",
+        "team_id": 617,
+        "country": "Russia",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 31996,
+        "display_name": "El Tirpan",
+        "team_id": 459,
+        "country": "Belgium",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 31998,
+        "display_name": "Badibanga",
+        "team_id": 409,
+        "country": "Belgium",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 32000,
+        "display_name": "Ryan Cleemput",
+        "team_id": 409,
+        "country": "Belgium",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 32007,
+        "display_name": "Van Messaoudi",
+        "team_id": 459,
+        "country": "Belgium",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 33160,
+        "display_name": "Ademoglu",
+        "team_id": 645,
+        "country": "Turkey",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 33378,
+        "display_name": "Şahiner",
+        "team_id": 644,
+        "country": "Turkey",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 33379,
+        "display_name": "Atasayar",
+        "team_id": 644,
+        "country": "Turkey",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 9495317,
+        "display_name": "Rüştü Reçber",
+        "team_id": 9357001,
+        "country": "Turkey",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 9495329,
+        "display_name": "Ergün Penbe",
+        "team_id": 645,
+        "country": "Turkey",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 9495339,
+        "display_name": "Turhan Sofuoğlu",
+        "team_id": 9357001,
+        "country": "Turkey",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 9495340,
+        "display_name": "Okan Buruk",
+        "team_id": 645,
+        "country": "Turkey",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 9495341,
+        "display_name": "Rıdvan Dilmen",
+        "team_id": 9357001,
+        "country": "Turkey",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      },
+      {
+        "source_id": 9495346,
+        "display_name": "Orhan Çıkırıkçı",
+        "team_id": 9357002,
+        "country": "Turkey",
+        "reason": "legacy_mdb_club_id_collision_not_in_verified_1993_94_staging"
+      }
+    ],
+    "policy": "Only active-team identities absent from the verified 1993-94 staging union are removed; multi-club season rows sharing one verified identity remain valid."
+  },
+  "profiles": {
+    "curated": 103,
+    "role_corrections": 43,
+    "photo_profiles_source_linked": 9,
+    "by_country": {
+      "Belgium": 45,
+      "Russia": 26,
+      "Greece": 23,
+      "Turkey": 9
+    },
+    "changes": [
+      {
+        "source_id": 9494216,
+        "display_name": "Filip De Wilde",
+        "country": "Belgium",
+        "role_before": 0,
+        "role_after": 0,
+        "position_before": "Goalkeeper",
+        "position_after": "Goalkeeper",
+        "source_position": "Goalkeeper",
+        "birth_before": "1964-07-05T00:00:00",
+        "birth_after": "1964-07-05T00:00:00",
+        "nationalities": [
+          17
+        ],
+        "profile_source_url": "https://www.transfermarkt.com/rsc-anderlecht/kader/verein/58/saison_id/1993/plus/1",
+        "photo_source_ready": false
+      },
+      {
+        "source_id": 9496002,
+        "display_name": "Peter Maes",
+        "country": "Belgium",
+        "role_before": 0,
+        "role_after": 0,
+        "position_before": "Goalkeeper",
+        "position_after": "Goalkeeper",
+        "source_position": "Goalkeeper",
+        "birth_before": "1964-06-01T00:00:00",
+        "birth_after": "1964-06-01T00:00:00",
+        "nationalities": [
+          17
+        ],
+        "profile_source_url": "https://www.transfermarkt.com/rsc-anderlecht/kader/verein/58/saison_id/1993/plus/1",
+        "photo_source_ready": false
+      },
+      {
+        "source_id": 9494209,
+        "display_name": "Philippe Albert",
+        "country": "Belgium",
+        "role_before": 3,
+        "role_after": 3,
+        "position_before": "Centre Back",
+        "position_after": "Centre Back",
+        "source_position": "Centre-Back",
+        "birth_before": "1967-08-10T00:00:00",
+        "birth_after": "1967-08-10T00:00:00",
+        "nationalities": [
+          17
+        ],
+        "profile_source_url": "https://www.transfermarkt.com/rsc-anderlecht/kader/verein/58/saison_id/1993/plus/1",
+        "photo_source_ready": false
+      },
+      {
+        "source_id": 9496007,
+        "display_name": "Graeme Rutjes",
+        "country": "Belgium",
+        "role_before": 3,
+        "role_after": 3,
+        "position_before": "Centre Back",
+        "position_after": "Centre Back",
+        "source_position": "Centre-Back",
+        "birth_before": "1960-03-26T00:00:00",
+        "birth_after": "1960-03-26T00:00:00",
+        "nationalities": [
+          3,
+          15
+        ],
+        "profile_source_url": "https://www.transfermarkt.com/rsc-anderlecht/kader/verein/58/saison_id/1993/plus/1",
+        "photo_source_ready": false
+      },
+      {
+        "source_id": 9494182,
+        "display_name": "Chidi Nwanu",
+        "country": "Belgium",
+        "role_before": 3,
+        "role_after": 3,
+        "position_before": "Centre Back",
+        "position_after": "Centre Back",
+        "source_position": "Centre-Back",
+        "birth_before": "1967-01-01T00:00:00",
+        "birth_after": "1967-01-01T00:00:00",
+        "nationalities": [
+          59
+        ],
+        "profile_source_url": "https://www.transfermarkt.com/rsc-anderlecht/kader/verein/58/saison_id/1993/plus/1",
+        "photo_source_ready": false
+      },
+      {
+        "source_id": 9496001,
+        "display_name": "Wim Kooiman",
+        "country": "Belgium",
+        "role_before": 3,
+        "role_after": 3,
+        "position_before": "Centre Back",
+        "position_after": "Centre Back",
+        "source_position": "Centre-Back",
+        "birth_before": "1960-09-09T00:00:00",
+        "birth_after": "1960-09-09T00:00:00",
+        "nationalities": [
+          3
+        ],
+        "profile_source_url": "https://www.transfermarkt.com/rsc-anderlecht/kader/verein/58/saison_id/1993/plus/1",
+        "photo_source_ready": false
+      },
+      {
+        "source_id": 9494217,
+        "display_name": "Michel De Wolf",
+        "country": "Belgium",
+        "role_before": 2,
+        "role_after": 2,
+        "position_before": "Left Back",
+        "position_after": "Left Back",
+        "source_position": "Left-Back",
+        "birth_before": "1958-01-19T00:00:00",
+        "birth_after": "1958-01-19T00:00:00",
+        "nationalities": [
+          17
+        ],
+        "profile_source_url": "https://www.transfermarkt.com/rsc-anderlecht/kader/verein/58/saison_id/1993/plus/1",
+        "photo_source_ready": false
+      },
+      {
+        "source_id": 9495305,
+        "display_name": "Bertrand Crasson",
+        "country": "Belgium",
+        "role_before": 1,
+        "role_after": 1,
+        "position_before": "Right Back",
+        "position_after": "Right Back",
+        "source_position": "Right-Back",
+        "birth_before": "1971-10-15T00:00:00",
+        "birth_after": "1971-10-15T00:00:00",
+        "nationalities": [
+          17
+        ],
+        "profile_source_url": "https://www.transfermarkt.com/rsc-anderlecht/kader/verein/58/saison_id/1993/plus/1",
+        "photo_source_ready": false
+      },
+      {
+        "source_id": 9496008,
+        "display_name": "Olivier Suray",
+        "country": "Belgium",
+        "role_before": 1,
+        "role_after": 1,
+        "position_before": "Right Back",
+        "position_after": "Right Back",
+        "source_position": "Right-Back",
+        "birth_before": "1971-10-16T00:00:00",
+        "birth_after": "1971-10-16T00:00:00",
+        "nationalities": [
+          17
+        ],
+        "profile_source_url": "https://www.transfermarkt.com/rsc-anderlecht/kader/verein/58/saison_id/1993/plus/1",
+        "photo_source_ready": false
+      },
+      {
+        "source_id": 9496003,
+        "display_name": "Guy Marchoul",
+        "country": "Belgium",
+        "role_before": 1,
+        "role_after": 1,
+        "position_before": "Right Back",
+        "position_after": "Right Back",
+        "source_position": "Right-Back",
+        "birth_before": "1965-11-04T00:00:00",
+        "birth_after": "1965-11-04T00:00:00",
+        "nationalities": [
+          17
+        ],
+        "profile_source_url": "https://www.transfermarkt.com/rsc-anderlecht/kader/verein/58/saison_id/1993/plus/1",
+        "photo_source_ready": false
+      },
+      {
+        "source_id": 9495172,
+        "display_name": "Isaac Asare",
+        "country": "Belgium",
+        "role_before": 1,
+        "role_after": 1,
+        "position_before": "Right Back",
+        "position_after": "Right Back",
+        "source_position": "Right-Back",
+        "birth_before": "1974-09-01T00:00:00",
+        "birth_after": "1974-09-01T00:00:00",
+        "nationalities": [
+          42,
+          17
+        ],
+        "profile_source_url": "https://www.transfermarkt.com/rsc-anderlecht/kader/verein/58/saison_id/1993/plus/1",
+        "photo_source_ready": false
+      },
+      {
+        "source_id": 9496005,
+        "display_name": "Frédéric Peiremans",
+        "country": "Belgium",
+        "role_before": 6,
+        "role_after": 6,
+        "position_before": "Defensive Midfielder",
+        "position_after": "Defensive Midfielder",
+        "source_position": "Defensive Midfield",
+        "birth_before": "1973-09-03T00:00:00",
+        "birth_after": "1973-09-03T00:00:00",
+        "nationalities": [
+          17
+        ],
+        "profile_source_url": "https://www.transfermarkt.com/rsc-anderlecht/kader/verein/58/saison_id/1993/plus/1",
+        "photo_source_ready": false
+      },
+      {
+        "source_id": 9495308,
+        "display_name": "Johan Walem",
+        "country": "Belgium",
+        "role_before": 7,
+        "role_after": 7,
+        "position_before": "Centre Midfielder",
+        "position_after": "Centre Midfielder",
+        "source_position": "Central Midfield",
+        "birth_before": "1972-02-01T00:00:00",
+        "birth_after": "1972-02-01T00:00:00",
+        "nationalities": [
+          17
+        ],
+        "profile_source_url": "https://www.transfermarkt.com/rsc-anderlecht/kader/verein/58/saison_id/1993/plus/1",
+        "photo_source_ready": false
+      },
+      {
+        "source_id": 9496004,
+        "display_name": "Charly Musonda",
+        "country": "Belgium",
+        "role_before": 7,
+        "role_after": 7,
+        "position_before": "Centre Midfielder",
+        "position_after": "Centre Midfielder",
+        "source_position": "Central Midfield",
+        "birth_before": "1969-08-22T00:00:00",
+        "birth_after": "1969-08-22T00:00:00",
+        "nationalities": [
+          112
+        ],
+        "profile_source_url": "https://www.transfermarkt.com/rsc-anderlecht/kader/verein/58/saison_id/1993/plus/1",
+        "photo_source_ready": false
+      },
+      {
+        "source_id": 9496000,
+        "display_name": "Philip Haagdoren",
+        "country": "Belgium",
+        "role_before": 9,
+        "role_after": 9,
+        "position_before": "Right Midfielder",
+        "position_after": "Right Midfielder",
+        "source_position": "Right Midfield",
+        "birth_before": "1970-06-25T00:00:00",
+        "birth_after": "1970-06-25T00:00:00",
+        "nationalities": [
+          17
+        ],
+        "profile_source_url": "https://www.transfermarkt.com/rsc-anderlecht/kader/verein/58/saison_id/1993/plus/1",
+        "photo_source_ready": false
+      },
+      {
+        "source_id": 9494218,
+        "display_name": "Marc Emmers",
+        "country": "Belgium",
+        "role_before": 9,
+        "role_after": 9,
+        "position_before": "Right Midfielder",
+        "position_after": "Right Midfielder",
+        "source_position": "Right Midfield",
+        "birth_before": "1966-02-25T00:00:00",
+        "birth_after": "1966-02-25T00:00:00",
+        "nationalities": [
+          17
+        ],
+        "profile_source_url": "https://www.transfermarkt.com/rsc-anderlecht/kader/verein/58/saison_id/1993/plus/1",
+        "photo_source_ready": false
+      },
+      {
+        "source_id": 9494219,
+        "display_name": "Danny Boffin",
+        "country": "Belgium",
+        "role_before": 13,
+        "role_after": 13,
+        "position_before": "Left Midfielder",
+        "position_after": "Left Midfielder",
+        "source_position": "Left Midfield",
+        "birth_before": "1965-07-10T00:00:00",
+        "birth_after": "1965-07-10T00:00:00",
+        "nationalities": [
+          17
+        ],
+        "profile_source_url": "https://www.transfermarkt.com/rsc-anderlecht/kader/verein/58/saison_id/1993/plus/1",
+        "photo_source_ready": false
+      },
+      {
+        "source_id": 9495302,
+        "display_name": "Bruno Versavel",
+        "country": "Belgium",
+        "role_before": 13,
+        "role_after": 13,
+        "position_before": "Left Midfielder",
+        "position_after": "Left Midfielder",
+        "source_position": "Left Midfield",
+        "birth_before": "1967-08-27T00:00:00",
+        "birth_after": "1967-08-27T00:00:00",
+        "nationalities": [
+          17
+        ],
+        "profile_source_url": "https://www.transfermarkt.com/rsc-anderlecht/kader/verein/58/saison_id/1993/plus/1",
+        "photo_source_ready": false
+      },
+      {
+        "source_id": 9496009,
+        "display_name": "Van Baekel",
+        "country": "Belgium",
+        "role_before": 13,
+        "role_after": 13,
+        "position_before": "Left Midfielder",
+        "position_after": "Left Midfielder",
+        "source_position": "Left Midfield",
+        "birth_before": "1961-06-20T00:00:00",
+        "birth_after": "1961-06-20T00:00:00",
+        "nationalities": [
+          17
+        ],
+        "profile_source_url": "https://www.transfermarkt.com/rsc-anderlecht/kader/verein/58/saison_id/1993/plus/1",
+        "photo_source_ready": false
+      },
+      {
+        "source_id": 9496010,
+        "display_name": "Pär Zetterberg",
+        "country": "Belgium",
+        "role_before": 8,
+        "role_after": 8,
+        "position_before": "Attacking Midfielder",
+        "position_after": "Attacking Midfielder",
+        "source_position": "Attacking Midfield",
+        "birth_before": "1970-10-14T00:00:00",
+        "birth_after": "1970-10-14T00:00:00",
+        "nationalities": [
+          79
+        ],
+        "profile_source_url": "https://www.transfermarkt.com/rsc-anderlecht/kader/verein/58/saison_id/1993/plus/1",
+        "photo_source_ready": false
+      },
+      {
+        "source_id": 9494213,
+        "display_name": "Luc Nilis",
+        "country": "Belgium",
+        "role_before": 17,
+        "role_after": 17,
+        "position_before": "Centre Forward",
+        "position_after": "Centre Forward",
+        "source_position": "Centre-Forward",
+        "birth_before": "1967-05-25T00:00:00",
+        "birth_after": "1967-05-25T00:00:00",
+        "nationalities": [
+          17
+        ],
+        "profile_source_url": "https://www.transfermarkt.com/rsc-anderlecht/kader/verein/58/saison_id/1993/plus/1",
+        "photo_source_ready": false
+      },
+      {
+        "source_id": 9496006,
+        "display_name": "Yaw Preko",
+        "country": "Belgium",
+        "role_before": 17,
+        "role_after": 17,
+        "position_before": "Centre Forward",
+        "position_after": "Centre Forward",
+        "source_position": "Centre-Forward",
+        "birth_before": "1974-09-08T00:00:00",
+        "birth_after": "1974-09-08T00:00:00",
+        "nationalities": [
+          42
+        ],
+        "profile_source_url": "https://www.transfermarkt.com/rsc-anderlecht/kader/verein/58/saison_id/1993/plus/1",
+        "photo_source_ready": false
+      },
+      {
+        "source_id": 9494244,
+        "display_name": "John Bosman",
+        "country": "Belgium",
+        "role_before": 17,
+        "role_after": 17,
+        "position_before": "Centre Forward",
+        "position_after": "Centre Forward",
+        "source_position": "Centre-Forward",
+        "birth_before": "1965-02-01T00:00:00",
+        "birth_after": "1965-02-01T00:00:00",
+        "nationalities": [
+          3
+        ],
+        "profile_source_url": "https://www.transfermarkt.com/rsc-anderlecht/kader/verein/58/saison_id/1993/plus/1",
+        "photo_source_ready": false
+      },
+      {
+        "source_id": 9494214,
+        "display_name": "Marc Degryse",
+        "country": "Belgium",
+        "role_before": 17,
+        "role_after": 17,
+        "position_before": "Centre Forward",
+        "position_after": "Centre Forward",
+        "source_position": "Centre-Forward",
+        "birth_before": "1965-09-04T00:00:00",
+        "birth_after": "1965-09-04T00:00:00",
+        "nationalities": [
+          17
+        ],
+        "profile_source_url": "https://www.transfermarkt.com/rsc-anderlecht/kader/verein/58/saison_id/1993/plus/1",
+        "photo_source_ready": false
+      },
+      {
+        "source_id": 9494223,
+        "display_name": "Dany Verlinden",
+        "country": "Belgium",
+        "role_before": 0,
+        "role_after": 0,
+        "position_before": "Goalkeeper",
+        "position_after": "Goalkeeper",
+        "source_position": "Goalkeeper",
+        "birth_before": "1963-08-15T00:00:00",
+        "birth_after": "1963-08-15T00:00:00",
+        "nationalities": [
+          17
+        ],
+        "profile_source_url": "https://www.transfermarkt.com/club-brugge-kv/kader/verein/2282/saison_id/1993/plus/1",
+        "photo_source_ready": false
+      },
+      {
+        "source_id": 9496071,
+        "display_name": "Belpaire",
+        "country": "Belgium",
+        "role_before": 0,
+        "role_after": 0,
+        "position_before": "Goalkeeper",
+        "position_after": "Goalkeeper",
+        "source_position": "Goalkeeper",
+        "birth_before": "1973-01-03T00:00:00",
+        "birth_after": "1973-01-03T00:00:00",
+        "nationalities": [
+          17
+        ],
+        "profile_source_url": "https://www.transfermarkt.com/club-brugge-kv/kader/verein/2282/saison_id/1993/plus/1",
+        "photo_source_ready": false
+      },
+      {
+        "source_id": 9496074,
+        "display_name": "Disztl",
+        "country": "Belgium",
+        "role_before": 3,
+        "role_after": 3,
+        "position_before": "Centre Back",
+        "position_after": "Centre Back",
+        "source_position": "Centre-Back",
+        "birth_before": "1962-06-04T00:00:00",
+        "birth_after": "1962-06-04T00:00:00",
+        "nationalities": [
+          93
+        ],
+        "profile_source_url": "https://www.transfermarkt.com/club-brugge-kv/kader/verein/2282/saison_id/1993/plus/1",
+        "photo_source_ready": false
+      },
+      {
+        "source_id": 9496072,
+        "display_name": "Cossey",
+        "country": "Belgium",
+        "role_before": 3,
+        "role_after": 3,
+        "position_before": "Centre Back",
+        "position_after": "Centre Back",
+        "source_position": "Centre-Back",
+        "birth_before": "1961-08-02T00:00:00",
+        "birth_after": "1961-08-02T00:00:00",
+        "nationalities": [
+          17
+        ],
+        "profile_source_url": "https://www.transfermarkt.com/club-brugge-kv/kader/verein/2282/saison_id/1993/plus/1",
+        "photo_source_ready": false
+      },
+      {
+        "source_id": 9495306,
+        "display_name": "Pascal Plovie",
+        "country": "Belgium",
+        "role_before": 3,
+        "role_after": 3,
+        "position_before": "Centre Back",
+        "position_after": "Centre Back",
+        "source_position": "Centre-Back",
+        "birth_before": "1965-05-07T00:00:00",
+        "birth_after": "1965-05-07T00:00:00",
+        "nationalities": [
+          17
+        ],
+        "profile_source_url": "https://www.transfermarkt.com/club-brugge-kv/kader/verein/2282/saison_id/1993/plus/1",
+        "photo_source_ready": false
+      },
+      {
+        "source_id": 9494208,
+        "display_name": "Vital Borkelmans",
+        "country": "Belgium",
+        "role_before": 2,
+        "role_after": 2,
+        "position_before": "Left Back",
+        "position_after": "Left Back",
+        "source_position": "Left-Back",
+        "birth_before": "1963-06-01T00:00:00",
+        "birth_after": "1963-06-01T00:00:00",
+        "nationalities": [
+          17
+        ],
+        "profile_source_url": "https://www.transfermarkt.com/club-brugge-kv/kader/verein/2282/saison_id/1993/plus/1",
+        "photo_source_ready": false
+      },
+      {
+        "source_id": 9494225,
+        "display_name": "Pascal Renier",
+        "country": "Belgium",
+        "role_before": 2,
+        "role_after": 2,
+        "position_before": "Left Back",
+        "position_after": "Left Back",
+        "source_position": "Left-Back",
+        "birth_before": "1971-08-03T00:00:00",
+        "birth_after": "1971-08-03T00:00:00",
+        "nationalities": [
+          17
+        ],
+        "profile_source_url": "https://www.transfermarkt.com/club-brugge-kv/kader/verein/2282/saison_id/1993/plus/1",
+        "photo_source_ready": false
+      },
+      {
+        "source_id": 9494207,
+        "display_name": "Dirk Medved",
+        "country": "Belgium",
+        "role_before": 1,
+        "role_after": 1,
+        "position_before": "Right Back",
+        "position_after": "Right Back",
+        "source_position": "Right-Back",
+        "birth_before": "1968-09-15T00:00:00",
+        "birth_after": "1968-09-15T00:00:00",
+        "nationalities": [
+          17
+        ],
+        "profile_source_url": "https://www.transfermarkt.com/club-brugge-kv/kader/verein/2282/saison_id/1993/plus/1",
+        "photo_source_ready": false
+      },
+      {
+        "source_id": 9496078,
+        "display_name": "Van Maele",
+        "country": "Belgium",
+        "role_before": 1,
+        "role_after": 1,
+        "position_before": "Right Back",
+        "position_after": "Right Back",
+        "source_position": "Right-Back",
+        "birth_before": "1970-09-15T00:00:00",
+        "birth_after": "1970-09-15T00:00:00",
+        "nationalities": [
+          17
+        ],
+        "profile_source_url": "https://www.transfermarkt.com/club-brugge-kv/kader/verein/2282/saison_id/1993/plus/1",
+        "photo_source_ready": false
+      },
+      {
+        "source_id": 9494211,
+        "display_name": "Lorenzo Staelens",
+        "country": "Belgium",
+        "role_before": 6,
+        "role_after": 6,
+        "position_before": "Defensive Midfielder",
+        "position_after": "Defensive Midfielder",
+        "source_position": "Defensive Midfield",
+        "birth_before": "1964-04-30T00:00:00",
+        "birth_after": "1964-04-30T00:00:00",
+        "nationalities": [
+          17
+        ],
+        "profile_source_url": "https://www.transfermarkt.com/club-brugge-kv/kader/verein/2282/saison_id/1993/plus/1",
+        "photo_source_ready": false
+      },
+      {
+        "source_id": 9496077,
+        "display_name": "Okon",
+        "country": "Belgium",
+        "role_before": 6,
+        "role_after": 6,
+        "position_before": "Defensive Midfielder",
+        "position_after": "Defensive Midfielder",
+        "source_position": "Defensive Midfield",
+        "birth_before": "1972-04-05T00:00:00",
+        "birth_after": "1972-04-05T00:00:00",
+        "nationalities": [
+          15,
+          17
+        ],
+        "profile_source_url": "https://www.transfermarkt.com/club-brugge-kv/kader/verein/2282/saison_id/1993/plus/1",
+        "photo_source_ready": false
+      },
+      {
+        "source_id": 9494212,
+        "display_name": "Franky Van der Elst",
+        "country": "Belgium",
+        "role_before": 6,
+        "role_after": 6,
+        "position_before": "Defensive Midfielder",
+        "position_after": "Defensive Midfielder",
+        "source_position": "Defensive Midfield",
+        "birth_before": "1961-04-30T00:00:00",
+        "birth_after": "1961-04-30T00:00:00",
+        "nationalities": [
+          17
+        ],
+        "profile_source_url": "https://www.transfermarkt.com/club-brugge-kv/kader/verein/2282/saison_id/1993/plus/1",
+        "photo_source_ready": false
+      },
+      {
+        "source_id": 9496080,
+        "display_name": "Vermant",
+        "country": "Belgium",
+        "role_before": 7,
+        "role_after": 7,
+        "position_before": "Centre Midfielder",
+        "position_after": "Centre Midfielder",
+        "source_position": "Central Midfield",
+        "birth_before": "1973-04-04T00:00:00",
+        "birth_after": "1973-04-04T00:00:00",
+        "nationalities": [
+          17
+        ],
+        "profile_source_url": "https://www.transfermarkt.com/club-brugge-kv/kader/verein/2282/saison_id/1993/plus/1",
+        "photo_source_ready": false
+      },
+      {
+        "source_id": 9496081,
+        "display_name": "Verspaille",
+        "country": "Belgium",
+        "role_before": 9,
+        "role_after": 9,
+        "position_before": "Right Midfielder",
+        "position_after": "Right Midfielder",
+        "source_position": "Right Midfield",
+        "birth_before": "1964-07-21T00:00:00",
+        "birth_after": "1964-07-21T00:00:00",
+        "nationalities": [
+          17
+        ],
+        "profile_source_url": "https://www.transfermarkt.com/club-brugge-kv/kader/verein/2282/saison_id/1993/plus/1",
+        "photo_source_ready": false
+      },
+      {
+        "source_id": 9496073,
+        "display_name": "Crève",
+        "country": "Belgium",
+        "role_before": 9,
+        "role_after": 9,
+        "position_before": "Right Midfielder",
+        "position_after": "Right Midfielder",
+        "source_position": "Right Midfield",
+        "birth_before": "1961-08-17T00:00:00",
+        "birth_after": "1961-08-17T00:00:00",
+        "nationalities": [
+          17
+        ],
+        "profile_source_url": "https://www.transfermarkt.com/club-brugge-kv/kader/verein/2282/saison_id/1993/plus/1",
+        "photo_source_ready": false
+      },
+      {
+        "source_id": 9494224,
+        "display_name": "Stéphane van der Heyden",
+        "country": "Belgium",
+        "role_before": 13,
+        "role_after": 13,
+        "position_before": "Left Midfielder",
+        "position_after": "Left Midfielder",
+        "source_position": "Left Midfield",
+        "birth_before": "1969-07-03T00:00:00",
+        "birth_after": "1969-07-03T00:00:00",
+        "nationalities": [
+          17
+        ],
+        "profile_source_url": "https://www.transfermarkt.com/club-brugge-kv/kader/verein/2282/saison_id/1993/plus/1",
+        "photo_source_ready": false
+      },
+      {
+        "source_id": 9496079,
+        "display_name": "Van Tieghem",
+        "country": "Belgium",
+        "role_before": 16,
+        "role_after": 16,
+        "position_before": "Left Winger",
+        "position_after": "Left Winger",
+        "source_position": "Left Winger",
+        "birth_before": "1973-12-24T00:00:00",
+        "birth_after": "1973-12-24T00:00:00",
+        "nationalities": [
+          17
+        ],
+        "profile_source_url": "https://www.transfermarkt.com/club-brugge-kv/kader/verein/2282/saison_id/1993/plus/1",
+        "photo_source_ready": false
+      },
+      {
+        "source_id": 9495312,
+        "display_name": "Gert Verheyen",
+        "country": "Belgium",
+        "role_before": 12,
+        "role_after": 12,
+        "position_before": "Right Winger",
+        "position_after": "Right Winger",
+        "source_position": "Right Winger",
+        "birth_before": "1970-09-20T00:00:00",
+        "birth_after": "1970-09-20T00:00:00",
+        "nationalities": [
+          17
+        ],
+        "profile_source_url": "https://www.transfermarkt.com/club-brugge-kv/kader/verein/2282/saison_id/1993/plus/1",
+        "photo_source_ready": false
+      },
+      {
+        "source_id": 9494186,
+        "display_name": "Daniel Amokachi",
+        "country": "Belgium",
+        "role_before": 17,
+        "role_after": 17,
+        "position_before": "Centre Forward",
+        "position_after": "Centre Forward",
+        "source_position": "Centre-Forward",
+        "birth_before": "1972-12-30T00:00:00",
+        "birth_after": "1972-12-30T00:00:00",
+        "nationalities": [
+          59
+        ],
+        "profile_source_url": "https://www.transfermarkt.com/club-brugge-kv/kader/verein/2282/saison_id/1993/plus/1",
+        "photo_source_ready": false
+      },
+      {
+        "source_id": 9496076,
+        "display_name": "Eijkelkamp",
+        "country": "Belgium",
+        "role_before": 17,
+        "role_after": 17,
+        "position_before": "Centre Forward",
+        "position_after": "Centre Forward",
+        "source_position": "Centre-Forward",
+        "birth_before": "1964-04-06T00:00:00",
+        "birth_after": "1964-04-06T00:00:00",
+        "nationalities": [
+          3
+        ],
+        "profile_source_url": "https://www.transfermarkt.com/club-brugge-kv/kader/verein/2282/saison_id/1993/plus/1",
+        "photo_source_ready": false
+      },
+      {
+        "source_id": 9496075,
+        "display_name": "Dziubiński",
+        "country": "Belgium",
+        "role_before": 17,
+        "role_after": 17,
+        "position_before": "Centre Forward",
+        "position_after": "Centre Forward",
+        "source_position": "Centre-Forward",
+        "birth_before": "1968-08-08T00:00:00",
+        "birth_after": "1968-08-08T00:00:00",
+        "nationalities": [
+          70
+        ],
+        "profile_source_url": "https://www.transfermarkt.com/club-brugge-kv/kader/verein/2282/saison_id/1993/plus/1",
+        "photo_source_ready": false
+      },
+      {
+        "source_id": 9496613,
+        "display_name": "Gintaras Staučė",
+        "country": "Russia",
+        "role_before": 0,
+        "role_after": 0,
+        "position_before": "Goalkeeper",
+        "position_after": "Goalkeeper",
+        "source_position": "Goalkeeper",
+        "birth_before": "1969-12-24T00:00:00",
+        "birth_after": "1969-12-24T00:00:00",
+        "nationalities": [
+          52
+        ],
+        "profile_source_url": "https://www.transfermarkt.com/spartak-moskau/kader/verein/232/saison_id/1993",
+        "photo_source_ready": false
+      },
+      {
+        "source_id": 9497356,
+        "display_name": "Chizhov",
+        "country": "Russia",
+        "role_before": 0,
+        "role_after": 0,
+        "position_before": "Goalkeeper",
+        "position_after": "Goalkeeper",
+        "source_position": "Goalkeeper",
+        "birth_before": null,
+        "birth_after": null,
+        "nationalities": [
+          40
+        ],
+        "profile_source_url": "https://www.transfermarkt.com/spartak-moskau/kader/verein/232/saison_id/1993",
+        "photo_source_ready": false
+      },
+      {
+        "source_id": 2705,
+        "display_name": "Cherchesov",
+        "country": "Russia",
+        "role_before": 0,
+        "role_after": 0,
+        "position_before": "Goalkeeper",
+        "position_after": "Goalkeeper",
+        "source_position": "Goalkeeper",
+        "birth_before": "1963-09-02T00:00:00",
+        "birth_after": "1963-09-02T00:00:00",
+        "nationalities": [
+          40
+        ],
+        "profile_source_url": "https://www.transfermarkt.com/spartak-moskau/kader/verein/232/saison_id/1993",
+        "photo_source_ready": false
+      },
+      {
+        "source_id": 9496617,
+        "display_name": "Aleksandr Pomazun",
+        "country": "Russia",
+        "role_before": 0,
+        "role_after": 0,
+        "position_before": "Goalkeeper",
+        "position_after": "Goalkeeper",
+        "source_position": "Goalkeeper",
+        "birth_before": "1971-10-11T00:00:00",
+        "birth_after": "1971-10-11T00:00:00",
+        "nationalities": [
+          40,
+          85
+        ],
+        "profile_source_url": "https://www.transfermarkt.com/spartak-moskau/kader/verein/232/saison_id/1993",
+        "photo_source_ready": false
+      },
+      {
+        "source_id": 9494088,
+        "display_name": "Viktor Onopko",
+        "country": "Russia",
+        "role_before": 3,
+        "role_after": 3,
+        "position_before": "Centre Back",
+        "position_after": "Centre Back",
+        "source_position": "Centre-Back",
+        "birth_before": "1969-10-14T00:00:00",
+        "birth_after": "1969-10-14T00:00:00",
+        "nationalities": [
+          40,
+          85
+        ],
+        "profile_source_url": "https://www.transfermarkt.com/spartak-moskau/kader/verein/232/saison_id/1993",
+        "photo_source_ready": false
+      },
+      {
+        "source_id": 9494081,
+        "display_name": "Yuri Nikiforov",
+        "country": "Russia",
+        "role_before": 3,
+        "role_after": 3,
+        "position_before": "Centre Back",
+        "position_after": "Centre Back",
+        "source_position": "Centre-Back",
+        "birth_before": "1970-09-16T00:00:00",
+        "birth_after": "1970-09-16T00:00:00",
+        "nationalities": [
+          40,
+          85
+        ],
+        "profile_source_url": "https://www.transfermarkt.com/spartak-moskau/kader/verein/232/saison_id/1993",
+        "photo_source_ready": false
+      },
+      {
+        "source_id": 9496618,
+        "display_name": "Dmitri Ananko",
+        "country": "Russia",
+        "role_before": 3,
+        "role_after": 3,
+        "position_before": "Centre Back",
+        "position_after": "Centre Back",
+        "source_position": "Centre-Back",
+        "birth_before": "1973-09-29T00:00:00",
+        "birth_after": "1973-09-29T00:00:00",
+        "nationalities": [
+          40
+        ],
+        "profile_source_url": "https://www.transfermarkt.com/spartak-moskau/kader/verein/232/saison_id/1993",
+        "photo_source_ready": false
+      },
+      {
+        "source_id": 9496614,
+        "display_name": "Ivanov",
+        "country": "Russia",
+        "role_before": 3,
+        "role_after": 3,
+        "position_before": "Centre Back",
+        "position_after": "Centre Back",
+        "source_position": "Centre-Back",
+        "birth_before": null,
+        "birth_after": null,
+        "nationalities": [
+          40
+        ],
+        "profile_source_url": "https://www.transfermarkt.com/spartak-moskau/kader/verein/232/saison_id/1993",
+        "photo_source_ready": false
+      },
+      {
+        "source_id": 9497352,
+        "display_name": "Chernyshov",
+        "country": "Russia",
+        "role_before": 3,
+        "role_after": 3,
+        "position_before": "Centre Back",
+        "position_after": "Centre Back",
+        "source_position": "Centre-Back",
+        "birth_before": null,
+        "birth_after": null,
+        "nationalities": [
+          40
+        ],
+        "profile_source_url": "https://www.transfermarkt.com/spartak-moskau/kader/verein/232/saison_id/1993",
+        "photo_source_ready": false
+      },
+      {
+        "source_id": 9497355,
+        "display_name": "Chudin",
+        "country": "Russia",
+        "role_before": 3,
+        "role_after": 3,
+        "position_before": "Centre Back",
+        "position_after": "Centre Back",
+        "source_position": "Centre-Back",
+        "birth_before": null,
+        "birth_after": null,
+        "nationalities": [
+          40
+        ],
+        "profile_source_url": "https://www.transfermarkt.com/spartak-moskau/kader/verein/232/saison_id/1993",
+        "photo_source_ready": false
+      },
+      {
+        "source_id": 9495357,
+        "display_name": "Ramiz Mamedov",
+        "country": "Russia",
+        "role_before": 2,
+        "role_after": 2,
+        "position_before": "Left Back",
+        "position_after": "Left Back",
+        "source_position": "Left-Back",
+        "birth_before": "1972-05-21T00:00:00",
+        "birth_after": "1972-05-21T00:00:00",
+        "nationalities": [
+          40
+        ],
+        "profile_source_url": "https://www.transfermarkt.com/spartak-moskau/kader/verein/232/saison_id/1993",
+        "photo_source_ready": false
+      },
+      {
+        "source_id": 9494090,
+        "display_name": "Dmitri Khlestov",
+        "country": "Russia",
+        "role_before": 1,
+        "role_after": 1,
+        "position_before": "Right Back",
+        "position_after": "Right Back",
+        "source_position": "Right-Back",
+        "birth_before": "1971-01-21T00:00:00",
+        "birth_after": "1971-01-21T00:00:00",
+        "nationalities": [
+          40
+        ],
+        "profile_source_url": "https://www.transfermarkt.com/spartak-moskau/kader/verein/232/saison_id/1993",
+        "photo_source_ready": false
+      },
+      {
+        "source_id": 9494083,
+        "display_name": "Andrey Pyatnitsky",
+        "country": "Russia",
+        "role_before": 6,
+        "role_after": 6,
+        "position_before": "Defensive Midfielder",
+        "position_after": "Defensive Midfielder",
+        "source_position": "Defensive Midfield",
+        "birth_before": "1967-09-27T00:00:00",
+        "birth_after": "1967-09-27T00:00:00",
+        "nationalities": [
+          40
+        ],
+        "profile_source_url": "https://www.transfermarkt.com/spartak-moskau/kader/verein/232/saison_id/1993",
+        "photo_source_ready": false
+      },
+      {
+        "source_id": 9494087,
+        "display_name": "Ilya Tsymbalar",
+        "country": "Russia",
+        "role_before": 7,
+        "role_after": 7,
+        "position_before": "Centre Midfielder",
+        "position_after": "Centre Midfielder",
+        "source_position": "Central Midfield",
+        "birth_before": "1969-06-17T00:00:00",
+        "birth_after": "1969-06-17T00:00:00",
+        "nationalities": [
+          40,
+          85
+        ],
+        "profile_source_url": "https://www.transfermarkt.com/spartak-moskau/kader/verein/232/saison_id/1993",
+        "photo_source_ready": false
+      },
+      {
+        "source_id": 9494089,
+        "display_name": "Igor Lediakhov",
+        "country": "Russia",
+        "role_before": 7,
+        "role_after": 7,
+        "position_before": "Centre Midfielder",
+        "position_after": "Centre Midfielder",
+        "source_position": "Central Midfield",
+        "birth_before": "1968-05-22T00:00:00",
+        "birth_after": "1968-05-22T00:00:00",
+        "nationalities": [
+          40
+        ],
+        "profile_source_url": "https://www.transfermarkt.com/spartak-moskau/kader/verein/232/saison_id/1993",
+        "photo_source_ready": false
+      },
+      {
+        "source_id": 9497358,
+        "display_name": "Konovalov",
+        "country": "Russia",
+        "role_before": 7,
+        "role_after": 7,
+        "position_before": "Centre Midfielder",
+        "position_after": "Centre Midfielder",
+        "source_position": "Central Midfield",
+        "birth_before": null,
+        "birth_after": null,
+        "nationalities": [
+          40
+        ],
+        "profile_source_url": "https://www.transfermarkt.com/spartak-moskau/kader/verein/232/saison_id/1993",
+        "photo_source_ready": false
+      },
+      {
+        "source_id": 9494084,
+        "display_name": "Valeri Karpin",
+        "country": "Russia",
+        "role_before": 9,
+        "role_after": 9,
+        "position_before": "Right Midfielder",
+        "position_after": "Right Midfielder",
+        "source_position": "Right Midfield",
+        "birth_before": "1969-02-02T00:00:00",
+        "birth_after": "1969-02-02T00:00:00",
+        "nationalities": [
+          40,
+          39
+        ],
+        "profile_source_url": "https://www.transfermarkt.com/spartak-moskau/kader/verein/232/saison_id/1993",
+        "photo_source_ready": false
+      },
+      {
+        "source_id": 9497349,
+        "display_name": "Gashkin",
+        "country": "Russia",
+        "role_before": 9,
+        "role_after": 9,
+        "position_before": "Right Midfielder",
+        "position_after": "Right Midfielder",
+        "source_position": "Right Midfield",
+        "birth_before": null,
+        "birth_after": null,
+        "nationalities": [
+          40
+        ],
+        "profile_source_url": "https://www.transfermarkt.com/spartak-moskau/kader/verein/232/saison_id/1993",
+        "photo_source_ready": false
+      },
+      {
+        "source_id": 9497350,
+        "display_name": "Tikhonov",
+        "country": "Russia",
+        "role_before": 8,
+        "role_after": 8,
+        "position_before": "Attacking Midfielder",
+        "position_after": "Attacking Midfielder",
+        "source_position": "Attacking Midfield",
+        "birth_before": null,
+        "birth_after": null,
+        "nationalities": [
+          40
+        ],
+        "profile_source_url": "https://www.transfermarkt.com/spartak-moskau/kader/verein/232/saison_id/1993",
+        "photo_source_ready": false
+      },
+      {
+        "source_id": 9496616,
+        "display_name": "Fyodor Cherenkov",
+        "country": "Russia",
+        "role_before": 8,
+        "role_after": 8,
+        "position_before": "Attacking Midfielder",
+        "position_after": "Attacking Midfielder",
+        "source_position": "Attacking Midfield",
+        "birth_before": "1959-07-25T00:00:00",
+        "birth_after": "1959-07-25T00:00:00",
+        "nationalities": [
+          40
+        ],
+        "profile_source_url": "https://www.transfermarkt.com/spartak-moskau/kader/verein/232/saison_id/1993",
+        "photo_source_ready": false
+      },
+      {
+        "source_id": 9497354,
+        "display_name": "Pogodin",
+        "country": "Russia",
+        "role_before": 8,
+        "role_after": 8,
+        "position_before": "Attacking Midfielder",
+        "position_after": "Attacking Midfielder",
+        "source_position": "Attacking Midfield",
+        "birth_before": null,
+        "birth_after": null,
+        "nationalities": [
+          85,
+          40
+        ],
+        "profile_source_url": "https://www.transfermarkt.com/spartak-moskau/kader/verein/232/saison_id/1993",
+        "photo_source_ready": false
+      },
+      {
+        "source_id": 9497357,
+        "display_name": "Kechinov",
+        "country": "Russia",
+        "role_before": 17,
+        "role_after": 17,
+        "position_before": "Centre Forward",
+        "position_after": "Centre Forward",
+        "source_position": "Second Striker",
+        "birth_before": null,
+        "birth_after": null,
+        "nationalities": [
+          40,
+          209
+        ],
+        "profile_source_url": "https://www.transfermarkt.com/spartak-moskau/kader/verein/232/saison_id/1993",
+        "photo_source_ready": false
+      },
+      {
+        "source_id": 9496615,
+        "display_name": "Nikolai Pisarev",
+        "country": "Russia",
+        "role_before": 17,
+        "role_after": 17,
+        "position_before": "Centre Forward",
+        "position_after": "Centre Forward",
+        "source_position": "Centre-Forward",
+        "birth_before": "1968-11-23T00:00:00",
+        "birth_after": "1968-11-23T00:00:00",
+        "nationalities": [
+          40
+        ],
+        "profile_source_url": "https://www.transfermarkt.com/spartak-moskau/kader/verein/232/saison_id/1993",
+        "photo_source_ready": false
+      },
+      {
+        "source_id": 9494085,
+        "display_name": "Vladimir Beschastnykh",
+        "country": "Russia",
+        "role_before": 17,
+        "role_after": 17,
+        "position_before": "Centre Forward",
+        "position_after": "Centre Forward",
+        "source_position": "Centre-Forward",
+        "birth_before": "1974-04-01T00:00:00",
+        "birth_after": "1974-04-01T00:00:00",
+        "nationalities": [
+          40
+        ],
+        "profile_source_url": "https://www.transfermarkt.com/spartak-moskau/kader/verein/232/saison_id/1993",
+        "photo_source_ready": false
+      },
+      {
+        "source_id": 517,
+        "display_name": "Radchenko",
+        "country": "Russia",
+        "role_before": 17,
+        "role_after": 17,
+        "position_before": "Centre Forward",
+        "position_after": "Centre Forward",
+        "source_position": "Centre-Forward",
+        "birth_before": "1970-12-02T00:00:00",
+        "birth_after": "1970-12-02T00:00:00",
+        "nationalities": [
+          40
+        ],
+        "profile_source_url": "https://www.transfermarkt.com/spartak-moskau/kader/verein/232/saison_id/1993",
+        "photo_source_ready": false
+      },
+      {
+        "source_id": 9497351,
+        "display_name": "Rodionov",
+        "country": "Russia",
+        "role_before": 17,
+        "role_after": 17,
+        "position_before": "Centre Forward",
+        "position_after": "Centre Forward",
+        "source_position": "Centre-Forward",
+        "birth_before": null,
+        "birth_after": null,
+        "nationalities": [
+          40
+        ],
+        "profile_source_url": "https://www.transfermarkt.com/spartak-moskau/kader/verein/232/saison_id/1993",
+        "photo_source_ready": false
+      },
+      {
+        "source_id": 9494176,
+        "display_name": "Elias Atmatsidis",
+        "country": "Greece",
+        "role_before": 0,
+        "role_after": 0,
+        "position_before": "Goalkeeper",
+        "position_after": "Goalkeeper",
+        "source_position": "Goalkeeper",
+        "birth_before": "1969-04-24T00:00:00",
+        "birth_after": "1969-04-24T00:00:00",
+        "nationalities": [
+          47
+        ],
+        "profile_source_url": "https://www.transfermarkt.com/aek-athens/kader/verein/2441/saison_id/1993",
+        "photo_source_ready": false
+      },
+      {
+        "source_id": 9497517,
+        "display_name": "Spyros Ikonomopoulos",
+        "country": "Greece",
+        "role_before": 0,
+        "role_after": 0,
+        "position_before": "Goalkeeper",
+        "position_after": "Goalkeeper",
+        "source_position": "Goalkeeper",
+        "birth_before": "1959-07-26T00:00:00",
+        "birth_after": "1959-07-26T00:00:00",
+        "nationalities": [
+          47
+        ],
+        "profile_source_url": "https://www.transfermarkt.com/aek-athens/kader/verein/2441/saison_id/1993",
+        "photo_source_ready": false
+      },
+      {
+        "source_id": 9496921,
+        "display_name": "Vassilis Karajiannis",
+        "country": "Greece",
+        "role_before": 0,
+        "role_after": 0,
+        "position_before": "Goalkeeper",
+        "position_after": "Goalkeeper",
+        "source_position": "Goalkeeper",
+        "birth_before": "1969-09-27T00:00:00",
+        "birth_after": "1969-09-27T00:00:00",
+        "nationalities": [
+          47
+        ],
+        "profile_source_url": "https://www.transfermarkt.com/aek-athens/kader/verein/2441/saison_id/1993",
+        "photo_source_ready": false
+      },
+      {
+        "source_id": 9496924,
+        "display_name": "Manolis Papadopoulos",
+        "country": "Greece",
+        "role_before": 3,
+        "role_after": 3,
+        "position_before": "Centre Back",
+        "position_after": "Centre Back",
+        "source_position": "Centre-Back",
+        "birth_before": "1968-04-22T00:00:00",
+        "birth_after": "1968-04-22T00:00:00",
+        "nationalities": [
+          47
+        ],
+        "profile_source_url": "https://www.transfermarkt.com/aek-athens/kader/verein/2441/saison_id/1993",
+        "photo_source_ready": false
+      },
+      {
+        "source_id": 9494160,
+        "display_name": "Stelios Manolas",
+        "country": "Greece",
+        "role_before": 3,
+        "role_after": 3,
+        "position_before": "Centre Back",
+        "position_after": "Centre Back",
+        "source_position": "Centre-Back",
+        "birth_before": "1961-07-13T00:00:00",
+        "birth_after": "1961-07-13T00:00:00",
+        "nationalities": [
+          47
+        ],
+        "profile_source_url": "https://www.transfermarkt.com/aek-athens/kader/verein/2441/saison_id/1993",
+        "photo_source_ready": false
+      },
+      {
+        "source_id": 9496925,
+        "display_name": "Michalis Vlachos",
+        "country": "Greece",
+        "role_before": 3,
+        "role_after": 3,
+        "position_before": "Centre Back",
+        "position_after": "Centre Back",
+        "source_position": "Centre-Back",
+        "birth_before": "1967-09-20T00:00:00",
+        "birth_after": "1967-09-20T00:00:00",
+        "nationalities": [
+          47
+        ],
+        "profile_source_url": "https://www.transfermarkt.com/aek-athens/kader/verein/2441/saison_id/1993",
+        "photo_source_ready": false
+      },
+      {
+        "source_id": 9496923,
+        "display_name": "Jiorgos Koutoulas",
+        "country": "Greece",
+        "role_before": 3,
+        "role_after": 3,
+        "position_before": "Centre Back",
+        "position_after": "Centre Back",
+        "source_position": "Centre-Back",
+        "birth_before": "1967-02-09T00:00:00",
+        "birth_after": "1967-02-09T00:00:00",
+        "nationalities": [
+          47
+        ],
+        "profile_source_url": "https://www.transfermarkt.com/aek-athens/kader/verein/2441/saison_id/1993",
+        "photo_source_ready": false
+      },
+      {
+        "source_id": 9496926,
+        "display_name": "Michalis Kasapis",
+        "country": "Greece",
+        "role_before": 2,
+        "role_after": 2,
+        "position_before": "Left Back",
+        "position_after": "Left Back",
+        "source_position": "Left-Back",
+        "birth_before": "1971-06-06T00:00:00",
+        "birth_after": "1971-06-06T00:00:00",
+        "nationalities": [
+          47
+        ],
+        "profile_source_url": "https://www.transfermarkt.com/aek-athens/kader/verein/2441/saison_id/1993",
+        "photo_source_ready": false
+      },
+      {
+        "source_id": 9494169,
+        "display_name": "Vaios Karagiannis",
+        "country": "Greece",
+        "role_before": 2,
+        "role_after": 2,
+        "position_before": "Left Back",
+        "position_after": "Left Back",
+        "source_position": "Left-Back",
+        "birth_before": "1968-06-25T00:00:00",
+        "birth_after": "1968-06-25T00:00:00",
+        "nationalities": [
+          47
+        ],
+        "profile_source_url": "https://www.transfermarkt.com/aek-athens/kader/verein/2441/saison_id/1993",
+        "photo_source_ready": false
+      },
+      {
+        "source_id": 9496931,
+        "display_name": "Vassilis Mborbokis",
+        "country": "Greece",
+        "role_before": 1,
+        "role_after": 1,
+        "position_before": "Right Back",
+        "position_after": "Right Back",
+        "source_position": "Right-Back",
+        "birth_before": "1969-02-10T00:00:00",
+        "birth_after": "1969-02-10T00:00:00",
+        "nationalities": [
+          47
+        ],
+        "profile_source_url": "https://www.transfermarkt.com/aek-athens/kader/verein/2441/saison_id/1993",
+        "photo_source_ready": false
+      },
+      {
+        "source_id": 9496922,
+        "display_name": "Jiorgos Agorojiannis",
+        "country": "Greece",
+        "role_before": 1,
+        "role_after": 1,
+        "position_before": "Right Back",
+        "position_after": "Right Back",
+        "source_position": "Right-Back",
+        "birth_before": "1966-05-03T00:00:00",
+        "birth_after": "1966-05-03T00:00:00",
+        "nationalities": [
+          47
+        ],
+        "profile_source_url": "https://www.transfermarkt.com/aek-athens/kader/verein/2441/saison_id/1993",
+        "photo_source_ready": false
+      },
+      {
+        "source_id": 9496928,
+        "display_name": "Refik Sabanasovic",
+        "country": "Greece",
+        "role_before": 6,
+        "role_after": 6,
+        "position_before": "Defensive Midfielder",
+        "position_after": "Defensive Midfielder",
+        "source_position": "Defensive Midfield",
+        "birth_before": "1965-08-02T00:00:00",
+        "birth_after": "1965-08-02T00:00:00",
+        "nationalities": [
+          20,
+          76
+        ],
+        "profile_source_url": "https://www.transfermarkt.com/aek-athens/kader/verein/2441/saison_id/1993",
+        "photo_source_ready": false
+      },
+      {
+        "source_id": 9496927,
+        "display_name": "Charis Kopitsis",
+        "country": "Greece",
+        "role_before": 6,
+        "role_after": 6,
+        "position_before": "Defensive Midfielder",
+        "position_after": "Defensive Midfielder",
+        "source_position": "Defensive Midfield",
+        "birth_before": "1969-03-05T00:00:00",
+        "birth_after": "1969-03-05T00:00:00",
+        "nationalities": [
+          47
+        ],
+        "profile_source_url": "https://www.transfermarkt.com/aek-athens/kader/verein/2441/saison_id/1993",
+        "photo_source_ready": false
+      },
+      {
+        "source_id": 9497519,
+        "display_name": "Stavros Stamatis",
+        "country": "Greece",
+        "role_before": 6,
+        "role_after": 6,
+        "position_before": "Defensive Midfielder",
+        "position_after": "Defensive Midfielder",
+        "source_position": "Defensive Midfield",
+        "birth_before": "1966-01-13T00:00:00",
+        "birth_after": "1966-01-13T00:00:00",
+        "nationalities": [
+          47
+        ],
+        "profile_source_url": "https://www.transfermarkt.com/aek-athens/kader/verein/2441/saison_id/1993",
+        "photo_source_ready": false
+      },
+      {
+        "source_id": 9497521,
+        "display_name": "Pamtelis Konstantinidis",
+        "country": "Greece",
+        "role_before": 13,
+        "role_after": 13,
+        "position_before": "Left Midfielder",
+        "position_after": "Left Midfielder",
+        "source_position": "Left Midfield",
+        "birth_before": "1975-06-07T00:00:00",
+        "birth_after": "1975-06-07T00:00:00",
+        "nationalities": [
+          47
+        ],
+        "profile_source_url": "https://www.transfermarkt.com/aek-athens/kader/verein/2441/saison_id/1993",
+        "photo_source_ready": false
+      },
+      {
+        "source_id": 9496929,
+        "display_name": "Tony Savefsky",
+        "country": "Greece",
+        "role_before": 13,
+        "role_after": 13,
+        "position_before": "Left Midfielder",
+        "position_after": "Left Midfielder",
+        "source_position": "Left Midfield",
+        "birth_before": "1963-06-14T00:00:00",
+        "birth_after": "1963-06-14T00:00:00",
+        "nationalities": [
+          54,
+          47
+        ],
+        "profile_source_url": "https://www.transfermarkt.com/aek-athens/kader/verein/2441/saison_id/1993",
+        "photo_source_ready": false
+      },
+      {
+        "source_id": 9496930,
+        "display_name": "Vassilis Tsartas",
+        "country": "Greece",
+        "role_before": 8,
+        "role_after": 8,
+        "position_before": "Attacking Midfielder",
+        "position_after": "Attacking Midfielder",
+        "source_position": "Attacking Midfield",
+        "birth_before": "1972-11-12T00:00:00",
+        "birth_after": "1972-11-12T00:00:00",
+        "nationalities": [
+          47
+        ],
+        "profile_source_url": "https://www.transfermarkt.com/aek-athens/kader/verein/2441/saison_id/1993",
+        "photo_source_ready": false
+      },
+      {
+        "source_id": 9494166,
+        "display_name": "Tasos Mitropoulos",
+        "country": "Greece",
+        "role_before": 8,
+        "role_after": 8,
+        "position_before": "Attacking Midfielder",
+        "position_after": "Attacking Midfielder",
+        "source_position": "Attacking Midfield",
+        "birth_before": "1957-08-23T00:00:00",
+        "birth_after": "1957-08-23T00:00:00",
+        "nationalities": [
+          47
+        ],
+        "profile_source_url": "https://www.transfermarkt.com/aek-athens/kader/verein/2441/saison_id/1993",
+        "photo_source_ready": false
+      },
+      {
+        "source_id": 9494177,
+        "display_name": "Alexis Alexandris",
+        "country": "Greece",
+        "role_before": 17,
+        "role_after": 17,
+        "position_before": "Centre Forward",
+        "position_after": "Centre Forward",
+        "source_position": "Centre-Forward",
+        "birth_before": "1968-10-21T00:00:00",
+        "birth_after": "1968-10-21T00:00:00",
+        "nationalities": [
+          47
+        ],
+        "profile_source_url": "https://www.transfermarkt.com/aek-athens/kader/verein/2441/saison_id/1993",
+        "photo_source_ready": false
+      },
+      {
+        "source_id": 9494170,
+        "display_name": "Vasilis Dimitriadis",
+        "country": "Greece",
+        "role_before": 17,
+        "role_after": 17,
+        "position_before": "Centre Forward",
+        "position_after": "Centre Forward",
+        "source_position": "Centre-Forward",
+        "birth_before": "1966-02-01T00:00:00",
+        "birth_after": "1966-02-01T00:00:00",
+        "nationalities": [
+          47
+        ],
+        "profile_source_url": "https://www.transfermarkt.com/aek-athens/kader/verein/2441/saison_id/1993",
+        "photo_source_ready": false
+      },
+      {
+        "source_id": 9496932,
+        "display_name": "Zoran Zliskovic",
+        "country": "Greece",
+        "role_before": 17,
+        "role_after": 17,
+        "position_before": "Centre Forward",
+        "position_after": "Centre Forward",
+        "source_position": "Centre-Forward",
+        "birth_before": "1966-03-01T00:00:00",
+        "birth_after": "1966-03-01T00:00:00",
+        "nationalities": [
+          31
+        ],
+        "profile_source_url": "https://www.transfermarkt.com/aek-athens/kader/verein/2441/saison_id/1993",
+        "photo_source_ready": false
+      },
+      {
+        "source_id": 9497518,
+        "display_name": "Andreas Theodoropoulos",
+        "country": "Greece",
+        "role_before": 3,
+        "role_after": 3,
+        "position_before": "Centre Back",
+        "position_after": "Centre Back",
+        "source_position": "Defender",
+        "birth_before": "1971-06-27T00:00:00",
+        "birth_after": "1971-06-27T00:00:00",
+        "nationalities": [
+          47
+        ],
+        "profile_source_url": "https://www.transfermarkt.com/aek-athens/kader/verein/2441/saison_id/1993",
+        "photo_source_ready": false
+      },
+      {
+        "source_id": 9497522,
+        "display_name": "Christos Loukinas",
+        "country": "Greece",
+        "role_before": 7,
+        "role_after": 7,
+        "position_before": "Centre Midfielder",
+        "position_after": "Centre Midfielder",
+        "source_position": "Defender",
+        "birth_before": "1973-03-05T00:00:00",
+        "birth_after": "1973-03-05T00:00:00",
+        "nationalities": [
+          47
+        ],
+        "profile_source_url": "https://www.transfermarkt.com/aek-athens/kader/verein/2441/saison_id/1993",
+        "photo_source_ready": false
+      },
+      {
+        "source_id": 9495316,
+        "display_name": "Hayrettin Demirbaş",
+        "country": "Turkey",
+        "role_before": 0,
+        "role_after": 0,
+        "position_before": "Goalkeeper",
+        "position_after": "Goalkeeper",
+        "source_position": "Goalkeeper",
+        "birth_before": "1963-06-26T00:00:00",
+        "birth_after": "1963-06-26T00:00:00",
+        "nationalities": [
+          84
+        ],
+        "profile_source_url": "https://www.bdfutbol.com/en/j/j42823.html",
+        "photo_source_ready": true
+      },
+      {
+        "source_id": 9495319,
+        "display_name": "Bülent Korkmaz",
+        "country": "Turkey",
+        "role_before": 3,
+        "role_after": 3,
+        "position_before": "Centre Back",
+        "position_after": "Centre Back",
+        "source_position": "Central",
+        "birth_before": "1968-11-24T00:00:00",
+        "birth_after": "1968-11-24T00:00:00",
+        "nationalities": [
+          84
+        ],
+        "profile_source_url": "https://www.bdfutbol.com/en/j/j42821.html",
+        "photo_source_ready": true
+      },
+      {
+        "source_id": 9495337,
+        "display_name": "Hamza Hamzaoğlu",
+        "country": "Turkey",
+        "role_before": 13,
+        "role_after": 13,
+        "position_before": "Left Midfielder",
+        "position_after": "Left Midfielder",
+        "source_position": "Midfielder",
+        "birth_before": "1970-01-15T00:00:00",
+        "birth_after": "1970-01-15T00:00:00",
+        "nationalities": [
+          84,
+          47
+        ],
+        "profile_source_url": "https://www.bdfutbol.com/en/j/j45982.html",
+        "photo_source_ready": true
+      },
+      {
+        "source_id": 9495336,
+        "display_name": "Suat Kaya",
+        "country": "Turkey",
+        "role_before": 6,
+        "role_after": 6,
+        "position_before": "Defensive Midfielder",
+        "position_after": "Defensive Midfielder",
+        "source_position": "Midfielder",
+        "birth_before": "1967-08-26T00:00:00",
+        "birth_after": "1967-08-26T00:00:00",
+        "nationalities": [
+          84
+        ],
+        "profile_source_url": "https://www.bdfutbol.com/en/j/j46412.html",
+        "photo_source_ready": true
+      },
+      {
+        "source_id": 9495331,
+        "display_name": "Tugay Kerimoğlu",
+        "country": "Turkey",
+        "role_before": 6,
+        "role_after": 6,
+        "position_before": "Defensive Midfielder",
+        "position_after": "Defensive Midfielder",
+        "source_position": "Midfielder",
+        "birth_before": "1970-08-24T00:00:00",
+        "birth_after": "1970-08-24T00:00:00",
+        "nationalities": [
+          84
+        ],
+        "profile_source_url": "https://www.bdfutbol.com/en/j/j94203.html",
+        "photo_source_ready": true
+      },
+      {
+        "source_id": 9495327,
+        "display_name": "Yusuf Tepekule",
+        "country": "Turkey",
+        "role_before": 7,
+        "role_after": 7,
+        "position_before": "Centre Midfielder",
+        "position_after": "Centre Midfielder",
+        "source_position": "Midfielder",
+        "birth_before": "1968-01-15T00:00:00",
+        "birth_after": "1968-01-15T00:00:00",
+        "nationalities": [
+          84
+        ],
+        "profile_source_url": "https://www.bdfutbol.com/en/j/j702615.html",
+        "photo_source_ready": true
+      },
+      {
+        "source_id": 9495348,
+        "display_name": "Hakan Şükür",
+        "country": "Turkey",
+        "role_before": 17,
+        "role_after": 17,
+        "position_before": "Centre Forward",
+        "position_after": "Centre Forward",
+        "source_position": "Striker",
+        "birth_before": "1971-09-01T00:00:00",
+        "birth_after": "1971-09-01T00:00:00",
+        "nationalities": [
+          84
+        ],
+        "profile_source_url": "https://www.bdfutbol.com/en/j/j94413.html",
+        "photo_source_ready": true
+      },
+      {
+        "source_id": 9495354,
+        "display_name": "Arif Erdem",
+        "country": "Turkey",
+        "role_before": 17,
+        "role_after": 17,
+        "position_before": "Centre Forward",
+        "position_after": "Centre Forward",
+        "source_position": "Forward",
+        "birth_before": "1972-01-02T00:00:00",
+        "birth_after": "1972-01-02T00:00:00",
+        "nationalities": [
+          84
+        ],
+        "profile_source_url": "https://www.bdfutbol.com/en/j/j276.html",
+        "photo_source_ready": true
+      },
+      {
+        "source_id": 9495342,
+        "display_name": "Uğur Tütüneker",
+        "country": "Turkey",
+        "role_before": 8,
+        "role_after": 8,
+        "position_before": "Attacking Midfielder",
+        "position_after": "Attacking Midfielder",
+        "source_position": "Midfielder",
+        "birth_before": "1963-08-02T00:00:00",
+        "birth_after": "1963-08-02T00:00:00",
+        "nationalities": [
+          84
+        ],
+        "profile_source_url": "https://www.bdfutbol.com/en/j/j86306.html",
+        "photo_source_ready": true
+      }
+    ]
+  },
+  "profile_gaps_before": {
+    "Russia": {
+      "active_players": 527,
+      "missing_birth_date": 465,
+      "missing_international_country_id": 467,
+      "missing_birth_country_id": 465,
+      "missing_height_cm": 479,
+      "missing_weight_kg": 483,
+      "profile_review_required": 0
+    },
+    "Greece": {
+      "active_players": 496,
+      "missing_birth_date": 34,
+      "missing_international_country_id": 0,
+      "missing_birth_country_id": 0,
+      "missing_height_cm": 491,
+      "missing_weight_kg": 494,
+      "profile_review_required": 0
+    },
+    "Belgium": {
+      "active_players": 466,
+      "missing_birth_date": 352,
+      "missing_international_country_id": 308,
+      "missing_birth_country_id": 302,
+      "missing_height_cm": 400,
+      "missing_weight_kg": 400,
+      "profile_review_required": 0
+    },
+    "Turkey": {
+      "active_players": 461,
+      "missing_birth_date": 366,
+      "missing_international_country_id": 367,
+      "missing_birth_country_id": 366,
+      "missing_height_cm": 410,
+      "missing_weight_kg": 412,
+      "profile_review_required": 0
+    }
+  },
+  "profile_gaps_after": {
+    "Russia": {
+      "active_players": 492,
+      "missing_birth_date": 465,
+      "missing_international_country_id": 455,
+      "missing_birth_country_id": 465,
+      "missing_height_cm": 479,
+      "missing_weight_kg": 483,
+      "profile_review_required": 0
+    },
+    "Greece": {
+      "active_players": 496,
+      "missing_birth_date": 34,
+      "missing_international_country_id": 0,
+      "missing_birth_country_id": 0,
+      "missing_height_cm": 491,
+      "missing_weight_kg": 494,
+      "profile_review_required": 2
+    },
+    "Belgium": {
+      "active_players": 406,
+      "missing_birth_date": 330,
+      "missing_international_country_id": 292,
+      "missing_birth_country_id": 302,
+      "missing_height_cm": 362,
+      "missing_weight_kg": 400,
+      "profile_review_required": 0
+    },
+    "Turkey": {
+      "active_players": 414,
+      "missing_birth_date": 366,
+      "missing_international_country_id": 366,
+      "missing_birth_country_id": 366,
+      "missing_height_cm": 399,
+      "missing_weight_kg": 403,
+      "profile_review_required": 4
+    }
+  },
+  "stadiums": {
+    "greece_source_backed": 18,
+    "russia_source_backed": 16,
+    "rows": [
+      {
+        "team_id": 9347001,
+        "team_name": "AEK Athinon",
+        "stadium_id": 2159,
+        "stadium_name": "Nikos Goumas Stadium",
+        "city_id": 432
+      },
+      {
+        "team_id": 9347002,
+        "team_name": "Panathinaikos",
+        "stadium_id": 2160,
+        "stadium_name": "Athens Olympic Stadium",
+        "city_id": 5551
+      },
+      {
+        "team_id": 9347003,
+        "team_name": "Olympiakos Pireas",
+        "stadium_id": 2161,
+        "stadium_name": "Karaiskakis Stadium",
+        "city_id": null
+      },
+      {
+        "team_id": 9347004,
+        "team_name": "Aris Thessalonikis",
+        "stadium_id": 2162,
+        "stadium_name": "Kleanthis Vikelidis Stadium",
+        "city_id": 1974
+      },
+      {
+        "team_id": 9347005,
+        "team_name": "PAOK Thessalonikis",
+        "stadium_id": 2163,
+        "stadium_name": "Toumba Stadium",
+        "city_id": 1974
+      },
+      {
+        "team_id": 9347006,
+        "team_name": "Iraklis Thessalonikis",
+        "stadium_id": 2164,
+        "stadium_name": "Kaftanzoglio Stadium",
+        "city_id": 1974
+      },
+      {
+        "team_id": 9347007,
+        "team_name": "OFI Irakliou",
+        "stadium_id": 2165,
+        "stadium_name": "Theodoros Vardinogiannis Stadium",
+        "city_id": 1976
+      },
+      {
+        "team_id": 9347008,
+        "team_name": "Skoda Xanthi",
+        "stadium_id": 2166,
+        "stadium_name": "Xanthi Ground",
+        "city_id": 1980
+      },
+      {
+        "team_id": 9347009,
+        "team_name": "Panionios",
+        "stadium_id": 2167,
+        "stadium_name": "Nea Smyrni Stadium",
+        "city_id": 432
+      },
+      {
+        "team_id": 9347010,
+        "team_name": "AE Larisa",
+        "stadium_id": 2168,
+        "stadium_name": "Alcazar Stadium",
+        "city_id": 1340
+      },
+      {
+        "team_id": 9347011,
+        "team_name": "Levadiakos",
+        "stadium_id": 2169,
+        "stadium_name": "Levadia Municipal Stadium",
+        "city_id": 1979
+      },
+      {
+        "team_id": 9347012,
+        "team_name": "Athinaikos",
+        "stadium_id": 2170,
+        "stadium_name": "Vyronas National Stadium",
+        "city_id": 432
+      },
+      {
+        "team_id": 9347013,
+        "team_name": "Apollon Athinas",
+        "stadium_id": 2171,
+        "stadium_name": "Rizoupoli Stadium",
+        "city_id": 432
+      },
+      {
+        "team_id": 9347014,
+        "team_name": "Edessaikos",
+        "stadium_id": 2172,
+        "stadium_name": "Municipal Stadium of Edessa",
+        "city_id": 5560
+      },
+      {
+        "team_id": 9347015,
+        "team_name": "Doxa Dramas",
+        "stadium_id": 2173,
+        "stadium_name": "Doxa Drama Stadium",
+        "city_id": 5552
+      },
+      {
+        "team_id": 9347016,
+        "team_name": "Panachaiki",
+        "stadium_id": 2174,
+        "stadium_name": "Kostas Davourlis Stadium",
+        "city_id": 5133
+      },
+      {
+        "team_id": 9347017,
+        "team_name": "Apollon Kalamarias",
+        "stadium_id": 2175,
+        "stadium_name": "Kalamaria Stadium",
+        "city_id": 4931
+      },
+      {
+        "team_id": 9347018,
+        "team_name": "Naousa",
+        "stadium_id": 2176,
+        "stadium_name": "Municipal Stadium of Naousa",
+        "city_id": null
+      },
+      {
+        "team_id": 9315001,
+        "team_name": "Rotor Volgograd",
+        "stadium_id": 2177,
+        "stadium_name": "Central Profsoyuz Stadion"
+      },
+      {
+        "team_id": 9315002,
+        "team_name": "Dynamo Moskva",
+        "stadium_id": 2178,
+        "stadium_name": "Dynamo Stadium"
+      },
+      {
+        "team_id": 9315003,
+        "team_name": "Tekstilshchik Kamyshin",
+        "stadium_id": 2179,
+        "stadium_name": "Tekstilshchik Stadium"
+      },
+      {
+        "team_id": 9315004,
+        "team_name": "Lokomotiv Moskva",
+        "stadium_id": 2180,
+        "stadium_name": "Lokomotiv Stadium"
+      },
+      {
+        "team_id": 9315005,
+        "team_name": "Spartak Vladikavkaz",
+        "stadium_id": 2181,
+        "stadium_name": "Spartak Republican Stadium"
+      },
+      {
+        "team_id": 9315006,
+        "team_name": "Uralmash",
+        "stadium_id": 2182,
+        "stadium_name": "Central Stadium"
+      },
+      {
+        "team_id": 9315007,
+        "team_name": "CSKA Moskva",
+        "stadium_id": 2183,
+        "stadium_name": "Grigory Fedotov Stadium"
+      },
+      {
+        "team_id": 9315008,
+        "team_name": "KAMAZ",
+        "stadium_id": 2184,
+        "stadium_name": "KAMAZ Stadium"
+      },
+      {
+        "team_id": 9315009,
+        "team_name": "Zhemchuzhina Sochi",
+        "stadium_id": 2185,
+        "stadium_name": "Central Stadium"
+      },
+      {
+        "team_id": 9315010,
+        "team_name": "Dynamo Stavropol",
+        "stadium_id": 2186,
+        "stadium_name": "Dynamo Stadium"
+      },
+      {
+        "team_id": 9315011,
+        "team_name": "Lokomotiv Nizhny Novgorod",
+        "stadium_id": 2187,
+        "stadium_name": "Lokomotiv Stadium"
+      },
+      {
+        "team_id": 9315012,
+        "team_name": "Krylia Sovetov",
+        "stadium_id": 2188,
+        "stadium_name": "Metallurg Stadium"
+      },
+      {
+        "team_id": 9315013,
+        "team_name": "Luch Vladivostok",
+        "stadium_id": 2189,
+        "stadium_name": "Luch Stadium"
+      },
+      {
+        "team_id": 9315014,
+        "team_name": "Okean Nakhodka",
+        "stadium_id": 2190,
+        "stadium_name": "Vodnik Stadium"
+      },
+      {
+        "team_id": 9315015,
+        "team_name": "Rostselmash",
+        "stadium_id": 2191,
+        "stadium_name": "Rostselmash Stadium"
+      },
+      {
+        "team_id": 9315016,
+        "team_name": "Asmaral Moskva",
+        "stadium_id": 2192,
+        "stadium_name": "Krasnaya Presnya Stadium"
+      }
+    ],
+    "unresolved_team_ids": [
+      9352001,
+      9352002,
+      9352003,
+      9352004,
+      9352005,
+      9352006,
+      9357001,
+      9357002,
+      9357003,
+      9357004,
+      9357005,
+      9357006,
+      9357007,
+      9357008,
+      9357009,
+      9357010,
+      9357011,
+      9357012,
+      9357013,
+      9357014
+    ],
+    "unresolved_count": 20,
+    "physical_parameters_policy": "No modern capacity/dimension is copied into a 1993-94 historical stadium row without a season-specific source."
+  },
+  "referees": {
+    "Belgium": {
+      "added": 0,
+      "pool_size": 25,
+      "source": "https://www.transfermarkt.com/jupiler-pro-league/schiedsrichter/pokalwettbewerb/BE1/saison_id/1993/plus/0",
+      "coverage": "complete page list"
+    },
+    "Greece": {
+      "added": 0,
+      "pool_size": 11,
+      "reported_total": 45,
+      "source": "https://www.rsssf.org/tablesg/grk94.html",
+      "coverage": "published top subset only"
+    }
+  },
+  "unresolved_referee_pool_league_ids": [
+    930015,
+    930057
+  ],
+  "photo_registry": {
+    "registry_rows": 2102,
+    "queue_rows": 2102,
+    "registry_queue_match": true,
+    "bundled_normalized_assets": 18
+  }
+}

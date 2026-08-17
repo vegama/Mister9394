@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "checkpoint": "0.31.0-profiles-venues-referees-roster-hygiene",
+  "status": "pass",
+  "active_reconstructed_players": 1808,
+  "biographies_written": 1808,
+  "biographies_with_season_stats": 1808,
+  "biographies_with_source_url": 1808,
+  "multi_club_identity_rows": 7,
+  "policy": "Biographies only summarize verified staging/season data and already sourced profile facts; missing nationality or specialist-role facts are not inferred."
+}

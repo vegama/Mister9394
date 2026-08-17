@@ -23,7 +23,7 @@ CLUB_ALIAS={'galatasaray sk':'Galatasaray','galatasaray':'Galatasaray','fenerbah
 
 
 def norm(v:Any)->str:
- s=unicodedata.normalize('NFKD',str(v or '')); s=''.join(c for c in s if not unicodedata.combining(c)); return re.sub(r'\s+',' ',re.sub(r'[^a-zA-Z0-9]+',' ',s).strip().lower())
+ s=unicodedata.normalize('NFKD',str(v or '').replace('ı','i').replace('İ','I')); s=''.join(c for c in s if not unicodedata.combining(c)); return re.sub(r'\s+',' ',re.sub(r'[^a-zA-Z0-9]+',' ',s).strip().lower())
 
 def split_name(s:str):
  p=s.split(); return ((' '.join(p[:-1]) or None),p[-1] if p else None)
@@ -73,7 +73,14 @@ def make_team(old,name,tid,pos):
 def main():
  snap=json.load(open(SNAP,encoding='utf8'));stage=json.load(open(STAGE,encoding='utf8'));foundation=json.load(open(FOUNDATION,encoding='utf8'));registry=json.load(open(REGISTRY,encoding='utf8'))
  players=snap['players'];byid={int(p['source_id']):p for p in players};oldteams={int(t['source_id']):t for t in snap['teams']}; originals=[p for p in players if not p.get('external_origin') and not p.get('creation_batch')]
- regby={int(r['source_id']):r for r in registry['players'] if r.get('source_id') is not None};nextid=max(byid)+1;used={tuple(int((p.get('attributes') or {}).get(k,-1)) for k in ATTRS) for p in players if p.get('attributes')}
+ regby={int(r['source_id']):r for r in registry['players'] if r.get('source_id') is not None};history_name_candidates={};history_by_signature={}
+ for hp in players:
+  if not hp.get('bdfutbol_name_1993_94'):continue
+  hkey=(int(hp.get('team_id') or 0),norm(hp.get('bdfutbol_name_1993_94')));history_name_candidates.setdefault(hkey,[]).append(int(hp['source_id']))
+  spells=hp.get('historical_club_spells_1993_94') or []
+  if spells:
+   sp=spells[0];sig=hkey+(int(hp.get('historical_age_1993_94') or -1),int(sp.get('appearances') or 0),int(sp.get('starts') or 0),int(sp.get('minutes') or 0),int(sp.get('goals') or 0));history_by_signature[sig]=int(hp['source_id'])
+ nextid=max(byid)+1;used={tuple(int((p.get('attributes') or {}).get(k,-1)) for k in ATTRS) for p in players if p.get('attributes')}
  safe=set(EXISTING.values());mixed=0
  for p in players:
   if int(p.get('team_id') or 0) in {644,645} and int(p['source_id']) not in safe:
@@ -82,7 +89,10 @@ def main():
  for ci,c in enumerate(stage['clubs']):
   name=c['name'];tid=TEAM_IDS[name];pos=int(c['historical_position'])
   for idx,row in enumerate(c['players']):
-   eid=EXISTING.get((norm(name),norm(row['bdfutbol_name'])));p=byid.get(eid) if eid else None;role,rs=role_for(row,idx,ci*31+idx,p);roles[rs]+=1;broad=ROLE_TO_BROAD[role]
+   verified_eid=EXISTING.get((norm(name),norm(row['bdfutbol_name'])));staged_eid=int(row.get('resolved_source_id') or 0) or None;hkey=(tid,norm(row['bdfutbol_name']));hsig=hkey+(int(row.get('age_1993_94') or -1),int(row.get('appearances') or 0),int(row.get('starts') or 0),int(row.get('minutes') or 0),int(row.get('goals') or 0));historical_eid=history_by_signature.get(hsig);candidates=history_name_candidates.get(hkey,[]);historical_eid=historical_eid or (candidates[0] if len(candidates)==1 else None)
+   if verified_eid and staged_eid and staged_eid!=verified_eid and staged_eid in byid:
+    dup=byid[staged_eid];dup['retired']=True;dup['historical_exclusion_reason']='duplicate_identity_reconciled_v0.30';dup['merged_into_source_id']=verified_eid
+   eid=verified_eid or (staged_eid if staged_eid in byid else None) or (historical_eid if historical_eid in byid else None);p=byid.get(eid) if eid else None;role,rs=role_for(row,idx,ci*31+idx,p);roles[rs]+=1;broad=ROLE_TO_BROAD[role]
    if p is None:
     sid=nextid;nextid+=1;display=row.get('identity_hint') if norm(row.get('identity_hint')) in {'shota arveladze','archil arveladze'} else str(row['bdfutbol_name']);first,surname=split_name(display);ov=overall(pos,row)
     p={'source_id':sid,'team_id':tid,'display_name':display,'first_name':first,'surname1':surname,'surname2':None,'birth_date':None,'birth_country_id':None,'international_country_id':None,'preferred_foot':None,'shirt_number':None,'primary_role':role,'broad_position':broad,'overall':ov,'category':ov,'height_cm':None,'weight_kg':None,'salary':0,'release_clause':0,'contract_start_year':1993,'contract_end_year':None,'loan':False,'initially_reserve':int(row.get('starts') or 0)<8,'retired':False,'attributes':{},'role_ratings':ratings(role),'hidden_traits':{'individualist':False,'killer_pass':False,'holds_ball':False,'long_shots':False,'cuts_inside':False,'first_time_play':False,'dives':False},'external_origin':'historical_turkey_1993_94','creation_batch':BATCH,'profile_review_required':False}
@@ -93,13 +103,13 @@ def main():
    else:
     sid=eid;reused+=1;p['retired']=False;p.pop('historical_exclusion_reason',None);p['primary_role']=role;p['broad_position']=broad;p['role_ratings']=ratings(role)
    resolved.add(sid);p.update({'team_id':tid,'historical_club_1994':name,'historical_position_1993_94':ROLE_TO_LABEL[role],'historical_position_source':rs,'bdfutbol_name_1993_94':row['bdfutbol_name'],'historical_age_1993_94':int(row.get('age_1993_94') or -1),'historical_club_spells_1993_94':[{'club':name,'team_id':tid,'appearances':int(row.get('appearances') or 0),'starts':int(row.get('starts') or 0),'minutes':int(row.get('minutes') or 0),'goals':int(row.get('goals') or 0)}],'historical_data_source':'BDFutbol 1993-94 squad; identity/position audit v0.26','bdfutbol_squad_url':c['bdfutbol_squad_url'],'profile_review_required':False})
-   row.update({'identity_resolution':'reused_verified_national_depth' if eid else 'created_historical_identity','resolved_source_id':sid,'resolved_display_name':p['display_name'],'resolved_primary_role':role,'resolved_exact_position':ROLE_TO_LABEL[role],'position_source':rs})
+   row.update({'identity_resolution':'reused_verified_national_depth' if verified_eid else ('reused_staged_identity' if eid else 'created_historical_identity'),'resolved_source_id':sid,'resolved_display_name':p['display_name'],'resolved_primary_role':role,'resolved_exact_position':ROLE_TO_LABEL[role],'position_source':rs})
    r=regby.get(sid)
    if not (p.get('external_origin') or p.get('creation_batch')):
     if r is not None:registry['players'].remove(r);regby.pop(sid,None)
     r=None
    elif r is None:r={'source_id':sid};registry['players'].append(r);regby[sid]=r
-   if r is not None:r.update({'display_name':p['display_name'],'first_name':p.get('first_name'),'surname1':p.get('surname1'),'surname2':p.get('surname2'),'birth_date':p.get('birth_date'),'country_id':p.get('international_country_id') or p.get('birth_country_id'),'country_name':'Turquía' if (p.get('international_country_id') or p.get('birth_country_id'))==84 else None,'broad_position':broad,'team_id':tid,'team_name':name,'creation_batch':p.get('creation_batch'),'identity_source':p['historical_data_source'],'identity_source_url':c['bdfutbol_squad_url'],'verified_national_pool_year':1994,'historical_position_1993_94':p['historical_position_1993_94'],'historical_club_1994':name,'overall':p.get('overall'),'attribute_source':p.get('attribute_source'),'profile_review_required':False,'duplicate_check':'turkey_1993_94_explicit_identity_gate','matched_existing_id':sid if eid else None,'bdfutbol_search_name':p['display_name'],'bdfutbol_id':str(p.get('bdfutbol_id') or ''),'bdfutbol_url':p.get('bdfutbol_url',''),'photo_filename':f'{sid}.jpg','photo_status':'ready_for_download' if p.get('bdfutbol_id') else 'pending_identity_profile'})
+   if r is not None:r.update({'display_name':p['display_name'],'first_name':p.get('first_name'),'surname1':p.get('surname1'),'surname2':p.get('surname2'),'birth_date':p.get('birth_date'),'country_id':p.get('international_country_id') or p.get('birth_country_id'),'country_name':'Turquía' if (p.get('international_country_id') or p.get('birth_country_id'))==84 else None,'broad_position':broad,'team_id':tid,'team_name':name,'creation_batch':p.get('creation_batch'),'identity_source':p['historical_data_source'],'identity_source_url':c['bdfutbol_squad_url'],'verified_national_pool_year':1994,'historical_position_1993_94':p['historical_position_1993_94'],'historical_club_1994':name,'overall':p.get('overall'),'attribute_source':p.get('attribute_source'),'profile_review_required':False,'duplicate_check':'turkey_1993_94_explicit_identity_gate','matched_existing_id':sid if verified_eid else None,'bdfutbol_search_name':p['display_name'],'bdfutbol_id':str(p.get('bdfutbol_id') or ''),'bdfutbol_url':p.get('bdfutbol_url',''),'photo_filename':f'{sid}.jpg','photo_status':'ready_for_download' if p.get('bdfutbol_id') else 'pending_identity_profile'})
    ident.append({'club':name,'bdfutbol_name':row['bdfutbol_name'],'identity_hint':row.get('identity_hint'),'source_id':sid,'display_name':p['display_name'],'role':role,'position':ROLE_TO_LABEL[role],'position_source':rs})
  extras=[]
  for p in players:
@@ -125,8 +135,9 @@ def main():
   if len(rows)<18:raise RuntimeError(f'{name}: {len(rows)}')
  stranded=[p for p in players if int(p.get('team_id') or 0)==OTHER_TURKEY_ID and not p.get('retired') and CLUB_ALIAS.get(norm(p.get('historical_club_1994')))]
  if stranded:raise RuntimeError('Stranded: '+','.join(p['display_name'] for p in stranded))
- audit={'schema_version':1,'season':'1993-94','league_id':LEAGUE_ID,'status':'pass_turkey_1993_94_active','staged_rows':sum(len(c['players']) for c in stage['clubs']),'unique_staged_identities':len({int(r['resolved_source_id']) for c in stage['clubs'] for r in c['players']}),'clubs':16,'minimum_required':18,'minimum_active_roster':min(counts.values()),'roster_counts':counts,'role_counts':rc,'reused_existing_players':reused,'created_players':created,'extra_verified_pool_players_reassigned':len(extras),'extra_reassigned':extras,'mixed_era_memberships_excluded':mixed,'position_provenance':dict(roles),'otros_turquia_stranded_recognised_club':len(stranded),'modern_mdb_league_id_57_active':False,'identities':ident,'duplicate_policy':'explicit reuse only; no fuzzy surname merging','rating_policy':'fixed source-comparable attributes on the game scale; no football 75/25 rule'}
- if audit['staged_rows']!=288 or audit['unique_staged_identities']!=288:raise RuntimeError('Turkey cardinality failed')
+ audit={'schema_version':1,'season':'1993-94','league_id':LEAGUE_ID,'status':'pass_turkey_1993_94_active','staged_rows':sum(len(c['players']) for c in stage['clubs']),'unique_staged_identities':len({int(r['resolved_source_id']) for c in stage['clubs'] for r in c['players']}),'clubs':16,'minimum_required':18,'source_roster_target':'all rows on pinned BDFutbol season squad pages','minimum_active_roster':min(counts.values()),'roster_counts':counts,'role_counts':rc,'reused_existing_players':reused,'created_players':created,'extra_verified_pool_players_reassigned':len(extras),'extra_reassigned':extras,'mixed_era_memberships_excluded':mixed,'position_provenance':dict(roles),'otros_turquia_stranded_recognised_club':len(stranded),'modern_mdb_league_id_57_active':False,'identities':ident,'duplicate_policy':'explicit reuse only; no fuzzy surname merging','rating_policy':'fixed source-comparable attributes on the game scale; no football 75/25 rule'}
+ if audit['staged_rows']!=audit['unique_staged_identities']:raise RuntimeError('Turkey source-roster identity cardinality failed')
+ audit['source_roster_exhaustive']=True; audit['minimum_is_floor_not_target']=True
  for path,obj in ((SNAP,snap),(STAGE,stage),(FOUNDATION,foundation),(REGISTRY,registry),(AUDIT,audit)):path.write_text(json.dumps(obj,ensure_ascii=False,indent=2),encoding='utf8')
  print(json.dumps({k:audit[k] for k in ('status','staged_rows','unique_staged_identities','minimum_active_roster','reused_existing_players','created_players','extra_verified_pool_players_reassigned','mixed_era_memberships_excluded','position_provenance')},ensure_ascii=False,indent=2));print(json.dumps(counts,ensure_ascii=False,indent=2))
 if __name__=='__main__':main()

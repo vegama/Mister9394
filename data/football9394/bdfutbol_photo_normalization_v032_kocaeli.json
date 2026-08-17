@@ -1,0 +1,31 @@
+{
+  "status": "complete",
+  "target_size": [
+    40,
+    55
+  ],
+  "format": "JPEG",
+  "mode": "RGB",
+  "converted": 1,
+  "skipped_existing": 0,
+  "unresolved": 0,
+  "invalid": 0,
+  "converted_rows": [
+    {
+      "source": ".photo_v032_kocaeli/9498004.jpg",
+      "destination": "frontend/public/historical9394/players/9498004.jpg",
+      "original_size": [
+        97,
+        152
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9498004
+    }
+  ],
+  "unresolved_files": [],
+  "invalid_files": []
+}

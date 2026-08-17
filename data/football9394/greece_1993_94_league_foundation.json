@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "purpose": "Activate the complete 1993-94 Greek Alpha Ethniki only after an 18-real-player-per-club gate.",
+  "purpose": "Run the 1993-94 Greek Alpha Ethniki with the full available RSSSF season roster; 18 real players per club is only the minimum safety floor.",
   "policy": {
     "fictional_fillers": false,
     "minimum_real_players_per_club": 18,
@@ -25,6 +25,7 @@
     ],
     "activation_status": "active_historical_roster_gate_passed",
     "roster_gate_minimum_players_per_club": 18,
+    "roster_target": "all players explicitly listed by RSSSF for the 1993-94 season",
     "source_url": "https://www.rsssf.org/tablesg/grk94.html",
     "clubs": [
       {

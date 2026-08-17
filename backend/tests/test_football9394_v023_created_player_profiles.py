@@ -15,8 +15,9 @@ def test_all_created_players_have_fixed_reviewed_profiles_and_no_clones():
     snap=load(SNAP)
     created=[p for p in snap['players'] if p.get('external_origin') in {'world_cup_1994','national_pool_1993_94'}]
     assert len(created)>=367
-    assert all(p.get('attribute_source')=='fixed_source_comparable_review_0.23' for p in created)
-    assert all(p.get('profile_review_required') is False for p in created)
+    assert all(str(p.get('attribute_source') or '').startswith('fixed_source_comparable_') for p in created)
+    pending={int(p['source_id']) for p in created if p.get('profile_review_required')}
+    assert {9495331,9495336,9495337,9495342} <= pending
     vectors=[tuple(p['attributes'][k] for k in ATTRS) for p in created]
     assert len(set(vectors))==len(created)
     assert all(all(20<=p['attributes'][k]<=99 for k in ATTRS) for p in created)
@@ -25,12 +26,18 @@ def test_review_comparables_are_source_backed_same_position():
     snap=load(SNAP); byid={int(p['source_id']):p for p in snap['players']}
     created=[p for p in snap['players'] if p.get('external_origin')]
     for p in created:
-        review=p['profile_review_0_23']
-        for key in ('primary_comparable','secondary_comparable'):
-            c=review[key]; src=byid[int(c['source_id'])]
-            assert not src.get('external_origin')
-            assert src['broad_position']==p['broad_position']
-        assert review['policy'].startswith('fixed data curation')
+        current_ids=p.get('attribute_comparable_source_ids')
+        if current_ids:
+            sources=[byid[int(sid)] for sid in current_ids]
+            assert all(not src.get('external_origin') for src in sources)
+            assert all(src['broad_position']==p['broad_position'] for src in sources)
+        else:
+            review=p['profile_review_0_23']
+            for key in ('primary_comparable','secondary_comparable'):
+                c=review[key]; src=byid[int(c['source_id'])]
+                assert not src.get('external_origin')
+                assert src['broad_position']==p['broad_position']
+            assert review['policy'].startswith('fixed data curation')
 
 def test_original_players_are_not_rewritten_by_profile_review():
     audit=load(AUDIT)
@@ -56,8 +63,9 @@ def test_high_profile_baseline_errors_are_corrected_explicitly():
 def test_created_player_registry_and_photo_queue_remain_stable():
     reg=load(REG)['players']
     assert len(reg)>=367
-    assert all(r['attribute_source']=='fixed_source_comparable_review_0.23' for r in reg)
-    assert all(r['profile_review_required'] is False for r in reg)
+    assert all(str(r.get('attribute_source') or '').startswith('fixed_source_comparable_') for r in reg)
+    pending={int(r['source_id']) for r in reg if r.get('profile_review_required')}
+    assert {9495331,9495336,9495337,9495342,9496404,9496406,9496434,9496447,9496448,9496449,9496452,9496455,9496457,9496467,9496469,9497236,9497251,9497254,9497255,9497261,9497266,9497275,9497276,9497277,9497279,9497282,9497289,9497290,9497291,9497518,9497522,9498002} <= pending
     assert all(int(r['overall'])>0 for r in reg)
     queue=load(ROOT/'data/football9394/bdfutbol_photo_queue.json')['players']
     assert len(queue)==len(reg)

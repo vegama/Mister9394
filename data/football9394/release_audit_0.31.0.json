@@ -1,0 +1,69 @@
+{
+  "checkpoint": "0.31.0-profiles-venues-referees-roster-hygiene",
+  "status": "pass",
+  "snapshot": {
+    "players": 12494,
+    "teams": 534,
+    "leagues": 27
+  },
+  "active_rosters": {
+    "Belgium": 406,
+    "Turkey": 414,
+    "Russia": 492,
+    "Greece": 496,
+    "total": 1808
+  },
+  "roster_hygiene": {
+    "legacy_club_id_collision_assignments_removed": 142,
+    "by_country": {
+      "Belgium": 60,
+      "Turkey": 47,
+      "Russia": 35
+    }
+  },
+  "profiles": {
+    "source_backed_curated": 103,
+    "role_corrections": 43,
+    "biographies_source_backed": 1808,
+    "biographies_with_season_stats": 1808
+  },
+  "photos": {
+    "new_bdfutbol_portraits_in_v031": 16,
+    "registry_total_bundled_normalized": 18,
+    "native_size": [
+      40,
+      55
+    ],
+    "format": "JPEG",
+    "mode": "RGB",
+    "registry_rows": 2102,
+    "queue_rows": 2102
+  },
+  "stadiums": {
+    "greece_source_backed": 18,
+    "russia_source_backed_new": 16,
+    "unresolved_total": 20,
+    "unresolved_by_country": {
+      "Belgium": 6,
+      "Turkey": 14
+    },
+    "catalog_total": 2128,
+    "modern_physical_values_inferred": false
+  },
+  "referees": {
+    "belgium_complete_pool": 25,
+    "greece_encoded_subset": 11,
+    "greece_reported_total": 45,
+    "unresolved_league_ids": [
+      930015,
+      930057
+    ],
+    "catalog_total": 3547
+  },
+  "validation": {
+    "compileall_backend": "pass",
+    "targeted_pytest": "60 passed in 7.52s",
+    "full_slow_simulation_suite": "not claimed; previous monolithic football9394 run exceeded the single-command timeout before completion"
+  },
+  "policy": "No missing nationality, exact specialist position, stadium physical parameter or referee identity is fabricated to satisfy coverage."
+}

@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "reference_year": 1993,
+  "policy": "Nationalities and country labels used by the historical game must follow the political map of 1993. Modern source IDs may be retained internally for compatibility, but their historical label/state context controls display and eligibility.",
+  "historical_labels": {
+    "104": "Georgia",
+    "132": "Kazajistán",
+    "202": "Tayikistán",
+    "78": "Sudáfrica",
+    "31": "Croacia",
+    "20": "Bosnia-Herzegovina",
+    "37": "Eslovenia",
+    "54": "Macedonia",
+    "75": "República Federal de Yugoslavia",
+    "88": "Zaire"
+  },
+  "not_separate_states_1993": {
+    "76": "Montenegro was not a separate state in 1993; use FR Yugoslavia context",
+    "129": "Kosovo was not a separate state in 1993; use FR Yugoslavia context"
+  }
+}

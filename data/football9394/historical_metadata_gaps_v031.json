@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "checkpoint": "0.31.0-profiles-venues-referees-roster-hygiene",
+  "status": "pass",
+  "profile_gaps": {
+    "Russia": {
+      "active_players": 492,
+      "missing_birth_date": 465,
+      "missing_international_country_id": 455,
+      "missing_birth_country_id": 465,
+      "missing_height_cm": 479,
+      "missing_weight_kg": 483,
+      "profile_review_required": 0
+    },
+    "Greece": {
+      "active_players": 496,
+      "missing_birth_date": 34,
+      "missing_international_country_id": 0,
+      "missing_birth_country_id": 0,
+      "missing_height_cm": 491,
+      "missing_weight_kg": 494,
+      "profile_review_required": 2
+    },
+    "Belgium": {
+      "active_players": 406,
+      "missing_birth_date": 330,
+      "missing_international_country_id": 292,
+      "missing_birth_country_id": 302,
+      "missing_height_cm": 362,
+      "missing_weight_kg": 400,
+      "profile_review_required": 0
+    },
+    "Turkey": {
+      "active_players": 414,
+      "missing_birth_date": 366,
+      "missing_international_country_id": 366,
+      "missing_birth_country_id": 366,
+      "missing_height_cm": 399,
+      "missing_weight_kg": 403,
+      "profile_review_required": 4
+    }
+  },
+  "unresolved_historical_venue_team_ids": [
+    9352001,
+    9352002,
+    9352003,
+    9352004,
+    9352005,
+    9352006,
+    9357001,
+    9357002,
+    9357003,
+    9357004,
+    9357005,
+    9357006,
+    9357007,
+    9357008,
+    9357009,
+    9357010,
+    9357011,
+    9357012,
+    9357013,
+    9357014
+  ],
+  "unresolved_historical_referee_pool_league_ids": [
+    930015,
+    930057
+  ],
+  "partially_resolved_referee_pools": {
+    "930047": "RSSSF publishes 11 named leaders out of 45 referees; encoded as an explicit historical subset."
+  },
+  "policy": "Known gaps remain explicit and source-gated; no biographical, stadium or referee fact is invented merely to satisfy coverage."
+}

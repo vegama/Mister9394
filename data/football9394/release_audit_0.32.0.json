@@ -1,0 +1,93 @@
+{
+  "checkpoint": "0.32.0-historical-metadata-turkey-profiles",
+  "status": "pass",
+  "created_at": "2026-08-17",
+  "active_players": {
+    "Belgium": 406,
+    "Turkey": 419,
+    "Russia": 492,
+    "Greece": 496,
+    "total": 1813
+  },
+  "profile_curation": {
+    "turkey_profiles_curated_v032": 162,
+    "role_corrections_v032": 96,
+    "remaining_turkey_missing_birth_date": 227,
+    "remaining_turkey_missing_international_country_id": 226,
+    "profile_review_required_turkey": 22
+  },
+  "roster_recovery": [
+    {
+      "source_id": 9498000,
+      "name": "Vedat Emmez",
+      "team": "Bursaspor"
+    },
+    {
+      "source_id": 9498001,
+      "name": "Serkan Gültang",
+      "team": "Gençlerbirliği"
+    },
+    {
+      "source_id": 9498002,
+      "name": "Sunay Kahraman",
+      "team": "Gençlerbirliği"
+    },
+    {
+      "source_id": 9498003,
+      "name": "İsmail Ünal",
+      "team": "Kocaelispor"
+    },
+    {
+      "source_id": 9498004,
+      "name": "Fevzi Açıkgöz",
+      "team": "Kocaelispor"
+    }
+  ],
+  "historical_metadata": {
+    "unresolved_stadiums": 0,
+    "referees": {
+      "Belgium": {
+        "identified": 25,
+        "status": "complete"
+      },
+      "Turkey": {
+        "identified": 34,
+        "appearance_total": 240,
+        "status": "complete"
+      },
+      "Russia": {
+        "identified": 33,
+        "appearance_total": 306,
+        "status": "complete"
+      },
+      "Greece": {
+        "identified": 11,
+        "source_total": 45,
+        "status": "explicit_partial"
+      }
+    }
+  },
+  "biographies": {
+    "written": 1813
+  },
+  "photos": {
+    "bundled_normalized_bdfutbol": 36,
+    "registry_rows": 2107
+  },
+  "integrity": {
+    "comparable_reference_repairs_last_pass": 0,
+    "vector_comparable_repairs_last_pass": 5,
+    "registry_queue_unique_and_synced": true
+  },
+  "tests": {
+    "selected_regression_passed": 84,
+    "selected_regression_failed": 0,
+    "v032_specific_passed": 12,
+    "full_repo_suite_run": false
+  },
+  "policy": {
+    "football_75_25_rule": false,
+    "unknown_historical_values_are_invented": false,
+    "broad_position_uncertainty_is_explicit": true
+  }
+}

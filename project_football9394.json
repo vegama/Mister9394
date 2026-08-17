@@ -1,7 +1,7 @@
 {
   "project": "Mister 93/94",
-  "checkpoint": "0.28.0-greece-1993-94-active",
-  "fork_stage": "turkey-russia-greece-1993-94-leagues-active",
+  "checkpoint": "0.31.0-profiles-venues-referees-roster-hygiene",
+  "fork_stage": "historical-profiles-biographies-venues-referees-source-gated",
   "season_start": "1993-94",
   "runtime_dataset": "data/football9394/historical_snapshot.json",
   "principles": [

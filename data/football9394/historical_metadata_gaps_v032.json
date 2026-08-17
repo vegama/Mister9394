@@ -1,0 +1,152 @@
+{
+  "schema_version": 1,
+  "checkpoint": "0.32.0-historical-metadata-turkey-profiles",
+  "status": "pass",
+  "profile_gaps": {
+    "Russia": {
+      "active_players": 492,
+      "missing_birth_date": 465,
+      "missing_international_country_id": 455,
+      "missing_birth_country_id": 465,
+      "missing_height_cm": 479,
+      "missing_weight_kg": 483,
+      "profile_review_required": 0
+    },
+    "Greece": {
+      "active_players": 496,
+      "missing_birth_date": 34,
+      "missing_international_country_id": 0,
+      "missing_birth_country_id": 0,
+      "missing_height_cm": 491,
+      "missing_weight_kg": 494,
+      "profile_review_required": 2
+    },
+    "Belgium": {
+      "active_players": 406,
+      "missing_birth_date": 330,
+      "missing_international_country_id": 292,
+      "missing_birth_country_id": 302,
+      "missing_height_cm": 362,
+      "missing_weight_kg": 400,
+      "profile_review_required": 0
+    },
+    "Turkey": {
+      "active_players": 419,
+      "missing_birth_date": 227,
+      "missing_international_country_id": 226,
+      "missing_birth_country_id": 354,
+      "missing_height_cm": 371,
+      "missing_weight_kg": 408,
+      "profile_review_required": 22
+    }
+  },
+  "unresolved_historical_venue_team_ids": [],
+  "unresolved_historical_referee_pool_league_ids": [],
+  "partially_resolved_referee_pools": {
+    "930047": "RSSSF publishes 11 named leaders out of 45 referees; encoded as an explicit historical subset."
+  },
+  "profile_review_queue": [
+    {
+      "source_id": 9496404,
+      "display_name": "Fevzi Korkmaz",
+      "reason": "season source only gives a broad position category; exact role remains source-gated"
+    },
+    {
+      "source_id": 9496406,
+      "display_name": "Osman Akyol",
+      "reason": "season source only gives a broad position category; exact role remains source-gated"
+    },
+    {
+      "source_id": 9496434,
+      "display_name": "Sefer Yılmaz",
+      "reason": "season source only gives a broad position category; exact role remains source-gated"
+    },
+    {
+      "source_id": 9496447,
+      "display_name": "Ace Khuse",
+      "reason": "season source only gives a broad position category; exact role remains source-gated"
+    },
+    {
+      "source_id": 9496448,
+      "display_name": "Erkut Çağdaş",
+      "reason": "season source only gives a broad position category; exact role remains source-gated"
+    },
+    {
+      "source_id": 9496449,
+      "display_name": "Ali Işık",
+      "reason": "season source only gives a broad position category; exact role remains source-gated"
+    },
+    {
+      "source_id": 9496452,
+      "display_name": "Yunus Kara",
+      "reason": "season source only gives a broad position category; exact role remains source-gated"
+    },
+    {
+      "source_id": 9497236,
+      "display_name": "Kerem Şenel",
+      "reason": "season source only gives a broad position category; exact role remains source-gated"
+    },
+    {
+      "source_id": 9497251,
+      "display_name": "Recep Tüzün",
+      "reason": "season source only gives a broad position category; exact role remains source-gated"
+    },
+    {
+      "source_id": 9497254,
+      "display_name": "Gökay Akpınar",
+      "reason": "season source only gives a broad position category; exact role remains source-gated"
+    },
+    {
+      "source_id": 9497255,
+      "display_name": "Mevlüt Kahraman",
+      "reason": "season source only gives a broad position category; exact role remains source-gated"
+    },
+    {
+      "source_id": 9497261,
+      "display_name": "Hasan Şişman",
+      "reason": "season source only gives a broad position category; exact role remains source-gated"
+    },
+    {
+      "source_id": 9497266,
+      "display_name": "Murat Şenvardar",
+      "reason": "season source only gives a broad position category; exact role remains source-gated"
+    },
+    {
+      "source_id": 9497282,
+      "display_name": "Serkan Arslan",
+      "reason": "season source only gives a broad position category; exact role remains source-gated"
+    },
+    {
+      "source_id": 9497289,
+      "display_name": "İlker Özdemir",
+      "reason": "season source only gives a broad position category; exact role remains source-gated"
+    },
+    {
+      "source_id": 9497290,
+      "display_name": "Fatih Çayla",
+      "reason": "season source only gives a broad position category; exact role remains source-gated"
+    },
+    {
+      "source_id": 9497291,
+      "display_name": "Ramazan Gürbüz",
+      "reason": "season source only gives a broad position category; exact role remains source-gated"
+    },
+    {
+      "source_id": 9497518,
+      "display_name": "Andreas Theodoropoulos",
+      "reason": "season source only gives a broad position category; exact role remains source-gated"
+    },
+    {
+      "source_id": 9497522,
+      "display_name": "Christos Loukinas",
+      "reason": "season source only gives a broad position category; exact role remains source-gated"
+    },
+    {
+      "source_id": 9498002,
+      "display_name": "Sunay Kahraman",
+      "reason": "season source only gives a broad position category; exact role remains source-gated"
+    }
+  ],
+  "policy": "Known player-profile gaps remain explicit and source-gated; venue/referee structural gaps for the four newly reconstructed leagues are now closed except Greece referee-name completeness.",
+  "known_source_roster_differences": []
+}

@@ -3,60 +3,55 @@
   "season": "1993",
   "league_id": 930015,
   "status": "pass_russia_1993_active",
-  "staged_rows": 324,
-  "unique_staged_identities": 324,
+  "staged_rows": 492,
+  "unique_staged_identities": 492,
   "clubs": 18,
   "minimum_required": 18,
-  "minimum_active_roster": 18,
+  "source_roster_target": "all rows on pinned BDFutbol season squad pages",
+  "minimum_active_roster": 22,
   "roster_counts": {
-    "Spartak Moskva": 18,
-    "Rotor Volgograd": 18,
-    "Dynamo Moskva": 18,
-    "Tekstilshchik Kamyshin": 18,
-    "Lokomotiv Moskva": 18,
-    "Spartak Vladikavkaz": 18,
-    "Torpedo Moskva": 18,
-    "Uralmash": 18,
-    "CSKA Moskva": 18,
-    "KAMAZ": 18,
-    "Zhemchuzhina Sochi": 18,
-    "Dynamo Stavropol": 18,
-    "Lokomotiv Nizhny Novgorod": 18,
-    "Krylia Sovetov": 18,
-    "Luch Vladivostok": 18,
-    "Okean Nakhodka": 18,
-    "Rostselmash": 18,
-    "Asmaral Moskva": 18
+    "Spartak Moskva": 33,
+    "Rotor Volgograd": 23,
+    "Dynamo Moskva": 29,
+    "Tekstilshchik Kamyshin": 27,
+    "Lokomotiv Moskva": 29,
+    "Spartak Vladikavkaz": 22,
+    "Torpedo Moskva": 29,
+    "Uralmash": 25,
+    "CSKA Moskva": 29,
+    "KAMAZ": 29,
+    "Zhemchuzhina Sochi": 27,
+    "Dynamo Stavropol": 28,
+    "Lokomotiv Nizhny Novgorod": 23,
+    "Krylia Sovetov": 26,
+    "Luch Vladivostok": 24,
+    "Okean Nakhodka": 27,
+    "Rostselmash": 29,
+    "Asmaral Moskva": 33
   },
   "role_counts": {
     "0": 41,
-    "1": 23,
-    "2": 28,
-    "3": 29,
-    "4": 24,
-    "6": 9,
-    "7": 50,
-    "8": 8,
-    "9": 26,
-    "12": 8,
-    "13": 21,
-    "16": 6,
-    "17": 51
+    "1": 37,
+    "2": 43,
+    "3": 84,
+    "6": 24,
+    "7": 62,
+    "8": 20,
+    "9": 37,
+    "12": 22,
+    "13": 34,
+    "16": 20,
+    "17": 68
   },
-  "reused_existing_players": 16,
-  "created_players": 308,
+  "reused_existing_players": 492,
+  "created_players": 0,
   "extra_verified_pool_players_reassigned": 0,
   "extra_reassigned": [],
-  "mixed_era_memberships_excluded": 35,
+  "mixed_era_memberships_excluded": 50,
   "position_provenance": {
     "bdfutbol_individual_profile_v0.29": 5,
-    "existing_specialist_role": 12,
-    "existing_historical_position": 4,
-    "bdfutbol_lineup_order_inference": 166,
-    "bdfutbol_goalkeeper_stat": 36,
-    "squad_balance_inference": 93,
-    "bdfutbol_player_profile": 3,
-    "bdfutbol_goal_output_inference": 5
+    "existing_historical_position": 484,
+    "bdfutbol_player_profile": 3
   },
   "otros_russia_stranded_recognised_club": 0,
   "modern_mdb_league_id_15_active": false,
@@ -80,7 +75,7 @@
       "display_name": "Viktor Onopko",
       "role": 3,
       "position": "Centre Back",
-      "position_source": "existing_specialist_role",
+      "position_source": "existing_historical_position",
       "individual_profile_source_url": "https://www.bdfutbol.com/en/j/j2609.html"
     },
     {
@@ -99,9 +94,9 @@
       "identity_hint": null,
       "source_id": 9496614,
       "display_name": "Ivanov",
-      "role": 4,
+      "role": 3,
       "position": "Centre Back",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Spartak Moskva",
@@ -111,7 +106,7 @@
       "display_name": "Yuri Nikiforov",
       "role": 3,
       "position": "Centre Back",
-      "position_source": "existing_specialist_role"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Spartak Moskva",
@@ -121,7 +116,7 @@
       "display_name": "Igor Lediakhov",
       "role": 7,
       "position": "Centre Midfielder",
-      "position_source": "existing_specialist_role"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Spartak Moskva",
@@ -131,7 +126,7 @@
       "display_name": "Valeri Karpin",
       "role": 7,
       "position": "Centre Midfielder",
-      "position_source": "existing_specialist_role"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Spartak Moskva",
@@ -141,7 +136,7 @@
       "display_name": "Andrey Pyatnitsky",
       "role": 7,
       "position": "Centre Midfielder",
-      "position_source": "existing_specialist_role"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Spartak Moskva",
@@ -151,7 +146,7 @@
       "display_name": "Ilya Tsymbalar",
       "role": 7,
       "position": "Centre Midfielder",
-      "position_source": "existing_specialist_role"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Spartak Moskva",
@@ -172,7 +167,7 @@
       "display_name": "Vladimir Beschastnykh",
       "role": 17,
       "position": "Centre Forward",
-      "position_source": "existing_specialist_role"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Spartak Moskva",
@@ -182,7 +177,7 @@
       "display_name": "Cherchesov",
       "role": 0,
       "position": "Goalkeeper",
-      "position_source": "existing_specialist_role"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Spartak Moskva",
@@ -203,7 +198,7 @@
       "display_name": "Dmitri Khlestov",
       "role": 7,
       "position": "Centre Midfielder",
-      "position_source": "existing_specialist_role"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Spartak Moskva",
@@ -213,7 +208,7 @@
       "display_name": "Popov",
       "role": 9,
       "position": "Right Midfielder",
-      "position_source": "existing_specialist_role"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Spartak Moskva",
@@ -223,7 +218,7 @@
       "display_name": "Radchenko",
       "role": 17,
       "position": "Centre Forward",
-      "position_source": "existing_specialist_role"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Spartak Moskva",
@@ -248,6 +243,156 @@
       "individual_profile_source_url": "https://www.bdfutbol.com/en/j/j84989.html"
     },
     {
+      "club": "Spartak Moskva",
+      "bdfutbol_name": "Gashkin",
+      "identity_hint": null,
+      "source_id": 9497349,
+      "display_name": "Gashkin",
+      "role": 3,
+      "position": "Centre Back",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Spartak Moskva",
+      "bdfutbol_name": "Tikhonov",
+      "identity_hint": null,
+      "source_id": 9497350,
+      "display_name": "Tikhonov",
+      "role": 2,
+      "position": "Left Back",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Spartak Moskva",
+      "bdfutbol_name": "Rodionov",
+      "identity_hint": null,
+      "source_id": 9497351,
+      "display_name": "Rodionov",
+      "role": 6,
+      "position": "Defensive Midfielder",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Spartak Moskva",
+      "bdfutbol_name": "Chernyshov",
+      "identity_hint": null,
+      "source_id": 9497352,
+      "display_name": "Chernyshov",
+      "role": 13,
+      "position": "Left Midfielder",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Spartak Moskva",
+      "bdfutbol_name": "Bondar",
+      "identity_hint": null,
+      "source_id": 9497353,
+      "display_name": "Bondar",
+      "role": 17,
+      "position": "Centre Forward",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Spartak Moskva",
+      "bdfutbol_name": "Pogodin",
+      "identity_hint": null,
+      "source_id": 9497354,
+      "display_name": "Pogodin",
+      "role": 16,
+      "position": "Left Winger",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Spartak Moskva",
+      "bdfutbol_name": "Chudin",
+      "identity_hint": null,
+      "source_id": 9497355,
+      "display_name": "Chudin",
+      "role": 3,
+      "position": "Centre Back",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Spartak Moskva",
+      "bdfutbol_name": "Chizhov",
+      "identity_hint": null,
+      "source_id": 9497356,
+      "display_name": "Chizhov",
+      "role": 2,
+      "position": "Left Back",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Spartak Moskva",
+      "bdfutbol_name": "Kechinov",
+      "identity_hint": null,
+      "source_id": 9497357,
+      "display_name": "Kechinov",
+      "role": 6,
+      "position": "Defensive Midfielder",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Spartak Moskva",
+      "bdfutbol_name": "Konovalov",
+      "identity_hint": null,
+      "source_id": 9497358,
+      "display_name": "Konovalov",
+      "role": 13,
+      "position": "Left Midfielder",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Spartak Moskva",
+      "bdfutbol_name": "Gradilenko",
+      "identity_hint": null,
+      "source_id": 9497359,
+      "display_name": "Gradilenko",
+      "role": 17,
+      "position": "Centre Forward",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Spartak Moskva",
+      "bdfutbol_name": "Baksheev",
+      "identity_hint": null,
+      "source_id": 9497360,
+      "display_name": "Baksheev",
+      "role": 16,
+      "position": "Left Winger",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Spartak Moskva",
+      "bdfutbol_name": "Alexey Sergeev",
+      "identity_hint": null,
+      "source_id": 9497361,
+      "display_name": "Alexey Sergeev",
+      "role": 3,
+      "position": "Centre Back",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Spartak Moskva",
+      "bdfutbol_name": "Krestov",
+      "identity_hint": null,
+      "source_id": 9497362,
+      "display_name": "Krestov",
+      "role": 2,
+      "position": "Left Back",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Spartak Moskva",
+      "bdfutbol_name": "Rekuts",
+      "identity_hint": null,
+      "source_id": 9497363,
+      "display_name": "Rekuts",
+      "role": 6,
+      "position": "Defensive Midfielder",
+      "position_source": "existing_historical_position"
+    },
+    {
       "club": "Rotor Volgograd",
       "bdfutbol_name": "Manannikov",
       "identity_hint": null,
@@ -255,7 +400,7 @@
       "display_name": "Manannikov",
       "role": 0,
       "position": "Goalkeeper",
-      "position_source": "bdfutbol_goalkeeper_stat"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Rotor Volgograd",
@@ -265,7 +410,7 @@
       "display_name": "Nechay",
       "role": 1,
       "position": "Right Back",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Rotor Volgograd",
@@ -275,7 +420,7 @@
       "display_name": "Gerashchenko",
       "role": 3,
       "position": "Centre Back",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Rotor Volgograd",
@@ -283,9 +428,9 @@
       "identity_hint": null,
       "source_id": 9496622,
       "display_name": "Shmarko",
-      "role": 4,
+      "role": 3,
       "position": "Centre Back",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Rotor Volgograd",
@@ -295,7 +440,7 @@
       "display_name": "Burlachenko",
       "role": 2,
       "position": "Left Back",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Rotor Volgograd",
@@ -305,7 +450,7 @@
       "display_name": "Menshchikov",
       "role": 9,
       "position": "Right Midfielder",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Rotor Volgograd",
@@ -315,7 +460,7 @@
       "display_name": "Tsarenko",
       "role": 7,
       "position": "Centre Midfielder",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Rotor Volgograd",
@@ -325,17 +470,19 @@
       "display_name": "Zhidkov",
       "role": 7,
       "position": "Centre Midfielder",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Rotor Volgograd",
       "bdfutbol_name": "Veretennikov",
       "identity_hint": null,
       "source_id": 9496627,
-      "display_name": "Veretennikov",
-      "role": 13,
-      "position": "Left Midfielder",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "display_name": "Oleg Aleksandrovich Veretennikov",
+      "role": 17,
+      "position": "Centre Forward",
+      "position_source": "existing_historical_position",
+      "individual_profile_source_url": "https://www.bdfutbol.com/en/j/j66381.html",
+      "country_id": 40
     },
     {
       "club": "Rotor Volgograd",
@@ -345,17 +492,19 @@
       "display_name": "Yesipov",
       "role": 17,
       "position": "Centre Forward",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Rotor Volgograd",
       "bdfutbol_name": "Niederhaus",
       "identity_hint": null,
       "source_id": 9496629,
-      "display_name": "Niederhaus",
+      "display_name": "Vladimir Viktorovich Niederhaus",
       "role": 17,
       "position": "Centre Forward",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position",
+      "individual_profile_source_url": "https://www.bdfutbol.com/en/j/j1159061.html",
+      "country_id": 132
     },
     {
       "club": "Rotor Volgograd",
@@ -365,7 +514,7 @@
       "display_name": "Gritsenko",
       "role": 0,
       "position": "Goalkeeper",
-      "position_source": "bdfutbol_goalkeeper_stat"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Rotor Volgograd",
@@ -375,7 +524,7 @@
       "display_name": "Kovalenko",
       "role": 8,
       "position": "Attacking Midfielder",
-      "position_source": "squad_balance_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Rotor Volgograd",
@@ -385,7 +534,7 @@
       "display_name": "Stogov",
       "role": 12,
       "position": "Right Winger",
-      "position_source": "squad_balance_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Rotor Volgograd",
@@ -395,7 +544,7 @@
       "display_name": "Gerasimenko",
       "role": 3,
       "position": "Centre Back",
-      "position_source": "squad_balance_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Rotor Volgograd",
@@ -405,7 +554,7 @@
       "display_name": "Nikitin",
       "role": 1,
       "position": "Right Back",
-      "position_source": "squad_balance_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Rotor Volgograd",
@@ -415,7 +564,7 @@
       "display_name": "Eshchenko",
       "role": 7,
       "position": "Centre Midfielder",
-      "position_source": "squad_balance_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Rotor Volgograd",
@@ -425,7 +574,57 @@
       "display_name": "Nechayev",
       "role": 9,
       "position": "Right Midfielder",
-      "position_source": "squad_balance_inference"
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Rotor Volgograd",
+      "bdfutbol_name": "Kuznetsov",
+      "identity_hint": null,
+      "source_id": 9497364,
+      "display_name": "Kuznetsov",
+      "role": 8,
+      "position": "Attacking Midfielder",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Rotor Volgograd",
+      "bdfutbol_name": "Shkilov",
+      "identity_hint": null,
+      "source_id": 9497365,
+      "display_name": "Shkilov",
+      "role": 12,
+      "position": "Right Winger",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Rotor Volgograd",
+      "bdfutbol_name": "Konovalov",
+      "identity_hint": null,
+      "source_id": 9497366,
+      "display_name": "Konovalov",
+      "role": 3,
+      "position": "Centre Back",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Rotor Volgograd",
+      "bdfutbol_name": "Miroshnichenko",
+      "identity_hint": null,
+      "source_id": 9497367,
+      "display_name": "Miroshnichenko",
+      "role": 1,
+      "position": "Right Back",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Rotor Volgograd",
+      "bdfutbol_name": "Perminov",
+      "identity_hint": null,
+      "source_id": 9497368,
+      "display_name": "Perminov",
+      "role": 7,
+      "position": "Centre Midfielder",
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Dynamo Moskva",
@@ -435,17 +634,19 @@
       "display_name": "Kleymenov",
       "role": 0,
       "position": "Goalkeeper",
-      "position_source": "bdfutbol_goalkeeper_stat"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Dynamo Moskva",
       "bdfutbol_name": "Tetradze",
       "identity_hint": null,
       "source_id": 9494086,
-      "display_name": "Omari Tetradze",
+      "display_name": "Omari Mikhailovich Tetradze",
       "role": 3,
       "position": "Centre Back",
-      "position_source": "existing_specialist_role"
+      "position_source": "existing_historical_position",
+      "individual_profile_source_url": "https://www.bdfutbol.com/en/j/j99702.html",
+      "country_id": 40
     },
     {
       "club": "Dynamo Moskva",
@@ -463,9 +664,9 @@
       "identity_hint": null,
       "source_id": 9496638,
       "display_name": "Tsarev",
-      "role": 4,
+      "role": 3,
       "position": "Centre Back",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Dynamo Moskva",
@@ -475,7 +676,7 @@
       "display_name": "Timofeev",
       "role": 2,
       "position": "Left Back",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Dynamo Moskva",
@@ -485,7 +686,7 @@
       "display_name": "Tedeyev",
       "role": 9,
       "position": "Right Midfielder",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Dynamo Moskva",
@@ -495,7 +696,7 @@
       "display_name": "Kalitvintsev",
       "role": 7,
       "position": "Centre Midfielder",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Dynamo Moskva",
@@ -505,7 +706,7 @@
       "display_name": "Smertin",
       "role": 7,
       "position": "Centre Midfielder",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Dynamo Moskva",
@@ -525,7 +726,7 @@
       "display_name": "Cheryshev",
       "role": 17,
       "position": "Centre Forward",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Dynamo Moskva",
@@ -535,7 +736,7 @@
       "display_name": "Tishkov",
       "role": 17,
       "position": "Centre Forward",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Dynamo Moskva",
@@ -545,7 +746,7 @@
       "display_name": "Smetanin",
       "role": 0,
       "position": "Goalkeeper",
-      "position_source": "bdfutbol_goalkeeper_stat"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Dynamo Moskva",
@@ -555,7 +756,7 @@
       "display_name": "Krutov",
       "role": 2,
       "position": "Left Back",
-      "position_source": "squad_balance_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Dynamo Moskva",
@@ -565,7 +766,7 @@
       "display_name": "Dobrovolski",
       "role": 17,
       "position": "Centre Forward",
-      "position_source": "bdfutbol_goal_output_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Dynamo Moskva",
@@ -575,7 +776,7 @@
       "display_name": "Rybakov",
       "role": 17,
       "position": "Centre Forward",
-      "position_source": "bdfutbol_goal_output_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Dynamo Moskva",
@@ -585,7 +786,7 @@
       "display_name": "Selezov",
       "role": 17,
       "position": "Centre Forward",
-      "position_source": "squad_balance_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Dynamo Moskva",
@@ -595,7 +796,7 @@
       "display_name": "Kramarenko",
       "role": 0,
       "position": "Goalkeeper",
-      "position_source": "bdfutbol_goalkeeper_stat"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Dynamo Moskva",
@@ -603,9 +804,119 @@
       "identity_hint": null,
       "source_id": 9496652,
       "display_name": "Chernyshov",
-      "role": 4,
+      "role": 3,
       "position": "Centre Back",
-      "position_source": "squad_balance_inference"
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Dynamo Moskva",
+      "bdfutbol_name": "Derkach",
+      "identity_hint": null,
+      "source_id": 9497369,
+      "display_name": "Derkach",
+      "role": 2,
+      "position": "Left Back",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Dynamo Moskva",
+      "bdfutbol_name": "Hovhannisyan",
+      "identity_hint": null,
+      "source_id": 9497370,
+      "display_name": "Hovhannisyan",
+      "role": 6,
+      "position": "Defensive Midfielder",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Dynamo Moskva",
+      "bdfutbol_name": "Gudymenko",
+      "identity_hint": null,
+      "source_id": 9497371,
+      "display_name": "Gudymenko",
+      "role": 13,
+      "position": "Left Midfielder",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Dynamo Moskva",
+      "bdfutbol_name": "Nekrasov",
+      "identity_hint": null,
+      "source_id": 9497372,
+      "display_name": "Nekrasov",
+      "role": 17,
+      "position": "Centre Forward",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Dynamo Moskva",
+      "bdfutbol_name": "Varlamov",
+      "identity_hint": null,
+      "source_id": 9497373,
+      "display_name": "Varlamov",
+      "role": 16,
+      "position": "Left Winger",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Dynamo Moskva",
+      "bdfutbol_name": "Sklyarov",
+      "identity_hint": null,
+      "source_id": 9497374,
+      "display_name": "Sklyarov",
+      "role": 3,
+      "position": "Centre Back",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Dynamo Moskva",
+      "bdfutbol_name": "Savchenko",
+      "identity_hint": null,
+      "source_id": 9497375,
+      "display_name": "Savchenko",
+      "role": 2,
+      "position": "Left Back",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Dynamo Moskva",
+      "bdfutbol_name": "Filippov",
+      "identity_hint": null,
+      "source_id": 9497376,
+      "display_name": "Filippov",
+      "role": 6,
+      "position": "Defensive Midfielder",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Dynamo Moskva",
+      "bdfutbol_name": "Gavrilin",
+      "identity_hint": null,
+      "source_id": 9497377,
+      "display_name": "Gavrilin",
+      "role": 13,
+      "position": "Left Midfielder",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Dynamo Moskva",
+      "bdfutbol_name": "Kostyuk",
+      "identity_hint": null,
+      "source_id": 9497378,
+      "display_name": "Kostyuk",
+      "role": 17,
+      "position": "Centre Forward",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Dynamo Moskva",
+      "bdfutbol_name": "Layushkin",
+      "identity_hint": null,
+      "source_id": 9497379,
+      "display_name": "Layushkin",
+      "role": 16,
+      "position": "Left Winger",
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Tekstilshchik Kamyshin",
@@ -615,7 +926,7 @@
       "display_name": "Samorukov",
       "role": 0,
       "position": "Goalkeeper",
-      "position_source": "bdfutbol_goalkeeper_stat"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Tekstilshchik Kamyshin",
@@ -625,7 +936,7 @@
       "display_name": "Morozov",
       "role": 1,
       "position": "Right Back",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Tekstilshchik Kamyshin",
@@ -635,7 +946,7 @@
       "display_name": "Prokhorov",
       "role": 3,
       "position": "Centre Back",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Tekstilshchik Kamyshin",
@@ -643,9 +954,9 @@
       "identity_hint": "Kamyshin Morozov row 2",
       "source_id": 9496656,
       "display_name": "Morozov",
-      "role": 4,
+      "role": 3,
       "position": "Centre Back",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Tekstilshchik Kamyshin",
@@ -655,7 +966,7 @@
       "display_name": "Rozin",
       "role": 2,
       "position": "Left Back",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Tekstilshchik Kamyshin",
@@ -665,7 +976,7 @@
       "display_name": "Minaev",
       "role": 9,
       "position": "Right Midfielder",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Tekstilshchik Kamyshin",
@@ -675,7 +986,7 @@
       "display_name": "Elyshev",
       "role": 7,
       "position": "Centre Midfielder",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Tekstilshchik Kamyshin",
@@ -685,7 +996,7 @@
       "display_name": "Volgin",
       "role": 7,
       "position": "Centre Midfielder",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Tekstilshchik Kamyshin",
@@ -695,7 +1006,7 @@
       "display_name": "Navochenko",
       "role": 13,
       "position": "Left Midfielder",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Tekstilshchik Kamyshin",
@@ -705,7 +1016,7 @@
       "display_name": "Natalushko",
       "role": 17,
       "position": "Centre Forward",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Tekstilshchik Kamyshin",
@@ -715,7 +1026,7 @@
       "display_name": "Shaymukhametov",
       "role": 17,
       "position": "Centre Forward",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Tekstilshchik Kamyshin",
@@ -725,7 +1036,7 @@
       "display_name": "Krykanov",
       "role": 0,
       "position": "Goalkeeper",
-      "position_source": "bdfutbol_goalkeeper_stat"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Tekstilshchik Kamyshin",
@@ -735,7 +1046,7 @@
       "display_name": "Sergeev",
       "role": 12,
       "position": "Right Winger",
-      "position_source": "squad_balance_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Tekstilshchik Kamyshin",
@@ -745,7 +1056,7 @@
       "display_name": "Karpenko",
       "role": 3,
       "position": "Centre Back",
-      "position_source": "squad_balance_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Tekstilshchik Kamyshin",
@@ -755,7 +1066,7 @@
       "display_name": "Sobol",
       "role": 1,
       "position": "Right Back",
-      "position_source": "squad_balance_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Tekstilshchik Kamyshin",
@@ -765,7 +1076,7 @@
       "display_name": "Yudin",
       "role": 7,
       "position": "Centre Midfielder",
-      "position_source": "squad_balance_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Tekstilshchik Kamyshin",
@@ -775,7 +1086,7 @@
       "display_name": "Smolkov",
       "role": 9,
       "position": "Right Midfielder",
-      "position_source": "squad_balance_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Tekstilshchik Kamyshin",
@@ -785,7 +1096,97 @@
       "display_name": "Iljin",
       "role": 8,
       "position": "Attacking Midfielder",
-      "position_source": "squad_balance_inference"
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Tekstilshchik Kamyshin",
+      "bdfutbol_name": "Demin",
+      "identity_hint": null,
+      "source_id": 9497380,
+      "display_name": "Demin",
+      "role": 12,
+      "position": "Right Winger",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Tekstilshchik Kamyshin",
+      "bdfutbol_name": "Kleymenov",
+      "identity_hint": null,
+      "source_id": 9497381,
+      "display_name": "Kleymenov",
+      "role": 3,
+      "position": "Centre Back",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Tekstilshchik Kamyshin",
+      "bdfutbol_name": "Polstyanov",
+      "identity_hint": null,
+      "source_id": 9497382,
+      "display_name": "Polstyanov",
+      "role": 1,
+      "position": "Right Back",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Tekstilshchik Kamyshin",
+      "bdfutbol_name": "Nedorostkov",
+      "identity_hint": null,
+      "source_id": 9497383,
+      "display_name": "Nedorostkov",
+      "role": 7,
+      "position": "Centre Midfielder",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Tekstilshchik Kamyshin",
+      "bdfutbol_name": "Zazdravnykh",
+      "identity_hint": null,
+      "source_id": 9497384,
+      "display_name": "Zazdravnykh",
+      "role": 9,
+      "position": "Right Midfielder",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Tekstilshchik Kamyshin",
+      "bdfutbol_name": "Evseev",
+      "identity_hint": null,
+      "source_id": 9497385,
+      "display_name": "Evseev",
+      "role": 8,
+      "position": "Attacking Midfielder",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Tekstilshchik Kamyshin",
+      "bdfutbol_name": "Tereshchenko",
+      "identity_hint": null,
+      "source_id": 9497386,
+      "display_name": "Tereshchenko",
+      "role": 12,
+      "position": "Right Winger",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Tekstilshchik Kamyshin",
+      "bdfutbol_name": "Soshenko",
+      "identity_hint": null,
+      "source_id": 9497387,
+      "display_name": "Soshenko",
+      "role": 3,
+      "position": "Centre Back",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Tekstilshchik Kamyshin",
+      "bdfutbol_name": "Bukin",
+      "identity_hint": null,
+      "source_id": 9497388,
+      "display_name": "Bukin",
+      "role": 1,
+      "position": "Right Back",
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Lokomotiv Moskva",
@@ -815,7 +1216,7 @@
       "display_name": "Sabitov",
       "role": 3,
       "position": "Centre Back",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Lokomotiv Moskva",
@@ -823,9 +1224,9 @@
       "identity_hint": null,
       "source_id": 9496673,
       "display_name": "Samatov",
-      "role": 4,
+      "role": 3,
       "position": "Centre Back",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Lokomotiv Moskva",
@@ -835,7 +1236,7 @@
       "display_name": "Drozdov",
       "role": 2,
       "position": "Left Back",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Lokomotiv Moskva",
@@ -845,7 +1246,7 @@
       "display_name": "Arifullin",
       "role": 9,
       "position": "Right Midfielder",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Lokomotiv Moskva",
@@ -855,7 +1256,7 @@
       "display_name": "Kosolapov",
       "role": 7,
       "position": "Centre Midfielder",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Lokomotiv Moskva",
@@ -865,7 +1266,7 @@
       "display_name": "Smirnov",
       "role": 7,
       "position": "Centre Midfielder",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Lokomotiv Moskva",
@@ -885,7 +1286,7 @@
       "display_name": "Garin",
       "role": 17,
       "position": "Centre Forward",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Lokomotiv Moskva",
@@ -895,7 +1296,7 @@
       "display_name": "Mukhamadiev",
       "role": 17,
       "position": "Centre Forward",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Lokomotiv Moskva",
@@ -905,7 +1306,7 @@
       "display_name": "Bidzhiyev",
       "role": 0,
       "position": "Goalkeeper",
-      "position_source": "bdfutbol_goalkeeper_stat"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Lokomotiv Moskva",
@@ -915,7 +1316,7 @@
       "display_name": "Nikulkin",
       "role": 6,
       "position": "Defensive Midfielder",
-      "position_source": "squad_balance_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Lokomotiv Moskva",
@@ -925,7 +1326,7 @@
       "display_name": "Baturenko",
       "role": 13,
       "position": "Left Midfielder",
-      "position_source": "squad_balance_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Lokomotiv Moskva",
@@ -935,7 +1336,7 @@
       "display_name": "Fuzaylov",
       "role": 17,
       "position": "Centre Forward",
-      "position_source": "squad_balance_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Lokomotiv Moskva",
@@ -945,7 +1346,7 @@
       "display_name": "Gorkov",
       "role": 16,
       "position": "Left Winger",
-      "position_source": "squad_balance_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Lokomotiv Moskva",
@@ -953,9 +1354,9 @@
       "identity_hint": null,
       "source_id": 9496686,
       "display_name": "Aleksandrov",
-      "role": 4,
+      "role": 3,
       "position": "Centre Back",
-      "position_source": "squad_balance_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Lokomotiv Moskva",
@@ -965,7 +1366,119 @@
       "display_name": "Pashinin",
       "role": 2,
       "position": "Left Back",
-      "position_source": "squad_balance_inference"
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Lokomotiv Moskva",
+      "bdfutbol_name": "Petrov",
+      "identity_hint": null,
+      "source_id": 9497389,
+      "display_name": "Petrov",
+      "role": 6,
+      "position": "Defensive Midfielder",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Lokomotiv Moskva",
+      "bdfutbol_name": "Maryushkin",
+      "identity_hint": null,
+      "source_id": 9497390,
+      "display_name": "Maryushkin",
+      "role": 13,
+      "position": "Left Midfielder",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Lokomotiv Moskva",
+      "bdfutbol_name": "But",
+      "identity_hint": null,
+      "source_id": 9497391,
+      "display_name": "But",
+      "role": 17,
+      "position": "Centre Forward",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Lokomotiv Moskva",
+      "bdfutbol_name": "Rachimov",
+      "identity_hint": null,
+      "source_id": 503,
+      "display_name": "Rashid Mamatkulovich Rakhimov",
+      "role": 6,
+      "position": "Defensive Midfielder",
+      "position_source": "existing_historical_position",
+      "individual_profile_source_url": "https://www.bdfutbol.com/en/j/j2861.html",
+      "country_id": 40
+    },
+    {
+      "club": "Lokomotiv Moskva",
+      "bdfutbol_name": "Maminov",
+      "identity_hint": null,
+      "source_id": 9497393,
+      "display_name": "Maminov",
+      "role": 3,
+      "position": "Centre Back",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Lokomotiv Moskva",
+      "bdfutbol_name": "Fedin",
+      "identity_hint": null,
+      "source_id": 9497394,
+      "display_name": "Fedin",
+      "role": 2,
+      "position": "Left Back",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Lokomotiv Moskva",
+      "bdfutbol_name": "Kiselev",
+      "identity_hint": null,
+      "source_id": 9497395,
+      "display_name": "Kiselev",
+      "role": 6,
+      "position": "Defensive Midfielder",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Lokomotiv Moskva",
+      "bdfutbol_name": "Veselov",
+      "identity_hint": null,
+      "source_id": 9497396,
+      "display_name": "Veselov",
+      "role": 13,
+      "position": "Left Midfielder",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Lokomotiv Moskva",
+      "bdfutbol_name": "Ashurmamadov",
+      "identity_hint": null,
+      "source_id": 9497397,
+      "display_name": "Ashurmamadov",
+      "role": 17,
+      "position": "Centre Forward",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Lokomotiv Moskva",
+      "bdfutbol_name": "Chekmarev",
+      "identity_hint": null,
+      "source_id": 9497398,
+      "display_name": "Chekmarev",
+      "role": 16,
+      "position": "Left Winger",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Lokomotiv Moskva",
+      "bdfutbol_name": "Evseev",
+      "identity_hint": null,
+      "source_id": 9497399,
+      "display_name": "Evseev",
+      "role": 3,
+      "position": "Centre Back",
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Spartak Vladikavkaz",
@@ -985,7 +1498,7 @@
       "display_name": "Denisov",
       "role": 1,
       "position": "Right Back",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Spartak Vladikavkaz",
@@ -995,7 +1508,7 @@
       "display_name": "Gazdanov",
       "role": 3,
       "position": "Centre Back",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Spartak Vladikavkaz",
@@ -1003,9 +1516,9 @@
       "identity_hint": null,
       "source_id": 9496690,
       "display_name": "Pagaev",
-      "role": 4,
+      "role": 3,
       "position": "Centre Back",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Spartak Vladikavkaz",
@@ -1015,7 +1528,7 @@
       "display_name": "Alchagirov",
       "role": 2,
       "position": "Left Back",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Spartak Vladikavkaz",
@@ -1025,7 +1538,7 @@
       "display_name": "Kostin",
       "role": 9,
       "position": "Right Midfielder",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Spartak Vladikavkaz",
@@ -1035,7 +1548,7 @@
       "display_name": "Yanovski",
       "role": 7,
       "position": "Centre Midfielder",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Spartak Vladikavkaz",
@@ -1045,7 +1558,7 @@
       "display_name": "Isaev",
       "role": 7,
       "position": "Centre Midfielder",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Spartak Vladikavkaz",
@@ -1055,7 +1568,7 @@
       "display_name": "Markhel",
       "role": 13,
       "position": "Left Midfielder",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Spartak Vladikavkaz",
@@ -1065,7 +1578,7 @@
       "display_name": "Süleymanov",
       "role": 17,
       "position": "Centre Forward",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Spartak Vladikavkaz",
@@ -1075,7 +1588,7 @@
       "display_name": "Saprykin",
       "role": 17,
       "position": "Centre Forward",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Spartak Vladikavkaz",
@@ -1085,7 +1598,7 @@
       "display_name": "Khubetsov",
       "role": 0,
       "position": "Goalkeeper",
-      "position_source": "bdfutbol_goalkeeper_stat"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Spartak Vladikavkaz",
@@ -1095,7 +1608,7 @@
       "display_name": "Dzhioev",
       "role": 3,
       "position": "Centre Back",
-      "position_source": "squad_balance_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Spartak Vladikavkaz",
@@ -1105,7 +1618,7 @@
       "display_name": "Dzoblaev",
       "role": 1,
       "position": "Right Back",
-      "position_source": "squad_balance_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Spartak Vladikavkaz",
@@ -1115,7 +1628,7 @@
       "display_name": "Meleshko",
       "role": 7,
       "position": "Centre Midfielder",
-      "position_source": "squad_balance_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Spartak Vladikavkaz",
@@ -1125,7 +1638,7 @@
       "display_name": "Pimenov",
       "role": 9,
       "position": "Right Midfielder",
-      "position_source": "squad_balance_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Spartak Vladikavkaz",
@@ -1135,7 +1648,7 @@
       "display_name": "Kachmazov",
       "role": 8,
       "position": "Attacking Midfielder",
-      "position_source": "squad_balance_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Spartak Vladikavkaz",
@@ -1145,7 +1658,47 @@
       "display_name": "Suanov",
       "role": 12,
       "position": "Right Winger",
-      "position_source": "squad_balance_inference"
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Spartak Vladikavkaz",
+      "bdfutbol_name": "Konovalov",
+      "identity_hint": null,
+      "source_id": 9497400,
+      "display_name": "Konovalov",
+      "role": 3,
+      "position": "Centre Back",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Spartak Vladikavkaz",
+      "bdfutbol_name": "Sosnitsky",
+      "identity_hint": null,
+      "source_id": 9497401,
+      "display_name": "Sosnitsky",
+      "role": 1,
+      "position": "Right Back",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Spartak Vladikavkaz",
+      "bdfutbol_name": "Mozgovoy",
+      "identity_hint": null,
+      "source_id": 9497402,
+      "display_name": "Mozgovoy",
+      "role": 7,
+      "position": "Centre Midfielder",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Spartak Vladikavkaz",
+      "bdfutbol_name": "Ostaev",
+      "identity_hint": null,
+      "source_id": 9497403,
+      "display_name": "Ostaev",
+      "role": 9,
+      "position": "Right Midfielder",
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Torpedo Moskva",
@@ -1155,7 +1708,7 @@
       "display_name": "Podshivalov",
       "role": 0,
       "position": "Goalkeeper",
-      "position_source": "bdfutbol_goalkeeper_stat"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Torpedo Moskva",
@@ -1165,7 +1718,7 @@
       "display_name": "Cheltsov",
       "role": 1,
       "position": "Right Back",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Torpedo Moskva",
@@ -1175,7 +1728,7 @@
       "display_name": "Afanasyev",
       "role": 3,
       "position": "Centre Back",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Torpedo Moskva",
@@ -1183,9 +1736,9 @@
       "identity_hint": null,
       "source_id": 9496708,
       "display_name": "Chugainov",
-      "role": 4,
+      "role": 3,
       "position": "Centre Back",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Torpedo Moskva",
@@ -1195,7 +1748,7 @@
       "display_name": "Solovyov",
       "role": 2,
       "position": "Left Back",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Torpedo Moskva",
@@ -1205,7 +1758,7 @@
       "display_name": "Putilin",
       "role": 9,
       "position": "Right Midfielder",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Torpedo Moskva",
@@ -1215,7 +1768,7 @@
       "display_name": "Ulianov",
       "role": 7,
       "position": "Centre Midfielder",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Torpedo Moskva",
@@ -1225,7 +1778,7 @@
       "display_name": "Borisov",
       "role": 7,
       "position": "Centre Midfielder",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Torpedo Moskva",
@@ -1235,7 +1788,7 @@
       "display_name": "Filimonov",
       "role": 13,
       "position": "Left Midfielder",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Torpedo Moskva",
@@ -1245,7 +1798,7 @@
       "display_name": "Pazemov",
       "role": 17,
       "position": "Centre Forward",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Torpedo Moskva",
@@ -1255,7 +1808,7 @@
       "display_name": "Talalayev",
       "role": 17,
       "position": "Centre Forward",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Torpedo Moskva",
@@ -1265,7 +1818,7 @@
       "display_name": "Pchelnikov",
       "role": 6,
       "position": "Defensive Midfielder",
-      "position_source": "squad_balance_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Torpedo Moskva",
@@ -1275,7 +1828,7 @@
       "display_name": "Chumachenko",
       "role": 13,
       "position": "Left Midfielder",
-      "position_source": "squad_balance_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Torpedo Moskva",
@@ -1285,7 +1838,7 @@
       "display_name": "Prokopenko",
       "role": 17,
       "position": "Centre Forward",
-      "position_source": "squad_balance_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Torpedo Moskva",
@@ -1295,7 +1848,7 @@
       "display_name": "Novgorodov",
       "role": 16,
       "position": "Left Winger",
-      "position_source": "squad_balance_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Torpedo Moskva",
@@ -1303,9 +1856,9 @@
       "identity_hint": null,
       "source_id": 9496720,
       "display_name": "Shustikov",
-      "role": 4,
+      "role": 3,
       "position": "Centre Back",
-      "position_source": "squad_balance_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Torpedo Moskva",
@@ -1315,7 +1868,7 @@
       "display_name": "Savichev",
       "role": 2,
       "position": "Left Back",
-      "position_source": "squad_balance_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Torpedo Moskva",
@@ -1325,7 +1878,117 @@
       "display_name": "Vostrosablin",
       "role": 6,
       "position": "Defensive Midfielder",
-      "position_source": "squad_balance_inference"
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Torpedo Moskva",
+      "bdfutbol_name": "Grishin",
+      "identity_hint": null,
+      "source_id": 9497404,
+      "display_name": "Grishin",
+      "role": 13,
+      "position": "Left Midfielder",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Torpedo Moskva",
+      "bdfutbol_name": "Arefjev",
+      "identity_hint": null,
+      "source_id": 9497405,
+      "display_name": "Arefjev",
+      "role": 17,
+      "position": "Centre Forward",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Torpedo Moskva",
+      "bdfutbol_name": "Kalaychev",
+      "identity_hint": null,
+      "source_id": 9497406,
+      "display_name": "Kalaychev",
+      "role": 16,
+      "position": "Left Winger",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Torpedo Moskva",
+      "bdfutbol_name": "Khachatryan",
+      "identity_hint": null,
+      "source_id": 9497407,
+      "display_name": "Khachatryan",
+      "role": 3,
+      "position": "Centre Back",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Torpedo Moskva",
+      "bdfutbol_name": "Aslanyan",
+      "identity_hint": null,
+      "source_id": 9497408,
+      "display_name": "Aslanyan",
+      "role": 2,
+      "position": "Left Back",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Torpedo Moskva",
+      "bdfutbol_name": "Skachenko",
+      "identity_hint": null,
+      "source_id": 9497409,
+      "display_name": "Skachenko",
+      "role": 6,
+      "position": "Defensive Midfielder",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Torpedo Moskva",
+      "bdfutbol_name": "Sevidov",
+      "identity_hint": null,
+      "source_id": 9497410,
+      "display_name": "Sevidov",
+      "role": 13,
+      "position": "Left Midfielder",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Torpedo Moskva",
+      "bdfutbol_name": "Kuzmichev",
+      "identity_hint": null,
+      "source_id": 9497411,
+      "display_name": "Kuzmichev",
+      "role": 17,
+      "position": "Centre Forward",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Torpedo Moskva",
+      "bdfutbol_name": "Sudarikov",
+      "identity_hint": null,
+      "source_id": 9497412,
+      "display_name": "Sudarikov",
+      "role": 16,
+      "position": "Left Winger",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Torpedo Moskva",
+      "bdfutbol_name": "Smirnov",
+      "identity_hint": null,
+      "source_id": 9497413,
+      "display_name": "Smirnov",
+      "role": 3,
+      "position": "Centre Back",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Torpedo Moskva",
+      "bdfutbol_name": "Kuznetsov",
+      "identity_hint": null,
+      "source_id": 9497414,
+      "display_name": "Kuznetsov",
+      "role": 2,
+      "position": "Left Back",
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Uralmash",
@@ -1335,7 +1998,7 @@
       "display_name": "Ledovskikh",
       "role": 0,
       "position": "Goalkeeper",
-      "position_source": "bdfutbol_goalkeeper_stat"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Uralmash",
@@ -1345,7 +2008,7 @@
       "display_name": "Yushkov",
       "role": 1,
       "position": "Right Back",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Uralmash",
@@ -1355,7 +2018,7 @@
       "display_name": "Ratnichkin",
       "role": 3,
       "position": "Centre Back",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Uralmash",
@@ -1363,9 +2026,9 @@
       "identity_hint": null,
       "source_id": 9496726,
       "display_name": "Galimov",
-      "role": 4,
+      "role": 3,
       "position": "Centre Back",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Uralmash",
@@ -1375,7 +2038,7 @@
       "display_name": "Volovodenko",
       "role": 2,
       "position": "Left Back",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Uralmash",
@@ -1385,7 +2048,7 @@
       "display_name": "Fedotov",
       "role": 9,
       "position": "Right Midfielder",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Uralmash",
@@ -1395,7 +2058,7 @@
       "display_name": "Andreev",
       "role": 7,
       "position": "Centre Midfielder",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Uralmash",
@@ -1405,7 +2068,7 @@
       "display_name": "Yamlikhanov",
       "role": 7,
       "position": "Centre Midfielder",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Uralmash",
@@ -1415,7 +2078,7 @@
       "display_name": "Khankeyev",
       "role": 13,
       "position": "Left Midfielder",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Uralmash",
@@ -1425,7 +2088,7 @@
       "display_name": "Nezhelev",
       "role": 17,
       "position": "Centre Forward",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Uralmash",
@@ -1435,7 +2098,7 @@
       "display_name": "Perednya",
       "role": 17,
       "position": "Centre Forward",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Uralmash",
@@ -1445,7 +2108,7 @@
       "display_name": "Samsonenko",
       "role": 0,
       "position": "Goalkeeper",
-      "position_source": "bdfutbol_goalkeeper_stat"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Uralmash",
@@ -1455,7 +2118,7 @@
       "display_name": "Bluzhin",
       "role": 1,
       "position": "Right Back",
-      "position_source": "squad_balance_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Uralmash",
@@ -1465,7 +2128,7 @@
       "display_name": "Sosnitsky",
       "role": 7,
       "position": "Centre Midfielder",
-      "position_source": "squad_balance_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Uralmash",
@@ -1475,7 +2138,7 @@
       "display_name": "Davletshin",
       "role": 9,
       "position": "Right Midfielder",
-      "position_source": "squad_balance_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Uralmash",
@@ -1485,7 +2148,7 @@
       "display_name": "Matveev",
       "role": 8,
       "position": "Attacking Midfielder",
-      "position_source": "squad_balance_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Uralmash",
@@ -1495,7 +2158,7 @@
       "display_name": "Alyapkin",
       "role": 0,
       "position": "Goalkeeper",
-      "position_source": "bdfutbol_goalkeeper_stat"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Uralmash",
@@ -1505,7 +2168,77 @@
       "display_name": "Khovanskiy",
       "role": 3,
       "position": "Centre Back",
-      "position_source": "squad_balance_inference"
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Uralmash",
+      "bdfutbol_name": "Tkachenko",
+      "identity_hint": null,
+      "source_id": 9497415,
+      "display_name": "Tkachenko",
+      "role": 1,
+      "position": "Right Back",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Uralmash",
+      "bdfutbol_name": "Safin",
+      "identity_hint": null,
+      "source_id": 9497416,
+      "display_name": "Safin",
+      "role": 7,
+      "position": "Centre Midfielder",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Uralmash",
+      "bdfutbol_name": "Bakharev",
+      "identity_hint": null,
+      "source_id": 9497417,
+      "display_name": "Bakharev",
+      "role": 9,
+      "position": "Right Midfielder",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Uralmash",
+      "bdfutbol_name": "Shushlyakov",
+      "identity_hint": null,
+      "source_id": 9497418,
+      "display_name": "Shushlyakov",
+      "role": 8,
+      "position": "Attacking Midfielder",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Uralmash",
+      "bdfutbol_name": "Titov",
+      "identity_hint": null,
+      "source_id": 9497419,
+      "display_name": "Titov",
+      "role": 12,
+      "position": "Right Winger",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Uralmash",
+      "bdfutbol_name": "Ignatov",
+      "identity_hint": null,
+      "source_id": 9497420,
+      "display_name": "Ignatov",
+      "role": 3,
+      "position": "Centre Back",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Uralmash",
+      "bdfutbol_name": "Arnautov",
+      "identity_hint": null,
+      "source_id": 9497421,
+      "display_name": "Arnautov",
+      "role": 1,
+      "position": "Right Back",
+      "position_source": "existing_historical_position"
     },
     {
       "club": "CSKA Moskva",
@@ -1515,7 +2248,7 @@
       "display_name": "Plotnikov",
       "role": 0,
       "position": "Goalkeeper",
-      "position_source": "bdfutbol_goalkeeper_stat"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "CSKA Moskva",
@@ -1525,7 +2258,7 @@
       "display_name": "Gushchin",
       "role": 1,
       "position": "Right Back",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "CSKA Moskva",
@@ -1535,7 +2268,7 @@
       "display_name": "Mashkarin",
       "role": 3,
       "position": "Centre Back",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "CSKA Moskva",
@@ -1543,9 +2276,9 @@
       "identity_hint": null,
       "source_id": 9496744,
       "display_name": "Bushmanov",
-      "role": 4,
+      "role": 3,
       "position": "Centre Back",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "CSKA Moskva",
@@ -1555,7 +2288,7 @@
       "display_name": "Antonovich",
       "role": 2,
       "position": "Left Back",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "CSKA Moskva",
@@ -1565,7 +2298,7 @@
       "display_name": "Minko",
       "role": 9,
       "position": "Right Midfielder",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "CSKA Moskva",
@@ -1575,7 +2308,7 @@
       "display_name": "Mamchur",
       "role": 7,
       "position": "Centre Midfielder",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "CSKA Moskva",
@@ -1585,7 +2318,7 @@
       "display_name": "Karsakov",
       "role": 7,
       "position": "Centre Midfielder",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "CSKA Moskva",
@@ -1595,7 +2328,7 @@
       "display_name": "Grishin",
       "role": 13,
       "position": "Left Midfielder",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "CSKA Moskva",
@@ -1605,7 +2338,7 @@
       "display_name": "Sergeev",
       "role": 17,
       "position": "Centre Forward",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "CSKA Moskva",
@@ -1615,7 +2348,7 @@
       "display_name": "Fayzulin",
       "role": 17,
       "position": "Centre Forward",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "CSKA Moskva",
@@ -1625,7 +2358,7 @@
       "display_name": "Guteev",
       "role": 0,
       "position": "Goalkeeper",
-      "position_source": "bdfutbol_goalkeeper_stat"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "CSKA Moskva",
@@ -1635,7 +2368,7 @@
       "display_name": "Ivanov",
       "role": 17,
       "position": "Centre Forward",
-      "position_source": "squad_balance_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "CSKA Moskva",
@@ -1645,7 +2378,7 @@
       "display_name": "Malyukov",
       "role": 16,
       "position": "Left Winger",
-      "position_source": "squad_balance_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "CSKA Moskva",
@@ -1653,9 +2386,9 @@
       "identity_hint": null,
       "source_id": 9496755,
       "display_name": "Kolotovkin",
-      "role": 4,
+      "role": 3,
       "position": "Centre Back",
-      "position_source": "squad_balance_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "CSKA Moskva",
@@ -1665,7 +2398,7 @@
       "display_name": "Dudnyk",
       "role": 2,
       "position": "Left Back",
-      "position_source": "squad_balance_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "CSKA Moskva",
@@ -1675,7 +2408,7 @@
       "display_name": "Novosadov",
       "role": 6,
       "position": "Defensive Midfielder",
-      "position_source": "squad_balance_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "CSKA Moskva",
@@ -1685,7 +2418,117 @@
       "display_name": "Krbashyan",
       "role": 13,
       "position": "Left Midfielder",
-      "position_source": "squad_balance_inference"
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "CSKA Moskva",
+      "bdfutbol_name": "Masalitin",
+      "identity_hint": null,
+      "source_id": 9497422,
+      "display_name": "Masalitin",
+      "role": 17,
+      "position": "Centre Forward",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "CSKA Moskva",
+      "bdfutbol_name": "Kupriyanov",
+      "identity_hint": null,
+      "source_id": 9497423,
+      "display_name": "Kupriyanov",
+      "role": 16,
+      "position": "Left Winger",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "CSKA Moskva",
+      "bdfutbol_name": "Broshin",
+      "identity_hint": null,
+      "source_id": 9497424,
+      "display_name": "Broshin",
+      "role": 3,
+      "position": "Centre Back",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "CSKA Moskva",
+      "bdfutbol_name": "Shoukov",
+      "identity_hint": null,
+      "source_id": 9497425,
+      "display_name": "Shoukov",
+      "role": 2,
+      "position": "Left Back",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "CSKA Moskva",
+      "bdfutbol_name": "Krutov",
+      "identity_hint": null,
+      "source_id": 9497426,
+      "display_name": "Krutov",
+      "role": 6,
+      "position": "Defensive Midfielder",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "CSKA Moskva",
+      "bdfutbol_name": "Bystrov",
+      "identity_hint": null,
+      "source_id": 9497427,
+      "display_name": "Bystrov",
+      "role": 13,
+      "position": "Left Midfielder",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "CSKA Moskva",
+      "bdfutbol_name": "Oreshchuk",
+      "identity_hint": null,
+      "source_id": 9497428,
+      "display_name": "Oreshchuk",
+      "role": 17,
+      "position": "Centre Forward",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "CSKA Moskva",
+      "bdfutbol_name": "Markevich",
+      "identity_hint": null,
+      "source_id": 9497429,
+      "display_name": "Markevich",
+      "role": 16,
+      "position": "Left Winger",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "CSKA Moskva",
+      "bdfutbol_name": "Radimov",
+      "identity_hint": null,
+      "source_id": 9497430,
+      "display_name": "Radimov",
+      "role": 3,
+      "position": "Centre Back",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "CSKA Moskva",
+      "bdfutbol_name": "Semyonov",
+      "identity_hint": null,
+      "source_id": 9497431,
+      "display_name": "Semyonov",
+      "role": 2,
+      "position": "Left Back",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "CSKA Moskva",
+      "bdfutbol_name": "Khokhlov",
+      "identity_hint": null,
+      "source_id": 9497432,
+      "display_name": "Khokhlov",
+      "role": 6,
+      "position": "Defensive Midfielder",
+      "position_source": "existing_historical_position"
     },
     {
       "club": "KAMAZ",
@@ -1695,7 +2538,7 @@
       "display_name": "Zakharchuk",
       "role": 0,
       "position": "Goalkeeper",
-      "position_source": "bdfutbol_goalkeeper_stat"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "KAMAZ",
@@ -1705,7 +2548,7 @@
       "display_name": "Klontsak",
       "role": 1,
       "position": "Right Back",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "KAMAZ",
@@ -1715,7 +2558,7 @@
       "display_name": "Rafikov",
       "role": 3,
       "position": "Centre Back",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "KAMAZ",
@@ -1723,9 +2566,9 @@
       "identity_hint": null,
       "source_id": 9496762,
       "display_name": "Sinev",
-      "role": 4,
+      "role": 3,
       "position": "Centre Back",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "KAMAZ",
@@ -1735,7 +2578,7 @@
       "display_name": "Vorobyov",
       "role": 2,
       "position": "Left Back",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "KAMAZ",
@@ -1745,7 +2588,7 @@
       "display_name": "Durnev",
       "role": 9,
       "position": "Right Midfielder",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "KAMAZ",
@@ -1755,7 +2598,7 @@
       "display_name": "Vinnikov",
       "role": 7,
       "position": "Centre Midfielder",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "KAMAZ",
@@ -1765,7 +2608,7 @@
       "display_name": "Evdokimov",
       "role": 7,
       "position": "Centre Midfielder",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "KAMAZ",
@@ -1775,7 +2618,7 @@
       "display_name": "Nikiforov",
       "role": 13,
       "position": "Left Midfielder",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "KAMAZ",
@@ -1785,7 +2628,7 @@
       "display_name": "Panchenko",
       "role": 17,
       "position": "Centre Forward",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "KAMAZ",
@@ -1795,7 +2638,7 @@
       "display_name": "Kolesov",
       "role": 17,
       "position": "Centre Forward",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "KAMAZ",
@@ -1805,7 +2648,7 @@
       "display_name": "Novosadov",
       "role": 0,
       "position": "Goalkeeper",
-      "position_source": "bdfutbol_goalkeeper_stat"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "KAMAZ",
@@ -1815,7 +2658,7 @@
       "display_name": "Kovalev",
       "role": 7,
       "position": "Centre Midfielder",
-      "position_source": "squad_balance_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "KAMAZ",
@@ -1825,7 +2668,7 @@
       "display_name": "Zubkov",
       "role": 9,
       "position": "Right Midfielder",
-      "position_source": "squad_balance_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "KAMAZ",
@@ -1835,7 +2678,7 @@
       "display_name": "Iljin",
       "role": 8,
       "position": "Attacking Midfielder",
-      "position_source": "squad_balance_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "KAMAZ",
@@ -1845,7 +2688,7 @@
       "display_name": "Tropanet",
       "role": 12,
       "position": "Right Winger",
-      "position_source": "squad_balance_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "KAMAZ",
@@ -1855,7 +2698,7 @@
       "display_name": "Nigmatullin",
       "role": 3,
       "position": "Centre Back",
-      "position_source": "squad_balance_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "KAMAZ",
@@ -1865,7 +2708,117 @@
       "display_name": "Milenin",
       "role": 1,
       "position": "Right Back",
-      "position_source": "squad_balance_inference"
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "KAMAZ",
+      "bdfutbol_name": "Tsveiba",
+      "identity_hint": null,
+      "source_id": 9497433,
+      "display_name": "Tsveiba",
+      "role": 7,
+      "position": "Centre Midfielder",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "KAMAZ",
+      "bdfutbol_name": "Sakhno",
+      "identity_hint": null,
+      "source_id": 9497434,
+      "display_name": "Sakhno",
+      "role": 9,
+      "position": "Right Midfielder",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "KAMAZ",
+      "bdfutbol_name": "Babenko",
+      "identity_hint": null,
+      "source_id": 9497435,
+      "display_name": "Babenko",
+      "role": 8,
+      "position": "Attacking Midfielder",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "KAMAZ",
+      "bdfutbol_name": "Fakhrutdinov",
+      "identity_hint": null,
+      "source_id": 9497436,
+      "display_name": "Fakhrutdinov",
+      "role": 12,
+      "position": "Right Winger",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "KAMAZ",
+      "bdfutbol_name": "Kuznetsov",
+      "identity_hint": null,
+      "source_id": 9497437,
+      "display_name": "Kuznetsov",
+      "role": 3,
+      "position": "Centre Back",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "KAMAZ",
+      "bdfutbol_name": "Kurakin",
+      "identity_hint": null,
+      "source_id": 9497438,
+      "display_name": "Kurakin",
+      "role": 1,
+      "position": "Right Back",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "KAMAZ",
+      "bdfutbol_name": "Varlamov",
+      "identity_hint": null,
+      "source_id": 9497439,
+      "display_name": "Varlamov",
+      "role": 7,
+      "position": "Centre Midfielder",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "KAMAZ",
+      "bdfutbol_name": "Tukhvatullin",
+      "identity_hint": null,
+      "source_id": 9497440,
+      "display_name": "Tukhvatullin",
+      "role": 9,
+      "position": "Right Midfielder",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "KAMAZ",
+      "bdfutbol_name": "Snigirev",
+      "identity_hint": null,
+      "source_id": 9497441,
+      "display_name": "Snigirev",
+      "role": 8,
+      "position": "Attacking Midfielder",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "KAMAZ",
+      "bdfutbol_name": "Pivtsov",
+      "identity_hint": null,
+      "source_id": 9497442,
+      "display_name": "Pivtsov",
+      "role": 12,
+      "position": "Right Winger",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "KAMAZ",
+      "bdfutbol_name": "Tsaplyuk",
+      "identity_hint": null,
+      "source_id": 9497443,
+      "display_name": "Tsaplyuk",
+      "role": 3,
+      "position": "Centre Back",
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Zhemchuzhina Sochi",
@@ -1875,7 +2828,7 @@
       "display_name": "Chekmezov",
       "role": 0,
       "position": "Goalkeeper",
-      "position_source": "bdfutbol_goalkeeper_stat"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Zhemchuzhina Sochi",
@@ -1885,7 +2838,7 @@
       "display_name": "Chekunov",
       "role": 1,
       "position": "Right Back",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Zhemchuzhina Sochi",
@@ -1895,7 +2848,7 @@
       "display_name": "Bondaruk",
       "role": 3,
       "position": "Centre Back",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Zhemchuzhina Sochi",
@@ -1903,9 +2856,9 @@
       "identity_hint": null,
       "source_id": 9496780,
       "display_name": "Magomedov",
-      "role": 4,
+      "role": 3,
       "position": "Centre Back",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Zhemchuzhina Sochi",
@@ -1915,7 +2868,7 @@
       "display_name": "Nozikov",
       "role": 2,
       "position": "Left Back",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Zhemchuzhina Sochi",
@@ -1925,7 +2878,7 @@
       "display_name": "Pocheptsov",
       "role": 9,
       "position": "Right Midfielder",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Zhemchuzhina Sochi",
@@ -1935,7 +2888,7 @@
       "display_name": "Ledovskikh",
       "role": 7,
       "position": "Centre Midfielder",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Zhemchuzhina Sochi",
@@ -1945,7 +2898,7 @@
       "display_name": "Murygin",
       "role": 7,
       "position": "Centre Midfielder",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Zhemchuzhina Sochi",
@@ -1955,7 +2908,7 @@
       "display_name": "Bozhko",
       "role": 13,
       "position": "Left Midfielder",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Zhemchuzhina Sochi",
@@ -1965,7 +2918,7 @@
       "display_name": "Khagba",
       "role": 17,
       "position": "Centre Forward",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Zhemchuzhina Sochi",
@@ -1975,7 +2928,7 @@
       "display_name": "Podruzhko",
       "role": 17,
       "position": "Centre Forward",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Zhemchuzhina Sochi",
@@ -1985,7 +2938,7 @@
       "display_name": "Mogilnyi",
       "role": 0,
       "position": "Goalkeeper",
-      "position_source": "bdfutbol_goalkeeper_stat"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Zhemchuzhina Sochi",
@@ -1995,7 +2948,7 @@
       "display_name": "Bogatyrev",
       "role": 17,
       "position": "Centre Forward",
-      "position_source": "bdfutbol_goal_output_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Zhemchuzhina Sochi",
@@ -2005,7 +2958,7 @@
       "display_name": "Gogrichiani",
       "role": 17,
       "position": "Centre Forward",
-      "position_source": "bdfutbol_goal_output_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Zhemchuzhina Sochi",
@@ -2015,7 +2968,7 @@
       "display_name": "Zhirov",
       "role": 2,
       "position": "Left Back",
-      "position_source": "squad_balance_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Zhemchuzhina Sochi",
@@ -2025,7 +2978,7 @@
       "display_name": "Bondarev",
       "role": 6,
       "position": "Defensive Midfielder",
-      "position_source": "squad_balance_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Zhemchuzhina Sochi",
@@ -2035,7 +2988,7 @@
       "display_name": "Alekseev",
       "role": 0,
       "position": "Goalkeeper",
-      "position_source": "bdfutbol_goalkeeper_stat"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Zhemchuzhina Sochi",
@@ -2045,7 +2998,97 @@
       "display_name": "Lushin",
       "role": 17,
       "position": "Centre Forward",
-      "position_source": "squad_balance_inference"
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Zhemchuzhina Sochi",
+      "bdfutbol_name": "Ignatyev",
+      "identity_hint": null,
+      "source_id": 9497444,
+      "display_name": "Ignatyev",
+      "role": 16,
+      "position": "Left Winger",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Zhemchuzhina Sochi",
+      "bdfutbol_name": "Kuznetsov",
+      "identity_hint": null,
+      "source_id": 9497445,
+      "display_name": "Kuznetsov",
+      "role": 3,
+      "position": "Centre Back",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Zhemchuzhina Sochi",
+      "bdfutbol_name": "Titov",
+      "identity_hint": null,
+      "source_id": 9497446,
+      "display_name": "Titov",
+      "role": 2,
+      "position": "Left Back",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Zhemchuzhina Sochi",
+      "bdfutbol_name": "Fedorov",
+      "identity_hint": null,
+      "source_id": 9497447,
+      "display_name": "Fedorov",
+      "role": 6,
+      "position": "Defensive Midfielder",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Zhemchuzhina Sochi",
+      "bdfutbol_name": "Protsenko",
+      "identity_hint": null,
+      "source_id": 9497448,
+      "display_name": "Protsenko",
+      "role": 13,
+      "position": "Left Midfielder",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Zhemchuzhina Sochi",
+      "bdfutbol_name": "Shinkarev",
+      "identity_hint": null,
+      "source_id": 9497449,
+      "display_name": "Shinkarev",
+      "role": 17,
+      "position": "Centre Forward",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Zhemchuzhina Sochi",
+      "bdfutbol_name": "Medvedev",
+      "identity_hint": null,
+      "source_id": 9497450,
+      "display_name": "Medvedev",
+      "role": 16,
+      "position": "Left Winger",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Zhemchuzhina Sochi",
+      "bdfutbol_name": "Yakovenko",
+      "identity_hint": null,
+      "source_id": 9497451,
+      "display_name": "Yakovenko",
+      "role": 3,
+      "position": "Centre Back",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Zhemchuzhina Sochi",
+      "bdfutbol_name": "Kazentsov",
+      "identity_hint": null,
+      "source_id": 9497452,
+      "display_name": "Kazentsov",
+      "role": 2,
+      "position": "Left Back",
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Dynamo Stavropol",
@@ -2055,7 +3098,7 @@
       "display_name": "Sanaya",
       "role": 0,
       "position": "Goalkeeper",
-      "position_source": "bdfutbol_goalkeeper_stat"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Dynamo Stavropol",
@@ -2065,7 +3108,7 @@
       "display_name": "Gorbachev",
       "role": 1,
       "position": "Right Back",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Dynamo Stavropol",
@@ -2075,7 +3118,7 @@
       "display_name": "Ushakov",
       "role": 3,
       "position": "Centre Back",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Dynamo Stavropol",
@@ -2083,9 +3126,9 @@
       "identity_hint": null,
       "source_id": 9496798,
       "display_name": "Borzenkov",
-      "role": 4,
+      "role": 3,
       "position": "Centre Back",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Dynamo Stavropol",
@@ -2095,7 +3138,7 @@
       "display_name": "Shestakov",
       "role": 2,
       "position": "Left Back",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Dynamo Stavropol",
@@ -2105,7 +3148,7 @@
       "display_name": "Matvienko",
       "role": 9,
       "position": "Right Midfielder",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Dynamo Stavropol",
@@ -2115,7 +3158,7 @@
       "display_name": "Gagloev",
       "role": 7,
       "position": "Centre Midfielder",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Dynamo Stavropol",
@@ -2125,7 +3168,7 @@
       "display_name": "Kopylov",
       "role": 7,
       "position": "Centre Midfielder",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Dynamo Stavropol",
@@ -2135,7 +3178,7 @@
       "display_name": "Korneev",
       "role": 13,
       "position": "Left Midfielder",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Dynamo Stavropol",
@@ -2145,7 +3188,7 @@
       "display_name": "Sokolov",
       "role": 17,
       "position": "Centre Forward",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Dynamo Stavropol",
@@ -2155,7 +3198,7 @@
       "display_name": "Osipov",
       "role": 17,
       "position": "Centre Forward",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Dynamo Stavropol",
@@ -2165,7 +3208,7 @@
       "display_name": "Pata",
       "role": 0,
       "position": "Goalkeeper",
-      "position_source": "bdfutbol_goalkeeper_stat"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Dynamo Stavropol",
@@ -2175,7 +3218,7 @@
       "display_name": "Batynkov",
       "role": 9,
       "position": "Right Midfielder",
-      "position_source": "squad_balance_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Dynamo Stavropol",
@@ -2185,7 +3228,7 @@
       "display_name": "Papikyan",
       "role": 8,
       "position": "Attacking Midfielder",
-      "position_source": "squad_balance_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Dynamo Stavropol",
@@ -2195,7 +3238,7 @@
       "display_name": "Grunichev",
       "role": 12,
       "position": "Right Winger",
-      "position_source": "squad_balance_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Dynamo Stavropol",
@@ -2205,7 +3248,7 @@
       "display_name": "Maslov",
       "role": 3,
       "position": "Centre Back",
-      "position_source": "squad_balance_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Dynamo Stavropol",
@@ -2215,7 +3258,7 @@
       "display_name": "Pobedennyi",
       "role": 0,
       "position": "Goalkeeper",
-      "position_source": "bdfutbol_goalkeeper_stat"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Dynamo Stavropol",
@@ -2225,7 +3268,107 @@
       "display_name": "Maslov",
       "role": 7,
       "position": "Centre Midfielder",
-      "position_source": "squad_balance_inference"
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Dynamo Stavropol",
+      "bdfutbol_name": "Bogachev",
+      "identity_hint": null,
+      "source_id": 9497453,
+      "display_name": "Bogachev",
+      "role": 9,
+      "position": "Right Midfielder",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Dynamo Stavropol",
+      "bdfutbol_name": "Osipyan",
+      "identity_hint": null,
+      "source_id": 9497454,
+      "display_name": "Osipyan",
+      "role": 8,
+      "position": "Attacking Midfielder",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Dynamo Stavropol",
+      "bdfutbol_name": "Minibaev",
+      "identity_hint": null,
+      "source_id": 9497455,
+      "display_name": "Minibaev",
+      "role": 12,
+      "position": "Right Winger",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Dynamo Stavropol",
+      "bdfutbol_name": "Yarygin",
+      "identity_hint": null,
+      "source_id": 9497456,
+      "display_name": "Yarygin",
+      "role": 3,
+      "position": "Centre Back",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Dynamo Stavropol",
+      "bdfutbol_name": "Kaloev",
+      "identity_hint": null,
+      "source_id": 9497457,
+      "display_name": "Kaloev",
+      "role": 1,
+      "position": "Right Back",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Dynamo Stavropol",
+      "bdfutbol_name": "Sushiy",
+      "identity_hint": null,
+      "source_id": 9497458,
+      "display_name": "Sushiy",
+      "role": 7,
+      "position": "Centre Midfielder",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Dynamo Stavropol",
+      "bdfutbol_name": "Spanderashvili",
+      "identity_hint": null,
+      "source_id": 9497459,
+      "display_name": "Spanderashvili",
+      "role": 9,
+      "position": "Right Midfielder",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Dynamo Stavropol",
+      "bdfutbol_name": "Volobuev",
+      "identity_hint": null,
+      "source_id": 9497460,
+      "display_name": "Volobuev",
+      "role": 8,
+      "position": "Attacking Midfielder",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Dynamo Stavropol",
+      "bdfutbol_name": "Ivanov",
+      "identity_hint": null,
+      "source_id": 9497461,
+      "display_name": "Ivanov",
+      "role": 12,
+      "position": "Right Winger",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Dynamo Stavropol",
+      "bdfutbol_name": "Kontsevenko",
+      "identity_hint": null,
+      "source_id": 9497462,
+      "display_name": "Kontsevenko",
+      "role": 3,
+      "position": "Centre Back",
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Lokomotiv Nizhny Novgorod",
@@ -2235,7 +3378,7 @@
       "display_name": "Shantalosau",
       "role": 0,
       "position": "Goalkeeper",
-      "position_source": "bdfutbol_goalkeeper_stat"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Lokomotiv Nizhny Novgorod",
@@ -2245,7 +3388,7 @@
       "display_name": "Ragulin",
       "role": 1,
       "position": "Right Back",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Lokomotiv Nizhny Novgorod",
@@ -2255,7 +3398,7 @@
       "display_name": "Kurayev",
       "role": 3,
       "position": "Centre Back",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Lokomotiv Nizhny Novgorod",
@@ -2263,9 +3406,9 @@
       "identity_hint": null,
       "source_id": 9496816,
       "display_name": "Oskolkov",
-      "role": 4,
+      "role": 3,
       "position": "Centre Back",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Lokomotiv Nizhny Novgorod",
@@ -2275,7 +3418,7 @@
       "display_name": "Kuzmin",
       "role": 2,
       "position": "Left Back",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Lokomotiv Nizhny Novgorod",
@@ -2285,7 +3428,7 @@
       "display_name": "Kazakov",
       "role": 9,
       "position": "Right Midfielder",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Lokomotiv Nizhny Novgorod",
@@ -2295,7 +3438,7 @@
       "display_name": "Maslyaev",
       "role": 7,
       "position": "Centre Midfielder",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Lokomotiv Nizhny Novgorod",
@@ -2305,7 +3448,7 @@
       "display_name": "Rumyantsev",
       "role": 7,
       "position": "Centre Midfielder",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Lokomotiv Nizhny Novgorod",
@@ -2315,7 +3458,7 @@
       "display_name": "Saveljev",
       "role": 13,
       "position": "Left Midfielder",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Lokomotiv Nizhny Novgorod",
@@ -2325,7 +3468,7 @@
       "display_name": "Shchukin",
       "role": 17,
       "position": "Centre Forward",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Lokomotiv Nizhny Novgorod",
@@ -2335,7 +3478,7 @@
       "display_name": "Gerasimov",
       "role": 17,
       "position": "Centre Forward",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Lokomotiv Nizhny Novgorod",
@@ -2345,7 +3488,7 @@
       "display_name": "Malisov",
       "role": 0,
       "position": "Goalkeeper",
-      "position_source": "bdfutbol_goalkeeper_stat"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Lokomotiv Nizhny Novgorod",
@@ -2355,7 +3498,7 @@
       "display_name": "Gorelov",
       "role": 17,
       "position": "Centre Forward",
-      "position_source": "bdfutbol_goal_output_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Lokomotiv Nizhny Novgorod",
@@ -2365,7 +3508,7 @@
       "display_name": "Rydnyi",
       "role": 2,
       "position": "Left Back",
-      "position_source": "squad_balance_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Lokomotiv Nizhny Novgorod",
@@ -2375,7 +3518,7 @@
       "display_name": "Feoktistov",
       "role": 6,
       "position": "Defensive Midfielder",
-      "position_source": "squad_balance_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Lokomotiv Nizhny Novgorod",
@@ -2385,7 +3528,7 @@
       "display_name": "Golubev",
       "role": 13,
       "position": "Left Midfielder",
-      "position_source": "squad_balance_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Lokomotiv Nizhny Novgorod",
@@ -2395,7 +3538,7 @@
       "display_name": "Kireev",
       "role": 17,
       "position": "Centre Forward",
-      "position_source": "squad_balance_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Lokomotiv Nizhny Novgorod",
@@ -2405,7 +3548,57 @@
       "display_name": "Frolov",
       "role": 16,
       "position": "Left Winger",
-      "position_source": "squad_balance_inference"
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Lokomotiv Nizhny Novgorod",
+      "bdfutbol_name": "Gadalov",
+      "identity_hint": null,
+      "source_id": 9497463,
+      "display_name": "Gadalov",
+      "role": 3,
+      "position": "Centre Back",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Lokomotiv Nizhny Novgorod",
+      "bdfutbol_name": "Gulyaev",
+      "identity_hint": null,
+      "source_id": 9497464,
+      "display_name": "Gulyaev",
+      "role": 2,
+      "position": "Left Back",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Lokomotiv Nizhny Novgorod",
+      "bdfutbol_name": "Abdulov",
+      "identity_hint": null,
+      "source_id": 9497465,
+      "display_name": "Abdulov",
+      "role": 6,
+      "position": "Defensive Midfielder",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Lokomotiv Nizhny Novgorod",
+      "bdfutbol_name": "Lysov",
+      "identity_hint": null,
+      "source_id": 9497466,
+      "display_name": "Lysov",
+      "role": 13,
+      "position": "Left Midfielder",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Lokomotiv Nizhny Novgorod",
+      "bdfutbol_name": "Zaranko",
+      "identity_hint": null,
+      "source_id": 9497467,
+      "display_name": "Zaranko",
+      "role": 17,
+      "position": "Centre Forward",
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Krylia Sovetov",
@@ -2415,7 +3608,7 @@
       "display_name": "Gaus",
       "role": 0,
       "position": "Goalkeeper",
-      "position_source": "bdfutbol_goalkeeper_stat"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Krylia Sovetov",
@@ -2425,7 +3618,7 @@
       "display_name": "Gribov",
       "role": 1,
       "position": "Right Back",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Krylia Sovetov",
@@ -2435,7 +3628,7 @@
       "display_name": "Garin",
       "role": 3,
       "position": "Centre Back",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Krylia Sovetov",
@@ -2443,9 +3636,9 @@
       "identity_hint": null,
       "source_id": 9496834,
       "display_name": "Tumaykin",
-      "role": 4,
+      "role": 3,
       "position": "Centre Back",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Krylia Sovetov",
@@ -2455,7 +3648,7 @@
       "display_name": "Sharipov",
       "role": 2,
       "position": "Left Back",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Krylia Sovetov",
@@ -2465,7 +3658,7 @@
       "display_name": "Tsygankov",
       "role": 9,
       "position": "Right Midfielder",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Krylia Sovetov",
@@ -2475,7 +3668,7 @@
       "display_name": "Marushko",
       "role": 7,
       "position": "Centre Midfielder",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Krylia Sovetov",
@@ -2485,7 +3678,7 @@
       "display_name": "Remezov",
       "role": 7,
       "position": "Centre Midfielder",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Krylia Sovetov",
@@ -2495,7 +3688,7 @@
       "display_name": "Avalyan",
       "role": 13,
       "position": "Left Midfielder",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Krylia Sovetov",
@@ -2505,7 +3698,7 @@
       "display_name": "Filippov",
       "role": 17,
       "position": "Centre Forward",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Krylia Sovetov",
@@ -2515,7 +3708,7 @@
       "display_name": "Bulgakov",
       "role": 17,
       "position": "Centre Forward",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Krylia Sovetov",
@@ -2525,7 +3718,7 @@
       "display_name": "Volodin",
       "role": 0,
       "position": "Goalkeeper",
-      "position_source": "bdfutbol_goalkeeper_stat"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Krylia Sovetov",
@@ -2535,7 +3728,7 @@
       "display_name": "Valiev",
       "role": 8,
       "position": "Attacking Midfielder",
-      "position_source": "squad_balance_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Krylia Sovetov",
@@ -2545,7 +3738,7 @@
       "display_name": "Kharlachyov",
       "role": 12,
       "position": "Right Winger",
-      "position_source": "squad_balance_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Krylia Sovetov",
@@ -2555,7 +3748,7 @@
       "display_name": "Miridonov",
       "role": 3,
       "position": "Centre Back",
-      "position_source": "squad_balance_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Krylia Sovetov",
@@ -2565,7 +3758,7 @@
       "display_name": "Makeev",
       "role": 1,
       "position": "Right Back",
-      "position_source": "squad_balance_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Krylia Sovetov",
@@ -2575,7 +3768,7 @@
       "display_name": "Delov",
       "role": 7,
       "position": "Centre Midfielder",
-      "position_source": "squad_balance_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Krylia Sovetov",
@@ -2585,7 +3778,87 @@
       "display_name": "Meda",
       "role": 9,
       "position": "Right Midfielder",
-      "position_source": "squad_balance_inference"
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Krylia Sovetov",
+      "bdfutbol_name": "Gapotiy",
+      "identity_hint": null,
+      "source_id": 9497468,
+      "display_name": "Gapotiy",
+      "role": 8,
+      "position": "Attacking Midfielder",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Krylia Sovetov",
+      "bdfutbol_name": "Fakhrutdinov",
+      "identity_hint": null,
+      "source_id": 9497469,
+      "display_name": "Fakhrutdinov",
+      "role": 12,
+      "position": "Right Winger",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Krylia Sovetov",
+      "bdfutbol_name": "Semin",
+      "identity_hint": null,
+      "source_id": 9497470,
+      "display_name": "Semin",
+      "role": 3,
+      "position": "Centre Back",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Krylia Sovetov",
+      "bdfutbol_name": "Zhupikov",
+      "identity_hint": null,
+      "source_id": 9497471,
+      "display_name": "Zhupikov",
+      "role": 1,
+      "position": "Right Back",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Krylia Sovetov",
+      "bdfutbol_name": "Fomin",
+      "identity_hint": null,
+      "source_id": 9497472,
+      "display_name": "Fomin",
+      "role": 7,
+      "position": "Centre Midfielder",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Krylia Sovetov",
+      "bdfutbol_name": "Dzneladze",
+      "identity_hint": null,
+      "source_id": 9497473,
+      "display_name": "Dzneladze",
+      "role": 9,
+      "position": "Right Midfielder",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Krylia Sovetov",
+      "bdfutbol_name": "Tsiklauri",
+      "identity_hint": null,
+      "source_id": 9497474,
+      "display_name": "Tsiklauri",
+      "role": 8,
+      "position": "Attacking Midfielder",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Krylia Sovetov",
+      "bdfutbol_name": "Yumatov",
+      "identity_hint": null,
+      "source_id": 9497475,
+      "display_name": "Yumatov",
+      "role": 12,
+      "position": "Right Winger",
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Luch Vladivostok",
@@ -2595,7 +3868,7 @@
       "display_name": "Viktorovich",
       "role": 0,
       "position": "Goalkeeper",
-      "position_source": "bdfutbol_goalkeeper_stat"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Luch Vladivostok",
@@ -2605,7 +3878,7 @@
       "display_name": "Fedyakin",
       "role": 1,
       "position": "Right Back",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Luch Vladivostok",
@@ -2615,7 +3888,7 @@
       "display_name": "Baranov",
       "role": 3,
       "position": "Centre Back",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Luch Vladivostok",
@@ -2623,9 +3896,9 @@
       "identity_hint": null,
       "source_id": 9496852,
       "display_name": "Yemelyanov",
-      "role": 4,
+      "role": 3,
       "position": "Centre Back",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Luch Vladivostok",
@@ -2635,7 +3908,7 @@
       "display_name": "Ivanov",
       "role": 2,
       "position": "Left Back",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Luch Vladivostok",
@@ -2645,7 +3918,7 @@
       "display_name": "Skorkin",
       "role": 9,
       "position": "Right Midfielder",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Luch Vladivostok",
@@ -2655,7 +3928,7 @@
       "display_name": "Ruslyakov",
       "role": 7,
       "position": "Centre Midfielder",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Luch Vladivostok",
@@ -2665,7 +3938,7 @@
       "display_name": "Ignatenko",
       "role": 7,
       "position": "Centre Midfielder",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Luch Vladivostok",
@@ -2675,7 +3948,7 @@
       "display_name": "Galimov",
       "role": 13,
       "position": "Left Midfielder",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Luch Vladivostok",
@@ -2685,7 +3958,7 @@
       "display_name": "Mulashev",
       "role": 17,
       "position": "Centre Forward",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Luch Vladivostok",
@@ -2695,7 +3968,7 @@
       "display_name": "Chekanov",
       "role": 17,
       "position": "Centre Forward",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Luch Vladivostok",
@@ -2705,7 +3978,7 @@
       "display_name": "Kalinin",
       "role": 0,
       "position": "Goalkeeper",
-      "position_source": "bdfutbol_goalkeeper_stat"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Luch Vladivostok",
@@ -2715,7 +3988,7 @@
       "display_name": "Goncharenko",
       "role": 2,
       "position": "Left Back",
-      "position_source": "squad_balance_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Luch Vladivostok",
@@ -2725,7 +3998,7 @@
       "display_name": "Dubovik",
       "role": 6,
       "position": "Defensive Midfielder",
-      "position_source": "squad_balance_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Luch Vladivostok",
@@ -2735,7 +4008,7 @@
       "display_name": "Zakharov",
       "role": 13,
       "position": "Left Midfielder",
-      "position_source": "squad_balance_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Luch Vladivostok",
@@ -2745,7 +4018,7 @@
       "display_name": "Prilous",
       "role": 17,
       "position": "Centre Forward",
-      "position_source": "squad_balance_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Luch Vladivostok",
@@ -2755,7 +4028,7 @@
       "display_name": "Lebedev",
       "role": 16,
       "position": "Left Winger",
-      "position_source": "squad_balance_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Luch Vladivostok",
@@ -2763,9 +4036,69 @@
       "identity_hint": null,
       "source_id": 9496866,
       "display_name": "Belov",
-      "role": 4,
+      "role": 3,
       "position": "Centre Back",
-      "position_source": "squad_balance_inference"
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Luch Vladivostok",
+      "bdfutbol_name": "Khodoronok",
+      "identity_hint": null,
+      "source_id": 9497476,
+      "display_name": "Khodoronok",
+      "role": 2,
+      "position": "Left Back",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Luch Vladivostok",
+      "bdfutbol_name": "Koberskiy",
+      "identity_hint": null,
+      "source_id": 9497477,
+      "display_name": "Koberskiy",
+      "role": 6,
+      "position": "Defensive Midfielder",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Luch Vladivostok",
+      "bdfutbol_name": "Bogdanov",
+      "identity_hint": null,
+      "source_id": 9497478,
+      "display_name": "Bogdanov",
+      "role": 13,
+      "position": "Left Midfielder",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Luch Vladivostok",
+      "bdfutbol_name": "Kasyanenko",
+      "identity_hint": null,
+      "source_id": 9497479,
+      "display_name": "Kasyanenko",
+      "role": 17,
+      "position": "Centre Forward",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Luch Vladivostok",
+      "bdfutbol_name": "Perminov",
+      "identity_hint": null,
+      "source_id": 9497480,
+      "display_name": "Perminov",
+      "role": 16,
+      "position": "Left Winger",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Luch Vladivostok",
+      "bdfutbol_name": "Melnik",
+      "identity_hint": null,
+      "source_id": 9497481,
+      "display_name": "Melnik",
+      "role": 3,
+      "position": "Centre Back",
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Okean Nakhodka",
@@ -2775,7 +4108,7 @@
       "display_name": "Shishkin",
       "role": 0,
       "position": "Goalkeeper",
-      "position_source": "bdfutbol_goalkeeper_stat"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Okean Nakhodka",
@@ -2785,7 +4118,7 @@
       "display_name": "Bondarenko",
       "role": 1,
       "position": "Right Back",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Okean Nakhodka",
@@ -2795,7 +4128,7 @@
       "display_name": "Grytsan",
       "role": 3,
       "position": "Centre Back",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Okean Nakhodka",
@@ -2803,9 +4136,9 @@
       "identity_hint": null,
       "source_id": 9496870,
       "display_name": "Rezantsev",
-      "role": 4,
+      "role": 3,
       "position": "Centre Back",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Okean Nakhodka",
@@ -2815,7 +4148,7 @@
       "display_name": "Averyanov",
       "role": 2,
       "position": "Left Back",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Okean Nakhodka",
@@ -2825,7 +4158,7 @@
       "display_name": "Fatin",
       "role": 9,
       "position": "Right Midfielder",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Okean Nakhodka",
@@ -2835,7 +4168,7 @@
       "display_name": "Smirnov",
       "role": 7,
       "position": "Centre Midfielder",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Okean Nakhodka",
@@ -2845,7 +4178,7 @@
       "display_name": "Poddubskiy",
       "role": 7,
       "position": "Centre Midfielder",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Okean Nakhodka",
@@ -2855,7 +4188,7 @@
       "display_name": "Martyanov",
       "role": 13,
       "position": "Left Midfielder",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Okean Nakhodka",
@@ -2865,7 +4198,7 @@
       "display_name": "Kokarev",
       "role": 17,
       "position": "Centre Forward",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Okean Nakhodka",
@@ -2875,7 +4208,7 @@
       "display_name": "Moiseev",
       "role": 17,
       "position": "Centre Forward",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Okean Nakhodka",
@@ -2885,7 +4218,7 @@
       "display_name": "Gulenkov",
       "role": 0,
       "position": "Goalkeeper",
-      "position_source": "bdfutbol_goalkeeper_stat"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Okean Nakhodka",
@@ -2895,7 +4228,7 @@
       "display_name": "Rakhmanov",
       "role": 12,
       "position": "Right Winger",
-      "position_source": "squad_balance_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Okean Nakhodka",
@@ -2905,7 +4238,7 @@
       "display_name": "Shpiryuk",
       "role": 3,
       "position": "Centre Back",
-      "position_source": "squad_balance_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Okean Nakhodka",
@@ -2915,7 +4248,7 @@
       "display_name": "Sobolev",
       "role": 1,
       "position": "Right Back",
-      "position_source": "squad_balance_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Okean Nakhodka",
@@ -2925,7 +4258,7 @@
       "display_name": "Zakharov",
       "role": 7,
       "position": "Centre Midfielder",
-      "position_source": "squad_balance_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Okean Nakhodka",
@@ -2935,7 +4268,7 @@
       "display_name": "Kokoev",
       "role": 0,
       "position": "Goalkeeper",
-      "position_source": "bdfutbol_goalkeeper_stat"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Okean Nakhodka",
@@ -2945,7 +4278,97 @@
       "display_name": "Kozlov",
       "role": 8,
       "position": "Attacking Midfielder",
-      "position_source": "squad_balance_inference"
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Okean Nakhodka",
+      "bdfutbol_name": "Netunaev",
+      "identity_hint": null,
+      "source_id": 9497482,
+      "display_name": "Netunaev",
+      "role": 12,
+      "position": "Right Winger",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Okean Nakhodka",
+      "bdfutbol_name": "Ryabov",
+      "identity_hint": null,
+      "source_id": 9497483,
+      "display_name": "Ryabov",
+      "role": 3,
+      "position": "Centre Back",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Okean Nakhodka",
+      "bdfutbol_name": "Gatikoev",
+      "identity_hint": null,
+      "source_id": 9497484,
+      "display_name": "Gatikoev",
+      "role": 1,
+      "position": "Right Back",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Okean Nakhodka",
+      "bdfutbol_name": "Markin",
+      "identity_hint": null,
+      "source_id": 9497485,
+      "display_name": "Markin",
+      "role": 7,
+      "position": "Centre Midfielder",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Okean Nakhodka",
+      "bdfutbol_name": "Tikhonovetskiy",
+      "identity_hint": null,
+      "source_id": 9497486,
+      "display_name": "Tikhonovetskiy",
+      "role": 9,
+      "position": "Right Midfielder",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Okean Nakhodka",
+      "bdfutbol_name": "Kienko",
+      "identity_hint": null,
+      "source_id": 9497487,
+      "display_name": "Kienko",
+      "role": 8,
+      "position": "Attacking Midfielder",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Okean Nakhodka",
+      "bdfutbol_name": "Kislyi",
+      "identity_hint": null,
+      "source_id": 9497488,
+      "display_name": "Kislyi",
+      "role": 12,
+      "position": "Right Winger",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Okean Nakhodka",
+      "bdfutbol_name": "Golovchenko",
+      "identity_hint": null,
+      "source_id": 9497489,
+      "display_name": "Golovchenko",
+      "role": 3,
+      "position": "Centre Back",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Okean Nakhodka",
+      "bdfutbol_name": "Epurash",
+      "identity_hint": null,
+      "source_id": 9497490,
+      "display_name": "Epurash",
+      "role": 1,
+      "position": "Right Back",
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Rostselmash",
@@ -2955,7 +4378,7 @@
       "display_name": "Kryukov",
       "role": 0,
       "position": "Goalkeeper",
-      "position_source": "bdfutbol_goalkeeper_stat"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Rostselmash",
@@ -2965,7 +4388,7 @@
       "display_name": "Lugovkin",
       "role": 1,
       "position": "Right Back",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Rostselmash",
@@ -2975,7 +4398,7 @@
       "display_name": "Posylaev",
       "role": 3,
       "position": "Centre Back",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Rostselmash",
@@ -2983,9 +4406,9 @@
       "identity_hint": null,
       "source_id": 9496888,
       "display_name": "Borodkin",
-      "role": 4,
+      "role": 3,
       "position": "Centre Back",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Rostselmash",
@@ -2995,7 +4418,7 @@
       "display_name": "Styopushkin",
       "role": 2,
       "position": "Left Back",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Rostselmash",
@@ -3005,7 +4428,7 @@
       "display_name": "Filippov",
       "role": 9,
       "position": "Right Midfielder",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Rostselmash",
@@ -3015,7 +4438,7 @@
       "display_name": "Dyadyuk",
       "role": 7,
       "position": "Centre Midfielder",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Rostselmash",
@@ -3025,7 +4448,7 @@
       "display_name": "Spanderashvili",
       "role": 7,
       "position": "Centre Midfielder",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Rostselmash",
@@ -3035,7 +4458,7 @@
       "display_name": "Sanko",
       "role": 13,
       "position": "Left Midfielder",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Rostselmash",
@@ -3045,7 +4468,7 @@
       "display_name": "Leonchenko",
       "role": 17,
       "position": "Centre Forward",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Rostselmash",
@@ -3055,7 +4478,7 @@
       "display_name": "Tatarkin",
       "role": 17,
       "position": "Centre Forward",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Rostselmash",
@@ -3065,7 +4488,7 @@
       "display_name": "Valeev",
       "role": 2,
       "position": "Left Back",
-      "position_source": "squad_balance_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Rostselmash",
@@ -3075,7 +4498,7 @@
       "display_name": "Gubaz",
       "role": 6,
       "position": "Defensive Midfielder",
-      "position_source": "squad_balance_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Rostselmash",
@@ -3085,7 +4508,7 @@
       "display_name": "Borovskoy",
       "role": 13,
       "position": "Left Midfielder",
-      "position_source": "squad_balance_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Rostselmash",
@@ -3095,7 +4518,7 @@
       "display_name": "Dementjev",
       "role": 17,
       "position": "Centre Forward",
-      "position_source": "squad_balance_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Rostselmash",
@@ -3105,7 +4528,7 @@
       "display_name": "Minibaev",
       "role": 16,
       "position": "Left Winger",
-      "position_source": "squad_balance_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Rostselmash",
@@ -3113,9 +4536,9 @@
       "identity_hint": null,
       "source_id": 9496901,
       "display_name": "Ermilov",
-      "role": 4,
+      "role": 3,
       "position": "Centre Back",
-      "position_source": "squad_balance_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Rostselmash",
@@ -3125,7 +4548,117 @@
       "display_name": "Tikhonov",
       "role": 2,
       "position": "Left Back",
-      "position_source": "squad_balance_inference"
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Rostselmash",
+      "bdfutbol_name": "Andreyev",
+      "identity_hint": null,
+      "source_id": 9497491,
+      "display_name": "Andreyev",
+      "role": 17,
+      "position": "Centre Forward",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Rostselmash",
+      "bdfutbol_name": "Loskov",
+      "identity_hint": null,
+      "source_id": 9497492,
+      "display_name": "Loskov",
+      "role": 13,
+      "position": "Left Midfielder",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Rostselmash",
+      "bdfutbol_name": "Parovin",
+      "identity_hint": null,
+      "source_id": 9497493,
+      "display_name": "Parovin",
+      "role": 17,
+      "position": "Centre Forward",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Rostselmash",
+      "bdfutbol_name": "Golubkin",
+      "identity_hint": null,
+      "source_id": 9497494,
+      "display_name": "Golubkin",
+      "role": 16,
+      "position": "Left Winger",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Rostselmash",
+      "bdfutbol_name": "Maslov",
+      "identity_hint": null,
+      "source_id": 9497495,
+      "display_name": "Maslov",
+      "role": 3,
+      "position": "Centre Back",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Rostselmash",
+      "bdfutbol_name": "Balakhnin",
+      "identity_hint": null,
+      "source_id": 9497496,
+      "display_name": "Balakhnin",
+      "role": 2,
+      "position": "Left Back",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Rostselmash",
+      "bdfutbol_name": "Sereda",
+      "identity_hint": null,
+      "source_id": 9497497,
+      "display_name": "Sereda",
+      "role": 6,
+      "position": "Defensive Midfielder",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Rostselmash",
+      "bdfutbol_name": "Kovtun",
+      "identity_hint": null,
+      "source_id": 9497498,
+      "display_name": "Kovtun",
+      "role": 13,
+      "position": "Left Midfielder",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Rostselmash",
+      "bdfutbol_name": "Yuri Klyuchnikov",
+      "identity_hint": null,
+      "source_id": 9497499,
+      "display_name": "Yuri Klyuchnikov",
+      "role": 17,
+      "position": "Centre Forward",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Rostselmash",
+      "bdfutbol_name": "Vernigorov",
+      "identity_hint": null,
+      "source_id": 9497500,
+      "display_name": "Vernigorov",
+      "role": 16,
+      "position": "Left Winger",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Rostselmash",
+      "bdfutbol_name": "Skokov",
+      "identity_hint": null,
+      "source_id": 9497501,
+      "display_name": "Skokov",
+      "role": 3,
+      "position": "Centre Back",
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Asmaral Moskva",
@@ -3135,7 +4668,7 @@
       "display_name": "Moiseev",
       "role": 0,
       "position": "Goalkeeper",
-      "position_source": "bdfutbol_goalkeeper_stat"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Asmaral Moskva",
@@ -3145,7 +4678,7 @@
       "display_name": "Krestobintsev",
       "role": 1,
       "position": "Right Back",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Asmaral Moskva",
@@ -3155,7 +4688,7 @@
       "display_name": "Shulgin",
       "role": 3,
       "position": "Centre Back",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Asmaral Moskva",
@@ -3163,9 +4696,9 @@
       "identity_hint": null,
       "source_id": 9496906,
       "display_name": "Nikitin",
-      "role": 4,
+      "role": 3,
       "position": "Centre Back",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Asmaral Moskva",
@@ -3175,7 +4708,7 @@
       "display_name": "Sergey Kuznetsov",
       "role": 2,
       "position": "Left Back",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Asmaral Moskva",
@@ -3185,7 +4718,7 @@
       "display_name": "Panferov",
       "role": 9,
       "position": "Right Midfielder",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Asmaral Moskva",
@@ -3195,7 +4728,7 @@
       "display_name": "Ayupov",
       "role": 7,
       "position": "Centre Midfielder",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Asmaral Moskva",
@@ -3205,7 +4738,7 @@
       "display_name": "Klyuev",
       "role": 7,
       "position": "Centre Midfielder",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Asmaral Moskva",
@@ -3215,7 +4748,7 @@
       "display_name": "Safronov",
       "role": 13,
       "position": "Left Midfielder",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Asmaral Moskva",
@@ -3225,7 +4758,7 @@
       "display_name": "Volotjok",
       "role": 17,
       "position": "Centre Forward",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Asmaral Moskva",
@@ -3235,7 +4768,7 @@
       "display_name": "Storchak",
       "role": 17,
       "position": "Centre Forward",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Asmaral Moskva",
@@ -3245,7 +4778,7 @@
       "display_name": "Shiyanov",
       "role": 0,
       "position": "Goalkeeper",
-      "position_source": "bdfutbol_goalkeeper_stat"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Asmaral Moskva",
@@ -3255,7 +4788,7 @@
       "display_name": "Kamnev",
       "role": 3,
       "position": "Centre Back",
-      "position_source": "squad_balance_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Asmaral Moskva",
@@ -3265,7 +4798,7 @@
       "display_name": "Golikov",
       "role": 1,
       "position": "Right Back",
-      "position_source": "squad_balance_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Asmaral Moskva",
@@ -3275,7 +4808,7 @@
       "display_name": "Mulikov",
       "role": 7,
       "position": "Centre Midfielder",
-      "position_source": "squad_balance_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Asmaral Moskva",
@@ -3285,7 +4818,7 @@
       "display_name": "Makarov",
       "role": 9,
       "position": "Right Midfielder",
-      "position_source": "squad_balance_inference"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Asmaral Moskva",
@@ -3295,7 +4828,7 @@
       "display_name": "Kovalenko",
       "role": 0,
       "position": "Goalkeeper",
-      "position_source": "bdfutbol_goalkeeper_stat"
+      "position_source": "existing_historical_position"
     },
     {
       "club": "Asmaral Moskva",
@@ -3305,12 +4838,169 @@
       "display_name": "Zorya",
       "role": 12,
       "position": "Right Winger",
-      "position_source": "squad_balance_inference"
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Asmaral Moskva",
+      "bdfutbol_name": "Shikunov",
+      "identity_hint": null,
+      "source_id": 9497502,
+      "display_name": "Shikunov",
+      "role": 3,
+      "position": "Centre Back",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Asmaral Moskva",
+      "bdfutbol_name": "Nikulin",
+      "identity_hint": null,
+      "source_id": 9497503,
+      "display_name": "Nikulin",
+      "role": 1,
+      "position": "Right Back",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Asmaral Moskva",
+      "bdfutbol_name": "Medvedev",
+      "identity_hint": null,
+      "source_id": 9497504,
+      "display_name": "Medvedev",
+      "role": 7,
+      "position": "Centre Midfielder",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Asmaral Moskva",
+      "bdfutbol_name": "Demin",
+      "identity_hint": null,
+      "source_id": 9497505,
+      "display_name": "Demin",
+      "role": 9,
+      "position": "Right Midfielder",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Asmaral Moskva",
+      "bdfutbol_name": "Semak",
+      "identity_hint": null,
+      "source_id": 9497506,
+      "display_name": "Semak",
+      "role": 8,
+      "position": "Attacking Midfielder",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Asmaral Moskva",
+      "bdfutbol_name": "Bekoev",
+      "identity_hint": null,
+      "source_id": 9497507,
+      "display_name": "Bekoev",
+      "role": 12,
+      "position": "Right Winger",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Asmaral Moskva",
+      "bdfutbol_name": "Khakhalev",
+      "identity_hint": null,
+      "source_id": 9497508,
+      "display_name": "Khakhalev",
+      "role": 3,
+      "position": "Centre Back",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Asmaral Moskva",
+      "bdfutbol_name": "Grishin",
+      "identity_hint": null,
+      "source_id": 9497509,
+      "display_name": "Grishin",
+      "role": 1,
+      "position": "Right Back",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Asmaral Moskva",
+      "bdfutbol_name": "Kyrylov",
+      "identity_hint": null,
+      "source_id": 9497510,
+      "display_name": "Kyrylov",
+      "role": 7,
+      "position": "Centre Midfielder",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Asmaral Moskva",
+      "bdfutbol_name": "Zudenkov",
+      "identity_hint": null,
+      "source_id": 9497511,
+      "display_name": "Zudenkov",
+      "role": 9,
+      "position": "Right Midfielder",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Asmaral Moskva",
+      "bdfutbol_name": "Gubernskiy",
+      "identity_hint": null,
+      "source_id": 9497512,
+      "display_name": "Gubernskiy",
+      "role": 8,
+      "position": "Attacking Midfielder",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Asmaral Moskva",
+      "bdfutbol_name": "Lushnikov",
+      "identity_hint": null,
+      "source_id": 9497513,
+      "display_name": "Lushnikov",
+      "role": 12,
+      "position": "Right Winger",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Asmaral Moskva",
+      "bdfutbol_name": "Zhilkin",
+      "identity_hint": null,
+      "source_id": 9497514,
+      "display_name": "Zhilkin",
+      "role": 3,
+      "position": "Centre Back",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Asmaral Moskva",
+      "bdfutbol_name": "Strikalov",
+      "identity_hint": null,
+      "source_id": 9497515,
+      "display_name": "Strikalov",
+      "role": 1,
+      "position": "Right Back",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Asmaral Moskva",
+      "bdfutbol_name": "Zhdanov",
+      "identity_hint": null,
+      "source_id": 9497516,
+      "display_name": "Zhdanov",
+      "role": 7,
+      "position": "Centre Midfielder",
+      "position_source": "existing_historical_position"
     }
   ],
   "duplicate_policy": "explicit verified reuse only; no fuzzy surname merging; duplicate BDF surnames remain distinct by club/age/row identity",
   "rating_policy": "fixed source-comparable attributes on the game scale; no football 75/25 rule",
-  "source_profile_enrichments": 3,
+  "source_roster_exhaustive": true,
+  "minimum_is_floor_not_target": true,
+  "individual_profile_enrichment_0_30": {
+    "profiles_curated": 4,
+    "portrait_profiles_ready_for_download": 4,
+    "role_corrections": 0,
+    "duplicate_identities_merged_total": 1
+  },
   "individual_profile_enrichment_0_29": {
     "profiles_curated": 6,
     "portrait_profiles_ready_for_download": 6,

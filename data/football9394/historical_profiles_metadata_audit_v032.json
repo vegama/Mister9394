@@ -1,0 +1,3575 @@
+{
+  "schema_version": 1,
+  "checkpoint": "0.32.0-historical-metadata-closure-and-fener-profiles",
+  "status": "pass",
+  "stadiums": {
+    "belgium_closed": 6,
+    "turkey_closed": 14,
+    "unresolved_count": 0,
+    "rows": [
+      {
+        "team_id": 9352001,
+        "team_name": "FC Seraing",
+        "stadium_id": 2193,
+        "stadium_name": "Stade du Pairay",
+        "source_url": "https://fr.wikipedia.org/wiki/Championnat_de_Belgique_de_football_1993-1994"
+      },
+      {
+        "team_id": 9352002,
+        "team_name": "Beveren",
+        "stadium_id": 2194,
+        "stadium_name": "Freethielstadion",
+        "source_url": "https://fr.wikipedia.org/wiki/Championnat_de_Belgique_de_football_1993-1994"
+      },
+      {
+        "team_id": 9352003,
+        "team_name": "Germinal Ekeren",
+        "stadium_id": 2195,
+        "stadium_name": "Veltwijckpark",
+        "source_url": "https://fr.wikipedia.org/wiki/Championnat_de_Belgique_de_football_1993-1994"
+      },
+      {
+        "team_id": 9352004,
+        "team_name": "Lommel",
+        "stadium_id": 2196,
+        "stadium_name": "Stedelijk Sportstadion",
+        "source_url": "https://fr.wikipedia.org/wiki/Championnat_de_Belgique_de_football_1993-1994"
+      },
+      {
+        "team_id": 9352005,
+        "team_name": "RFC Liège",
+        "stadium_id": 2197,
+        "stadium_name": "Stade Vélodrome Oscar Flesch",
+        "source_url": "https://fr.wikipedia.org/wiki/Championnat_de_Belgique_de_football_1993-1994"
+      },
+      {
+        "team_id": 9352006,
+        "team_name": "Molenbeek",
+        "stadium_id": 2198,
+        "stadium_name": "Stade Edmond Machtens",
+        "source_url": "https://fr.wikipedia.org/wiki/Championnat_de_Belgique_de_football_1993-1994"
+      },
+      {
+        "team_id": 9357001,
+        "team_name": "Fenerbahçe",
+        "stadium_id": 2199,
+        "stadium_name": "Fenerbahçe Stadı",
+        "source_url": "https://de.wikipedia.org/wiki/Galatasaray_Istanbul/Saison_1993/94"
+      },
+      {
+        "team_id": 9357002,
+        "team_name": "Trabzonspor",
+        "stadium_id": 2200,
+        "stadium_name": "Hüseyin Avni Aker Stadı",
+        "source_url": "https://de.wikipedia.org/wiki/Galatasaray_Istanbul/Saison_1993/94"
+      },
+      {
+        "team_id": 9357003,
+        "team_name": "Samsunspor",
+        "stadium_id": 2201,
+        "stadium_name": "19 Mayıs Stadı",
+        "source_url": "https://de.wikipedia.org/wiki/Galatasaray_Istanbul/Saison_1993/94"
+      },
+      {
+        "team_id": 9357004,
+        "team_name": "Kocaelispor",
+        "stadium_id": 2202,
+        "stadium_name": "İsmetpaşa Stadyumu",
+        "source_url": "https://de.wikipedia.org/wiki/Galatasaray_Istanbul/Saison_1993/94"
+      },
+      {
+        "team_id": 9357005,
+        "team_name": "Gençlerbirliği",
+        "stadium_id": 2203,
+        "stadium_name": "19 Mayıs Stadı",
+        "source_url": "https://de.wikipedia.org/wiki/Galatasaray_Istanbul/Saison_1993/94"
+      },
+      {
+        "team_id": 9357006,
+        "team_name": "Gaziantepspor",
+        "stadium_id": 2204,
+        "stadium_name": "Kamil Ocak Stadı",
+        "source_url": "https://de.wikipedia.org/wiki/Galatasaray_Istanbul/Saison_1993/94"
+      },
+      {
+        "team_id": 9357007,
+        "team_name": "Bursaspor",
+        "stadium_id": 2205,
+        "stadium_name": "Atatürk Stadı",
+        "source_url": "https://de.wikipedia.org/wiki/Galatasaray_Istanbul/Saison_1993/94"
+      },
+      {
+        "team_id": 9357008,
+        "team_name": "Altay",
+        "stadium_id": 2206,
+        "stadium_name": "Atatürk Stadı",
+        "source_url": "https://de.wikipedia.org/wiki/Galatasaray_Istanbul/Saison_1993/94"
+      },
+      {
+        "team_id": 9357009,
+        "team_name": "Ankaragücü",
+        "stadium_id": 2207,
+        "stadium_name": "19 Mayıs Stadı",
+        "source_url": "https://de.wikipedia.org/wiki/Galatasaray_Istanbul/Saison_1993/94"
+      },
+      {
+        "team_id": 9357010,
+        "team_name": "Kayserispor",
+        "stadium_id": 2208,
+        "stadium_name": "Atatürk Stadı",
+        "source_url": "https://de.wikipedia.org/wiki/Galatasaray_Istanbul/Saison_1993/94"
+      },
+      {
+        "team_id": 9357011,
+        "team_name": "Zeytinburnuspor",
+        "stadium_id": 2209,
+        "stadium_name": "Zeytinburnu Stadı",
+        "source_url": "https://www.soccerpunter.com/soccer-statistics/Turkey/S%C3%BCper-Lig-1993-1994/match/2434861_Zeytinburnu_Spor_Kulub%C3%BC_vs_Fenerbah%C3%A7e_Spor_Kul%C3%BCb%C3%BC"
+      },
+      {
+        "team_id": 9357012,
+        "team_name": "Karabükspor",
+        "stadium_id": 2210,
+        "stadium_name": "Yenişehir Stadı",
+        "source_url": "https://de.wikipedia.org/wiki/Galatasaray_Istanbul/Saison_1993/94"
+      },
+      {
+        "team_id": 9357013,
+        "team_name": "Karşıyaka",
+        "stadium_id": 2211,
+        "stadium_name": "Atatürk Stadı",
+        "source_url": "https://de.wikipedia.org/wiki/Galatasaray_Istanbul/Saison_1993/94"
+      },
+      {
+        "team_id": 9357014,
+        "team_name": "Sarıyer",
+        "stadium_id": 2212,
+        "stadium_name": "Yusuf Ziya Öniş Stadyumu",
+        "source_url": "https://macanilari.com/getir.php?cmd=esnek_arama&cmd_deger=0_-_0_-_0_-_Kar%C5%9F%C4%B1yaka_-_0_-_Sar%C4%B1yer_-_0_-_id_-_0_-_0_-_0_-_0_-_0_-_0_-_0_-_0_-_0_-_yok_-_0_-_0_-_yok_-_0_-_0_-_0_-_0_-_0_-_0_-_0_-_0_-_0&fid=199319941104"
+      }
+    ],
+    "physical_parameters_policy": "No modern capacity or pitch dimensions are back-filled without a season-specific historical source."
+  },
+  "referees": {
+    "Turkey": {
+      "added": 34,
+      "pool_size": 34,
+      "appearance_assignments": 240,
+      "expected_matches": 240,
+      "source_pages": [
+        "https://www.transfermarkt.com/super-lig/schiedsrichter/wettbewerb/TR1/saison_id/1993/plus//sort/rote_karten.desc",
+        "https://www.transfermarkt.com/super-lig/schiedsrichter/wettbewerb/TR1/saison_id/1993/plus//sort/rote_karten.desc/page/2"
+      ]
+    },
+    "Russia": {
+      "added": 33,
+      "pool_size": 33,
+      "appearance_assignments": 306,
+      "expected_matches": 306,
+      "source_pages": [
+        "https://www.transfermarkt.com/premier-liga/schiedsrichter/wettbewerb/RU1/saison_id/1992/plus//sort/rote_karten.desc",
+        "https://www.transfermarkt.com/premier-liga/schiedsrichter/wettbewerb/RU1/saison_id/1992/plus//sort/rote_karten.desc/page/2"
+      ]
+    },
+    "unresolved_referee_pool_league_ids": [],
+    "Greece_status": "historical source-backed subset 11/45 retained; no unnamed officials invented."
+  },
+  "profiles": {
+    "batch": "Fenerbahçe 1993-94 detailed squad",
+    "curated": 25,
+    "role_corrections": 16,
+    "review_required": 1,
+    "source": "https://www.transfermarkt.com/fenerbahce-sk/kader/verein/36/saison_id/1993/plus/1",
+    "changes": [
+      {
+        "source_id": 9495315,
+        "before": {
+          "name": "Engin İpekoğlu",
+          "role": 0,
+          "pos": "Goalkeeper",
+          "birth": "1961-06-07T00:00:00",
+          "country": 84
+        },
+        "after": {
+          "name": "Engin İpekoğlu",
+          "role": 0,
+          "pos": "Goalkeeper",
+          "birth": "1961-06-07T00:00:00",
+          "country": 84,
+          "height": 184,
+          "foot": 1
+        },
+        "source_position": "Goalkeeper"
+      },
+      {
+        "source_id": 9495343,
+        "before": {
+          "name": "İlker Yağcıoğlu",
+          "role": 7,
+          "pos": "Centre Midfielder",
+          "birth": "1966-03-10T00:00:00",
+          "country": 84
+        },
+        "after": {
+          "name": "İlker Yağcıoğlu",
+          "role": 1,
+          "pos": "Right Back",
+          "birth": "1966-03-10T00:00:00",
+          "country": 84,
+          "height": 178,
+          "foot": 1
+        },
+        "source_position": "Right-Back"
+      },
+      {
+        "source_id": 9496362,
+        "before": {
+          "name": "Wagenhaus",
+          "role": 3,
+          "pos": "Centre Back",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Andreas Wagenhaus",
+          "role": 3,
+          "pos": "Centre Back",
+          "birth": "1964-10-29T00:00:00",
+          "country": 4,
+          "height": null,
+          "foot": null
+        },
+        "source_position": "Centre-Back"
+      },
+      {
+        "source_id": 9495325,
+        "before": {
+          "name": "Emre Aşık",
+          "role": 3,
+          "pos": "Centre Back",
+          "birth": "1973-12-13T00:00:00",
+          "country": 84
+        },
+        "after": {
+          "name": "Emre Aşık",
+          "role": 3,
+          "pos": "Centre Back",
+          "birth": "1973-12-13T00:00:00",
+          "country": 84,
+          "height": 183,
+          "foot": 1
+        },
+        "source_position": "Centre-Back"
+      },
+      {
+        "source_id": 9496364,
+        "before": {
+          "name": "Uche",
+          "role": 2,
+          "pos": "Left Back",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Uche Okechukwu",
+          "role": 3,
+          "pos": "Centre Back",
+          "birth": "1967-09-27T00:00:00",
+          "country": 59,
+          "height": 187,
+          "foot": 1
+        },
+        "source_position": "Centre-Back"
+      },
+      {
+        "source_id": 9495332,
+        "before": {
+          "name": "Oğuz Çetin",
+          "role": 7,
+          "pos": "Centre Midfielder",
+          "birth": "1963-02-15T00:00:00",
+          "country": 84
+        },
+        "after": {
+          "name": "Oğuz Çetin",
+          "role": 7,
+          "pos": "Centre Midfielder",
+          "birth": "1963-02-15T00:00:00",
+          "country": 84,
+          "height": 183,
+          "foot": 1
+        },
+        "source_position": "Central Midfield"
+      },
+      {
+        "source_id": 9496365,
+        "before": {
+          "name": "Tayfur",
+          "role": 7,
+          "pos": "Centre Midfielder",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Tayfur Havutçu",
+          "role": 6,
+          "pos": "Defensive Midfielder",
+          "birth": "1970-04-23T00:00:00",
+          "country": 84,
+          "height": null,
+          "foot": null
+        },
+        "source_position": "Defensive Midfield"
+      },
+      {
+        "source_id": 9496366,
+        "before": {
+          "name": "Müjdat",
+          "role": 7,
+          "pos": "Centre Midfielder",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Müjdat Yetkiner",
+          "role": 3,
+          "pos": "Centre Back",
+          "birth": "1961-11-16T00:00:00",
+          "country": 84,
+          "height": 175,
+          "foot": 1
+        },
+        "source_position": "Centre-Back"
+      },
+      {
+        "source_id": 9496367,
+        "before": {
+          "name": "Nielsen",
+          "role": 13,
+          "pos": "Left Midfielder",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Brian Steen Nielsen",
+          "role": 13,
+          "pos": "Left Midfielder",
+          "birth": "1968-12-28T00:00:00",
+          "country": 33,
+          "height": 180,
+          "foot": 2
+        },
+        "source_position": "Left Midfield"
+      },
+      {
+        "source_id": 9495352,
+        "before": {
+          "name": "Bülent Uygun",
+          "role": 17,
+          "pos": "Centre Forward",
+          "birth": "1971-08-01T00:00:00",
+          "country": 84
+        },
+        "after": {
+          "name": "Bülent Uygun",
+          "role": 8,
+          "pos": "Attacking Midfielder",
+          "birth": "1971-08-01T00:00:00",
+          "country": 84,
+          "height": 178,
+          "foot": 1
+        },
+        "source_position": "Attacking Midfield"
+      },
+      {
+        "source_id": 9496368,
+        "before": {
+          "name": "Çolak",
+          "role": 17,
+          "pos": "Centre Forward",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Mecnur Çolak",
+          "role": 17,
+          "pos": "Centre Forward",
+          "birth": "1967-08-07T00:00:00",
+          "country": 84,
+          "height": null,
+          "foot": null
+        },
+        "source_position": "Centre-Forward"
+      },
+      {
+        "source_id": 9496369,
+        "before": {
+          "name": "Dağdelen",
+          "role": 9,
+          "pos": "Right Midfielder",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Altay Dağdelen",
+          "role": 0,
+          "pos": "Goalkeeper",
+          "birth": "1970-01-20T00:00:00",
+          "country": 84,
+          "height": null,
+          "foot": null
+        },
+        "source_position": "Goalkeeper"
+      },
+      {
+        "source_id": 9495351,
+        "before": {
+          "name": "Aykut Kocaman",
+          "role": 17,
+          "pos": "Centre Forward",
+          "birth": "1965-04-05T00:00:00",
+          "country": 84
+        },
+        "after": {
+          "name": "Aykut Kocaman",
+          "role": 17,
+          "pos": "Centre Forward",
+          "birth": "1965-04-05T00:00:00",
+          "country": 84,
+          "height": 174,
+          "foot": 3
+        },
+        "source_position": "Centre-Forward"
+      },
+      {
+        "source_id": 9496370,
+        "before": {
+          "name": "Sentürk",
+          "role": 12,
+          "pos": "Right Winger",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Kemalettin Şentürk",
+          "role": 6,
+          "pos": "Defensive Midfielder",
+          "birth": "1970-02-09T00:00:00",
+          "country": 84,
+          "height": null,
+          "foot": null
+        },
+        "source_position": "Defensive Midfield"
+      },
+      {
+        "source_id": 9496371,
+        "before": {
+          "name": "Kanburoğlu",
+          "role": 3,
+          "pos": "Centre Back",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Nuri Kamburoğlu",
+          "role": 3,
+          "pos": "Centre Back",
+          "birth": "1967-05-24T00:00:00",
+          "country": 84,
+          "height": 179,
+          "foot": null
+        },
+        "source_position": "Centre-Back"
+      },
+      {
+        "source_id": 9496372,
+        "before": {
+          "name": "Alp",
+          "role": 1,
+          "pos": "Right Back",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Cengiz Alp",
+          "role": 16,
+          "pos": "Left Winger",
+          "birth": "1969-01-25T00:00:00",
+          "country": 84,
+          "height": null,
+          "foot": null
+        },
+        "source_position": "Left Winger"
+      },
+      {
+        "source_id": 9496373,
+        "before": {
+          "name": "Taşkıran",
+          "role": 7,
+          "pos": "Centre Midfielder",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Aygün Taşkıran",
+          "role": 16,
+          "pos": "Left Winger",
+          "birth": "1974-04-22T00:00:00",
+          "country": 84,
+          "height": 175,
+          "foot": 2
+        },
+        "source_position": "Left Winger"
+      },
+      {
+        "source_id": 9496374,
+        "before": {
+          "name": "Yuvakuran",
+          "role": 9,
+          "pos": "Right Midfielder",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Semih Yuvakuran",
+          "role": 2,
+          "pos": "Left Back",
+          "birth": "1963-09-01T00:00:00",
+          "country": 84,
+          "height": null,
+          "foot": 2
+        },
+        "source_position": "Left-Back"
+      },
+      {
+        "source_id": 9497230,
+        "before": {
+          "name": "Hotić",
+          "role": 8,
+          "pos": "Attacking Midfielder",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Demir Hotic",
+          "role": 17,
+          "pos": "Centre Forward",
+          "birth": null,
+          "country": 20,
+          "height": 179,
+          "foot": null
+        },
+        "source_position": "Centre-Forward"
+      },
+      {
+        "source_id": 9497231,
+        "before": {
+          "name": "Rıdvan",
+          "role": 12,
+          "pos": "Right Winger",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Rıdvan Dilmen",
+          "role": 8,
+          "pos": "Attacking Midfielder",
+          "birth": "1962-08-15T00:00:00",
+          "country": 84,
+          "height": 173,
+          "foot": 1
+        },
+        "source_position": "Attacking Midfield"
+      },
+      {
+        "source_id": 9497232,
+        "before": {
+          "name": "Saatcioğlu",
+          "role": 3,
+          "pos": "Centre Back",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Burhan Saatçioğlu",
+          "role": 5,
+          "pos": "Libero",
+          "birth": "1973-05-11T00:00:00",
+          "country": 84,
+          "height": 174,
+          "foot": 1
+        },
+        "source_position": "Sweeper"
+      },
+      {
+        "source_id": 9497233,
+        "before": {
+          "name": "Hakan",
+          "role": 1,
+          "pos": "Right Back",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Hakan Tecimer",
+          "role": 12,
+          "pos": "Right Winger",
+          "birth": "1967-01-06T00:00:00",
+          "country": 84,
+          "height": null,
+          "foot": null
+        },
+        "source_position": "Right Winger"
+      },
+      {
+        "source_id": 9497234,
+        "before": {
+          "name": "Demirtaş",
+          "role": 7,
+          "pos": "Centre Midfielder",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Sadettin Demirtaş",
+          "role": 17,
+          "pos": "Centre Forward",
+          "birth": "1968-12-20T00:00:00",
+          "country": 84,
+          "height": null,
+          "foot": null
+        },
+        "source_position": "Centre-Forward"
+      },
+      {
+        "source_id": 9497235,
+        "before": {
+          "name": "Alpacar",
+          "role": 9,
+          "pos": "Right Midfielder",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Volkan Alpacar",
+          "role": 17,
+          "pos": "Centre Forward",
+          "birth": "1973-04-16T00:00:00",
+          "country": 84,
+          "height": null,
+          "foot": null
+        },
+        "source_position": "Centre-Forward"
+      },
+      {
+        "source_id": 9497236,
+        "before": {
+          "name": "Şenel",
+          "role": 8,
+          "pos": "Attacking Midfielder",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Kerem Şenel",
+          "role": 8,
+          "pos": "Defender (exact role unresolved)",
+          "birth": "1974-10-05T00:00:00",
+          "country": 84,
+          "height": null,
+          "foot": null
+        },
+        "source_position": "Defender"
+      }
+    ],
+    "second_batch": "Samsunspor 1993-94 detailed squad",
+    "samsunspor_curated": 27,
+    "samsunspor_role_corrections": 11,
+    "samsunspor_review_required": 5,
+    "samsunspor_source": "https://www.transfermarkt.com.tr/samsunspor/kader/verein/152/saison_id/1993/plus/1",
+    "samsunspor_changes": [
+      {
+        "source_id": 9496400,
+        "before": {
+          "name": "Aydın",
+          "role": 0,
+          "pos": "Goalkeeper",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Murat Ayhan Aydın",
+          "role": 0,
+          "pos": "Goalkeeper",
+          "birth": "1966-04-04T00:00:00",
+          "country": 84,
+          "height": null,
+          "foot": null
+        },
+        "source_position": "Goalkeeper"
+      },
+      {
+        "source_id": 9496401,
+        "before": {
+          "name": "Arslan",
+          "role": 1,
+          "pos": "Right Back",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "İmdat Arslan",
+          "role": 1,
+          "pos": "Right Back",
+          "birth": "1969-10-10T00:00:00",
+          "country": 84,
+          "height": 168,
+          "foot": 1
+        },
+        "source_position": "Right-Back"
+      },
+      {
+        "source_id": 9496402,
+        "before": {
+          "name": "Koloğlu",
+          "role": 3,
+          "pos": "Centre Back",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Ercan Koloğlu",
+          "role": 5,
+          "pos": "Libero",
+          "birth": "1968-02-11T00:00:00",
+          "country": 84,
+          "height": 183,
+          "foot": null
+        },
+        "source_position": "Sweeper"
+      },
+      {
+        "source_id": 9496403,
+        "before": {
+          "name": "Çıkla",
+          "role": 3,
+          "pos": "Centre Back",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Kasım Çıkla",
+          "role": 3,
+          "pos": "Centre Back",
+          "birth": "1967-02-26T00:00:00",
+          "country": 84,
+          "height": null,
+          "foot": null
+        },
+        "source_position": "Centre-Back"
+      },
+      {
+        "source_id": 9496404,
+        "before": {
+          "name": "Korkmaz",
+          "role": 2,
+          "pos": "Left Back",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Fevzi Korkmaz",
+          "role": 2,
+          "pos": "Defender (exact role unresolved)",
+          "birth": "1969-05-16T00:00:00",
+          "country": 84,
+          "height": null,
+          "foot": null
+        },
+        "source_position": "Defender"
+      },
+      {
+        "source_id": 9496405,
+        "before": {
+          "name": "Timofte",
+          "role": 9,
+          "pos": "Right Midfielder",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Daniel Timofte",
+          "role": 8,
+          "pos": "Attacking Midfielder",
+          "birth": "1967-10-01T00:00:00",
+          "country": 72,
+          "height": null,
+          "foot": null
+        },
+        "source_position": "Attacking Midfield"
+      },
+      {
+        "source_id": 9496406,
+        "before": {
+          "name": "Akyol",
+          "role": 7,
+          "pos": "Centre Midfielder",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Osman Akyol",
+          "role": 7,
+          "pos": "Midfielder (exact role unresolved)",
+          "birth": "1969-09-01T00:00:00",
+          "country": 84,
+          "height": null,
+          "foot": null
+        },
+        "source_position": "Midfielder"
+      },
+      {
+        "source_id": 9496407,
+        "before": {
+          "name": "Gürsu",
+          "role": 7,
+          "pos": "Centre Midfielder",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Müjdat Gürsu",
+          "role": 8,
+          "pos": "Attacking Midfielder",
+          "birth": "1971-09-13T00:00:00",
+          "country": 84,
+          "height": null,
+          "foot": null
+        },
+        "source_position": "Attacking Midfield"
+      },
+      {
+        "source_id": 9495350,
+        "before": {
+          "name": "Ertuğrul Sağlam",
+          "role": 17,
+          "pos": "Centre Forward",
+          "birth": "1969-11-19T00:00:00",
+          "country": 84
+        },
+        "after": {
+          "name": "Ertuğrul Sağlam",
+          "role": 17,
+          "pos": "Centre Forward",
+          "birth": "1969-11-19T00:00:00",
+          "country": 84,
+          "height": 184,
+          "foot": 1
+        },
+        "source_position": "Centre-Forward"
+      },
+      {
+        "source_id": 9496408,
+        "before": {
+          "name": "Kubat",
+          "role": 17,
+          "pos": "Centre Forward",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Bünyamin Kubat",
+          "role": 17,
+          "pos": "Centre Forward",
+          "birth": "1969-11-24T00:00:00",
+          "country": 84,
+          "height": null,
+          "foot": null
+        },
+        "source_position": "Centre-Forward"
+      },
+      {
+        "source_id": 9496409,
+        "before": {
+          "name": "Korkmaz",
+          "role": 17,
+          "pos": "Centre Forward",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Faruk Korkmaz",
+          "role": 17,
+          "pos": "Centre Forward",
+          "birth": "1969-09-14T00:00:00",
+          "country": 84,
+          "height": null,
+          "foot": null
+        },
+        "source_position": "Centre-Forward"
+      },
+      {
+        "source_id": 9496410,
+        "before": {
+          "name": "Aslan",
+          "role": 0,
+          "pos": "Goalkeeper",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Abdullah Aslan",
+          "role": 0,
+          "pos": "Goalkeeper",
+          "birth": "1970-03-01T00:00:00",
+          "country": 84,
+          "height": null,
+          "foot": null
+        },
+        "source_position": "Goalkeeper"
+      },
+      {
+        "source_id": 9496411,
+        "before": {
+          "name": "İsa",
+          "role": 6,
+          "pos": "Defensive Midfielder",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "İsa Turan",
+          "role": 2,
+          "pos": "Left Back",
+          "birth": "1969-08-06T00:00:00",
+          "country": 84,
+          "height": null,
+          "foot": 2
+        },
+        "source_position": "Left-Back"
+      },
+      {
+        "source_id": 9496412,
+        "before": {
+          "name": "Korkmaz",
+          "role": 13,
+          "pos": "Left Midfielder",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Vural Korkmaz",
+          "role": 9,
+          "pos": "Right Midfielder",
+          "birth": "1972-04-04T00:00:00",
+          "country": 84,
+          "height": null,
+          "foot": 1
+        },
+        "source_position": "Right Midfield"
+      },
+      {
+        "source_id": 9496413,
+        "before": {
+          "name": "Constantin",
+          "role": 17,
+          "pos": "Centre Forward",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Constantin Luca",
+          "role": 17,
+          "pos": "Centre Forward",
+          "birth": "1969-05-26T00:00:00",
+          "country": 72,
+          "height": null,
+          "foot": null
+        },
+        "source_position": "Centre-Forward"
+      },
+      {
+        "source_id": 9496414,
+        "before": {
+          "name": "Cheregi",
+          "role": 16,
+          "pos": "Left Winger",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Marius Cheregi",
+          "role": 6,
+          "pos": "Defensive Midfielder",
+          "birth": "1967-10-04T00:00:00",
+          "country": 72,
+          "height": 184,
+          "foot": null
+        },
+        "source_position": "Defensive Midfield"
+      },
+      {
+        "source_id": 9496415,
+        "before": {
+          "name": "İlhan",
+          "role": 3,
+          "pos": "Centre Back",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Erol İlhan",
+          "role": 0,
+          "pos": "Goalkeeper",
+          "birth": "1968-07-15T00:00:00",
+          "country": 84,
+          "height": null,
+          "foot": null
+        },
+        "source_position": "Goalkeeper"
+      },
+      {
+        "source_id": 9496416,
+        "before": {
+          "name": "Aykut",
+          "role": 17,
+          "pos": "Centre Forward",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Serkan Aykut",
+          "role": 17,
+          "pos": "Centre Forward",
+          "birth": "1975-02-24T00:00:00",
+          "country": 84,
+          "height": 174,
+          "foot": 3
+        },
+        "source_position": "Centre-Forward"
+      },
+      {
+        "source_id": 9497249,
+        "before": {
+          "name": "Dobre",
+          "role": 6,
+          "pos": "Defensive Midfielder",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Silvian Dobre",
+          "role": 17,
+          "pos": "Centre Forward",
+          "birth": "1967-12-04T00:00:00",
+          "country": 72,
+          "height": null,
+          "foot": null
+        },
+        "source_position": "Centre-Forward"
+      },
+      {
+        "source_id": 9497250,
+        "before": {
+          "name": "Yıldırım",
+          "role": 13,
+          "pos": "Left Midfielder",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Ahmet Yıldırım",
+          "role": 6,
+          "pos": "Defensive Midfielder",
+          "birth": "1974-02-25T00:00:00",
+          "country": 84,
+          "height": 186,
+          "foot": 2
+        },
+        "source_position": "Defensive Midfield"
+      },
+      {
+        "source_id": 9497251,
+        "before": {
+          "name": "Tüzün",
+          "role": 17,
+          "pos": "Centre Forward",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Recep Tüzün",
+          "role": 17,
+          "pos": "Defender (exact role unresolved)",
+          "birth": "1969-06-01T00:00:00",
+          "country": 84,
+          "height": null,
+          "foot": null
+        },
+        "source_position": "Defender"
+      },
+      {
+        "source_id": 9497252,
+        "before": {
+          "name": "Hanganu",
+          "role": 16,
+          "pos": "Left Winger",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Ovidiu Hanganu",
+          "role": 17,
+          "pos": "Centre Forward",
+          "birth": "1970-05-12T00:00:00",
+          "country": 72,
+          "height": null,
+          "foot": null
+        },
+        "source_position": "Centre-Forward"
+      },
+      {
+        "source_id": 9497253,
+        "before": {
+          "name": "Işık",
+          "role": 3,
+          "pos": "Centre Back",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Yaşar Işık",
+          "role": 3,
+          "pos": "Centre Back",
+          "birth": "1969-05-13T00:00:00",
+          "country": 84,
+          "height": null,
+          "foot": null
+        },
+        "source_position": "Centre-Back"
+      },
+      {
+        "source_id": 9497254,
+        "before": {
+          "name": "Akpınar",
+          "role": 2,
+          "pos": "Left Back",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Gökay Akpınar",
+          "role": 2,
+          "pos": "Midfielder (exact role unresolved)",
+          "birth": "1968-04-10T00:00:00",
+          "country": 84,
+          "height": null,
+          "foot": null
+        },
+        "source_position": "Midfielder"
+      },
+      {
+        "source_id": 9497255,
+        "before": {
+          "name": "Kahraman",
+          "role": 6,
+          "pos": "Defensive Midfielder",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Mevlüt Kahraman",
+          "role": 6,
+          "pos": "Midfielder (exact role unresolved)",
+          "birth": "1973-09-01T00:00:00",
+          "country": 84,
+          "height": null,
+          "foot": null
+        },
+        "source_position": "Midfielder"
+      },
+      {
+        "source_id": 9497256,
+        "before": {
+          "name": "Şahin",
+          "role": 13,
+          "pos": "Left Midfielder",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Serdar Şahin",
+          "role": 17,
+          "pos": "Centre Forward",
+          "birth": "1974-02-10T00:00:00",
+          "country": 84,
+          "height": null,
+          "foot": null
+        },
+        "source_position": "Centre-Forward"
+      },
+      {
+        "source_id": 9497257,
+        "before": {
+          "name": "Demirci",
+          "role": 17,
+          "pos": "Centre Forward",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "İsmail Demirci",
+          "role": 17,
+          "pos": "Centre Forward",
+          "birth": "1968-11-27T00:00:00",
+          "country": 84,
+          "height": null,
+          "foot": null
+        },
+        "source_position": "Centre-Forward"
+      }
+    ],
+    "curated_total_v032": 162,
+    "role_corrections_total_v032": 96,
+    "third_batch": "Trabzonspor 1993-94 detailed squad",
+    "trabzonspor_curated": 25,
+    "trabzonspor_role_corrections": 11,
+    "trabzonspor_source": "https://www.transfermarkt.com.tr/trabzonspor/kader/verein/449/saison_id/1993/plus/1",
+    "trabzonspor_changes": [
+      {
+        "source_id": 9496375,
+        "before": {
+          "name": "Silin",
+          "role": 0,
+          "pos": "Goalkeeper",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Ramazan Silin",
+          "role": 0,
+          "pos": "Goalkeeper",
+          "birth": "1965-05-01T00:00:00",
+          "country": 84,
+          "height": null,
+          "foot": null
+        },
+        "source_position": "Goalkeeper"
+      },
+      {
+        "source_id": 9495335,
+        "before": {
+          "name": "Abdullah Ercan",
+          "role": 13,
+          "pos": "Left Midfielder",
+          "birth": "1971-12-08T00:00:00",
+          "country": 84
+        },
+        "after": {
+          "name": "Abdullah Ercan",
+          "role": 13,
+          "pos": "Left Midfielder",
+          "birth": "1971-12-08T00:00:00",
+          "country": 84,
+          "height": 182,
+          "foot": 2
+        },
+        "source_position": "Left Midfield"
+      },
+      {
+        "source_id": 9496376,
+        "before": {
+          "name": "Aslan",
+          "role": 3,
+          "pos": "Centre Back",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Hamdi Aslan",
+          "role": 5,
+          "pos": "Libero",
+          "birth": "1967-09-06T00:00:00",
+          "country": 84,
+          "height": null,
+          "foot": null
+        },
+        "source_position": "Sweeper"
+      },
+      {
+        "source_id": 9496377,
+        "before": {
+          "name": "Serdar",
+          "role": 3,
+          "pos": "Centre Back",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Kemal Serdar",
+          "role": 3,
+          "pos": "Centre Back",
+          "birth": "1962-05-08T00:00:00",
+          "country": 84,
+          "height": 178,
+          "foot": null
+        },
+        "source_position": "Centre-Back"
+      },
+      {
+        "source_id": 9495321,
+        "before": {
+          "name": "Ogün Temizkanoğlu",
+          "role": 3,
+          "pos": "Centre Back",
+          "birth": "1969-10-06T00:00:00",
+          "country": 84
+        },
+        "after": {
+          "name": "Ogün Temizkanoğlu",
+          "role": 3,
+          "pos": "Centre Back",
+          "birth": "1969-10-06T00:00:00",
+          "country": 84,
+          "height": null,
+          "foot": 1
+        },
+        "source_position": "Centre-Back"
+      },
+      {
+        "source_id": 9496378,
+        "before": {
+          "name": "Çıkırıkçı",
+          "role": 9,
+          "pos": "Right Midfielder",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Orhan Çıkırıkçı",
+          "role": 13,
+          "pos": "Left Midfielder",
+          "birth": "1967-04-15T00:00:00",
+          "country": 84,
+          "height": 180,
+          "foot": 2
+        },
+        "source_position": "Left Midfield"
+      },
+      {
+        "source_id": 9495333,
+        "before": {
+          "name": "Ünal Karaman",
+          "role": 7,
+          "pos": "Centre Midfielder",
+          "birth": "1966-06-29T00:00:00",
+          "country": 84
+        },
+        "after": {
+          "name": "Ünal Karaman",
+          "role": 8,
+          "pos": "Attacking Midfielder",
+          "birth": "1966-06-29T00:00:00",
+          "country": 84,
+          "height": null,
+          "foot": 1
+        },
+        "source_position": "Attacking Midfield"
+      },
+      {
+        "source_id": 9495344,
+        "before": {
+          "name": "Tolunay Kafkas",
+          "role": 6,
+          "pos": "Defensive Midfielder",
+          "birth": "1968-03-31T00:00:00",
+          "country": 84
+        },
+        "after": {
+          "name": "Tolunay Kafkas",
+          "role": 6,
+          "pos": "Defensive Midfielder",
+          "birth": "1968-03-31T00:00:00",
+          "country": 84,
+          "height": 188,
+          "foot": 1
+        },
+        "source_position": "Defensive Midfield"
+      },
+      {
+        "source_id": 9495349,
+        "before": {
+          "name": "Hami Mandıralı",
+          "role": 17,
+          "pos": "Centre Forward",
+          "birth": "1968-07-20T00:00:00",
+          "country": 84
+        },
+        "after": {
+          "name": "Hami Mandıralı",
+          "role": 17,
+          "pos": "Centre Forward",
+          "birth": "1968-07-20T00:00:00",
+          "country": 84,
+          "height": 178,
+          "foot": 1
+        },
+        "source_position": "Centre-Forward"
+      },
+      {
+        "source_id": 9496380,
+        "before": {
+          "name": "Shota Arveladze",
+          "role": 17,
+          "pos": "Centre Forward",
+          "birth": "1973-02-22T00:00:00",
+          "country": 104
+        },
+        "after": {
+          "name": "Shota Arveladze",
+          "role": 17,
+          "pos": "Centre Forward",
+          "birth": "1973-02-22T00:00:00",
+          "country": 104,
+          "height": 181,
+          "foot": 3
+        },
+        "source_position": "Centre-Forward"
+      },
+      {
+        "source_id": 9495328,
+        "before": {
+          "name": "Cengiz Atila",
+          "role": 3,
+          "pos": "Centre Back",
+          "birth": "1966-07-27T00:00:00",
+          "country": 84
+        },
+        "after": {
+          "name": "Cengiz Atila",
+          "role": 3,
+          "pos": "Centre Back",
+          "birth": "1966-07-27T00:00:00",
+          "country": 84,
+          "height": 192,
+          "foot": 1
+        },
+        "source_position": "Centre-Back"
+      },
+      {
+        "source_id": 9496381,
+        "before": {
+          "name": "Grischko",
+          "role": 0,
+          "pos": "Goalkeeper",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Viktor Gryshko",
+          "role": 0,
+          "pos": "Goalkeeper",
+          "birth": "1961-11-02T00:00:00",
+          "country": 85,
+          "height": null,
+          "foot": null
+        },
+        "source_position": "Goalkeeper"
+      },
+      {
+        "source_id": 9496382,
+        "before": {
+          "name": "Soner",
+          "role": 2,
+          "pos": "Left Back",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Soner Boz",
+          "role": 9,
+          "pos": "Right Midfielder",
+          "birth": "1968-01-12T00:00:00",
+          "country": 84,
+          "height": null,
+          "foot": null
+        },
+        "source_position": "Right Midfield"
+      },
+      {
+        "source_id": 9496383,
+        "before": {
+          "name": "Çelik",
+          "role": 6,
+          "pos": "Defensive Midfielder",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Lemi Çelik",
+          "role": 6,
+          "pos": "Defensive Midfielder",
+          "birth": "1966-03-09T00:00:00",
+          "country": 84,
+          "height": null,
+          "foot": null
+        },
+        "source_position": "Defensive Midfield"
+      },
+      {
+        "source_id": 9496384,
+        "before": {
+          "name": "Kaynak",
+          "role": 13,
+          "pos": "Left Midfielder",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Orhan Kaynak",
+          "role": 17,
+          "pos": "Centre Forward",
+          "birth": "1970-03-01T00:00:00",
+          "country": 84,
+          "height": 180,
+          "foot": 1
+        },
+        "source_position": "Centre-Forward"
+      },
+      {
+        "source_id": 9496385,
+        "before": {
+          "name": "Archil Arveladze",
+          "role": 17,
+          "pos": "Centre Forward",
+          "birth": "1973-02-22T00:00:00",
+          "country": 104
+        },
+        "after": {
+          "name": "Archil Arveladze",
+          "role": 17,
+          "pos": "Centre Forward",
+          "birth": "1973-02-22T00:00:00",
+          "country": 104,
+          "height": 178,
+          "foot": null
+        },
+        "source_position": "Centre-Forward"
+      },
+      {
+        "source_id": 9496386,
+        "before": {
+          "name": "Tümkaya",
+          "role": 0,
+          "pos": "Goalkeeper",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Nihat Tümkaya",
+          "role": 0,
+          "pos": "Goalkeeper",
+          "birth": "1971-03-24T00:00:00",
+          "country": 84,
+          "height": 190,
+          "foot": 1
+        },
+        "source_position": "Goalkeeper"
+      },
+      {
+        "source_id": 9496387,
+        "before": {
+          "name": "Özköylü",
+          "role": 3,
+          "pos": "Centre Back",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Osman Özköylü",
+          "role": 3,
+          "pos": "Centre Back",
+          "birth": "1971-08-26T00:00:00",
+          "country": 84,
+          "height": 188,
+          "foot": 1
+        },
+        "source_position": "Centre-Back"
+      },
+      {
+        "source_id": 9497237,
+        "before": {
+          "name": "Shelepnytskyi",
+          "role": 2,
+          "pos": "Left Back",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Yuriy Shelepnytskyi",
+          "role": 6,
+          "pos": "Defensive Midfielder",
+          "birth": "1965-01-18T00:00:00",
+          "country": 85,
+          "height": 184,
+          "foot": null
+        },
+        "source_position": "Defensive Midfield"
+      },
+      {
+        "source_id": 9497238,
+        "before": {
+          "name": "Alarçin",
+          "role": 6,
+          "pos": "Defensive Midfielder",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Mehmet Alarçin",
+          "role": 3,
+          "pos": "Centre Back",
+          "birth": "1972-12-01T00:00:00",
+          "country": 84,
+          "height": null,
+          "foot": null
+        },
+        "source_position": "Centre-Back"
+      },
+      {
+        "source_id": 9497239,
+        "before": {
+          "name": "Traş",
+          "role": 13,
+          "pos": "Left Midfielder",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Ender Traş",
+          "role": 8,
+          "pos": "Attacking Midfielder",
+          "birth": "1972-08-30T00:00:00",
+          "country": 84,
+          "height": null,
+          "foot": null
+        },
+        "source_position": "Attacking Midfield"
+      },
+      {
+        "source_id": 9497240,
+        "before": {
+          "name": "Akyüz",
+          "role": 17,
+          "pos": "Centre Forward",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Saffet Akyüz",
+          "role": 17,
+          "pos": "Centre Forward",
+          "birth": "1970-03-11T00:00:00",
+          "country": 84,
+          "height": 182,
+          "foot": 1
+        },
+        "source_position": "Centre-Forward"
+      },
+      {
+        "source_id": 9497241,
+        "before": {
+          "name": "Durak",
+          "role": 16,
+          "pos": "Left Winger",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Ülken Durak",
+          "role": 2,
+          "pos": "Left Back",
+          "birth": "1966-06-17T00:00:00",
+          "country": 84,
+          "height": null,
+          "foot": 2
+        },
+        "source_position": "Left-Back"
+      },
+      {
+        "source_id": 9497242,
+        "before": {
+          "name": "Gusev",
+          "role": 3,
+          "pos": "Centre Back",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Sergiy Gusev",
+          "role": 17,
+          "pos": "Centre Forward",
+          "birth": "1967-07-01T00:00:00",
+          "country": 85,
+          "height": 180,
+          "foot": 2
+        },
+        "source_position": "Centre-Forward"
+      },
+      {
+        "source_id": 9497243,
+        "before": {
+          "name": "Usta",
+          "role": 2,
+          "pos": "Left Back",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Süleyman Usta",
+          "role": 3,
+          "pos": "Centre Back",
+          "birth": "1973-08-03T00:00:00",
+          "country": 84,
+          "height": null,
+          "foot": null
+        },
+        "source_position": "Centre-Back"
+      }
+    ],
+    "fourth_batch": "Bursaspor 1993-94 season squad",
+    "bursaspor_curated": 30,
+    "bursaspor_role_corrections": 19,
+    "bursaspor_review_required": 4,
+    "bursaspor_source": "https://www.transfermarkt.com.tr/bursaspor/startseite/verein/20/saison_id/1993",
+    "bursaspor_lineup_crosscheck_source": "https://www.transfermarkt.com.tr/bursaspor_genclerbirligi-sk/aufstellung/spielbericht/952297",
+    "bursaspor_changes": [
+      {
+        "source_id": 9496471,
+        "before": {
+          "name": "Ganchev",
+          "role": 0,
+          "pos": "Goalkeeper",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Ivko Ganchev",
+          "role": 0,
+          "pos": "Goalkeeper",
+          "birth": "1965-07-21T00:00:00",
+          "country": 21
+        },
+        "source_position": "Goalkeeper",
+        "secondary_positions": []
+      },
+      {
+        "source_id": 9496487,
+        "before": {
+          "name": "Kılıç",
+          "role": 6,
+          "pos": "Defensive Midfielder",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Abdullah Kılıç",
+          "role": 0,
+          "pos": "Goalkeeper",
+          "birth": "1972-08-08T00:00:00",
+          "country": 84
+        },
+        "source_position": "Goalkeeper",
+        "secondary_positions": []
+      },
+      {
+        "source_id": 9496482,
+        "before": {
+          "name": "Nevzat",
+          "role": 0,
+          "pos": "Goalkeeper",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Nevzat Dinçbudak",
+          "role": 0,
+          "pos": "Goalkeeper",
+          "birth": "1965-10-26T00:00:00",
+          "country": 84
+        },
+        "source_position": "Goalkeeper",
+        "secondary_positions": []
+      },
+      {
+        "source_id": 9496473,
+        "before": {
+          "name": "Okuroğlu",
+          "role": 3,
+          "pos": "Centre Back",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Feti Okuroğlu",
+          "role": 5,
+          "pos": "Libero",
+          "birth": "1971-08-05T00:00:00",
+          "country": 84
+        },
+        "source_position": "Sweeper",
+        "secondary_positions": [
+          "Defensive Midfielder"
+        ]
+      },
+      {
+        "source_id": 9497290,
+        "before": {
+          "name": "Çayla",
+          "role": 6,
+          "pos": "Defensive Midfielder",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Fatih Çayla",
+          "role": 6,
+          "pos": "Defender (exact role unresolved)",
+          "birth": "1975-09-13T00:00:00",
+          "country": 84
+        },
+        "source_position": "Defender",
+        "secondary_positions": []
+      },
+      {
+        "source_id": 9495326,
+        "before": {
+          "name": "Sedat Balkanlı",
+          "role": 3,
+          "pos": "Centre Back",
+          "birth": "1965-01-15T00:00:00",
+          "country": 84
+        },
+        "after": {
+          "name": "Sedat Balkanlı",
+          "role": 3,
+          "pos": "Centre Back",
+          "birth": "1965-01-15T00:00:00",
+          "country": 84
+        },
+        "source_position": "Centre-Back",
+        "secondary_positions": []
+      },
+      {
+        "source_id": 9497281,
+        "before": {
+          "name": "Ünal",
+          "role": 16,
+          "pos": "Left Winger",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Mesut Ünal",
+          "role": 3,
+          "pos": "Centre Back",
+          "birth": "1973-04-03T00:00:00",
+          "country": 84
+        },
+        "source_position": "Centre-Back",
+        "secondary_positions": []
+      },
+      {
+        "source_id": 9496485,
+        "before": {
+          "name": "Gündüz",
+          "role": 3,
+          "pos": "Centre Back",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Yalçın Gündüz",
+          "role": 3,
+          "pos": "Centre Back",
+          "birth": "1966-02-04T00:00:00",
+          "country": 84
+        },
+        "source_position": "Centre-Back",
+        "secondary_positions": []
+      },
+      {
+        "source_id": 9496472,
+        "before": {
+          "name": "Şen",
+          "role": 1,
+          "pos": "Right Back",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Turhan Şen",
+          "role": 3,
+          "pos": "Centre Back",
+          "birth": "1966-03-09T00:00:00",
+          "country": 84
+        },
+        "source_position": "Centre-Back",
+        "secondary_positions": [
+          "Defensive Midfielder"
+        ]
+      },
+      {
+        "source_id": 9496474,
+        "before": {
+          "name": "Örnek",
+          "role": 3,
+          "pos": "Centre Back",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Adnan Örnek",
+          "role": 3,
+          "pos": "Centre Back",
+          "birth": "1965-10-17T00:00:00",
+          "country": 84
+        },
+        "source_position": "Centre-Back",
+        "secondary_positions": [
+          "Left-Back"
+        ]
+      },
+      {
+        "source_id": 9497288,
+        "before": {
+          "name": "Bastık",
+          "role": 3,
+          "pos": "Centre Back",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Cihan Bastık",
+          "role": 3,
+          "pos": "Centre Back",
+          "birth": "1974-10-11T00:00:00",
+          "country": 84
+        },
+        "source_position": "Centre-Back",
+        "secondary_positions": []
+      },
+      {
+        "source_id": 9497280,
+        "before": {
+          "name": "Yıldırım",
+          "role": 17,
+          "pos": "Centre Forward",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Şaban Yıldırım",
+          "role": 2,
+          "pos": "Left Back",
+          "birth": "1970-01-25T00:00:00",
+          "country": 84
+        },
+        "source_position": "Left-Back",
+        "secondary_positions": []
+      },
+      {
+        "source_id": 9496476,
+        "before": {
+          "name": "Şengül",
+          "role": 9,
+          "pos": "Right Midfielder",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Ümit Şengül",
+          "role": 2,
+          "pos": "Left Back",
+          "birth": "1968-09-06T00:00:00",
+          "country": 84
+        },
+        "source_position": "Left-Back",
+        "secondary_positions": []
+      },
+      {
+        "source_id": 9496486,
+        "before": {
+          "name": "Evke",
+          "role": 2,
+          "pos": "Left Back",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Ahmet Suphi Evke",
+          "role": 1,
+          "pos": "Right Back",
+          "birth": "1965-02-06T00:00:00",
+          "country": 84
+        },
+        "source_position": "Right-Back",
+        "secondary_positions": [
+          "Right Midfielder"
+        ]
+      },
+      {
+        "source_id": 9496483,
+        "before": {
+          "name": "Uzgur",
+          "role": 17,
+          "pos": "Centre Forward",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Ersel Uzğur",
+          "role": 1,
+          "pos": "Right Back",
+          "birth": "1967-01-01T00:00:00",
+          "country": 84
+        },
+        "source_position": "Right-Back",
+        "secondary_positions": []
+      },
+      {
+        "source_id": 9496488,
+        "before": {
+          "name": "Sofuoğlu",
+          "role": 13,
+          "pos": "Left Midfielder",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Turhan Sofuoğlu",
+          "role": 6,
+          "pos": "Defensive Midfielder",
+          "birth": "1965-08-19T00:00:00",
+          "country": 84
+        },
+        "source_position": "Defensive Midfield",
+        "secondary_positions": []
+      },
+      {
+        "source_id": 9497289,
+        "before": {
+          "name": "Özdemir",
+          "role": 2,
+          "pos": "Left Back",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "İlker Özdemir",
+          "role": 2,
+          "pos": "Midfielder (exact role unresolved)",
+          "birth": "1975-02-16T00:00:00",
+          "country": 84
+        },
+        "source_position": "Midfielder",
+        "secondary_positions": []
+      },
+      {
+        "source_id": 9497282,
+        "before": {
+          "name": "Arslan",
+          "role": 3,
+          "pos": "Centre Back",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Serkan Arslan",
+          "role": 3,
+          "pos": "Midfielder (exact role unresolved)",
+          "birth": "1974-08-02T00:00:00",
+          "country": 84
+        },
+        "source_position": "Midfielder",
+        "secondary_positions": []
+      },
+      {
+        "source_id": 9497284,
+        "before": {
+          "name": "Baştan",
+          "role": 6,
+          "pos": "Defensive Midfielder",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Zafer Baştan",
+          "role": 7,
+          "pos": "Centre Midfielder",
+          "birth": "1975-11-03T00:00:00",
+          "country": 84
+        },
+        "source_position": "Central Midfield",
+        "secondary_positions": []
+      },
+      {
+        "source_id": 9497286,
+        "before": {
+          "name": "Şentürk",
+          "role": 17,
+          "pos": "Centre Forward",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Engin Şentürk",
+          "role": 13,
+          "pos": "Left Midfielder",
+          "birth": "1973-12-24T00:00:00",
+          "country": 84
+        },
+        "source_position": "Left Midfield",
+        "secondary_positions": []
+      },
+      {
+        "source_id": 9496477,
+        "before": {
+          "name": "Tunahan",
+          "role": 7,
+          "pos": "Centre Midfielder",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Tunahan Akdoğan",
+          "role": 13,
+          "pos": "Left Midfielder",
+          "birth": "1967-10-19T00:00:00",
+          "country": 84
+        },
+        "source_position": "Left Midfield",
+        "secondary_positions": []
+      },
+      {
+        "source_id": 9496481,
+        "before": {
+          "name": "Durmuş",
+          "role": 17,
+          "pos": "Centre Forward",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Ali Nail Durmuş",
+          "role": 8,
+          "pos": "Attacking Midfielder",
+          "birth": "1970-11-20T00:00:00",
+          "country": 84
+        },
+        "source_position": "Attacking Midfield",
+        "secondary_positions": []
+      },
+      {
+        "source_id": 9497283,
+        "before": {
+          "name": "Yılmaz",
+          "role": 2,
+          "pos": "Left Back",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Ali Rıza Yılmaz",
+          "role": 8,
+          "pos": "Attacking Midfielder",
+          "birth": "1968-01-02T00:00:00",
+          "country": 84
+        },
+        "source_position": "Attacking Midfield",
+        "secondary_positions": []
+      },
+      {
+        "source_id": 9496478,
+        "before": {
+          "name": "Velioğlu",
+          "role": 7,
+          "pos": "Centre Midfielder",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Volkan Velioğlu",
+          "role": 8,
+          "pos": "Attacking Midfielder",
+          "birth": "1972-05-31T00:00:00",
+          "country": 84
+        },
+        "source_position": "Attacking Midfield",
+        "secondary_positions": []
+      },
+      {
+        "source_id": 9496479,
+        "before": {
+          "name": "Pingel",
+          "role": 13,
+          "pos": "Left Midfielder",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Frank Pingel",
+          "role": 17,
+          "pos": "Centre Forward",
+          "birth": "1964-05-09T00:00:00",
+          "country": 33
+        },
+        "source_position": "Centre-Forward",
+        "secondary_positions": []
+      },
+      {
+        "source_id": 9496480,
+        "before": {
+          "name": "Sørloth",
+          "role": 17,
+          "pos": "Centre Forward",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Gøran Sørloth",
+          "role": 17,
+          "pos": "Centre Forward",
+          "birth": "1962-07-16T00:00:00",
+          "country": 60
+        },
+        "source_position": "Centre-Forward",
+        "secondary_positions": []
+      },
+      {
+        "source_id": 9496475,
+        "before": {
+          "name": "Vatansever",
+          "role": 2,
+          "pos": "Left Back",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Vedat Vatansever",
+          "role": 17,
+          "pos": "Centre Forward",
+          "birth": "1969-09-20T00:00:00",
+          "country": 84
+        },
+        "source_position": "Centre-Forward",
+        "secondary_positions": []
+      },
+      {
+        "source_id": 9497287,
+        "before": {
+          "name": "Dilaver",
+          "role": 16,
+          "pos": "Left Winger",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Muhammet Dilaver",
+          "role": 17,
+          "pos": "Centre Forward",
+          "birth": "1965-12-31T00:00:00",
+          "country": 84
+        },
+        "source_position": "Centre-Forward",
+        "secondary_positions": []
+      },
+      {
+        "source_id": 9497285,
+        "before": {
+          "name": "Bayhan",
+          "role": 13,
+          "pos": "Left Midfielder",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Egemen Bayhan",
+          "role": 17,
+          "pos": "Centre Forward",
+          "birth": "1977-12-17T00:00:00",
+          "country": 84
+        },
+        "source_position": "Centre-Forward",
+        "secondary_positions": []
+      },
+      {
+        "source_id": 9497291,
+        "before": {
+          "name": "Gürbüz",
+          "role": 13,
+          "pos": "Left Midfielder",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Ramazan Gürbüz",
+          "role": 13,
+          "pos": "Forward (exact role unresolved)",
+          "birth": "1977-05-05T00:00:00",
+          "country": 84
+        },
+        "source_position": "Forward",
+        "secondary_positions": []
+      }
+    ],
+    "bursaspor_source_visible_not_in_active_staging": [
+      "Vedat Emmez"
+    ],
+    "bursaspor_source_visible_player_added": {
+      "source_id": 9498000,
+      "display_name": "Vedat Emmez",
+      "overall": 66,
+      "position": "Goalkeeper",
+      "source": "https://www.transfermarkt.com.tr/bursaspor/startseite/verein/20/saison_id/1993",
+      "identity_source": "https://www.bdfutbol.com/j/j700700.html?p=stats"
+    },
+    "fifth_batch": "Gençlerbirliği 1993-94 season squad",
+    "genclerbirligi_existing_curated": 25,
+    "genclerbirligi_players_added": [
+      {
+        "source_id": 9498001,
+        "display_name": "Serkan Gültang"
+      },
+      {
+        "source_id": 9498002,
+        "display_name": "Sunay Kahraman"
+      }
+    ],
+    "genclerbirligi_role_corrections": 20,
+    "genclerbirligi_broad_functional_role_normalizations": 5,
+    "genclerbirligi_review_required": 6,
+    "genclerbirligi_source": "https://www.transfermarkt.com/genclerbirligi-ankara/startseite/verein/820/saison_id/1993",
+    "genclerbirligi_changes": [
+      {
+        "source_id": 9496435,
+        "before": {
+          "name": "Gültang",
+          "role": 0,
+          "broad": "POR",
+          "pos": "Goalkeeper",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Hasan Okan Gültang",
+          "role": 0,
+          "broad": "POR",
+          "pos": "Goalkeeper",
+          "birth": "1972-10-29T00:00:00",
+          "country": 84
+        },
+        "source_position": "Goalkeeper"
+      },
+      {
+        "source_id": 9497270,
+        "before": {
+          "name": "Güler",
+          "role": 6,
+          "broad": "MED",
+          "pos": "Defensive Midfielder",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Mehmet Güler",
+          "role": 0,
+          "broad": "POR",
+          "pos": "Goalkeeper",
+          "birth": "1972-10-09T00:00:00",
+          "country": 84
+        },
+        "source_position": "Goalkeeper"
+      },
+      {
+        "source_id": 9496446,
+        "before": {
+          "name": "Šimunić",
+          "role": 0,
+          "broad": "POR",
+          "pos": "Goalkeeper",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Ivo Šimunić",
+          "role": 0,
+          "broad": "POR",
+          "pos": "Goalkeeper",
+          "birth": "1970-11-13T00:00:00",
+          "country": 20
+        },
+        "source_position": "Goalkeeper"
+      },
+      {
+        "source_id": 9496451,
+        "before": {
+          "name": "İsmailoğlu",
+          "role": 2,
+          "broad": "DEF",
+          "pos": "Left Back",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Rüstem İsmailoğlu",
+          "role": 0,
+          "broad": "POR",
+          "pos": "Goalkeeper",
+          "birth": "1964-05-10T00:00:00",
+          "country": 84
+        },
+        "source_position": "Goalkeeper"
+      },
+      {
+        "source_id": 9496438,
+        "before": {
+          "name": "Zafer",
+          "role": 3,
+          "broad": "DEF",
+          "pos": "Centre Back",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Rahim Zafer",
+          "role": 5,
+          "broad": "DEF",
+          "pos": "Libero",
+          "birth": "1971-01-25T00:00:00",
+          "country": 84
+        },
+        "source_position": "Sweeper"
+      },
+      {
+        "source_id": 9496439,
+        "before": {
+          "name": "Taşkın",
+          "role": 2,
+          "broad": "DEF",
+          "pos": "Left Back",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Taner Taşkın",
+          "role": 3,
+          "broad": "DEF",
+          "pos": "Centre Back",
+          "birth": "1972-10-27T00:00:00",
+          "country": 84
+        },
+        "source_position": "Centre-Back"
+      },
+      {
+        "source_id": 9497265,
+        "before": {
+          "name": "Damla",
+          "role": 13,
+          "broad": "MED",
+          "pos": "Left Midfielder",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Serkan Damla",
+          "role": 2,
+          "broad": "DEF",
+          "pos": "Left Back",
+          "birth": "1973-10-25T00:00:00",
+          "country": 84
+        },
+        "source_position": "Left-Back"
+      },
+      {
+        "source_id": 9496437,
+        "before": {
+          "name": "Penbe",
+          "role": 3,
+          "broad": "DEF",
+          "pos": "Centre Back",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Ergün Penbe",
+          "role": 2,
+          "broad": "DEF",
+          "pos": "Left Back",
+          "birth": "1972-05-17T00:00:00",
+          "country": 84
+        },
+        "source_position": "Left-Back"
+      },
+      {
+        "source_id": 9496443,
+        "before": {
+          "name": "Coşkun",
+          "role": 13,
+          "broad": "MED",
+          "pos": "Left Midfielder",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Osman Coşkun",
+          "role": 2,
+          "broad": "DEF",
+          "pos": "Left Back",
+          "birth": "1972-01-11T00:00:00",
+          "country": 84
+        },
+        "source_position": "Left-Back"
+      },
+      {
+        "source_id": 9496436,
+        "before": {
+          "name": "Sözeri",
+          "role": 1,
+          "broad": "DEF",
+          "pos": "Right Back",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Erkan Sözeri",
+          "role": 1,
+          "broad": "DEF",
+          "pos": "Right Back",
+          "birth": "1966-05-19T00:00:00",
+          "country": 84
+        },
+        "source_position": "Right-Back"
+      },
+      {
+        "source_id": 9496448,
+        "before": {
+          "name": "Çağdaş",
+          "role": 17,
+          "broad": "DEL",
+          "pos": "Centre Forward",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Erkut Çağdaş",
+          "role": 7,
+          "broad": "MED",
+          "pos": "Midfielder (exact role unresolved)",
+          "birth": "1967-05-15T00:00:00",
+          "country": 84
+        },
+        "source_position": "Midfielder"
+      },
+      {
+        "source_id": 9496447,
+        "before": {
+          "name": "Ace Khuse",
+          "role": 13,
+          "broad": "MED",
+          "pos": "Left Midfielder",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Ace Khuse",
+          "role": 7,
+          "broad": "MED",
+          "pos": "Midfielder (exact role unresolved)",
+          "birth": "1968-09-08T00:00:00",
+          "country": 78
+        },
+        "source_position": "Midfielder"
+      },
+      {
+        "source_id": 9496449,
+        "before": {
+          "name": "Işık",
+          "role": 16,
+          "broad": "DEL",
+          "pos": "Left Winger",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Ali Işık",
+          "role": 7,
+          "broad": "MED",
+          "pos": "Midfielder (exact role unresolved)",
+          "birth": "1970-12-30T00:00:00",
+          "country": 84
+        },
+        "source_position": "Midfielder"
+      },
+      {
+        "source_id": 9496452,
+        "before": {
+          "name": "Kara",
+          "role": 6,
+          "broad": "MED",
+          "pos": "Defensive Midfielder",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Yunus Kara",
+          "role": 7,
+          "broad": "MED",
+          "pos": "Midfielder (exact role unresolved)",
+          "birth": "1972-05-10T00:00:00",
+          "country": 84
+        },
+        "source_position": "Midfielder"
+      },
+      {
+        "source_id": 9497266,
+        "before": {
+          "name": "Şenvardar",
+          "role": 17,
+          "broad": "DEL",
+          "pos": "Centre Forward",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Murat Şenvardar",
+          "role": 7,
+          "broad": "MED",
+          "pos": "Midfielder (exact role unresolved)",
+          "birth": "1971-10-11T00:00:00",
+          "country": 84
+        },
+        "source_position": "Midfielder"
+      },
+      {
+        "source_id": 9497271,
+        "before": {
+          "name": "Baştürk",
+          "role": 13,
+          "broad": "MED",
+          "pos": "Left Midfielder",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Nihat Baştürk",
+          "role": 7,
+          "broad": "MED",
+          "pos": "Centre Midfielder",
+          "birth": "1973-10-22T00:00:00",
+          "country": 84
+        },
+        "source_position": "Central Midfield"
+      },
+      {
+        "source_id": 9496440,
+        "before": {
+          "name": "Diyadin",
+          "role": 9,
+          "broad": "MED",
+          "pos": "Right Midfielder",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Metin Diyadin",
+          "role": 13,
+          "broad": "MED",
+          "pos": "Left Midfielder",
+          "birth": "1968-02-16T00:00:00",
+          "country": 84
+        },
+        "source_position": "Left Midfield"
+      },
+      {
+        "source_id": 9496445,
+        "before": {
+          "name": "Şimşek",
+          "role": 17,
+          "broad": "DEL",
+          "pos": "Centre Forward",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Mehmet Şimşek",
+          "role": 13,
+          "broad": "MED",
+          "pos": "Left Midfielder",
+          "birth": "1969-07-01T00:00:00",
+          "country": 84
+        },
+        "source_position": "Left Midfield"
+      },
+      {
+        "source_id": 9496441,
+        "before": {
+          "name": "Moshoeu",
+          "role": 7,
+          "broad": "MED",
+          "pos": "Centre Midfielder",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "John Moshoeu",
+          "role": 8,
+          "broad": "MED",
+          "pos": "Attacking Midfielder",
+          "birth": "1965-12-18T00:00:00",
+          "country": 78
+        },
+        "source_position": "Attacking Midfield"
+      },
+      {
+        "source_id": 9497269,
+        "before": {
+          "name": "Altıparmak",
+          "role": 2,
+          "broad": "DEF",
+          "pos": "Left Back",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Mehmet Altıparmak",
+          "role": 8,
+          "broad": "MED",
+          "pos": "Attacking Midfielder",
+          "birth": "1969-05-01T00:00:00",
+          "country": 84
+        },
+        "source_position": "Attacking Midfield"
+      },
+      {
+        "source_id": 9497267,
+        "before": {
+          "name": "Atik",
+          "role": 16,
+          "broad": "DEL",
+          "pos": "Left Winger",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Aykan Atik",
+          "role": 16,
+          "broad": "DEL",
+          "pos": "Left Winger",
+          "birth": "1971-12-28T00:00:00",
+          "country": 84
+        },
+        "source_position": "Left Winger"
+      },
+      {
+        "source_id": 9496442,
+        "before": {
+          "name": "Özdemir",
+          "role": 7,
+          "broad": "MED",
+          "pos": "Centre Midfielder",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Engin Özdemir",
+          "role": 12,
+          "broad": "DEL",
+          "pos": "Right Winger",
+          "birth": "1968-10-01T00:00:00",
+          "country": 4
+        },
+        "source_position": "Right Winger"
+      },
+      {
+        "source_id": 9497268,
+        "before": {
+          "name": "Özyılmaz",
+          "role": 3,
+          "broad": "DEF",
+          "pos": "Centre Back",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Tarkan Özyılmaz",
+          "role": 17,
+          "broad": "DEL",
+          "pos": "Centre Forward",
+          "birth": "1975-04-03T00:00:00",
+          "country": 84
+        },
+        "source_position": "Centre-Forward"
+      },
+      {
+        "source_id": 9496444,
+        "before": {
+          "name": "N'Gole",
+          "role": 17,
+          "broad": "DEL",
+          "pos": "Centre Forward",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Andre Kona N'Gole",
+          "role": 17,
+          "broad": "DEL",
+          "pos": "Centre Forward",
+          "birth": "1970-06-16T00:00:00",
+          "country": 88
+        },
+        "source_position": "Centre-Forward"
+      },
+      {
+        "source_id": 9496450,
+        "before": {
+          "name": "Daşgün",
+          "role": 3,
+          "broad": "DEF",
+          "pos": "Centre Back",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Tarık Daşgün",
+          "role": 17,
+          "broad": "DEL",
+          "pos": "Centre Forward",
+          "birth": "1973-08-26T00:00:00",
+          "country": 84
+        },
+        "source_position": "Centre-Forward"
+      }
+    ],
+    "genclerbirligi_individual_profile_refinements": [
+      {
+        "source_id": 9496447,
+        "display_name": "Ace Khuse",
+        "profile_url": "https://www.bdfutbol.com/en/j/j702561.html",
+        "birth_place": "Johannesburg"
+      },
+      {
+        "source_id": 9496437,
+        "display_name": "Ergün Penbe",
+        "profile_url": "https://www.bdfutbol.com/en/j/j46413.html",
+        "birth_place": "Zonguldak"
+      },
+      {
+        "source_id": 9496438,
+        "display_name": "Rahim Zafer",
+        "profile_url": "https://www.bdfutbol.com/en/j/j57628.html",
+        "birth_place": "Sakarya"
+      },
+      {
+        "source_id": 9496441,
+        "display_name": "John Leshiba Moshoeu",
+        "profile_url": "https://www.bdfutbol.com/en/j/j55569.html",
+        "birth_place": "Soweto"
+      },
+      {
+        "source_id": 9496444,
+        "display_name": "Andre Kona N'Gole",
+        "profile_url": "https://www.bdfutbol.com/en/j/j702421.html",
+        "birth_place": "Lubumbashi"
+      }
+    ],
+    "genclerbirligi_source_conflicts": [
+      {
+        "source_id": 9496447,
+        "display_name": "Ace Khuse",
+        "field": "birth_date",
+        "chosen": "1963-09-08",
+        "conflicting_source_value": "1968-09-08",
+        "resolution": "BDFutbol + National-Football-Teams consensus over Transfermarkt aggregator"
+      }
+    ],
+    "sixth_batch": "Kocaelispor 1993-94 season squad",
+    "kocaelispor_existing_curated": 25,
+    "kocaelispor_players_added": [
+      {
+        "source_id": 9498003,
+        "display_name": "İsmail Ünal"
+      },
+      {
+        "source_id": 9498004,
+        "display_name": "Fevzi Açıkgöz"
+      }
+    ],
+    "kocaelispor_role_corrections": 19,
+    "kocaelispor_review_required": 2,
+    "kocaelispor_source": "https://www.transfermarkt.com.tr/kocaelispor/startseite/verein/120/saison_id/1993",
+    "kocaelispor_identity_crosschecks": {
+      "Ismail_Unal": "https://www.tff.org/Default.aspx?kisiId=21749&pageId=526",
+      "Fevzi_Acikgoz_TFF": "https://www.tff.org/Default.aspx?kisiId=23276&pageId=526",
+      "Fevzi_Acikgoz_Transfermarkt": "https://www.transfermarkt.com.tr/fevzi-acikgoz/profil/spieler/601055",
+      "Fevzi_Acikgoz_BDFutbol": "https://www.bdfutbol.com/en/j/j1175393.html"
+    },
+    "kocaelispor_changes": [
+      {
+        "source_id": 9496417,
+        "before": {
+          "name": "Omerović",
+          "role": 0,
+          "broad": "POR",
+          "pos": "Goalkeeper",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Fahrudin Omerović",
+          "role": 0,
+          "broad": "POR",
+          "pos": "Goalkeeper",
+          "birth": "1961-08-20T00:00:00",
+          "country": 20
+        },
+        "source_position": "Goalkeeper"
+      },
+      {
+        "source_id": 9496428,
+        "before": {
+          "name": "Boğuşlu",
+          "role": 12,
+          "broad": "DEL",
+          "pos": "Right Winger",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Alper Boğuşlu",
+          "role": 0,
+          "broad": "POR",
+          "pos": "Goalkeeper",
+          "birth": "1962-07-05T00:00:00",
+          "country": 84
+        },
+        "source_position": "Goalkeeper"
+      },
+      {
+        "source_id": 9496419,
+        "before": {
+          "name": "Kuzmanovski",
+          "role": 3,
+          "broad": "DEF",
+          "pos": "Centre Back",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Stevica Kuzmanovski",
+          "role": 5,
+          "broad": "DEF",
+          "pos": "Libero",
+          "birth": "1962-11-16T00:00:00",
+          "country": 54
+        },
+        "source_position": "Sweeper"
+      },
+      {
+        "source_id": 9496434,
+        "before": {
+          "name": "Yılmaz",
+          "role": 12,
+          "broad": "DEL",
+          "pos": "Right Winger",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Sefer Yılmaz",
+          "role": 3,
+          "broad": "DEF",
+          "pos": "Defender (exact role unresolved)",
+          "birth": "1969-01-22T00:00:00",
+          "country": 84
+        },
+        "source_position": "Defender"
+      },
+      {
+        "source_id": 9496418,
+        "before": {
+          "name": "Mirković",
+          "role": 1,
+          "broad": "DEF",
+          "pos": "Right Back",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Misko Mirkovic",
+          "role": 3,
+          "broad": "DEF",
+          "pos": "Centre Back",
+          "birth": "1966-08-07T00:00:00",
+          "country": 75
+        },
+        "source_position": "Centre-Back"
+      },
+      {
+        "source_id": 9496420,
+        "before": {
+          "name": "Çakır",
+          "role": 3,
+          "broad": "DEF",
+          "pos": "Centre Back",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Osman Çakır",
+          "role": 3,
+          "broad": "DEF",
+          "pos": "Centre Back",
+          "birth": "1967-06-16T00:00:00",
+          "country": 84
+        },
+        "source_position": "Centre-Back"
+      },
+      {
+        "source_id": 9497259,
+        "before": {
+          "name": "Doğansoy",
+          "role": 1,
+          "broad": "DEF",
+          "pos": "Right Back",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Murat Doğansoy",
+          "role": 3,
+          "broad": "DEF",
+          "pos": "Centre Back",
+          "birth": "1967-12-26T00:00:00",
+          "country": 84
+        },
+        "source_position": "Centre-Back"
+      },
+      {
+        "source_id": 9497264,
+        "before": {
+          "name": "Danacı",
+          "role": 3,
+          "broad": "DEF",
+          "pos": "Centre Back",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Olcay Danacı",
+          "role": 3,
+          "broad": "DEF",
+          "pos": "Centre Back",
+          "birth": "1966-09-12T00:00:00",
+          "country": 84
+        },
+        "source_position": "Centre-Back"
+      },
+      {
+        "source_id": 9496432,
+        "before": {
+          "name": "Kıldıran",
+          "role": 9,
+          "broad": "MED",
+          "pos": "Right Midfielder",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Yalçın Kıldıran",
+          "role": 2,
+          "broad": "DEF",
+          "pos": "Left Back",
+          "birth": "1969-04-30T00:00:00",
+          "country": 84
+        },
+        "source_position": "Left-Back"
+      },
+      {
+        "source_id": 9497262,
+        "before": {
+          "name": "Suna",
+          "role": 8,
+          "broad": "MED",
+          "pos": "Attacking Midfielder",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Şeyhmus Suna",
+          "role": 1,
+          "broad": "DEF",
+          "pos": "Right Back",
+          "birth": "1965-04-05T00:00:00",
+          "country": 84
+        },
+        "source_position": "Right-Back"
+      },
+      {
+        "source_id": 9496433,
+        "before": {
+          "name": "Arslan",
+          "role": 8,
+          "broad": "MED",
+          "pos": "Attacking Midfielder",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "İlhami Arslan",
+          "role": 1,
+          "broad": "DEF",
+          "pos": "Right Back",
+          "birth": "1975-01-01T00:00:00",
+          "country": 84
+        },
+        "source_position": "Right-Back"
+      },
+      {
+        "source_id": 9496421,
+        "before": {
+          "name": "Usta",
+          "role": 2,
+          "broad": "DEF",
+          "pos": "Left Back",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Erol Usta",
+          "role": 1,
+          "broad": "DEF",
+          "pos": "Right Back",
+          "birth": "1965-09-01T00:00:00",
+          "country": 84
+        },
+        "source_position": "Right-Back"
+      },
+      {
+        "source_id": 9497261,
+        "before": {
+          "name": "Şişman",
+          "role": 9,
+          "broad": "MED",
+          "pos": "Right Midfielder",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Hasan Şişman",
+          "role": 7,
+          "broad": "MED",
+          "pos": "Midfielder (exact role unresolved)",
+          "birth": "1974-01-02T00:00:00",
+          "country": 84
+        },
+        "source_position": "Midfielder"
+      },
+      {
+        "source_id": 9496431,
+        "before": {
+          "name": "Zeki",
+          "role": 7,
+          "broad": "MED",
+          "pos": "Centre Midfielder",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Zeki Önatlı",
+          "role": 7,
+          "broad": "MED",
+          "pos": "Centre Midfielder",
+          "birth": "1968-10-30T00:00:00",
+          "country": 84
+        },
+        "source_position": "Central Midfield"
+      },
+      {
+        "source_id": 9496423,
+        "before": {
+          "name": "Uzun",
+          "role": 7,
+          "broad": "MED",
+          "pos": "Centre Midfielder",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Turan Uzun",
+          "role": 7,
+          "broad": "MED",
+          "pos": "Centre Midfielder",
+          "birth": "1969-07-31T00:00:00",
+          "country": 84
+        },
+        "source_position": "Central Midfield"
+      },
+      {
+        "source_id": 9496429,
+        "before": {
+          "name": "Gürbüztürk",
+          "role": 3,
+          "broad": "DEF",
+          "pos": "Centre Back",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Melih Gürbüztürk",
+          "role": 7,
+          "broad": "MED",
+          "pos": "Centre Midfielder",
+          "birth": "1966-10-15T00:00:00",
+          "country": 84
+        },
+        "source_position": "Central Midfield"
+      },
+      {
+        "source_id": 9496425,
+        "before": {
+          "name": "Birol",
+          "role": 13,
+          "broad": "MED",
+          "pos": "Left Midfielder",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Ümit Birol",
+          "role": 9,
+          "broad": "MED",
+          "pos": "Right Midfielder",
+          "birth": "1963-01-26T00:00:00",
+          "country": 84
+        },
+        "source_position": "Right Midfield"
+      },
+      {
+        "source_id": 9496427,
+        "before": {
+          "name": "Kara",
+          "role": 17,
+          "broad": "DEL",
+          "pos": "Centre Forward",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Halil İbrahim Kara",
+          "role": 13,
+          "broad": "MED",
+          "pos": "Left Midfielder",
+          "birth": "1972-09-26T00:00:00",
+          "country": 84
+        },
+        "source_position": "Left Midfield"
+      },
+      {
+        "source_id": 9496422,
+        "before": {
+          "name": "Akgün",
+          "role": 9,
+          "broad": "MED",
+          "pos": "Right Midfielder",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Tuncay Akgün",
+          "role": 8,
+          "broad": "MED",
+          "pos": "Attacking Midfielder",
+          "birth": "1968-11-01T00:00:00",
+          "country": 84
+        },
+        "source_position": "Attacking Midfield"
+      },
+      {
+        "source_id": 9496424,
+        "before": {
+          "name": "Bacacı",
+          "role": 7,
+          "broad": "MED",
+          "pos": "Centre Midfielder",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Arif Bacacı",
+          "role": 16,
+          "broad": "DEL",
+          "pos": "Left Winger",
+          "birth": "1968-03-28T00:00:00",
+          "country": 84
+        },
+        "source_position": "Left Winger"
+      },
+      {
+        "source_id": 9497263,
+        "before": {
+          "name": "Altıntaş",
+          "role": 12,
+          "broad": "DEL",
+          "pos": "Right Winger",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Yaşar Altıntaş",
+          "role": 16,
+          "broad": "DEL",
+          "pos": "Left Winger",
+          "birth": "1957-10-03T00:00:00",
+          "country": 84
+        },
+        "source_position": "Left Winger"
+      },
+      {
+        "source_id": 9495353,
+        "before": {
+          "name": "Saffet Sancaklı",
+          "role": 17,
+          "broad": "DEL",
+          "pos": "Centre Forward",
+          "birth": "1966-02-27T00:00:00",
+          "country": 84
+        },
+        "after": {
+          "name": "Saffet Sancaklı",
+          "role": 17,
+          "broad": "DEL",
+          "pos": "Centre Forward",
+          "birth": "1966-02-27T00:00:00",
+          "country": 84
+        },
+        "source_position": "Centre-Forward"
+      },
+      {
+        "source_id": 9496430,
+        "before": {
+          "name": "Yiğit",
+          "role": 1,
+          "broad": "DEF",
+          "pos": "Right Back",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Faruk Yiğit",
+          "role": 17,
+          "broad": "DEL",
+          "pos": "Centre Forward",
+          "birth": "1968-04-15T00:00:00",
+          "country": 84
+        },
+        "source_position": "Centre-Forward"
+      },
+      {
+        "source_id": 9497258,
+        "before": {
+          "name": "Kula",
+          "role": 3,
+          "broad": "DEF",
+          "pos": "Centre Back",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Ergun Kula",
+          "role": 17,
+          "broad": "DEL",
+          "pos": "Centre Forward",
+          "birth": "1968-01-31T00:00:00",
+          "country": 84
+        },
+        "source_position": "Centre-Forward"
+      },
+      {
+        "source_id": 9497260,
+        "before": {
+          "name": "Oral",
+          "role": 7,
+          "broad": "MED",
+          "pos": "Centre Midfielder",
+          "birth": null,
+          "country": null
+        },
+        "after": {
+          "name": "Bayram Oral",
+          "role": 17,
+          "broad": "DEL",
+          "pos": "Centre Forward",
+          "birth": "1974-06-09T00:00:00",
+          "country": 84
+        },
+        "source_position": "Centre-Forward"
+      }
+    ]
+  },
+  "profile_gaps_before": {
+    "Russia": {
+      "active_players": 492,
+      "missing_birth_date": 465,
+      "missing_international_country_id": 455,
+      "missing_birth_country_id": 465,
+      "missing_height_cm": 479,
+      "missing_weight_kg": 483,
+      "profile_review_required": 0
+    },
+    "Greece": {
+      "active_players": 496,
+      "missing_birth_date": 34,
+      "missing_international_country_id": 0,
+      "missing_birth_country_id": 0,
+      "missing_height_cm": 491,
+      "missing_weight_kg": 494,
+      "profile_review_required": 2
+    },
+    "Belgium": {
+      "active_players": 406,
+      "missing_birth_date": 330,
+      "missing_international_country_id": 292,
+      "missing_birth_country_id": 302,
+      "missing_height_cm": 362,
+      "missing_weight_kg": 400,
+      "profile_review_required": 0
+    },
+    "Turkey": {
+      "active_players": 414,
+      "missing_birth_date": 366,
+      "missing_international_country_id": 366,
+      "missing_birth_country_id": 366,
+      "missing_height_cm": 399,
+      "missing_weight_kg": 403,
+      "profile_review_required": 4
+    }
+  },
+  "profile_gaps_after": {
+    "Russia": {
+      "active_players": 492,
+      "missing_birth_date": 465,
+      "missing_international_country_id": 455,
+      "missing_birth_country_id": 465,
+      "missing_height_cm": 479,
+      "missing_weight_kg": 483,
+      "profile_review_required": 0
+    },
+    "Greece": {
+      "active_players": 496,
+      "missing_birth_date": 34,
+      "missing_international_country_id": 0,
+      "missing_birth_country_id": 0,
+      "missing_height_cm": 491,
+      "missing_weight_kg": 494,
+      "profile_review_required": 2
+    },
+    "Belgium": {
+      "active_players": 406,
+      "missing_birth_date": 330,
+      "missing_international_country_id": 292,
+      "missing_birth_country_id": 302,
+      "missing_height_cm": 362,
+      "missing_weight_kg": 400,
+      "profile_review_required": 0
+    },
+    "Turkey": {
+      "active_players": 419,
+      "missing_birth_date": 227,
+      "missing_international_country_id": 226,
+      "missing_birth_country_id": 354,
+      "missing_height_cm": 371,
+      "missing_weight_kg": 408,
+      "profile_review_required": 22
+    }
+  },
+  "comparable_integrity_repair": {
+    "status": "pass",
+    "repaired_players": 0,
+    "rows": [],
+    "policy": "A removed legacy identity may not remain as provenance for generated attributes; affected profiles are re-materialised from two surviving non-created comparables of the same broad position."
+  },
+  "post_role_profile_integrity_repair": {
+    "status": "pass",
+    "rows": [
+      {
+        "source_id": 9497282,
+        "display_name": "Serkan Arslan",
+        "old": [
+          314,
+          554
+        ],
+        "new": [
+          920,
+          2031
+        ],
+        "broad_position": "MED"
+      },
+      {
+        "source_id": 9497289,
+        "display_name": "İlker Özdemir",
+        "old": [
+          499,
+          314
+        ],
+        "new": [
+          967,
+          1926
+        ],
+        "broad_position": "MED"
+      },
+      {
+        "source_id": 9497290,
+        "display_name": "Fatih Çayla",
+        "old": [
+          854,
+          1367
+        ],
+        "new": [
+          1773,
+          2751
+        ],
+        "broad_position": "DEF"
+      },
+      {
+        "source_id": 9497291,
+        "display_name": "Ramazan Gürbüz",
+        "old": [
+          1397,
+          506
+        ],
+        "new": [
+          2794,
+          567
+        ],
+        "broad_position": "DEL"
+      },
+      {
+        "source_id": 9495321,
+        "display_name": "Ogün Temizkanoğlu",
+        "old": [
+          43,
+          50
+        ],
+        "new": [
+          43,
+          50
+        ],
+        "broad_position": "DEF",
+        "reason": "unique_vector_integrity"
+      }
+    ],
+    "repaired": 5
+  }
+}

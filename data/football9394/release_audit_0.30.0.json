@@ -1,0 +1,185 @@
+{
+  "checkpoint": "0.30.0-full-bel-tur-rus-gre-rosters-1993-country-context",
+  "snapshot": {
+    "players": 12636,
+    "teams": 534,
+    "leagues": 27,
+    "duplicate_player_ids": 0,
+    "duplicate_team_ids": 0,
+    "duplicate_league_ids": 0
+  },
+  "full_roster_depth": {
+    "policy": "All historically documented season-roster rows are retained; 18 is a minimum safety floor, never a truncation target.",
+    "source_roster_rows": {
+      "Belgium": 413,
+      "Turkey": 414,
+      "Russia": 492,
+      "Greece": 496
+    },
+    "minimum_source_roster_rows_per_club": {
+      "Belgium": 19,
+      "Turkey": 23,
+      "Russia": 22,
+      "Greece": 22
+    },
+    "current_assignment_view": {
+      "Belgium": {
+        "teams": 18,
+        "unique_players_on_current_team_assignments": 406,
+        "min_current_roster": 19,
+        "max_current_roster": 27
+      },
+      "Turkey": {
+        "teams": 16,
+        "unique_players_on_current_team_assignments": 420,
+        "min_current_roster": 23,
+        "max_current_roster": 30
+      },
+      "Russia": {
+        "teams": 18,
+        "unique_players_on_current_team_assignments": 492,
+        "min_current_roster": 22,
+        "max_current_roster": 33
+      },
+      "Greece": {
+        "teams": 18,
+        "unique_players_on_current_team_assignments": 496,
+        "min_current_roster": 22,
+        "max_current_roster": 32
+      }
+    },
+    "note": "Source roster rows are season-participation records. Current team assignment can differ where one verified identity appears for more than one club during the season or where a verified national-pool player is additionally assigned to a historical club."
+  },
+  "created_player_registry": {
+    "rows": 2108,
+    "photo_queue_rows": 2108,
+    "registry_queue_match": true,
+    "duplicate_registry_ids": 0,
+    "reconciled_removed_ids": [
+      9496356,
+      9496361,
+      9496363,
+      9496379,
+      9496389,
+      9496395,
+      9496426,
+      9496484,
+      9497392
+    ]
+  },
+  "individual_profiles": {
+    "v029_profiles_curated": 20,
+    "v029_portrait_ready": 19,
+    "v030_additional_profiles_curated": 12,
+    "v030_portrait_ready": 12,
+    "profile_comparable_coherence_repairs": 10
+  },
+  "country_context_1993": {
+    "context_file": "country_context_1993.json",
+    "normalization_audit": "country_normalization_1993_audit.json",
+    "new_country_ids_required": [],
+    "reused_existing_country_ids": [
+      4,
+      63,
+      78,
+      104,
+      132,
+      202
+    ],
+    "historical_labels": {
+      "75": "República Federal de Yugoslavia",
+      "88": "Zaire"
+    },
+    "not_separate_states_1993": [
+      76,
+      129
+    ]
+  },
+  "greece_foreign_rule": {
+    "candidate_limit": 3,
+    "primary_domestic_numerical_clause_recovered": false,
+    "runtime_encoded": false,
+    "runtime": {
+      "max_foreigners_starting": null,
+      "max_foreigners_squad": null
+    },
+    "cyprus_domestic_equivalence_encoded": true,
+    "equivalent_country_ids": [
+      25
+    ],
+    "remaining_blocker": "Recover the exact Greek federation/league or Government Gazette text setting the numerical limit applicable in 1993-94."
+  },
+  "explicit_unresolved_historical_metadata": {
+    "stadium_team_ids": [
+      9352001,
+      9352002,
+      9352003,
+      9352004,
+      9352005,
+      9352006,
+      9357001,
+      9357002,
+      9357003,
+      9357004,
+      9357005,
+      9357006,
+      9357007,
+      9357008,
+      9357009,
+      9357010,
+      9357011,
+      9357012,
+      9357013,
+      9357014,
+      9315001,
+      9315002,
+      9315003,
+      9315004,
+      9315005,
+      9315006,
+      9315007,
+      9315008,
+      9315009,
+      9315010,
+      9315011,
+      9315012,
+      9315013,
+      9315014,
+      9315015,
+      9315016,
+      9347001,
+      9347002,
+      9347003,
+      9347004,
+      9347005,
+      9347006,
+      9347007,
+      9347008,
+      9347009,
+      9347010,
+      9347011,
+      9347012,
+      9347013,
+      9347014,
+      9347015,
+      9347016,
+      9347017,
+      9347018
+    ],
+    "stadium_count": 54,
+    "referee_pool_league_ids": [
+      930015,
+      930047,
+      930052,
+      930057
+    ],
+    "referee_pool_count": 4,
+    "policy": "Known gaps are explicit and source-gated; no historical stadium/referee fact is invented merely to satisfy runtime metadata coverage."
+  },
+  "validation": {
+    "targeted_and_broad_pytest": "82 passed in 13.10s",
+    "python_compileall": "pass",
+    "source_roster_total_rows": 1815,
+    "photo_queue_regeneration": "pass: 2108 rows; registry IDs exactly match queue IDs"
+  }
+}

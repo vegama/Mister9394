@@ -1,0 +1,211 @@
+{
+  "checkpoint": "0.33.0-turkey-gaziantep-next-profiles",
+  "status": "pass",
+  "portraits": [
+    {
+      "source_id": 9496453,
+      "display_name": "Metin Akçevre",
+      "photo_url": "https://www.bdfutbol.com/i/j/702570.jpg?v=1705344010",
+      "profile_url": "https://www.bdfutbol.com/en/j/j702570.html",
+      "asset": "frontend/public/historical9394/players/9496453.jpg",
+      "width": 40,
+      "height": 55,
+      "format": "JPEG",
+      "mode": "RGB"
+    },
+    {
+      "source_id": 9496455,
+      "display_name": "Haşim Cem Kumbasar",
+      "photo_url": "https://www.bdfutbol.com/i/j/1179967.jpg?v=1782644741",
+      "profile_url": "https://www.bdfutbol.com/en/j/j1179967.html",
+      "asset": "frontend/public/historical9394/players/9496455.jpg",
+      "width": 40,
+      "height": 55,
+      "format": "JPEG",
+      "mode": "RGB"
+    },
+    {
+      "source_id": 9496456,
+      "display_name": "Steven Mbuyi Komphela",
+      "photo_url": "https://www.bdfutbol.com/i/j/1174975.jpg?v=1780345596",
+      "profile_url": "https://www.bdfutbol.com/en/j/j1174975.html",
+      "asset": "frontend/public/historical9394/players/9496456.jpg",
+      "width": 40,
+      "height": 55,
+      "format": "JPEG",
+      "mode": "RGB"
+    },
+    {
+      "source_id": 9496457,
+      "display_name": "Turgut Uçar",
+      "photo_url": "https://www.bdfutbol.com/i/j/702771.jpg?v=1706693891",
+      "profile_url": "https://www.bdfutbol.com/en/j/j702771.html",
+      "asset": "frontend/public/historical9394/players/9496457.jpg",
+      "width": 40,
+      "height": 55,
+      "format": "JPEG",
+      "mode": "RGB"
+    },
+    {
+      "source_id": 9496458,
+      "display_name": "Şenol Fidan",
+      "photo_url": "https://www.bdfutbol.com/i/j/55345.jpg?v=1676805008",
+      "profile_url": "https://www.bdfutbol.com/en/j/j55345.html",
+      "asset": "frontend/public/historical9394/players/9496458.jpg",
+      "width": 40,
+      "height": 55,
+      "format": "JPEG",
+      "mode": "RGB"
+    },
+    {
+      "source_id": 9496460,
+      "display_name": "Kemal Sönmez",
+      "photo_url": "https://www.bdfutbol.com/i/j/1141594b.jpg?v=1746560319",
+      "profile_url": "https://www.bdfutbol.com/en/j/j1141594.html",
+      "asset": "frontend/public/historical9394/players/9496460.jpg",
+      "width": 40,
+      "height": 55,
+      "format": "JPEG",
+      "mode": "RGB"
+    },
+    {
+      "source_id": 9496462,
+      "display_name": "Elvir Bolić",
+      "photo_url": "https://www.bdfutbol.com/i/j/661.jpg?v=1275150842",
+      "profile_url": "https://www.bdfutbol.com/en/j/j661.html",
+      "asset": "frontend/public/historical9394/players/9496462.jpg",
+      "width": 40,
+      "height": 55,
+      "format": "JPEG",
+      "mode": "RGB"
+    },
+    {
+      "source_id": 9496463,
+      "display_name": "Marcello Thomas Monteiro",
+      "photo_url": "https://www.bdfutbol.com/i/j/1176268.jpg?v=1780345599",
+      "profile_url": "https://www.bdfutbol.com/en/j/j1176268.html",
+      "asset": "frontend/public/historical9394/players/9496463.jpg",
+      "width": 40,
+      "height": 55,
+      "format": "JPEG",
+      "mode": "RGB"
+    },
+    {
+      "source_id": 9496465,
+      "display_name": "Kubilay Toptaş",
+      "photo_url": "https://www.bdfutbol.com/i/j/55585.jpg?v=1677405428",
+      "profile_url": "https://www.bdfutbol.com/en/j/j55585.html",
+      "asset": "frontend/public/historical9394/players/9496465.jpg",
+      "width": 40,
+      "height": 55,
+      "format": "JPEG",
+      "mode": "RGB"
+    },
+    {
+      "source_id": 9496466,
+      "display_name": "Necat Barut",
+      "photo_url": "https://www.bdfutbol.com/i/j/1176410.jpg?v=1780345599",
+      "profile_url": "https://www.bdfutbol.com/en/j/j1176410.html",
+      "asset": "frontend/public/historical9394/players/9496466.jpg",
+      "width": 40,
+      "height": 55,
+      "format": "JPEG",
+      "mode": "RGB"
+    },
+    {
+      "source_id": 9496467,
+      "display_name": "Yavuz Karaçam",
+      "photo_url": "https://www.bdfutbol.com/i/j/1179962.jpg?v=1782644192",
+      "profile_url": "https://www.bdfutbol.com/en/j/j1179962.html",
+      "asset": "frontend/public/historical9394/players/9496467.jpg",
+      "width": 40,
+      "height": 55,
+      "format": "JPEG",
+      "mode": "RGB"
+    },
+    {
+      "source_id": 9496468,
+      "display_name": "Hasan Özer",
+      "photo_url": "https://www.bdfutbol.com/i/j/54567.jpg?v=1686210822",
+      "profile_url": "https://www.bdfutbol.com/en/j/j54567.html",
+      "asset": "frontend/public/historical9394/players/9496468.jpg",
+      "width": 40,
+      "height": 55,
+      "format": "JPEG",
+      "mode": "RGB"
+    },
+    {
+      "source_id": 9496469,
+      "display_name": "Teboho Claude Moloi",
+      "photo_url": "https://www.bdfutbol.com/i/j/1179966.jpg?v=1782644577",
+      "profile_url": "https://www.bdfutbol.com/en/j/j1179966.html",
+      "asset": "frontend/public/historical9394/players/9496469.jpg",
+      "width": 40,
+      "height": 55,
+      "format": "JPEG",
+      "mode": "RGB"
+    },
+    {
+      "source_id": 9496470,
+      "display_name": "Tayfun Yungul",
+      "photo_url": "https://www.bdfutbol.com/i/j/1125764.jpg?v=1719252802",
+      "profile_url": "https://www.bdfutbol.com/en/j/j1125764.html",
+      "asset": "frontend/public/historical9394/players/9496470.jpg",
+      "width": 40,
+      "height": 55,
+      "format": "JPEG",
+      "mode": "RGB"
+    },
+    {
+      "source_id": 9497272,
+      "display_name": "Mehmet Gönülaçar",
+      "photo_url": "https://www.bdfutbol.com/i/j/58014.jpg?v=1690975940",
+      "profile_url": "https://www.bdfutbol.com/en/j/j58014.html",
+      "asset": "frontend/public/historical9394/players/9497272.jpg",
+      "width": 40,
+      "height": 55,
+      "format": "JPEG",
+      "mode": "RGB"
+    },
+    {
+      "source_id": 9497273,
+      "display_name": "Hüseyin Sarı",
+      "photo_url": "https://www.bdfutbol.com/i/j/702571.jpg?v=1705344023",
+      "profile_url": "https://www.bdfutbol.com/en/j/j702571.html",
+      "asset": "frontend/public/historical9394/players/9497273.jpg",
+      "width": 40,
+      "height": 55,
+      "format": "JPEG",
+      "mode": "RGB"
+    },
+    {
+      "source_id": 9497274,
+      "display_name": "Mustafa Yücedağ",
+      "photo_url": "https://www.bdfutbol.com/i/j/702824.jpg?v=1707380797",
+      "profile_url": "https://www.bdfutbol.com/en/j/j702824.html",
+      "asset": "frontend/public/historical9394/players/9497274.jpg",
+      "width": 40,
+      "height": 55,
+      "format": "JPEG",
+      "mode": "RGB"
+    },
+    {
+      "source_id": 9497276,
+      "display_name": "Murat Deniz",
+      "photo_url": "https://www.bdfutbol.com/i/j/1169863.jpg?v=1783001487",
+      "profile_url": "https://www.bdfutbol.com/en/j/j1169863.html",
+      "asset": "frontend/public/historical9394/players/9497276.jpg",
+      "width": 40,
+      "height": 55,
+      "format": "JPEG",
+      "mode": "RGB"
+    }
+  ],
+  "normalization": {
+    "width": 40,
+    "height": 55,
+    "format": "JPEG",
+    "mode": "RGB",
+    "crop": "centered ImageOps.fit"
+  }
+}

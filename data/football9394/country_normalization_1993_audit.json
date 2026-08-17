@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "reference_year": 1993,
+  "status": "pass",
+  "policy": "Nationalities and country labels used by the historical game must follow the political map of 1993. Modern source IDs may be retained internally for compatibility, but their historical label/state context controls display and eligibility.",
+  "profiles_normalized": [
+    {
+      "source_id": 9496380,
+      "display_name": "Shota Arveladze",
+      "birth_country_id": 104,
+      "international_country_id": 104
+    },
+    {
+      "source_id": 9496385,
+      "display_name": "Archil Arveladze",
+      "birth_country_id": 104,
+      "international_country_id": 104
+    },
+    {
+      "source_id": 9496390,
+      "display_name": "Fani Tommy Madida",
+      "birth_country_id": 78,
+      "international_country_id": 78
+    },
+    {
+      "source_id": 9496392,
+      "display_name": "Osvaldo Darío Nartallo",
+      "birth_country_id": 63,
+      "international_country_id": 63
+    },
+    {
+      "source_id": 9496629,
+      "display_name": "Vladimir Viktorovich Niederhaus",
+      "birth_country_id": 132,
+      "international_country_id": 132
+    },
+    {
+      "source_id": 503,
+      "display_name": "Rashid Mamatkulovich Rakhimov",
+      "birth_country_id": 202,
+      "international_country_id": 40
+    },
+    {
+      "source_id": 9494086,
+      "display_name": "Omari Mikhailovich Tetradze",
+      "birth_country_id": 104,
+      "international_country_id": 40
+    },
+    {
+      "source_id": 9496942,
+      "display_name": "Giorgos Donis",
+      "birth_country_id": 4,
+      "international_country_id": 47
+    }
+  ],
+  "created_country_ids": [],
+  "reused_existing_1993_country_ids": [
+    4,
+    63,
+    78,
+    104,
+    132,
+    202
+  ],
+  "note": "Georgia, Kazakhstan, South Africa and Tajikistan already had canonical source IDs, so they were normalized/reused rather than duplicated. Modern-only state identities remain blocked by country_context_1993.json."
+}

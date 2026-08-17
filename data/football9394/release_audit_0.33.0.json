@@ -1,0 +1,74 @@
+{
+  "checkpoint": "0.33.0-turkey-gaziantep-next-profiles",
+  "status": "pass",
+  "created_at": "2026-08-17",
+  "active_players": {
+    "Belgium": 406,
+    "Turkey": 419,
+    "Russia": 492,
+    "Greece": 496,
+    "total": 1813
+  },
+  "profile_curation": {
+    "turkey_profiles_curated_v033_batch": 33,
+    "gaziantepspor_curated": 26,
+    "next_high_confidence_curated": 7,
+    "role_corrections_v033_batch": 24,
+    "turkey_profiles_curated_cumulative_phase": 195,
+    "role_corrections_cumulative_phase": 120,
+    "remaining_turkey_missing_birth_date": 194,
+    "remaining_turkey_missing_international_country_id": 193,
+    "remaining_turkey_missing_birth_country_id": 323,
+    "profile_review_required_turkey": 30
+  },
+  "historical_metadata": {
+    "unresolved_stadiums": 0,
+    "referees": {
+      "Belgium": {
+        "identified": 25,
+        "status": "complete"
+      },
+      "Turkey": {
+        "identified": 34,
+        "appearance_total": 240,
+        "status": "complete"
+      },
+      "Russia": {
+        "identified": 33,
+        "appearance_total": 306,
+        "status": "complete"
+      },
+      "Greece": {
+        "identified": 11,
+        "source_total": 45,
+        "status": "explicit_partial"
+      }
+    }
+  },
+  "biographies": {
+    "written": 1813,
+    "changed_from_v032": 33
+  },
+  "photos": {
+    "new_bundled_normalized_bdfutbol": 18,
+    "bundled_normalized_bdfutbol_total": 54,
+    "registry_rows": 2107
+  },
+  "integrity": {
+    "registry_queue_unique_and_synced": true,
+    "corrected_profile_comparables_exist_and_same_broad_position": true,
+    "broad_only_uncertainty_explicit": true
+  },
+  "tests": {
+    "selected_regression_passed": 71,
+    "selected_regression_failed": 0,
+    "v033_specific_passed": 8,
+    "full_repo_suite_run": false
+  },
+  "policy": {
+    "football_75_25_rule": false,
+    "unknown_historical_values_are_invented": false,
+    "former_ussr_birth_country_modernization_invented": false,
+    "broad_position_uncertainty_is_explicit": true
+  }
+}

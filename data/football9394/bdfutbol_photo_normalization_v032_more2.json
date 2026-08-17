@@ -1,0 +1,73 @@
+{
+  "status": "complete",
+  "target_size": [
+    40,
+    55
+  ],
+  "format": "JPEG",
+  "mode": "RGB",
+  "converted": 4,
+  "skipped_existing": 0,
+  "unresolved": 0,
+  "invalid": 0,
+  "converted_rows": [
+    {
+      "source": ".photo_v032_more2/9495352.jpg",
+      "destination": "/mnt/data/mister031/frontend/public/historical9394/players/9495352.jpg",
+      "original_size": [
+        132,
+        197
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9495352
+    },
+    {
+      "source": ".photo_v032_more2/9496365.jpg",
+      "destination": "/mnt/data/mister031/frontend/public/historical9394/players/9496365.jpg",
+      "original_size": [
+        304,
+        543
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496365
+    },
+    {
+      "source": ".photo_v032_more2/9496366.jpg",
+      "destination": "/mnt/data/mister031/frontend/public/historical9394/players/9496366.jpg",
+      "original_size": [
+        137,
+        233
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496366
+    },
+    {
+      "source": ".photo_v032_more2/9496374.jpg",
+      "destination": "/mnt/data/mister031/frontend/public/historical9394/players/9496374.jpg",
+      "original_size": [
+        272,
+        366
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496374
+    }
+  ],
+  "unresolved_files": [],
+  "invalid_files": []
+}

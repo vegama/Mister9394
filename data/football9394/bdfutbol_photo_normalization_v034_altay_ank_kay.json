@@ -1,0 +1,96 @@
+{
+  "checkpoint": "0.34.0-turkey-altay-ankaragucu-kayserispor-deep",
+  "status": "pass",
+  "portraits": [
+    {
+      "source_id": 9495318,
+      "display_name": "Şanver Göymen",
+      "photo_url": "https://www.bdfutbol.com/i/j/700587.jpg?v=1696866637",
+      "asset": "frontend/public/historical9394/players/9495318.jpg"
+    },
+    {
+      "source_id": 9496489,
+      "display_name": "Orhan Üstündağ",
+      "photo_url": "https://www.bdfutbol.com/i/j/700588.jpg?v=1696866691",
+      "asset": "frontend/public/historical9394/players/9496489.jpg"
+    },
+    {
+      "source_id": 9496493,
+      "display_name": "Tahir Karapınar",
+      "photo_url": "https://www.bdfutbol.com/i/j/1100568.jpg?v=1696866983",
+      "asset": "frontend/public/historical9394/players/9496493.jpg"
+    },
+    {
+      "source_id": 9496494,
+      "display_name": "Şeyhmus Suna",
+      "photo_url": "https://www.bdfutbol.com/i/j/702772.jpg?v=1706693945",
+      "asset": "frontend/public/historical9394/players/9496494.jpg"
+    },
+    {
+      "source_id": 9496497,
+      "display_name": "Ramazan Mahmut Torunoğlu",
+      "photo_url": "https://www.bdfutbol.com/i/j/1175048.jpg?v=1780345596",
+      "asset": "frontend/public/historical9394/players/9496497.jpg"
+    },
+    {
+      "source_id": 9496498,
+      "display_name": "Sergei Yevgenovich Gusev",
+      "photo_url": "https://www.bdfutbol.com/i/j/702760.jpg?v=1706619692",
+      "asset": "frontend/public/historical9394/players/9496498.jpg"
+    },
+    {
+      "source_id": 9495324,
+      "display_name": "Serhat Güller",
+      "photo_url": "https://www.bdfutbol.com/i/j/702878b.jpg?v=1708077430",
+      "asset": "frontend/public/historical9394/players/9495324.jpg"
+    },
+    {
+      "source_id": 9496512,
+      "display_name": "Mukhsin Muslimovich Mukhamadiev",
+      "photo_url": "https://www.bdfutbol.com/i/j/1159085.jpg?v=1761839587",
+      "asset": "frontend/public/historical9394/players/9496512.jpg"
+    },
+    {
+      "source_id": 9497302,
+      "display_name": "Hakan Kutlu",
+      "photo_url": "https://www.bdfutbol.com/i/j/52611.jpg?v=1675337236",
+      "asset": "frontend/public/historical9394/players/9497302.jpg"
+    },
+    {
+      "source_id": 9496538,
+      "display_name": "Nexhat Shabani",
+      "photo_url": "https://www.bdfutbol.com/i/j/1179910.jpg?v=1782592765",
+      "asset": "frontend/public/historical9394/players/9496538.jpg"
+    },
+    {
+      "source_id": 9496539,
+      "display_name": "Enver Lugušić",
+      "photo_url": "https://www.bdfutbol.com/i/j/1178565.jpg?v=1782161330",
+      "asset": "frontend/public/historical9394/players/9496539.jpg"
+    },
+    {
+      "source_id": 9497314,
+      "display_name": "Cafer Aydın",
+      "photo_url": "https://www.bdfutbol.com/i/j/702562.jpg?v=1705343441",
+      "asset": "frontend/public/historical9394/players/9497314.jpg"
+    },
+    {
+      "source_id": 9497315,
+      "display_name": "Öztürk Tanrıbilir",
+      "photo_url": "https://www.bdfutbol.com/i/j/1179912.jpg?v=1782593200",
+      "asset": "frontend/public/historical9394/players/9497315.jpg"
+    },
+    {
+      "source_id": 9497317,
+      "display_name": "Metin İlhan",
+      "photo_url": "https://www.bdfutbol.com/i/j/1179906.jpg?v=1782591829",
+      "asset": "frontend/public/historical9394/players/9497317.jpg"
+    },
+    {
+      "source_id": 9497318,
+      "display_name": "Ferhat Bakar",
+      "photo_url": "https://www.bdfutbol.com/i/j/1173830.jpg?v=1777923037",
+      "asset": "frontend/public/historical9394/players/9497318.jpg"
+    }
+  ]
+}

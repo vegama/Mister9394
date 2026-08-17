@@ -1,0 +1,60 @@
+{
+  "checkpoint": "0.34.0-turkey-altay-ankaragucu-kayserispor-deep",
+  "status": "pass",
+  "created_at": "2026-08-17",
+  "base_checkpoint": "0.33.0-turkey-gaziantep-next-profiles",
+  "active_players": {
+    "Belgium": 406,
+    "Turkey": 419,
+    "Russia": 492,
+    "Greece": 496,
+    "total": 1813
+  },
+  "profile_curation": {
+    "profiles_touched_v034_batch": 81,
+    "new_unique_profiles_deepened_vs_v033": 74,
+    "by_club": {"Altay": 27, "Ankaragücü": 27, "Kayserispor": 27},
+    "exact_specialist_roles": 31,
+    "broad_only_exact_role_unresolved": 50,
+    "role_corrections_v034_batch": 48,
+    "turkey_unique_profiles_curated_cumulative_phase": 269,
+    "role_corrections_cumulative_phase": 168,
+    "remaining_turkey_missing_birth_date": 124,
+    "remaining_turkey_missing_international_country_id": 121,
+    "remaining_turkey_missing_birth_country_id": 259,
+    "remaining_turkey_missing_height_cm": 344,
+    "remaining_turkey_missing_weight_kg": 402,
+    "profile_review_required_turkey": 80,
+    "year_only_birth_records_in_batch": 2
+  },
+  "photos": {
+    "new_bundled_normalized_bdfutbol": 15,
+    "bundled_normalized_bdfutbol_total": 69,
+    "registry_rows": 2107
+  },
+  "biographies": {
+    "profiles_refreshed": 81,
+    "canonical_field": "historical_biography_1993_94",
+    "broad_position_uncertainty_preserved_in_text": true
+  },
+  "integrity": {
+    "registry_queue_unique_and_synced": true,
+    "corrected_profile_comparables_exist_and_same_broad_position": true,
+    "broad_only_uncertainty_explicit": true,
+    "partial_birth_year_not_materialized_as_january_1": true,
+    "dissolved_state_birthplace_not_retrofitted": true
+  },
+  "tests": {
+    "selected_regression_passed": 80,
+    "selected_regression_failed": 0,
+    "v034_specific_passed": 6,
+    "full_repo_suite_run": false
+  },
+  "policy": {
+    "football_75_25_rule": false,
+    "unknown_historical_values_are_invented": false,
+    "former_ussr_birth_country_modernization_invented": false,
+    "former_yugoslavia_birth_country_modernization_invented": false,
+    "broad_position_uncertainty_is_explicit": true
+  }
+}

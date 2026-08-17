@@ -2,6 +2,41 @@
 
 Manager de fútbol histórico centrado en la temporada 1993-94 y en carreras persistentes multitemporada.
 
+
+## Estado · checkpoint 0.34.0-turkey-altay-ankaragucu-kayserispor-deep
+
+La 0.34 retoma el punto real de la rama: **0.33**, con Gaziantepspor ya cerrado, y profundiza Altay, Ankaragücü y Kayserispor **27/27 cada uno**. Se revisan 81 perfiles (74 nuevas profundizaciones respecto a 0.33), se ejecutan 48 correcciones funcionales de rol y el acumulado turco único de esta fase llega a 269 perfiles.
+
+Los huecos turcos bajan de 194 a **124 fechas de nacimiento** y de 193 a **121 nacionalidades internacionales**; el país de nacimiento pendiente cae de 323 a 259. Hay 31 perfiles con especialidad posicional corroborada y 50 donde la fuente sólo demuestra una línea amplia. Estos 50 se marcan deliberadamente `exact role unresolved`: el aumento de `profile_review_required` de 30 a 80 significa más honestidad de datos, no una regresión. Dos nacimientos sólo documentan el año y se mantienen sin día/mes inventado.
+
+Se incorporan **15 retratos BDFutbol nuevos**, normalizados y comprobados físicamente a JPEG RGB 40×55; el acumulado sube de 54 a **69**. Las 81 biografías afectadas se regeneran en el campo canónico 1993-94 y ya no convierten una posición amplia en una especialidad por la redacción. Registro y cola conservan 2.107 IDs únicos y sincronizados.
+
+Quedan documentados los conflictos de fecha de Öztürk Tanrıbilir (se prioriza la ficha oficial TFF: 03/05/1966) y Sergei Yevgenovich Gusev (01/07/1967 por corroboración de varias fuentes frente al 07/07 de BDFutbol). Los nacidos en estados disueltos conservan el lugar histórico textual sin fabricar un país moderno de nacimiento.
+
+La regresión histórica seleccionada queda en **80/80 pruebas verdes**, con el bloque específico 0.34 en **6/6**. La suite completa del repositorio no se declara ejecutada. Véase `docs/V034_TURKEY_ALTAY_ANKARAGUCU_KAYSERISPOR_DEEP.md`.
+
+## Estado · checkpoint 0.33.0-turkey-gaziantep-next-profiles
+
+La 0.33 continúa la profundización turca sin abrir frentes nuevos. **Gaziantepspor queda curado 26/26** con identidad completa, fecha de nacimiento, nacionalidad internacional, lugar de nacimiento, ficha BDFutbol y posición respaldada por fuente; cuando sólo puede demostrarse `Defender`, `Midfielder` o `Forward`, la especialización exacta queda marcada como pendiente. Se añaden además siete perfiles de alta confianza de Altay, Ankaragücü y el Kayserispor histórico.
+
+Esta pasada profundiza **33 perfiles** y ejecuta **24 correcciones funcionales de rol**. El acumulado turco de la fase queda en **195 perfiles curados y 120 correcciones posicionales**. Turquía mantiene 419 jugadores activos, pero reduce los huecos de 227 a **194 fechas de nacimiento** y de 226 a **193 nacionalidades internacionales**. Los ocho nuevos casos de posición amplia elevan `profile_review_required` de 22 a 30 de forma deliberada: el dato incierto se conserva como incierto.
+
+Se incorporan **18 retratos BDFutbol nuevos**, normalizados físicamente a JPEG RGB 40×55, y el total empaquetado sube de 36 a **54**. Las 1.813 biografías activas se vuelven a regenerar después de las correcciones; 33 cambian respecto a 0.32 y no queda ningún jugador reconstruido sin fila de staging. Registro y cola de fotos continúan con 2.107 identidades únicas y sincronizadas.
+
+Entre los arreglos de mayor impacto están Kubilay Toptaş a delantero centro, Kemal Sönmez a central, Hasan Çelik a delantero centro, Tayfun Yungul a mediocentro, Yuriy Matveev a delantero centro, Öztürk Tanrıbilir a portero y Cafer Aydın a delantero centro. En nacidos en la antigua URSS se conserva el lugar histórico en texto y no se fuerza un `birth_country_id` moderno. No se usa ninguna regla 75/25 en fútbol.
+
+La regresión histórica seleccionada queda en **71/71 pruebas verdes** y el bloque específico 0.33 en **8/8**. La suite total del repositorio no se declara ejecutada. Véase `docs/V033_TURKEY_GAZIANTEP_AND_NEXT_PROFILES.md`.
+
+## Estado · checkpoint 0.32.0-historical-metadata-turkey-profiles
+
+La 0.32 cierra el frente de **metadatos históricos de recinto y árbitros** para las cuatro ligas reconstruidas y profundiza de forma masiva la liga turca. Los 54 huecos de estadio detectados al comenzar 0.31 quedan reducidos a cero: los nombres de recinto se enlazan por temporada/partido y no se inventan aforos ni dimensiones modernas. Bélgica conserva un pool arbitral histórico completo de 25 nombres; Turquía queda cerrada con 34 árbitros cuyas apariciones suman los 240 partidos de liga; Rusia con 33 árbitros y 306 partidos; Grecia permanece deliberadamente como subconjunto histórico documentado de 11/45.
+
+En Turquía se han curado **162 perfiles** en seis bloques de plantilla (Fenerbahçe, Samsunspor, Trabzonspor, Bursaspor, Gençlerbirliği y Kocaelispor), con **96 correcciones de posición funcional**. Se han recuperado cinco futbolistas de plantilla inicial que no aparecían en el staging basado en uso liguero: Vedat Emmez, Serkan Gültang, Sunay Kahraman, İsmail Ünal y Fevzi Açıkgöz. Turquía pasa de 414 a **419 jugadores activos**; el total de Bélgica+Turquía+Rusia+Grecia queda en **1.813**. No se aplica ninguna regla 75/25: las altas nuevas materializan atributos fijos a partir de comparables originales 1993-94 de la misma línea/valoración y conservan sus IDs de comparables para auditoría.
+
+Las **1.813 biografías** de los jugadores activos se regeneran después de cada corrección de perfil para impedir texto obsoleto. Hay **36 retratos BDFutbol realmente empaquetados** y normalizados a 40×55 JPEG; los estados de registro/cola distinguen foto pendiente de foto físicamente incluida. Los casos ambiguos conservan `profile_review_required` en vez de recibir una especialización inventada. La discrepancia de fecha de nacimiento de Ace Khuse y el conflicto posicional de Fevzi Açıkgöz están documentados explícitamente.
+
+La regresión dirigida de cierre 0.23→0.32 queda en **84/84 pruebas**. No se presenta como ejecución de toda la suite del repositorio. Véase `docs/V032_HISTORICAL_METADATA_CLOSURE_AND_TURKEY_PROFILES.md`.
+
 ## Estado · checkpoint 0.24.0-bel-tur-rus-1993-data
 
 **P1–P10 siguen cerrados; 0.24 continúa la expansión internacional con prioridad absoluta a identidad y realismo.** No se introduce una fórmula nueva de valoración: los jugadores creados se materializan como datos fijos comparándolos con futbolistas originales 1993-94 de la misma posición/nivel, con perfiles específicos para los nombres relevantes. Los 10.528 jugadores originales permanecen intactos.

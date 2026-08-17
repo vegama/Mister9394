@@ -46,11 +46,12 @@ def test_new_batch_was_checked_against_full_mdb_and_has_no_hidden_exact_match():
 
 def test_new_batch_profiles_are_fixed_and_individual_not_provisional():
     rows=[p for p in _players() if p.get('creation_batch')=='bel_tur_rus_national_depth_0.24']
-    assert len(rows)==61
+    assert len(rows)==55
     vectors=[]
+    pending={int(p['source_id']) for p in rows if p.get('profile_review_required')}
+    assert {9495331,9495336,9495337,9495342} <= pending
     for p in rows:
-        assert p.get('profile_review_required') is False
-        assert p.get('attribute_source')=='fixed_source_comparable_review_0.23'
+        assert p.get('attribute_source') in {'fixed_source_comparable_review_0.23','fixed_source_comparable_role_correction_0.31','fixed_source_comparable_role_correction_0.32','fixed_source_comparable_repair_0.32','fixed_source_comparable_broad_position_repair_0.32'}
         assert p.get('historical_club_1994')
         assert p.get('historical_position_1993_94')
         vectors.append(tuple(sorted((p.get('attributes') or {}).items())))
@@ -60,7 +61,7 @@ def test_new_batch_profiles_are_fixed_and_individual_not_provisional():
 def test_photo_registry_keeps_historical_club_and_position_for_new_players():
     payload=json.loads(REG.read_text(encoding='utf-8'))
     rows=[r for r in payload['players'] if r.get('creation_batch')=='bel_tur_rus_national_depth_0.24']
-    assert len(rows)==61
+    assert len(rows)==55
     assert all(r.get('historical_club_1994') for r in rows)
     assert all(r.get('historical_position_1993_94') for r in rows)
     assert all(r.get('photo_status') in {'pending','pending_identity_profile','ready_for_download','bundled_normalized_bdfutbol'} for r in rows)
@@ -140,13 +141,15 @@ def test_belgium_roster_gate_is_complete_unique_and_playable():
 def test_turkey_roster_gate_is_complete_unique_and_playable():
     audit=json.loads((ROOT/'data/football9394/turkey_1993_94_roster_gate_audit.json').read_text(encoding='utf-8'))
     assert audit['status']=='pass_turkey_1993_94_active'
-    assert audit['staged_rows']==288
-    assert audit['unique_staged_identities']==288
+    assert audit['staged_rows']==414
+    assert audit['unique_staged_identities']==414
     assert audit['clubs']==16
     assert audit['minimum_active_roster']>=18
+    assert audit['minimum_is_floor_not_target'] is True
+    assert audit['source_roster_target'].startswith('all rows')
     assert audit['otros_turquia_stranded_recognised_club']==0
     ids=[int(row['source_id']) for row in audit['identities']]
-    assert len(ids)==len(set(ids))==288
+    assert len(ids)==len(set(ids))==414
     assert audit['reused_existing_players']>0
     players=_players()
     active=[p for p in players if not p.get('retired')]
@@ -159,18 +162,20 @@ def test_turkey_roster_gate_is_complete_unique_and_playable():
 def test_russia_roster_gate_is_complete_unique_and_playable():
     audit=json.loads((ROOT/'data/football9394/russia_1993_roster_gate_audit.json').read_text(encoding='utf-8'))
     assert audit['status']=='pass_russia_1993_active'
-    assert audit['staged_rows']==324
-    assert audit['unique_staged_identities']==324
+    assert audit['staged_rows']==492
+    assert audit['unique_staged_identities']==492
     assert audit['clubs']==18
     assert audit['minimum_active_roster']>=18
+    assert audit['minimum_is_floor_not_target'] is True
+    assert audit['source_roster_target'].startswith('all rows')
     assert audit['otros_russia_stranded_recognised_club']==0
     ids=[int(row['source_id']) for row in audit['identities']]
-    assert len(ids)==len(set(ids))==324
+    assert len(ids)==len(set(ids))==492
     assert audit['reused_existing_players']>=16
     assert audit['modern_mdb_league_id_15_active'] is False
     players=_players()
     active=[p for p in players if not p.get('retired')]
-    for name in ('Viktor Onopko','Ramiz Mamedov','Valeri Karpin','Ilya Tsymbalar','Vladimir Beschastnykh','Omari Tetradze','Yuri Kovtun','Zaur Khapov'):
+    for name in ('Viktor Onopko','Ramiz Mamedov','Valeri Karpin','Ilya Tsymbalar','Vladimir Beschastnykh','Omari Mikhailovich Tetradze','Yuri Kovtun','Zaur Khapov'):
         assert sum(1 for p in active if p.get('display_name')==name)==1
     registry=default_registry_9394()
     assert registry.resolve_source('league',930015) is RUSSIA_SUPREME_LEAGUE_1993
@@ -180,21 +185,23 @@ def test_russia_roster_gate_is_complete_unique_and_playable():
 def test_greece_roster_gate_is_complete_unique_and_playable():
     audit=json.loads((ROOT/'data/football9394/greece_1993_94_roster_gate_audit.json').read_text(encoding='utf-8'))
     assert audit['status']=='pass_greece_1993_94_active'
-    assert audit['staged_rows']==324
-    assert audit['unique_staged_identities']==324
+    assert audit['staged_rows']==496
+    assert audit['unique_staged_identities']==496
     assert audit['clubs']==18
-    assert audit['minimum_active_roster']==18
-    assert audit['reused_existing_players']==22
+    assert audit['minimum_active_roster']>=22
+    assert audit['minimum_is_floor_not_target'] is True
+    assert audit['source_roster_target'].startswith('all rows')
+    assert audit['reused_existing_players']==496
     assert audit['verified_greece_pool_stranded_in_otros']==0
     ids=[int(row['source_id']) for row in audit['identities']]
-    assert len(ids)==len(set(ids))==324
+    assert len(ids)==len(set(ids))==496
     players=_players()
     active=[p for p in players if not p.get('retired')]
     for name in ('Stelios Manolas','Dimitris Saravakos','Nikos Machlas','Tasos Mitropoulos','Vasilis Dimitriadis','Alexis Alexandris'):
         assert sum(1 for p in active if p.get('display_name')==name)==1
     greek_team_ids=set(range(9347001,9347019))
     core=[p for p in active if int(p.get('team_id') or 0) in greek_team_ids]
-    assert len(core)==324
+    assert len(core)==496
     assert all(p.get('historical_position_1993_94') for p in core)
     assert all(p.get('historical_position_source') for p in core)
     assert all(p.get('attributes') for p in core)
@@ -216,18 +223,21 @@ def test_greece_historical_rules_and_runtime_binding():
 def test_greece_has_no_fictional_gate_fillers_and_keeps_source_provenance():
     stage=json.loads((ROOT/'data/football9394/greece_1993_94_roster_staging.json').read_text(encoding='utf-8'))
     assert len(stage['clubs'])==18
-    assert all(len(c['players'])==18 for c in stage['clubs'])
+    assert all(len(c['players'])>=18 for c in stage['clubs'])
+    assert sum(len(c['players']) for c in stage['clubs'])==496
     assert all(p.get('rsssf_name') and p.get('source_url') for c in stage['clubs'] for p in c['players'])
     created=[p for p in _players() if p.get('creation_batch')=='greece_league_rosters_0.28']
-    assert len(created)==302
+    assert len(created)==474
     assert all(p.get('attribute_source') in {
         'fixed_source_comparable_greece_1993_94',
         'fixed_source_comparable_role_correction_0.29',
+        'fixed_source_comparable_role_correction_0.31',
     } for p in created)
     corrected=[p for p in created if p.get('attribute_source')=='fixed_source_comparable_role_correction_0.29']
     assert [(int(p['source_id']),p['display_name']) for p in corrected]==[(9496943,'Krzysztof Warzycha')]
     assert all(p.get('external_origin')=='historical_greece_1993_94' for p in created)
-    assert all(p.get('profile_review_required') is False for p in created)
+    pending={int(p['source_id']) for p in created if p.get('profile_review_required')}
+    assert pending=={9497518,9497522}
 
 def test_reconstructed_players_keep_source_backed_age_without_fake_birth_date():
     from backend.app.football9394.player_identity import age_on

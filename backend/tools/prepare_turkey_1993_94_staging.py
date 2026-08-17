@@ -4,9 +4,8 @@ from __future__ import annotations
 
 Rows are transcribed from the BDFutbol 1993-94 squad pages already pinned in
 ``bel_tur_rus_1993_94_league_foundations.json``.  We intentionally stage the
-first 18 real season participants per club: enough to clear the playability
-roster gate without inventing filler players.  Additional historical rows can
-be appended later without changing identity semantics.
+full available season roster per club. Eighteen is only the minimum playability
+floor and must never be used as a truncation target. No filler players are invented.
 """
 
 import json
@@ -168,14 +167,19 @@ ROSTERS = {
 
 
 def main() -> None:
+    from expand_bel_tur_rus_gre_rosters_v030 import TURKEY
     foundation = json.loads(FOUNDATION.read_text(encoding="utf-8"))
     league = next(x for x in foundation["leagues"] if x["key"] == "tur_1993_94")
     clubs = []
     for club in league["clubs"]:
         name = club["name"]
-        rows = ROSTERS[name]
-        if len(rows) != 18:
-            raise RuntimeError(f"{name}: expected exactly 18 staged players, got {len(rows)}")
+        rows = [dict(r) for r in ROSTERS[name]]
+        for pname,age,apps,starts,minutes,goals in TURKEY[name]:
+            if any(r["bdfutbol_name"] == pname for r in rows):
+                continue
+            rows.append({"bdfutbol_name":pname,"age_1993_94":age,"appearances":apps,"starts":starts,"minutes":minutes,"goals":goals,"core_18_candidate":False,"source_roster_member":True})
+        if len(rows) < 18:
+            raise RuntimeError(f"{name}: below 18-player safety floor: {len(rows)}")
         clubs.append({
             "historical_position": int(club["historical_position"]),
             "name": name,
@@ -188,8 +192,8 @@ def main() -> None:
         "season": "1993-94",
         "country": "Turquía",
         "source_policy": (
-            "BDFutbol 1993-94 squad pages; exactly 18 verified real season participants per club are staged. "
-            "No filler identities are invented. Identity reconciliation and specialist role provenance are materialised by the importer."
+            "BDFutbol 1993-94 squad pages; every available season-roster row is staged. "
+            "18 is only the minimum safety floor. No filler identities are invented. Identity reconciliation and specialist role provenance are materialised by the importer."
         ),
         "clubs": clubs,
     }

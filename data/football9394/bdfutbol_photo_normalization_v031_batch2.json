@@ -1,0 +1,115 @@
+{
+  "status": "complete",
+  "target_size": [
+    40,
+    55
+  ],
+  "format": "JPEG",
+  "mode": "RGB",
+  "converted": 7,
+  "skipped_existing": 0,
+  "unresolved": 0,
+  "invalid": 0,
+  "converted_rows": [
+    {
+      "source": ".photo_in2/9494093.jpg",
+      "destination": "frontend/public/historical9394/players/9494093.jpg",
+      "original_size": [
+        163,
+        264
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9494093
+    },
+    {
+      "source": ".photo_in2/9496352.jpg",
+      "destination": "frontend/public/historical9394/players/9496352.jpg",
+      "original_size": [
+        268,
+        432
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496352
+    },
+    {
+      "source": ".photo_in2/9496353.jpg",
+      "destination": "frontend/public/historical9394/players/9496353.jpg",
+      "original_size": [
+        300,
+        535
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496353
+    },
+    {
+      "source": ".photo_in2/9496354.jpg",
+      "destination": "frontend/public/historical9394/players/9496354.jpg",
+      "original_size": [
+        285,
+        435
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496354
+    },
+    {
+      "source": ".photo_in2/9496355.jpg",
+      "destination": "frontend/public/historical9394/players/9496355.jpg",
+      "original_size": [
+        131,
+        267
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496355
+    },
+    {
+      "source": ".photo_in2/9496357.jpg",
+      "destination": "frontend/public/historical9394/players/9496357.jpg",
+      "original_size": [
+        145,
+        235
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496357
+    },
+    {
+      "source": ".photo_in2/9496358.jpg",
+      "destination": "frontend/public/historical9394/players/9496358.jpg",
+      "original_size": [
+        175,
+        267
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496358
+    }
+  ],
+  "unresolved_files": [],
+  "invalid_files": []
+}

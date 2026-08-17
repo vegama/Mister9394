@@ -402,13 +402,14 @@ def parse_dob(raw: str):
         return None, None
 
 def main():
+    from expand_bel_tur_rus_gre_rosters_v030 import GREECE, ROLE, dob as extra_dob
     clubs=[]
     seen=[]
     for team_name, pos in ORDER:
         rows=[]; section_idx={k:0 for k in POSITIONS}
         raw_lines=[ln.strip() for ln in RAW[team_name].strip().splitlines() if ln.strip()]
-        if len(raw_lines)!=18:
-            raise RuntimeError(f'{team_name}: expected 18 rows, got {len(raw_lines)}')
+        if len(raw_lines)<18:
+            raise RuntimeError(f'{team_name}: below 18-player safety floor: {len(raw_lines)}')
         for line in raw_lines:
             parts=line.split('|')
             if len(parts)!=6: raise RuntimeError((team_name,line,parts))
@@ -422,16 +423,23 @@ def main():
                 'suggested_primary_role':role,'source_url':SOURCE,
             })
             seen.append((team_name,name,dob_raw))
+        have={r['rsssf_name'] for r in rows}
+        for extra in GREECE[team_name]:
+            ename,section,apps,goals,dob_raw,*country=extra
+            if ename in have: continue
+            bd,age=extra_dob(dob_raw);cid=country[0] if country else 47
+            rows.append({'rsssf_name':ename,'section':section,'appearances':apps,'goals':goals,'birth_date':bd,'historical_age_1993_94':age,'country_id':cid,'suggested_primary_role':ROLE[section],'source_url':SOURCE,'core_18_candidate':False,'source_roster_member':True})
+            have.add(ename)
         clubs.append({'name':team_name,'historical_position':pos,'rsssf_roster_url':SOURCE,'players':rows})
     out={
         'schema_version':1,'season':'1993-94','country':'Grecia','country_id':47,
         'league':'Alpha Ethniki','historical_runtime_league_id':930047,
         'source':{'name':'RSSSF Greece 1993/94','url':SOURCE,'roster_section':'ROSTERS','standings_note':'3 points for a win; 18 teams; bottom three relegated'},
-        'selection_policy':'18 real players per club, balanced by roster section; final-season club used for midseason transfers selected in the gate; no fictional filler',
+        'selection_policy':'Full available RSSSF 1993-94 season roster per club, including reserves/zero-appearance rows explicitly listed by the source; 18 is minimum only; no fictional filler',
         'clubs':clubs,
     }
-    if sum(len(c['players']) for c in clubs)!=324: raise RuntimeError('Greek staging cardinality failed')
+    if min(len(c['players']) for c in clubs)<18: raise RuntimeError('Greek staging minimum-depth gate failed')
     OUT.write_text(json.dumps(out,ensure_ascii=False,indent=2),encoding='utf8')
-    print(json.dumps({'clubs':len(clubs),'players':324,'min_per_club':min(len(c['players']) for c in clubs)},ensure_ascii=False))
+    print(json.dumps({'clubs':len(clubs),'players':sum(len(c['players']) for c in clubs),'min_per_club':min(len(c['players']) for c in clubs)},ensure_ascii=False))
 
 if __name__=='__main__': main()

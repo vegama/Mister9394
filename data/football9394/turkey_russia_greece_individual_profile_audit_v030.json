@@ -1,0 +1,153 @@
+{
+  "schema_version": 1,
+  "checkpoint": "0.30.0-full-rosters-1993-countries-profiles",
+  "status": "pass",
+  "profiles_curated": 12,
+  "portrait_profiles_ready_for_download": 12,
+  "role_corrections": 0,
+  "duplicates_merged": {
+    "9496361": 9495343,
+    "9496363": 9495325,
+    "9496379": 9495349,
+    "9496389": 9495338,
+    "9496395": 9495345,
+    "9496426": 9495353,
+    "9496484": 9495326,
+    "9497392": 503
+  },
+  "changes": [
+    {
+      "source_id": 9495349,
+      "display_name": "Hami Mandıralı",
+      "country": "Turkey",
+      "bdfutbol_id": "98308",
+      "birth_country_id": 84,
+      "international_country_id": 84,
+      "role_before": 17,
+      "role_after": 17,
+      "portrait_ready": true
+    },
+    {
+      "source_id": 9495338,
+      "display_name": "Rıza Çalımbay",
+      "country": "Turkey",
+      "bdfutbol_id": "42289",
+      "birth_country_id": 84,
+      "international_country_id": 84,
+      "role_before": 9,
+      "role_after": 9,
+      "portrait_ready": true
+    },
+    {
+      "source_id": 9496380,
+      "display_name": "Shota Arveladze",
+      "country": "Turkey",
+      "bdfutbol_id": "4135",
+      "birth_country_id": 104,
+      "international_country_id": 104,
+      "role_before": 17,
+      "role_after": 17,
+      "portrait_ready": true
+    },
+    {
+      "source_id": 9496385,
+      "display_name": "Archil Arveladze",
+      "country": "Turkey",
+      "bdfutbol_id": "90266",
+      "birth_country_id": 104,
+      "international_country_id": 104,
+      "role_before": 17,
+      "role_after": 17,
+      "portrait_ready": true
+    },
+    {
+      "source_id": 9496390,
+      "display_name": "Fani Tommy Madida",
+      "country": "Turkey",
+      "bdfutbol_id": "702745",
+      "birth_country_id": 78,
+      "international_country_id": 78,
+      "role_before": 7,
+      "role_after": 7,
+      "portrait_ready": true
+    },
+    {
+      "source_id": 9496391,
+      "display_name": "Oktay Derelioğlu",
+      "country": "Turkey",
+      "bdfutbol_id": "2101",
+      "birth_country_id": 84,
+      "international_country_id": 84,
+      "role_before": 17,
+      "role_after": 17,
+      "portrait_ready": true
+    },
+    {
+      "source_id": 9496392,
+      "display_name": "Osvaldo Darío Nartallo",
+      "country": "Turkey",
+      "bdfutbol_id": "702756",
+      "birth_country_id": 63,
+      "international_country_id": 63,
+      "role_before": 17,
+      "role_after": 17,
+      "portrait_ready": true
+    },
+    {
+      "source_id": 9496627,
+      "display_name": "Oleg Aleksandrovich Veretennikov",
+      "country": "Russia",
+      "bdfutbol_id": "66381",
+      "birth_country_id": 40,
+      "international_country_id": 40,
+      "role_before": 17,
+      "role_after": 17,
+      "portrait_ready": true
+    },
+    {
+      "source_id": 9496629,
+      "display_name": "Vladimir Viktorovich Niederhaus",
+      "country": "Russia",
+      "bdfutbol_id": "1159061",
+      "birth_country_id": 132,
+      "international_country_id": 132,
+      "role_before": 17,
+      "role_after": 17,
+      "portrait_ready": true
+    },
+    {
+      "source_id": 503,
+      "display_name": "Rashid Mamatkulovich Rakhimov",
+      "country": "Russia",
+      "bdfutbol_id": "2861",
+      "birth_country_id": 202,
+      "international_country_id": 40,
+      "role_before": 6,
+      "role_after": 6,
+      "portrait_ready": true
+    },
+    {
+      "source_id": 9494086,
+      "display_name": "Omari Mikhailovich Tetradze",
+      "country": "Russia",
+      "bdfutbol_id": "99702",
+      "birth_country_id": 104,
+      "international_country_id": 40,
+      "role_before": 3,
+      "role_after": 3,
+      "portrait_ready": true
+    },
+    {
+      "source_id": 9496942,
+      "display_name": "Giorgos Donis",
+      "country": "Greece",
+      "bdfutbol_id": "99153",
+      "birth_country_id": 4,
+      "international_country_id": 47,
+      "role_before": 12,
+      "role_after": 12,
+      "portrait_ready": true
+    }
+  ],
+  "country_context_file": "country_context_1993.json"
+}

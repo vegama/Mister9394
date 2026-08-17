@@ -63,3 +63,39 @@ Las 61 altas de esta tanda se contrastan primero contra el snapshot completo y d
 BDFutbol se utiliza como fuente de plantilla/uso histórico para la reconstrucción progresiva de los 52 clubes de primera división de estas tres competiciones. Las URLs exactas de cada plantilla están registradas en `data/football9394/bel_tur_rus_1993_94_league_foundations.json`. La página de Anderlecht 1993-94, por ejemplo, expone la plantilla y los minutos/partidos/goles de la temporada.
 
 Las filas de liga 52 (Bélgica), 57 (Turquía) y 15 (Rusia) del MDB **no** se consideran fuente de plantillas 1993-94: su `EdicionTemporada` es 2017. Permanecen desacopladas del registro histórico para impedir que una plantilla moderna se active con reglas antiguas. Las ligas históricas sólo se activarán cuando todos sus clubes dispongan de un mínimo de 18 futbolistas reales de 1993-94.
+
+
+## 0.32 · Metadatos históricos y perfiles turcos 1993-94
+
+Fuentes de temporada/plantilla usadas para posición, fecha de nacimiento y nacionalidad, conservando posición amplia como no resuelta cuando la fuente no permite una especialización segura:
+
+- Fenerbahçe 1993-94: https://www.transfermarkt.com.tr/fenerbahce-istanbul/kader/verein/36/saison_id/1993/plus/1
+- Samsunspor 1993-94: https://www.transfermarkt.com.tr/samsunspor/kader/verein/152/saison_id/1993/plus/1
+- Trabzonspor 1993-94: https://www.transfermarkt.com.tr/trabzonspor/kader/verein/449/saison_id/1993/plus/1
+- Bursaspor 1993-94: https://www.transfermarkt.com.tr/bursaspor/startseite/verein/20/saison_id/1993
+- Gençlerbirliği 1993-94: https://www.transfermarkt.com/genclerbirligi-ankara/startseite/verein/820/saison_id/1993
+- Kocaelispor 1993-94: https://www.transfermarkt.com.tr/kocaelispor/startseite/verein/120/saison_id/1993
+
+La TFF se usa como fuente primaria adicional para contratos/licencias y movimientos turcos cuando el staging de apariciones no basta. En particular, İsmail Ünal queda respaldado por su registro de Kocaelispor desde julio/agosto de 1993 y Fevzi Açıkgöz por su historial de registro/cesión posterior a Eskişehirspor. BDFutbol se usa para identidad individual, lugar de nacimiento y retratos cuando existe una ficha inequívoca. Los conflictos no se ocultan: Fevzi aparece como central/mediocentro defensivo en Transfermarkt y como centrocampista en BDFutbol; Ace Khuse queda fechado 08/09/1963 por concordancia BDFutbol + National-Football-Teams, conservando la discrepancia de 1968 de Transfermarkt en la auditoría.
+
+Los estadios belgas/turcos restantes se cierran con tablas de temporada y actas/partidos de 1993-94; aforo, anchura y longitud permanecen `null` cuando sólo se dispone de valores modernos. Para Rusia se priorizan nombres contemporáneos a 1993 encontrados en registros de partido sobre denominaciones comerciales posteriores.
+
+Los pools arbitrales de Turquía y Rusia se consideran completos sólo porque las apariciones de la fuente suman exactamente el calendario de liga completo (240 y 306 partidos respectivamente). Grecia permanece declarada como subconjunto 11/45, sin completar nombres por inferencia.
+
+## 0.33 · Gaziantepspor y siguiente capa turca 1993-94
+
+La plantilla específica 1993-94 de Gaziantepspor se cruza con perfiles individuales de BDFutbol. Transfermarkt se usa para la especialización de temporada y BDFutbol para identidad, nacimiento, posición amplia y retrato cuando existe una ficha inequívoca. Los conflictos se conservan explícitamente en vez de ocultarse:
+
+- Gaziantepspor 1993-94: https://www.transfermarkt.com.tr/gaziantepspor/startseite/verein/524/saison_id/1993
+- rendimiento de plantilla Gaziantepspor 1993-94: https://www.transfermarkt.com.tr/gaziantepspor-1969-2020-/leistungsdaten/verein/524/reldata/%261993/plus/1/sort/im_kader.desc
+- plantilla BDFutbol Gaziantepspor 1993-94: https://www.bdfutbol.com/en/t/t1993-9410300.html
+
+La primera pasada de alta confianza sobre los siguientes clubes usa:
+
+- Altay 1993-94: https://www.transfermarkt.com.tr/altay-sk/startseite/verein/2375/saison_id/1993
+- Ankaragücü 1993-94: https://www.transfermarkt.com.tr/mke-ankaragucu/startseite/verein/868/saison_id/1993
+- Kayserispor histórico / Kayseri Erciyesspor (1966-2018) 1993-94: https://www.transfermarkt.com.tr/kayseri-erciyesspor/startseite/verein/6894/saison_id/1993
+- Cafer Aydın, ficha TFF: https://www.tff.org/Default.aspx?kisiId=22532&pageId=526
+- Charyar Abdurakhmanovich Mukhadov, ficha BDFutbol: https://www.bdfutbol.com/en/j/j1178793.html
+
+Para jugadores nacidos en territorio de la antigua URSS se guarda el lugar de nacimiento histórico en texto. No se asigna automáticamente Ucrania/Rusia como país de nacimiento moderno cuando la fuente sitúa el nacimiento en la URSS; la nacionalidad internacional sí se registra por separado.

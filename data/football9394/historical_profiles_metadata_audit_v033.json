@@ -1,0 +1,1081 @@
+{
+  "schema_version": 1,
+  "checkpoint": "0.33.0-turkey-gaziantep-next-profiles",
+  "status": "pass",
+  "profile_gaps_before": {
+    "Russia": {
+      "active_players": 492,
+      "missing_birth_date": 465,
+      "missing_international_country_id": 455,
+      "missing_birth_country_id": 465,
+      "missing_height_cm": 479,
+      "missing_weight_kg": 483,
+      "profile_review_required": 0
+    },
+    "Greece": {
+      "active_players": 496,
+      "missing_birth_date": 34,
+      "missing_international_country_id": 0,
+      "missing_birth_country_id": 0,
+      "missing_height_cm": 491,
+      "missing_weight_kg": 494,
+      "profile_review_required": 2
+    },
+    "Belgium": {
+      "active_players": 406,
+      "missing_birth_date": 330,
+      "missing_international_country_id": 292,
+      "missing_birth_country_id": 302,
+      "missing_height_cm": 362,
+      "missing_weight_kg": 400,
+      "profile_review_required": 0
+    },
+    "Turkey": {
+      "active_players": 419,
+      "missing_birth_date": 227,
+      "missing_international_country_id": 226,
+      "missing_birth_country_id": 354,
+      "missing_height_cm": 371,
+      "missing_weight_kg": 408,
+      "profile_review_required": 22
+    }
+  },
+  "profile_gaps_after": {
+    "Russia": {
+      "active_players": 492,
+      "missing_birth_date": 465,
+      "missing_international_country_id": 455,
+      "missing_birth_country_id": 465,
+      "missing_height_cm": 479,
+      "missing_weight_kg": 483,
+      "profile_review_required": 0
+    },
+    "Greece": {
+      "active_players": 496,
+      "missing_birth_date": 34,
+      "missing_international_country_id": 0,
+      "missing_birth_country_id": 0,
+      "missing_height_cm": 491,
+      "missing_weight_kg": 494,
+      "profile_review_required": 2
+    },
+    "Belgium": {
+      "active_players": 406,
+      "missing_birth_date": 330,
+      "missing_international_country_id": 292,
+      "missing_birth_country_id": 302,
+      "missing_height_cm": 362,
+      "missing_weight_kg": 400,
+      "profile_review_required": 0
+    },
+    "Turkey": {
+      "active_players": 419,
+      "missing_birth_date": 194,
+      "missing_international_country_id": 193,
+      "missing_birth_country_id": 323,
+      "missing_height_cm": 360,
+      "missing_weight_kg": 407,
+      "profile_review_required": 30
+    }
+  },
+  "profiles": {
+    "curated_this_batch": 33,
+    "gaziantepspor_curated": 26,
+    "next_high_confidence_curated": 7,
+    "role_corrections_this_batch": 24,
+    "broad_only_exact_role_unresolved": 8,
+    "by_club": {
+      "Gaziantepspor": 26,
+      "Altay": 2,
+      "Ankaragücü": 3,
+      "Kayserispor": 2
+    },
+    "changes": [
+      {
+        "source_id": 9496453,
+        "before": {
+          "display_name": "Akçevre",
+          "role": 0,
+          "broad": "POR",
+          "position": "Goalkeeper",
+          "birth_date": null,
+          "international_country_id": null
+        },
+        "after": {
+          "display_name": "Metin Akçevre",
+          "role": 0,
+          "broad": "POR",
+          "position": "Goalkeeper",
+          "birth_date": "1967-03-03T00:00:00",
+          "international_country_id": 84
+        },
+        "role_changed": false,
+        "source_profile_position": "Goalkeeper",
+        "precision": "exact",
+        "club": "Gaziantepspor"
+      },
+      {
+        "source_id": 9496454,
+        "before": {
+          "display_name": "Okay",
+          "role": 1,
+          "broad": "DEF",
+          "position": "Right Back",
+          "birth_date": null,
+          "international_country_id": null
+        },
+        "after": {
+          "display_name": "İhsan Okay",
+          "role": 13,
+          "broad": "MED",
+          "position": "Left Midfielder",
+          "birth_date": "1969-08-07T00:00:00",
+          "international_country_id": 84
+        },
+        "role_changed": true,
+        "source_profile_position": "Left Midfield",
+        "precision": "exact",
+        "club": "Gaziantepspor"
+      },
+      {
+        "source_id": 9496455,
+        "before": {
+          "display_name": "Kumbasar",
+          "role": 3,
+          "broad": "DEF",
+          "position": "Centre Back",
+          "birth_date": null,
+          "international_country_id": null
+        },
+        "after": {
+          "display_name": "Haşim Cem Kumbasar",
+          "role": 3,
+          "broad": "DEF",
+          "position": "Defender (exact role unresolved)",
+          "birth_date": "1967-08-16T00:00:00",
+          "international_country_id": 84
+        },
+        "role_changed": false,
+        "source_profile_position": "Defender",
+        "precision": "broad_only",
+        "club": "Gaziantepspor"
+      },
+      {
+        "source_id": 9496456,
+        "before": {
+          "display_name": "Komphela",
+          "role": 3,
+          "broad": "DEF",
+          "position": "Centre Back",
+          "birth_date": null,
+          "international_country_id": null
+        },
+        "after": {
+          "display_name": "Steven Mbuyi Komphela",
+          "role": 3,
+          "broad": "DEF",
+          "position": "Centre Back",
+          "birth_date": "1967-07-01T00:00:00",
+          "international_country_id": 78
+        },
+        "role_changed": false,
+        "source_profile_position": "Centre-Back",
+        "precision": "exact",
+        "club": "Gaziantepspor"
+      },
+      {
+        "source_id": 9496457,
+        "before": {
+          "display_name": "Uçar",
+          "role": 2,
+          "broad": "DEF",
+          "position": "Left Back",
+          "birth_date": null,
+          "international_country_id": null
+        },
+        "after": {
+          "display_name": "Turgut Uçar",
+          "role": 2,
+          "broad": "DEF",
+          "position": "Defender (exact role unresolved)",
+          "birth_date": "1964-03-10T00:00:00",
+          "international_country_id": 84
+        },
+        "role_changed": false,
+        "source_profile_position": "Defender",
+        "precision": "broad_only",
+        "club": "Gaziantepspor"
+      },
+      {
+        "source_id": 9496458,
+        "before": {
+          "display_name": "Fidan",
+          "role": 9,
+          "broad": "MED",
+          "position": "Right Midfielder",
+          "birth_date": null,
+          "international_country_id": null
+        },
+        "after": {
+          "display_name": "Şenol Fidan",
+          "role": 9,
+          "broad": "MED",
+          "position": "Right Midfielder",
+          "birth_date": "1966-01-29T00:00:00",
+          "international_country_id": 84
+        },
+        "role_changed": false,
+        "source_profile_position": "Right Midfield",
+        "precision": "exact",
+        "club": "Gaziantepspor"
+      },
+      {
+        "source_id": 9496459,
+        "before": {
+          "display_name": "Özer",
+          "role": 7,
+          "broad": "MED",
+          "position": "Centre Midfielder",
+          "birth_date": null,
+          "international_country_id": null
+        },
+        "after": {
+          "display_name": "Mustafa Özer",
+          "role": 1,
+          "broad": "DEF",
+          "position": "Right Back",
+          "birth_date": "1969-08-27T00:00:00",
+          "international_country_id": 84
+        },
+        "role_changed": true,
+        "source_profile_position": "Right-Back",
+        "precision": "exact",
+        "club": "Gaziantepspor"
+      },
+      {
+        "source_id": 9496460,
+        "before": {
+          "display_name": "Sönmez",
+          "role": 7,
+          "broad": "MED",
+          "position": "Centre Midfielder",
+          "birth_date": null,
+          "international_country_id": null
+        },
+        "after": {
+          "display_name": "Kemal Sönmez",
+          "role": 3,
+          "broad": "DEF",
+          "position": "Centre Back",
+          "birth_date": "1966-10-15T00:00:00",
+          "international_country_id": 84
+        },
+        "role_changed": true,
+        "source_profile_position": "Centre-Back",
+        "precision": "exact",
+        "club": "Gaziantepspor"
+      },
+      {
+        "source_id": 9496461,
+        "before": {
+          "display_name": "Çelik",
+          "role": 13,
+          "broad": "MED",
+          "position": "Left Midfielder",
+          "birth_date": null,
+          "international_country_id": null
+        },
+        "after": {
+          "display_name": "Hasan Çelik",
+          "role": 17,
+          "broad": "DEL",
+          "position": "Centre Forward",
+          "birth_date": "1968-03-27T00:00:00",
+          "international_country_id": 84
+        },
+        "role_changed": true,
+        "source_profile_position": "Centre-Forward",
+        "precision": "exact",
+        "club": "Gaziantepspor"
+      },
+      {
+        "source_id": 9496462,
+        "before": {
+          "display_name": "Bolić",
+          "role": 17,
+          "broad": "DEL",
+          "position": "Centre Forward",
+          "birth_date": null,
+          "international_country_id": null
+        },
+        "after": {
+          "display_name": "Elvir Bolić",
+          "role": 17,
+          "broad": "DEL",
+          "position": "Centre Forward",
+          "birth_date": "1971-10-10T00:00:00",
+          "international_country_id": 20
+        },
+        "role_changed": false,
+        "source_profile_position": "Centre-Forward",
+        "precision": "exact",
+        "club": "Gaziantepspor"
+      },
+      {
+        "source_id": 9496463,
+        "before": {
+          "display_name": "Monteiro",
+          "role": 17,
+          "broad": "DEL",
+          "position": "Centre Forward",
+          "birth_date": null,
+          "international_country_id": null
+        },
+        "after": {
+          "display_name": "Marcello Thomas Monteiro",
+          "role": 17,
+          "broad": "DEL",
+          "position": "Centre Forward",
+          "birth_date": "1966-11-16T00:00:00",
+          "international_country_id": 62
+        },
+        "role_changed": false,
+        "source_profile_position": "Centre-Forward",
+        "precision": "exact",
+        "club": "Gaziantepspor"
+      },
+      {
+        "source_id": 9496464,
+        "before": {
+          "display_name": "Bilir",
+          "role": 0,
+          "broad": "POR",
+          "position": "Goalkeeper",
+          "birth_date": null,
+          "international_country_id": null
+        },
+        "after": {
+          "display_name": "Erol Bilir",
+          "role": 0,
+          "broad": "POR",
+          "position": "Goalkeeper",
+          "birth_date": "1966-08-03T00:00:00",
+          "international_country_id": 84
+        },
+        "role_changed": false,
+        "source_profile_position": "Goalkeeper",
+        "precision": "exact",
+        "club": "Gaziantepspor"
+      },
+      {
+        "source_id": 9496465,
+        "before": {
+          "display_name": "Toptaş",
+          "role": 1,
+          "broad": "DEF",
+          "position": "Right Back",
+          "birth_date": null,
+          "international_country_id": null
+        },
+        "after": {
+          "display_name": "Kubilay Toptaş",
+          "role": 17,
+          "broad": "DEL",
+          "position": "Centre Forward",
+          "birth_date": "1972-12-03T00:00:00",
+          "international_country_id": 84
+        },
+        "role_changed": true,
+        "source_profile_position": "Centre-Forward",
+        "precision": "exact",
+        "club": "Gaziantepspor"
+      },
+      {
+        "source_id": 9496466,
+        "before": {
+          "display_name": "Barut",
+          "role": 7,
+          "broad": "MED",
+          "position": "Centre Midfielder",
+          "birth_date": null,
+          "international_country_id": null
+        },
+        "after": {
+          "display_name": "Necat Barut",
+          "role": 3,
+          "broad": "DEF",
+          "position": "Centre Back",
+          "birth_date": "1965-10-01T00:00:00",
+          "international_country_id": 84
+        },
+        "role_changed": true,
+        "source_profile_position": "Centre-Back",
+        "precision": "exact",
+        "club": "Gaziantepspor"
+      },
+      {
+        "source_id": 9496467,
+        "before": {
+          "display_name": "Karaçam",
+          "role": 9,
+          "broad": "MED",
+          "position": "Right Midfielder",
+          "birth_date": null,
+          "international_country_id": null
+        },
+        "after": {
+          "display_name": "Yavuz Karaçam",
+          "role": 3,
+          "broad": "DEF",
+          "position": "Defender (exact role unresolved)",
+          "birth_date": "1966-11-01T00:00:00",
+          "international_country_id": 84
+        },
+        "role_changed": true,
+        "source_profile_position": "Defender",
+        "precision": "broad_only",
+        "club": "Gaziantepspor"
+      },
+      {
+        "source_id": 9496468,
+        "before": {
+          "display_name": "Özer",
+          "role": 8,
+          "broad": "MED",
+          "position": "Attacking Midfielder",
+          "birth_date": null,
+          "international_country_id": null
+        },
+        "after": {
+          "display_name": "Hasan Özer",
+          "role": 17,
+          "broad": "DEL",
+          "position": "Centre Forward",
+          "birth_date": "1974-10-01T00:00:00",
+          "international_country_id": 84
+        },
+        "role_changed": true,
+        "source_profile_position": "Centre-Forward",
+        "precision": "exact",
+        "club": "Gaziantepspor"
+      },
+      {
+        "source_id": 9496469,
+        "before": {
+          "display_name": "Moloi",
+          "role": 12,
+          "broad": "DEL",
+          "position": "Right Winger",
+          "birth_date": null,
+          "international_country_id": null
+        },
+        "after": {
+          "display_name": "Teboho Claude Moloi",
+          "role": 7,
+          "broad": "MED",
+          "position": "Midfielder (exact role unresolved)",
+          "birth_date": "1968-07-02T00:00:00",
+          "international_country_id": 78
+        },
+        "role_changed": true,
+        "source_profile_position": "Midfielder",
+        "precision": "broad_only",
+        "club": "Gaziantepspor"
+      },
+      {
+        "source_id": 9496470,
+        "before": {
+          "display_name": "Yungul",
+          "role": 3,
+          "broad": "DEF",
+          "position": "Centre Back",
+          "birth_date": null,
+          "international_country_id": null
+        },
+        "after": {
+          "display_name": "Tayfun Yungul",
+          "role": 7,
+          "broad": "MED",
+          "position": "Centre Midfielder",
+          "birth_date": "1973-03-21T00:00:00",
+          "international_country_id": 84
+        },
+        "role_changed": true,
+        "source_profile_position": "Central Midfield",
+        "precision": "exact",
+        "club": "Gaziantepspor"
+      },
+      {
+        "source_id": 9497272,
+        "before": {
+          "display_name": "Gönülacar",
+          "role": 1,
+          "broad": "DEF",
+          "position": "Right Back",
+          "birth_date": null,
+          "international_country_id": null
+        },
+        "after": {
+          "display_name": "Mehmet Gönülaçar",
+          "role": 17,
+          "broad": "DEL",
+          "position": "Centre Forward",
+          "birth_date": "1972-03-03T00:00:00",
+          "international_country_id": 84
+        },
+        "role_changed": true,
+        "source_profile_position": "Centre-Forward",
+        "precision": "exact",
+        "club": "Gaziantepspor"
+      },
+      {
+        "source_id": 9497273,
+        "before": {
+          "display_name": "Sarı",
+          "role": 7,
+          "broad": "MED",
+          "position": "Centre Midfielder",
+          "birth_date": null,
+          "international_country_id": null
+        },
+        "after": {
+          "display_name": "Hüseyin Sarı",
+          "role": 3,
+          "broad": "DEF",
+          "position": "Centre Back",
+          "birth_date": "1974-12-09T00:00:00",
+          "international_country_id": 84
+        },
+        "role_changed": true,
+        "source_profile_position": "Centre-Back",
+        "precision": "exact",
+        "club": "Gaziantepspor"
+      },
+      {
+        "source_id": 9497274,
+        "before": {
+          "display_name": "Yücedağ",
+          "role": 9,
+          "broad": "MED",
+          "position": "Right Midfielder",
+          "birth_date": null,
+          "international_country_id": null
+        },
+        "after": {
+          "display_name": "Mustafa Yücedağ",
+          "role": 8,
+          "broad": "MED",
+          "position": "Attacking Midfielder",
+          "birth_date": "1966-04-25T00:00:00",
+          "international_country_id": 84
+        },
+        "role_changed": true,
+        "source_profile_position": "Attacking Midfield",
+        "precision": "exact",
+        "club": "Gaziantepspor"
+      },
+      {
+        "source_id": 9497275,
+        "before": {
+          "display_name": "Yiğit",
+          "role": 8,
+          "broad": "MED",
+          "position": "Attacking Midfielder",
+          "birth_date": null,
+          "international_country_id": null
+        },
+        "after": {
+          "display_name": "Abdussamet Yiğit",
+          "role": 3,
+          "broad": "DEF",
+          "position": "Defender (exact role unresolved)",
+          "birth_date": "1975-02-02T00:00:00",
+          "international_country_id": 84
+        },
+        "role_changed": true,
+        "source_profile_position": "Defender",
+        "precision": "broad_only",
+        "club": "Gaziantepspor"
+      },
+      {
+        "source_id": 9497276,
+        "before": {
+          "display_name": "Murat",
+          "role": 12,
+          "broad": "DEL",
+          "position": "Right Winger",
+          "birth_date": null,
+          "international_country_id": null
+        },
+        "after": {
+          "display_name": "Murat Deniz",
+          "role": 17,
+          "broad": "DEL",
+          "position": "Forward (exact role unresolved)",
+          "birth_date": "1977-05-05T00:00:00",
+          "international_country_id": 84
+        },
+        "role_changed": true,
+        "source_profile_position": "Forward",
+        "precision": "broad_only",
+        "club": "Gaziantepspor"
+      },
+      {
+        "source_id": 9497277,
+        "before": {
+          "display_name": "Oğur",
+          "role": 3,
+          "broad": "DEF",
+          "position": "Centre Back",
+          "birth_date": null,
+          "international_country_id": null
+        },
+        "after": {
+          "display_name": "Mustafa Oğur",
+          "role": 7,
+          "broad": "MED",
+          "position": "Midfielder (exact role unresolved)",
+          "birth_date": "1975-05-12T00:00:00",
+          "international_country_id": 84
+        },
+        "role_changed": true,
+        "source_profile_position": "Midfielder",
+        "precision": "broad_only",
+        "club": "Gaziantepspor"
+      },
+      {
+        "source_id": 9497278,
+        "before": {
+          "display_name": "Turgut",
+          "role": 1,
+          "broad": "DEF",
+          "position": "Right Back",
+          "birth_date": null,
+          "international_country_id": null
+        },
+        "after": {
+          "display_name": "Burhanettin Turgut",
+          "role": 3,
+          "broad": "DEF",
+          "position": "Centre Back",
+          "birth_date": "1970-12-01T00:00:00",
+          "international_country_id": 84
+        },
+        "role_changed": true,
+        "source_profile_position": "Centre-Back",
+        "precision": "exact",
+        "club": "Gaziantepspor"
+      },
+      {
+        "source_id": 9497279,
+        "before": {
+          "display_name": "Şenyurt",
+          "role": 7,
+          "broad": "MED",
+          "position": "Centre Midfielder",
+          "birth_date": null,
+          "international_country_id": null
+        },
+        "after": {
+          "display_name": "Ersin Şenyurt",
+          "role": 7,
+          "broad": "MED",
+          "position": "Midfielder (exact role unresolved)",
+          "birth_date": "1971-12-20T00:00:00",
+          "international_country_id": 84
+        },
+        "role_changed": false,
+        "source_profile_position": "Midfielder",
+        "precision": "broad_only",
+        "club": "Gaziantepspor"
+      },
+      {
+        "source_id": 9496491,
+        "before": {
+          "display_name": "Akuygur",
+          "role": 3,
+          "broad": "DEF",
+          "position": "Centre Back",
+          "birth_date": null,
+          "international_country_id": null
+        },
+        "after": {
+          "display_name": "Ahmet Akuygur",
+          "role": 1,
+          "broad": "DEF",
+          "position": "Right Back",
+          "birth_date": "1967-05-29T00:00:00",
+          "international_country_id": 84
+        },
+        "role_changed": true,
+        "source_profile_position": "Right-Back",
+        "precision": "exact",
+        "club": "Altay"
+      },
+      {
+        "source_id": 9496502,
+        "before": {
+          "display_name": "Shelepnytskyi",
+          "role": 8,
+          "broad": "MED",
+          "position": "Attacking Midfielder",
+          "birth_date": null,
+          "international_country_id": null
+        },
+        "after": {
+          "display_name": "Yuriy Shelepnytskyi",
+          "role": 6,
+          "broad": "MED",
+          "position": "Defensive Midfielder",
+          "birth_date": "1965-01-18T00:00:00",
+          "international_country_id": 85
+        },
+        "role_changed": true,
+        "source_profile_position": "Defensive Midfield",
+        "precision": "exact",
+        "club": "Altay"
+      },
+      {
+        "source_id": 9496517,
+        "before": {
+          "display_name": "Yıldırım",
+          "role": 16,
+          "broad": "DEL",
+          "position": "Left Winger",
+          "birth_date": null,
+          "international_country_id": null
+        },
+        "after": {
+          "display_name": "Mehmet Yıldırım",
+          "role": 17,
+          "broad": "DEL",
+          "position": "Centre Forward",
+          "birth_date": "1972-09-15T00:00:00",
+          "international_country_id": 84
+        },
+        "role_changed": true,
+        "source_profile_position": "Centre-Forward",
+        "precision": "exact",
+        "club": "Ankaragücü"
+      },
+      {
+        "source_id": 9496519,
+        "before": {
+          "display_name": "Matveev",
+          "role": 2,
+          "broad": "DEF",
+          "position": "Left Back",
+          "birth_date": null,
+          "international_country_id": null
+        },
+        "after": {
+          "display_name": "Yuriy Matveev",
+          "role": 17,
+          "broad": "DEL",
+          "position": "Centre Forward",
+          "birth_date": "1967-06-08T00:00:00",
+          "international_country_id": 40
+        },
+        "role_changed": true,
+        "source_profile_position": "Centre-Forward",
+        "precision": "exact",
+        "club": "Ankaragücü"
+      },
+      {
+        "source_id": 9497305,
+        "before": {
+          "display_name": "Mukhadov",
+          "role": 13,
+          "broad": "MED",
+          "position": "Left Midfielder",
+          "birth_date": null,
+          "international_country_id": null
+        },
+        "after": {
+          "display_name": "Charyar Abdurakhmanovich Mukhadov",
+          "role": 17,
+          "broad": "DEL",
+          "position": "Centre Forward",
+          "birth_date": "1969-11-12T00:00:00",
+          "international_country_id": 206
+        },
+        "role_changed": true,
+        "source_profile_position": "Centre-Forward",
+        "precision": "exact",
+        "club": "Ankaragücü"
+      },
+      {
+        "source_id": 9497315,
+        "before": {
+          "display_name": "Tanrıbilir",
+          "role": 7,
+          "broad": "MED",
+          "position": "Centre Midfielder",
+          "birth_date": null,
+          "international_country_id": null
+        },
+        "after": {
+          "display_name": "Öztürk Tanrıbilir",
+          "role": 0,
+          "broad": "POR",
+          "position": "Goalkeeper",
+          "birth_date": "1966-05-03T00:00:00",
+          "international_country_id": 84
+        },
+        "role_changed": true,
+        "source_profile_position": "Goalkeeper",
+        "precision": "exact",
+        "club": "Kayserispor"
+      },
+      {
+        "source_id": 9497314,
+        "before": {
+          "display_name": "Aydın",
+          "role": 1,
+          "broad": "DEF",
+          "position": "Right Back",
+          "birth_date": null,
+          "international_country_id": null
+        },
+        "after": {
+          "display_name": "Cafer Aydın",
+          "role": 17,
+          "broad": "DEL",
+          "position": "Centre Forward",
+          "birth_date": "1971-11-17T00:00:00",
+          "international_country_id": 84
+        },
+        "role_changed": true,
+        "source_profile_position": "Centre-Forward",
+        "precision": "exact",
+        "club": "Kayserispor"
+      }
+    ]
+  },
+  "photos": {
+    "new_normalized_bdfutbol_portraits": 18,
+    "format": "JPEG RGB 40x55",
+    "rows": [
+      {
+        "source_id": 9496453,
+        "display_name": "Metin Akçevre",
+        "photo_url": "https://www.bdfutbol.com/i/j/702570.jpg?v=1705344010",
+        "profile_url": "https://www.bdfutbol.com/en/j/j702570.html",
+        "asset": "frontend/public/historical9394/players/9496453.jpg",
+        "width": 40,
+        "height": 55,
+        "format": "JPEG",
+        "mode": "RGB"
+      },
+      {
+        "source_id": 9496455,
+        "display_name": "Haşim Cem Kumbasar",
+        "photo_url": "https://www.bdfutbol.com/i/j/1179967.jpg?v=1782644741",
+        "profile_url": "https://www.bdfutbol.com/en/j/j1179967.html",
+        "asset": "frontend/public/historical9394/players/9496455.jpg",
+        "width": 40,
+        "height": 55,
+        "format": "JPEG",
+        "mode": "RGB"
+      },
+      {
+        "source_id": 9496456,
+        "display_name": "Steven Mbuyi Komphela",
+        "photo_url": "https://www.bdfutbol.com/i/j/1174975.jpg?v=1780345596",
+        "profile_url": "https://www.bdfutbol.com/en/j/j1174975.html",
+        "asset": "frontend/public/historical9394/players/9496456.jpg",
+        "width": 40,
+        "height": 55,
+        "format": "JPEG",
+        "mode": "RGB"
+      },
+      {
+        "source_id": 9496457,
+        "display_name": "Turgut Uçar",
+        "photo_url": "https://www.bdfutbol.com/i/j/702771.jpg?v=1706693891",
+        "profile_url": "https://www.bdfutbol.com/en/j/j702771.html",
+        "asset": "frontend/public/historical9394/players/9496457.jpg",
+        "width": 40,
+        "height": 55,
+        "format": "JPEG",
+        "mode": "RGB"
+      },
+      {
+        "source_id": 9496458,
+        "display_name": "Şenol Fidan",
+        "photo_url": "https://www.bdfutbol.com/i/j/55345.jpg?v=1676805008",
+        "profile_url": "https://www.bdfutbol.com/en/j/j55345.html",
+        "asset": "frontend/public/historical9394/players/9496458.jpg",
+        "width": 40,
+        "height": 55,
+        "format": "JPEG",
+        "mode": "RGB"
+      },
+      {
+        "source_id": 9496460,
+        "display_name": "Kemal Sönmez",
+        "photo_url": "https://www.bdfutbol.com/i/j/1141594b.jpg?v=1746560319",
+        "profile_url": "https://www.bdfutbol.com/en/j/j1141594.html",
+        "asset": "frontend/public/historical9394/players/9496460.jpg",
+        "width": 40,
+        "height": 55,
+        "format": "JPEG",
+        "mode": "RGB"
+      },
+      {
+        "source_id": 9496462,
+        "display_name": "Elvir Bolić",
+        "photo_url": "https://www.bdfutbol.com/i/j/661.jpg?v=1275150842",
+        "profile_url": "https://www.bdfutbol.com/en/j/j661.html",
+        "asset": "frontend/public/historical9394/players/9496462.jpg",
+        "width": 40,
+        "height": 55,
+        "format": "JPEG",
+        "mode": "RGB"
+      },
+      {
+        "source_id": 9496463,
+        "display_name": "Marcello Thomas Monteiro",
+        "photo_url": "https://www.bdfutbol.com/i/j/1176268.jpg?v=1780345599",
+        "profile_url": "https://www.bdfutbol.com/en/j/j1176268.html",
+        "asset": "frontend/public/historical9394/players/9496463.jpg",
+        "width": 40,
+        "height": 55,
+        "format": "JPEG",
+        "mode": "RGB"
+      },
+      {
+        "source_id": 9496465,
+        "display_name": "Kubilay Toptaş",
+        "photo_url": "https://www.bdfutbol.com/i/j/55585.jpg?v=1677405428",
+        "profile_url": "https://www.bdfutbol.com/en/j/j55585.html",
+        "asset": "frontend/public/historical9394/players/9496465.jpg",
+        "width": 40,
+        "height": 55,
+        "format": "JPEG",
+        "mode": "RGB"
+      },
+      {
+        "source_id": 9496466,
+        "display_name": "Necat Barut",
+        "photo_url": "https://www.bdfutbol.com/i/j/1176410.jpg?v=1780345599",
+        "profile_url": "https://www.bdfutbol.com/en/j/j1176410.html",
+        "asset": "frontend/public/historical9394/players/9496466.jpg",
+        "width": 40,
+        "height": 55,
+        "format": "JPEG",
+        "mode": "RGB"
+      },
+      {
+        "source_id": 9496467,
+        "display_name": "Yavuz Karaçam",
+        "photo_url": "https://www.bdfutbol.com/i/j/1179962.jpg?v=1782644192",
+        "profile_url": "https://www.bdfutbol.com/en/j/j1179962.html",
+        "asset": "frontend/public/historical9394/players/9496467.jpg",
+        "width": 40,
+        "height": 55,
+        "format": "JPEG",
+        "mode": "RGB"
+      },
+      {
+        "source_id": 9496468,
+        "display_name": "Hasan Özer",
+        "photo_url": "https://www.bdfutbol.com/i/j/54567.jpg?v=1686210822",
+        "profile_url": "https://www.bdfutbol.com/en/j/j54567.html",
+        "asset": "frontend/public/historical9394/players/9496468.jpg",
+        "width": 40,
+        "height": 55,
+        "format": "JPEG",
+        "mode": "RGB"
+      },
+      {
+        "source_id": 9496469,
+        "display_name": "Teboho Claude Moloi",
+        "photo_url": "https://www.bdfutbol.com/i/j/1179966.jpg?v=1782644577",
+        "profile_url": "https://www.bdfutbol.com/en/j/j1179966.html",
+        "asset": "frontend/public/historical9394/players/9496469.jpg",
+        "width": 40,
+        "height": 55,
+        "format": "JPEG",
+        "mode": "RGB"
+      },
+      {
+        "source_id": 9496470,
+        "display_name": "Tayfun Yungul",
+        "photo_url": "https://www.bdfutbol.com/i/j/1125764.jpg?v=1719252802",
+        "profile_url": "https://www.bdfutbol.com/en/j/j1125764.html",
+        "asset": "frontend/public/historical9394/players/9496470.jpg",
+        "width": 40,
+        "height": 55,
+        "format": "JPEG",
+        "mode": "RGB"
+      },
+      {
+        "source_id": 9497272,
+        "display_name": "Mehmet Gönülaçar",
+        "photo_url": "https://www.bdfutbol.com/i/j/58014.jpg?v=1690975940",
+        "profile_url": "https://www.bdfutbol.com/en/j/j58014.html",
+        "asset": "frontend/public/historical9394/players/9497272.jpg",
+        "width": 40,
+        "height": 55,
+        "format": "JPEG",
+        "mode": "RGB"
+      },
+      {
+        "source_id": 9497273,
+        "display_name": "Hüseyin Sarı",
+        "photo_url": "https://www.bdfutbol.com/i/j/702571.jpg?v=1705344023",
+        "profile_url": "https://www.bdfutbol.com/en/j/j702571.html",
+        "asset": "frontend/public/historical9394/players/9497273.jpg",
+        "width": 40,
+        "height": 55,
+        "format": "JPEG",
+        "mode": "RGB"
+      },
+      {
+        "source_id": 9497274,
+        "display_name": "Mustafa Yücedağ",
+        "photo_url": "https://www.bdfutbol.com/i/j/702824.jpg?v=1707380797",
+        "profile_url": "https://www.bdfutbol.com/en/j/j702824.html",
+        "asset": "frontend/public/historical9394/players/9497274.jpg",
+        "width": 40,
+        "height": 55,
+        "format": "JPEG",
+        "mode": "RGB"
+      },
+      {
+        "source_id": 9497276,
+        "display_name": "Murat Deniz",
+        "photo_url": "https://www.bdfutbol.com/i/j/1169863.jpg?v=1783001487",
+        "profile_url": "https://www.bdfutbol.com/en/j/j1169863.html",
+        "asset": "frontend/public/historical9394/players/9497276.jpg",
+        "width": 40,
+        "height": 55,
+        "format": "JPEG",
+        "mode": "RGB"
+      }
+    ],
+    "total_bundled_normalized_bdfutbol": 54
+  },
+  "biographies": {
+    "active_players": 1813,
+    "biographies_written": 1813,
+    "changed_from_v032": 33,
+    "multi_club_identities": 7,
+    "missing_stage_rows": 0
+  },
+  "identity_integrity": {
+    "registry_rows": 2107,
+    "queue_rows": 2107,
+    "unique_registry_ids": 2107,
+    "unique_queue_ids": 2107,
+    "sets_match": true
+  },
+  "source_policy": [
+    "Season-specific specialist roles override old heuristic staging when corroborated.",
+    "BDFutbol broad positions are retained as explicit conflicts when they disagree with a season-specific specialist role.",
+    "Former-USSR birthplace text is stored without inventing a modern birth_country_id.",
+    "Broad-only source positions remain profile_review_required instead of being silently specialized.",
+    "No basketball 75/25 rule is used anywhere in football player construction or correction."
+  ]
+}

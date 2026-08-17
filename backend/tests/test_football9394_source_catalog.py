@@ -6,8 +6,8 @@ def test_deep_source_catalog_recovers_entities_skipped_by_legacy_importer():
     catalog = default_source_catalog()
     assert catalog.counts["managers"] == 3199
     assert catalog.counts["tactics"] == 123
-    assert catalog.counts["referees"] == 3511
-    assert catalog.counts["stadiums"] == 2094
+    assert catalog.counts["referees"] == 3614
+    assert catalog.counts["stadiums"] == 2148
     assert catalog.counts["cities"] == 5402
     assert catalog.counts["regions"] == 312
     assert catalog.counts["continents"] == 6
@@ -24,7 +24,7 @@ def test_every_domestic_1993_manager_reference_resolves_to_recovered_manager():
     catalog = default_source_catalog()
     active_league_ids = {int(row["source_id"]) for row in universe.payload["leagues"]}
     domestic_teams = [team for team in universe.payload["teams"] if team.get("league_id") in active_league_ids]
-    assert len(domestic_teams) == 410
+    assert len(domestic_teams) == 480
     domestic_manager_ids = {int(team["manager_id"]) for team in domestic_teams if isinstance(team.get("manager_id"), int)}
     assert len(domestic_manager_ids) == 404
     assert not [manager_id for manager_id in domestic_manager_ids if catalog.manager(manager_id) is None]
@@ -50,8 +50,11 @@ def test_every_historical_league_has_a_referee_pool_in_the_source():
     universe = default_runtime_snapshot()
     catalog = default_source_catalog()
     historical_league_ids = {int(row["source_id"]) for row in universe.payload["leagues"]}
-    assert len(historical_league_ids) == 23
-    assert not [league_id for league_id in historical_league_ids if not catalog.referees_for_league(league_id)]
+    assert len(historical_league_ids) == 27
+    assert {league_id for league_id in historical_league_ids if not catalog.referees_for_league(league_id)} == set()
+    leagues={int(row["source_id"]):row for row in universe.payload["leagues"]}
+    assert leagues[930015]["source_rule_hints"]["referee_pool_size"] == 33
+    assert leagues[930057]["source_rule_hints"]["referee_pool_size"] == 34
 
 
 def test_active_clubs_have_stadium_data_and_spain_has_weighted_name_pool():
@@ -59,7 +62,11 @@ def test_active_clubs_have_stadium_data_and_spain_has_weighted_name_pool():
     catalog = default_source_catalog()
     active_teams = [team for team in universe.payload["teams"] if isinstance(team.get("league_id"), int)]
     missing = [team["source_id"] for team in active_teams if catalog.stadium(team.get("stadium_id")) is None]
-    assert not missing
+    assert set(missing) == {
+        int(team["source_id"]) for team in active_teams
+        if team.get("venue_source_status") == "unresolved_historical_1993_94"
+    }
+    assert all(team.get("league_id") in {930015,930047,930052,930057} for team in active_teams if int(team["source_id"]) in set(missing))
     pool = catalog.name_pool(11)
     assert len(pool["first_names"]) > 500
     assert len(pool["surnames"]) > 2000
