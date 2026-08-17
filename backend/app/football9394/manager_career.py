@@ -645,7 +645,10 @@ class ManagerCareerRuntime9394:
     def _auto_selection(self) -> dict[str, list[int]]:
         tactics = FootballTactics9394(**{**_default_tactics(), **(self.state.get("tactics") or {})})
         controlled=int(self.state["team_id"]);rule=self._domestic_foreign_rule(controlled)
-        predicate=(lambda row:is_foreign_player(row,home_country_id=rule.home_country_id,continental=False)) if rule is not None else None
+        predicate=(lambda row:is_foreign_player(
+            row,home_country_id=rule.home_country_id,continental=False,
+            domestic_equivalent_country_ids=rule.domestic_equivalent_country_ids,
+        )) if rule is not None else None
         sheet = build_snapshot_team_sheet(self._career_universe, controlled, tactics=tactics,foreign_predicate=predicate,max_foreign_starters=(rule.max_starting if rule else None),max_foreign_squad=(rule.max_squad if rule else None))
         return {"starter_ids": [int(p.id) for p in sheet.starters], "bench_ids": [int(p.id) for p in sheet.bench]}
 
@@ -1053,7 +1056,10 @@ class ManagerCareerRuntime9394:
             sheet.validate(LAWS_1993_94)
             return sheet
         rule=foreign_rule or self._domestic_foreign_rule(int(team_id))
-        predicate=(lambda row:is_foreign_player(row,home_country_id=rule.home_country_id,continental=bool(getattr(rule,"continental",False)))) if rule is not None else None
+        predicate=(lambda row:is_foreign_player(
+            row,home_country_id=rule.home_country_id,continental=bool(getattr(rule,"continental",False)),
+            domestic_equivalent_country_ids=rule.domestic_equivalent_country_ids,
+        )) if rule is not None else None
         try:
             sheet = build_snapshot_team_sheet(self._career_universe, team_id, tactics=tactical,foreign_predicate=predicate,max_foreign_starters=(rule.max_starting if rule else None),max_foreign_squad=(rule.max_squad if rule else None),allow_emergency_outfield_goalkeeper=True,coach_profile=coach_profile)
             emergency_injury = False
@@ -1661,7 +1667,7 @@ class ManagerCareerRuntime9394:
             signing_allowed=lambda buyer,player:self._signing_eligibility(int(buyer),player,day=day)[0],
             attraction_score=lambda buyer,seller,player:(float(club_status(self.state,int(buyer)).get("score") or 50)-float(club_status(self.state,int(seller)).get("score") or 50))/25.0,
             foreign_limit_getter=lambda tid:(self._domestic_foreign_rule(int(tid)).max_starting if self._domestic_foreign_rule(int(tid)) is not None else None),
-            foreign_predicate=lambda tid,player:(is_foreign_player(player,home_country_id=self._domestic_foreign_rule(int(tid)).home_country_id,continental=False) if self._domestic_foreign_rule(int(tid)) is not None else False),
+            foreign_predicate=lambda tid,player:self._is_domestic_foreign(int(tid),player),
             coach_profile_getter=lambda tid: self._coach_profile(int(tid)),
         )
         follow_up=[]
@@ -1676,7 +1682,7 @@ class ManagerCareerRuntime9394:
                 max_deals=activity-first_budget,signing_allowed=lambda buyer,player:self._signing_eligibility(int(buyer),player,day=day)[0],
                 attraction_score=lambda buyer,seller,player:(float(club_status(self.state,int(buyer)).get("score") or 50)-float(club_status(self.state,int(seller)).get("score") or 50))/25.0,
                 foreign_limit_getter=lambda tid:(self._domestic_foreign_rule(int(tid)).max_starting if self._domestic_foreign_rule(int(tid)) is not None else None),
-                foreign_predicate=lambda tid,player:(is_foreign_player(player,home_country_id=self._domestic_foreign_rule(int(tid)).home_country_id,continental=False) if self._domestic_foreign_rule(int(tid)) is not None else False),
+                foreign_predicate=lambda tid,player:self._is_domestic_foreign(int(tid),player),
                 coach_profile_getter=lambda tid:self._coach_profile(int(tid)),
             )
             register_replacement_chain(self.state,day=day,first_deals=transfers,follow_up_deals=follow_up)
@@ -1694,7 +1700,7 @@ class ManagerCareerRuntime9394:
                 seed=int(self.state["seed"]),max_signings=max(500,len(active_ids)*MINIMUM_SENIOR_SQUAD_SIZE_9394),
                 signing_allowed=lambda buyer,player:self._signing_eligibility(int(buyer),player,day=day)[0],
                 foreign_limit_getter=lambda tid:(self._domestic_foreign_rule(int(tid)).max_starting if self._domestic_foreign_rule(int(tid)) is not None else None),
-                foreign_predicate=lambda tid,player:(is_foreign_player(player,home_country_id=self._domestic_foreign_rule(int(tid)).home_country_id,continental=False) if self._domestic_foreign_rule(int(tid)) is not None else False),
+                foreign_predicate=lambda tid,player:self._is_domestic_foreign(int(tid),player),
                 target_squad_size_getter=lambda tid:self._target_ai_squad_size(int(tid)),
                 emergency_source_team_ids=active_ids+self._market_container_ids(),
             )
@@ -1913,6 +1919,14 @@ class ManagerCareerRuntime9394:
         if key not in cache:
             cache[key]=competition_foreign_rule(self.universe,kind="league",source_id=int(lid),team_id=tid)
         return cache[key]
+
+    def _is_domestic_foreign(self, team_id: int, player: dict[str, Any]) -> bool:
+        rule=self._domestic_foreign_rule(int(team_id))
+        if rule is None: return False
+        return is_foreign_player(
+            player,home_country_id=rule.home_country_id,continental=False,
+            domestic_equivalent_country_ids=rule.domestic_equivalent_country_ids,
+        )
 
     def _signing_eligibility(self, team_id:int, player:dict[str,Any], *, day:date|None=None) -> tuple[bool,str]:
         day=day or self.current_date

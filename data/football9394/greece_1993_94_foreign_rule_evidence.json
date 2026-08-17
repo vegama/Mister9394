@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "season": "1993-94",
+  "league_id": 930047,
+  "status": "candidate_3_strongly_corroborated_primary_domestic_numeric_clause_not_recovered",
+  "candidate_limit": 3,
+  "primary_domestic_numerical_clause_recovered": false,
+  "runtime": {
+    "max_foreigners_starting": null,
+    "max_foreigners_squad": null
+  },
+  "decision": "do_not_encode_numeric_limit_yet",
+  "reason": "The historical value 3 is strongly corroborated, but the exact Greek domestic rule text governing 1993-94 has not been recovered. Cypriot domestic equivalence is source-supported and is modelled separately, so it is not used as a reason to guess the numeric quota.",
+  "sources": [
+    {
+      "kind": "primary_eu_legal_record_uefa_framework",
+      "title": "Bosman, Case C-415/93 - EUR-Lex",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:61993CJ0415",
+      "finding": "Records UEFA's 1991 3+2 framework, permitting national associations to limit first-division line-ups to three foreign players plus two assimilated players.",
+      "scope": "UEFA framework; not proof of Greece's exact domestic 1993-94 clause."
+    },
+    {
+      "kind": "primary_greek_statute_regulatory_framework",
+      "title": "Greek Law 1958/1991, Government Gazette A 122/5-5-1991",
+      "url": "https://minsports.gov.gr/wp-content/uploads/2012/11/1958_%CE%A6%CE%95%CE%9A_122%CE%91_5-5-91%CE%A4%CE%BC%CE%AE%CE%BC%CE%B1%CF%84%CE%B1_%CE%91%CE%BC%CE%B5%CE%B9%CE%B2%CE%BF%CE%BC%CE%AD%CE%BD%CF%89%CE%BD_%CE%91%CE%B8%CE%BB%CE%B7%CF%84%CF%8E%CE%BD_-_%CE%91%CE%B8%CE%BB%CE%B7%CF%84%CE%B9%CE%BA%CE%AD%CF%82_%CE%91%CE%BD%CF%8E%CE%BD%CF%85%CE%BC%CE%B5%CF%82_%CE%95%CF%84%CE%B1%CE%B9%CF%81%CE%B5%CE%AF%CE%B5%CF%82_%CE%BA%CE%B1%CE%B9_%CE%AC%CE%BB%CE%BB%CE%B5%CF%82_%CE%B4%CE%B9%CE%B1%CF%84%CE%AC%CE%BE%CE%B5%CE%B9%CF%82.pdf",
+      "finding": "Official statutory framework for paid/professional sport and football bodies; it does not provide the recovered numerical foreign-player clause needed for 1993-94.",
+      "scope": "Primary Greek legal framework; numerical league rule still missing."
+    },
+    {
+      "kind": "historical_first_person_corroboration",
+      "title": "Nikos Nioplias interview - AthleteStories",
+      "url": "https://www.athletestories.gr/nioplias-nikos-me-mia-ball-sta-podia/",
+      "finding": "Nioplias recalls that each Greek club had only three foreign players in that era.",
+      "scope": "Strong historical corroboration, not a regulatory text."
+    },
+    {
+      "kind": "historical_rule_change_corroboration",
+      "title": "Novasports historical record - third foreign player, 30 November 1988",
+      "url": "https://www.novasports.gr/category/novasportsstorieshd/article/1477326/otan-o-tritos-ksenos-mpike-stin-zwi-mas-video/",
+      "finding": "Records that on 30 November 1988 participation of a third foreign player was instituted in the Greek championship.",
+      "scope": "Established sports-media chronology; underlying signed federation/league decision or FEK not yet recovered."
+    },
+    {
+      "kind": "domestic_equivalence_evidence",
+      "title": "RSSSF - Foreign Players in Greece since 1959/60",
+      "url": "https://www.rsssf.org/players/foreign-players-in-grk6080.html",
+      "finding": "Cypriots did not count as foreigners; some Albanian players with Greek roots also technically did not count.",
+      "scope": "Shows nationality != Greece cannot be used as the complete domestic eligibility rule."
+    }
+  ],
+  "domestic_equivalence": {
+    "runtime_encoded": true,
+    "equivalent_country_ids": [
+      25
+    ],
+    "equivalent_countries": [
+      "Cyprus"
+    ],
+    "scope": "Domestic Greek competitions only; continental competition nationality remains association-based."
+  },
+  "implementation_blockers": [
+    "Recover exact Greek federation/league or Government Gazette text that sets the numerical limit applicable in 1993-94."
+  ]
+}

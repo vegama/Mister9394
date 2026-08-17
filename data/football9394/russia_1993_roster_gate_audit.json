@@ -29,212 +29,19 @@
     "Asmaral Moskva": 18
   },
   "role_counts": {
-    "Spartak Moskva": {
-      "Right Midfielder": 1,
-      "Centre Forward": 3,
-      "Goalkeeper": 3,
-      "Centre Back": 4,
-      "Centre Midfielder": 5,
-      "Left Back": 1,
-      "Left Winger": 1
-    },
-    "Rotor Volgograd": {
-      "Goalkeeper": 2,
-      "Right Back": 2,
-      "Centre Back": 3,
-      "Left Back": 1,
-      "Right Midfielder": 2,
-      "Centre Midfielder": 3,
-      "Left Midfielder": 1,
-      "Centre Forward": 2,
-      "Attacking Midfielder": 1,
-      "Right Winger": 1
-    },
-    "Dynamo Moskva": {
-      "Centre Back": 3,
-      "Left Back": 3,
-      "Goalkeeper": 3,
-      "Right Midfielder": 1,
-      "Centre Midfielder": 2,
-      "Left Midfielder": 1,
-      "Centre Forward": 5
-    },
-    "Tekstilshchik Kamyshin": {
-      "Goalkeeper": 2,
-      "Right Back": 2,
-      "Centre Back": 3,
-      "Left Back": 1,
-      "Right Midfielder": 2,
-      "Centre Midfielder": 3,
-      "Left Midfielder": 1,
-      "Centre Forward": 2,
-      "Right Winger": 1,
-      "Attacking Midfielder": 1
-    },
-    "Lokomotiv Moskva": {
-      "Defensive Midfielder": 2,
-      "Goalkeeper": 2,
-      "Centre Back": 3,
-      "Left Back": 2,
-      "Right Midfielder": 1,
-      "Centre Midfielder": 2,
-      "Left Midfielder": 2,
-      "Centre Forward": 3,
-      "Left Winger": 1
-    },
-    "Spartak Vladikavkaz": {
-      "Goalkeeper": 2,
-      "Right Back": 2,
-      "Centre Back": 3,
-      "Left Back": 1,
-      "Right Midfielder": 2,
-      "Centre Midfielder": 3,
-      "Left Midfielder": 1,
-      "Centre Forward": 2,
-      "Attacking Midfielder": 1,
-      "Right Winger": 1
-    },
-    "Torpedo Moskva": {
-      "Goalkeeper": 1,
-      "Right Back": 1,
-      "Centre Back": 3,
-      "Left Back": 2,
-      "Right Midfielder": 1,
-      "Centre Midfielder": 2,
-      "Left Midfielder": 2,
-      "Centre Forward": 3,
-      "Defensive Midfielder": 2,
-      "Left Winger": 1
-    },
-    "Uralmash": {
-      "Goalkeeper": 3,
-      "Right Back": 2,
-      "Centre Back": 3,
-      "Left Back": 1,
-      "Right Midfielder": 2,
-      "Centre Midfielder": 3,
-      "Left Midfielder": 1,
-      "Centre Forward": 2,
-      "Attacking Midfielder": 1
-    },
-    "CSKA Moskva": {
-      "Goalkeeper": 2,
-      "Right Back": 1,
-      "Centre Back": 3,
-      "Left Back": 2,
-      "Right Midfielder": 1,
-      "Centre Midfielder": 2,
-      "Left Midfielder": 2,
-      "Centre Forward": 3,
-      "Left Winger": 1,
-      "Defensive Midfielder": 1
-    },
-    "KAMAZ": {
-      "Goalkeeper": 2,
-      "Right Back": 2,
-      "Centre Back": 3,
-      "Left Back": 1,
-      "Right Midfielder": 2,
-      "Centre Midfielder": 3,
-      "Left Midfielder": 1,
-      "Centre Forward": 2,
-      "Attacking Midfielder": 1,
-      "Right Winger": 1
-    },
-    "Zhemchuzhina Sochi": {
-      "Goalkeeper": 3,
-      "Right Back": 1,
-      "Centre Back": 2,
-      "Left Back": 2,
-      "Right Midfielder": 1,
-      "Centre Midfielder": 2,
-      "Left Midfielder": 1,
-      "Centre Forward": 5,
-      "Defensive Midfielder": 1
-    },
-    "Dynamo Stavropol": {
-      "Goalkeeper": 3,
-      "Right Back": 1,
-      "Centre Back": 3,
-      "Left Back": 1,
-      "Right Midfielder": 2,
-      "Centre Midfielder": 3,
-      "Left Midfielder": 1,
-      "Centre Forward": 2,
-      "Attacking Midfielder": 1,
-      "Right Winger": 1
-    },
-    "Lokomotiv Nizhny Novgorod": {
-      "Goalkeeper": 2,
-      "Right Back": 1,
-      "Centre Back": 2,
-      "Left Back": 2,
-      "Right Midfielder": 1,
-      "Centre Midfielder": 2,
-      "Left Midfielder": 2,
-      "Centre Forward": 4,
-      "Defensive Midfielder": 1,
-      "Left Winger": 1
-    },
-    "Krylia Sovetov": {
-      "Goalkeeper": 2,
-      "Right Back": 2,
-      "Centre Back": 3,
-      "Left Back": 1,
-      "Right Midfielder": 2,
-      "Centre Midfielder": 3,
-      "Left Midfielder": 1,
-      "Centre Forward": 2,
-      "Attacking Midfielder": 1,
-      "Right Winger": 1
-    },
-    "Luch Vladivostok": {
-      "Goalkeeper": 2,
-      "Right Back": 1,
-      "Centre Back": 3,
-      "Left Back": 2,
-      "Right Midfielder": 1,
-      "Centre Midfielder": 2,
-      "Left Midfielder": 2,
-      "Centre Forward": 3,
-      "Defensive Midfielder": 1,
-      "Left Winger": 1
-    },
-    "Okean Nakhodka": {
-      "Goalkeeper": 3,
-      "Right Back": 2,
-      "Centre Back": 3,
-      "Left Back": 1,
-      "Right Midfielder": 1,
-      "Centre Midfielder": 3,
-      "Left Midfielder": 1,
-      "Centre Forward": 2,
-      "Right Winger": 1,
-      "Attacking Midfielder": 1
-    },
-    "Rostselmash": {
-      "Goalkeeper": 1,
-      "Right Back": 1,
-      "Centre Back": 3,
-      "Left Back": 3,
-      "Right Midfielder": 1,
-      "Centre Midfielder": 2,
-      "Left Midfielder": 2,
-      "Centre Forward": 3,
-      "Defensive Midfielder": 1,
-      "Left Winger": 1
-    },
-    "Asmaral Moskva": {
-      "Goalkeeper": 3,
-      "Right Back": 2,
-      "Centre Back": 3,
-      "Left Back": 1,
-      "Right Midfielder": 2,
-      "Centre Midfielder": 3,
-      "Left Midfielder": 1,
-      "Centre Forward": 2,
-      "Right Winger": 1
-    }
+    "0": 41,
+    "1": 23,
+    "2": 28,
+    "3": 29,
+    "4": 24,
+    "6": 9,
+    "7": 50,
+    "8": 8,
+    "9": 26,
+    "12": 8,
+    "13": 21,
+    "16": 6,
+    "17": 51
   },
   "reused_existing_players": 16,
   "created_players": 308,
@@ -242,11 +49,12 @@
   "extra_reassigned": [],
   "mixed_era_memberships_excluded": 35,
   "position_provenance": {
-    "bdfutbol_goalkeeper_stat": 38,
+    "bdfutbol_individual_profile_v0.29": 5,
     "existing_specialist_role": 12,
     "existing_historical_position": 4,
-    "bdfutbol_lineup_order_inference": 167,
-    "squad_balance_inference": 95,
+    "bdfutbol_lineup_order_inference": 166,
+    "bdfutbol_goalkeeper_stat": 36,
+    "squad_balance_inference": 93,
     "bdfutbol_player_profile": 3,
     "bdfutbol_goal_output_inference": 5
   },
@@ -258,10 +66,11 @@
       "bdfutbol_name": "Staučė",
       "identity_hint": null,
       "source_id": 9496613,
-      "display_name": "Staučė",
+      "display_name": "Gintaras Staučė",
       "role": 0,
       "position": "Goalkeeper",
-      "position_source": "bdfutbol_goalkeeper_stat"
+      "position_source": "bdfutbol_individual_profile_v0.29",
+      "individual_profile_source_url": "https://www.bdfutbol.com/en/j/j98206.html"
     },
     {
       "club": "Spartak Moskva",
@@ -271,7 +80,8 @@
       "display_name": "Viktor Onopko",
       "role": 3,
       "position": "Centre Back",
-      "position_source": "existing_specialist_role"
+      "position_source": "existing_specialist_role",
+      "individual_profile_source_url": "https://www.bdfutbol.com/en/j/j2609.html"
     },
     {
       "club": "Spartak Moskva",
@@ -348,10 +158,11 @@
       "bdfutbol_name": "Pisarev",
       "identity_hint": null,
       "source_id": 9496615,
-      "display_name": "Pisarev",
+      "display_name": "Nikolai Pisarev",
       "role": 17,
       "position": "Centre Forward",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "bdfutbol_individual_profile_v0.29",
+      "individual_profile_source_url": "https://www.bdfutbol.com/en/j/j2091.html"
     },
     {
       "club": "Spartak Moskva",
@@ -378,10 +189,11 @@
       "bdfutbol_name": "Cherenkov",
       "identity_hint": null,
       "source_id": 9496616,
-      "display_name": "Cherenkov",
-      "role": 4,
-      "position": "Centre Back",
-      "position_source": "squad_balance_inference"
+      "display_name": "Fyodor Cherenkov",
+      "role": 7,
+      "position": "Centre Midfielder",
+      "position_source": "bdfutbol_individual_profile_v0.29",
+      "individual_profile_source_url": "https://www.bdfutbol.com/en/j/j41922.html"
     },
     {
       "club": "Spartak Moskva",
@@ -418,20 +230,22 @@
       "bdfutbol_name": "Pomazun",
       "identity_hint": null,
       "source_id": 9496617,
-      "display_name": "Pomazun",
+      "display_name": "Aleksandr Pomazun",
       "role": 0,
       "position": "Goalkeeper",
-      "position_source": "bdfutbol_goalkeeper_stat"
+      "position_source": "bdfutbol_individual_profile_v0.29",
+      "individual_profile_source_url": "https://www.bdfutbol.com/en/j/j590782.html"
     },
     {
       "club": "Spartak Moskva",
       "bdfutbol_name": "Ananko",
       "identity_hint": null,
       "source_id": 9496618,
-      "display_name": "Ananko",
-      "role": 16,
-      "position": "Left Winger",
-      "position_source": "squad_balance_inference"
+      "display_name": "Dmitri Ananko",
+      "role": 3,
+      "position": "Centre Back",
+      "position_source": "bdfutbol_individual_profile_v0.29",
+      "individual_profile_source_url": "https://www.bdfutbol.com/en/j/j84989.html"
     },
     {
       "club": "Rotor Volgograd",
@@ -3496,5 +3310,11 @@
   ],
   "duplicate_policy": "explicit verified reuse only; no fuzzy surname merging; duplicate BDF surnames remain distinct by club/age/row identity",
   "rating_policy": "fixed source-comparable attributes on the game scale; no football 75/25 rule",
-  "source_profile_enrichments": 3
+  "source_profile_enrichments": 3,
+  "individual_profile_enrichment_0_29": {
+    "profiles_curated": 6,
+    "portrait_profiles_ready_for_download": 6,
+    "role_corrections": 2,
+    "source": "BDFutbol individual player pages; explicit fixed curation only"
+  }
 }

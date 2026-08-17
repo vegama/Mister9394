@@ -35,10 +35,14 @@
           "core_18_candidate": true,
           "identity_resolution": "created_historical_identity",
           "resolved_source_id": 9496352,
-          "resolved_display_name": "Stumpf",
+          "resolved_display_name": "Reinhard Stumpf",
           "resolved_primary_role": 1,
           "resolved_exact_position": "Right Back",
-          "position_source": "bdfutbol_lineup_order_inference"
+          "position_source": "bdfutbol_lineup_order_inference",
+          "individual_profile_source_url": "https://www.bdfutbol.com/en/j/j98735.html",
+          "bdfutbol_id": "98735",
+          "resolved_birth_date": "1961-11-26T00:00:00",
+          "resolved_country_id": 4
         },
         {
           "bdfutbol_name": "Korkmaz",
@@ -50,10 +54,14 @@
           "core_18_candidate": true,
           "identity_resolution": "created_historical_identity",
           "resolved_source_id": 9496353,
-          "resolved_display_name": "Korkmaz",
+          "resolved_display_name": "Mert Korkmaz",
           "resolved_primary_role": 3,
           "resolved_exact_position": "Centre Back",
-          "position_source": "bdfutbol_lineup_order_inference"
+          "position_source": "bdfutbol_lineup_order_inference",
+          "individual_profile_source_url": "https://www.bdfutbol.com/en/j/j54548.html",
+          "bdfutbol_id": "54548",
+          "resolved_birth_date": "1971-08-16T00:00:00",
+          "resolved_country_id": 84
         },
         {
           "bdfutbol_name": "Bülent",
@@ -140,10 +148,14 @@
           "core_18_candidate": true,
           "identity_resolution": "created_historical_identity",
           "resolved_source_id": 9496354,
-          "resolved_display_name": "Götz",
+          "resolved_display_name": "Falko Götz",
           "resolved_primary_role": 13,
           "resolved_exact_position": "Left Midfielder",
-          "position_source": "bdfutbol_lineup_order_inference"
+          "position_source": "bdfutbol_lineup_order_inference",
+          "individual_profile_source_url": "https://www.bdfutbol.com/en/j/j90652.html",
+          "bdfutbol_id": "90652",
+          "resolved_birth_date": "1962-03-26T00:00:00",
+          "resolved_country_id": 4
         },
         {
           "bdfutbol_name": "Şükür",
@@ -185,10 +197,14 @@
           "core_18_candidate": true,
           "identity_resolution": "created_historical_identity",
           "resolved_source_id": 9496355,
-          "resolved_display_name": "Boloğlu",
-          "resolved_primary_role": 16,
-          "resolved_exact_position": "Left Winger",
-          "position_source": "squad_balance_inference"
+          "resolved_display_name": "Nezih Ali Boloğlu",
+          "resolved_primary_role": 0,
+          "resolved_exact_position": "Goalkeeper",
+          "position_source": "bdfutbol_individual_profile_v0.29",
+          "individual_profile_source_url": "https://www.bdfutbol.com/en/j/j702614.html",
+          "bdfutbol_id": "702614",
+          "resolved_birth_date": "1964-08-04T00:00:00",
+          "resolved_country_id": 84
         },
         {
           "bdfutbol_name": "Tütüneker",
@@ -213,12 +229,16 @@
           "minutes": 1188,
           "goals": 2,
           "core_18_candidate": true,
-          "identity_resolution": "created_historical_identity",
-          "resolved_source_id": 9496356,
-          "resolved_display_name": "Ljung",
-          "resolved_primary_role": 2,
-          "resolved_exact_position": "Left Back",
-          "position_source": "squad_balance_inference"
+          "identity_resolution": "reused_verified_world_cup_identity_v0.29",
+          "resolved_source_id": 9494093,
+          "resolved_display_name": "Roger Ljung",
+          "resolved_primary_role": 3,
+          "resolved_exact_position": "Centre Back",
+          "position_source": "squad_balance_inference",
+          "individual_profile_source_url": "https://www.bdfutbol.com/en/j/j80039.html",
+          "bdfutbol_id": "80039",
+          "resolved_birth_date": "1966-01-08T00:00:00",
+          "resolved_country_id": 79
         },
         {
           "bdfutbol_name": "Keser",
@@ -230,10 +250,14 @@
           "core_18_candidate": true,
           "identity_resolution": "created_historical_identity",
           "resolved_source_id": 9496357,
-          "resolved_display_name": "Keser",
+          "resolved_display_name": "Ali Erdal Keser",
           "resolved_primary_role": 6,
           "resolved_exact_position": "Defensive Midfielder",
-          "position_source": "squad_balance_inference"
+          "position_source": "squad_balance_inference",
+          "individual_profile_source_url": "https://www.bdfutbol.com/en/j/j91805.html",
+          "bdfutbol_id": "91805",
+          "resolved_birth_date": "1961-06-20T00:00:00",
+          "resolved_country_id": 84
         },
         {
           "bdfutbol_name": "Türkyılmaz",
@@ -245,10 +269,14 @@
           "core_18_candidate": true,
           "identity_resolution": "created_historical_identity",
           "resolved_source_id": 9496358,
-          "resolved_display_name": "Türkyılmaz",
-          "resolved_primary_role": 13,
-          "resolved_exact_position": "Left Midfielder",
-          "position_source": "squad_balance_inference"
+          "resolved_display_name": "Kubilay Türkyılmaz",
+          "resolved_primary_role": 17,
+          "resolved_exact_position": "Centre Forward",
+          "position_source": "bdfutbol_individual_profile_v0.29",
+          "individual_profile_source_url": "https://www.bdfutbol.com/en/j/j95868.html",
+          "bdfutbol_id": "95868",
+          "resolved_birth_date": "1967-03-04T00:00:00",
+          "resolved_country_id": 80
         },
         {
           "bdfutbol_name": "Bulut",
@@ -260,10 +288,14 @@
           "core_18_candidate": true,
           "identity_resolution": "created_historical_identity",
           "resolved_source_id": 9496359,
-          "resolved_display_name": "Bulut",
-          "resolved_primary_role": 17,
-          "resolved_exact_position": "Centre Forward",
-          "position_source": "squad_balance_inference"
+          "resolved_display_name": "Ahmet Bulut",
+          "resolved_primary_role": 0,
+          "resolved_exact_position": "Goalkeeper",
+          "position_source": "bdfutbol_individual_profile_v0.29",
+          "individual_profile_source_url": "https://www.bdfutbol.com/en/j/j702755.html",
+          "bdfutbol_id": "702755",
+          "resolved_birth_date": "1969-07-04T00:00:00",
+          "resolved_country_id": 84
         },
         {
           "bdfutbol_name": "Kocabey",
@@ -275,10 +307,14 @@
           "core_18_candidate": true,
           "identity_resolution": "created_historical_identity",
           "resolved_source_id": 9496360,
-          "resolved_display_name": "Kocabey",
-          "resolved_primary_role": 16,
-          "resolved_exact_position": "Left Winger",
-          "position_source": "squad_balance_inference"
+          "resolved_display_name": "Mustafa Kocabey",
+          "resolved_primary_role": 17,
+          "resolved_exact_position": "Centre Forward",
+          "position_source": "bdfutbol_individual_profile_v0.29",
+          "individual_profile_source_url": "https://www.bdfutbol.com/en/j/j702754.html",
+          "bdfutbol_id": "702754",
+          "resolved_birth_date": "1974-10-06T00:00:00",
+          "resolved_country_id": 84
         }
       ]
     },

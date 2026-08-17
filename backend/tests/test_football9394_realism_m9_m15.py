@@ -95,7 +95,10 @@ def test_every_initial_active_club_can_name_a_competition_legal_ai_match_squad()
         for team in universe.teams_by_league.get(int(source_id),[]):
             team_id=int(team['source_id'])
             rule=competition_foreign_rule(universe,kind='league',source_id=int(source_id),team_id=team_id)
-            predicate=lambda player,r=rule:is_foreign_player(player,home_country_id=r.home_country_id,continental=r.continental)
+            predicate=lambda player,r=rule:is_foreign_player(
+                player,home_country_id=r.home_country_id,continental=r.continental,
+                domestic_equivalent_country_ids=r.domestic_equivalent_country_ids,
+            )
             sheet=build_snapshot_team_sheet(
                 universe,team_id,foreign_predicate=predicate,
                 max_foreign_starters=rule.max_starting,max_foreign_squad=rule.max_squad,
@@ -103,7 +106,8 @@ def test_every_initial_active_club_can_name_a_competition_legal_ai_match_squad()
             )
             assert len(sheet.starters)==11
             checked+=1
-    assert checked==374
+    # Historical league activation has expanded beyond the earlier 374-club checkpoint.
+    assert checked==444
 
 
 def test_apsl_cross_border_quota_uses_club_association_not_us_for_canadian_clubs():

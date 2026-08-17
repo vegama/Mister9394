@@ -220,7 +220,12 @@ def test_greece_has_no_fictional_gate_fillers_and_keeps_source_provenance():
     assert all(p.get('rsssf_name') and p.get('source_url') for c in stage['clubs'] for p in c['players'])
     created=[p for p in _players() if p.get('creation_batch')=='greece_league_rosters_0.28']
     assert len(created)==302
-    assert all(p.get('attribute_source')=='fixed_source_comparable_greece_1993_94' for p in created)
+    assert all(p.get('attribute_source') in {
+        'fixed_source_comparable_greece_1993_94',
+        'fixed_source_comparable_role_correction_0.29',
+    } for p in created)
+    corrected=[p for p in created if p.get('attribute_source')=='fixed_source_comparable_role_correction_0.29']
+    assert [(int(p['source_id']),p['display_name']) for p in corrected]==[(9496943,'Krzysztof Warzycha')]
     assert all(p.get('external_origin')=='historical_greece_1993_94' for p in created)
     assert all(p.get('profile_review_required') is False for p in created)
 

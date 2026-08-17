@@ -29,249 +29,19 @@
     "Naousa": 18
   },
   "role_counts": {
-    "AEK Athinon": {
-      "Centre Back": 4,
-      "Centre Midfielder": 2,
-      "Right Back": 2,
-      "Centre Forward": 2,
-      "Goalkeeper": 2,
-      "Left Back": 1,
-      "Right Midfielder": 1,
-      "Left Midfielder": 1,
-      "Attacking Midfielder": 1,
-      "Right Winger": 1,
-      "Left Winger": 1
-    },
-    "Panathinaikos": {
-      "Right Back": 1,
-      "Centre Back": 5,
-      "Attacking Midfielder": 2,
-      "Centre Midfielder": 4,
-      "Goalkeeper": 2,
-      "Defensive Midfielder": 1,
-      "Right Midfielder": 1,
-      "Right Winger": 2
-    },
-    "Olympiakos Pireas": {
-      "Centre Midfielder": 1,
-      "Left Midfielder": 2,
-      "Left Back": 1,
-      "Goalkeeper": 2,
-      "Centre Back": 4,
-      "Right Back": 1,
-      "Attacking Midfielder": 2,
-      "Right Midfielder": 1,
-      "Centre Forward": 2,
-      "Right Winger": 1,
-      "Left Winger": 1
-    },
-    "Aris Thessalonikis": {
-      "Goalkeeper": 2,
-      "Defensive Midfielder": 2,
-      "Centre Back": 4,
-      "Right Back": 1,
-      "Left Back": 1,
-      "Centre Midfielder": 2,
-      "Right Midfielder": 1,
-      "Left Midfielder": 1,
-      "Centre Forward": 2,
-      "Right Winger": 1,
-      "Left Winger": 1
-    },
-    "PAOK Thessalonikis": {
-      "Centre Back": 3,
-      "Goalkeeper": 2,
-      "Right Back": 1,
-      "Left Back": 1,
-      "Centre Midfielder": 2,
-      "Defensive Midfielder": 1,
-      "Attacking Midfielder": 1,
-      "Right Midfielder": 1,
-      "Left Midfielder": 1,
-      "Centre Forward": 3,
-      "Right Winger": 1,
-      "Left Winger": 1
-    },
-    "Iraklis Thessalonikis": {
-      "Goalkeeper": 2,
-      "Centre Back": 4,
-      "Right Back": 1,
-      "Left Back": 1,
-      "Defensive Midfielder": 1,
-      "Centre Midfielder": 2,
-      "Attacking Midfielder": 1,
-      "Right Midfielder": 1,
-      "Left Midfielder": 1,
-      "Centre Forward": 2,
-      "Right Winger": 1,
-      "Left Winger": 1
-    },
-    "OFI Irakliou": {
-      "Centre Forward": 3,
-      "Goalkeeper": 2,
-      "Centre Back": 4,
-      "Right Back": 1,
-      "Left Back": 1,
-      "Defensive Midfielder": 1,
-      "Centre Midfielder": 2,
-      "Attacking Midfielder": 1,
-      "Right Midfielder": 1,
-      "Left Midfielder": 1,
-      "Left Winger": 1
-    },
-    "Skoda Xanthi": {
-      "Goalkeeper": 2,
-      "Centre Back": 4,
-      "Right Back": 1,
-      "Left Back": 1,
-      "Defensive Midfielder": 1,
-      "Centre Midfielder": 2,
-      "Attacking Midfielder": 1,
-      "Right Midfielder": 1,
-      "Left Midfielder": 1,
-      "Centre Forward": 3,
-      "Right Winger": 1
-    },
-    "Panionios": {
-      "Goalkeeper": 2,
-      "Centre Back": 4,
-      "Right Back": 1,
-      "Left Back": 1,
-      "Defensive Midfielder": 1,
-      "Centre Midfielder": 2,
-      "Attacking Midfielder": 1,
-      "Right Midfielder": 1,
-      "Left Midfielder": 1,
-      "Centre Forward": 2,
-      "Right Winger": 1,
-      "Left Winger": 1
-    },
-    "AE Larisa": {
-      "Goalkeeper": 2,
-      "Centre Back": 4,
-      "Right Back": 1,
-      "Left Back": 1,
-      "Defensive Midfielder": 1,
-      "Centre Midfielder": 2,
-      "Attacking Midfielder": 1,
-      "Right Midfielder": 1,
-      "Left Midfielder": 1,
-      "Centre Forward": 2,
-      "Right Winger": 1,
-      "Left Winger": 1
-    },
-    "Levadiakos": {
-      "Goalkeeper": 2,
-      "Centre Back": 4,
-      "Right Back": 1,
-      "Left Back": 1,
-      "Defensive Midfielder": 1,
-      "Centre Midfielder": 2,
-      "Attacking Midfielder": 1,
-      "Right Midfielder": 1,
-      "Left Midfielder": 1,
-      "Centre Forward": 2,
-      "Right Winger": 1,
-      "Left Winger": 1
-    },
-    "Athinaikos": {
-      "Goalkeeper": 2,
-      "Centre Back": 4,
-      "Right Back": 1,
-      "Left Back": 1,
-      "Defensive Midfielder": 1,
-      "Centre Midfielder": 2,
-      "Attacking Midfielder": 1,
-      "Right Midfielder": 1,
-      "Left Midfielder": 1,
-      "Centre Forward": 2,
-      "Right Winger": 1,
-      "Left Winger": 1
-    },
-    "Apollon Athinas": {
-      "Goalkeeper": 2,
-      "Centre Back": 4,
-      "Right Back": 1,
-      "Left Back": 1,
-      "Defensive Midfielder": 1,
-      "Centre Midfielder": 2,
-      "Attacking Midfielder": 1,
-      "Right Midfielder": 1,
-      "Left Midfielder": 1,
-      "Centre Forward": 2,
-      "Right Winger": 1,
-      "Left Winger": 1
-    },
-    "Edessaikos": {
-      "Goalkeeper": 2,
-      "Centre Back": 4,
-      "Right Back": 1,
-      "Left Back": 1,
-      "Defensive Midfielder": 1,
-      "Centre Midfielder": 2,
-      "Attacking Midfielder": 1,
-      "Right Midfielder": 1,
-      "Left Midfielder": 1,
-      "Centre Forward": 2,
-      "Right Winger": 1,
-      "Left Winger": 1
-    },
-    "Doxa Dramas": {
-      "Goalkeeper": 2,
-      "Centre Back": 4,
-      "Right Back": 1,
-      "Left Back": 1,
-      "Defensive Midfielder": 1,
-      "Centre Midfielder": 2,
-      "Attacking Midfielder": 1,
-      "Right Midfielder": 1,
-      "Left Midfielder": 1,
-      "Centre Forward": 2,
-      "Right Winger": 1,
-      "Left Winger": 1
-    },
-    "Panachaiki": {
-      "Goalkeeper": 2,
-      "Centre Back": 4,
-      "Right Back": 1,
-      "Left Back": 1,
-      "Defensive Midfielder": 1,
-      "Left Midfielder": 2,
-      "Attacking Midfielder": 1,
-      "Right Midfielder": 1,
-      "Centre Midfielder": 1,
-      "Centre Forward": 2,
-      "Right Winger": 1,
-      "Left Winger": 1
-    },
-    "Apollon Kalamarias": {
-      "Goalkeeper": 2,
-      "Centre Back": 4,
-      "Right Back": 1,
-      "Left Back": 1,
-      "Defensive Midfielder": 1,
-      "Centre Midfielder": 2,
-      "Attacking Midfielder": 1,
-      "Right Midfielder": 1,
-      "Left Midfielder": 1,
-      "Centre Forward": 2,
-      "Right Winger": 1,
-      "Left Winger": 1
-    },
-    "Naousa": {
-      "Goalkeeper": 2,
-      "Centre Back": 4,
-      "Right Back": 1,
-      "Left Back": 1,
-      "Defensive Midfielder": 1,
-      "Centre Midfielder": 2,
-      "Attacking Midfielder": 1,
-      "Right Midfielder": 1,
-      "Left Midfielder": 1,
-      "Centre Forward": 2,
-      "Right Winger": 1,
-      "Left Winger": 1
-    }
+    "0": 36,
+    "1": 19,
+    "2": 17,
+    "3": 38,
+    "4": 34,
+    "6": 17,
+    "7": 36,
+    "8": 19,
+    "9": 18,
+    "12": 17,
+    "13": 19,
+    "16": 16,
+    "17": 38
   },
   "reused_existing_players": 22,
   "created_players": 302,
@@ -325,9 +95,10 @@
     }
   ],
   "position_provenance": {
-    "verified_existing_historical_specialist_role": 22,
-    "source_section_specialist_inference": 293,
-    "verified_role_override": 9
+    "verified_existing_historical_specialist_role": 21,
+    "source_section_specialist_inference": 292,
+    "verified_role_override": 9,
+    "bdfutbol_individual_profile_v0.29": 2
   },
   "identities": [
     {
@@ -460,7 +231,8 @@
       "position_source": "verified_existing_historical_specialist_role",
       "appearances": 30,
       "goals": 0,
-      "country_id": 47
+      "country_id": 47,
+      "individual_profile_source_url": "https://www.bdfutbol.com/en/j/j42541.html"
     },
     {
       "club": "AEK Athinon",
@@ -496,7 +268,8 @@
       "position_source": "verified_role_override",
       "appearances": 22,
       "goals": 3,
-      "country_id": 47
+      "country_id": 47,
+      "individual_profile_source_url": "https://www.bdfutbol.com/en/j/j2572.html"
     },
     {
       "club": "AEK Athinon",
@@ -505,10 +278,11 @@
       "display_name": "Alexis Alexandris",
       "role": 17,
       "position": "Centre Forward",
-      "position_source": "verified_existing_historical_specialist_role",
+      "position_source": "bdfutbol_individual_profile_v0.29",
       "appearances": 32,
       "goals": 24,
-      "country_id": 47
+      "country_id": 47,
+      "individual_profile_source_url": "https://www.bdfutbol.com/en/j/j708921.html"
     },
     {
       "club": "AEK Athinon",
@@ -736,19 +510,21 @@
       "position_source": "verified_existing_historical_specialist_role",
       "appearances": 25,
       "goals": 12,
-      "country_id": 47
+      "country_id": 47,
+      "individual_profile_source_url": "https://www.bdfutbol.com/en/j/j58026.html"
     },
     {
       "club": "Panathinaikos",
       "rsssf_name": "Krystof Warzycha",
       "source_id": 9496943,
-      "display_name": "Krystof Warzycha",
-      "role": 12,
-      "position": "Right Winger",
-      "position_source": "source_section_specialist_inference",
+      "display_name": "Krzysztof Warzycha",
+      "role": 17,
+      "position": "Centre Forward",
+      "position_source": "bdfutbol_individual_profile_v0.29",
       "appearances": 31,
       "goals": 24,
-      "country_id": 70
+      "country_id": 70,
+      "individual_profile_source_url": "https://www.bdfutbol.com/en/j/j59705.html"
     },
     {
       "club": "Panathinaikos",
@@ -4230,7 +4006,14 @@
       16,
       17,
       18
-    ]
+    ],
+    "foreigners": {
+      "evidence_file": "greece_1993_94_foreign_rule_evidence.json",
+      "candidate_limit": 3,
+      "primary_domestic_numerical_clause_recovered": false,
+      "runtime_encoded": false,
+      "reason": "No guessed numeric rule: source corroboration is strong but the exact Greek 1993-94 domestic regulatory clause is not yet recovered; Cypriot equivalence must also be represented."
+    }
   },
   "cross_source_identity_corrections": [
     {
@@ -4243,5 +4026,11 @@
       "birth_date": "1961-02-05",
       "source": "BDFutbol cross-check v0.28"
     }
-  ]
+  ],
+  "individual_profile_enrichment_0_29": {
+    "profiles_curated": 5,
+    "portrait_profiles_ready_for_download": 4,
+    "role_corrections": 1,
+    "source": "BDFutbol individual player pages; explicit fixed curation only"
+  }
 }

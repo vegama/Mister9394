@@ -29,6 +29,7 @@ class ForeignPlayerRule9394:
     max_squad: int | None
     continental: bool = False
     source: str = "basedatos.mdb Ex11/ExPlantilla"
+    domestic_equivalent_country_ids: frozenset[int] = frozenset()
 
     def as_dict(self) -> dict[str, Any]:
         return {
@@ -40,6 +41,7 @@ class ForeignPlayerRule9394:
             "max_squad": self.max_squad,
             "continental": self.continental,
             "source": self.source,
+            "domestic_equivalent_country_ids": sorted(self.domestic_equivalent_country_ids),
         }
 
 
@@ -51,13 +53,20 @@ def player_nationality_id(player: dict[str, Any]) -> int | None:
         return None
 
 
-def is_foreign_player(player: dict[str, Any], *, home_country_id: int | None, continental: bool = False) -> bool:
+def is_foreign_player(
+    player: dict[str, Any], *, home_country_id: int | None, continental: bool = False,
+    domestic_equivalent_country_ids: Iterable[int] = (),
+) -> bool:
     nationality = player_nationality_id(player)
     if nationality is None or home_country_id is None:
         return False
     home = int(home_country_id)
-    if not continental and home in {6, 43} and nationality in BRITISH_IRISH_DOMESTIC_GROUP:
-        return False
+    if not continental:
+        equivalents = {int(cid) for cid in domestic_equivalent_country_ids}
+        if nationality in equivalents:
+            return False
+        if home in {6, 43} and nationality in BRITISH_IRISH_DOMESTIC_GROUP:
+            return False
     return nationality != home
 
 
@@ -86,6 +95,8 @@ def competition_foreign_rule(universe: Any, *, kind: str, source_id: int, team_i
         starting_limit=_positive_or_none(comp.get("max_foreigners_starting"))
         squad_limit=_positive_or_none(comp.get("max_foreigners_squad"))
         source_note="basedatos.mdb Ex11/ExPlantilla"
+        hints = comp.get("source_rule_hints") or {}
+        domestic_equivalents = frozenset(int(cid) for cid in hints.get("foreign_domestic_equivalent_country_ids", ()) if cid is not None)
         if source_id == 120:
             # Historical 1993 APSL game-day rules required a strong domestic
             # presence in an 18-player roster.  Our 1993 match contract names
@@ -100,7 +111,7 @@ def competition_foreign_rule(universe: Any, *, kind: str, source_id: int, team_i
             "league", source_id, str(comp.get("name") or f"Liga {source_id}"),
             int(home_country) if home_country else None,
             starting_limit, squad_limit,
-            continental=False, source=source_note,
+            continental=False, source=source_note, domestic_equivalent_country_ids=domestic_equivalents,
         )
     comp = universe.tournaments_by_id.get(source_id) or {}
     country = comp.get("country_id")
@@ -130,7 +141,13 @@ def _positive_or_none(value: Any) -> int | None:
 
 
 def foreign_count(players: Iterable[dict[str, Any]], rule: ForeignPlayerRule9394) -> int:
-    return sum(1 for player in players if is_foreign_player(player, home_country_id=rule.home_country_id, continental=rule.continental))
+    return sum(
+        1 for player in players
+        if is_foreign_player(
+            player, home_country_id=rule.home_country_id, continental=rule.continental,
+            domestic_equivalent_country_ids=rule.domestic_equivalent_country_ids,
+        )
+    )
 
 
 def validate_matchday_foreigners(starters: Iterable[dict[str, Any]], bench: Iterable[dict[str, Any]], rule: ForeignPlayerRule9394) -> list[str]:
@@ -149,13 +166,17 @@ def validate_matchday_foreigners(starters: Iterable[dict[str, Any]], bench: Iter
 
 
 def can_register_foreign_signing(current_squad: Iterable[dict[str, Any]], incoming: dict[str, Any], rule: ForeignPlayerRule9394) -> tuple[bool, str]:
-    if not is_foreign_player(incoming, home_country_id=rule.home_country_id, continental=False):
+    if not is_foreign_player(
+        incoming, home_country_id=rule.home_country_id, continental=False,
+        domestic_equivalent_country_ids=rule.domestic_equivalent_country_ids,
+    ):
         return True, "nacional/equiparado"
     if rule.max_squad is None:
         return True, "sin tope de plantilla en la fuente"
     current = foreign_count(current_squad, ForeignPlayerRule9394(
         rule.competition_kind, rule.source_id, rule.name, rule.home_country_id,
         rule.max_starting, rule.max_squad, continental=False, source=rule.source,
+        domestic_equivalent_country_ids=rule.domestic_equivalent_country_ids,
     ))
     if current >= rule.max_squad:
         return False, f"límite de extranjeros de plantilla ({rule.max_squad}) alcanzado"

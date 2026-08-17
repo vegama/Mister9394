@@ -1,0 +1,106 @@
+{
+  "checkpoint": "0.29.0-turkey-russia-greece-individual-profiles",
+  "snapshot": {
+    "players": 12178,
+    "teams": 534,
+    "leagues": 27,
+    "duplicate_player_ids": 0,
+    "duplicate_team_ids": 0,
+    "duplicate_league_ids": 0
+  },
+  "historical_leagues": {
+    "930052": {
+      "country": "Bélgica",
+      "present": true,
+      "teams": 18,
+      "minimum_roster": 19,
+      "maximum_roster": 27,
+      "players_on_active_teams": 406
+    },
+    "930057": {
+      "country": "Turquía",
+      "present": true,
+      "teams": 16,
+      "minimum_roster": 18,
+      "maximum_roster": 23,
+      "players_on_active_teams": 301
+    },
+    "930015": {
+      "country": "Rusia",
+      "present": true,
+      "teams": 18,
+      "minimum_roster": 18,
+      "maximum_roster": 18,
+      "players_on_active_teams": 324
+    },
+    "930047": {
+      "country": "Grecia",
+      "present": true,
+      "teams": 18,
+      "minimum_roster": 18,
+      "maximum_roster": 18,
+      "players_on_active_teams": 324
+    }
+  },
+  "created_player_registry": {
+    "rows": 1650,
+    "photo_queue_rows": 1650,
+    "registry_queue_match": true,
+    "duplicate_registry_ids": 0,
+    "reconciled_removed_ids": [
+      9496356
+    ]
+  },
+  "individual_profile_pass": {
+    "profiles_curated": 20,
+    "portrait_profiles_ready_for_download": 19,
+    "by_country": {
+      "Turkey": {
+        "profiles_curated": 9,
+        "portrait_profiles_ready_for_download": 9,
+        "role_corrections": 4
+      },
+      "Russia": {
+        "profiles_curated": 6,
+        "portrait_profiles_ready_for_download": 6,
+        "role_corrections": 2
+      },
+      "Greece": {
+        "profiles_curated": 5,
+        "portrait_profiles_ready_for_download": 4,
+        "role_corrections": 1
+      }
+    },
+    "role_corrections": 7,
+    "duplicate_reconciliations": 1
+  },
+  "greece_foreign_rule": {
+    "candidate_limit": 3,
+    "primary_domestic_numerical_clause_recovered": false,
+    "runtime_encoded": false,
+    "runtime": {
+      "max_foreigners_starting": null,
+      "max_foreigners_squad": null
+    },
+    "decision": "do_not_encode_numeric_limit_yet",
+    "evidence_file": "greece_1993_94_foreign_rule_evidence.json",
+    "domestic_equivalence": {
+      "runtime_encoded": true,
+      "equivalent_country_ids": [
+        25
+      ],
+      "equivalent_countries": [
+        "Chipre"
+      ],
+      "scope": "domestic Greek competitions only"
+    },
+    "remaining_blocker": "Recover the exact Greek federation/league or Government Gazette text setting the numerical limit applicable in 1993-94."
+  },
+  "validation": {
+    "targeted_pytest": "60 passed in 10.00s",
+    "python_compileall": "pass",
+    "idempotent_profile_regeneration": "pass: 20 curated / 19 portrait-ready / 7 role corrections / 12178 players / 1650 registry rows",
+    "photo_queue_regeneration": "pass: 1650 rows; registry IDs exactly match queue IDs",
+    "extended_career_suite": "not claimed: a broader run including long career tests exceeded the 120s execution window without reporting a failure before timeout"
+  }
+}

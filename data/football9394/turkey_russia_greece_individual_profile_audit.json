@@ -1,0 +1,352 @@
+{
+  "schema_version": 1,
+  "checkpoint": "0.29.0-turkey-russia-greece-individual-profiles",
+  "policy": "Only source-backed fields are changed. Missing biographies and photo IDs remain unresolved rather than inferred. Role changes re-materialise fixed attributes from original source-backed 1993-94 comparables; football 75/25 is never used.",
+  "profiles_curated": 20,
+  "portrait_profiles_ready_for_download": 19,
+  "by_country": {
+    "Turkey": {
+      "profiles_curated": 9,
+      "portrait_profiles_ready_for_download": 9,
+      "role_corrections": 4
+    },
+    "Russia": {
+      "profiles_curated": 6,
+      "portrait_profiles_ready_for_download": 6,
+      "role_corrections": 2
+    },
+    "Greece": {
+      "profiles_curated": 5,
+      "portrait_profiles_ready_for_download": 4,
+      "role_corrections": 1
+    }
+  },
+  "role_corrections": [
+    {
+      "source_id": 9496355,
+      "display_name": "Nezih Ali Boloğlu",
+      "country": "Turkey",
+      "bdfutbol_id": "702614",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j702614.html",
+      "profile_position": "Goalkeeper",
+      "role_before": 16,
+      "role_after": 0,
+      "portrait_verified": true
+    },
+    {
+      "source_id": 9496358,
+      "display_name": "Kubilay Türkyılmaz",
+      "country": "Turkey",
+      "bdfutbol_id": "95868",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j95868.html",
+      "profile_position": "Forward",
+      "role_before": 13,
+      "role_after": 17,
+      "portrait_verified": true
+    },
+    {
+      "source_id": 9496359,
+      "display_name": "Ahmet Bulut",
+      "country": "Turkey",
+      "bdfutbol_id": "702755",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j702755.html",
+      "profile_position": "Goalkeeper",
+      "role_before": 17,
+      "role_after": 0,
+      "portrait_verified": true
+    },
+    {
+      "source_id": 9496360,
+      "display_name": "Mustafa Kocabey",
+      "country": "Turkey",
+      "bdfutbol_id": "702754",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j702754.html",
+      "profile_position": "Forward",
+      "role_before": 16,
+      "role_after": 17,
+      "portrait_verified": true
+    },
+    {
+      "source_id": 9496616,
+      "display_name": "Fyodor Cherenkov",
+      "country": "Russia",
+      "bdfutbol_id": "41922",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j41922.html",
+      "profile_position": "Midfielder",
+      "role_before": 4,
+      "role_after": 7,
+      "portrait_verified": true
+    },
+    {
+      "source_id": 9496618,
+      "display_name": "Dmitri Ananko",
+      "country": "Russia",
+      "bdfutbol_id": "84989",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j84989.html",
+      "profile_position": "Central",
+      "role_before": 16,
+      "role_after": 3,
+      "portrait_verified": true
+    },
+    {
+      "source_id": 9496943,
+      "display_name": "Krzysztof Warzycha",
+      "country": "Greece",
+      "bdfutbol_id": "59705",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j59705.html",
+      "profile_position": "Forward",
+      "role_before": 12,
+      "role_after": 17,
+      "portrait_verified": true
+    }
+  ],
+  "duplicate_reconciliations": [
+    {
+      "source_id": 9494093,
+      "display_name": "Roger Ljung",
+      "country": "Turkey",
+      "bdfutbol_id": "80039",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j80039.html",
+      "profile_position": "Midfielder",
+      "role_before": 3,
+      "role_after": 3,
+      "portrait_verified": true,
+      "duplicate_reconciliation": {
+        "removed_source_id": 9496356,
+        "reused_source_id": 9494093
+      }
+    }
+  ],
+  "changes": [
+    {
+      "source_id": 9494093,
+      "display_name": "Roger Ljung",
+      "country": "Turkey",
+      "bdfutbol_id": "80039",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j80039.html",
+      "profile_position": "Midfielder",
+      "role_before": 3,
+      "role_after": 3,
+      "portrait_verified": true,
+      "duplicate_reconciliation": {
+        "removed_source_id": 9496356,
+        "reused_source_id": 9494093
+      }
+    },
+    {
+      "source_id": 9496352,
+      "display_name": "Reinhard Stumpf",
+      "country": "Turkey",
+      "bdfutbol_id": "98735",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j98735.html",
+      "profile_position": "Defender",
+      "role_before": 1,
+      "role_after": 1,
+      "portrait_verified": true
+    },
+    {
+      "source_id": 9496353,
+      "display_name": "Mert Korkmaz",
+      "country": "Turkey",
+      "bdfutbol_id": "54548",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j54548.html",
+      "profile_position": "Defender",
+      "role_before": 3,
+      "role_after": 3,
+      "portrait_verified": true
+    },
+    {
+      "source_id": 9496354,
+      "display_name": "Falko Götz",
+      "country": "Turkey",
+      "bdfutbol_id": "90652",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j90652.html",
+      "profile_position": "Midfielder",
+      "role_before": 13,
+      "role_after": 13,
+      "portrait_verified": true
+    },
+    {
+      "source_id": 9496355,
+      "display_name": "Nezih Ali Boloğlu",
+      "country": "Turkey",
+      "bdfutbol_id": "702614",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j702614.html",
+      "profile_position": "Goalkeeper",
+      "role_before": 16,
+      "role_after": 0,
+      "portrait_verified": true
+    },
+    {
+      "source_id": 9496357,
+      "display_name": "Ali Erdal Keser",
+      "country": "Turkey",
+      "bdfutbol_id": "91805",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j91805.html",
+      "profile_position": "Midfielder",
+      "role_before": 6,
+      "role_after": 6,
+      "portrait_verified": true
+    },
+    {
+      "source_id": 9496358,
+      "display_name": "Kubilay Türkyılmaz",
+      "country": "Turkey",
+      "bdfutbol_id": "95868",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j95868.html",
+      "profile_position": "Forward",
+      "role_before": 13,
+      "role_after": 17,
+      "portrait_verified": true
+    },
+    {
+      "source_id": 9496359,
+      "display_name": "Ahmet Bulut",
+      "country": "Turkey",
+      "bdfutbol_id": "702755",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j702755.html",
+      "profile_position": "Goalkeeper",
+      "role_before": 17,
+      "role_after": 0,
+      "portrait_verified": true
+    },
+    {
+      "source_id": 9496360,
+      "display_name": "Mustafa Kocabey",
+      "country": "Turkey",
+      "bdfutbol_id": "702754",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j702754.html",
+      "profile_position": "Forward",
+      "role_before": 16,
+      "role_after": 17,
+      "portrait_verified": true
+    },
+    {
+      "source_id": 9496613,
+      "display_name": "Gintaras Staučė",
+      "country": "Russia",
+      "bdfutbol_id": "98206",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j98206.html",
+      "profile_position": "Goalkeeper",
+      "role_before": 0,
+      "role_after": 0,
+      "portrait_verified": true
+    },
+    {
+      "source_id": 9494088,
+      "display_name": "Viktor Onopko",
+      "country": "Russia",
+      "bdfutbol_id": "2609",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j2609.html",
+      "profile_position": "Central",
+      "role_before": 3,
+      "role_after": 3,
+      "portrait_verified": true
+    },
+    {
+      "source_id": 9496615,
+      "display_name": "Nikolai Pisarev",
+      "country": "Russia",
+      "bdfutbol_id": "2091",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j2091.html",
+      "profile_position": "Forward",
+      "role_before": 17,
+      "role_after": 17,
+      "portrait_verified": true
+    },
+    {
+      "source_id": 9496616,
+      "display_name": "Fyodor Cherenkov",
+      "country": "Russia",
+      "bdfutbol_id": "41922",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j41922.html",
+      "profile_position": "Midfielder",
+      "role_before": 4,
+      "role_after": 7,
+      "portrait_verified": true
+    },
+    {
+      "source_id": 9496617,
+      "display_name": "Aleksandr Pomazun",
+      "country": "Russia",
+      "bdfutbol_id": "590782",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j590782.html",
+      "profile_position": "Goalkeeper",
+      "role_before": 0,
+      "role_after": 0,
+      "portrait_verified": true
+    },
+    {
+      "source_id": 9496618,
+      "display_name": "Dmitri Ananko",
+      "country": "Russia",
+      "bdfutbol_id": "84989",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j84989.html",
+      "profile_position": "Central",
+      "role_before": 16,
+      "role_after": 3,
+      "portrait_verified": true
+    },
+    {
+      "source_id": 9494163,
+      "display_name": "Dimitris Saravakos",
+      "country": "Greece",
+      "bdfutbol_id": "58026",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j58026.html",
+      "profile_position": "Midfielder",
+      "role_before": 8,
+      "role_after": 8,
+      "portrait_verified": true
+    },
+    {
+      "source_id": 9496930,
+      "display_name": "Vassilis Tsartas",
+      "country": "Greece",
+      "bdfutbol_id": "2572",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j2572.html",
+      "profile_position": "Midfielder",
+      "role_before": 8,
+      "role_after": 8,
+      "portrait_verified": false
+    },
+    {
+      "source_id": 9494166,
+      "display_name": "Tasos Mitropoulos",
+      "country": "Greece",
+      "bdfutbol_id": "42541",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j42541.html",
+      "profile_position": "Forward",
+      "role_before": 7,
+      "role_after": 7,
+      "portrait_verified": true
+    },
+    {
+      "source_id": 9496943,
+      "display_name": "Krzysztof Warzycha",
+      "country": "Greece",
+      "bdfutbol_id": "59705",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j59705.html",
+      "profile_position": "Forward",
+      "role_before": 12,
+      "role_after": 17,
+      "portrait_verified": true
+    },
+    {
+      "source_id": 9494177,
+      "display_name": "Alexis Alexandris",
+      "country": "Greece",
+      "bdfutbol_id": "708921",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j708921.html",
+      "profile_position": "Forward",
+      "role_before": 17,
+      "role_after": 17,
+      "portrait_verified": true
+    }
+  ],
+  "greece_foreign_rule": {
+    "evidence_file": "greece_1993_94_foreign_rule_evidence.json",
+    "candidate_limit": 3,
+    "runtime_encoded": false,
+    "why": "The historical value 3 is strongly corroborated, but the exact Greek domestic rule text governing 1993-94 has not been recovered. Cypriot domestic equivalence is source-supported and is modelled separately, so it is not used as a reason to guess the numeric quota."
+  }
+}

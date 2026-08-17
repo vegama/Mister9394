@@ -27,196 +27,23 @@
     "Sarıyer": 18
   },
   "role_counts": {
-    "Galatasaray": {
-      "Goalkeeper": 1,
-      "Centre Back": 4,
-      "Defensive Midfielder": 3,
-      "Left Midfielder": 3,
-      "Centre Midfielder": 1,
-      "Attacking Midfielder": 1,
-      "Centre Forward": 3,
-      "Right Back": 1,
-      "Left Winger": 2,
-      "Left Back": 1
-    },
-    "Fenerbahçe": {
-      "Goalkeeper": 2,
-      "Centre Back": 4,
-      "Centre Midfielder": 7,
-      "Centre Forward": 3,
-      "Right Back": 2,
-      "Left Back": 1,
-      "Left Midfielder": 1,
-      "Right Midfielder": 2,
-      "Right Winger": 1
-    },
-    "Trabzonspor": {
-      "Centre Back": 5,
-      "Centre Midfielder": 1,
-      "Left Midfielder": 3,
-      "Defensive Midfielder": 2,
-      "Centre Forward": 4,
-      "Goalkeeper": 3,
-      "Right Midfielder": 1,
-      "Left Back": 1
-    },
-    "Beşiktaş": {
-      "Right Back": 2,
-      "Centre Back": 1,
-      "Libero": 1,
-      "Left Back": 1,
-      "Attacking Midfielder": 2,
-      "Centre Midfielder": 4,
-      "Centre Forward": 4,
-      "Goalkeeper": 2,
-      "Right Midfielder": 2,
-      "Right Winger": 1
-    },
-    "Samsunspor": {
-      "Centre Forward": 5,
-      "Goalkeeper": 2,
-      "Right Back": 1,
-      "Centre Back": 3,
-      "Left Back": 1,
-      "Right Midfielder": 1,
-      "Centre Midfielder": 2,
-      "Defensive Midfielder": 1,
-      "Left Midfielder": 1,
-      "Left Winger": 1
-    },
-    "Kocaelispor": {
-      "Centre Forward": 3,
-      "Goalkeeper": 1,
-      "Right Back": 2,
-      "Centre Back": 3,
-      "Left Back": 1,
-      "Right Midfielder": 2,
-      "Centre Midfielder": 3,
-      "Left Midfielder": 1,
-      "Right Winger": 2,
-      "Attacking Midfielder": 1
-    },
-    "Gençlerbirliği": {
-      "Goalkeeper": 2,
-      "Right Back": 1,
-      "Centre Back": 3,
-      "Left Back": 2,
-      "Right Midfielder": 1,
-      "Centre Midfielder": 2,
-      "Left Midfielder": 2,
-      "Centre Forward": 3,
-      "Left Winger": 1,
-      "Defensive Midfielder": 1
-    },
-    "Gaziantepspor": {
-      "Goalkeeper": 2,
-      "Right Back": 2,
-      "Centre Back": 3,
-      "Left Back": 1,
-      "Right Midfielder": 2,
-      "Centre Midfielder": 3,
-      "Left Midfielder": 1,
-      "Centre Forward": 2,
-      "Attacking Midfielder": 1,
-      "Right Winger": 1
-    },
-    "Bursaspor": {
-      "Centre Back": 4,
-      "Goalkeeper": 2,
-      "Right Back": 1,
-      "Left Back": 2,
-      "Right Midfielder": 1,
-      "Centre Midfielder": 2,
-      "Left Midfielder": 2,
-      "Centre Forward": 3,
-      "Left Winger": 1,
-      "Defensive Midfielder": 1
-    },
-    "Altay": {
-      "Goalkeeper": 2,
-      "Right Back": 2,
-      "Centre Back": 3,
-      "Left Back": 1,
-      "Right Midfielder": 2,
-      "Centre Midfielder": 3,
-      "Left Midfielder": 1,
-      "Centre Forward": 2,
-      "Attacking Midfielder": 1,
-      "Right Winger": 1
-    },
-    "Ankaragücü": {
-      "Centre Back": 4,
-      "Goalkeeper": 3,
-      "Left Back": 2,
-      "Right Midfielder": 1,
-      "Centre Midfielder": 2,
-      "Left Midfielder": 1,
-      "Centre Forward": 3,
-      "Left Winger": 1,
-      "Defensive Midfielder": 1
-    },
-    "Kayserispor": {
-      "Goalkeeper": 3,
-      "Right Back": 1,
-      "Centre Back": 3,
-      "Left Back": 1,
-      "Right Midfielder": 2,
-      "Centre Midfielder": 3,
-      "Left Midfielder": 1,
-      "Centre Forward": 2,
-      "Attacking Midfielder": 1,
-      "Right Winger": 1
-    },
-    "Zeytinburnuspor": {
-      "Goalkeeper": 3,
-      "Right Back": 1,
-      "Centre Back": 3,
-      "Left Back": 2,
-      "Right Midfielder": 1,
-      "Centre Midfielder": 2,
-      "Left Midfielder": 2,
-      "Centre Forward": 2,
-      "Defensive Midfielder": 1,
-      "Left Winger": 1
-    },
-    "Karabükspor": {
-      "Goalkeeper": 3,
-      "Right Back": 2,
-      "Centre Back": 3,
-      "Left Back": 1,
-      "Right Midfielder": 2,
-      "Centre Midfielder": 2,
-      "Left Midfielder": 1,
-      "Centre Forward": 3,
-      "Right Winger": 1
-    },
-    "Karşıyaka": {
-      "Goalkeeper": 1,
-      "Right Back": 1,
-      "Centre Back": 4,
-      "Left Back": 2,
-      "Right Midfielder": 1,
-      "Centre Midfielder": 2,
-      "Left Midfielder": 2,
-      "Centre Forward": 3,
-      "Defensive Midfielder": 1,
-      "Left Winger": 1
-    },
-    "Sarıyer": {
-      "Goalkeeper": 2,
-      "Right Back": 2,
-      "Centre Back": 3,
-      "Left Back": 1,
-      "Right Midfielder": 2,
-      "Centre Midfielder": 3,
-      "Left Midfielder": 1,
-      "Centre Forward": 2,
-      "Right Winger": 1,
-      "Attacking Midfielder": 1
-    }
+    "0": 35,
+    "1": 21,
+    "2": 20,
+    "3": 29,
+    "4": 22,
+    "5": 1,
+    "6": 11,
+    "7": 36,
+    "8": 8,
+    "9": 23,
+    "12": 9,
+    "13": 22,
+    "16": 6,
+    "17": 45
   },
-  "reused_existing_players": 27,
-  "created_players": 261,
+  "reused_existing_players": 28,
+  "created_players": 260,
   "extra_verified_pool_players_reassigned": 13,
   "extra_reassigned": [
     {
@@ -289,7 +116,8 @@
   "position_provenance": {
     "existing_historical_position": 27,
     "bdfutbol_lineup_order_inference": 138,
-    "squad_balance_inference": 89,
+    "bdfutbol_individual_profile_v0.29": 4,
+    "squad_balance_inference": 85,
     "bdfutbol_goalkeeper_stat": 30,
     "bdfutbol_goal_output_inference": 4
   },
@@ -311,20 +139,22 @@
       "bdfutbol_name": "Stumpf",
       "identity_hint": null,
       "source_id": 9496352,
-      "display_name": "Stumpf",
+      "display_name": "Reinhard Stumpf",
       "role": 1,
       "position": "Right Back",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "bdfutbol_lineup_order_inference",
+      "individual_profile_source_url": "https://www.bdfutbol.com/en/j/j98735.html"
     },
     {
       "club": "Galatasaray",
       "bdfutbol_name": "Korkmaz",
       "identity_hint": null,
       "source_id": 9496353,
-      "display_name": "Korkmaz",
+      "display_name": "Mert Korkmaz",
       "role": 3,
       "position": "Centre Back",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "bdfutbol_lineup_order_inference",
+      "individual_profile_source_url": "https://www.bdfutbol.com/en/j/j54548.html"
     },
     {
       "club": "Galatasaray",
@@ -381,10 +211,11 @@
       "bdfutbol_name": "Götz",
       "identity_hint": null,
       "source_id": 9496354,
-      "display_name": "Götz",
+      "display_name": "Falko Götz",
       "role": 13,
       "position": "Left Midfielder",
-      "position_source": "bdfutbol_lineup_order_inference"
+      "position_source": "bdfutbol_lineup_order_inference",
+      "individual_profile_source_url": "https://www.bdfutbol.com/en/j/j90652.html"
     },
     {
       "club": "Galatasaray",
@@ -411,10 +242,11 @@
       "bdfutbol_name": "Boloğlu",
       "identity_hint": null,
       "source_id": 9496355,
-      "display_name": "Boloğlu",
-      "role": 16,
-      "position": "Left Winger",
-      "position_source": "squad_balance_inference"
+      "display_name": "Nezih Ali Boloğlu",
+      "role": 0,
+      "position": "Goalkeeper",
+      "position_source": "bdfutbol_individual_profile_v0.29",
+      "individual_profile_source_url": "https://www.bdfutbol.com/en/j/j702614.html"
     },
     {
       "club": "Galatasaray",
@@ -430,51 +262,56 @@
       "club": "Galatasaray",
       "bdfutbol_name": "Ljung",
       "identity_hint": null,
-      "source_id": 9496356,
-      "display_name": "Ljung",
-      "role": 2,
-      "position": "Left Back",
-      "position_source": "squad_balance_inference"
+      "source_id": 9494093,
+      "display_name": "Roger Ljung",
+      "role": 3,
+      "position": "Centre Back",
+      "position_source": "squad_balance_inference",
+      "individual_profile_source_url": "https://www.bdfutbol.com/en/j/j80039.html"
     },
     {
       "club": "Galatasaray",
       "bdfutbol_name": "Keser",
       "identity_hint": null,
       "source_id": 9496357,
-      "display_name": "Keser",
+      "display_name": "Ali Erdal Keser",
       "role": 6,
       "position": "Defensive Midfielder",
-      "position_source": "squad_balance_inference"
+      "position_source": "squad_balance_inference",
+      "individual_profile_source_url": "https://www.bdfutbol.com/en/j/j91805.html"
     },
     {
       "club": "Galatasaray",
       "bdfutbol_name": "Türkyılmaz",
       "identity_hint": null,
       "source_id": 9496358,
-      "display_name": "Türkyılmaz",
-      "role": 13,
-      "position": "Left Midfielder",
-      "position_source": "squad_balance_inference"
+      "display_name": "Kubilay Türkyılmaz",
+      "role": 17,
+      "position": "Centre Forward",
+      "position_source": "bdfutbol_individual_profile_v0.29",
+      "individual_profile_source_url": "https://www.bdfutbol.com/en/j/j95868.html"
     },
     {
       "club": "Galatasaray",
       "bdfutbol_name": "Bulut",
       "identity_hint": null,
       "source_id": 9496359,
-      "display_name": "Bulut",
-      "role": 17,
-      "position": "Centre Forward",
-      "position_source": "squad_balance_inference"
+      "display_name": "Ahmet Bulut",
+      "role": 0,
+      "position": "Goalkeeper",
+      "position_source": "bdfutbol_individual_profile_v0.29",
+      "individual_profile_source_url": "https://www.bdfutbol.com/en/j/j702755.html"
     },
     {
       "club": "Galatasaray",
       "bdfutbol_name": "Kocabey",
       "identity_hint": null,
       "source_id": 9496360,
-      "display_name": "Kocabey",
-      "role": 16,
-      "position": "Left Winger",
-      "position_source": "squad_balance_inference"
+      "display_name": "Mustafa Kocabey",
+      "role": 17,
+      "position": "Centre Forward",
+      "position_source": "bdfutbol_individual_profile_v0.29",
+      "individual_profile_source_url": "https://www.bdfutbol.com/en/j/j702754.html"
     },
     {
       "club": "Fenerbahçe",
@@ -3178,5 +3015,11 @@
     }
   ],
   "duplicate_policy": "explicit reuse only; no fuzzy surname merging",
-  "rating_policy": "fixed source-comparable attributes on the game scale; no football 75/25 rule"
+  "rating_policy": "fixed source-comparable attributes on the game scale; no football 75/25 rule",
+  "individual_profile_enrichment_0_29": {
+    "profiles_curated": 9,
+    "portrait_profiles_ready_for_download": 9,
+    "role_corrections": 4,
+    "source": "BDFutbol individual player pages; explicit fixed curation only"
+  }
 }

@@ -225,7 +225,9 @@
           "resolved_exact_position": "Centre Midfielder",
           "position_source": "verified_existing_historical_specialist_role",
           "resolved_birth_date": "1957-08-23T00:00:00",
-          "resolved_country_id": 47
+          "resolved_country_id": 47,
+          "individual_profile_source_url": "https://www.bdfutbol.com/en/j/j42541.html",
+          "bdfutbol_id": "42541"
         },
         {
           "rsssf_name": "Refik Sabanasovic",
@@ -281,8 +283,10 @@
           "resolved_primary_role": 8,
           "resolved_exact_position": "Attacking Midfielder",
           "position_source": "verified_role_override",
-          "resolved_birth_date": "1972-12-12T00:00:00",
-          "resolved_country_id": 47
+          "resolved_birth_date": "1972-11-12T00:00:00",
+          "resolved_country_id": 47,
+          "individual_profile_source_url": "https://www.bdfutbol.com/en/j/j2572.html",
+          "bdfutbol_id": "2572"
         },
         {
           "rsssf_name": "Alekos Alexandris",
@@ -299,9 +303,11 @@
           "resolved_display_name": "Alexis Alexandris",
           "resolved_primary_role": 17,
           "resolved_exact_position": "Centre Forward",
-          "position_source": "verified_existing_historical_specialist_role",
+          "position_source": "bdfutbol_individual_profile_v0.29",
           "resolved_birth_date": "1968-10-21T00:00:00",
-          "resolved_country_id": 47
+          "resolved_country_id": 47,
+          "individual_profile_source_url": "https://www.bdfutbol.com/en/j/j708921.html",
+          "bdfutbol_id": "708921"
         },
         {
           "rsssf_name": "Vassilis Dimitriadis",
@@ -670,7 +676,9 @@
           "resolved_exact_position": "Attacking Midfielder",
           "position_source": "verified_existing_historical_specialist_role",
           "resolved_birth_date": "1961-07-26T00:00:00",
-          "resolved_country_id": 47
+          "resolved_country_id": 47,
+          "individual_profile_source_url": "https://www.bdfutbol.com/en/j/j58026.html",
+          "bdfutbol_id": "58026"
         },
         {
           "rsssf_name": "Krystof Warzycha",
@@ -684,12 +692,14 @@
           "source_url": "https://www.rsssf.org/tablesg/grk94.html",
           "identity_resolution": "created_historical_identity",
           "resolved_source_id": 9496943,
-          "resolved_display_name": "Krystof Warzycha",
-          "resolved_primary_role": 12,
-          "resolved_exact_position": "Right Winger",
-          "position_source": "source_section_specialist_inference",
+          "resolved_display_name": "Krzysztof Warzycha",
+          "resolved_primary_role": 17,
+          "resolved_exact_position": "Centre Forward",
+          "position_source": "bdfutbol_individual_profile_v0.29",
           "resolved_birth_date": "1964-11-17T00:00:00",
-          "resolved_country_id": 70
+          "resolved_country_id": 70,
+          "individual_profile_source_url": "https://www.bdfutbol.com/en/j/j59705.html",
+          "bdfutbol_id": "59705"
         },
         {
           "rsssf_name": "Dimitris Markou",

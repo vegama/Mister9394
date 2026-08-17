@@ -20,10 +20,14 @@
           "core_18_candidate": true,
           "identity_resolution": "created_historical_identity",
           "resolved_source_id": 9496613,
-          "resolved_display_name": "Staučė",
+          "resolved_display_name": "Gintaras Staučė",
           "resolved_primary_role": 0,
           "resolved_exact_position": "Goalkeeper",
-          "position_source": "bdfutbol_goalkeeper_stat"
+          "position_source": "bdfutbol_individual_profile_v0.29",
+          "individual_profile_source_url": "https://www.bdfutbol.com/en/j/j98206.html",
+          "bdfutbol_id": "98206",
+          "resolved_birth_date": "1969-12-24T00:00:00",
+          "resolved_country_id": 52
         },
         {
           "bdfutbol_name": "Onopko",
@@ -38,7 +42,11 @@
           "resolved_display_name": "Viktor Onopko",
           "resolved_primary_role": 3,
           "resolved_exact_position": "Centre Back",
-          "position_source": "existing_specialist_role"
+          "position_source": "existing_specialist_role",
+          "individual_profile_source_url": "https://www.bdfutbol.com/en/j/j2609.html",
+          "bdfutbol_id": "2609",
+          "resolved_birth_date": "1969-10-14T00:00:00",
+          "resolved_country_id": 40
         },
         {
           "bdfutbol_name": "Mamedov",
@@ -155,10 +163,14 @@
           "core_18_candidate": true,
           "identity_resolution": "created_historical_identity",
           "resolved_source_id": 9496615,
-          "resolved_display_name": "Pisarev",
+          "resolved_display_name": "Nikolai Pisarev",
           "resolved_primary_role": 17,
           "resolved_exact_position": "Centre Forward",
-          "position_source": "bdfutbol_lineup_order_inference"
+          "position_source": "bdfutbol_individual_profile_v0.29",
+          "individual_profile_source_url": "https://www.bdfutbol.com/en/j/j2091.html",
+          "bdfutbol_id": "2091",
+          "resolved_birth_date": "1968-11-23T00:00:00",
+          "resolved_country_id": 40
         },
         {
           "bdfutbol_name": "Beschastnykh",
@@ -200,10 +212,14 @@
           "core_18_candidate": true,
           "identity_resolution": "created_historical_identity",
           "resolved_source_id": 9496616,
-          "resolved_display_name": "Cherenkov",
-          "resolved_primary_role": 4,
-          "resolved_exact_position": "Centre Back",
-          "position_source": "squad_balance_inference"
+          "resolved_display_name": "Fyodor Cherenkov",
+          "resolved_primary_role": 7,
+          "resolved_exact_position": "Centre Midfielder",
+          "position_source": "bdfutbol_individual_profile_v0.29",
+          "individual_profile_source_url": "https://www.bdfutbol.com/en/j/j41922.html",
+          "bdfutbol_id": "41922",
+          "resolved_birth_date": "1959-07-25T00:00:00",
+          "resolved_country_id": 40
         },
         {
           "bdfutbol_name": "Khlestov",
@@ -260,10 +276,14 @@
           "core_18_candidate": true,
           "identity_resolution": "created_historical_identity",
           "resolved_source_id": 9496617,
-          "resolved_display_name": "Pomazun",
+          "resolved_display_name": "Aleksandr Pomazun",
           "resolved_primary_role": 0,
           "resolved_exact_position": "Goalkeeper",
-          "position_source": "bdfutbol_goalkeeper_stat"
+          "position_source": "bdfutbol_individual_profile_v0.29",
+          "individual_profile_source_url": "https://www.bdfutbol.com/en/j/j590782.html",
+          "bdfutbol_id": "590782",
+          "resolved_birth_date": "1971-10-11T00:00:00",
+          "resolved_country_id": 85
         },
         {
           "bdfutbol_name": "Ananko",
@@ -275,10 +295,14 @@
           "core_18_candidate": true,
           "identity_resolution": "created_historical_identity",
           "resolved_source_id": 9496618,
-          "resolved_display_name": "Ananko",
-          "resolved_primary_role": 16,
-          "resolved_exact_position": "Left Winger",
-          "position_source": "squad_balance_inference"
+          "resolved_display_name": "Dmitri Ananko",
+          "resolved_primary_role": 3,
+          "resolved_exact_position": "Centre Back",
+          "position_source": "bdfutbol_individual_profile_v0.29",
+          "individual_profile_source_url": "https://www.bdfutbol.com/en/j/j84989.html",
+          "bdfutbol_id": "84989",
+          "resolved_birth_date": "1973-09-29T00:00:00",
+          "resolved_country_id": 40
         }
       ]
     },
