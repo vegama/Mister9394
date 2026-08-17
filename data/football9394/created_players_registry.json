@@ -5404,10 +5404,12 @@
       "world_cup_1994_team_code": "GRC",
       "world_cup_1994_shirt_number": 2,
       "bdfutbol_search_name": "Stratos Apostolakis",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "709351",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j709351.html",
       "photo_filename": "9494158.jpg",
-      "photo_status": "pending_identity_profile"
+      "photo_status": "ready_for_download",
+      "individual_profile_source": "BDFutbol club squad roster cross-check, unique surname match, no birth date on file to verify (v0.47, human-reviewed)",
+      "individual_profile_source_url": "https://www.bdfutbol.com/en/j/j709351.html"
     },
     {
       "source_id": 9494159,
@@ -5779,10 +5781,12 @@
       "world_cup_1994_team_code": "GRC",
       "world_cup_1994_shirt_number": 13,
       "bdfutbol_search_name": "Vaios Karagiannis",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "710180",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j710180.html",
       "photo_filename": "9494169.jpg",
-      "photo_status": "pending_identity_profile"
+      "photo_status": "ready_for_download",
+      "individual_profile_source": "BDFutbol club squad roster cross-check, unique surname match, no birth date on file to verify (v0.47, human-reviewed)",
+      "individual_profile_source_url": "https://www.bdfutbol.com/en/j/j710180.html"
     },
     {
       "source_id": 9494170,
@@ -13252,10 +13256,12 @@
       "world_cup_1994_team_code": null,
       "world_cup_1994_shirt_number": null,
       "bdfutbol_search_name": "Gökhan Keskin",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "42713",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j42713.html",
       "photo_filename": "9495323.jpg",
-      "photo_status": "pending_identity_profile"
+      "photo_status": "ready_for_download",
+      "individual_profile_source": "BDFutbol club squad roster cross-check, unique surname match, no birth date on file to verify (v0.47, human-reviewed)",
+      "individual_profile_source_url": "https://www.bdfutbol.com/en/j/j42713.html"
     },
     {
       "source_id": 9495324,
@@ -13367,17 +13373,17 @@
       "world_cup_1994_team_code": null,
       "world_cup_1994_shirt_number": null,
       "bdfutbol_search_name": "Sedat Balkanlı",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "55592",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j55592.html",
       "photo_filename": "9495326.jpg",
-      "photo_status": "pending_identity_profile",
+      "photo_status": "ready_for_download",
       "attribute_comparable_source_ids": [
         274,
         2342
       ],
       "attribute_comparable_repair_reason": "v0.31 roster-ID collision cleanup removed one or more legacy comparable identities; regenerated from surviving source-backed same-position comparables.",
-      "individual_profile_source": "Transfermarkt Bursaspor season squad 1993-94 v0.32",
-      "individual_profile_source_url": "https://www.transfermarkt.com.tr/bursaspor/startseite/verein/20/saison_id/1993"
+      "individual_profile_source": "BDFutbol club squad roster cross-check, name + birth date verified (v0.47)",
+      "individual_profile_source_url": "https://www.bdfutbol.com/en/j/j55592.html"
     },
     {
       "source_id": 9495327,
@@ -13958,15 +13964,17 @@
       "world_cup_1994_team_code": null,
       "world_cup_1994_shirt_number": null,
       "bdfutbol_search_name": "Sergen Yalçın",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "43790",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j43790.html",
       "photo_filename": "9495345.jpg",
-      "photo_status": "pending_identity_profile",
+      "photo_status": "ready_for_download",
       "attribute_comparable_source_ids": [
         2426,
         280
       ],
-      "attribute_comparable_repair_reason": "v0.31 roster-ID collision cleanup removed one or more legacy comparable identities; regenerated from surviving source-backed same-position comparables."
+      "attribute_comparable_repair_reason": "v0.31 roster-ID collision cleanup removed one or more legacy comparable identities; regenerated from surviving source-backed same-position comparables.",
+      "individual_profile_source": "BDFutbol club squad roster cross-check, unique surname match, no birth date on file to verify (v0.47, human-reviewed)",
+      "individual_profile_source_url": "https://www.bdfutbol.com/en/j/j43790.html"
     },
     {
       "source_id": 9495347,
@@ -14850,10 +14858,12 @@
       "duplicate_check": "belgium_1993_94_identity_gate",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Pär Zetterberg",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "98382",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j98382.html",
       "photo_filename": "9496010.jpg",
-      "photo_status": "pending_identity_profile"
+      "photo_status": "ready_for_download",
+      "individual_profile_source": "BDFutbol club squad roster cross-check, name + birth date verified (v0.47)",
+      "individual_profile_source_url": "https://www.bdfutbol.com/en/j/j98382.html"
     },
     {
       "source_id": 9496011,
@@ -27658,10 +27668,12 @@
       "duplicate_check": "turkey_1993_94_explicit_identity_gate",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Öğer",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "42711",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j42711.html",
       "photo_filename": "9496388.jpg",
-      "photo_status": "pending_identity_profile"
+      "photo_status": "ready_for_download",
+      "individual_profile_source": "BDFutbol club squad roster cross-check, unique surname match, no birth date on file to verify (v0.47, human-reviewed)",
+      "individual_profile_source_url": "https://www.bdfutbol.com/en/j/j42711.html"
     },
     {
       "source_id": 9496390,
@@ -27777,10 +27789,12 @@
       "duplicate_check": "turkey_1993_94_explicit_identity_gate",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Kurtulmuş",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "702609",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j702609.html",
       "photo_filename": "9496393.jpg",
-      "photo_status": "pending_identity_profile"
+      "photo_status": "ready_for_download",
+      "individual_profile_source": "BDFutbol club squad roster cross-check, unique surname match, no birth date on file to verify (v0.47, human-reviewed)",
+      "individual_profile_source_url": "https://www.bdfutbol.com/en/j/j702609.html"
     },
     {
       "source_id": 9496394,
@@ -27806,10 +27820,12 @@
       "duplicate_check": "turkey_1993_94_explicit_identity_gate",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Metin",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "42602",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j42602.html",
       "photo_filename": "9496394.jpg",
-      "photo_status": "pending_identity_profile"
+      "photo_status": "ready_for_download",
+      "individual_profile_source": "BDFutbol club squad roster cross-check, unique surname match, no birth date on file to verify (v0.47, human-reviewed)",
+      "individual_profile_source_url": "https://www.bdfutbol.com/en/j/j42602.html"
     },
     {
       "source_id": 9496396,
@@ -27835,10 +27851,12 @@
       "duplicate_check": "turkey_1993_94_explicit_identity_gate",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Alpay",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "92502",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j92502.html",
       "photo_filename": "9496396.jpg",
-      "photo_status": "pending_identity_profile"
+      "photo_status": "ready_for_download",
+      "individual_profile_source": "BDFutbol club squad roster cross-check, unique surname match, no birth date on file to verify (v0.47, human-reviewed)",
+      "individual_profile_source_url": "https://www.bdfutbol.com/en/j/j92502.html"
     },
     {
       "source_id": 9496397,
@@ -27864,10 +27882,12 @@
       "duplicate_check": "turkey_1993_94_explicit_identity_gate",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Uzun",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "702610",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j702610.html",
       "photo_filename": "9496397.jpg",
-      "photo_status": "pending_identity_profile"
+      "photo_status": "ready_for_download",
+      "individual_profile_source": "BDFutbol club squad roster cross-check, unique surname match, no birth date on file to verify (v0.47, human-reviewed)",
+      "individual_profile_source_url": "https://www.bdfutbol.com/en/j/j702610.html"
     },
     {
       "source_id": 9496398,
@@ -27893,10 +27913,12 @@
       "duplicate_check": "turkey_1993_94_explicit_identity_gate",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Akbulut",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "42284",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j42284.html",
       "photo_filename": "9496398.jpg",
-      "photo_status": "pending_identity_profile"
+      "photo_status": "ready_for_download",
+      "individual_profile_source": "BDFutbol club squad roster cross-check, unique surname match, no birth date on file to verify (v0.47, human-reviewed)",
+      "individual_profile_source_url": "https://www.bdfutbol.com/en/j/j42284.html"
     },
     {
       "source_id": 9496399,
@@ -27922,10 +27944,12 @@
       "duplicate_check": "turkey_1993_94_explicit_identity_gate",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Tokaç",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "701141",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j701141.html",
       "photo_filename": "9496399.jpg",
-      "photo_status": "pending_identity_profile"
+      "photo_status": "ready_for_download",
+      "individual_profile_source": "BDFutbol club squad roster cross-check, unique surname match, no birth date on file to verify (v0.47, human-reviewed)",
+      "individual_profile_source_url": "https://www.bdfutbol.com/en/j/j701141.html"
     },
     {
       "source_id": 9496400,
@@ -29243,12 +29267,12 @@
       "duplicate_check": "turkey_1993_94_explicit_identity_gate",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Özdemir",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "57988",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j57988.html",
       "photo_filename": "9496442.jpg",
-      "photo_status": "pending_identity_profile",
-      "individual_profile_source": "Transfermarkt Gençlerbirliği season squad 1993-94 v0.32",
-      "individual_profile_source_url": "https://www.transfermarkt.com/genclerbirligi-ankara/startseite/verein/820/saison_id/1993"
+      "photo_status": "ready_for_download",
+      "individual_profile_source": "BDFutbol club squad roster cross-check, name + birth date verified (v0.47)",
+      "individual_profile_source_url": "https://www.bdfutbol.com/en/j/j57988.html"
     },
     {
       "source_id": 9496443,
@@ -29374,12 +29398,12 @@
       "duplicate_check": "turkey_1993_94_explicit_identity_gate",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Šimunić",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "1179808",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1179808.html",
       "photo_filename": "9496446.jpg",
-      "photo_status": "pending_identity_profile",
-      "individual_profile_source": "Transfermarkt Gençlerbirliği season squad 1993-94 v0.32",
-      "individual_profile_source_url": "https://www.transfermarkt.com/genclerbirligi-ankara/startseite/verein/820/saison_id/1993"
+      "photo_status": "ready_for_download",
+      "individual_profile_source": "BDFutbol club squad roster cross-check, name + birth date verified (v0.47)",
+      "individual_profile_source_url": "https://www.bdfutbol.com/en/j/j1179808.html"
     },
     {
       "source_id": 9496447,
@@ -30253,12 +30277,12 @@
       "duplicate_check": "turkey_1993_94_explicit_identity_gate",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Ganchev",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "702731",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j702731.html",
       "photo_filename": "9496471.jpg",
-      "photo_status": "pending_identity_profile",
-      "individual_profile_source": "Transfermarkt Bursaspor season squad 1993-94 v0.32",
-      "individual_profile_source_url": "https://www.transfermarkt.com.tr/bursaspor/startseite/verein/20/saison_id/1993"
+      "photo_status": "ready_for_download",
+      "individual_profile_source": "BDFutbol club squad roster cross-check, name + birth date verified (v0.47)",
+      "individual_profile_source_url": "https://www.bdfutbol.com/en/j/j702731.html"
     },
     {
       "source_id": 9496472,
@@ -30284,12 +30308,12 @@
       "duplicate_check": "turkey_1993_94_explicit_identity_gate",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Şen",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "702738",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j702738.html",
       "photo_filename": "9496472.jpg",
-      "photo_status": "pending_identity_profile",
-      "individual_profile_source": "Transfermarkt Bursaspor season squad 1993-94 v0.32",
-      "individual_profile_source_url": "https://www.transfermarkt.com.tr/bursaspor/startseite/verein/20/saison_id/1993"
+      "photo_status": "ready_for_download",
+      "individual_profile_source": "BDFutbol club squad roster cross-check, name + birth date verified (v0.47)",
+      "individual_profile_source_url": "https://www.bdfutbol.com/en/j/j702738.html"
     },
     {
       "source_id": 9496473,
@@ -30315,12 +30339,12 @@
       "duplicate_check": "turkey_1993_94_explicit_identity_gate",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Okuroğlu",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "57982",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j57982.html",
       "photo_filename": "9496473.jpg",
-      "photo_status": "pending_identity_profile",
-      "individual_profile_source": "Transfermarkt Bursaspor season squad 1993-94 v0.32",
-      "individual_profile_source_url": "https://www.transfermarkt.com.tr/bursaspor/startseite/verein/20/saison_id/1993"
+      "photo_status": "ready_for_download",
+      "individual_profile_source": "BDFutbol club squad roster cross-check, name + birth date verified (v0.47)",
+      "individual_profile_source_url": "https://www.bdfutbol.com/en/j/j57982.html"
     },
     {
       "source_id": 9496474,
@@ -30346,12 +30370,12 @@
       "duplicate_check": "turkey_1993_94_explicit_identity_gate",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Örnek",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "1101338",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1101338.html",
       "photo_filename": "9496474.jpg",
-      "photo_status": "pending_identity_profile",
-      "individual_profile_source": "Transfermarkt Bursaspor season squad 1993-94 v0.32",
-      "individual_profile_source_url": "https://www.transfermarkt.com.tr/bursaspor/startseite/verein/20/saison_id/1993"
+      "photo_status": "ready_for_download",
+      "individual_profile_source": "BDFutbol club squad roster cross-check, name + birth date verified (v0.47)",
+      "individual_profile_source_url": "https://www.bdfutbol.com/en/j/j1101338.html"
     },
     {
       "source_id": 9496475,
@@ -30377,12 +30401,12 @@
       "duplicate_check": "turkey_1993_94_explicit_identity_gate",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Vatansever",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "1176380",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1176380.html",
       "photo_filename": "9496475.jpg",
-      "photo_status": "pending_identity_profile",
-      "individual_profile_source": "Transfermarkt Bursaspor season squad 1993-94 v0.32",
-      "individual_profile_source_url": "https://www.transfermarkt.com.tr/bursaspor/startseite/verein/20/saison_id/1993"
+      "photo_status": "ready_for_download",
+      "individual_profile_source": "BDFutbol club squad roster cross-check, name + birth date verified (v0.47)",
+      "individual_profile_source_url": "https://www.bdfutbol.com/en/j/j1176380.html"
     },
     {
       "source_id": 9496476,
@@ -30408,12 +30432,12 @@
       "duplicate_check": "turkey_1993_94_explicit_identity_gate",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Şengül",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "702740",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j702740.html",
       "photo_filename": "9496476.jpg",
-      "photo_status": "pending_identity_profile",
-      "individual_profile_source": "Transfermarkt Bursaspor season squad 1993-94 v0.32",
-      "individual_profile_source_url": "https://www.transfermarkt.com.tr/bursaspor/startseite/verein/20/saison_id/1993"
+      "photo_status": "ready_for_download",
+      "individual_profile_source": "BDFutbol club squad roster cross-check, name + birth date verified (v0.47)",
+      "individual_profile_source_url": "https://www.bdfutbol.com/en/j/j702740.html"
     },
     {
       "source_id": 9496477,
@@ -30439,12 +30463,12 @@
       "duplicate_check": "turkey_1993_94_explicit_identity_gate",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Tunahan",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "1101336",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1101336.html",
       "photo_filename": "9496477.jpg",
-      "photo_status": "pending_identity_profile",
-      "individual_profile_source": "Transfermarkt Bursaspor season squad 1993-94 v0.32",
-      "individual_profile_source_url": "https://www.transfermarkt.com.tr/bursaspor/startseite/verein/20/saison_id/1993"
+      "photo_status": "ready_for_download",
+      "individual_profile_source": "BDFutbol club squad roster cross-check, name + birth date verified (v0.47)",
+      "individual_profile_source_url": "https://www.bdfutbol.com/en/j/j1101336.html"
     },
     {
       "source_id": 9496478,
@@ -30470,12 +30494,12 @@
       "duplicate_check": "turkey_1993_94_explicit_identity_gate",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Velioğlu",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "1176202",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1176202.html",
       "photo_filename": "9496478.jpg",
-      "photo_status": "pending_identity_profile",
-      "individual_profile_source": "Transfermarkt Bursaspor season squad 1993-94 v0.32",
-      "individual_profile_source_url": "https://www.transfermarkt.com.tr/bursaspor/startseite/verein/20/saison_id/1993"
+      "photo_status": "ready_for_download",
+      "individual_profile_source": "BDFutbol club squad roster cross-check, name + birth date verified (v0.47)",
+      "individual_profile_source_url": "https://www.bdfutbol.com/en/j/j1176202.html"
     },
     {
       "source_id": 9496479,
@@ -30577,12 +30601,12 @@
       "duplicate_check": "turkey_1993_94_explicit_identity_gate",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Durmuş",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "55593",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j55593.html",
       "photo_filename": "9496481.jpg",
-      "photo_status": "pending_identity_profile",
-      "individual_profile_source": "Transfermarkt Bursaspor season squad 1993-94 v0.32",
-      "individual_profile_source_url": "https://www.transfermarkt.com.tr/bursaspor/startseite/verein/20/saison_id/1993"
+      "photo_status": "ready_for_download",
+      "individual_profile_source": "BDFutbol club squad roster cross-check, name + birth date verified (v0.47)",
+      "individual_profile_source_url": "https://www.bdfutbol.com/en/j/j55593.html"
     },
     {
       "source_id": 9496482,
@@ -30608,12 +30632,12 @@
       "duplicate_check": "turkey_1993_94_explicit_identity_gate",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Nevzat",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "1114321",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1114321.html",
       "photo_filename": "9496482.jpg",
-      "photo_status": "pending_identity_profile",
-      "individual_profile_source": "Transfermarkt Bursaspor season squad 1993-94 v0.32",
-      "individual_profile_source_url": "https://www.transfermarkt.com.tr/bursaspor/startseite/verein/20/saison_id/1993"
+      "photo_status": "ready_for_download",
+      "individual_profile_source": "BDFutbol club squad roster cross-check, name + birth date verified (v0.47)",
+      "individual_profile_source_url": "https://www.bdfutbol.com/en/j/j1114321.html"
     },
     {
       "source_id": 9496483,
@@ -30639,12 +30663,12 @@
       "duplicate_check": "turkey_1993_94_explicit_identity_gate",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Uzgur",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "1101401",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1101401.html",
       "photo_filename": "9496483.jpg",
-      "photo_status": "pending_identity_profile",
-      "individual_profile_source": "Transfermarkt Bursaspor season squad 1993-94 v0.32",
-      "individual_profile_source_url": "https://www.transfermarkt.com.tr/bursaspor/startseite/verein/20/saison_id/1993"
+      "photo_status": "ready_for_download",
+      "individual_profile_source": "BDFutbol club squad roster cross-check, unique surname match, no birth date on file to verify (v0.47, human-reviewed)",
+      "individual_profile_source_url": "https://www.bdfutbol.com/en/j/j1101401.html"
     },
     {
       "source_id": 9496485,
@@ -30670,12 +30694,12 @@
       "duplicate_check": "turkey_1993_94_explicit_identity_gate",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Gündüz",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "702933",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j702933.html",
       "photo_filename": "9496485.jpg",
-      "photo_status": "pending_identity_profile",
-      "individual_profile_source": "Transfermarkt Bursaspor season squad 1993-94 v0.32",
-      "individual_profile_source_url": "https://www.transfermarkt.com.tr/bursaspor/startseite/verein/20/saison_id/1993"
+      "photo_status": "ready_for_download",
+      "individual_profile_source": "BDFutbol club squad roster cross-check, name + birth date verified (v0.47)",
+      "individual_profile_source_url": "https://www.bdfutbol.com/en/j/j702933.html"
     },
     {
       "source_id": 9496486,
@@ -30701,12 +30725,12 @@
       "duplicate_check": "turkey_1993_94_explicit_identity_gate",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Evke",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "55608",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j55608.html",
       "photo_filename": "9496486.jpg",
-      "photo_status": "pending_identity_profile",
-      "individual_profile_source": "Transfermarkt Bursaspor season squad 1993-94 v0.32",
-      "individual_profile_source_url": "https://www.transfermarkt.com.tr/bursaspor/startseite/verein/20/saison_id/1993"
+      "photo_status": "ready_for_download",
+      "individual_profile_source": "BDFutbol club squad roster cross-check, unique surname match, no birth date on file to verify (v0.47, human-reviewed)",
+      "individual_profile_source_url": "https://www.bdfutbol.com/en/j/j55608.html"
     },
     {
       "source_id": 9496487,
@@ -30732,12 +30756,12 @@
       "duplicate_check": "turkey_1993_94_explicit_identity_gate",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Kılıç",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "1169821",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1169821.html",
       "photo_filename": "9496487.jpg",
-      "photo_status": "pending_identity_profile",
-      "individual_profile_source": "Transfermarkt Bursaspor season squad 1993-94 v0.32",
-      "individual_profile_source_url": "https://www.transfermarkt.com.tr/bursaspor/startseite/verein/20/saison_id/1993"
+      "photo_status": "ready_for_download",
+      "individual_profile_source": "BDFutbol club squad roster cross-check, name + birth date verified (v0.47)",
+      "individual_profile_source_url": "https://www.bdfutbol.com/en/j/j1169821.html"
     },
     {
       "source_id": 9496488,
@@ -30763,12 +30787,12 @@
       "duplicate_check": "turkey_1993_94_explicit_identity_gate",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Sofuoğlu",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "55605",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j55605.html",
       "photo_filename": "9496488.jpg",
-      "photo_status": "pending_identity_profile",
-      "individual_profile_source": "Transfermarkt Bursaspor season squad 1993-94 v0.32",
-      "individual_profile_source_url": "https://www.transfermarkt.com.tr/bursaspor/startseite/verein/20/saison_id/1993"
+      "photo_status": "ready_for_download",
+      "individual_profile_source": "BDFutbol club squad roster cross-check, name + birth date verified (v0.47)",
+      "individual_profile_source_url": "https://www.bdfutbol.com/en/j/j55605.html"
     },
     {
       "source_id": 9496489,
@@ -46225,10 +46249,12 @@
       "duplicate_check": "greece_1993_94_explicit_identity_gate",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Antonis Nikopolidis",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "44843",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j44843.html",
       "photo_filename": "9496933.jpg",
-      "photo_status": "pending_identity_profile"
+      "photo_status": "ready_for_download",
+      "individual_profile_source": "BDFutbol club squad roster cross-check, unique surname match, no birth date on file to verify (v0.47, human-reviewed)",
+      "individual_profile_source_url": "https://www.bdfutbol.com/en/j/j44843.html"
     },
     {
       "source_id": 9496934,
@@ -46403,10 +46429,12 @@
       "duplicate_check": "greece_1993_94_explicit_identity_gate",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Juan Jose Borrelli",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "1647",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1647.html",
       "photo_filename": "9496939.jpg",
-      "photo_status": "pending_identity_profile"
+      "photo_status": "ready_for_download",
+      "individual_profile_source": "BDFutbol club squad roster cross-check, unique surname match, no birth date on file to verify (v0.47, human-reviewed)",
+      "individual_profile_source_url": "https://www.bdfutbol.com/en/j/j1647.html"
     },
     {
       "source_id": 9496940,
@@ -46463,10 +46491,12 @@
       "duplicate_check": "greece_1993_94_explicit_identity_gate",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Jiorgos Georgiadis Charal.",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "98964",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j98964.html",
       "photo_filename": "9496941.jpg",
-      "photo_status": "pending_identity_profile"
+      "photo_status": "ready_for_download",
+      "individual_profile_source": "BDFutbol club squad roster cross-check, unique surname match, no birth date on file to verify (v0.47, human-reviewed)",
+      "individual_profile_source_url": "https://www.bdfutbol.com/en/j/j98964.html"
     },
     {
       "source_id": 9496942,
@@ -54644,10 +54674,12 @@
       "duplicate_check": "turkey_1993_94_explicit_identity_gate",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Arslan",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "47802",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j47802.html",
       "photo_filename": "9497223.jpg",
-      "photo_status": "pending_identity_profile"
+      "photo_status": "ready_for_download",
+      "individual_profile_source": "BDFutbol club squad roster cross-check, unique surname match, no birth date on file to verify (v0.47, human-reviewed)",
+      "individual_profile_source_url": "https://www.bdfutbol.com/en/j/j47802.html"
     },
     {
       "source_id": 9497224,
@@ -54673,10 +54705,12 @@
       "duplicate_check": "turkey_1993_94_explicit_identity_gate",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Tolungüc",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "702753",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j702753.html",
       "photo_filename": "9497224.jpg",
-      "photo_status": "pending_identity_profile"
+      "photo_status": "ready_for_download",
+      "individual_profile_source": "BDFutbol club squad roster cross-check, unique surname match, no birth date on file to verify (v0.47, human-reviewed)",
+      "individual_profile_source_url": "https://www.bdfutbol.com/en/j/j702753.html"
     },
     {
       "source_id": 9497225,
@@ -54702,10 +54736,12 @@
       "duplicate_check": "turkey_1993_94_explicit_identity_gate",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Altıntaş",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "42306",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j42306.html",
       "photo_filename": "9497225.jpg",
-      "photo_status": "pending_identity_profile"
+      "photo_status": "ready_for_download",
+      "individual_profile_source": "BDFutbol club squad roster cross-check, unique surname match, no birth date on file to verify (v0.47, human-reviewed)",
+      "individual_profile_source_url": "https://www.bdfutbol.com/en/j/j42306.html"
     },
     {
       "source_id": 9497226,
@@ -54731,10 +54767,12 @@
       "duplicate_check": "turkey_1993_94_explicit_identity_gate",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Babaoğlu",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "55590",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j55590.html",
       "photo_filename": "9497226.jpg",
-      "photo_status": "pending_identity_profile"
+      "photo_status": "ready_for_download",
+      "individual_profile_source": "BDFutbol club squad roster cross-check, unique surname match, no birth date on file to verify (v0.47, human-reviewed)",
+      "individual_profile_source_url": "https://www.bdfutbol.com/en/j/j55590.html"
     },
     {
       "source_id": 9497227,
@@ -54760,10 +54798,12 @@
       "duplicate_check": "turkey_1993_94_explicit_identity_gate",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Okan",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "96313",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j96313.html",
       "photo_filename": "9497227.jpg",
-      "photo_status": "pending_identity_profile"
+      "photo_status": "ready_for_download",
+      "individual_profile_source": "BDFutbol club squad roster cross-check, unique surname match, no birth date on file to verify (v0.47, human-reviewed)",
+      "individual_profile_source_url": "https://www.bdfutbol.com/en/j/j96313.html"
     },
     {
       "source_id": 9497228,
@@ -54789,10 +54829,12 @@
       "duplicate_check": "turkey_1993_94_explicit_identity_gate",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Hinçal",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "1137097",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1137097.html",
       "photo_filename": "9497228.jpg",
-      "photo_status": "pending_identity_profile"
+      "photo_status": "ready_for_download",
+      "individual_profile_source": "BDFutbol club squad roster cross-check, unique surname match, no birth date on file to verify (v0.47, human-reviewed)",
+      "individual_profile_source_url": "https://www.bdfutbol.com/en/j/j1137097.html"
     },
     {
       "source_id": 9497229,
@@ -54818,10 +54860,12 @@
       "duplicate_check": "turkey_1993_94_explicit_identity_gate",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Demiriz",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "42313",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j42313.html",
       "photo_filename": "9497229.jpg",
-      "photo_status": "pending_identity_profile"
+      "photo_status": "ready_for_download",
+      "individual_profile_source": "BDFutbol club squad roster cross-check, unique surname match, no birth date on file to verify (v0.47, human-reviewed)",
+      "individual_profile_source_url": "https://www.bdfutbol.com/en/j/j42313.html"
     },
     {
       "source_id": 9497230,
@@ -55293,10 +55337,12 @@
       "duplicate_check": "turkey_1993_94_explicit_identity_gate",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Gültiken",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "42601",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j42601.html",
       "photo_filename": "9497244.jpg",
-      "photo_status": "pending_identity_profile"
+      "photo_status": "ready_for_download",
+      "individual_profile_source": "BDFutbol club squad roster cross-check, unique surname match, no birth date on file to verify (v0.47, human-reviewed)",
+      "individual_profile_source_url": "https://www.bdfutbol.com/en/j/j42601.html"
     },
     {
       "source_id": 9497245,
@@ -55322,10 +55368,12 @@
       "duplicate_check": "turkey_1993_94_explicit_identity_gate",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Demirbay",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "1176193",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1176193.html",
       "photo_filename": "9497245.jpg",
-      "photo_status": "pending_identity_profile"
+      "photo_status": "ready_for_download",
+      "individual_profile_source": "BDFutbol club squad roster cross-check, unique surname match, no birth date on file to verify (v0.47, human-reviewed)",
+      "individual_profile_source_url": "https://www.bdfutbol.com/en/j/j1176193.html"
     },
     {
       "source_id": 9497246,
@@ -55351,10 +55399,12 @@
       "duplicate_check": "turkey_1993_94_explicit_identity_gate",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Güveneroğlu",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "42285",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j42285.html",
       "photo_filename": "9497246.jpg",
-      "photo_status": "pending_identity_profile"
+      "photo_status": "ready_for_download",
+      "individual_profile_source": "BDFutbol club squad roster cross-check, unique surname match, no birth date on file to verify (v0.47, human-reviewed)",
+      "individual_profile_source_url": "https://www.bdfutbol.com/en/j/j42285.html"
     },
     {
       "source_id": 9497247,
@@ -55380,10 +55430,12 @@
       "duplicate_check": "turkey_1993_94_explicit_identity_gate",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Manessero",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "702757",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j702757.html",
       "photo_filename": "9497247.jpg",
-      "photo_status": "pending_identity_profile"
+      "photo_status": "ready_for_download",
+      "individual_profile_source": "BDFutbol club squad roster cross-check, unique surname match, no birth date on file to verify (v0.47, human-reviewed)",
+      "individual_profile_source_url": "https://www.bdfutbol.com/en/j/j702757.html"
     },
     {
       "source_id": 9497248,
@@ -55409,10 +55461,12 @@
       "duplicate_check": "turkey_1993_94_explicit_identity_gate",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Yüksel",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "702768",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j702768.html",
       "photo_filename": "9497248.jpg",
-      "photo_status": "pending_identity_profile"
+      "photo_status": "ready_for_download",
+      "individual_profile_source": "BDFutbol club squad roster cross-check, unique surname match, no birth date on file to verify (v0.47, human-reviewed)",
+      "individual_profile_source_url": "https://www.bdfutbol.com/en/j/j702768.html"
     },
     {
       "source_id": 9497249,
@@ -56441,12 +56495,12 @@
       "duplicate_check": "turkey_1993_94_explicit_identity_gate",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Yıldırım",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "702732",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j702732.html",
       "photo_filename": "9497280.jpg",
-      "photo_status": "pending_identity_profile",
-      "individual_profile_source": "Transfermarkt Bursaspor season squad 1993-94 v0.32",
-      "individual_profile_source_url": "https://www.transfermarkt.com.tr/bursaspor/startseite/verein/20/saison_id/1993"
+      "photo_status": "ready_for_download",
+      "individual_profile_source": "BDFutbol club squad roster cross-check, name + birth date verified (v0.47)",
+      "individual_profile_source_url": "https://www.bdfutbol.com/en/j/j702732.html"
     },
     {
       "source_id": 9497281,
@@ -56472,12 +56526,12 @@
       "duplicate_check": "turkey_1993_94_explicit_identity_gate",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Ünal",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "702739",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j702739.html",
       "photo_filename": "9497281.jpg",
-      "photo_status": "pending_identity_profile",
-      "individual_profile_source": "Transfermarkt Bursaspor season squad 1993-94 v0.32",
-      "individual_profile_source_url": "https://www.transfermarkt.com.tr/bursaspor/startseite/verein/20/saison_id/1993"
+      "photo_status": "ready_for_download",
+      "individual_profile_source": "BDFutbol club squad roster cross-check, name + birth date verified (v0.47)",
+      "individual_profile_source_url": "https://www.bdfutbol.com/en/j/j702739.html"
     },
     {
       "source_id": 9497282,
@@ -56503,12 +56557,12 @@
       "duplicate_check": "turkey_1993_94_explicit_identity_gate",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Arslan",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "1178448",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1178448.html",
       "photo_filename": "9497282.jpg",
-      "photo_status": "pending_identity_profile",
-      "individual_profile_source": "Transfermarkt Bursaspor season squad 1993-94 v0.32",
-      "individual_profile_source_url": "https://www.transfermarkt.com.tr/bursaspor/startseite/verein/20/saison_id/1993",
+      "photo_status": "ready_for_download",
+      "individual_profile_source": "BDFutbol club squad roster cross-check, name + birth date verified (v0.47)",
+      "individual_profile_source_url": "https://www.bdfutbol.com/en/j/j1178448.html",
       "attribute_comparable_source_ids": [
         920,
         2031
@@ -56539,12 +56593,12 @@
       "duplicate_check": "turkey_1993_94_explicit_identity_gate",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Yılmaz",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "702425",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j702425.html",
       "photo_filename": "9497283.jpg",
-      "photo_status": "pending_identity_profile",
-      "individual_profile_source": "Transfermarkt Bursaspor season squad 1993-94 v0.32",
-      "individual_profile_source_url": "https://www.transfermarkt.com.tr/bursaspor/startseite/verein/20/saison_id/1993"
+      "photo_status": "ready_for_download",
+      "individual_profile_source": "BDFutbol club squad roster cross-check, name + birth date verified (v0.47)",
+      "individual_profile_source_url": "https://www.bdfutbol.com/en/j/j702425.html"
     },
     {
       "source_id": 9497284,
@@ -56570,12 +56624,12 @@
       "duplicate_check": "turkey_1993_94_explicit_identity_gate",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Baştan",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "707939",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j707939.html",
       "photo_filename": "9497284.jpg",
-      "photo_status": "pending_identity_profile",
-      "individual_profile_source": "Transfermarkt Bursaspor season squad 1993-94 v0.32",
-      "individual_profile_source_url": "https://www.transfermarkt.com.tr/bursaspor/startseite/verein/20/saison_id/1993"
+      "photo_status": "ready_for_download",
+      "individual_profile_source": "BDFutbol club squad roster cross-check, name + birth date verified (v0.47)",
+      "individual_profile_source_url": "https://www.bdfutbol.com/en/j/j707939.html"
     },
     {
       "source_id": 9497285,
@@ -56601,12 +56655,12 @@
       "duplicate_check": "turkey_1993_94_explicit_identity_gate",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Bayhan",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "1179567",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1179567.html",
       "photo_filename": "9497285.jpg",
-      "photo_status": "pending_identity_profile",
-      "individual_profile_source": "Transfermarkt Bursaspor season squad 1993-94 v0.32",
-      "individual_profile_source_url": "https://www.transfermarkt.com.tr/bursaspor/startseite/verein/20/saison_id/1993"
+      "photo_status": "ready_for_download",
+      "individual_profile_source": "BDFutbol club squad roster cross-check, name + birth date verified (v0.47)",
+      "individual_profile_source_url": "https://www.bdfutbol.com/en/j/j1179567.html"
     },
     {
       "source_id": 9497286,
@@ -56632,12 +56686,12 @@
       "duplicate_check": "turkey_1993_94_explicit_identity_gate",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Şentürk",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "707938",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j707938.html",
       "photo_filename": "9497286.jpg",
-      "photo_status": "pending_identity_profile",
-      "individual_profile_source": "Transfermarkt Bursaspor season squad 1993-94 v0.32",
-      "individual_profile_source_url": "https://www.transfermarkt.com.tr/bursaspor/startseite/verein/20/saison_id/1993"
+      "photo_status": "ready_for_download",
+      "individual_profile_source": "BDFutbol club squad roster cross-check, name + birth date verified (v0.47)",
+      "individual_profile_source_url": "https://www.bdfutbol.com/en/j/j707938.html"
     },
     {
       "source_id": 9497287,
@@ -56663,12 +56717,12 @@
       "duplicate_check": "turkey_1993_94_explicit_identity_gate",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Dilaver",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "1178351",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1178351.html",
       "photo_filename": "9497287.jpg",
-      "photo_status": "pending_identity_profile",
-      "individual_profile_source": "Transfermarkt Bursaspor season squad 1993-94 v0.32",
-      "individual_profile_source_url": "https://www.transfermarkt.com.tr/bursaspor/startseite/verein/20/saison_id/1993"
+      "photo_status": "ready_for_download",
+      "individual_profile_source": "BDFutbol club squad roster cross-check, name + birth date verified (v0.47)",
+      "individual_profile_source_url": "https://www.bdfutbol.com/en/j/j1178351.html"
     },
     {
       "source_id": 9497288,
@@ -56694,12 +56748,12 @@
       "duplicate_check": "turkey_1993_94_explicit_identity_gate",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Bastık",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "1172132",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1172132.html",
       "photo_filename": "9497288.jpg",
-      "photo_status": "pending_identity_profile",
-      "individual_profile_source": "Transfermarkt Bursaspor season squad 1993-94 v0.32",
-      "individual_profile_source_url": "https://www.transfermarkt.com.tr/bursaspor/startseite/verein/20/saison_id/1993"
+      "photo_status": "ready_for_download",
+      "individual_profile_source": "BDFutbol club squad roster cross-check, name + birth date verified (v0.47)",
+      "individual_profile_source_url": "https://www.bdfutbol.com/en/j/j1172132.html"
     },
     {
       "source_id": 9497289,
@@ -56725,12 +56779,12 @@
       "duplicate_check": "turkey_1993_94_explicit_identity_gate",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Özdemir",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "1174842",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1174842.html",
       "photo_filename": "9497289.jpg",
-      "photo_status": "pending_identity_profile",
-      "individual_profile_source": "Transfermarkt Bursaspor season squad 1993-94 v0.32",
-      "individual_profile_source_url": "https://www.transfermarkt.com.tr/bursaspor/startseite/verein/20/saison_id/1993",
+      "photo_status": "ready_for_download",
+      "individual_profile_source": "BDFutbol club squad roster cross-check, name + birth date verified (v0.47)",
+      "individual_profile_source_url": "https://www.bdfutbol.com/en/j/j1174842.html",
       "attribute_comparable_source_ids": [
         967,
         1926
@@ -56761,12 +56815,12 @@
       "duplicate_check": "turkey_1993_94_explicit_identity_gate",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Çayla",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "1179587",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1179587.html",
       "photo_filename": "9497290.jpg",
-      "photo_status": "pending_identity_profile",
-      "individual_profile_source": "Transfermarkt Bursaspor season squad 1993-94 v0.32",
-      "individual_profile_source_url": "https://www.transfermarkt.com.tr/bursaspor/startseite/verein/20/saison_id/1993",
+      "photo_status": "ready_for_download",
+      "individual_profile_source": "BDFutbol club squad roster cross-check, name + birth date verified (v0.47)",
+      "individual_profile_source_url": "https://www.bdfutbol.com/en/j/j1179587.html",
       "attribute_comparable_source_ids": [
         1773,
         2751
@@ -56797,12 +56851,12 @@
       "duplicate_check": "turkey_1993_94_explicit_identity_gate",
       "matched_existing_id": null,
       "bdfutbol_search_name": "Gürbüz",
-      "bdfutbol_id": "",
-      "bdfutbol_url": "",
+      "bdfutbol_id": "1179577",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1179577.html",
       "photo_filename": "9497291.jpg",
-      "photo_status": "pending_identity_profile",
-      "individual_profile_source": "Transfermarkt Bursaspor season squad 1993-94 v0.32",
-      "individual_profile_source_url": "https://www.transfermarkt.com.tr/bursaspor/startseite/verein/20/saison_id/1993",
+      "photo_status": "ready_for_download",
+      "individual_profile_source": "BDFutbol club squad roster cross-check, name + birth date verified (v0.47)",
+      "individual_profile_source_url": "https://www.bdfutbol.com/en/j/j1179577.html",
       "attribute_comparable_source_ids": [
         2794,
         567

@@ -84,7 +84,10 @@ def match_club(
     verify_dob: bool = True,
     delay: float = 0.6,
 ) -> dict[str, Any]:
-    idclub = discover_idclub(client, bootstrap_bdfutbol_id)
+    if bootstrap_bdfutbol_id.startswith("idclub:"):
+        idclub = bootstrap_bdfutbol_id.split(":", 1)[1]
+    else:
+        idclub = discover_idclub(client, bootstrap_bdfutbol_id)
     if not idclub:
         return {"team": team_name, "status": "idclub_not_found"}
     time.sleep(delay)
