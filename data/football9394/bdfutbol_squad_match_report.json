@@ -1,0 +1,5168 @@
+{
+  "clubs_processed": 37,
+  "clubs_unresolved": 84,
+  "unresolved_clubs": [
+    {
+      "country": null,
+      "team": "Beşiktaş",
+      "pending": 12
+    },
+    {
+      "country": null,
+      "team": "Galatasaray",
+      "pending": 7
+    },
+    {
+      "country": "Albania",
+      "team": "Skoda Xanthi",
+      "pending": 2
+    },
+    {
+      "country": "Albania",
+      "team": "Panachaiki",
+      "pending": 2
+    },
+    {
+      "country": "Albania",
+      "team": "Aris Thessalonikis",
+      "pending": 1
+    },
+    {
+      "country": "Albania",
+      "team": "Olympiakos Pireas",
+      "pending": 1
+    },
+    {
+      "country": "Albania",
+      "team": "Apollon Athinas",
+      "pending": 1
+    },
+    {
+      "country": "Albania",
+      "team": "AE Larisa",
+      "pending": 1
+    },
+    {
+      "country": "Albania",
+      "team": "Athinaikos",
+      "pending": 1
+    },
+    {
+      "country": "Albania",
+      "team": "Apollon Kalamarias",
+      "pending": 1
+    },
+    {
+      "country": "Alemania",
+      "team": "Fenerbahçe",
+      "pending": 1
+    },
+    {
+      "country": "Alemania",
+      "team": "Gençlerbirliği",
+      "pending": 1
+    },
+    {
+      "country": "Argentina",
+      "team": "Panathinaikos",
+      "pending": 1
+    },
+    {
+      "country": "Argentina",
+      "team": "Skoda Xanthi",
+      "pending": 1
+    },
+    {
+      "country": "Australia",
+      "team": "Club Brugge",
+      "pending": 1
+    },
+    {
+      "country": "Bosnia-Herzegovina",
+      "team": "Fenerbahçe",
+      "pending": 1
+    },
+    {
+      "country": "Bosnia-Herzegovina",
+      "team": "Kocaelispor",
+      "pending": 1
+    },
+    {
+      "country": "Bosnia-Herzegovina",
+      "team": "Gençlerbirliği",
+      "pending": 1
+    },
+    {
+      "country": "Bosnia-Herzegovina",
+      "team": "OFI Irakliou",
+      "pending": 1
+    },
+    {
+      "country": "Bosnia-Herzegovina",
+      "team": "AEK Athinon",
+      "pending": 1
+    },
+    {
+      "country": "Brasil",
+      "team": "Aris Thessalonikis",
+      "pending": 1
+    },
+    {
+      "country": "Brasil",
+      "team": "AE Larisa",
+      "pending": 2
+    },
+    {
+      "country": "Brasil",
+      "team": "Skoda Xanthi",
+      "pending": 1
+    },
+    {
+      "country": "Bulgaria",
+      "team": "Edessaikos",
+      "pending": 1
+    },
+    {
+      "country": "Bulgaria",
+      "team": "Naousa",
+      "pending": 1
+    },
+    {
+      "country": "Bulgaria",
+      "team": "Skoda Xanthi",
+      "pending": 1
+    },
+    {
+      "country": "Bulgaria",
+      "team": "Bursaspor",
+      "pending": 1
+    },
+    {
+      "country": "Bélgica",
+      "team": "Club Brugge",
+      "pending": 16
+    },
+    {
+      "country": "Chile",
+      "team": "Olympiakos Pireas",
+      "pending": 1
+    },
+    {
+      "country": "Croacia",
+      "team": "Panionios",
+      "pending": 1
+    },
+    {
+      "country": "Croacia",
+      "team": "Apollon Kalamarias",
+      "pending": 1
+    },
+    {
+      "country": "Croacia",
+      "team": "AEK Athinon",
+      "pending": 1
+    },
+    {
+      "country": "Dinamarca",
+      "team": "Olympiakos Pireas",
+      "pending": 1
+    },
+    {
+      "country": "Dinamarca",
+      "team": "Fenerbahçe",
+      "pending": 1
+    },
+    {
+      "country": "Egipto",
+      "team": "PAOK Thessalonikis",
+      "pending": 1
+    },
+    {
+      "country": "Grecia",
+      "team": "Iraklis Thessalonikis",
+      "pending": 26
+    },
+    {
+      "country": "Grecia",
+      "team": "AE Larisa",
+      "pending": 24
+    },
+    {
+      "country": "Grecia",
+      "team": "Doxa Dramas",
+      "pending": 25
+    },
+    {
+      "country": "Grecia",
+      "team": "Athinaikos",
+      "pending": 26
+    },
+    {
+      "country": "Grecia",
+      "team": "Panachaiki",
+      "pending": 21
+    },
+    {
+      "country": "Grecia",
+      "team": "Aris Thessalonikis",
+      "pending": 25
+    },
+    {
+      "country": "Grecia",
+      "team": "Olympiakos Pireas",
+      "pending": 23
+    },
+    {
+      "country": "Grecia",
+      "team": "PAOK Thessalonikis",
+      "pending": 26
+    },
+    {
+      "country": "Grecia",
+      "team": "OFI Irakliou",
+      "pending": 19
+    },
+    {
+      "country": "Grecia",
+      "team": "Apollon Athinas",
+      "pending": 28
+    },
+    {
+      "country": "Grecia",
+      "team": "Skoda Xanthi",
+      "pending": 24
+    },
+    {
+      "country": "Grecia",
+      "team": "Panionios",
+      "pending": 23
+    },
+    {
+      "country": "Grecia",
+      "team": "Levadiakos",
+      "pending": 25
+    },
+    {
+      "country": "Grecia",
+      "team": "Edessaikos",
+      "pending": 25
+    },
+    {
+      "country": "Grecia",
+      "team": "Naousa",
+      "pending": 26
+    },
+    {
+      "country": "Grecia",
+      "team": "Apollon Kalamarias",
+      "pending": 24
+    },
+    {
+      "country": "Hungría",
+      "team": "Club Brugge",
+      "pending": 1
+    },
+    {
+      "country": "Hungría",
+      "team": "Apollon Athinas",
+      "pending": 1
+    },
+    {
+      "country": "Macedonia",
+      "team": "Levadiakos",
+      "pending": 1
+    },
+    {
+      "country": "Macedonia",
+      "team": "Kocaelispor",
+      "pending": 1
+    },
+    {
+      "country": "Macedonia",
+      "team": "AEK Athinon",
+      "pending": 1
+    },
+    {
+      "country": "Nigeria",
+      "team": "Panachaiki",
+      "pending": 1
+    },
+    {
+      "country": "Nigeria",
+      "team": "Club Brugge",
+      "pending": 1
+    },
+    {
+      "country": "Países Bajos",
+      "team": "Club Brugge",
+      "pending": 1
+    },
+    {
+      "country": "Polonia",
+      "team": "Club Brugge",
+      "pending": 1
+    },
+    {
+      "country": "Polonia",
+      "team": "Athinaikos",
+      "pending": 1
+    },
+    {
+      "country": "República Checa",
+      "team": "Skoda Xanthi",
+      "pending": 1
+    },
+    {
+      "country": "República Checa",
+      "team": "PAOK Thessalonikis",
+      "pending": 1
+    },
+    {
+      "country": "República Checa",
+      "team": "Edessaikos",
+      "pending": 1
+    },
+    {
+      "country": "República Federal de Yugoslavia",
+      "team": "Kocaelispor",
+      "pending": 1
+    },
+    {
+      "country": "Rumanía",
+      "team": "Samsunspor",
+      "pending": 5
+    },
+    {
+      "country": "Rumanía",
+      "team": "OFI Irakliou",
+      "pending": 1
+    },
+    {
+      "country": "Rumanía",
+      "team": "AE Larisa",
+      "pending": 1
+    },
+    {
+      "country": "Serbia",
+      "team": "Apollon Athinas",
+      "pending": 2
+    },
+    {
+      "country": "Serbia",
+      "team": "Doxa Dramas",
+      "pending": 3
+    },
+    {
+      "country": "Serbia",
+      "team": "Athinaikos",
+      "pending": 1
+    },
+    {
+      "country": "Serbia",
+      "team": "Levadiakos",
+      "pending": 2
+    },
+    {
+      "country": "Serbia",
+      "team": "OFI Irakliou",
+      "pending": 1
+    },
+    {
+      "country": "Serbia",
+      "team": "Iraklis Thessalonikis",
+      "pending": 3
+    },
+    {
+      "country": "Serbia",
+      "team": "Naousa",
+      "pending": 2
+    },
+    {
+      "country": "Serbia",
+      "team": "Aris Thessalonikis",
+      "pending": 2
+    },
+    {
+      "country": "Serbia",
+      "team": "Panachaiki",
+      "pending": 2
+    },
+    {
+      "country": "Serbia",
+      "team": "Panionios",
+      "pending": 3
+    },
+    {
+      "country": "Serbia",
+      "team": "Edessaikos",
+      "pending": 1
+    },
+    {
+      "country": "Serbia",
+      "team": "Apollon Kalamarias",
+      "pending": 1
+    },
+    {
+      "country": "Suecia",
+      "team": "Anderlecht",
+      "pending": 1
+    },
+    {
+      "country": "Turquía",
+      "team": "Samsunspor",
+      "pending": 22
+    },
+    {
+      "country": "Ucrania",
+      "team": "Olympiakos Pireas",
+      "pending": 2
+    },
+    {
+      "country": "Ucrania",
+      "team": "Trabzonspor",
+      "pending": 3
+    }
+  ],
+  "results": [
+    {
+      "country": "Albania",
+      "team": "Altay",
+      "status": "complete",
+      "idclub": "11414",
+      "squad_size": 27,
+      "confirmed": [
+        {
+          "source_id": 9496500,
+          "display_name": "Ali Mehmedi",
+          "expected_birth_date": "1966-01-15",
+          "candidates": [
+            {
+              "bdfutbol_id": "1178389",
+              "surname": "Mehmedi",
+              "full_name": "Ali Mehmedi"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1178389",
+            "surname": "Mehmedi",
+            "full_name": "Ali Mehmedi",
+            "dob": "1966-01-15"
+          }
+        }
+      ],
+      "needs_review": [],
+      "unmatched": []
+    },
+    {
+      "country": "Albania",
+      "team": "Sarıyer",
+      "status": "complete",
+      "idclub": "9024",
+      "squad_size": 24,
+      "confirmed": [
+        {
+          "source_id": 9497345,
+          "display_name": "Salihi Heroll",
+          "expected_birth_date": "1964-12-06",
+          "candidates": [
+            {
+              "bdfutbol_id": "1178660",
+              "surname": "Heroll",
+              "full_name": "Salihi Heroll"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1178660",
+            "surname": "Heroll",
+            "full_name": "Salihi Heroll",
+            "dob": "1964-12-06"
+          }
+        }
+      ],
+      "needs_review": [],
+      "unmatched": []
+    },
+    {
+      "country": "Australia",
+      "team": "Altay",
+      "status": "complete",
+      "idclub": "11414",
+      "squad_size": 27,
+      "confirmed": [
+        {
+          "source_id": 9497294,
+          "display_name": "David Stuart Mitchell",
+          "expected_birth_date": "1962-06-13",
+          "candidates": [
+            {
+              "bdfutbol_id": "91791",
+              "surname": "Mitchell",
+              "full_name": "David Stuart Mitchell"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "91791",
+            "surname": "Mitchell",
+            "full_name": "David Stuart Mitchell",
+            "dob": "1962-06-13"
+          }
+        }
+      ],
+      "needs_review": [],
+      "unmatched": []
+    },
+    {
+      "country": "Bosnia-Herzegovina",
+      "team": "Kayserispor",
+      "status": "complete",
+      "idclub": "10432",
+      "squad_size": 27,
+      "confirmed": [
+        {
+          "source_id": 9497312,
+          "display_name": "Mersud Demirović",
+          "expected_birth_date": "1958-09-17",
+          "candidates": [
+            {
+              "bdfutbol_id": "1179909",
+              "surname": "Demirović",
+              "full_name": "Mersud Demirović"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1179909",
+            "surname": "Demirović",
+            "full_name": "Mersud Demirović",
+            "dob": "1958-09-17"
+          }
+        }
+      ],
+      "needs_review": [],
+      "unmatched": []
+    },
+    {
+      "country": "Bosnia-Herzegovina",
+      "team": "Karşıyaka",
+      "status": "complete",
+      "idclub": "9026",
+      "squad_size": 25,
+      "confirmed": [
+        {
+          "source_id": 9496585,
+          "display_name": "Ziya Yıldız",
+          "expected_birth_date": "1960-09-21",
+          "candidates": [
+            {
+              "bdfutbol_id": "702879",
+              "surname": "Yıldız",
+              "full_name": "Ziya Yıldız"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "702879",
+            "surname": "Yıldız",
+            "full_name": "Ziya Yıldız",
+            "dob": "1960-09-21"
+          }
+        }
+      ],
+      "needs_review": [],
+      "unmatched": []
+    },
+    {
+      "country": "Bulgaria",
+      "team": "Karşıyaka",
+      "status": "complete",
+      "idclub": "9026",
+      "squad_size": 25,
+      "confirmed": [
+        {
+          "source_id": 9496577,
+          "display_name": "Ilia Valov Ivanov",
+          "expected_birth_date": "1961-12-29",
+          "candidates": [
+            {
+              "bdfutbol_id": "705929",
+              "surname": "Valov",
+              "full_name": "Ilia Valov Ivanov"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "705929",
+            "surname": "Valov",
+            "full_name": "Ilia Valov Ivanov",
+            "dob": "1961-12-29"
+          }
+        }
+      ],
+      "needs_review": [],
+      "unmatched": []
+    },
+    {
+      "country": "Bulgaria",
+      "team": "Altay",
+      "status": "complete",
+      "idclub": "11414",
+      "squad_size": 27,
+      "confirmed": [
+        {
+          "source_id": 9496503,
+          "display_name": "Ilian Dimov Iliev",
+          "expected_birth_date": "1968-07-02",
+          "candidates": [
+            {
+              "bdfutbol_id": "71783",
+              "surname": "Iliev",
+              "full_name": "Ilian Dimov Iliev"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "71783",
+            "surname": "Iliev",
+            "full_name": "Ilian Dimov Iliev",
+            "dob": "1968-07-02"
+          }
+        }
+      ],
+      "needs_review": [],
+      "unmatched": []
+    },
+    {
+      "country": "Bélgica",
+      "team": "Anderlecht",
+      "status": "complete",
+      "idclub": "10015",
+      "squad_size": 24,
+      "confirmed": [
+        {
+          "source_id": 9494219,
+          "display_name": "Danny Boffin",
+          "expected_birth_date": "1965-07-10",
+          "candidates": [
+            {
+              "bdfutbol_id": "85483",
+              "surname": "Boffin",
+              "full_name": "Daniel Edouward Boffin"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "85483",
+            "surname": "Boffin",
+            "full_name": "Daniel Edouward Boffin",
+            "dob": "1965-07-10"
+          }
+        },
+        {
+          "source_id": 9495308,
+          "display_name": "Johan Walem",
+          "expected_birth_date": "1972-02-01",
+          "candidates": [
+            {
+              "bdfutbol_id": "95861",
+              "surname": "Walem",
+              "full_name": "Johan Walem"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "95861",
+            "surname": "Walem",
+            "full_name": "Johan Walem",
+            "dob": "1972-02-01"
+          }
+        },
+        {
+          "source_id": 9494209,
+          "display_name": "Philippe Albert",
+          "expected_birth_date": "1967-08-10",
+          "candidates": [
+            {
+              "bdfutbol_id": "98920",
+              "surname": "Albert",
+              "full_name": "Philippe Julien Albert"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "98920",
+            "surname": "Albert",
+            "full_name": "Philippe Julien Albert",
+            "dob": "1967-08-10"
+          }
+        }
+      ],
+      "needs_review": [],
+      "unmatched": [
+        {
+          "source_id": 9494217,
+          "display_name": "Michel De Wolf"
+        },
+        {
+          "source_id": 9496009,
+          "display_name": "Van Baekel"
+        }
+      ]
+    },
+    {
+      "country": "Bélgica",
+      "team": "Standard Liège",
+      "status": "complete",
+      "idclub": "10012",
+      "squad_size": 26,
+      "confirmed": [],
+      "needs_review": [],
+      "unmatched": [
+        {
+          "source_id": 9498013,
+          "display_name": "Dimitri Habran"
+        }
+      ]
+    },
+    {
+      "country": "Bélgica",
+      "team": "FC Seraing",
+      "status": "complete",
+      "idclub": "12101",
+      "squad_size": 19,
+      "confirmed": [],
+      "needs_review": [],
+      "unmatched": [
+        {
+          "source_id": 9498009,
+          "display_name": "Harald Heinen"
+        },
+        {
+          "source_id": 9498010,
+          "display_name": "Johan Vanheusden"
+        }
+      ]
+    },
+    {
+      "country": "Bélgica",
+      "team": "Charleroi",
+      "status": "complete",
+      "idclub": "10718",
+      "squad_size": 20,
+      "confirmed": [],
+      "needs_review": [],
+      "unmatched": [
+        {
+          "source_id": 9498012,
+          "display_name": "Michael Paci"
+        },
+        {
+          "source_id": 9498011,
+          "display_name": "Olivier Desbruyeres"
+        }
+      ]
+    },
+    {
+      "country": "Eslovenia",
+      "team": "Zeytinburnuspor",
+      "status": "complete",
+      "idclub": "9025",
+      "squad_size": 26,
+      "confirmed": [
+        {
+          "source_id": 9496556,
+          "display_name": "Matjaž Cvikl",
+          "expected_birth_date": "1967-01-13",
+          "candidates": [
+            {
+              "bdfutbol_id": "1175508",
+              "surname": "Cvikl",
+              "full_name": "Matjaž Cvikl"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1175508",
+            "surname": "Cvikl",
+            "full_name": "Matjaž Cvikl",
+            "dob": "1967-01-13"
+          }
+        }
+      ],
+      "needs_review": [],
+      "unmatched": []
+    },
+    {
+      "country": "Ghana",
+      "team": "Anderlecht",
+      "status": "complete",
+      "idclub": "10015",
+      "squad_size": 24,
+      "confirmed": [
+        {
+          "source_id": 9496006,
+          "display_name": "Yaw Preko",
+          "expected_birth_date": "1974-09-08",
+          "candidates": [
+            {
+              "bdfutbol_id": "55570",
+              "surname": "Preko",
+              "full_name": "Yaw Preko"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "55570",
+            "surname": "Preko",
+            "full_name": "Yaw Preko",
+            "dob": "1974-09-08"
+          }
+        }
+      ],
+      "needs_review": [],
+      "unmatched": []
+    },
+    {
+      "country": "Grecia",
+      "team": "AEK Athinon",
+      "status": "complete",
+      "idclub": "10042",
+      "squad_size": 18,
+      "confirmed": [
+        {
+          "source_id": 9496927,
+          "display_name": "Charis Kopitsis",
+          "expected_birth_date": "1969-03-05",
+          "candidates": [
+            {
+              "bdfutbol_id": "710166",
+              "surname": "Kopitsis",
+              "full_name": "Charilaos Kopitsis"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "710166",
+            "surname": "Kopitsis",
+            "full_name": "Charilaos Kopitsis",
+            "dob": "1969-03-05"
+          }
+        },
+        {
+          "source_id": 9494176,
+          "display_name": "Elias Atmatsidis",
+          "expected_birth_date": "1969-04-24",
+          "candidates": [
+            {
+              "bdfutbol_id": "710158",
+              "surname": "Atmatsidis",
+              "full_name": "Elias Atmatsidis"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "710158",
+            "surname": "Atmatsidis",
+            "full_name": "Elias Atmatsidis",
+            "dob": "1969-04-24"
+          }
+        },
+        {
+          "source_id": 9496923,
+          "display_name": "Jiorgos Koutoulas",
+          "expected_birth_date": "1967-02-09",
+          "candidates": [
+            {
+              "bdfutbol_id": "710177",
+              "surname": "Koutoulas",
+              "full_name": "Georgios Koutoulas"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "710177",
+            "surname": "Koutoulas",
+            "full_name": "Georgios Koutoulas",
+            "dob": "1967-02-09"
+          }
+        },
+        {
+          "source_id": 9496924,
+          "display_name": "Manolis Papadopoulos",
+          "expected_birth_date": "1968-04-22",
+          "candidates": [
+            {
+              "bdfutbol_id": "710182",
+              "surname": "Papadopoulos",
+              "full_name": "Emmanouil Papadopoulos"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "710182",
+            "surname": "Papadopoulos",
+            "full_name": "Emmanouil Papadopoulos",
+            "dob": "1968-04-22"
+          }
+        },
+        {
+          "source_id": 9496926,
+          "display_name": "Michalis Kasapis",
+          "expected_birth_date": "1971-06-06",
+          "candidates": [
+            {
+              "bdfutbol_id": "56576",
+              "surname": "Kasapis",
+              "full_name": "Michalis Kasapis"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "56576",
+            "surname": "Kasapis",
+            "full_name": "Michalis Kasapis",
+            "dob": "1971-06-06"
+          }
+        },
+        {
+          "source_id": 9496925,
+          "display_name": "Michalis Vlachos",
+          "expected_birth_date": "1967-09-20",
+          "candidates": [
+            {
+              "bdfutbol_id": "709341",
+              "surname": "Vlachos",
+              "full_name": "Michalis Vlachos"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "709341",
+            "surname": "Vlachos",
+            "full_name": "Michalis Vlachos",
+            "dob": "1967-09-20"
+          }
+        },
+        {
+          "source_id": 9494160,
+          "display_name": "Stelios Manolas",
+          "expected_birth_date": "1961-07-13",
+          "candidates": [
+            {
+              "bdfutbol_id": "710176",
+              "surname": "Manolas",
+              "full_name": "Stylianos Manolas"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "710176",
+            "surname": "Manolas",
+            "full_name": "Stylianos Manolas",
+            "dob": "1961-07-13"
+          }
+        },
+        {
+          "source_id": 9494170,
+          "display_name": "Vasilis Dimitriadis",
+          "expected_birth_date": "1966-02-01",
+          "candidates": [
+            {
+              "bdfutbol_id": "710181",
+              "surname": "Dimitriadis",
+              "full_name": "Vasilios Dimitriadis"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "710181",
+            "surname": "Dimitriadis",
+            "full_name": "Vasilios Dimitriadis",
+            "dob": "1966-02-01"
+          }
+        }
+      ],
+      "needs_review": [
+        {
+          "source_id": 9494169,
+          "display_name": "Vaios Karagiannis",
+          "expected_birth_date": "1968-06-25",
+          "candidates": [
+            {
+              "bdfutbol_id": "710180",
+              "surname": "Karagiannis",
+              "full_name": "Vasilios Karagiannis"
+            }
+          ]
+        }
+      ],
+      "unmatched": [
+        {
+          "source_id": 9497518,
+          "display_name": "Andreas Theodoropoulos"
+        },
+        {
+          "source_id": 9497522,
+          "display_name": "Christos Loukinas"
+        },
+        {
+          "source_id": 9496922,
+          "display_name": "Jiorgos Agorojiannis"
+        },
+        {
+          "source_id": 9497521,
+          "display_name": "Pamtelis Konstantinidis"
+        },
+        {
+          "source_id": 9497520,
+          "display_name": "Samouil Drakopoulos"
+        },
+        {
+          "source_id": 9497517,
+          "display_name": "Spyros Ikonomopoulos"
+        },
+        {
+          "source_id": 9497519,
+          "display_name": "Stavros Stamatis"
+        },
+        {
+          "source_id": 9496921,
+          "display_name": "Vassilis Karajiannis"
+        },
+        {
+          "source_id": 9496931,
+          "display_name": "Vassilis Mborbokis"
+        }
+      ]
+    },
+    {
+      "country": "Grecia",
+      "team": "Panathinaikos",
+      "status": "complete",
+      "idclub": "10027",
+      "squad_size": 18,
+      "confirmed": [
+        {
+          "source_id": 9494161,
+          "display_name": "Ioannis Kalitzakis",
+          "expected_birth_date": "1966-02-10",
+          "candidates": [
+            {
+              "bdfutbol_id": "59709",
+              "surname": "Kalitzakis",
+              "full_name": "Ioannis Kalitzakis"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "59709",
+            "surname": "Kalitzakis",
+            "full_name": "Ioannis Kalitzakis",
+            "dob": "1966-02-10"
+          }
+        },
+        {
+          "source_id": 9497524,
+          "display_name": "Jiorgos Kapouranis",
+          "expected_birth_date": "1966-05-20",
+          "candidates": [
+            {
+              "bdfutbol_id": "709357",
+              "surname": "Kapouranis",
+              "full_name": "Georgios Kapouranis"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "709357",
+            "surname": "Kapouranis",
+            "full_name": "Georgios Kapouranis",
+            "dob": "1966-05-20"
+          }
+        },
+        {
+          "source_id": 9496938,
+          "display_name": "Kostas Antoniou",
+          "expected_birth_date": "1962-04-19",
+          "candidates": [
+            {
+              "bdfutbol_id": "709462",
+              "surname": "Antoniou",
+              "full_name": "Konstantinos Antoniou"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "709462",
+            "surname": "Antoniou",
+            "full_name": "Konstantinos Antoniou",
+            "dob": "1962-04-19"
+          }
+        },
+        {
+          "source_id": 9496940,
+          "display_name": "Kostas Frantzeskos",
+          "expected_birth_date": "1969-01-04",
+          "candidates": [
+            {
+              "bdfutbol_id": "709465",
+              "surname": "Frantzeskos",
+              "full_name": "Konstantinos Frantzeskos"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "709465",
+            "surname": "Frantzeskos",
+            "full_name": "Konstantinos Frantzeskos",
+            "dob": "1969-01-04"
+          }
+        },
+        {
+          "source_id": 9496936,
+          "display_name": "Kostas Mavridis",
+          "expected_birth_date": "1962-07-07",
+          "candidates": [
+            {
+              "bdfutbol_id": "709463",
+              "surname": "Mavridis",
+              "full_name": "Konstantinos Mavridis"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "709463",
+            "surname": "Mavridis",
+            "full_name": "Konstantinos Mavridis",
+            "dob": "1962-07-07"
+          }
+        },
+        {
+          "source_id": 9497525,
+          "display_name": "Louis Christodoulou",
+          "expected_birth_date": "1967-08-07",
+          "candidates": [
+            {
+              "bdfutbol_id": "709459",
+              "surname": "Christodoulou",
+              "full_name": "Leonidas Christodoulou"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "709459",
+            "surname": "Christodoulou",
+            "full_name": "Leonidas Christodoulou",
+            "dob": "1967-08-07"
+          }
+        },
+        {
+          "source_id": 9494164,
+          "display_name": "Nikos Nioplias",
+          "expected_birth_date": "1965-01-17",
+          "candidates": [
+            {
+              "bdfutbol_id": "709140",
+              "surname": "Nioplias",
+              "full_name": "Nikolaos Nioplias"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "709140",
+            "surname": "Nioplias",
+            "full_name": "Nikolaos Nioplias",
+            "dob": "1965-01-17"
+          }
+        },
+        {
+          "source_id": 9494168,
+          "display_name": "Spiros Marangos",
+          "expected_birth_date": "1967-02-20",
+          "candidates": [
+            {
+              "bdfutbol_id": "709458",
+              "surname": "Marangos",
+              "full_name": "Spyridon Marangos"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "709458",
+            "surname": "Marangos",
+            "full_name": "Spyridon Marangos",
+            "dob": "1967-02-20"
+          }
+        }
+      ],
+      "needs_review": [
+        {
+          "source_id": 9496933,
+          "display_name": "Antonis Nikopolidis",
+          "expected_birth_date": "1971-01-04",
+          "candidates": [
+            {
+              "bdfutbol_id": "44843",
+              "surname": "Nikopolidis",
+              "full_name": "Antonis Nikopolidis"
+            }
+          ]
+        },
+        {
+          "source_id": 9496941,
+          "display_name": "Jiorgos Georgiadis Charal.",
+          "expected_birth_date": "1970-01-14",
+          "candidates": [
+            {
+              "bdfutbol_id": "98964",
+              "surname": "Georgiadis",
+              "full_name": "Georgios Charalambous Georgiadis"
+            }
+          ]
+        },
+        {
+          "source_id": 9496935,
+          "display_name": "Jiorgos Georgiadis Savvas",
+          "expected_birth_date": "1971-01-30",
+          "candidates": [
+            {
+              "bdfutbol_id": "98964",
+              "surname": "Georgiadis",
+              "full_name": "Georgios Charalambous Georgiadis"
+            }
+          ]
+        },
+        {
+          "source_id": 9494158,
+          "display_name": "Stratos Apostolakis",
+          "expected_birth_date": "1964-05-11",
+          "candidates": [
+            {
+              "bdfutbol_id": "709351",
+              "surname": "Apostolakis",
+              "full_name": "Efstratios Apostolakis"
+            }
+          ]
+        }
+      ],
+      "unmatched": [
+        {
+          "source_id": 9497523,
+          "display_name": "Asterios Jiotsas"
+        },
+        {
+          "source_id": 9496944,
+          "display_name": "Dimitris Markou"
+        },
+        {
+          "source_id": 9497527,
+          "display_name": "Jiorgos Kafes"
+        },
+        {
+          "source_id": 9496937,
+          "display_name": "Marinos Ouzounidis"
+        },
+        {
+          "source_id": 9497526,
+          "display_name": "Paris Georgakopoulos"
+        },
+        {
+          "source_id": 9497528,
+          "display_name": "Periklis Papapanagis"
+        },
+        {
+          "source_id": 9494159,
+          "display_name": "Thanasis Kolitsidakis"
+        }
+      ]
+    },
+    {
+      "country": "Países Bajos",
+      "team": "Anderlecht",
+      "status": "complete",
+      "idclub": "10015",
+      "squad_size": 24,
+      "confirmed": [
+        {
+          "source_id": 9494244,
+          "display_name": "John Bosman",
+          "expected_birth_date": "1965-02-01",
+          "candidates": [
+            {
+              "bdfutbol_id": "85940",
+              "surname": "Bosman",
+              "full_name": "Johannes Jacobus Bosman"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "85940",
+            "surname": "Bosman",
+            "full_name": "Johannes Jacobus Bosman",
+            "dob": "1965-02-01"
+          }
+        }
+      ],
+      "needs_review": [],
+      "unmatched": []
+    },
+    {
+      "country": "Polonia",
+      "team": "Panathinaikos",
+      "status": "complete",
+      "idclub": "10027",
+      "squad_size": 18,
+      "confirmed": [],
+      "needs_review": [],
+      "unmatched": [
+        {
+          "source_id": 9496934,
+          "display_name": "Jiosef Wandzcyk"
+        }
+      ]
+    },
+    {
+      "country": "República Federal de Yugoslavia",
+      "team": "Altay",
+      "status": "complete",
+      "idclub": "11414",
+      "squad_size": 27,
+      "confirmed": [
+        {
+          "source_id": 9497293,
+          "display_name": "Miodrag Ješić",
+          "expected_birth_date": "1958-11-30",
+          "candidates": [
+            {
+              "bdfutbol_id": "42795",
+              "surname": "Ješić",
+              "full_name": "Miodrag Ješić"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "42795",
+            "surname": "Ješić",
+            "full_name": "Miodrag Ješić",
+            "dob": "1958-11-30"
+          }
+        }
+      ],
+      "needs_review": [],
+      "unmatched": []
+    },
+    {
+      "country": "Rusia",
+      "team": "Ankaragücü",
+      "status": "complete",
+      "idclub": "10353",
+      "squad_size": 27,
+      "confirmed": [
+        {
+          "source_id": 9496511,
+          "display_name": "Sergey Nikolaevich Agashkov",
+          "expected_birth_date": "1962-11-06",
+          "candidates": [
+            {
+              "bdfutbol_id": "1177909",
+              "surname": "Agashkov",
+              "full_name": "Sergey Nikolaevich Agashkov"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1177909",
+            "surname": "Agashkov",
+            "full_name": "Sergey Nikolaevich Agashkov",
+            "dob": "1962-11-06"
+          }
+        }
+      ],
+      "needs_review": [],
+      "unmatched": []
+    },
+    {
+      "country": "Sudáfrica",
+      "team": "Gençlerbirliği",
+      "status": "complete",
+      "idclub": "10358",
+      "squad_size": 25,
+      "confirmed": [],
+      "needs_review": [],
+      "unmatched": [
+        {
+          "source_id": 9496447,
+          "display_name": "Ace Khuse"
+        }
+      ]
+    },
+    {
+      "country": "Turkmenistán",
+      "team": "Ankaragücü",
+      "status": "complete",
+      "idclub": "10353",
+      "squad_size": 27,
+      "confirmed": [
+        {
+          "source_id": 9497305,
+          "display_name": "Charyar Abdurakhmanovich Mukhadov",
+          "expected_birth_date": "1969-11-12",
+          "candidates": [
+            {
+              "bdfutbol_id": "1178793",
+              "surname": "Mukhadov",
+              "full_name": "Charyar Abdurakhmanovich Mukhadov"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1178793",
+            "surname": "Mukhadov",
+            "full_name": "Charyar Abdurakhmanovich Mukhadov",
+            "dob": "1969-11-12"
+          }
+        }
+      ],
+      "needs_review": [],
+      "unmatched": []
+    },
+    {
+      "country": "Turquía",
+      "team": "Kayserispor",
+      "status": "complete",
+      "idclub": "10432",
+      "squad_size": 27,
+      "confirmed": [
+        {
+          "source_id": 9496529,
+          "display_name": "Abdullah Duran",
+          "expected_birth_date": "1968-07-30",
+          "candidates": [
+            {
+              "bdfutbol_id": "1176293",
+              "surname": "Duran",
+              "full_name": "Abdullah Duran"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1176293",
+            "surname": "Duran",
+            "full_name": "Abdullah Duran",
+            "dob": "1968-07-30"
+          }
+        },
+        {
+          "source_id": 9496540,
+          "display_name": "Atabey Aktepe",
+          "expected_birth_date": "1970-12-10",
+          "candidates": [
+            {
+              "bdfutbol_id": "41280",
+              "surname": "Aktepe",
+              "full_name": "Atabey Aktepe"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "41280",
+            "surname": "Aktepe",
+            "full_name": "Atabey Aktepe",
+            "dob": "1970-12-10"
+          }
+        },
+        {
+          "source_id": 9497313,
+          "display_name": "Ergun Erikdemir",
+          "expected_birth_date": "1970-11-25",
+          "candidates": [
+            {
+              "bdfutbol_id": "1179911",
+              "surname": "Erikdemir",
+              "full_name": "Ergun Erikdemir"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1179911",
+            "surname": "Erikdemir",
+            "full_name": "Ergun Erikdemir",
+            "dob": "1970-11-25"
+          }
+        },
+        {
+          "source_id": 9496523,
+          "display_name": "Ferhat Turunç",
+          "expected_birth_date": "1961-02-02",
+          "candidates": [
+            {
+              "bdfutbol_id": "1179908",
+              "surname": "Turunç",
+              "full_name": "Ferhat Turunç"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1179908",
+            "surname": "Turunç",
+            "full_name": "Ferhat Turunç",
+            "dob": "1961-02-02"
+          }
+        },
+        {
+          "source_id": 9496537,
+          "display_name": "Ferhat Özdemir",
+          "expected_birth_date": "1968-07-02",
+          "candidates": [
+            {
+              "bdfutbol_id": "1179907",
+              "surname": "Özdemir",
+              "full_name": "Ferhat Özdemir"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1179907",
+            "surname": "Özdemir",
+            "full_name": "Ferhat Özdemir",
+            "dob": "1968-07-02"
+          }
+        },
+        {
+          "source_id": 9496535,
+          "display_name": "Hakan Azman",
+          "expected_birth_date": "1964-03-19",
+          "candidates": [
+            {
+              "bdfutbol_id": "1174844",
+              "surname": "Azman",
+              "full_name": "Hakan Azman"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1174844",
+            "surname": "Azman",
+            "full_name": "Hakan Azman",
+            "dob": "1964-03-19"
+          }
+        },
+        {
+          "source_id": 9496534,
+          "display_name": "Hakan Polat",
+          "expected_birth_date": "1969-05-22",
+          "candidates": [
+            {
+              "bdfutbol_id": "1178568",
+              "surname": "Polat",
+              "full_name": "Hakan Polat"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1178568",
+            "surname": "Polat",
+            "full_name": "Hakan Polat",
+            "dob": "1969-05-22"
+          }
+        },
+        {
+          "source_id": 9496528,
+          "display_name": "Hayrettin Kılıç",
+          "expected_birth_date": "1963-11-17",
+          "candidates": [
+            {
+              "bdfutbol_id": "1176296",
+              "surname": "Kılıç",
+              "full_name": "Hayrettin Kılıç"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1176296",
+            "surname": "Kılıç",
+            "full_name": "Hayrettin Kılıç",
+            "dob": "1963-11-17"
+          }
+        },
+        {
+          "source_id": 9496530,
+          "display_name": "Levent Devrim",
+          "expected_birth_date": "1969-08-26",
+          "candidates": [
+            {
+              "bdfutbol_id": "1176274",
+              "surname": "Levent",
+              "full_name": "Levent Kurt"
+            },
+            {
+              "bdfutbol_id": "702737",
+              "surname": "Devrim",
+              "full_name": "Levent Devrim"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "702737",
+            "surname": "Devrim",
+            "full_name": "Levent Devrim",
+            "dob": "1969-08-26"
+          }
+        },
+        {
+          "source_id": 9496533,
+          "display_name": "Levent Kurt",
+          "expected_birth_date": "1967-03-15",
+          "candidates": [
+            {
+              "bdfutbol_id": "1176274",
+              "surname": "Levent",
+              "full_name": "Levent Kurt"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1176274",
+            "surname": "Levent",
+            "full_name": "Levent Kurt",
+            "dob": "1967-03-15"
+          }
+        },
+        {
+          "source_id": 9497310,
+          "display_name": "Mehmet Kalemci",
+          "expected_birth_date": "1968-08-18",
+          "candidates": [
+            {
+              "bdfutbol_id": "1178570",
+              "surname": "Kalemci",
+              "full_name": "Mehmet Kalemci"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1178570",
+            "surname": "Kalemci",
+            "full_name": "Mehmet Kalemci",
+            "dob": "1968-08-18"
+          }
+        },
+        {
+          "source_id": 9496525,
+          "display_name": "Mehmet Soykök",
+          "expected_birth_date": "1964-09-27",
+          "candidates": [
+            {
+              "bdfutbol_id": "702820",
+              "surname": "Soykök",
+              "full_name": "Mehmet Soykök"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "702820",
+            "surname": "Soykök",
+            "full_name": "Mehmet Soykök",
+            "dob": "1964-09-27"
+          }
+        },
+        {
+          "source_id": 9496526,
+          "display_name": "Mehmet Şen",
+          "expected_birth_date": "1965-01-14",
+          "candidates": [
+            {
+              "bdfutbol_id": "702890",
+              "surname": "Şen",
+              "full_name": "Mehmet Şen"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "702890",
+            "surname": "Şen",
+            "full_name": "Mehmet Şen",
+            "dob": "1965-01-14"
+          }
+        },
+        {
+          "source_id": 9496524,
+          "display_name": "Mustafa Uğur",
+          "expected_birth_date": "1963-01-19",
+          "candidates": [
+            {
+              "bdfutbol_id": "1120089",
+              "surname": "Uğur",
+              "full_name": "Mustafa Uğur"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1120089",
+            "surname": "Uğur",
+            "full_name": "Mustafa Uğur",
+            "dob": "1963-01-19"
+          }
+        },
+        {
+          "source_id": 9496531,
+          "display_name": "Salih Eken",
+          "expected_birth_date": "1965-02-26",
+          "candidates": [
+            {
+              "bdfutbol_id": "1176291",
+              "surname": "Eken",
+              "full_name": "Salih Eken"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1176291",
+            "surname": "Eken",
+            "full_name": "Salih Eken",
+            "dob": "1965-02-26"
+          }
+        },
+        {
+          "source_id": 9497316,
+          "display_name": "Seyit Cem Ünsal",
+          "expected_birth_date": "1975-10-09",
+          "candidates": [
+            {
+              "bdfutbol_id": "702726",
+              "surname": "Ünsal",
+              "full_name": "Seyit Cem Ünsal"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "702726",
+            "surname": "Ünsal",
+            "full_name": "Seyit Cem Ünsal",
+            "dob": "1975-10-09"
+          }
+        },
+        {
+          "source_id": 9496536,
+          "display_name": "Tahir Ağdere",
+          "expected_birth_date": "1972-05-08",
+          "candidates": [
+            {
+              "bdfutbol_id": "1178569",
+              "surname": "Ağdere",
+              "full_name": "Tahir Ağdere"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1178569",
+            "surname": "Ağdere",
+            "full_name": "Tahir Ağdere",
+            "dob": "1972-05-08"
+          }
+        },
+        {
+          "source_id": 9496532,
+          "display_name": "Zafer Tüzün",
+          "expected_birth_date": "1962-08-30",
+          "candidates": [
+            {
+              "bdfutbol_id": "57065",
+              "surname": "Tüzün",
+              "full_name": "Zafer Tüzün"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "57065",
+            "surname": "Tüzün",
+            "full_name": "Zafer Tüzün",
+            "dob": "1962-08-30"
+          }
+        },
+        {
+          "source_id": 9497311,
+          "display_name": "Özcan Duman",
+          "expected_birth_date": "1964-03-10",
+          "candidates": [
+            {
+              "bdfutbol_id": "1179844",
+              "surname": "Duman",
+              "full_name": "Özcan Duman"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1179844",
+            "surname": "Duman",
+            "full_name": "Özcan Duman",
+            "dob": "1964-03-10"
+          }
+        },
+        {
+          "source_id": 9496527,
+          "display_name": "İlhan Sancaktar",
+          "expected_birth_date": "1969-09-16",
+          "candidates": [
+            {
+              "bdfutbol_id": "1179906",
+              "surname": "İlhan",
+              "full_name": "Metin İlhan"
+            },
+            {
+              "bdfutbol_id": "1173833",
+              "surname": "Sancaktar",
+              "full_name": "İlhan Sancaktar"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1173833",
+            "surname": "Sancaktar",
+            "full_name": "İlhan Sancaktar",
+            "dob": "1969-09-16"
+          }
+        }
+      ],
+      "needs_review": [],
+      "unmatched": []
+    },
+    {
+      "country": "Turquía",
+      "team": "Trabzonspor",
+      "status": "complete",
+      "idclub": "10047",
+      "squad_size": 25,
+      "confirmed": [
+        {
+          "source_id": 9495335,
+          "display_name": "Abdullah Ercan",
+          "expected_birth_date": "1971-12-08",
+          "candidates": [
+            {
+              "bdfutbol_id": "55559",
+              "surname": "Ercan",
+              "full_name": "Abdullah Ercan"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "55559",
+            "surname": "Ercan",
+            "full_name": "Abdullah Ercan",
+            "dob": "1971-12-08"
+          }
+        },
+        {
+          "source_id": 9495328,
+          "display_name": "Cengiz Atila",
+          "expected_birth_date": "1966-07-27",
+          "candidates": [
+            {
+              "bdfutbol_id": "702612",
+              "surname": "Atila",
+              "full_name": "Cengiz Atila"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "702612",
+            "surname": "Atila",
+            "full_name": "Cengiz Atila",
+            "dob": "1966-07-27"
+          }
+        },
+        {
+          "source_id": 9496376,
+          "display_name": "Hamdi Aslan",
+          "expected_birth_date": "1967-09-06",
+          "candidates": [
+            {
+              "bdfutbol_id": "702613",
+              "surname": "Aslan",
+              "full_name": "Hamdi Aslan"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "702613",
+            "surname": "Aslan",
+            "full_name": "Hamdi Aslan",
+            "dob": "1967-09-06"
+          }
+        },
+        {
+          "source_id": 9496377,
+          "display_name": "Kemal Serdar",
+          "expected_birth_date": "1962-05-08",
+          "candidates": [
+            {
+              "bdfutbol_id": "702747",
+              "surname": "Serdar",
+              "full_name": "Kemal Serdar"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "702747",
+            "surname": "Serdar",
+            "full_name": "Kemal Serdar",
+            "dob": "1962-05-08"
+          }
+        },
+        {
+          "source_id": 9496383,
+          "display_name": "Lemi Çelik",
+          "expected_birth_date": "1966-03-09",
+          "candidates": [
+            {
+              "bdfutbol_id": "702611",
+              "surname": "Çelik",
+              "full_name": "Lemi Çelik"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "702611",
+            "surname": "Çelik",
+            "full_name": "Lemi Çelik",
+            "dob": "1966-03-09"
+          }
+        },
+        {
+          "source_id": 9497238,
+          "display_name": "Mehmet Alarçin",
+          "expected_birth_date": "1972-12-01",
+          "candidates": [
+            {
+              "bdfutbol_id": "1150051",
+              "surname": "Alarçin",
+              "full_name": "Mehmet Alarçin"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1150051",
+            "surname": "Alarçin",
+            "full_name": "Mehmet Alarçin",
+            "dob": "1972-12-01"
+          }
+        },
+        {
+          "source_id": 9496386,
+          "display_name": "Nihat Tümkaya",
+          "expected_birth_date": "1971-03-24",
+          "candidates": [
+            {
+              "bdfutbol_id": "702408",
+              "surname": "Tümkaya",
+              "full_name": "Nihat Tümkaya"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "702408",
+            "surname": "Tümkaya",
+            "full_name": "Nihat Tümkaya",
+            "dob": "1971-03-24"
+          }
+        },
+        {
+          "source_id": 9495321,
+          "display_name": "Ogün Temizkanoğlu",
+          "expected_birth_date": "1969-10-06",
+          "candidates": [
+            {
+              "bdfutbol_id": "55558",
+              "surname": "Ogün",
+              "full_name": "Ogün Temizkanoğlu"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "55558",
+            "surname": "Ogün",
+            "full_name": "Ogün Temizkanoğlu",
+            "dob": "1969-10-06"
+          }
+        },
+        {
+          "source_id": 9496384,
+          "display_name": "Orhan Kaynak",
+          "expected_birth_date": "1970-03-01",
+          "candidates": [
+            {
+              "bdfutbol_id": "59693",
+              "surname": "Kaynak",
+              "full_name": "Orhan Kaynak"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "59693",
+            "surname": "Kaynak",
+            "full_name": "Orhan Kaynak",
+            "dob": "1970-03-01"
+          }
+        },
+        {
+          "source_id": 9496378,
+          "display_name": "Orhan Çıkırıkçı",
+          "expected_birth_date": "1967-04-15",
+          "candidates": [
+            {
+              "bdfutbol_id": "57975",
+              "surname": "Çıkırıkçı",
+              "full_name": "Orhan Çıkırıkçı"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "57975",
+            "surname": "Çıkırıkçı",
+            "full_name": "Orhan Çıkırıkçı",
+            "dob": "1967-04-15"
+          }
+        },
+        {
+          "source_id": 9496387,
+          "display_name": "Osman Özköylü",
+          "expected_birth_date": "1971-08-26",
+          "candidates": [
+            {
+              "bdfutbol_id": "1100918",
+              "surname": "Özköylü",
+              "full_name": "Osman Özköylü"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1100918",
+            "surname": "Özköylü",
+            "full_name": "Osman Özköylü",
+            "dob": "1971-08-26"
+          }
+        },
+        {
+          "source_id": 9496375,
+          "display_name": "Ramazan Silin",
+          "expected_birth_date": "1965-05-01",
+          "candidates": [
+            {
+              "bdfutbol_id": "702418",
+              "surname": "Silin",
+              "full_name": "Ramazan Silin"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "702418",
+            "surname": "Silin",
+            "full_name": "Ramazan Silin",
+            "dob": "1965-05-01"
+          }
+        },
+        {
+          "source_id": 9497240,
+          "display_name": "Saffet Akyüz",
+          "expected_birth_date": "1970-03-11",
+          "candidates": [
+            {
+              "bdfutbol_id": "57638",
+              "surname": "Akyüz",
+              "full_name": "Saffet Akyüz"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "57638",
+            "surname": "Akyüz",
+            "full_name": "Saffet Akyüz",
+            "dob": "1970-03-11"
+          }
+        },
+        {
+          "source_id": 9496382,
+          "display_name": "Soner Boz",
+          "expected_birth_date": "1968-01-12",
+          "candidates": [
+            {
+              "bdfutbol_id": "59697",
+              "surname": "Soner",
+              "full_name": "Soner Boz"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "59697",
+            "surname": "Soner",
+            "full_name": "Soner Boz",
+            "dob": "1968-01-12"
+          }
+        },
+        {
+          "source_id": 9497243,
+          "display_name": "Süleyman Usta",
+          "expected_birth_date": "1973-08-03",
+          "candidates": [
+            {
+              "bdfutbol_id": "702775",
+              "surname": "Usta",
+              "full_name": "Süleyman Usta"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "702775",
+            "surname": "Usta",
+            "full_name": "Süleyman Usta",
+            "dob": "1973-08-03"
+          }
+        },
+        {
+          "source_id": 9497241,
+          "display_name": "Ülken Durak",
+          "expected_birth_date": "1966-06-17",
+          "candidates": [
+            {
+              "bdfutbol_id": "702759",
+              "surname": "Durak",
+              "full_name": "Ülken Durak"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "702759",
+            "surname": "Durak",
+            "full_name": "Ülken Durak",
+            "dob": "1966-06-17"
+          }
+        },
+        {
+          "source_id": 9495333,
+          "display_name": "Ünal Karaman",
+          "expected_birth_date": "1966-06-29",
+          "candidates": [
+            {
+              "bdfutbol_id": "47785",
+              "surname": "Karaman",
+              "full_name": "Ünal Karaman"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "47785",
+            "surname": "Karaman",
+            "full_name": "Ünal Karaman",
+            "dob": "1966-06-29"
+          }
+        }
+      ],
+      "needs_review": [
+        {
+          "source_id": 9497239,
+          "display_name": "Ender Traş",
+          "expected_birth_date": "1972-08-30",
+          "candidates": [
+            {
+              "bdfutbol_id": "702749",
+              "surname": "Traş",
+              "full_name": "Ender Traş"
+            }
+          ]
+        },
+        {
+          "source_id": 9495344,
+          "display_name": "Tolunay Kafkas",
+          "expected_birth_date": "1968-03-31",
+          "candidates": [
+            {
+              "bdfutbol_id": "49177",
+              "surname": "Kafkas",
+              "full_name": "Hakkı Tolunay Kafkas"
+            }
+          ]
+        }
+      ],
+      "unmatched": []
+    },
+    {
+      "country": "Turquía",
+      "team": "Bursaspor",
+      "status": "idclub_not_found"
+    },
+    {
+      "country": "Turquía",
+      "team": "Gaziantepspor",
+      "status": "complete",
+      "idclub": "10300",
+      "squad_size": 26,
+      "confirmed": [
+        {
+          "source_id": 9497275,
+          "display_name": "Abdussamet Yiğit",
+          "expected_birth_date": "1975-02-02",
+          "candidates": [
+            {
+              "bdfutbol_id": "1179964",
+              "surname": "Yiğit",
+              "full_name": "Abdussamet Yiğit"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1179964",
+            "surname": "Yiğit",
+            "full_name": "Abdussamet Yiğit",
+            "dob": "1975-02-02"
+          }
+        },
+        {
+          "source_id": 9497278,
+          "display_name": "Burhanettin Turgut",
+          "expected_birth_date": "1970-12-01",
+          "candidates": [
+            {
+              "bdfutbol_id": "1179968",
+              "surname": "Turgut",
+              "full_name": "Burhanettin Turgut"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1179968",
+            "surname": "Turgut",
+            "full_name": "Burhanettin Turgut",
+            "dob": "1970-12-01"
+          }
+        },
+        {
+          "source_id": 9496464,
+          "display_name": "Erol Bilir",
+          "expected_birth_date": "1966-08-03",
+          "candidates": [
+            {
+              "bdfutbol_id": "1179965",
+              "surname": "Bilir",
+              "full_name": "Erol Bilir"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1179965",
+            "surname": "Bilir",
+            "full_name": "Erol Bilir",
+            "dob": "1966-08-03"
+          }
+        },
+        {
+          "source_id": 9497279,
+          "display_name": "Ersin Şenyurt",
+          "expected_birth_date": "1971-12-20",
+          "candidates": [
+            {
+              "bdfutbol_id": "1179969",
+              "surname": "Şenyurt",
+              "full_name": "Ersin Şenyurt"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1179969",
+            "surname": "Şenyurt",
+            "full_name": "Ersin Şenyurt",
+            "dob": "1971-12-20"
+          }
+        },
+        {
+          "source_id": 9496461,
+          "display_name": "Hasan Çelik",
+          "expected_birth_date": "1968-03-27",
+          "candidates": [
+            {
+              "bdfutbol_id": "1175133",
+              "surname": "Çelik",
+              "full_name": "Hasan Çelik"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1175133",
+            "surname": "Çelik",
+            "full_name": "Hasan Çelik",
+            "dob": "1968-03-27"
+          }
+        },
+        {
+          "source_id": 9497277,
+          "display_name": "Mustafa Oğur",
+          "expected_birth_date": "1975-05-12",
+          "candidates": [
+            {
+              "bdfutbol_id": "1179963",
+              "surname": "Oğur",
+              "full_name": "Mustafa Oğur"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1179963",
+            "surname": "Oğur",
+            "full_name": "Mustafa Oğur",
+            "dob": "1975-05-12"
+          }
+        },
+        {
+          "source_id": 9496459,
+          "display_name": "Mustafa Özer",
+          "expected_birth_date": "1969-08-27",
+          "candidates": [
+            {
+              "bdfutbol_id": "55594",
+              "surname": "Özer",
+              "full_name": "Mustafa Özer"
+            },
+            {
+              "bdfutbol_id": "54567",
+              "surname": "Özer",
+              "full_name": "Hasan Özer"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "55594",
+            "surname": "Özer",
+            "full_name": "Mustafa Özer",
+            "dob": "1969-08-27"
+          }
+        },
+        {
+          "source_id": 9496454,
+          "display_name": "İhsan Okay",
+          "expected_birth_date": "1969-08-07",
+          "candidates": [
+            {
+              "bdfutbol_id": "702419",
+              "surname": "Okay",
+              "full_name": "İhsan Okay"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "702419",
+            "surname": "Okay",
+            "full_name": "İhsan Okay",
+            "dob": "1969-08-07"
+          }
+        }
+      ],
+      "needs_review": [],
+      "unmatched": []
+    },
+    {
+      "country": "Turquía",
+      "team": "Zeytinburnuspor",
+      "status": "complete",
+      "idclub": "9025",
+      "squad_size": 26,
+      "confirmed": [
+        {
+          "source_id": 9496551,
+          "display_name": "Adnan Baytar",
+          "expected_birth_date": "1964-01-21",
+          "candidates": [
+            {
+              "bdfutbol_id": "1175488",
+              "surname": "Baytar",
+              "full_name": "Adnan Baytar"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1175488",
+            "surname": "Baytar",
+            "full_name": "Adnan Baytar",
+            "dob": "1964-01-21"
+          }
+        },
+        {
+          "source_id": 9496548,
+          "display_name": "Ahmet Kanca",
+          "expected_birth_date": "1963-05-16",
+          "candidates": [
+            {
+              "bdfutbol_id": "1178710",
+              "surname": "Kanca",
+              "full_name": "Ahmet Kanca"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1178710",
+            "surname": "Kanca",
+            "full_name": "Ahmet Kanca",
+            "dob": "1963-05-16"
+          }
+        },
+        {
+          "source_id": 9496544,
+          "display_name": "Ali Aydoğan",
+          "expected_birth_date": "1963-08-27",
+          "candidates": [
+            {
+              "bdfutbol_id": "1176411",
+              "surname": "Aydoğan",
+              "full_name": "Ali Aydoğan"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1176411",
+            "surname": "Aydoğan",
+            "full_name": "Ali Aydoğan",
+            "dob": "1963-08-27"
+          }
+        },
+        {
+          "source_id": 9496546,
+          "display_name": "Erol Gündoğdu",
+          "expected_birth_date": "1965-10-02",
+          "candidates": [
+            {
+              "bdfutbol_id": "702572",
+              "surname": "Gündoğdu",
+              "full_name": "Erol Gündoğdu"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "702572",
+            "surname": "Gündoğdu",
+            "full_name": "Erol Gündoğdu",
+            "dob": "1965-10-02"
+          }
+        },
+        {
+          "source_id": 9496558,
+          "display_name": "Fikret Durak",
+          "expected_birth_date": "1972-11-22",
+          "candidates": [
+            {
+              "bdfutbol_id": "1175509",
+              "surname": "Durak",
+              "full_name": "Fikret Durak"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1175509",
+            "surname": "Durak",
+            "full_name": "Fikret Durak",
+            "dob": "1972-11-22"
+          }
+        },
+        {
+          "source_id": 9497321,
+          "display_name": "Gürsel Hattat",
+          "expected_birth_date": "1965-10-06",
+          "candidates": [
+            {
+              "bdfutbol_id": "702937",
+              "surname": "Hattat",
+              "full_name": "Gürsel Hattat"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "702937",
+            "surname": "Hattat",
+            "full_name": "Gürsel Hattat",
+            "dob": "1965-10-06"
+          }
+        },
+        {
+          "source_id": 9496555,
+          "display_name": "Gürses Kılıç",
+          "expected_birth_date": "1967-03-25",
+          "candidates": [
+            {
+              "bdfutbol_id": "1175498",
+              "surname": "Kılıç",
+              "full_name": "Gürses Kılıç"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1175498",
+            "surname": "Kılıç",
+            "full_name": "Gürses Kılıç",
+            "dob": "1967-03-25"
+          }
+        },
+        {
+          "source_id": 9497322,
+          "display_name": "Kadir Sünnetçiler",
+          "expected_birth_date": "1964-03-03",
+          "candidates": [
+            {
+              "bdfutbol_id": "1178714",
+              "surname": "Sünnetçiler",
+              "full_name": "Kadir Sünnetçiler"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1178714",
+            "surname": "Sünnetçiler",
+            "full_name": "Kadir Sünnetçiler",
+            "dob": "1964-03-03"
+          }
+        },
+        {
+          "source_id": 9496542,
+          "display_name": "Kadri Sancak",
+          "expected_birth_date": "1966-09-01",
+          "candidates": [
+            {
+              "bdfutbol_id": "700592",
+              "surname": "Sancak",
+              "full_name": "Kadri Sancak"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "700592",
+            "surname": "Sancak",
+            "full_name": "Kadri Sancak",
+            "dob": "1966-09-01"
+          }
+        },
+        {
+          "source_id": 9496549,
+          "display_name": "Kemal Yıldırım",
+          "expected_birth_date": "1958-05-15",
+          "candidates": [
+            {
+              "bdfutbol_id": "702886",
+              "surname": "Yıldırım",
+              "full_name": "Kemal Yıldırım"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "702886",
+            "surname": "Yıldırım",
+            "full_name": "Kemal Yıldırım",
+            "dob": "1958-05-15"
+          }
+        },
+        {
+          "source_id": 9497325,
+          "display_name": "Mehmet Ünver",
+          "expected_birth_date": "1967-04-07",
+          "candidates": [
+            {
+              "bdfutbol_id": "1179953",
+              "surname": "Ünver",
+              "full_name": "Mehmet Ünver"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1179953",
+            "surname": "Ünver",
+            "full_name": "Mehmet Ünver",
+            "dob": "1967-04-07"
+          }
+        },
+        {
+          "source_id": 9497323,
+          "display_name": "Metin Aydemir",
+          "expected_birth_date": "1969-06-27",
+          "candidates": [
+            {
+              "bdfutbol_id": "1178720",
+              "surname": "Aydemir",
+              "full_name": "Metin Aydemir"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1178720",
+            "surname": "Aydemir",
+            "full_name": "Metin Aydemir",
+            "dob": "1969-06-27"
+          }
+        },
+        {
+          "source_id": 9497320,
+          "display_name": "Metin Tokoğlu",
+          "expected_birth_date": "1966-03-20",
+          "candidates": [
+            {
+              "bdfutbol_id": "1178715",
+              "surname": "Tokoğlu",
+              "full_name": "Metin Tokoğlu"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1178715",
+            "surname": "Tokoğlu",
+            "full_name": "Metin Tokoğlu",
+            "dob": "1966-03-20"
+          }
+        },
+        {
+          "source_id": 9496554,
+          "display_name": "Soner Ayçiçek",
+          "expected_birth_date": "1966-07-04",
+          "candidates": [
+            {
+              "bdfutbol_id": "1178709",
+              "surname": "Ayçiçek",
+              "full_name": "Soner Ayçiçek"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1178709",
+            "surname": "Ayçiçek",
+            "full_name": "Soner Ayçiçek",
+            "dob": "1966-07-04"
+          }
+        },
+        {
+          "source_id": 9496552,
+          "display_name": "Süleyman Kocakara",
+          "expected_birth_date": "1958-11-27",
+          "candidates": [
+            {
+              "bdfutbol_id": "1179950",
+              "surname": "Kocakara",
+              "full_name": "Süleyman Kocakara"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1179950",
+            "surname": "Kocakara",
+            "full_name": "Süleyman Kocakara",
+            "dob": "1958-11-27"
+          }
+        },
+        {
+          "source_id": 9496545,
+          "display_name": "Taner Alpak",
+          "expected_birth_date": "1967-11-27",
+          "candidates": [
+            {
+              "bdfutbol_id": "702825",
+              "surname": "Alpak",
+              "full_name": "Taner Alpak"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "702825",
+            "surname": "Alpak",
+            "full_name": "Taner Alpak",
+            "dob": "1967-11-27"
+          }
+        },
+        {
+          "source_id": 9497324,
+          "display_name": "Uğur Eren",
+          "expected_birth_date": "1966-01-10",
+          "candidates": [
+            {
+              "bdfutbol_id": "1179952",
+              "surname": "Uğur",
+              "full_name": "Uğur Eren"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1179952",
+            "surname": "Uğur",
+            "full_name": "Uğur Eren",
+            "dob": "1966-01-10"
+          }
+        },
+        {
+          "source_id": 9496550,
+          "display_name": "Uğur Kiremitçi",
+          "expected_birth_date": "1966-03-31",
+          "candidates": [
+            {
+              "bdfutbol_id": "1179952",
+              "surname": "Uğur",
+              "full_name": "Uğur Eren"
+            },
+            {
+              "bdfutbol_id": "1175511",
+              "surname": "Kiremitçi",
+              "full_name": "Uğur Kiremitçi"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1175511",
+            "surname": "Kiremitçi",
+            "full_name": "Uğur Kiremitçi",
+            "dob": "1966-03-31"
+          }
+        },
+        {
+          "source_id": 9497319,
+          "display_name": "Yasin Avcıoğlu",
+          "expected_birth_date": "1971-10-11",
+          "candidates": [
+            {
+              "bdfutbol_id": "1175328",
+              "surname": "Avcıoğlu",
+              "full_name": "Yasin Avcıoğlu"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1175328",
+            "surname": "Avcıoğlu",
+            "full_name": "Yasin Avcıoğlu",
+            "dob": "1971-10-11"
+          }
+        },
+        {
+          "source_id": 9496543,
+          "display_name": "Yusuf Uzuner",
+          "expected_birth_date": "1962-09-23",
+          "candidates": [
+            {
+              "bdfutbol_id": "1179951",
+              "surname": "Uzuner",
+              "full_name": "Yusuf Uzuner"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1179951",
+            "surname": "Uzuner",
+            "full_name": "Yusuf Uzuner",
+            "dob": "1962-09-23"
+          }
+        },
+        {
+          "source_id": 9497326,
+          "display_name": "İbrahim Köseoğlu",
+          "expected_birth_date": "1968-01-16",
+          "candidates": [
+            {
+              "bdfutbol_id": "702734",
+              "surname": "Köseoğlu",
+              "full_name": "İbrahim Köseoğlu"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "702734",
+            "surname": "Köseoğlu",
+            "full_name": "İbrahim Köseoğlu",
+            "dob": "1968-01-16"
+          }
+        }
+      ],
+      "needs_review": [
+        {
+          "source_id": 9496557,
+          "display_name": "Yılmaz Ece",
+          "expected_birth_date": "",
+          "candidates": [
+            {
+              "bdfutbol_id": "1178713",
+              "surname": "Ece",
+              "full_name": "Yılmaz Ece"
+            }
+          ]
+        }
+      ],
+      "unmatched": []
+    },
+    {
+      "country": "Turquía",
+      "team": "Ankaragücü",
+      "status": "complete",
+      "idclub": "10353",
+      "squad_size": 27,
+      "confirmed": [
+        {
+          "source_id": 9496506,
+          "display_name": "Adnan Erkan",
+          "expected_birth_date": "1968-01-15",
+          "candidates": [
+            {
+              "bdfutbol_id": "59641",
+              "surname": "Erkan",
+              "full_name": "Adnan Erkan"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "59641",
+            "surname": "Erkan",
+            "full_name": "Adnan Erkan",
+            "dob": "1968-01-15"
+          }
+        },
+        {
+          "source_id": 9497309,
+          "display_name": "Ahmet Öztürk",
+          "expected_birth_date": "1973-08-20",
+          "candidates": [
+            {
+              "bdfutbol_id": "1179562",
+              "surname": "Öztürk",
+              "full_name": "Ahmet Öztürk"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1179562",
+            "surname": "Öztürk",
+            "full_name": "Ahmet Öztürk",
+            "dob": "1973-08-20"
+          }
+        },
+        {
+          "source_id": 9496508,
+          "display_name": "Bahaddin Günes",
+          "expected_birth_date": "1960-03-10",
+          "candidates": [
+            {
+              "bdfutbol_id": "703103",
+              "surname": "Günes",
+              "full_name": "Bahaddin Günes"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "703103",
+            "surname": "Günes",
+            "full_name": "Bahaddin Günes",
+            "dob": "1960-03-10"
+          }
+        },
+        {
+          "source_id": 9497307,
+          "display_name": "Beyzat Kaya",
+          "expected_birth_date": "1970-06-07",
+          "candidates": [
+            {
+              "bdfutbol_id": "1178735",
+              "surname": "Beyzat",
+              "full_name": "Beyzat Kaya"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1178735",
+            "surname": "Beyzat",
+            "full_name": "Beyzat Kaya",
+            "dob": "1970-06-07"
+          }
+        },
+        {
+          "source_id": 9497304,
+          "display_name": "Bülent Üstüner",
+          "expected_birth_date": "1969-07-30",
+          "candidates": [
+            {
+              "bdfutbol_id": "1176196",
+              "surname": "Üstüner",
+              "full_name": "Bülent Üstüner"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1176196",
+            "surname": "Üstüner",
+            "full_name": "Bülent Üstüner",
+            "dob": "1969-07-30"
+          }
+        },
+        {
+          "source_id": 9496515,
+          "display_name": "Cafer Aydın",
+          "expected_birth_date": "1971-11-17",
+          "candidates": [
+            {
+              "bdfutbol_id": "702562",
+              "surname": "Aydın",
+              "full_name": "Cafer Aydın"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "702562",
+            "surname": "Aydın",
+            "full_name": "Cafer Aydın",
+            "dob": "1971-11-17"
+          }
+        },
+        {
+          "source_id": 9497308,
+          "display_name": "Ekrem Onuk",
+          "expected_birth_date": "1974-04-20",
+          "candidates": [
+            {
+              "bdfutbol_id": "1150050",
+              "surname": "Onuk",
+              "full_name": "Ekrem Onuk"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1150050",
+            "surname": "Onuk",
+            "full_name": "Ekrem Onuk",
+            "dob": "1974-04-20"
+          }
+        },
+        {
+          "source_id": 9496509,
+          "display_name": "Ergün Yücel",
+          "expected_birth_date": "1966-03-10",
+          "candidates": [
+            {
+              "bdfutbol_id": "1173610",
+              "surname": "Yücel",
+              "full_name": "Ergün Yücel"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1173610",
+            "surname": "Yücel",
+            "full_name": "Ergün Yücel",
+            "dob": "1966-03-10"
+          }
+        },
+        {
+          "source_id": 9496522,
+          "display_name": "Gökhan Gedikali",
+          "expected_birth_date": "1966-01-08",
+          "candidates": [
+            {
+              "bdfutbol_id": "55604",
+              "surname": "Gedikali",
+              "full_name": "Gökhan Gedikali"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "55604",
+            "surname": "Gedikali",
+            "full_name": "Gökhan Gedikali",
+            "dob": "1966-01-08"
+          }
+        },
+        {
+          "source_id": 9496513,
+          "display_name": "Hakan Çobanoğlu",
+          "expected_birth_date": "1969-11-05",
+          "candidates": [
+            {
+              "bdfutbol_id": "1173611",
+              "surname": "Çobanoğlu",
+              "full_name": "Hakan Çobanoğlu"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1173611",
+            "surname": "Çobanoğlu",
+            "full_name": "Hakan Çobanoğlu",
+            "dob": "1969-11-05"
+          }
+        },
+        {
+          "source_id": 9496510,
+          "display_name": "Hayati Soydaş",
+          "expected_birth_date": "1966-05-01",
+          "candidates": [
+            {
+              "bdfutbol_id": "1171772",
+              "surname": "Soydaş",
+              "full_name": "Hayati Soydaş"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1171772",
+            "surname": "Soydaş",
+            "full_name": "Hayati Soydaş",
+            "dob": "1966-05-01"
+          }
+        },
+        {
+          "source_id": 9496517,
+          "display_name": "Mehmet Yıldırım",
+          "expected_birth_date": "1972-09-15",
+          "candidates": [
+            {
+              "bdfutbol_id": "702407",
+              "surname": "Yıldırım",
+              "full_name": "Mehmet Yıldırım"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "702407",
+            "surname": "Yıldırım",
+            "full_name": "Mehmet Yıldırım",
+            "dob": "1972-09-15"
+          }
+        },
+        {
+          "source_id": 9496516,
+          "display_name": "Muharrem Kayan",
+          "expected_birth_date": "1969-11-22",
+          "candidates": [
+            {
+              "bdfutbol_id": "1179555",
+              "surname": "Kayan",
+              "full_name": "Muharrem Kayan"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1179555",
+            "surname": "Kayan",
+            "full_name": "Muharrem Kayan",
+            "dob": "1969-11-22"
+          }
+        },
+        {
+          "source_id": 9496521,
+          "display_name": "Murat Türksoy",
+          "expected_birth_date": "1974-12-01",
+          "candidates": [
+            {
+              "bdfutbol_id": "707164",
+              "surname": "Türksoy",
+              "full_name": "Murat Türksoy"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "707164",
+            "surname": "Türksoy",
+            "full_name": "Murat Türksoy",
+            "dob": "1974-12-01"
+          }
+        },
+        {
+          "source_id": 9496514,
+          "display_name": "Ramazan Konya",
+          "expected_birth_date": "1968-12-05",
+          "candidates": [
+            {
+              "bdfutbol_id": "1178734",
+              "surname": "Konya",
+              "full_name": "Ramazan Konya"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1178734",
+            "surname": "Konya",
+            "full_name": "Ramazan Konya",
+            "dob": "1968-12-05"
+          }
+        },
+        {
+          "source_id": 9497303,
+          "display_name": "Soner Büyükergün",
+          "expected_birth_date": "1968-08-29",
+          "candidates": [
+            {
+              "bdfutbol_id": "1179561",
+              "surname": "Büyükergün",
+              "full_name": "Soner Büyükergün"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1179561",
+            "surname": "Büyükergün",
+            "full_name": "Soner Büyükergün",
+            "dob": "1968-08-29"
+          }
+        },
+        {
+          "source_id": 9496507,
+          "display_name": "Taner Ertaş",
+          "expected_birth_date": "1967-08-11",
+          "candidates": [
+            {
+              "bdfutbol_id": "1179565",
+              "surname": "Ertaş",
+              "full_name": "Taner Ertaş"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1179565",
+            "surname": "Ertaş",
+            "full_name": "Taner Ertaş",
+            "dob": "1967-08-11"
+          }
+        },
+        {
+          "source_id": 9496518,
+          "display_name": "Tarık Üstün",
+          "expected_birth_date": "1968-05-23",
+          "candidates": [
+            {
+              "bdfutbol_id": "1176194",
+              "surname": "Üstün",
+              "full_name": "Tarık Üstün"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1176194",
+            "surname": "Üstün",
+            "full_name": "Tarık Üstün",
+            "dob": "1968-05-23"
+          }
+        },
+        {
+          "source_id": 9496520,
+          "display_name": "Tayfun Hut",
+          "expected_birth_date": "1967-07-19",
+          "candidates": [
+            {
+              "bdfutbol_id": "702778",
+              "surname": "Hut",
+              "full_name": "Tayfun Hut"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "702778",
+            "surname": "Hut",
+            "full_name": "Tayfun Hut",
+            "dob": "1967-07-19"
+          }
+        },
+        {
+          "source_id": 9497301,
+          "display_name": "Şevket Candar",
+          "expected_birth_date": "1966-01-06",
+          "candidates": [
+            {
+              "bdfutbol_id": "702779",
+              "surname": "Şevket",
+              "full_name": "Şevket Candar"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "702779",
+            "surname": "Şevket",
+            "full_name": "Şevket Candar",
+            "dob": "1966-01-06"
+          }
+        }
+      ],
+      "needs_review": [
+        {
+          "source_id": 9497306,
+          "display_name": "Ensar Hacımustafaoğlu",
+          "expected_birth_date": "",
+          "candidates": [
+            {
+              "bdfutbol_id": "1179566",
+              "surname": "Hacımustafaoğlu",
+              "full_name": "Ensar Hacımustafaoğlu"
+            }
+          ]
+        }
+      ],
+      "unmatched": []
+    },
+    {
+      "country": "Turquía",
+      "team": "Altay",
+      "status": "complete",
+      "idclub": "11414",
+      "squad_size": 27,
+      "confirmed": [
+        {
+          "source_id": 9496505,
+          "display_name": "Ahmet Acar",
+          "expected_birth_date": "1975-01-01",
+          "candidates": [
+            {
+              "bdfutbol_id": "1173566",
+              "surname": "Acar",
+              "full_name": "Ahmet Acar"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1173566",
+            "surname": "Acar",
+            "full_name": "Ahmet Acar",
+            "dob": "1975-01-01"
+          }
+        },
+        {
+          "source_id": 9496491,
+          "display_name": "Ahmet Akuygur",
+          "expected_birth_date": "1967-05-29",
+          "candidates": [
+            {
+              "bdfutbol_id": "1176189",
+              "surname": "Akuygur",
+              "full_name": "Ahmet Akuygur"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1176189",
+            "surname": "Akuygur",
+            "full_name": "Ahmet Akuygur",
+            "dob": "1967-05-29"
+          }
+        },
+        {
+          "source_id": 9496496,
+          "display_name": "Atakan Sancarbarlaz",
+          "expected_birth_date": "1973-07-05",
+          "candidates": [
+            {
+              "bdfutbol_id": "702409",
+              "surname": "Sancarbarlaz",
+              "full_name": "Atakan Sancarbarlaz"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "702409",
+            "surname": "Sancarbarlaz",
+            "full_name": "Atakan Sancarbarlaz",
+            "dob": "1973-07-05"
+          }
+        },
+        {
+          "source_id": 9496499,
+          "display_name": "Aydın Ethem Dağdelen",
+          "expected_birth_date": "1971-04-15",
+          "candidates": [
+            {
+              "bdfutbol_id": "700597",
+              "surname": "Dağdelen",
+              "full_name": "Aydın Ethem Dağdelen"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "700597",
+            "surname": "Dağdelen",
+            "full_name": "Aydın Ethem Dağdelen",
+            "dob": "1971-04-15"
+          }
+        },
+        {
+          "source_id": 9497299,
+          "display_name": "Birand Yaytaş",
+          "expected_birth_date": "1975-07-11",
+          "candidates": [
+            {
+              "bdfutbol_id": "1173565",
+              "surname": "Yaytaş",
+              "full_name": "Birand Yaytaş"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1173565",
+            "surname": "Yaytaş",
+            "full_name": "Birand Yaytaş",
+            "dob": "1975-07-11"
+          }
+        },
+        {
+          "source_id": 9496495,
+          "display_name": "Hakan Kayalar",
+          "expected_birth_date": "1970-04-13",
+          "candidates": [
+            {
+              "bdfutbol_id": "1174837",
+              "surname": "Kayalar",
+              "full_name": "Hakan Kayalar"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1174837",
+            "surname": "Kayalar",
+            "full_name": "Hakan Kayalar",
+            "dob": "1970-04-13"
+          }
+        },
+        {
+          "source_id": 9497295,
+          "display_name": "Murat Duran",
+          "expected_birth_date": "1973-08-25",
+          "candidates": [
+            {
+              "bdfutbol_id": "1179551",
+              "surname": "Duran",
+              "full_name": "Murat Duran"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1179551",
+            "surname": "Duran",
+            "full_name": "Murat Duran",
+            "dob": "1973-08-25"
+          }
+        },
+        {
+          "source_id": 9496490,
+          "display_name": "Müfit İkizoğlu",
+          "expected_birth_date": "1964-01-05",
+          "candidates": [
+            {
+              "bdfutbol_id": "1176188",
+              "surname": "İkizoğlu",
+              "full_name": "Müfit İkizoğlu"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1176188",
+            "surname": "İkizoğlu",
+            "full_name": "Müfit İkizoğlu",
+            "dob": "1964-01-05"
+          }
+        },
+        {
+          "source_id": 9497297,
+          "display_name": "Orkan Şevket Yurtkoru",
+          "expected_birth_date": "1975-03-15",
+          "candidates": [
+            {
+              "bdfutbol_id": "1179550",
+              "surname": "Yurtkoru",
+              "full_name": "Orkan Şevket Yurtkoru"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1179550",
+            "surname": "Yurtkoru",
+            "full_name": "Orkan Şevket Yurtkoru",
+            "dob": "1975-03-15"
+          }
+        },
+        {
+          "source_id": 9497298,
+          "display_name": "Serdar Meriç",
+          "expected_birth_date": "1977-10-10",
+          "candidates": [
+            {
+              "bdfutbol_id": "700601",
+              "surname": "Meriç",
+              "full_name": "Serdar Meriç"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "700601",
+            "surname": "Meriç",
+            "full_name": "Serdar Meriç",
+            "dob": "1977-10-10"
+          }
+        },
+        {
+          "source_id": 9497292,
+          "display_name": "Serkan Demir",
+          "expected_birth_date": "1974-05-02",
+          "candidates": [
+            {
+              "bdfutbol_id": "1136865",
+              "surname": "Serkan",
+              "full_name": "Serkan Demir"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1136865",
+            "surname": "Serkan",
+            "full_name": "Serkan Demir",
+            "dob": "1974-05-02"
+          }
+        },
+        {
+          "source_id": 9496492,
+          "display_name": "Toprak Kırtoğlu",
+          "expected_birth_date": "1971-06-10",
+          "candidates": [
+            {
+              "bdfutbol_id": "55599",
+              "surname": "Kırtoğlu",
+              "full_name": "Toprak Kırtoğlu"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "55599",
+            "surname": "Kırtoğlu",
+            "full_name": "Toprak Kırtoğlu",
+            "dob": "1971-06-10"
+          }
+        },
+        {
+          "source_id": 9496504,
+          "display_name": "Varol Özhan",
+          "expected_birth_date": "1968-01-20",
+          "candidates": [
+            {
+              "bdfutbol_id": "1174840",
+              "surname": "Özhan",
+              "full_name": "Varol Özhan"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1174840",
+            "surname": "Özhan",
+            "full_name": "Varol Özhan",
+            "dob": "1968-01-20"
+          }
+        },
+        {
+          "source_id": 9497296,
+          "display_name": "Yasin Balcı",
+          "expected_birth_date": "1974-12-01",
+          "candidates": [
+            {
+              "bdfutbol_id": "1179548",
+              "surname": "Balcı",
+              "full_name": "Yasin Balcı"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1179548",
+            "surname": "Balcı",
+            "full_name": "Yasin Balcı",
+            "dob": "1974-12-01"
+          }
+        },
+        {
+          "source_id": 9496501,
+          "display_name": "Özgür Kaymaz",
+          "expected_birth_date": "1972-06-10",
+          "candidates": [
+            {
+              "bdfutbol_id": "1170014",
+              "surname": "Kaymaz",
+              "full_name": "Özgür Kaymaz"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1170014",
+            "surname": "Kaymaz",
+            "full_name": "Özgür Kaymaz",
+            "dob": "1972-06-10"
+          }
+        }
+      ],
+      "needs_review": [
+        {
+          "source_id": 9497300,
+          "display_name": "Hüseyin Gün",
+          "expected_birth_date": "",
+          "candidates": [
+            {
+              "bdfutbol_id": "1179553",
+              "surname": "Gün",
+              "full_name": "Hüseyin Gün"
+            }
+          ]
+        }
+      ],
+      "unmatched": []
+    },
+    {
+      "country": "Turquía",
+      "team": "Karşıyaka",
+      "status": "complete",
+      "idclub": "9026",
+      "squad_size": 25,
+      "confirmed": [
+        {
+          "source_id": 9497341,
+          "display_name": "Ahmet Bora Orman Kocaman",
+          "expected_birth_date": "1972-06-22",
+          "candidates": [
+            {
+              "bdfutbol_id": "1179839",
+              "surname": "Kocaman",
+              "full_name": "Ahmet Bora Orman Kocaman"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1179839",
+            "surname": "Kocaman",
+            "full_name": "Ahmet Bora Orman Kocaman",
+            "dob": "1972-06-22"
+          }
+        },
+        {
+          "source_id": 9496582,
+          "display_name": "Atilla Güneş",
+          "expected_birth_date": "1974-07-13",
+          "candidates": [
+            {
+              "bdfutbol_id": "55587",
+              "surname": "Güneş",
+              "full_name": "Atilla Güneş"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "55587",
+            "surname": "Güneş",
+            "full_name": "Atilla Güneş",
+            "dob": "1974-07-13"
+          }
+        },
+        {
+          "source_id": 9496588,
+          "display_name": "Atilla Küçüktaka",
+          "expected_birth_date": "1972-03-26",
+          "candidates": [
+            {
+              "bdfutbol_id": "1127314",
+              "surname": "Küçüktaka",
+              "full_name": "Atilla Küçüktaka"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1127314",
+            "surname": "Küçüktaka",
+            "full_name": "Atilla Küçüktaka",
+            "dob": "1972-03-26"
+          }
+        },
+        {
+          "source_id": 9497338,
+          "display_name": "Bahadır Tamsan",
+          "expected_birth_date": "1974-09-21",
+          "candidates": [
+            {
+              "bdfutbol_id": "1176284",
+              "surname": "Tamsan",
+              "full_name": "Bahadır Tamsan"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1176284",
+            "surname": "Tamsan",
+            "full_name": "Bahadır Tamsan",
+            "dob": "1974-09-21"
+          }
+        },
+        {
+          "source_id": 9496580,
+          "display_name": "Bayram Mercan",
+          "expected_birth_date": "1964-04-23",
+          "candidates": [
+            {
+              "bdfutbol_id": "1179829",
+              "surname": "Mercan",
+              "full_name": "Bayram Mercan"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1179829",
+            "surname": "Mercan",
+            "full_name": "Bayram Mercan",
+            "dob": "1964-04-23"
+          }
+        },
+        {
+          "source_id": 9497340,
+          "display_name": "Cenk Gürgenç",
+          "expected_birth_date": "1975-02-18",
+          "candidates": [
+            {
+              "bdfutbol_id": "1176285",
+              "surname": "Gürgenç",
+              "full_name": "Cenk Gürgenç"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1176285",
+            "surname": "Gürgenç",
+            "full_name": "Cenk Gürgenç",
+            "dob": "1975-02-18"
+          }
+        },
+        {
+          "source_id": 9496587,
+          "display_name": "Erhan Kiremitçi",
+          "expected_birth_date": "1963-01-17",
+          "candidates": [
+            {
+              "bdfutbol_id": "1179837",
+              "surname": "Kiremitçi",
+              "full_name": "Erhan Kiremitçi"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1179837",
+            "surname": "Kiremitçi",
+            "full_name": "Erhan Kiremitçi",
+            "dob": "1963-01-17"
+          }
+        },
+        {
+          "source_id": 9496584,
+          "display_name": "Hakan Çıkrıkçıoğlu",
+          "expected_birth_date": "1968-08-14",
+          "candidates": [
+            {
+              "bdfutbol_id": "1179831",
+              "surname": "Çıkrıkçıoğlu",
+              "full_name": "Hakan Çıkrıkçıoğlu"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1179831",
+            "surname": "Çıkrıkçıoğlu",
+            "full_name": "Hakan Çıkrıkçıoğlu",
+            "dob": "1968-08-14"
+          }
+        },
+        {
+          "source_id": 9496581,
+          "display_name": "Murat Sır",
+          "expected_birth_date": "1974-12-03",
+          "candidates": [
+            {
+              "bdfutbol_id": "1176281",
+              "surname": "Sır",
+              "full_name": "Murat Sır"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1176281",
+            "surname": "Sır",
+            "full_name": "Murat Sır",
+            "dob": "1974-12-03"
+          }
+        },
+        {
+          "source_id": 9496586,
+          "display_name": "Recep Umut",
+          "expected_birth_date": "1967-12-20",
+          "candidates": [
+            {
+              "bdfutbol_id": "1173844",
+              "surname": "Umut",
+              "full_name": "Recep Umut"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1173844",
+            "surname": "Umut",
+            "full_name": "Recep Umut",
+            "dob": "1967-12-20"
+          }
+        },
+        {
+          "source_id": 9496579,
+          "display_name": "Saffet Akbaş",
+          "expected_birth_date": "1968-09-08",
+          "candidates": [
+            {
+              "bdfutbol_id": "55572",
+              "surname": "Akbaş",
+              "full_name": "Saffet Akbaş"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "55572",
+            "surname": "Akbaş",
+            "full_name": "Saffet Akbaş",
+            "dob": "1968-09-08"
+          }
+        },
+        {
+          "source_id": 9497342,
+          "display_name": "Talat Alptekin",
+          "expected_birth_date": "1971-10-05",
+          "candidates": [
+            {
+              "bdfutbol_id": "1179840",
+              "surname": "Alptekin",
+              "full_name": "Talat Alptekin"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1179840",
+            "surname": "Alptekin",
+            "full_name": "Talat Alptekin",
+            "dob": "1971-10-05"
+          }
+        },
+        {
+          "source_id": 9496589,
+          "display_name": "Taygun Erdem",
+          "expected_birth_date": "1967-10-02",
+          "candidates": [
+            {
+              "bdfutbol_id": "45601",
+              "surname": "Taygun",
+              "full_name": "Taygun Erdem"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "45601",
+            "surname": "Taygun",
+            "full_name": "Taygun Erdem",
+            "dob": "1967-10-02"
+          }
+        },
+        {
+          "source_id": 9496583,
+          "display_name": "Yüksel Kepoğlu",
+          "expected_birth_date": "1968-07-04",
+          "candidates": [
+            {
+              "bdfutbol_id": "57067",
+              "surname": "Kepoğlu",
+              "full_name": "Yüksel Kepoğlu"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "57067",
+            "surname": "Kepoğlu",
+            "full_name": "Yüksel Kepoğlu",
+            "dob": "1968-07-04"
+          }
+        },
+        {
+          "source_id": 9496578,
+          "display_name": "Şenol Yavaş",
+          "expected_birth_date": "1973-06-22",
+          "candidates": [
+            {
+              "bdfutbol_id": "56368",
+              "surname": "Yavaş",
+              "full_name": "Şenol Yavaş"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "56368",
+            "surname": "Yavaş",
+            "full_name": "Şenol Yavaş",
+            "dob": "1973-06-22"
+          }
+        }
+      ],
+      "needs_review": [],
+      "unmatched": []
+    },
+    {
+      "country": "Turquía",
+      "team": "Beşiktaş",
+      "status": "complete",
+      "idclub": "10031",
+      "squad_size": 23,
+      "confirmed": [
+        {
+          "source_id": 9495322,
+          "display_name": "Ali Günçar",
+          "expected_birth_date": "1970-05-19",
+          "candidates": [
+            {
+              "bdfutbol_id": "701145",
+              "surname": "Günçar",
+              "full_name": "Ali Günçar"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "701145",
+            "surname": "Günçar",
+            "full_name": "Ali Günçar",
+            "dob": "1970-05-19"
+          }
+        },
+        {
+          "source_id": 9495347,
+          "display_name": "Feyyaz Uçar",
+          "expected_birth_date": "1963-10-27",
+          "candidates": [
+            {
+              "bdfutbol_id": "42603",
+              "surname": "Uçar",
+              "full_name": "Feyyaz Uçar"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "42603",
+            "surname": "Uçar",
+            "full_name": "Feyyaz Uçar",
+            "dob": "1963-10-27"
+          }
+        },
+        {
+          "source_id": 9495334,
+          "display_name": "Mehmet Özdilek",
+          "expected_birth_date": "1966-04-01",
+          "candidates": [
+            {
+              "bdfutbol_id": "47967",
+              "surname": "Özdilek",
+              "full_name": "Mehmet Özdilek"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "47967",
+            "surname": "Özdilek",
+            "full_name": "Mehmet Özdilek",
+            "dob": "1966-04-01"
+          }
+        },
+        {
+          "source_id": 9495330,
+          "display_name": "Mutlu Topçu",
+          "expected_birth_date": "1970-11-16",
+          "candidates": [
+            {
+              "bdfutbol_id": "57633",
+              "surname": "Topçu",
+              "full_name": "Mutlu Topçu"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "57633",
+            "surname": "Topçu",
+            "full_name": "Mutlu Topçu",
+            "dob": "1970-11-16"
+          }
+        },
+        {
+          "source_id": 9495320,
+          "display_name": "Recep Çetin",
+          "expected_birth_date": "1965-10-01",
+          "candidates": [
+            {
+              "bdfutbol_id": "55344",
+              "surname": "Çetin",
+              "full_name": "Recep Çetin"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "55344",
+            "surname": "Çetin",
+            "full_name": "Recep Çetin",
+            "dob": "1965-10-01"
+          }
+        }
+      ],
+      "needs_review": [
+        {
+          "source_id": 9495323,
+          "display_name": "Gökhan Keskin",
+          "expected_birth_date": "1965-02-01",
+          "candidates": [
+            {
+              "bdfutbol_id": "42713",
+              "surname": "Keskin",
+              "full_name": "Gökhan Keskin"
+            }
+          ]
+        },
+        {
+          "source_id": 9495345,
+          "display_name": "Sergen Yalçın",
+          "expected_birth_date": "1972-10-05",
+          "candidates": [
+            {
+              "bdfutbol_id": "43790",
+              "surname": "Yalçın",
+              "full_name": "Ali Rıza Sergen Yalçın"
+            }
+          ]
+        }
+      ],
+      "unmatched": []
+    },
+    {
+      "country": "Turquía",
+      "team": "Gençlerbirliği",
+      "status": "complete",
+      "idclub": "10358",
+      "squad_size": 25,
+      "confirmed": [
+        {
+          "source_id": 9496449,
+          "display_name": "Ali Işık",
+          "expected_birth_date": "1970-12-30",
+          "candidates": [
+            {
+              "bdfutbol_id": "702727",
+              "surname": "Işık",
+              "full_name": "Ali Işık"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "702727",
+            "surname": "Işık",
+            "full_name": "Ali Işık",
+            "dob": "1970-12-30"
+          }
+        },
+        {
+          "source_id": 9497267,
+          "display_name": "Aykan Atik",
+          "expected_birth_date": "1971-12-28",
+          "candidates": [
+            {
+              "bdfutbol_id": "1100343",
+              "surname": "Atik",
+              "full_name": "Aykan Atik"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1100343",
+            "surname": "Atik",
+            "full_name": "Aykan Atik",
+            "dob": "1971-12-28"
+          }
+        },
+        {
+          "source_id": 9496436,
+          "display_name": "Erkan Sözeri",
+          "expected_birth_date": "1966-05-19",
+          "candidates": [
+            {
+              "bdfutbol_id": "55571",
+              "surname": "Sözeri",
+              "full_name": "Erkan Sözeri"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "55571",
+            "surname": "Sözeri",
+            "full_name": "Erkan Sözeri",
+            "dob": "1966-05-19"
+          }
+        },
+        {
+          "source_id": 9496448,
+          "display_name": "Erkut Çağdaş",
+          "expected_birth_date": "1967-05-15",
+          "candidates": [
+            {
+              "bdfutbol_id": "1173872",
+              "surname": "Çağdaş",
+              "full_name": "Erkut Çağdaş"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1173872",
+            "surname": "Çağdaş",
+            "full_name": "Erkut Çağdaş",
+            "dob": "1967-05-15"
+          }
+        },
+        {
+          "source_id": 9496435,
+          "display_name": "Hasan Okan Gültang",
+          "expected_birth_date": "1972-10-29",
+          "candidates": [
+            {
+              "bdfutbol_id": "56070",
+              "surname": "Gültang",
+              "full_name": "Hasan Okan Gültang"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "56070",
+            "surname": "Gültang",
+            "full_name": "Hasan Okan Gültang",
+            "dob": "1972-10-29"
+          }
+        },
+        {
+          "source_id": 9497269,
+          "display_name": "Mehmet Altıparmak",
+          "expected_birth_date": "1969-05-01",
+          "candidates": [
+            {
+              "bdfutbol_id": "1100193",
+              "surname": "Altıparmak",
+              "full_name": "Mehmet Altıparmak"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1100193",
+            "surname": "Altıparmak",
+            "full_name": "Mehmet Altıparmak",
+            "dob": "1969-05-01"
+          }
+        },
+        {
+          "source_id": 9497270,
+          "display_name": "Mehmet Güler",
+          "expected_birth_date": "1972-10-09",
+          "candidates": [
+            {
+              "bdfutbol_id": "1179811",
+              "surname": "Güler",
+              "full_name": "Mehmet Güler"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1179811",
+            "surname": "Güler",
+            "full_name": "Mehmet Güler",
+            "dob": "1972-10-09"
+          }
+        },
+        {
+          "source_id": 9496445,
+          "display_name": "Mehmet Şimşek",
+          "expected_birth_date": "1969-07-01",
+          "candidates": [
+            {
+              "bdfutbol_id": "702723",
+              "surname": "Şimşek",
+              "full_name": "Mehmet Şimşek"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "702723",
+            "surname": "Şimşek",
+            "full_name": "Mehmet Şimşek",
+            "dob": "1969-07-01"
+          }
+        },
+        {
+          "source_id": 9496440,
+          "display_name": "Metin Diyadin",
+          "expected_birth_date": "1968-02-16",
+          "candidates": [
+            {
+              "bdfutbol_id": "55575",
+              "surname": "Diyadin",
+              "full_name": "Metin Diyadin"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "55575",
+            "surname": "Diyadin",
+            "full_name": "Metin Diyadin",
+            "dob": "1968-02-16"
+          }
+        },
+        {
+          "source_id": 9497266,
+          "display_name": "Murat Şenvardar",
+          "expected_birth_date": "1971-10-11",
+          "candidates": [
+            {
+              "bdfutbol_id": "1172131",
+              "surname": "Şenvardar",
+              "full_name": "Murat Şenvardar"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1172131",
+            "surname": "Şenvardar",
+            "full_name": "Murat Şenvardar",
+            "dob": "1971-10-11"
+          }
+        },
+        {
+          "source_id": 9497271,
+          "display_name": "Nihat Baştürk",
+          "expected_birth_date": "1973-10-22",
+          "candidates": [
+            {
+              "bdfutbol_id": "53273",
+              "surname": "Baştürk",
+              "full_name": "Nihat Baştürk"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "53273",
+            "surname": "Baştürk",
+            "full_name": "Nihat Baştürk",
+            "dob": "1973-10-22"
+          }
+        },
+        {
+          "source_id": 9496443,
+          "display_name": "Osman Coşkun",
+          "expected_birth_date": "1972-01-11",
+          "candidates": [
+            {
+              "bdfutbol_id": "57913",
+              "surname": "Coşkun",
+              "full_name": "Osman Coşkun"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "57913",
+            "surname": "Coşkun",
+            "full_name": "Osman Coşkun",
+            "dob": "1972-01-11"
+          }
+        },
+        {
+          "source_id": 9496451,
+          "display_name": "Rüstem İsmailoğlu",
+          "expected_birth_date": "1964-05-10",
+          "candidates": [
+            {
+              "bdfutbol_id": "1179810",
+              "surname": "İsmailoğlu",
+              "full_name": "Rüstem İsmailoğlu"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1179810",
+            "surname": "İsmailoğlu",
+            "full_name": "Rüstem İsmailoğlu",
+            "dob": "1964-05-10"
+          }
+        },
+        {
+          "source_id": 9497265,
+          "display_name": "Serkan Damla",
+          "expected_birth_date": "1973-10-25",
+          "candidates": [
+            {
+              "bdfutbol_id": "702191",
+              "surname": "Damla",
+              "full_name": "Serkan Damla"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "702191",
+            "surname": "Damla",
+            "full_name": "Serkan Damla",
+            "dob": "1973-10-25"
+          }
+        },
+        {
+          "source_id": 9496439,
+          "display_name": "Taner Taşkın",
+          "expected_birth_date": "1972-10-27",
+          "candidates": [
+            {
+              "bdfutbol_id": "702722",
+              "surname": "Taşkın",
+              "full_name": "Taner Taşkın"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "702722",
+            "surname": "Taşkın",
+            "full_name": "Taner Taşkın",
+            "dob": "1972-10-27"
+          }
+        },
+        {
+          "source_id": 9497268,
+          "display_name": "Tarkan Özyılmaz",
+          "expected_birth_date": "1975-04-03",
+          "candidates": [
+            {
+              "bdfutbol_id": "1173814",
+              "surname": "Özyılmaz",
+              "full_name": "Tarkan Özyılmaz"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1173814",
+            "surname": "Özyılmaz",
+            "full_name": "Tarkan Özyılmaz",
+            "dob": "1975-04-03"
+          }
+        },
+        {
+          "source_id": 9496450,
+          "display_name": "Tarık Daşgün",
+          "expected_birth_date": "1973-08-26",
+          "candidates": [
+            {
+              "bdfutbol_id": "55583",
+              "surname": "Daşgün",
+              "full_name": "Tarık Daşgün"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "55583",
+            "surname": "Daşgün",
+            "full_name": "Tarık Daşgün",
+            "dob": "1973-08-26"
+          }
+        },
+        {
+          "source_id": 9496452,
+          "display_name": "Yunus Kara",
+          "expected_birth_date": "1972-05-10",
+          "candidates": [
+            {
+              "bdfutbol_id": "1179809",
+              "surname": "Kara",
+              "full_name": "Yunus Kara"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1179809",
+            "surname": "Kara",
+            "full_name": "Yunus Kara",
+            "dob": "1972-05-10"
+          }
+        }
+      ],
+      "needs_review": [],
+      "unmatched": []
+    },
+    {
+      "country": "Turquía",
+      "team": "Sarıyer",
+      "status": "complete",
+      "idclub": "9024",
+      "squad_size": 24,
+      "confirmed": [
+        {
+          "source_id": 9496598,
+          "display_name": "Ali Ravcı",
+          "expected_birth_date": "1973-01-01",
+          "candidates": [
+            {
+              "bdfutbol_id": "1100565",
+              "surname": "Ravcı",
+              "full_name": "Ali Ravcı"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1100565",
+            "surname": "Ravcı",
+            "full_name": "Ali Ravcı",
+            "dob": "1973-01-01"
+          }
+        },
+        {
+          "source_id": 9496607,
+          "display_name": "Birol Demirhan",
+          "expected_birth_date": "1970-08-25",
+          "candidates": [
+            {
+              "bdfutbol_id": "1141650",
+              "surname": "Demirhan",
+              "full_name": "Birol Demirhan"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1141650",
+            "surname": "Demirhan",
+            "full_name": "Birol Demirhan",
+            "dob": "1970-08-25"
+          }
+        },
+        {
+          "source_id": 9497348,
+          "display_name": "Engin Ülker",
+          "expected_birth_date": "1961-12-10",
+          "candidates": [
+            {
+              "bdfutbol_id": "1175418",
+              "surname": "Engin",
+              "full_name": "Tufan Engin"
+            },
+            {
+              "bdfutbol_id": "42714",
+              "surname": "Engin",
+              "full_name": "Sìnan Engin"
+            },
+            {
+              "bdfutbol_id": "1179945",
+              "surname": "Ülker",
+              "full_name": "Engin Ülker"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1179945",
+            "surname": "Ülker",
+            "full_name": "Engin Ülker",
+            "dob": "1961-12-10"
+          }
+        },
+        {
+          "source_id": 9497346,
+          "display_name": "Erdinç Aktaş",
+          "expected_birth_date": "1970-07-13",
+          "candidates": [
+            {
+              "bdfutbol_id": "1179947",
+              "surname": "Aktaş",
+              "full_name": "Erdinç Aktaş"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1179947",
+            "surname": "Aktaş",
+            "full_name": "Erdinç Aktaş",
+            "dob": "1970-07-13"
+          }
+        },
+        {
+          "source_id": 9496599,
+          "display_name": "Esat Bayram",
+          "expected_birth_date": "1964-09-14",
+          "candidates": [
+            {
+              "bdfutbol_id": "702935",
+              "surname": "Bayram",
+              "full_name": "Esat Bayram"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "702935",
+            "surname": "Bayram",
+            "full_name": "Esat Bayram",
+            "dob": "1964-09-14"
+          }
+        },
+        {
+          "source_id": 9496596,
+          "display_name": "Feridun Cemal Alkan",
+          "expected_birth_date": "1964-11-13",
+          "candidates": [
+            {
+              "bdfutbol_id": "1179940",
+              "surname": "Alkan",
+              "full_name": "Feridun Cemal Alkan"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1179940",
+            "surname": "Alkan",
+            "full_name": "Feridun Cemal Alkan",
+            "dob": "1964-11-13"
+          }
+        },
+        {
+          "source_id": 9496612,
+          "display_name": "Hakan Çimen",
+          "expected_birth_date": "1973-09-08",
+          "candidates": [
+            {
+              "bdfutbol_id": "56029",
+              "surname": "Çimen",
+              "full_name": "Hakan Çimen"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "56029",
+            "surname": "Çimen",
+            "full_name": "Hakan Çimen",
+            "dob": "1973-09-08"
+          }
+        },
+        {
+          "source_id": 9496602,
+          "display_name": "Mehmet Kaplan",
+          "expected_birth_date": "1972-01-27",
+          "candidates": [
+            {
+              "bdfutbol_id": "1170016",
+              "surname": "Kaplan",
+              "full_name": "Mehmet Kaplan"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1170016",
+            "surname": "Kaplan",
+            "full_name": "Mehmet Kaplan",
+            "dob": "1972-01-27"
+          }
+        },
+        {
+          "source_id": 9496603,
+          "display_name": "Nusret Erdi Demir",
+          "expected_birth_date": "1964-11-15",
+          "candidates": [
+            {
+              "bdfutbol_id": "45600",
+              "surname": "Erdi",
+              "full_name": "Nusret Erdi Demir"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "45600",
+            "surname": "Erdi",
+            "full_name": "Nusret Erdi Demir",
+            "dob": "1964-11-15"
+          }
+        },
+        {
+          "source_id": 9496605,
+          "display_name": "Osman Cengiz Güzeltepe",
+          "expected_birth_date": "1964-01-27",
+          "candidates": [
+            {
+              "bdfutbol_id": "1175391",
+              "surname": "Güzeltepe",
+              "full_name": "Osman Cengiz Güzeltepe"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1175391",
+            "surname": "Güzeltepe",
+            "full_name": "Osman Cengiz Güzeltepe",
+            "dob": "1964-01-27"
+          }
+        },
+        {
+          "source_id": 9496609,
+          "display_name": "Osman Yıldırım",
+          "expected_birth_date": "1965-07-12",
+          "candidates": [
+            {
+              "bdfutbol_id": "1179941",
+              "surname": "Yıldırım",
+              "full_name": "Osman Yıldırım"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1179941",
+            "surname": "Yıldırım",
+            "full_name": "Osman Yıldırım",
+            "dob": "1965-07-12"
+          }
+        },
+        {
+          "source_id": 9497344,
+          "display_name": "Ramazan Baybatmaz",
+          "expected_birth_date": "1969-05-25",
+          "candidates": [
+            {
+              "bdfutbol_id": "1179942",
+              "surname": "Baybatmaz",
+              "full_name": "Ramazan Baybatmaz"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1179942",
+            "surname": "Baybatmaz",
+            "full_name": "Ramazan Baybatmaz",
+            "dob": "1969-05-25"
+          }
+        },
+        {
+          "source_id": 9497343,
+          "display_name": "Sami Başar",
+          "expected_birth_date": "1970-05-03",
+          "candidates": [
+            {
+              "bdfutbol_id": "1179944",
+              "surname": "Başar",
+              "full_name": "Sami Başar"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1179944",
+            "surname": "Başar",
+            "full_name": "Sami Başar",
+            "dob": "1970-05-03"
+          }
+        },
+        {
+          "source_id": 9496601,
+          "display_name": "Selçuk Bıyıklı",
+          "expected_birth_date": "1966-10-01",
+          "candidates": [
+            {
+              "bdfutbol_id": "1179946",
+              "surname": "Bıyıklı",
+              "full_name": "Selçuk Bıyıklı"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1179946",
+            "surname": "Bıyıklı",
+            "full_name": "Selçuk Bıyıklı",
+            "dob": "1966-10-01"
+          }
+        },
+        {
+          "source_id": 9496604,
+          "display_name": "Sercan Görgülü",
+          "expected_birth_date": "1960-12-05",
+          "candidates": [
+            {
+              "bdfutbol_id": "1179943",
+              "surname": "Görgülü",
+              "full_name": "Sercan Görgülü"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1179943",
+            "surname": "Görgülü",
+            "full_name": "Sercan Görgülü",
+            "dob": "1960-12-05"
+          }
+        },
+        {
+          "source_id": 9496611,
+          "display_name": "Seyhan Cenk Tekelioğlu",
+          "expected_birth_date": "1973-08-04",
+          "candidates": [
+            {
+              "bdfutbol_id": "1120556",
+              "surname": "Tekelioğlu",
+              "full_name": "Seyhan Cenk Tekelioğlu"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1120556",
+            "surname": "Tekelioğlu",
+            "full_name": "Seyhan Cenk Tekelioğlu",
+            "dob": "1973-08-04"
+          }
+        },
+        {
+          "source_id": 9496606,
+          "display_name": "Tufan Engin",
+          "expected_birth_date": "1966-11-25",
+          "candidates": [
+            {
+              "bdfutbol_id": "1175418",
+              "surname": "Engin",
+              "full_name": "Tufan Engin"
+            },
+            {
+              "bdfutbol_id": "42714",
+              "surname": "Engin",
+              "full_name": "Sìnan Engin"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1175418",
+            "surname": "Engin",
+            "full_name": "Tufan Engin",
+            "dob": "1966-11-25"
+          }
+        },
+        {
+          "source_id": 9497347,
+          "display_name": "Şenol Ulusavaş",
+          "expected_birth_date": "1962-11-10",
+          "candidates": [
+            {
+              "bdfutbol_id": "55609",
+              "surname": "Ulusavaş",
+              "full_name": "Şenol Ulusavaş"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "55609",
+            "surname": "Ulusavaş",
+            "full_name": "Şenol Ulusavaş",
+            "dob": "1962-11-10"
+          }
+        }
+      ],
+      "needs_review": [],
+      "unmatched": []
+    },
+    {
+      "country": "Turquía",
+      "team": "Karabükspor",
+      "status": "complete",
+      "idclub": "10744",
+      "squad_size": 27,
+      "confirmed": [
+        {
+          "source_id": 9496573,
+          "display_name": "Ali Çebi",
+          "expected_birth_date": "1968-08-01",
+          "candidates": [
+            {
+              "bdfutbol_id": "1179619",
+              "surname": "Çebi",
+              "full_name": "Ali Çebi"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1179619",
+            "surname": "Çebi",
+            "full_name": "Ali Çebi",
+            "dob": "1968-08-01"
+          }
+        },
+        {
+          "source_id": 9497332,
+          "display_name": "Burhan Baygın",
+          "expected_birth_date": "1967-06-28",
+          "candidates": [
+            {
+              "bdfutbol_id": "1179625",
+              "surname": "Baygın",
+              "full_name": "Burhan Baygın"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1179625",
+            "surname": "Baygın",
+            "full_name": "Burhan Baygın",
+            "dob": "1967-06-28"
+          }
+        },
+        {
+          "source_id": 9497327,
+          "display_name": "Candan Sayın",
+          "expected_birth_date": "1970-08-09",
+          "candidates": [
+            {
+              "bdfutbol_id": "1171757",
+              "surname": "Sayın",
+              "full_name": "Candan Sayın"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1171757",
+            "surname": "Sayın",
+            "full_name": "Candan Sayın",
+            "dob": "1970-08-09"
+          }
+        },
+        {
+          "source_id": 9497329,
+          "display_name": "Ercan Kalkan",
+          "expected_birth_date": "1966-10-11",
+          "candidates": [
+            {
+              "bdfutbol_id": "1179623",
+              "surname": "Kalkan",
+              "full_name": "Ercan Kalkan"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1179623",
+            "surname": "Kalkan",
+            "full_name": "Ercan Kalkan",
+            "dob": "1966-10-11"
+          }
+        },
+        {
+          "source_id": 9496574,
+          "display_name": "Fikret Bademci",
+          "expected_birth_date": "1972-01-12",
+          "candidates": [
+            {
+              "bdfutbol_id": "1179620",
+              "surname": "Bademci",
+              "full_name": "Fikret Bademci"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1179620",
+            "surname": "Bademci",
+            "full_name": "Fikret Bademci",
+            "dob": "1972-01-12"
+          }
+        },
+        {
+          "source_id": 9496569,
+          "display_name": "Hasan Şermet",
+          "expected_birth_date": "1969-07-14",
+          "candidates": [
+            {
+              "bdfutbol_id": "1169816",
+              "surname": "Şermet",
+              "full_name": "Hasan Şermet"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1169816",
+            "surname": "Şermet",
+            "full_name": "Hasan Şermet",
+            "dob": "1969-07-14"
+          }
+        },
+        {
+          "source_id": 9497335,
+          "display_name": "Hüseyin Saraç",
+          "expected_birth_date": "1970-09-01",
+          "candidates": [
+            {
+              "bdfutbol_id": "1179813",
+              "surname": "Saraç",
+              "full_name": "Hüseyin Saraç"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1179813",
+            "surname": "Saraç",
+            "full_name": "Hüseyin Saraç",
+            "dob": "1970-09-01"
+          }
+        },
+        {
+          "source_id": 9496566,
+          "display_name": "Hüseyin Çoban",
+          "expected_birth_date": "1966-01-02",
+          "candidates": [
+            {
+              "bdfutbol_id": "1173817",
+              "surname": "Çoban",
+              "full_name": "Hüseyin Çoban"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1173817",
+            "surname": "Çoban",
+            "full_name": "Hüseyin Çoban",
+            "dob": "1966-01-02"
+          }
+        },
+        {
+          "source_id": 9496570,
+          "display_name": "Ibrahim Hasançebi",
+          "expected_birth_date": "1970-09-15",
+          "candidates": [
+            {
+              "bdfutbol_id": "707940",
+              "surname": "Hasançebi",
+              "full_name": "Ibrahim Hasançebi"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "707940",
+            "surname": "Hasançebi",
+            "full_name": "Ibrahim Hasançebi",
+            "dob": "1970-09-15"
+          }
+        },
+        {
+          "source_id": 9497333,
+          "display_name": "Kerim Tasçı",
+          "expected_birth_date": "1971-02-07",
+          "candidates": [
+            {
+              "bdfutbol_id": "1179812",
+              "surname": "Tasçı",
+              "full_name": "Kerim Tasçı"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1179812",
+            "surname": "Tasçı",
+            "full_name": "Kerim Tasçı",
+            "dob": "1971-02-07"
+          }
+        },
+        {
+          "source_id": 9496575,
+          "display_name": "Kıvanç Bozkurt",
+          "expected_birth_date": "1964-02-28",
+          "candidates": [
+            {
+              "bdfutbol_id": "1179622",
+              "surname": "Kıvanç",
+              "full_name": "Kıvanç Bozkurt"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1179622",
+            "surname": "Kıvanç",
+            "full_name": "Kıvanç Bozkurt",
+            "dob": "1964-02-28"
+          }
+        },
+        {
+          "source_id": 9496562,
+          "display_name": "Levent Açıkgöz",
+          "expected_birth_date": "1971-01-04",
+          "candidates": [
+            {
+              "bdfutbol_id": "1101075",
+              "surname": "Açıkgöz",
+              "full_name": "Levent Açıkgöz"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1101075",
+            "surname": "Açıkgöz",
+            "full_name": "Levent Açıkgöz",
+            "dob": "1971-01-04"
+          }
+        },
+        {
+          "source_id": 9496572,
+          "display_name": "Nejat Özyıldırım",
+          "expected_birth_date": "1969-05-24",
+          "candidates": [
+            {
+              "bdfutbol_id": "1179624",
+              "surname": "Nejat",
+              "full_name": "Nejat Özyıldırım"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1179624",
+            "surname": "Nejat",
+            "full_name": "Nejat Özyıldırım",
+            "dob": "1969-05-24"
+          }
+        },
+        {
+          "source_id": 9496565,
+          "display_name": "Sedat Kalaycı",
+          "expected_birth_date": "1966-07-05",
+          "candidates": [
+            {
+              "bdfutbol_id": "1172029",
+              "surname": "Kalaycı",
+              "full_name": "Sedat Kalaycı"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1172029",
+            "surname": "Kalaycı",
+            "full_name": "Sedat Kalaycı",
+            "dob": "1966-07-05"
+          }
+        },
+        {
+          "source_id": 9496564,
+          "display_name": "Tarık Yurttaş",
+          "expected_birth_date": "1967-02-03",
+          "candidates": [
+            {
+              "bdfutbol_id": "702823",
+              "surname": "Yurttaş",
+              "full_name": "Tarık Yurttaş"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "702823",
+            "surname": "Yurttaş",
+            "full_name": "Tarık Yurttaş",
+            "dob": "1967-02-03"
+          }
+        },
+        {
+          "source_id": 9497334,
+          "display_name": "Tolga Sarı",
+          "expected_birth_date": "1971-12-02",
+          "candidates": [
+            {
+              "bdfutbol_id": "1179815",
+              "surname": "Sarı",
+              "full_name": "Tolga Sarı"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1179815",
+            "surname": "Sarı",
+            "full_name": "Tolga Sarı",
+            "dob": "1971-12-02"
+          }
+        },
+        {
+          "source_id": 9496567,
+          "display_name": "Uğur Dağdelen",
+          "expected_birth_date": "1973-10-03",
+          "candidates": [
+            {
+              "bdfutbol_id": "700577",
+              "surname": "Dağdelen",
+              "full_name": "Uğur Dağdelen"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "700577",
+            "surname": "Dağdelen",
+            "full_name": "Uğur Dağdelen",
+            "dob": "1973-10-03"
+          }
+        },
+        {
+          "source_id": 9496576,
+          "display_name": "Önder Cankat",
+          "expected_birth_date": "1973-11-20",
+          "candidates": [
+            {
+              "bdfutbol_id": "1178572",
+              "surname": "Cankat",
+              "full_name": "Önder Cankat"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1178572",
+            "surname": "Cankat",
+            "full_name": "Önder Cankat",
+            "dob": "1973-11-20"
+          }
+        },
+        {
+          "source_id": 9497331,
+          "display_name": "Özcan İlarslan",
+          "expected_birth_date": "1964-06-27",
+          "candidates": [
+            {
+              "bdfutbol_id": "1179621",
+              "surname": "İlarslan",
+              "full_name": "Özcan İlarslan"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1179621",
+            "surname": "İlarslan",
+            "full_name": "Özcan İlarslan",
+            "dob": "1964-06-27"
+          }
+        },
+        {
+          "source_id": 9496568,
+          "display_name": "Ümit İnal",
+          "expected_birth_date": "1969-07-18",
+          "candidates": [
+            {
+              "bdfutbol_id": "1136862",
+              "surname": "İnal",
+              "full_name": "Ümit İnal"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1136862",
+            "surname": "İnal",
+            "full_name": "Ümit İnal",
+            "dob": "1969-07-18"
+          }
+        },
+        {
+          "source_id": 9496563,
+          "display_name": "İlhan Özer",
+          "expected_birth_date": "1966-11-25",
+          "candidates": [
+            {
+              "bdfutbol_id": "702569",
+              "surname": "Özer",
+              "full_name": "İlhan Özer"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "702569",
+            "surname": "Özer",
+            "full_name": "İlhan Özer",
+            "dob": "1966-11-25"
+          }
+        },
+        {
+          "source_id": 9496560,
+          "display_name": "Şakir Özkayımoğlu",
+          "expected_birth_date": "1964-05-12",
+          "candidates": [
+            {
+              "bdfutbol_id": "1178360",
+              "surname": "Özkayımoğlu",
+              "full_name": "Şakir Özkayımoğlu"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1178360",
+            "surname": "Özkayımoğlu",
+            "full_name": "Şakir Özkayımoğlu",
+            "dob": "1964-05-12"
+          }
+        }
+      ],
+      "needs_review": [],
+      "unmatched": []
+    },
+    {
+      "country": "Turquía",
+      "team": "Kocaelispor",
+      "status": "idclub_not_found"
+    },
+    {
+      "country": "Turquía",
+      "team": "Fenerbahçe",
+      "status": "complete",
+      "idclub": "10178",
+      "squad_size": 25,
+      "confirmed": [
+        {
+          "source_id": 9496369,
+          "display_name": "Altay Dağdelen",
+          "expected_birth_date": "1970-01-20",
+          "candidates": [
+            {
+              "bdfutbol_id": "55602",
+              "surname": "Dağdelen",
+              "full_name": "Altay Nazif Dağdelen"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "55602",
+            "surname": "Dağdelen",
+            "full_name": "Altay Nazif Dağdelen",
+            "dob": "1970-01-20"
+          }
+        },
+        {
+          "source_id": 9496373,
+          "display_name": "Aygün Taşkıran",
+          "expected_birth_date": "1974-04-22",
+          "candidates": [
+            {
+              "bdfutbol_id": "55573",
+              "surname": "Taşkıran",
+              "full_name": "Aygün Taşkıran"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "55573",
+            "surname": "Taşkıran",
+            "full_name": "Aygün Taşkıran",
+            "dob": "1974-04-22"
+          }
+        },
+        {
+          "source_id": 9496372,
+          "display_name": "Cengiz Alp",
+          "expected_birth_date": "1969-01-25",
+          "candidates": [
+            {
+              "bdfutbol_id": "700578",
+              "surname": "Alp",
+              "full_name": "Cengiz Alp"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "700578",
+            "surname": "Alp",
+            "full_name": "Cengiz Alp",
+            "dob": "1969-01-25"
+          }
+        },
+        {
+          "source_id": 9497233,
+          "display_name": "Hakan Tecimer",
+          "expected_birth_date": "1967-01-06",
+          "candidates": [
+            {
+              "bdfutbol_id": "45594",
+              "surname": "Hakan",
+              "full_name": "Hakan Tecimer"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "45594",
+            "surname": "Hakan",
+            "full_name": "Hakan Tecimer",
+            "dob": "1967-01-06"
+          }
+        },
+        {
+          "source_id": 9496370,
+          "display_name": "Kemalettin Şentürk",
+          "expected_birth_date": "1970-02-09",
+          "candidates": [
+            {
+              "bdfutbol_id": "55576",
+              "surname": "Sentürk",
+              "full_name": "Kemalettin Sentürk"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "55576",
+            "surname": "Sentürk",
+            "full_name": "Kemalettin Sentürk",
+            "dob": "1970-02-09"
+          }
+        },
+        {
+          "source_id": 9497236,
+          "display_name": "Kerem Şenel",
+          "expected_birth_date": "1974-10-05",
+          "candidates": [
+            {
+              "bdfutbol_id": "1175139",
+              "surname": "Şenel",
+              "full_name": "Kerem Şenel"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1175139",
+            "surname": "Şenel",
+            "full_name": "Kerem Şenel",
+            "dob": "1974-10-05"
+          }
+        },
+        {
+          "source_id": 9496368,
+          "display_name": "Mecnur Çolak",
+          "expected_birth_date": "1967-08-07",
+          "candidates": [
+            {
+              "bdfutbol_id": "55597",
+              "surname": "Çolak",
+              "full_name": "Mecnur Çolak"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "55597",
+            "surname": "Çolak",
+            "full_name": "Mecnur Çolak",
+            "dob": "1967-08-07"
+          }
+        },
+        {
+          "source_id": 9497234,
+          "display_name": "Sadettin Demirtaş",
+          "expected_birth_date": "1968-12-20",
+          "candidates": [
+            {
+              "bdfutbol_id": "1175420",
+              "surname": "Demirtaş",
+              "full_name": "Sadettin Demirtaş"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1175420",
+            "surname": "Demirtaş",
+            "full_name": "Sadettin Demirtaş",
+            "dob": "1968-12-20"
+          }
+        },
+        {
+          "source_id": 9497235,
+          "display_name": "Volkan Alpacar",
+          "expected_birth_date": "1973-04-16",
+          "candidates": [
+            {
+              "bdfutbol_id": "1178733",
+              "surname": "Alpacar",
+              "full_name": "Mustafa Volkan Alpacar"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1178733",
+            "surname": "Alpacar",
+            "full_name": "Mustafa Volkan Alpacar",
+            "dob": "1973-04-16"
+          }
+        },
+        {
+          "source_id": 9495343,
+          "display_name": "İlker Yağcıoğlu",
+          "expected_birth_date": "1966-03-10",
+          "candidates": [
+            {
+              "bdfutbol_id": "55581",
+              "surname": "Yağcıoğlu",
+              "full_name": "İlker Yağcıoğlu"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "55581",
+            "surname": "Yağcıoğlu",
+            "full_name": "İlker Yağcıoğlu",
+            "dob": "1966-03-10"
+          }
+        }
+      ],
+      "needs_review": [
+        {
+          "source_id": 9497232,
+          "display_name": "Burhan Saatçioğlu",
+          "expected_birth_date": "1973-05-11",
+          "candidates": [
+            {
+              "bdfutbol_id": "55601",
+              "surname": "Saatcioğlu",
+              "full_name": "Burhan Saatcioğlu"
+            }
+          ]
+        },
+        {
+          "source_id": 9495325,
+          "display_name": "Emre Aşık",
+          "expected_birth_date": "1973-12-13",
+          "candidates": [
+            {
+              "bdfutbol_id": "46422",
+              "surname": "Aşık",
+              "full_name": "Emre Aşık"
+            }
+          ]
+        },
+        {
+          "source_id": 9495315,
+          "display_name": "Engin İpekoğlu",
+          "expected_birth_date": "1961-06-07",
+          "candidates": [
+            {
+              "bdfutbol_id": "55574",
+              "surname": "İpekoğlu",
+              "full_name": "Engin İpekoğlu"
+            }
+          ]
+        }
+      ],
+      "unmatched": [
+        {
+          "source_id": 9496371,
+          "display_name": "Nuri Kamburoğlu"
+        }
+      ]
+    },
+    {
+      "country": "Ucrania",
+      "team": "Altay",
+      "status": "complete",
+      "idclub": "10047",
+      "squad_size": 25,
+      "confirmed": [
+        {
+          "source_id": 9496502,
+          "display_name": "Yuriy Hryhorovych Shelepnytskyi",
+          "expected_birth_date": "1965-01-18",
+          "candidates": [
+            {
+              "bdfutbol_id": "702758",
+              "surname": "Shelepnytskyi",
+              "full_name": "Yuriy Hryhorovych Shelepnytskyi"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "702758",
+            "surname": "Shelepnytskyi",
+            "full_name": "Yuriy Hryhorovych Shelepnytskyi",
+            "dob": "1965-01-18"
+          }
+        }
+      ],
+      "needs_review": [],
+      "unmatched": []
+    },
+    {
+      "country": "Zambia",
+      "team": "Karabükspor",
+      "status": "complete",
+      "idclub": "10744",
+      "squad_size": 27,
+      "confirmed": [
+        {
+          "source_id": 9497330,
+          "display_name": "Christopher Mwakapuki",
+          "expected_birth_date": "1967-06-10",
+          "candidates": [
+            {
+              "bdfutbol_id": "1179822",
+              "surname": "Mwakapuki",
+              "full_name": "Christopher Mwakapuki"
+            }
+          ],
+          "matched": {
+            "bdfutbol_id": "1179822",
+            "surname": "Mwakapuki",
+            "full_name": "Christopher Mwakapuki",
+            "dob": "1967-06-10"
+          }
+        }
+      ],
+      "needs_review": [],
+      "unmatched": []
+    }
+  ]
+}

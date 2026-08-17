@@ -1,0 +1,19 @@
+{
+  "checkpoint": "0.46.0-russia-uralmash-asmaral-batch-deep",
+  "clubs": [
+    "Uralmash",
+    "CSKA Moskva",
+    "KAMAZ",
+    "Zhemchuzhina Sochi",
+    "Dynamo Stavropol",
+    "Lokomotiv Nizhny Novgorod",
+    "Krylia Sovetov",
+    "Luch Vladivostok",
+    "Okean Nakhodka",
+    "Rostselmash",
+    "Asmaral Moskva"
+  ],
+  "profiles_considered": 300,
+  "club_spell_evidence_preserved": 300,
+  "status": "pass"
+}

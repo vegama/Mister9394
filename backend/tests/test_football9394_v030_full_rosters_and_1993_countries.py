@@ -25,17 +25,25 @@ def test_all_four_added_leagues_use_source_exhaustive_rosters_with_18_only_as_fl
 
 def test_expanded_stagings_have_unique_resolved_identities_and_are_reproducible():
     expected = {
-        "turkey_1993_94_roster_staging.json": 419,
-        "russia_1993_roster_staging.json": 492,
-        "greece_1993_94_roster_staging.json": 496,
+        "turkey_1993_94_roster_staging.json": (419, 419),
+        # Russia now preserves 492 historical roster rows while proven cross-club duplicates
+        # resolve to 481 identities. A spell is not a second person.
+        "russia_1993_roster_staging.json": (492, 481),
+        "greece_1993_94_roster_staging.json": (496, 496),
     }
-    for name, count in expected.items():
+    for name, (row_count, identity_count) in expected.items():
         stage = load(name)
         rows = [p for c in stage["clubs"] for p in c["players"]]
         ids = [int(p["resolved_source_id"]) for p in rows]
-        assert len(rows) == count
-        assert len(ids) == len(set(ids)) == count
+        assert len(rows) == row_count
+        assert len(set(ids)) == identity_count
         assert min(len(c["players"]) for c in stage["clubs"]) >= 18
+        if name.startswith("russia_"):
+            # Every repeated resolved identity is backed by the same stable individual-profile ID.
+            by_sid = {}
+            for row in rows:
+                by_sid.setdefault(int(row["resolved_source_id"]), set()).add(str(row.get("bdfutbol_id") or ""))
+            assert all(len(bids) == 1 and "" not in bids for sid, bids in by_sid.items() if ids.count(sid) > 1)
 
 
 def test_turkish_name_normalisation_and_russian_reconciliation_reuse_existing_people():
@@ -58,7 +66,12 @@ def test_profiles_use_1993_valid_country_context_and_keep_birth_vs_international
     assert int(p[9496390]["international_country_id"]) == 78
     assert int(p[9496629]["international_country_id"]) == 132
     assert (int(p[503]["birth_country_id"]), int(p[503]["international_country_id"])) == (202, 40)
-    assert (int(p[9494086]["birth_country_id"]), int(p[9494086]["international_country_id"])) == (104, 40)
+    # Soviet birthplace is historical state + successor territory context, never retro-backfilled
+    # into birth_country_id. Represented selection remains an independent fact.
+    assert p[9494086].get("birth_country_id") is None
+    assert p[9494086]["historical_birth_state"] == "USSR"
+    assert int(p[9494086]["birth_territory_country_id"]) == 104
+    assert int(p[9494086]["international_country_id"]) == 40
     assert p[9496942]["birth_date"] == "1969-10-29T00:00:00"
     assert (int(p[9496942]["birth_country_id"]), int(p[9496942]["international_country_id"])) == (4, 47)
     assert int(p[9496627]["primary_role"]) == 17

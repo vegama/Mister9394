@@ -1,0 +1,10 @@
+{
+  "checkpoint": "0.43.0-belgium-final-six-deep",
+  "status": "pass",
+  "conflicts": [],
+  "historical_country_policy": {
+    "Zaire_1993": "Country source id 88 is rendered as Zaire for the 1993 context. Modern DR Congo source text is retained only as geography/source wording.",
+    "post_Yugoslavia_1993": "Bosnia-Herzegovina and Croatia are stored as their independent 1993 state identities where the source supports them; no later state is back-projected.",
+    "future_Russia": "Russia league remains untouched in v0.43. The next pass must separate historical birthplace state, 1993 citizenship/nationality, represented selection and transliterations; USSR must never be auto-mapped to Russia."
+  }
+}

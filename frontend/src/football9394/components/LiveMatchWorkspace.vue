@@ -20,6 +20,23 @@ const ownHome = computed(() => Number(props.match?.controlled_team_id||0) === Nu
 const ownStats = computed(() => ownHome.value ? props.match?.home : props.match?.away)
 const opponentStats = computed(() => ownHome.value ? props.match?.away : props.match?.home)
 const opponent = computed(() => props.match?.opponent_context || {})
+const opponentReport = computed(() => opponent.value?.report || {})
+const opponentPlayerLevel = player => {
+  if (player?.overall !== null && player?.overall !== undefined) return String(player.overall)
+  const range = player?.overall_range
+  return Array.isArray(range) && range.length === 2 ? `${range[0]}–${range[1]}` : '—'
+}
+const knownTacticalPlan = computed(() => {
+  const tactics = opponent.value?.tactics || {}
+  const fields = [
+    tactics.formation && `sistema ${tactics.formation}`,
+    tactics.mentality && `mentalidad ${tactics.mentality}`,
+    tactics.tempo && `ritmo ${tactics.tempo}`,
+    tactics.pressing && `presión ${tactics.pressing}`,
+    tactics.directness && `juego ${tactics.directness}`,
+  ].filter(Boolean)
+  return fields.join(' · ') || 'Plan rival por confirmar'
+})
 const preparation = computed(() => opponent.value?.preparation || {})
 const preparationLabel = computed(() => {
   const sample=Number(preparation.value?.observed_sample||0)
@@ -30,9 +47,11 @@ const preparationLabel = computed(() => {
   return `Patrón difícil de leer · ${sample} partidos estudiados`
 })
 const coachStyle = computed(() => {
+  const quality = Number(opponentReport.value?.quality || 0)
+  if (quality && quality < 12) return 'Informe parcial del rival'
   const m=opponent.value?.manager || {}
   const bits=[m.primary_tactic,m.game_tendency && `tendencia ${m.game_tendency}`,m.rotation_frequency && `rotación ${m.rotation_frequency}`].filter(Boolean)
-  return bits.join(' · ') || 'Plan rival por confirmar'
+  return bits.join(' · ') || knownTacticalPlan.value
 })
 const refereeStyle = computed(() => {
   const r=props.match?.referee
@@ -76,9 +95,9 @@ const resultSummary = computed(() => {
         <article class="football-panel live-commentary modern-commentary" :class="{ preflight: match.minute===0, finished: match.status==='finished' }">
           <header class="simple-panel-head"><span><small>{{match.minute===0?'ANTES DEL PARTIDO':match.status==='finished'?'POSTPARTIDO':'RELATO'}}</small><strong>{{match.minute===0?'Todo preparado':match.status==='finished'?'Partido terminado':'Directo'}}</strong></span></header>
           <div v-if="match.minute===0" class="match-preview-v2 d7-match-preview">
-            <div class="preview-primary"><small>PLAN DEL RIVAL</small><strong>{{opponent.manager?.display_name || 'Entrenador rival'}} · {{opponent.tactics?.formation || '—'}}</strong><span>{{coachStyle}}</span></div>
+            <div class="preview-primary"><small>PLAN DEL RIVAL</small><strong>{{opponent.manager?.display_name || 'Entrenador rival'}} · {{opponent.tactics?.formation || '—'}}</strong><span>{{knownTacticalPlan}}</span><em v-if="opponentReport.name">Informe de {{opponentReport.name}} · {{opponentReport.quality_label || 'calidad por evaluar'}} · confianza {{opponentReport.confidence || '—'}}%</em></div>
             <div class="preview-counterplan"><small>CÓMO TE HAN PREPARADO</small><strong>{{preparationLabel}}</strong><span v-if="preparation.context?.phase">Contexto: {{preparation.context.phase}} · intensidad {{preparation.preparation_intensity || 'media'}}</span><span v-for="(item,index) in preparation.adjustments || []" :key="index">{{item}}</span><span v-if="!(preparation.adjustments||[]).length">Mantienen su identidad base; no han encontrado una contramedida clara.</span><em v-if="preparation.phase_focus">{{preparation.phase_focus}}</em><em v-if="preparation.learning_note">Memoria del técnico: {{preparation.learning_note}}</em><em v-if="preparation.threat_profile?.labels?.length">Te señalan: {{preparation.threat_profile.labels.join(' · ')}}</em></div>
-            <div class="preview-key-players"><small>HOMBRES A VIGILAR</small><span v-for="p in opponent.key_players || []" :key="p.id"><b>{{p.display_name}}</b><em>{{p.position}} · {{p.identity}} · {{p.overall}}</em></span><span v-if="!(opponent.key_players||[]).length"><b>Sin informe previo</b><em>El partido revelará sus amenazas.</em></span></div>
+            <div class="preview-key-players"><small>HOMBRES A VIGILAR</small><span v-for="p in opponent.key_players || []" :key="p.id"><b>{{p.display_name}}</b><em>{{p.position}} · {{p.identity}} · nivel {{opponentPlayerLevel(p)}}<template v-if="p.overall_is_exact === false"> estimado</template></em></span><span v-if="!(opponent.key_players||[]).length"><b>Sin informe previo</b><em>El partido revelará sus amenazas.</em></span></div>
             <div class="preview-ready"><b>XI confirmado: {{match.controlled_on_pitch.length}}</b><span>{{match.controlled_bench.length}} en banquillo · máximo 2 cambios</span><em>El reloj no corre hasta que tú decidas.</em></div>
           </div>
           <div v-if="match.minute===0" class="preflight-selection d9-preflight-selection">

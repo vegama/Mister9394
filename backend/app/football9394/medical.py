@@ -161,3 +161,56 @@ def medical_api(dev_row: dict[str, Any]) -> dict[str, Any]:
         "current_injury": current,
         "history": history,
     }
+
+
+def medical_staff_report(
+    dev_row: dict[str, Any], *, effectiveness: dict[str, Any], game_date: date, seed: int, player_id: int
+) -> dict[str, Any]:
+    """Career-facing medical information filtered through the responsible person."""
+    base = medical_api(dev_row)
+    quality = max(1, min(20, int(effectiveness.get("quality") or 10)))
+    confidence = max(35, min(97, int(effectiveness.get("confidence") or (38 + quality * 3))))
+    radius = 1 if quality >= 17 else 2 if quality >= 14 else 4 if quality >= 11 else 7
+    days = max(0, int(base.get("injury_days") or 0))
+    current = dict(base.get("current_injury") or {}) if days else None
+    if current:
+        rng = Random(int(seed) ^ int(player_id) * 31337 ^ game_date.toordinal())
+        center = max(0, days + (0 if quality >= 17 else rng.randint(-max(1, radius // 2), max(1, radius // 2))))
+        lo = max(0, center - radius); hi = max(lo, center + radius)
+        current["estimated_days_range"] = [lo, hi]
+        current["estimated_return_from"] = (game_date + timedelta(days=lo)).isoformat()
+        current["estimated_return_to"] = (game_date + timedelta(days=hi)).isoformat()
+        if quality < 17:
+            current.pop("expected_return", None)
+        recommendation = (
+            "No disponible; priorizar recuperación." if days > 7 else
+            "Valorar reintegración progresiva cuando complete la recuperación." if days > 0 else
+            "Disponible para carga normal."
+        )
+    else:
+        risk = max(0, min(100, int(dev_row.get("injury_risk") or 0)))
+        load = max(0, min(100, int(dev_row.get("training_load") or 0)))
+        condition = max(0, min(100, int(dev_row.get("condition") or 100)))
+        if risk >= 70 or condition <= 62:
+            recommendation = "Disponible, pero con riesgo alto: reducir carga y evitar forzar."
+        elif risk >= 52 or load >= 48:
+            recommendation = "Disponible con vigilancia de carga; conviene dosificar."
+        else:
+            recommendation = "Disponible para carga normal."
+    return {
+        **base,
+        "current_injury": current,
+        "workload": {
+            "condition": max(0, min(100, int(dev_row.get("condition") or 100))),
+            "training_load": max(0, min(100, int(dev_row.get("training_load") or 0))),
+            "fatigue": max(0, min(100, int(dev_row.get("fatigue") or 0))),
+            "injury_risk": max(0, min(100, int(dev_row.get("injury_risk") or 0))),
+        },
+        "assessment": {
+            "responsible": str(effectiveness.get("assignee_name") or "Cuerpo médico"),
+            "responsible_role": str(effectiveness.get("assignee_role") or "Responsable médico"),
+            "quality": quality, "quality_label": str(effectiveness.get("quality_label") or "—"),
+            "confidence": confidence, "uncertainty_days": radius if days else 0,
+            "recommendation": recommendation,
+        },
+    }

@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "checkpoint": "0.45.0-russia-rotor-torpedo-batch-deep",
+  "completed_clubs": [
+    "Spartak Moskva",
+    "Rotor Volgograd",
+    "Dynamo Moskva",
+    "Tekstilshchik Kamyshin",
+    "Lokomotiv Moskva",
+    "Spartak Vladikavkaz",
+    "Torpedo Moskva"
+  ],
+  "queue": [
+    "Uralmash",
+    "CSKA Moskva",
+    "KAMAZ",
+    "Zhemchuzhina Sochi",
+    "Dynamo Stavropol",
+    "Lokomotiv Nizhny Novgorod",
+    "Krylia Sovetov",
+    "Luch Vladivostok",
+    "Okean Nakhodka",
+    "Rostselmash",
+    "Asmaral Moskva"
+  ],
+  "next_club": "Uralmash",
+  "staging_rows_completed_this_pass": 159,
+  "unique_identities_completed_this_pass": 158,
+  "russia_player_objects": 491
+}

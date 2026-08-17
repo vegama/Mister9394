@@ -73,9 +73,11 @@ def test_created_player_registry_and_photo_queue_remain_stable():
 
 def test_popov_remains_single_existing_identity_not_a_created_player():
     snap=load(SNAP)
-    matches=[p for p in snap['players'] if p['display_name'].strip().lower()=='popov']
+    # Stable identity is source_id=515. Later historical deepening may expand the
+    # display form from 'Popov' to the full BDFutbol profile name.
+    matches=[p for p in snap['players'] if int(p.get('source_id') or 0)==515]
     assert len(matches)==1
-    assert matches[0]['source_id']==515
+    assert matches[0]['display_name'] in {'Popov','Dmitri Lvovich Popov'}
     assert not matches[0].get('external_origin')
     assert str(matches[0]['birth_date']).startswith('1967-02-27')
 

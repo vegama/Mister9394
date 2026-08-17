@@ -1,0 +1,2870 @@
+{
+  "schema_version": 1,
+  "checkpoint": "0.46.0-russia-uralmash-asmaral-batch-deep",
+  "status": "pass",
+  "target_clubs": [
+    "Uralmash",
+    "CSKA Moskva",
+    "KAMAZ",
+    "Zhemchuzhina Sochi",
+    "Dynamo Stavropol",
+    "Lokomotiv Nizhny Novgorod",
+    "Krylia Sovetov",
+    "Luch Vladivostok",
+    "Okean Nakhodka",
+    "Rostselmash",
+    "Asmaral Moskva"
+  ],
+  "staging_rows_processed": 300,
+  "unique_player_identities_after_merge": 294,
+  "target_player_objects_after_retirement": 289,
+  "individual_bdfutbol_profiles_resolved": 300,
+  "identity_rows_retired": 11,
+  "merge_groups": [
+    {
+      "bdfutbol_id": "591588",
+      "canonical_source_id": 9497401,
+      "retired_source_ids": [
+        9496736
+      ],
+      "target_source_ids": [
+        9496736
+      ],
+      "preexisting_canonical": true
+    },
+    {
+      "bdfutbol_id": "591077",
+      "canonical_source_id": 9496519,
+      "retired_source_ids": [
+        9496738
+      ],
+      "target_source_ids": [
+        9496738
+      ],
+      "preexisting_canonical": true
+    },
+    {
+      "bdfutbol_id": "590748",
+      "canonical_source_id": 9496757,
+      "retired_source_ids": [
+        9496770
+      ],
+      "target_source_ids": [
+        9496757,
+        9496770
+      ],
+      "preexisting_canonical": false
+    },
+    {
+      "bdfutbol_id": "63255",
+      "canonical_source_id": 9496647,
+      "retired_source_ids": [
+        9497426
+      ],
+      "target_source_ids": [
+        9497426
+      ],
+      "preexisting_canonical": true
+    },
+    {
+      "bdfutbol_id": "1180233",
+      "canonical_source_id": 9496670,
+      "retired_source_ids": [
+        9496773
+      ],
+      "target_source_ids": [
+        9496773
+      ],
+      "preexisting_canonical": true
+    },
+    {
+      "bdfutbol_id": "1179603",
+      "canonical_source_id": 9497436,
+      "retired_source_ids": [
+        9497469
+      ],
+      "target_source_ids": [
+        9497436,
+        9497469
+      ],
+      "preexisting_canonical": false
+    },
+    {
+      "bdfutbol_id": "6512",
+      "canonical_source_id": 9496812,
+      "retired_source_ids": [
+        9497495
+      ],
+      "target_source_ids": [
+        9496812,
+        9497495
+      ],
+      "preexisting_canonical": false
+    },
+    {
+      "bdfutbol_id": "1181061",
+      "canonical_source_id": 9497455,
+      "retired_source_ids": [
+        9496900
+      ],
+      "target_source_ids": [
+        9497455,
+        9496900
+      ],
+      "preexisting_canonical": false
+    },
+    {
+      "bdfutbol_id": "591008",
+      "canonical_source_id": 9497459,
+      "retired_source_ids": [
+        9496892
+      ],
+      "target_source_ids": [
+        9497459,
+        9496892
+      ],
+      "preexisting_canonical": false
+    },
+    {
+      "bdfutbol_id": "610593",
+      "canonical_source_id": 9496863,
+      "retired_source_ids": [
+        9496882
+      ],
+      "target_source_ids": [
+        9496863,
+        9496882
+      ],
+      "preexisting_canonical": false
+    },
+    {
+      "bdfutbol_id": "701741",
+      "canonical_source_id": 9495358,
+      "retired_source_ids": [
+        9497498
+      ],
+      "target_source_ids": [
+        9497498
+      ],
+      "preexisting_canonical": true
+    }
+  ],
+  "russia_integrity": {
+    "before_sha256": "731ae8da21ba76f6b73182adcec485f53bce47989481a81552774d358d3d39b1",
+    "after_sha256": "5646414b4f8f7356c211a0399573e18f3d75ce6f517f933d4dbd65ecfa3dfdf9",
+    "russia_player_objects_before": 491,
+    "russia_player_objects_after": 480,
+    "protected_non_target_noncanonical_players_unchanged": true
+  },
+  "metadata_policy": {
+    "identity_links_are_complete": true,
+    "metadata_is_not_fabricated": true,
+    "ussr_birth_state_separate_from_successor_territory": true,
+    "citizenship_1993_not_inferred": true,
+    "transliterations_preserved": true,
+    "stable_profile_id_is_merge_gate": true
+  },
+  "changes": [
+    {
+      "club": "Uralmash",
+      "source_id_before_merge": 9496723,
+      "resolved_source_id": 9496723,
+      "display_name_before": "Ledovskikh",
+      "display_name_after": "Konstantin Vyacheslavovich Ledovskikh",
+      "bdfutbol_id": "1159394",
+      "merged": false
+    },
+    {
+      "club": "Uralmash",
+      "source_id_before_merge": 9496724,
+      "resolved_source_id": 9496724,
+      "display_name_before": "Yushkov",
+      "display_name_after": "Aleksey Anatolyevich Yushkov",
+      "bdfutbol_id": "1179698",
+      "merged": false
+    },
+    {
+      "club": "Uralmash",
+      "source_id_before_merge": 9496725,
+      "resolved_source_id": 9496725,
+      "display_name_before": "Ratnichkin",
+      "display_name_after": "Ilya Alexandrovich Ratnichkin",
+      "bdfutbol_id": "1178227",
+      "merged": false
+    },
+    {
+      "club": "Uralmash",
+      "source_id_before_merge": 9496726,
+      "resolved_source_id": 9496726,
+      "display_name_before": "Galimov",
+      "display_name_after": "Marat Gainelyanovich Galimov",
+      "bdfutbol_id": "650559",
+      "merged": false
+    },
+    {
+      "club": "Uralmash",
+      "source_id_before_merge": 9496727,
+      "resolved_source_id": 9496727,
+      "display_name_before": "Volovodenko",
+      "display_name_after": "Anatoliy Yuryevich Volovodenko",
+      "bdfutbol_id": "1180240",
+      "merged": false
+    },
+    {
+      "club": "Uralmash",
+      "source_id_before_merge": 9496728,
+      "resolved_source_id": 9496728,
+      "display_name_before": "Fedotov",
+      "display_name_after": "Vladimir Valentinovich Fedotov",
+      "bdfutbol_id": "56205",
+      "merged": false
+    },
+    {
+      "club": "Uralmash",
+      "source_id_before_merge": 9496729,
+      "resolved_source_id": 9496729,
+      "display_name_before": "Andreev",
+      "display_name_after": "Albert Vladimirovich Andreev",
+      "bdfutbol_id": "1180239",
+      "merged": false
+    },
+    {
+      "club": "Uralmash",
+      "source_id_before_merge": 9496730,
+      "resolved_source_id": 9496730,
+      "display_name_before": "Yamlikhanov",
+      "display_name_after": "Radik Ramilyevich Yamlikhanov",
+      "bdfutbol_id": "590992",
+      "merged": false
+    },
+    {
+      "club": "Uralmash",
+      "source_id_before_merge": 9496731,
+      "resolved_source_id": 9496731,
+      "display_name_before": "Khankeyev",
+      "display_name_after": "Igor Fyodorovich Khankeyev",
+      "bdfutbol_id": "591073",
+      "merged": false
+    },
+    {
+      "club": "Uralmash",
+      "source_id_before_merge": 9496732,
+      "resolved_source_id": 9496732,
+      "display_name_before": "Nezhelev",
+      "display_name_after": "Dmitriy Gennadievich Nezhelev",
+      "bdfutbol_id": "1178826",
+      "merged": false
+    },
+    {
+      "club": "Uralmash",
+      "source_id_before_merge": 9496733,
+      "resolved_source_id": 9496733,
+      "display_name_before": "Perednya",
+      "display_name_after": "Sergey Aleksandrovich Perednya",
+      "bdfutbol_id": "591421",
+      "merged": false
+    },
+    {
+      "club": "Uralmash",
+      "source_id_before_merge": 9496734,
+      "resolved_source_id": 9496734,
+      "display_name_before": "Samsonenko",
+      "display_name_after": "Oleg Ivanovich Samsonenko",
+      "bdfutbol_id": "1181202",
+      "merged": false
+    },
+    {
+      "club": "Uralmash",
+      "source_id_before_merge": 9496735,
+      "resolved_source_id": 9496735,
+      "display_name_before": "Bluzhin",
+      "display_name_after": "Vladimir Nikolaevich Bluzhin",
+      "bdfutbol_id": "1178876",
+      "merged": false
+    },
+    {
+      "club": "Uralmash",
+      "source_id_before_merge": 9496736,
+      "resolved_source_id": 9497401,
+      "display_name_before": "Andrey Alekseyevich Sosnitsky",
+      "display_name_after": "Andrey Alekseyevich Sosnitsky",
+      "bdfutbol_id": "591588",
+      "merged": true
+    },
+    {
+      "club": "Uralmash",
+      "source_id_before_merge": 9496737,
+      "resolved_source_id": 9496737,
+      "display_name_before": "Davletshin",
+      "display_name_after": "Evgeniy Gennadievich Davletshin",
+      "bdfutbol_id": "1181204",
+      "merged": false
+    },
+    {
+      "club": "Uralmash",
+      "source_id_before_merge": 9496738,
+      "resolved_source_id": 9496519,
+      "display_name_before": "Yuriy Aleksandrovich Matveev",
+      "display_name_after": "Yuriy Aleksandrovich Matveev",
+      "bdfutbol_id": "591077",
+      "merged": true
+    },
+    {
+      "club": "Uralmash",
+      "source_id_before_merge": 9496739,
+      "resolved_source_id": 9496739,
+      "display_name_before": "Alyapkin",
+      "display_name_after": "Sergey Ivanovich Alyapkin",
+      "bdfutbol_id": "1178875",
+      "merged": false
+    },
+    {
+      "club": "Uralmash",
+      "source_id_before_merge": 9496740,
+      "resolved_source_id": 9496740,
+      "display_name_before": "Khovanskiy",
+      "display_name_after": "Vyacheslav Alexandrovich Khovanskiy",
+      "bdfutbol_id": "1181206",
+      "merged": false
+    },
+    {
+      "club": "Uralmash",
+      "source_id_before_merge": 9497415,
+      "resolved_source_id": 9497415,
+      "display_name_before": "Tkachenko",
+      "display_name_after": "Igor Nikolaevich Tkachenko",
+      "bdfutbol_id": "1181203",
+      "merged": false
+    },
+    {
+      "club": "Uralmash",
+      "source_id_before_merge": 9497416,
+      "resolved_source_id": 9497416,
+      "display_name_before": "Safin",
+      "display_name_after": "Marat Finatovich Safin",
+      "bdfutbol_id": "1181205",
+      "merged": false
+    },
+    {
+      "club": "Uralmash",
+      "source_id_before_merge": 9497417,
+      "resolved_source_id": 9497417,
+      "display_name_before": "Bakharev",
+      "display_name_after": "Vyacheslav Vladimirovich Bakharev",
+      "bdfutbol_id": "1179700",
+      "merged": false
+    },
+    {
+      "club": "Uralmash",
+      "source_id_before_merge": 9497418,
+      "resolved_source_id": 9497418,
+      "display_name_before": "Shushlyakov",
+      "display_name_after": "Valeriy Vitalievich Shushlyakov",
+      "bdfutbol_id": "1178600",
+      "merged": false
+    },
+    {
+      "club": "Uralmash",
+      "source_id_before_merge": 9497419,
+      "resolved_source_id": 9497419,
+      "display_name_before": "Titov",
+      "display_name_after": "Vladimir Viktorovich Titov",
+      "bdfutbol_id": "1181207",
+      "merged": false
+    },
+    {
+      "club": "Uralmash",
+      "source_id_before_merge": 9497420,
+      "resolved_source_id": 9497420,
+      "display_name_before": "Ignatov",
+      "display_name_after": "Igor Vladimirovich Ignatov",
+      "bdfutbol_id": "1181208",
+      "merged": false
+    },
+    {
+      "club": "Uralmash",
+      "source_id_before_merge": 9497421,
+      "resolved_source_id": 9497421,
+      "display_name_before": "Arnautov",
+      "display_name_after": "Igor Alexandrovich Arnautov",
+      "bdfutbol_id": "1179709",
+      "merged": false
+    },
+    {
+      "club": "CSKA Moskva",
+      "source_id_before_merge": 9496741,
+      "resolved_source_id": 9496741,
+      "display_name_before": "Plotnikov",
+      "display_name_after": "Eugeny Anatolyevich Plotnikov",
+      "bdfutbol_id": "2656",
+      "merged": false
+    },
+    {
+      "club": "CSKA Moskva",
+      "source_id_before_merge": 9496742,
+      "resolved_source_id": 9496742,
+      "display_name_before": "Gushchin",
+      "display_name_after": "Aleksey Anatolyevich Gushchin",
+      "bdfutbol_id": "591221",
+      "merged": false
+    },
+    {
+      "club": "CSKA Moskva",
+      "source_id_before_merge": 9496743,
+      "resolved_source_id": 9496743,
+      "display_name_before": "Mashkarin",
+      "display_name_after": "Denis Nikolayevich Mashkarin",
+      "bdfutbol_id": "591009",
+      "merged": false
+    },
+    {
+      "club": "CSKA Moskva",
+      "source_id_before_merge": 9496744,
+      "resolved_source_id": 9496744,
+      "display_name_before": "Bushmanov",
+      "display_name_after": "Evgeniy Aleksandrovich Bushmanov",
+      "bdfutbol_id": "1071672",
+      "merged": false
+    },
+    {
+      "club": "CSKA Moskva",
+      "source_id_before_merge": 9496745,
+      "resolved_source_id": 9496745,
+      "display_name_before": "Antonovich",
+      "display_name_after": "Yuriy Valerianovich Antonovich",
+      "bdfutbol_id": "1160498",
+      "merged": false
+    },
+    {
+      "club": "CSKA Moskva",
+      "source_id_before_merge": 9496746,
+      "resolved_source_id": 9496746,
+      "display_name_before": "Minko",
+      "display_name_after": "Valeriy Vikentevich Minko",
+      "bdfutbol_id": "590918",
+      "merged": false
+    },
+    {
+      "club": "CSKA Moskva",
+      "source_id_before_merge": 9496747,
+      "resolved_source_id": 9496747,
+      "display_name_before": "Mamchur",
+      "display_name_after": "Sergey Nikolaevich Mamchur",
+      "bdfutbol_id": "1177630",
+      "merged": false
+    },
+    {
+      "club": "CSKA Moskva",
+      "source_id_before_merge": 9496748,
+      "resolved_source_id": 9496748,
+      "display_name_before": "Karsakov",
+      "display_name_after": "Dmitry Borisovich Karsakov",
+      "bdfutbol_id": "1166508",
+      "merged": false
+    },
+    {
+      "club": "CSKA Moskva",
+      "source_id_before_merge": 9496749,
+      "resolved_source_id": 9496749,
+      "display_name_before": "Grishin",
+      "display_name_after": "Aleksandr Sergeyevich Grishin",
+      "bdfutbol_id": "706839",
+      "merged": false
+    },
+    {
+      "club": "CSKA Moskva",
+      "source_id_before_merge": 9496750,
+      "resolved_source_id": 9496750,
+      "display_name_before": "Sergeev",
+      "display_name_after": "Oleg Vyacheslavovich Sergeyev",
+      "bdfutbol_id": "1071166",
+      "merged": false
+    },
+    {
+      "club": "CSKA Moskva",
+      "source_id_before_merge": 9496751,
+      "resolved_source_id": 9496751,
+      "display_name_before": "Fayzulin",
+      "display_name_after": "Ilshat Galimzyanovich Fayzulin",
+      "bdfutbol_id": "1096",
+      "merged": false
+    },
+    {
+      "club": "CSKA Moskva",
+      "source_id_before_merge": 9496752,
+      "resolved_source_id": 9496752,
+      "display_name_before": "Guteev",
+      "display_name_after": "Aleksandr Sergeyevich Guteev",
+      "bdfutbol_id": "1071787",
+      "merged": false
+    },
+    {
+      "club": "CSKA Moskva",
+      "source_id_before_merge": 9496753,
+      "resolved_source_id": 9496753,
+      "display_name_before": "Ivanov",
+      "display_name_after": "Vasiliy Vladimirovich Ivanov",
+      "bdfutbol_id": "590767",
+      "merged": false
+    },
+    {
+      "club": "CSKA Moskva",
+      "source_id_before_merge": 9496754,
+      "resolved_source_id": 9496754,
+      "display_name_before": "Malyukov",
+      "display_name_after": "Oleg Gennadyevich Malyukov",
+      "bdfutbol_id": "1071161",
+      "merged": false
+    },
+    {
+      "club": "CSKA Moskva",
+      "source_id_before_merge": 9496755,
+      "resolved_source_id": 9496755,
+      "display_name_before": "Kolotovkin",
+      "display_name_after": "Sergey Viktorovich Kolotovkin",
+      "bdfutbol_id": "591074",
+      "merged": false
+    },
+    {
+      "club": "CSKA Moskva",
+      "source_id_before_merge": 9496756,
+      "resolved_source_id": 9496756,
+      "display_name_before": "Dudnyk",
+      "display_name_after": "Yuriy Volodymyrovych Dudnyk",
+      "bdfutbol_id": "1160500",
+      "merged": false
+    },
+    {
+      "club": "CSKA Moskva",
+      "source_id_before_merge": 9496757,
+      "resolved_source_id": 9496757,
+      "display_name_before": "Novosadov",
+      "display_name_after": "Andrey Nikolayevich Novosadov",
+      "bdfutbol_id": "590748",
+      "merged": false
+    },
+    {
+      "club": "CSKA Moskva",
+      "source_id_before_merge": 9496758,
+      "resolved_source_id": 9496758,
+      "display_name_before": "Krbashyan",
+      "display_name_after": "Ervand Mesropovich Krbashyan",
+      "bdfutbol_id": "1177645",
+      "merged": false
+    },
+    {
+      "club": "CSKA Moskva",
+      "source_id_before_merge": 9497422,
+      "resolved_source_id": 9497422,
+      "display_name_before": "Masalitin",
+      "display_name_after": "Valeri Nikolayevich Masalitin",
+      "bdfutbol_id": "63392",
+      "merged": false
+    },
+    {
+      "club": "CSKA Moskva",
+      "source_id_before_merge": 9497423,
+      "resolved_source_id": 9497423,
+      "display_name_before": "Kupriyanov",
+      "display_name_after": "Mikhail Vladimirovich Kupriyanov",
+      "bdfutbol_id": "590814",
+      "merged": false
+    },
+    {
+      "club": "CSKA Moskva",
+      "source_id_before_merge": 9497424,
+      "resolved_source_id": 9497424,
+      "display_name_before": "Broshin",
+      "display_name_after": "Valery Viktorovich Broshin",
+      "bdfutbol_id": "7226",
+      "merged": false
+    },
+    {
+      "club": "CSKA Moskva",
+      "source_id_before_merge": 9497425,
+      "resolved_source_id": 9497425,
+      "display_name_before": "Shoukov",
+      "display_name_after": "Dmitri Vladislavovich Shoukov",
+      "bdfutbol_id": "79987",
+      "merged": false
+    },
+    {
+      "club": "CSKA Moskva",
+      "source_id_before_merge": 9497426,
+      "resolved_source_id": 9496647,
+      "display_name_before": "Sergei Nikolayevich Krutov",
+      "display_name_after": "Sergei Nikolayevich Krutov",
+      "bdfutbol_id": "63255",
+      "merged": true
+    },
+    {
+      "club": "CSKA Moskva",
+      "source_id_before_merge": 9497427,
+      "resolved_source_id": 9497427,
+      "display_name_before": "Bystrov",
+      "display_name_after": "Dmitry Vyacheslavovich Bystrov",
+      "bdfutbol_id": "1071168",
+      "merged": false
+    },
+    {
+      "club": "CSKA Moskva",
+      "source_id_before_merge": 9497428,
+      "resolved_source_id": 9497428,
+      "display_name_before": "Oreshchuk",
+      "display_name_after": "Roman Gennadyevich Oreshchuk",
+      "bdfutbol_id": "711081",
+      "merged": false
+    },
+    {
+      "club": "CSKA Moskva",
+      "source_id_before_merge": 9497429,
+      "resolved_source_id": 9497429,
+      "display_name_before": "Markevich",
+      "display_name_after": "Leonid Leonidovich Markevich",
+      "bdfutbol_id": "590884",
+      "merged": false
+    },
+    {
+      "club": "CSKA Moskva",
+      "source_id_before_merge": 9497430,
+      "resolved_source_id": 9497430,
+      "display_name_before": "Radimov",
+      "display_name_after": "Vladislav Nikolayevich Radimov",
+      "bdfutbol_id": "2624",
+      "merged": false
+    },
+    {
+      "club": "CSKA Moskva",
+      "source_id_before_merge": 9497431,
+      "resolved_source_id": 9497431,
+      "display_name_before": "Semyonov",
+      "display_name_after": "Vladimir Viktorovich Semyonov",
+      "bdfutbol_id": "590978",
+      "merged": false
+    },
+    {
+      "club": "CSKA Moskva",
+      "source_id_before_merge": 9497432,
+      "resolved_source_id": 9497432,
+      "display_name_before": "Khokhlov",
+      "display_name_after": "Dmitri Valeryevich Khokhlov",
+      "bdfutbol_id": "601",
+      "merged": false
+    },
+    {
+      "club": "KAMAZ",
+      "source_id_before_merge": 9496759,
+      "resolved_source_id": 9496759,
+      "display_name_before": "Zakharchuk",
+      "display_name_after": "Platon Platonovich Zakharchuk",
+      "bdfutbol_id": "590098",
+      "merged": false
+    },
+    {
+      "club": "KAMAZ",
+      "source_id_before_merge": 9496760,
+      "resolved_source_id": 9496760,
+      "display_name_before": "Klontsak",
+      "display_name_after": "Vladimir Yaroslavovych Klontsak",
+      "bdfutbol_id": "1159412",
+      "merged": false
+    },
+    {
+      "club": "KAMAZ",
+      "source_id_before_merge": 9496761,
+      "resolved_source_id": 9496761,
+      "display_name_before": "Rafikov",
+      "display_name_after": "Alimjon Kyashafovich Rafikov",
+      "bdfutbol_id": "1179580",
+      "merged": false
+    },
+    {
+      "club": "KAMAZ",
+      "source_id_before_merge": 9496762,
+      "resolved_source_id": 9496762,
+      "display_name_before": "Sinev",
+      "display_name_after": "Mikhail Yurevich Sinev",
+      "bdfutbol_id": "590028",
+      "merged": false
+    },
+    {
+      "club": "KAMAZ",
+      "source_id_before_merge": 9496763,
+      "resolved_source_id": 9496763,
+      "display_name_before": "Vorobyov",
+      "display_name_after": "Vyacheslav Nikolaevich Vorobyov",
+      "bdfutbol_id": "1181067",
+      "merged": false
+    },
+    {
+      "club": "KAMAZ",
+      "source_id_before_merge": 9496764,
+      "resolved_source_id": 9496764,
+      "display_name_before": "Durnev",
+      "display_name_after": "Evgeniy Evgenievich Durnev",
+      "bdfutbol_id": "1159376",
+      "merged": false
+    },
+    {
+      "club": "KAMAZ",
+      "source_id_before_merge": 9496765,
+      "resolved_source_id": 9496765,
+      "display_name_before": "Vinnikov",
+      "display_name_after": "Ivan Anatolyevich Vinnikov",
+      "bdfutbol_id": "1178636",
+      "merged": false
+    },
+    {
+      "club": "KAMAZ",
+      "source_id_before_merge": 9496766,
+      "resolved_source_id": 9496766,
+      "display_name_before": "Evdokimov",
+      "display_name_after": "Robert Gennadyevich Evdokimov",
+      "bdfutbol_id": "1159255",
+      "merged": false
+    },
+    {
+      "club": "KAMAZ",
+      "source_id_before_merge": 9496767,
+      "resolved_source_id": 9496767,
+      "display_name_before": "Nikiforov",
+      "display_name_after": "Oleksandr Valerievich Nikiforov",
+      "bdfutbol_id": "1178641",
+      "merged": false
+    },
+    {
+      "club": "KAMAZ",
+      "source_id_before_merge": 9496768,
+      "resolved_source_id": 9496768,
+      "display_name_before": "Panchenko",
+      "display_name_after": "Viktor Vyacheslavovich Panchenko",
+      "bdfutbol_id": "1178213",
+      "merged": false
+    },
+    {
+      "club": "KAMAZ",
+      "source_id_before_merge": 9496769,
+      "resolved_source_id": 9496769,
+      "display_name_before": "Kolesov",
+      "display_name_after": "Nikolay Borisovich Kolesov",
+      "bdfutbol_id": "1180165",
+      "merged": false
+    },
+    {
+      "club": "KAMAZ",
+      "source_id_before_merge": 9496770,
+      "resolved_source_id": 9496757,
+      "display_name_before": "Andrey Nikolayevich Novosadov",
+      "display_name_after": "Andrey Nikolayevich Novosadov",
+      "bdfutbol_id": "590748",
+      "merged": true
+    },
+    {
+      "club": "KAMAZ",
+      "source_id_before_merge": 9496771,
+      "resolved_source_id": 9496771,
+      "display_name_before": "Kovalev",
+      "display_name_after": "Sergey Igorevich Kovalev",
+      "bdfutbol_id": "1180166",
+      "merged": false
+    },
+    {
+      "club": "KAMAZ",
+      "source_id_before_merge": 9496772,
+      "resolved_source_id": 9496772,
+      "display_name_before": "Zubkov",
+      "display_name_after": "Vladyslav Viktorovich Zubkov",
+      "bdfutbol_id": "1159567",
+      "merged": false
+    },
+    {
+      "club": "KAMAZ",
+      "source_id_before_merge": 9496773,
+      "resolved_source_id": 9496670,
+      "display_name_before": "Sergey Ivanovich Iljin",
+      "display_name_after": "Sergey Ivanovich Iljin",
+      "bdfutbol_id": "1180233",
+      "merged": true
+    },
+    {
+      "club": "KAMAZ",
+      "source_id_before_merge": 9496774,
+      "resolved_source_id": 9496774,
+      "display_name_before": "Tropanet",
+      "display_name_after": "Boris Yakovlevich Tropanet",
+      "bdfutbol_id": "1178210",
+      "merged": false
+    },
+    {
+      "club": "KAMAZ",
+      "source_id_before_merge": 9496775,
+      "resolved_source_id": 9496775,
+      "display_name_before": "Nigmatullin",
+      "display_name_after": "Ruslan Karimovich Nigmatullin",
+      "bdfutbol_id": "96446",
+      "merged": false
+    },
+    {
+      "club": "KAMAZ",
+      "source_id_before_merge": 9496776,
+      "resolved_source_id": 9496776,
+      "display_name_before": "Milenin",
+      "display_name_after": "Vitaliy Evgenievich Milenin",
+      "bdfutbol_id": "1178635",
+      "merged": false
+    },
+    {
+      "club": "KAMAZ",
+      "source_id_before_merge": 9497433,
+      "resolved_source_id": 9497433,
+      "display_name_before": "Tsveiba",
+      "display_name_after": "Akhrik Sokratovich Tsveiba",
+      "bdfutbol_id": "701522",
+      "merged": false
+    },
+    {
+      "club": "KAMAZ",
+      "source_id_before_merge": 9497434,
+      "resolved_source_id": 9497434,
+      "display_name_before": "Sakhno",
+      "display_name_after": "Viktor Pavlovich Sakhno",
+      "bdfutbol_id": "1181074",
+      "merged": false
+    },
+    {
+      "club": "KAMAZ",
+      "source_id_before_merge": 9497435,
+      "resolved_source_id": 9497435,
+      "display_name_before": "Babenko",
+      "display_name_after": "Aleksey Anatolyevich Babenko",
+      "bdfutbol_id": "1162410",
+      "merged": false
+    },
+    {
+      "club": "KAMAZ",
+      "source_id_before_merge": 9497436,
+      "resolved_source_id": 9497436,
+      "display_name_before": "Fakhrutdinov",
+      "display_name_after": "Rustyam Gusmanovich Fakhrutdinov",
+      "bdfutbol_id": "1179603",
+      "merged": false
+    },
+    {
+      "club": "KAMAZ",
+      "source_id_before_merge": 9497437,
+      "resolved_source_id": 9497437,
+      "display_name_before": "Kuznetsov",
+      "display_name_after": "Yuriy Vladimirovich Kuznetsov",
+      "bdfutbol_id": "1181071",
+      "merged": false
+    },
+    {
+      "club": "KAMAZ",
+      "source_id_before_merge": 9497438,
+      "resolved_source_id": 9497438,
+      "display_name_before": "Kurakin",
+      "display_name_after": "Pavel Anatolyevich Kurakin",
+      "bdfutbol_id": "1179589",
+      "merged": false
+    },
+    {
+      "club": "KAMAZ",
+      "source_id_before_merge": 9497439,
+      "resolved_source_id": 9497439,
+      "display_name_before": "Varlamov",
+      "display_name_after": "Yevgeni Vladimirovich Varlamov",
+      "bdfutbol_id": "590628",
+      "merged": false
+    },
+    {
+      "club": "KAMAZ",
+      "source_id_before_merge": 9497440,
+      "resolved_source_id": 9497440,
+      "display_name_before": "Tukhvatullin",
+      "display_name_after": "Marsel Nakipovich Tukhvatullin",
+      "bdfutbol_id": "1181068",
+      "merged": false
+    },
+    {
+      "club": "KAMAZ",
+      "source_id_before_merge": 9497441,
+      "resolved_source_id": 9497441,
+      "display_name_before": "Snigirev",
+      "display_name_after": "Aleksey Anatolyevich Snigirev",
+      "bdfutbol_id": "1177672",
+      "merged": false
+    },
+    {
+      "club": "KAMAZ",
+      "source_id_before_merge": 9497442,
+      "resolved_source_id": 9497442,
+      "display_name_before": "Pivtsov",
+      "display_name_after": "Vladimir Viktorovich Pivtsov",
+      "bdfutbol_id": "1181070",
+      "merged": false
+    },
+    {
+      "club": "KAMAZ",
+      "source_id_before_merge": 9497443,
+      "resolved_source_id": 9497443,
+      "display_name_before": "Tsaplyuk",
+      "display_name_after": "Igor Yuryevich Tsaplyuk",
+      "bdfutbol_id": "1181075",
+      "merged": false
+    },
+    {
+      "club": "Zhemchuzhina Sochi",
+      "source_id_before_merge": 9496777,
+      "resolved_source_id": 9496777,
+      "display_name_before": "Chekmezov",
+      "display_name_after": "Sergey Viktorovich Chekmezov",
+      "bdfutbol_id": "1180170",
+      "merged": false
+    },
+    {
+      "club": "Zhemchuzhina Sochi",
+      "source_id_before_merge": 9496778,
+      "resolved_source_id": 9496778,
+      "display_name_before": "Chekunov",
+      "display_name_after": "Andrey Vladimirovich Chekunov",
+      "bdfutbol_id": "1179717",
+      "merged": false
+    },
+    {
+      "club": "Zhemchuzhina Sochi",
+      "source_id_before_merge": 9496779,
+      "resolved_source_id": 9496779,
+      "display_name_before": "Bondaruk",
+      "display_name_after": "Gennadiy Mikhailovich Bondaruk",
+      "bdfutbol_id": "1159384",
+      "merged": false
+    },
+    {
+      "club": "Zhemchuzhina Sochi",
+      "source_id_before_merge": 9496780,
+      "resolved_source_id": 9496780,
+      "display_name_before": "Magomedov",
+      "display_name_after": "Murad Magomedov Makhachkala",
+      "bdfutbol_id": "1180249",
+      "merged": false
+    },
+    {
+      "club": "Zhemchuzhina Sochi",
+      "source_id_before_merge": 9496781,
+      "resolved_source_id": 9496781,
+      "display_name_before": "Nozikov",
+      "display_name_after": "Sergey Ivanovich Nozikov",
+      "bdfutbol_id": "1178822",
+      "merged": false
+    },
+    {
+      "club": "Zhemchuzhina Sochi",
+      "source_id_before_merge": 9496782,
+      "resolved_source_id": 9496782,
+      "display_name_before": "Pocheptsov",
+      "display_name_after": "Andrey Viktorovich Pocheptsov",
+      "bdfutbol_id": "1180252",
+      "merged": false
+    },
+    {
+      "club": "Zhemchuzhina Sochi",
+      "source_id_before_merge": 9496783,
+      "resolved_source_id": 9496783,
+      "display_name_before": "Ledovskikh",
+      "display_name_after": "Sergey Mikhailovich Ledovskikh",
+      "bdfutbol_id": "1179720",
+      "merged": false
+    },
+    {
+      "club": "Zhemchuzhina Sochi",
+      "source_id_before_merge": 9496784,
+      "resolved_source_id": 9496784,
+      "display_name_before": "Murygin",
+      "display_name_after": "Andrey Lvovich Murygin",
+      "bdfutbol_id": "1180253",
+      "merged": false
+    },
+    {
+      "club": "Zhemchuzhina Sochi",
+      "source_id_before_merge": 9496785,
+      "resolved_source_id": 9496785,
+      "display_name_before": "Bozhko",
+      "display_name_after": "Sergey Yuryevich Bozhko",
+      "bdfutbol_id": "1178846",
+      "merged": false
+    },
+    {
+      "club": "Zhemchuzhina Sochi",
+      "source_id_before_merge": 9496786,
+      "resolved_source_id": 9496786,
+      "display_name_before": "Khagba",
+      "display_name_after": "Roman Ochanovich Khagba",
+      "bdfutbol_id": "1181215",
+      "merged": false
+    },
+    {
+      "club": "Zhemchuzhina Sochi",
+      "source_id_before_merge": 9496787,
+      "resolved_source_id": 9496787,
+      "display_name_before": "Podruzhko",
+      "display_name_after": "Oleg Vladimirovich Podruzhko",
+      "bdfutbol_id": "1181213",
+      "merged": false
+    },
+    {
+      "club": "Zhemchuzhina Sochi",
+      "source_id_before_merge": 9496788,
+      "resolved_source_id": 9496788,
+      "display_name_before": "Mogilnyi",
+      "display_name_after": "Vyacheslav Viktorovich Mogilnyi",
+      "bdfutbol_id": "1179716",
+      "merged": false
+    },
+    {
+      "club": "Zhemchuzhina Sochi",
+      "source_id_before_merge": 9496789,
+      "resolved_source_id": 9496789,
+      "display_name_before": "Bogatyrev",
+      "display_name_after": "Timur Gadzhievich Bogatyrev",
+      "bdfutbol_id": "1161237",
+      "merged": false
+    },
+    {
+      "club": "Zhemchuzhina Sochi",
+      "source_id_before_merge": 9496790,
+      "resolved_source_id": 9496790,
+      "display_name_before": "Gogrichiani",
+      "display_name_after": "Gocha Gogrichiani",
+      "bdfutbol_id": "1159392",
+      "merged": false
+    },
+    {
+      "club": "Zhemchuzhina Sochi",
+      "source_id_before_merge": 9496791,
+      "resolved_source_id": 9496791,
+      "display_name_before": "Zhirov",
+      "display_name_after": "Evgeniy Nikolaevich Zhirov",
+      "bdfutbol_id": "1181212",
+      "merged": false
+    },
+    {
+      "club": "Zhemchuzhina Sochi",
+      "source_id_before_merge": 9496792,
+      "resolved_source_id": 9496792,
+      "display_name_before": "Bondarev",
+      "display_name_after": "Stanislav Vladimirovich Bondarev",
+      "bdfutbol_id": "1159391",
+      "merged": false
+    },
+    {
+      "club": "Zhemchuzhina Sochi",
+      "source_id_before_merge": 9496793,
+      "resolved_source_id": 9496793,
+      "display_name_before": "Alekseev",
+      "display_name_after": "Dmitriy Vadimovich Alekseev",
+      "bdfutbol_id": "1159183",
+      "merged": false
+    },
+    {
+      "club": "Zhemchuzhina Sochi",
+      "source_id_before_merge": 9496794,
+      "resolved_source_id": 9496794,
+      "display_name_before": "Lushin",
+      "display_name_after": "Vladimir Mikhailovich Lushin",
+      "bdfutbol_id": "1181209",
+      "merged": false
+    },
+    {
+      "club": "Zhemchuzhina Sochi",
+      "source_id_before_merge": 9497444,
+      "resolved_source_id": 9497444,
+      "display_name_before": "Ignatyev",
+      "display_name_after": "Aleksandr Sergeyevich Ignatyev",
+      "bdfutbol_id": "591028",
+      "merged": false
+    },
+    {
+      "club": "Zhemchuzhina Sochi",
+      "source_id_before_merge": 9497445,
+      "resolved_source_id": 9497445,
+      "display_name_before": "Kuznetsov",
+      "display_name_after": "Artur Fedorovich Kuznetsov",
+      "bdfutbol_id": "1159387",
+      "merged": false
+    },
+    {
+      "club": "Zhemchuzhina Sochi",
+      "source_id_before_merge": 9497446,
+      "resolved_source_id": 9497446,
+      "display_name_before": "Titov",
+      "display_name_after": "Evgeniy Albertovich Titov",
+      "bdfutbol_id": "1180257",
+      "merged": false
+    },
+    {
+      "club": "Zhemchuzhina Sochi",
+      "source_id_before_merge": 9497447,
+      "resolved_source_id": 9497447,
+      "display_name_before": "Fedorov",
+      "display_name_after": "Aleksandr Alexandrovich Fedorov",
+      "bdfutbol_id": "1181210",
+      "merged": false
+    },
+    {
+      "club": "Zhemchuzhina Sochi",
+      "source_id_before_merge": 9497448,
+      "resolved_source_id": 9497448,
+      "display_name_before": "Protsenko",
+      "display_name_after": "Vyacheslav Vyacheslavovich Protsenko",
+      "bdfutbol_id": "1179719",
+      "merged": false
+    },
+    {
+      "club": "Zhemchuzhina Sochi",
+      "source_id_before_merge": 9497449,
+      "resolved_source_id": 9497449,
+      "display_name_before": "Shinkarev",
+      "display_name_after": "Oleg Vasilievich Shinkarev",
+      "bdfutbol_id": "1180259",
+      "merged": false
+    },
+    {
+      "club": "Zhemchuzhina Sochi",
+      "source_id_before_merge": 9497450,
+      "resolved_source_id": 9497450,
+      "display_name_before": "Medvedev",
+      "display_name_after": "Vladimir Nikolaevich Medvedev",
+      "bdfutbol_id": "1181211",
+      "merged": false
+    },
+    {
+      "club": "Zhemchuzhina Sochi",
+      "source_id_before_merge": 9497451,
+      "resolved_source_id": 9497451,
+      "display_name_before": "Yakovenko",
+      "display_name_after": "Serhiy Serhiyovych Yakovenko",
+      "bdfutbol_id": "591088",
+      "merged": false
+    },
+    {
+      "club": "Zhemchuzhina Sochi",
+      "source_id_before_merge": 9497452,
+      "resolved_source_id": 9497452,
+      "display_name_before": "Kazentsov",
+      "display_name_after": "Aleksandr Ivanovich Kazentsov",
+      "bdfutbol_id": "1181214",
+      "merged": false
+    },
+    {
+      "club": "Dynamo Stavropol",
+      "source_id_before_merge": 9496795,
+      "resolved_source_id": 9496795,
+      "display_name_before": "Sanaya",
+      "display_name_after": "Zurab Vladimirovich Sanaya",
+      "bdfutbol_id": "591000",
+      "merged": false
+    },
+    {
+      "club": "Dynamo Stavropol",
+      "source_id_before_merge": 9496796,
+      "resolved_source_id": 9496796,
+      "display_name_before": "Gorbachev",
+      "display_name_after": "Aleksandr Nikolayevich Gorbachev",
+      "bdfutbol_id": "591078",
+      "merged": false
+    },
+    {
+      "club": "Dynamo Stavropol",
+      "source_id_before_merge": 9496797,
+      "resolved_source_id": 9496797,
+      "display_name_before": "Ushakov",
+      "display_name_after": "Sergey Viktorovich Ushakov",
+      "bdfutbol_id": "1180151",
+      "merged": false
+    },
+    {
+      "club": "Dynamo Stavropol",
+      "source_id_before_merge": 9496798,
+      "resolved_source_id": 9496798,
+      "display_name_before": "Borzenkov",
+      "display_name_after": "Albert Valentinovich Borzenkov",
+      "bdfutbol_id": "590105",
+      "merged": false
+    },
+    {
+      "club": "Dynamo Stavropol",
+      "source_id_before_merge": 9496799,
+      "resolved_source_id": 9496799,
+      "display_name_before": "Shestakov",
+      "display_name_after": "Sergey Nikolaevich Shestakov",
+      "bdfutbol_id": "1180161",
+      "merged": false
+    },
+    {
+      "club": "Dynamo Stavropol",
+      "source_id_before_merge": 9496800,
+      "resolved_source_id": 9496800,
+      "display_name_before": "Matvienko",
+      "display_name_after": "Vladislav Ivanovich Matvienko",
+      "bdfutbol_id": "1162154",
+      "merged": false
+    },
+    {
+      "club": "Dynamo Stavropol",
+      "source_id_before_merge": 9496801,
+      "resolved_source_id": 9496801,
+      "display_name_before": "Gagloev",
+      "display_name_after": "Fedor Ivanovich Gagloev",
+      "bdfutbol_id": "1178619",
+      "merged": false
+    },
+    {
+      "club": "Dynamo Stavropol",
+      "source_id_before_merge": 9496802,
+      "resolved_source_id": 9496802,
+      "display_name_before": "Kopylov",
+      "display_name_after": "Andrey Nikolaevich Kopylov",
+      "bdfutbol_id": "1180150",
+      "merged": false
+    },
+    {
+      "club": "Dynamo Stavropol",
+      "source_id_before_merge": 9496803,
+      "resolved_source_id": 9496803,
+      "display_name_before": "Korneev",
+      "display_name_after": "Valeriy Vladimirovich Korneev",
+      "bdfutbol_id": "1180153",
+      "merged": false
+    },
+    {
+      "club": "Dynamo Stavropol",
+      "source_id_before_merge": 9496804,
+      "resolved_source_id": 9496804,
+      "display_name_before": "Sokolov",
+      "display_name_after": "Vadim Vadimovich Sokolov",
+      "bdfutbol_id": "1159388",
+      "merged": false
+    },
+    {
+      "club": "Dynamo Stavropol",
+      "source_id_before_merge": 9496805,
+      "resolved_source_id": 9496805,
+      "display_name_before": "Osipov",
+      "display_name_after": "Seyran Ivanovich Osipov",
+      "bdfutbol_id": "1180152",
+      "merged": false
+    },
+    {
+      "club": "Dynamo Stavropol",
+      "source_id_before_merge": 9496806,
+      "resolved_source_id": 9496806,
+      "display_name_before": "Pata",
+      "display_name_after": "Anatoliy Grigorievich Pata",
+      "bdfutbol_id": "1180149",
+      "merged": false
+    },
+    {
+      "club": "Dynamo Stavropol",
+      "source_id_before_merge": 9496807,
+      "resolved_source_id": 9496807,
+      "display_name_before": "Batynkov",
+      "display_name_after": "Dmitriy Viktorovich Batynkov",
+      "bdfutbol_id": "1177674",
+      "merged": false
+    },
+    {
+      "club": "Dynamo Stavropol",
+      "source_id_before_merge": 9496808,
+      "resolved_source_id": 9496808,
+      "display_name_before": "Papikyan",
+      "display_name_after": "Arsen Borisovich Papikyan",
+      "bdfutbol_id": "1179410",
+      "merged": false
+    },
+    {
+      "club": "Dynamo Stavropol",
+      "source_id_before_merge": 9496809,
+      "resolved_source_id": 9496809,
+      "display_name_before": "Grunichev",
+      "display_name_after": "Sergey Vyacheslavovich Grunichev",
+      "bdfutbol_id": "1180155",
+      "merged": false
+    },
+    {
+      "club": "Dynamo Stavropol",
+      "source_id_before_merge": 9496810,
+      "resolved_source_id": 9496810,
+      "display_name_before": "Maslov",
+      "display_name_after": "Sergey Aleksandrovich Maslov",
+      "bdfutbol_id": "591227",
+      "merged": false
+    },
+    {
+      "club": "Dynamo Stavropol",
+      "source_id_before_merge": 9496811,
+      "resolved_source_id": 9496811,
+      "display_name_before": "Pobedennyi",
+      "display_name_after": "Andrey Anatolyevich Pobedennyi",
+      "bdfutbol_id": "1181060",
+      "merged": false
+    },
+    {
+      "club": "Dynamo Stavropol",
+      "source_id_before_merge": 9496812,
+      "resolved_source_id": 9496812,
+      "display_name_before": "Maslov",
+      "display_name_after": "Aleksandr Vladimirovich Maslov",
+      "bdfutbol_id": "6512",
+      "merged": false
+    },
+    {
+      "club": "Dynamo Stavropol",
+      "source_id_before_merge": 9497453,
+      "resolved_source_id": 9497453,
+      "display_name_before": "Bogachev",
+      "display_name_after": "Gennadiy Alexandrovich Bogachev",
+      "bdfutbol_id": "1181062",
+      "merged": false
+    },
+    {
+      "club": "Dynamo Stavropol",
+      "source_id_before_merge": 9497454,
+      "resolved_source_id": 9497454,
+      "display_name_before": "Osipyan",
+      "display_name_after": "Erast Ernestovich Osipyan",
+      "bdfutbol_id": "1180209",
+      "merged": false
+    },
+    {
+      "club": "Dynamo Stavropol",
+      "source_id_before_merge": 9497455,
+      "resolved_source_id": 9497455,
+      "display_name_before": "Minibaev",
+      "display_name_after": "Marat Mikhailovich Minibaev",
+      "bdfutbol_id": "1181061",
+      "merged": false
+    },
+    {
+      "club": "Dynamo Stavropol",
+      "source_id_before_merge": 9497456,
+      "resolved_source_id": 9497456,
+      "display_name_before": "Yarygin",
+      "display_name_after": "Andrey Vasilievich Yarygin",
+      "bdfutbol_id": "1181063",
+      "merged": false
+    },
+    {
+      "club": "Dynamo Stavropol",
+      "source_id_before_merge": 9497457,
+      "resolved_source_id": 9497457,
+      "display_name_before": "Kaloev",
+      "display_name_after": "Vladimir Yuryevich Kaloev",
+      "bdfutbol_id": "1181066",
+      "merged": false
+    },
+    {
+      "club": "Dynamo Stavropol",
+      "source_id_before_merge": 9497458,
+      "resolved_source_id": 9497458,
+      "display_name_before": "Sushiy",
+      "display_name_after": "Vladimir Ivanovich Sushiy",
+      "bdfutbol_id": "1180220",
+      "merged": false
+    },
+    {
+      "club": "Dynamo Stavropol",
+      "source_id_before_merge": 9497459,
+      "resolved_source_id": 9497459,
+      "display_name_before": "Spanderashvili",
+      "display_name_after": "Badri Spanderashvili",
+      "bdfutbol_id": "591008",
+      "merged": false
+    },
+    {
+      "club": "Dynamo Stavropol",
+      "source_id_before_merge": 9497460,
+      "resolved_source_id": 9497460,
+      "display_name_before": "Volobuev",
+      "display_name_after": "Sergey Vasilievich Volobuev",
+      "bdfutbol_id": "1179413",
+      "merged": false
+    },
+    {
+      "club": "Dynamo Stavropol",
+      "source_id_before_merge": 9497461,
+      "resolved_source_id": 9497461,
+      "display_name_before": "Ivanov",
+      "display_name_after": "Aleksandr Vasilievich Ivanov",
+      "bdfutbol_id": "1181065",
+      "merged": false
+    },
+    {
+      "club": "Dynamo Stavropol",
+      "source_id_before_merge": 9497462,
+      "resolved_source_id": 9497462,
+      "display_name_before": "Kontsevenko",
+      "display_name_after": "Viktor Nikolaevich Kontsevenko",
+      "bdfutbol_id": "1181064",
+      "merged": false
+    },
+    {
+      "club": "Lokomotiv Nizhny Novgorod",
+      "source_id_before_merge": 9496813,
+      "resolved_source_id": 9496813,
+      "display_name_before": "Shantalosau",
+      "display_name_after": "Valeriy Dmitrievich Shantalosau",
+      "bdfutbol_id": "591121",
+      "merged": false
+    },
+    {
+      "club": "Lokomotiv Nizhny Novgorod",
+      "source_id_before_merge": 9496814,
+      "resolved_source_id": 9496814,
+      "display_name_before": "Ragulin",
+      "display_name_after": "Sergey Vyacheslavovich Ragulin",
+      "bdfutbol_id": "1178844",
+      "merged": false
+    },
+    {
+      "club": "Lokomotiv Nizhny Novgorod",
+      "source_id_before_merge": 9496815,
+      "resolved_source_id": 9496815,
+      "display_name_before": "Kurayev",
+      "display_name_after": "Vladimir Petrovich Kurayev",
+      "bdfutbol_id": "590788",
+      "merged": false
+    },
+    {
+      "club": "Lokomotiv Nizhny Novgorod",
+      "source_id_before_merge": 9496816,
+      "resolved_source_id": 9496816,
+      "display_name_before": "Oskolkov",
+      "display_name_after": "Albert Nikolayevich Oskolkov",
+      "bdfutbol_id": "707175",
+      "merged": false
+    },
+    {
+      "club": "Lokomotiv Nizhny Novgorod",
+      "source_id_before_merge": 9496817,
+      "resolved_source_id": 9496817,
+      "display_name_before": "Kuzmin",
+      "display_name_after": "Sergey Anatolyevich Kuzmin",
+      "bdfutbol_id": "1181117",
+      "merged": false
+    },
+    {
+      "club": "Lokomotiv Nizhny Novgorod",
+      "source_id_before_merge": 9496818,
+      "resolved_source_id": 9496818,
+      "display_name_before": "Kazakov",
+      "display_name_after": "Vladimir Valeryevich Kazakov",
+      "bdfutbol_id": "590374",
+      "merged": false
+    },
+    {
+      "club": "Lokomotiv Nizhny Novgorod",
+      "source_id_before_merge": 9496819,
+      "resolved_source_id": 9496819,
+      "display_name_before": "Maslyaev",
+      "display_name_after": "Gennadiy Alexandrovich Maslyaev",
+      "bdfutbol_id": "1181116",
+      "merged": false
+    },
+    {
+      "club": "Lokomotiv Nizhny Novgorod",
+      "source_id_before_merge": 9496820,
+      "resolved_source_id": 9496820,
+      "display_name_before": "Rumyantsev",
+      "display_name_after": "Andrey Alekseevich Rumyantsev",
+      "bdfutbol_id": "1177849",
+      "merged": false
+    },
+    {
+      "club": "Lokomotiv Nizhny Novgorod",
+      "source_id_before_merge": 9496821,
+      "resolved_source_id": 9496821,
+      "display_name_before": "Saveljev",
+      "display_name_after": "Valerian Borisovich Saveljev",
+      "bdfutbol_id": "1180222",
+      "merged": false
+    },
+    {
+      "club": "Lokomotiv Nizhny Novgorod",
+      "source_id_before_merge": 9496822,
+      "resolved_source_id": 9496822,
+      "display_name_before": "Shchukin",
+      "display_name_after": "Aleksandr Yuryevich Shchukin",
+      "bdfutbol_id": "1181118",
+      "merged": false
+    },
+    {
+      "club": "Lokomotiv Nizhny Novgorod",
+      "source_id_before_merge": 9496823,
+      "resolved_source_id": 9496823,
+      "display_name_before": "Gerasimov",
+      "display_name_after": "Aleksey Vladimirovich Gerasimov",
+      "bdfutbol_id": "1159415",
+      "merged": false
+    },
+    {
+      "club": "Lokomotiv Nizhny Novgorod",
+      "source_id_before_merge": 9496824,
+      "resolved_source_id": 9496824,
+      "display_name_before": "Malisov",
+      "display_name_after": "Arkadiy Borisovich Malisov",
+      "bdfutbol_id": "1181122",
+      "merged": false
+    },
+    {
+      "club": "Lokomotiv Nizhny Novgorod",
+      "source_id_before_merge": 9496825,
+      "resolved_source_id": 9496825,
+      "display_name_before": "Gorelov",
+      "display_name_after": "Igor Yuryevich Gorelov",
+      "bdfutbol_id": "1159410",
+      "merged": false
+    },
+    {
+      "club": "Lokomotiv Nizhny Novgorod",
+      "source_id_before_merge": 9496826,
+      "resolved_source_id": 9496826,
+      "display_name_before": "Rydnyi",
+      "display_name_after": "Oleg Anatolyevich Rydnyi",
+      "bdfutbol_id": "1180162",
+      "merged": false
+    },
+    {
+      "club": "Lokomotiv Nizhny Novgorod",
+      "source_id_before_merge": 9496827,
+      "resolved_source_id": 9496827,
+      "display_name_before": "Feoktistov",
+      "display_name_after": "Stanislav Alexandrovich Feoktistov",
+      "bdfutbol_id": "1178849",
+      "merged": false
+    },
+    {
+      "club": "Lokomotiv Nizhny Novgorod",
+      "source_id_before_merge": 9496828,
+      "resolved_source_id": 9496828,
+      "display_name_before": "Golubev",
+      "display_name_after": "Dmitriy Vasilievich Golubev",
+      "bdfutbol_id": "1180225",
+      "merged": false
+    },
+    {
+      "club": "Lokomotiv Nizhny Novgorod",
+      "source_id_before_merge": 9496829,
+      "resolved_source_id": 9496829,
+      "display_name_before": "Kireev",
+      "display_name_after": "Vladimir Vladimirovich Kireev",
+      "bdfutbol_id": "1181119",
+      "merged": false
+    },
+    {
+      "club": "Lokomotiv Nizhny Novgorod",
+      "source_id_before_merge": 9496830,
+      "resolved_source_id": 9496830,
+      "display_name_before": "Frolov",
+      "display_name_after": "Valeriy Vladimirovich Frolov",
+      "bdfutbol_id": "1180223",
+      "merged": false
+    },
+    {
+      "club": "Lokomotiv Nizhny Novgorod",
+      "source_id_before_merge": 9497463,
+      "resolved_source_id": 9497463,
+      "display_name_before": "Gadalov",
+      "display_name_after": "Dmitriy Nikolaevich Gadalov",
+      "bdfutbol_id": "1180226",
+      "merged": false
+    },
+    {
+      "club": "Lokomotiv Nizhny Novgorod",
+      "source_id_before_merge": 9497464,
+      "resolved_source_id": 9497464,
+      "display_name_before": "Gulyaev",
+      "display_name_after": "Yuriy Ivanovich Gulyaev",
+      "bdfutbol_id": "1181125",
+      "merged": false
+    },
+    {
+      "club": "Lokomotiv Nizhny Novgorod",
+      "source_id_before_merge": 9497465,
+      "resolved_source_id": 9497465,
+      "display_name_before": "Abdulov",
+      "display_name_after": "Rustam Rezoevich Abdulov",
+      "bdfutbol_id": "1181120",
+      "merged": false
+    },
+    {
+      "club": "Lokomotiv Nizhny Novgorod",
+      "source_id_before_merge": 9497466,
+      "resolved_source_id": 9497466,
+      "display_name_before": "Lysov",
+      "display_name_after": "Andrey Vladimirovich Lysov",
+      "bdfutbol_id": "1181128",
+      "merged": false
+    },
+    {
+      "club": "Lokomotiv Nizhny Novgorod",
+      "source_id_before_merge": 9497467,
+      "resolved_source_id": 9497467,
+      "display_name_before": "Zaranko",
+      "display_name_after": "Yuriy Gennadievich Zaranko",
+      "bdfutbol_id": "1181127",
+      "merged": false
+    },
+    {
+      "club": "Krylia Sovetov",
+      "source_id_before_merge": 9496831,
+      "resolved_source_id": 9496831,
+      "display_name_before": "Gaus",
+      "display_name_after": "Viktor Eirihovich Gaus",
+      "bdfutbol_id": "1178650",
+      "merged": false
+    },
+    {
+      "club": "Krylia Sovetov",
+      "source_id_before_merge": 9496832,
+      "resolved_source_id": 9496832,
+      "display_name_before": "Gribov",
+      "display_name_after": "Sergey Mikhailovich Gribov",
+      "bdfutbol_id": "1177871",
+      "merged": false
+    },
+    {
+      "club": "Krylia Sovetov",
+      "source_id_before_merge": 9496833,
+      "resolved_source_id": 9496833,
+      "display_name_before": "Garin",
+      "display_name_after": "Yuriy Alexandrovich Garin",
+      "bdfutbol_id": "1181109",
+      "merged": false
+    },
+    {
+      "club": "Krylia Sovetov",
+      "source_id_before_merge": 9496834,
+      "resolved_source_id": 9496834,
+      "display_name_before": "Tumaykin",
+      "display_name_after": "Valeriy Vladimirovich Tumaykin",
+      "bdfutbol_id": "1180175",
+      "merged": false
+    },
+    {
+      "club": "Krylia Sovetov",
+      "source_id_before_merge": 9496835,
+      "resolved_source_id": 9496835,
+      "display_name_before": "Sharipov",
+      "display_name_after": "Dinar Anvarovich Sharipov",
+      "bdfutbol_id": "1180177",
+      "merged": false
+    },
+    {
+      "club": "Krylia Sovetov",
+      "source_id_before_merge": 9496836,
+      "resolved_source_id": 9496836,
+      "display_name_before": "Tsygankov",
+      "display_name_after": "Aleksandr Valeryevich Tsygankov",
+      "bdfutbol_id": "591099",
+      "merged": false
+    },
+    {
+      "club": "Krylia Sovetov",
+      "source_id_before_merge": 9496837,
+      "resolved_source_id": 9496837,
+      "display_name_before": "Marushko",
+      "display_name_after": "Sergei Vasilyevich Marushko",
+      "bdfutbol_id": "650557",
+      "merged": false
+    },
+    {
+      "club": "Krylia Sovetov",
+      "source_id_before_merge": 9496838,
+      "resolved_source_id": 9496838,
+      "display_name_before": "Remezov",
+      "display_name_after": "Gennadiy Viktorovich Remezov",
+      "bdfutbol_id": "1179609",
+      "merged": false
+    },
+    {
+      "club": "Krylia Sovetov",
+      "source_id_before_merge": 9496839,
+      "resolved_source_id": 9496839,
+      "display_name_before": "Avalyan",
+      "display_name_after": "Garnik Armenakovich Avalyan",
+      "bdfutbol_id": "591135",
+      "merged": false
+    },
+    {
+      "club": "Krylia Sovetov",
+      "source_id_before_merge": 9496840,
+      "resolved_source_id": 9496840,
+      "display_name_before": "Filippov",
+      "display_name_after": "Vladimir Nikolayevich Filippov",
+      "bdfutbol_id": "590827",
+      "merged": false
+    },
+    {
+      "club": "Krylia Sovetov",
+      "source_id_before_merge": 9496841,
+      "resolved_source_id": 9496841,
+      "display_name_before": "Bulgakov",
+      "display_name_after": "Nikolai Mikhailovich Bulgakov",
+      "bdfutbol_id": "700133",
+      "merged": false
+    },
+    {
+      "club": "Krylia Sovetov",
+      "source_id_before_merge": 9496842,
+      "resolved_source_id": 9496842,
+      "display_name_before": "Volodin",
+      "display_name_after": "Mikhail Gennadievich Volodin",
+      "bdfutbol_id": "1160519",
+      "merged": false
+    },
+    {
+      "club": "Krylia Sovetov",
+      "source_id_before_merge": 9496843,
+      "resolved_source_id": 9496843,
+      "display_name_before": "Valiev",
+      "display_name_after": "Ravil Sabirzyanovich Valiev",
+      "bdfutbol_id": "1180216",
+      "merged": false
+    },
+    {
+      "club": "Krylia Sovetov",
+      "source_id_before_merge": 9496844,
+      "resolved_source_id": 9496844,
+      "display_name_before": "Kharlachyov",
+      "display_name_after": "Yevgeni Valeryevich Kharlachyov",
+      "bdfutbol_id": "52497",
+      "merged": false
+    },
+    {
+      "club": "Krylia Sovetov",
+      "source_id_before_merge": 9496845,
+      "resolved_source_id": 9496845,
+      "display_name_before": "Miridonov",
+      "display_name_after": "Vladimir Viktorovich Miridonov",
+      "bdfutbol_id": "1180171",
+      "merged": false
+    },
+    {
+      "club": "Krylia Sovetov",
+      "source_id_before_merge": 9496846,
+      "resolved_source_id": 9496846,
+      "display_name_before": "Makeev",
+      "display_name_after": "Sergey Ivanovich Makeev",
+      "bdfutbol_id": "1161228",
+      "merged": false
+    },
+    {
+      "club": "Krylia Sovetov",
+      "source_id_before_merge": 9496847,
+      "resolved_source_id": 9496847,
+      "display_name_before": "Delov",
+      "display_name_after": "Oleg Leonidovich Delov",
+      "bdfutbol_id": "1179600",
+      "merged": false
+    },
+    {
+      "club": "Krylia Sovetov",
+      "source_id_before_merge": 9496848,
+      "resolved_source_id": 9496848,
+      "display_name_before": "Meda",
+      "display_name_after": "Igor Olegovich Meda",
+      "bdfutbol_id": "1179598",
+      "merged": false
+    },
+    {
+      "club": "Krylia Sovetov",
+      "source_id_before_merge": 9497468,
+      "resolved_source_id": 9497468,
+      "display_name_before": "Gapotiy",
+      "display_name_after": "Roman Valentinovich Gapotiy",
+      "bdfutbol_id": "1179610",
+      "merged": false
+    },
+    {
+      "club": "Krylia Sovetov",
+      "source_id_before_merge": 9497469,
+      "resolved_source_id": 9497436,
+      "display_name_before": "Rustyam Gusmanovich Fakhrutdinov",
+      "display_name_after": "Rustyam Gusmanovich Fakhrutdinov",
+      "bdfutbol_id": "1179603",
+      "merged": true
+    },
+    {
+      "club": "Krylia Sovetov",
+      "source_id_before_merge": 9497470,
+      "resolved_source_id": 9497470,
+      "display_name_before": "Semin",
+      "display_name_after": "Yuriy Viktorovich Semin",
+      "bdfutbol_id": "1181104",
+      "merged": false
+    },
+    {
+      "club": "Krylia Sovetov",
+      "source_id_before_merge": 9497471,
+      "resolved_source_id": 9497471,
+      "display_name_before": "Zhupikov",
+      "display_name_after": "Vasiliy Mikhailovich Zhupikov",
+      "bdfutbol_id": "1181107",
+      "merged": false
+    },
+    {
+      "club": "Krylia Sovetov",
+      "source_id_before_merge": 9497472,
+      "resolved_source_id": 9497472,
+      "display_name_before": "Fomin",
+      "display_name_after": "Vyacheslav Viktorovich Fomin",
+      "bdfutbol_id": "1181102",
+      "merged": false
+    },
+    {
+      "club": "Krylia Sovetov",
+      "source_id_before_merge": 9497473,
+      "resolved_source_id": 9497473,
+      "display_name_before": "Dzneladze",
+      "display_name_after": "Georgiy Alexandrovich Dzneladze",
+      "bdfutbol_id": "1181100",
+      "merged": false
+    },
+    {
+      "club": "Krylia Sovetov",
+      "source_id_before_merge": 9497474,
+      "resolved_source_id": 9497474,
+      "display_name_before": "Tsiklauri",
+      "display_name_after": "Zurab Sergeyevich Tsiklauri",
+      "bdfutbol_id": "590647",
+      "merged": false
+    },
+    {
+      "club": "Krylia Sovetov",
+      "source_id_before_merge": 9497475,
+      "resolved_source_id": 9497475,
+      "display_name_before": "Yumatov",
+      "display_name_after": "Pavel Borisovich Yumatov",
+      "bdfutbol_id": "1179608",
+      "merged": false
+    },
+    {
+      "club": "Luch Vladivostok",
+      "source_id_before_merge": 9496849,
+      "resolved_source_id": 9496849,
+      "display_name_before": "Viktorovich",
+      "display_name_after": "Andrey Alexandrovich Viktorovich",
+      "bdfutbol_id": "1181129",
+      "merged": false
+    },
+    {
+      "club": "Luch Vladivostok",
+      "source_id_before_merge": 9496850,
+      "resolved_source_id": 9496850,
+      "display_name_before": "Fedyakin",
+      "display_name_after": "Andrey Anatolyevich Fedyakin",
+      "bdfutbol_id": "1181134",
+      "merged": false
+    },
+    {
+      "club": "Luch Vladivostok",
+      "source_id_before_merge": 9496851,
+      "resolved_source_id": 9496851,
+      "display_name_before": "Baranov",
+      "display_name_after": "Andrey Gennadievich Baranov",
+      "bdfutbol_id": "1181130",
+      "merged": false
+    },
+    {
+      "club": "Luch Vladivostok",
+      "source_id_before_merge": 9496852,
+      "resolved_source_id": 9496852,
+      "display_name_before": "Yemelyanov",
+      "display_name_after": "Konstantin Vladilenovich Yemelyanov",
+      "bdfutbol_id": "591993",
+      "merged": false
+    },
+    {
+      "club": "Luch Vladivostok",
+      "source_id_before_merge": 9496853,
+      "resolved_source_id": 9496853,
+      "display_name_before": "Ivanov",
+      "display_name_after": "Viktor Nikolaevich Ivanov",
+      "bdfutbol_id": "1181136",
+      "merged": false
+    },
+    {
+      "club": "Luch Vladivostok",
+      "source_id_before_merge": 9496854,
+      "resolved_source_id": 9496854,
+      "display_name_before": "Skorkin",
+      "display_name_after": "Oleg Fedorovich Skorkin",
+      "bdfutbol_id": "1181137",
+      "merged": false
+    },
+    {
+      "club": "Luch Vladivostok",
+      "source_id_before_merge": 9496855,
+      "resolved_source_id": 9496855,
+      "display_name_before": "Ruslyakov",
+      "display_name_after": "Mikhail Valerievich Ruslyakov",
+      "bdfutbol_id": "1181139",
+      "merged": false
+    },
+    {
+      "club": "Luch Vladivostok",
+      "source_id_before_merge": 9496856,
+      "resolved_source_id": 9496856,
+      "display_name_before": "Ignatenko",
+      "display_name_after": "Dmitriy Vladimirovich Ignatenko",
+      "bdfutbol_id": "1181157",
+      "merged": false
+    },
+    {
+      "club": "Luch Vladivostok",
+      "source_id_before_merge": 9496857,
+      "resolved_source_id": 9496857,
+      "display_name_before": "Galimov",
+      "display_name_after": "Nail Hamathasanovich Galimov",
+      "bdfutbol_id": "1181142",
+      "merged": false
+    },
+    {
+      "club": "Luch Vladivostok",
+      "source_id_before_merge": 9496858,
+      "resolved_source_id": 9496858,
+      "display_name_before": "Mulashev",
+      "display_name_after": "Marat Lenzovich Mulashev",
+      "bdfutbol_id": "1181144",
+      "merged": false
+    },
+    {
+      "club": "Luch Vladivostok",
+      "source_id_before_merge": 9496859,
+      "resolved_source_id": 9496859,
+      "display_name_before": "Chekanov",
+      "display_name_after": "Anatoliy Petrovich Chekanov",
+      "bdfutbol_id": "1168865",
+      "merged": false
+    },
+    {
+      "club": "Luch Vladivostok",
+      "source_id_before_merge": 9496860,
+      "resolved_source_id": 9496860,
+      "display_name_before": "Kalinin",
+      "display_name_after": "Evgeniy Evgenievich Kalinin",
+      "bdfutbol_id": "1181147",
+      "merged": false
+    },
+    {
+      "club": "Luch Vladivostok",
+      "source_id_before_merge": 9496861,
+      "resolved_source_id": 9496861,
+      "display_name_before": "Goncharenko",
+      "display_name_after": "Aleksandr Mikhailovich Goncharenko",
+      "bdfutbol_id": "1181135",
+      "merged": false
+    },
+    {
+      "club": "Luch Vladivostok",
+      "source_id_before_merge": 9496862,
+      "resolved_source_id": 9496862,
+      "display_name_before": "Dubovik",
+      "display_name_after": "Maksim Nikolaevich Dubovik",
+      "bdfutbol_id": "1181159",
+      "merged": false
+    },
+    {
+      "club": "Luch Vladivostok",
+      "source_id_before_merge": 9496863,
+      "resolved_source_id": 9496863,
+      "display_name_before": "Zakharov",
+      "display_name_after": "Igor Nikolayevich Zakharov",
+      "bdfutbol_id": "610593",
+      "merged": false
+    },
+    {
+      "club": "Luch Vladivostok",
+      "source_id_before_merge": 9496864,
+      "resolved_source_id": 9496864,
+      "display_name_before": "Prilous",
+      "display_name_after": "Konstantin Vladimirovich Prilous",
+      "bdfutbol_id": "1181146",
+      "merged": false
+    },
+    {
+      "club": "Luch Vladivostok",
+      "source_id_before_merge": 9496865,
+      "resolved_source_id": 9496865,
+      "display_name_before": "Lebedev",
+      "display_name_after": "Valeriy Mikhailovich Lebedev",
+      "bdfutbol_id": "1181148",
+      "merged": false
+    },
+    {
+      "club": "Luch Vladivostok",
+      "source_id_before_merge": 9496866,
+      "resolved_source_id": 9496866,
+      "display_name_before": "Belov",
+      "display_name_after": "Igor Pavlovich Belov",
+      "bdfutbol_id": "1181132",
+      "merged": false
+    },
+    {
+      "club": "Luch Vladivostok",
+      "source_id_before_merge": 9497476,
+      "resolved_source_id": 9497476,
+      "display_name_before": "Khodoronok",
+      "display_name_after": "Yuriy Mikhailovich Khodoronok",
+      "bdfutbol_id": "1181152",
+      "merged": false
+    },
+    {
+      "club": "Luch Vladivostok",
+      "source_id_before_merge": 9497477,
+      "resolved_source_id": 9497477,
+      "display_name_before": "Koberskiy",
+      "display_name_after": "Denis Vitalievich Koberskiy",
+      "bdfutbol_id": "1161239",
+      "merged": false
+    },
+    {
+      "club": "Luch Vladivostok",
+      "source_id_before_merge": 9497478,
+      "resolved_source_id": 9497478,
+      "display_name_before": "Bogdanov",
+      "display_name_after": "Valeriy Vladimirovich Bogdanov",
+      "bdfutbol_id": "1181140",
+      "merged": false
+    },
+    {
+      "club": "Luch Vladivostok",
+      "source_id_before_merge": 9497479,
+      "resolved_source_id": 9497479,
+      "display_name_before": "Kasyanenko",
+      "display_name_after": "Evgeniy Leonidovich Kasyanenko",
+      "bdfutbol_id": "1181150",
+      "merged": false
+    },
+    {
+      "club": "Luch Vladivostok",
+      "source_id_before_merge": 9497480,
+      "resolved_source_id": 9497480,
+      "display_name_before": "Perminov",
+      "display_name_after": "Igor Viktorovich Perminov",
+      "bdfutbol_id": "1178278",
+      "merged": false
+    },
+    {
+      "club": "Luch Vladivostok",
+      "source_id_before_merge": 9497481,
+      "resolved_source_id": 9497481,
+      "display_name_before": "Melnik",
+      "display_name_after": "Roman Alexandrovich Melnik",
+      "bdfutbol_id": "1181160",
+      "merged": false
+    },
+    {
+      "club": "Okean Nakhodka",
+      "source_id_before_merge": 9496867,
+      "resolved_source_id": 9496867,
+      "display_name_before": "Shishkin",
+      "display_name_after": "Yuri Nikolayevich Shishkin",
+      "bdfutbol_id": "1071158",
+      "merged": false
+    },
+    {
+      "club": "Okean Nakhodka",
+      "source_id_before_merge": 9496868,
+      "resolved_source_id": 9496868,
+      "display_name_before": "Bondarenko",
+      "display_name_after": "Sergey Yuryevich Bondarenko",
+      "bdfutbol_id": "1158987",
+      "merged": false
+    },
+    {
+      "club": "Okean Nakhodka",
+      "source_id_before_merge": 9496869,
+      "resolved_source_id": 9496869,
+      "display_name_before": "Grytsan",
+      "display_name_after": "Vasiliy Ivanovich Grytsan",
+      "bdfutbol_id": "1181169",
+      "merged": false
+    },
+    {
+      "club": "Okean Nakhodka",
+      "source_id_before_merge": 9496870,
+      "resolved_source_id": 9496870,
+      "display_name_before": "Rezantsev",
+      "display_name_after": "Andrey Borisovich Rezantsev",
+      "bdfutbol_id": "1159001",
+      "merged": false
+    },
+    {
+      "club": "Okean Nakhodka",
+      "source_id_before_merge": 9496871,
+      "resolved_source_id": 9496871,
+      "display_name_before": "Averyanov",
+      "display_name_after": "Aleksandr Aleksandrovich Averyanov",
+      "bdfutbol_id": "590954",
+      "merged": false
+    },
+    {
+      "club": "Okean Nakhodka",
+      "source_id_before_merge": 9496872,
+      "resolved_source_id": 9496872,
+      "display_name_before": "Fatin",
+      "display_name_after": "Igor Viktorovich Fatin",
+      "bdfutbol_id": "1158994",
+      "merged": false
+    },
+    {
+      "club": "Okean Nakhodka",
+      "source_id_before_merge": 9496873,
+      "resolved_source_id": 9496873,
+      "display_name_before": "Smirnov",
+      "display_name_after": "Andrey Vasilievich Smirnov",
+      "bdfutbol_id": "1158995",
+      "merged": false
+    },
+    {
+      "club": "Okean Nakhodka",
+      "source_id_before_merge": 9496874,
+      "resolved_source_id": 9496874,
+      "display_name_before": "Poddubskiy",
+      "display_name_after": "Aleksei Nikolayevich Poddubskiy",
+      "bdfutbol_id": "591830",
+      "merged": false
+    },
+    {
+      "club": "Okean Nakhodka",
+      "source_id_before_merge": 9496875,
+      "resolved_source_id": 9496875,
+      "display_name_before": "Martyanov",
+      "display_name_after": "Evgeny Alexandrovich Martyanov",
+      "bdfutbol_id": "1158996",
+      "merged": false
+    },
+    {
+      "club": "Okean Nakhodka",
+      "source_id_before_merge": 9496876,
+      "resolved_source_id": 9496876,
+      "display_name_before": "Kokarev",
+      "display_name_after": "Oleg Ivanovich Kokarev",
+      "bdfutbol_id": "1158997",
+      "merged": false
+    },
+    {
+      "club": "Okean Nakhodka",
+      "source_id_before_merge": 9496877,
+      "resolved_source_id": 9496877,
+      "display_name_before": "Moiseev",
+      "display_name_after": "Yuri Alekseevich Moiseev",
+      "bdfutbol_id": "1158998",
+      "merged": false
+    },
+    {
+      "club": "Okean Nakhodka",
+      "source_id_before_merge": 9496878,
+      "resolved_source_id": 9496878,
+      "display_name_before": "Gulenkov",
+      "display_name_after": "Dmitriy Valentinovich Gulenkov",
+      "bdfutbol_id": "1181174",
+      "merged": false
+    },
+    {
+      "club": "Okean Nakhodka",
+      "source_id_before_merge": 9496879,
+      "resolved_source_id": 9496879,
+      "display_name_before": "Rakhmanov",
+      "display_name_after": "Bakhodyr Rabanovich Rakhmanov",
+      "bdfutbol_id": "1159000",
+      "merged": false
+    },
+    {
+      "club": "Okean Nakhodka",
+      "source_id_before_merge": 9496880,
+      "resolved_source_id": 9496880,
+      "display_name_before": "Shpiryuk",
+      "display_name_after": "Yuri Yuryevich Shpiryuk",
+      "bdfutbol_id": "1158992",
+      "merged": false
+    },
+    {
+      "club": "Okean Nakhodka",
+      "source_id_before_merge": 9496881,
+      "resolved_source_id": 9496881,
+      "display_name_before": "Sobolev",
+      "display_name_after": "Alexey Valerievich Sobolev",
+      "bdfutbol_id": "1158989",
+      "merged": false
+    },
+    {
+      "club": "Okean Nakhodka",
+      "source_id_before_merge": 9496882,
+      "resolved_source_id": 9496863,
+      "display_name_before": "Igor Nikolayevich Zakharov",
+      "display_name_after": "Igor Nikolayevich Zakharov",
+      "bdfutbol_id": "610593",
+      "merged": true
+    },
+    {
+      "club": "Okean Nakhodka",
+      "source_id_before_merge": 9496883,
+      "resolved_source_id": 9496883,
+      "display_name_before": "Kokoev",
+      "display_name_after": "Alan Chermenovich Kokoev",
+      "bdfutbol_id": "1159002",
+      "merged": false
+    },
+    {
+      "club": "Okean Nakhodka",
+      "source_id_before_merge": 9496884,
+      "resolved_source_id": 9496884,
+      "display_name_before": "Kozlov",
+      "display_name_after": "Sergey Semenovich Kozlov",
+      "bdfutbol_id": "1181167",
+      "merged": false
+    },
+    {
+      "club": "Okean Nakhodka",
+      "source_id_before_merge": 9497482,
+      "resolved_source_id": 9497482,
+      "display_name_before": "Netunaev",
+      "display_name_after": "Andrey Anatolyevich Netunaev",
+      "bdfutbol_id": "1181170",
+      "merged": false
+    },
+    {
+      "club": "Okean Nakhodka",
+      "source_id_before_merge": 9497483,
+      "resolved_source_id": 9497483,
+      "display_name_before": "Ryabov",
+      "display_name_after": "Andrey Anatolyevich Ryabov",
+      "bdfutbol_id": "1159003",
+      "merged": false
+    },
+    {
+      "club": "Okean Nakhodka",
+      "source_id_before_merge": 9497484,
+      "resolved_source_id": 9497484,
+      "display_name_before": "Gatikoev",
+      "display_name_after": "Tengiz Anatolyevich Gatikoev",
+      "bdfutbol_id": "1159004",
+      "merged": false
+    },
+    {
+      "club": "Okean Nakhodka",
+      "source_id_before_merge": 9497485,
+      "resolved_source_id": 9497485,
+      "display_name_before": "Markin",
+      "display_name_after": "Sergey Vladimirovich Markin",
+      "bdfutbol_id": "1181172",
+      "merged": false
+    },
+    {
+      "club": "Okean Nakhodka",
+      "source_id_before_merge": 9497486,
+      "resolved_source_id": 9497486,
+      "display_name_before": "Tikhonovetskiy",
+      "display_name_after": "Roman Mikhailovich Tikhonovetskiy",
+      "bdfutbol_id": "1181164",
+      "merged": false
+    },
+    {
+      "club": "Okean Nakhodka",
+      "source_id_before_merge": 9497487,
+      "resolved_source_id": 9497487,
+      "display_name_before": "Kienko",
+      "display_name_after": "Leonid Vladimirovich Kienko",
+      "bdfutbol_id": "1158999",
+      "merged": false
+    },
+    {
+      "club": "Okean Nakhodka",
+      "source_id_before_merge": 9497488,
+      "resolved_source_id": 9497488,
+      "display_name_before": "Kislyi",
+      "display_name_after": "Aleksandr Vladimirovich Kislyi",
+      "bdfutbol_id": "1181176",
+      "merged": false
+    },
+    {
+      "club": "Okean Nakhodka",
+      "source_id_before_merge": 9497489,
+      "resolved_source_id": 9497489,
+      "display_name_before": "Golovchenko",
+      "display_name_after": "Evgeniy Vladimirovich Golovchenko",
+      "bdfutbol_id": "1181177",
+      "merged": false
+    },
+    {
+      "club": "Okean Nakhodka",
+      "source_id_before_merge": 9497490,
+      "resolved_source_id": 9497490,
+      "display_name_before": "Epurash",
+      "display_name_after": "Aleksandr Alexandrovich Epurash",
+      "bdfutbol_id": "1181179",
+      "merged": false
+    },
+    {
+      "club": "Rostselmash",
+      "source_id_before_merge": 9496885,
+      "resolved_source_id": 9496885,
+      "display_name_before": "Kryukov",
+      "display_name_after": "Evgeniy Vladimirovich Kryukov",
+      "bdfutbol_id": "1161233",
+      "merged": false
+    },
+    {
+      "club": "Rostselmash",
+      "source_id_before_merge": 9496886,
+      "resolved_source_id": 9496886,
+      "display_name_before": "Lugovkin",
+      "display_name_after": "Vyacheslav Borisovich Lugovkin",
+      "bdfutbol_id": "1178263",
+      "merged": false
+    },
+    {
+      "club": "Rostselmash",
+      "source_id_before_merge": 9496887,
+      "resolved_source_id": 9496887,
+      "display_name_before": "Posylaev",
+      "display_name_after": "Eduard Vyacheslavovich Posylaev",
+      "bdfutbol_id": "1162772",
+      "merged": false
+    },
+    {
+      "club": "Rostselmash",
+      "source_id_before_merge": 9496888,
+      "resolved_source_id": 9496888,
+      "display_name_before": "Borodkin",
+      "display_name_after": "Aleksandr Anatolyevich Borodkin",
+      "bdfutbol_id": "590839",
+      "merged": false
+    },
+    {
+      "club": "Rostselmash",
+      "source_id_before_merge": 9496889,
+      "resolved_source_id": 9496889,
+      "display_name_before": "Styopushkin",
+      "display_name_after": "Gennadi Nikolayevich Styopushkin",
+      "bdfutbol_id": "590186",
+      "merged": false
+    },
+    {
+      "club": "Rostselmash",
+      "source_id_before_merge": 9496890,
+      "resolved_source_id": 9496890,
+      "display_name_before": "Filippov",
+      "display_name_after": "Sergey Alexandrovich Filippov",
+      "bdfutbol_id": "1181182",
+      "merged": false
+    },
+    {
+      "club": "Rostselmash",
+      "source_id_before_merge": 9496891,
+      "resolved_source_id": 9496891,
+      "display_name_before": "Dyadyuk",
+      "display_name_after": "Yuri Stepanovich Dyadyuk",
+      "bdfutbol_id": "591225",
+      "merged": false
+    },
+    {
+      "club": "Rostselmash",
+      "source_id_before_merge": 9496892,
+      "resolved_source_id": 9497459,
+      "display_name_before": "Badri Spanderashvili",
+      "display_name_after": "Badri Spanderashvili",
+      "bdfutbol_id": "591008",
+      "merged": true
+    },
+    {
+      "club": "Rostselmash",
+      "source_id_before_merge": 9496893,
+      "resolved_source_id": 9496893,
+      "display_name_before": "Sanko",
+      "display_name_after": "Oleg Ivanovich Sanko",
+      "bdfutbol_id": "590990",
+      "merged": false
+    },
+    {
+      "club": "Rostselmash",
+      "source_id_before_merge": 9496894,
+      "resolved_source_id": 9496894,
+      "display_name_before": "Leonchenko",
+      "display_name_after": "Vladimir Valeryevich Leonchenko",
+      "bdfutbol_id": "590157",
+      "merged": false
+    },
+    {
+      "club": "Rostselmash",
+      "source_id_before_merge": 9496895,
+      "resolved_source_id": 9496895,
+      "display_name_before": "Tatarkin",
+      "display_name_after": "Aleksandr Alexandrovich Tatarkin",
+      "bdfutbol_id": "1178265",
+      "merged": false
+    },
+    {
+      "club": "Rostselmash",
+      "source_id_before_merge": 9496896,
+      "resolved_source_id": 9496896,
+      "display_name_before": "Valeev",
+      "display_name_after": "Ramil Kamilevich Valeev",
+      "bdfutbol_id": "1162116",
+      "merged": false
+    },
+    {
+      "club": "Rostselmash",
+      "source_id_before_merge": 9496897,
+      "resolved_source_id": 9496897,
+      "display_name_before": "Gubaz",
+      "display_name_after": "Dzhemal Rezovich Gubaz",
+      "bdfutbol_id": "1181189",
+      "merged": false
+    },
+    {
+      "club": "Rostselmash",
+      "source_id_before_merge": 9496898,
+      "resolved_source_id": 9496898,
+      "display_name_before": "Borovskoy",
+      "display_name_after": "Yuri Viktorovich Borovskoy",
+      "bdfutbol_id": "591076",
+      "merged": false
+    },
+    {
+      "club": "Rostselmash",
+      "source_id_before_merge": 9496899,
+      "resolved_source_id": 9496899,
+      "display_name_before": "Dementjev",
+      "display_name_after": "Sergey Vladimirovich Dementjev",
+      "bdfutbol_id": "1162117",
+      "merged": false
+    },
+    {
+      "club": "Rostselmash",
+      "source_id_before_merge": 9496900,
+      "resolved_source_id": 9497455,
+      "display_name_before": "Marat Mikhailovich Minibaev",
+      "display_name_after": "Marat Mikhailovich Minibaev",
+      "bdfutbol_id": "1181061",
+      "merged": true
+    },
+    {
+      "club": "Rostselmash",
+      "source_id_before_merge": 9496901,
+      "resolved_source_id": 9496901,
+      "display_name_before": "Ermilov",
+      "display_name_after": "Vitaliy Yuryevich Ermilov",
+      "bdfutbol_id": "1181184",
+      "merged": false
+    },
+    {
+      "club": "Rostselmash",
+      "source_id_before_merge": 9496902,
+      "resolved_source_id": 9496902,
+      "display_name_before": "Tikhonov",
+      "display_name_after": "Aleksandr Nikolaevich Tikhonov",
+      "bdfutbol_id": "1181187",
+      "merged": false
+    },
+    {
+      "club": "Rostselmash",
+      "source_id_before_merge": 9497491,
+      "resolved_source_id": 9497491,
+      "display_name_before": "Andreyev",
+      "display_name_after": "Sergey Vasilyevich Andreyev",
+      "bdfutbol_id": "591002",
+      "merged": false
+    },
+    {
+      "club": "Rostselmash",
+      "source_id_before_merge": 9497492,
+      "resolved_source_id": 9497492,
+      "display_name_before": "Loskov",
+      "display_name_after": "Dmitriy Vyacheslavovich Loskov",
+      "bdfutbol_id": "701731",
+      "merged": false
+    },
+    {
+      "club": "Rostselmash",
+      "source_id_before_merge": 9497493,
+      "resolved_source_id": 9497493,
+      "display_name_before": "Parovin",
+      "display_name_after": "Gennadiy Veniaminovich Parovin",
+      "bdfutbol_id": "1177905",
+      "merged": false
+    },
+    {
+      "club": "Rostselmash",
+      "source_id_before_merge": 9497494,
+      "resolved_source_id": 9497494,
+      "display_name_before": "Golubkin",
+      "display_name_after": "Nikolay Nikolaevich Golubkin",
+      "bdfutbol_id": "1178857",
+      "merged": false
+    },
+    {
+      "club": "Rostselmash",
+      "source_id_before_merge": 9497495,
+      "resolved_source_id": 9496812,
+      "display_name_before": "Aleksandr Vladimirovich Maslov",
+      "display_name_after": "Aleksandr Vladimirovich Maslov",
+      "bdfutbol_id": "6512",
+      "merged": true
+    },
+    {
+      "club": "Rostselmash",
+      "source_id_before_merge": 9497496,
+      "resolved_source_id": 9497496,
+      "display_name_before": "Balakhnin",
+      "display_name_after": "Sergei Nikolayevich Balakhnin",
+      "bdfutbol_id": "590187",
+      "merged": false
+    },
+    {
+      "club": "Rostselmash",
+      "source_id_before_merge": 9497497,
+      "resolved_source_id": 9497497,
+      "display_name_before": "Sereda",
+      "display_name_after": "Aleksei Leonidovich Sereda",
+      "bdfutbol_id": "1071150",
+      "merged": false
+    },
+    {
+      "club": "Rostselmash",
+      "source_id_before_merge": 9497498,
+      "resolved_source_id": 9495358,
+      "display_name_before": "Yuri Mikhailovich Kovtun",
+      "display_name_after": "Yuri Mikhailovich Kovtun",
+      "bdfutbol_id": "701741",
+      "merged": true
+    },
+    {
+      "club": "Rostselmash",
+      "source_id_before_merge": 9497499,
+      "resolved_source_id": 9497499,
+      "display_name_before": "Yuri Klyuchnikov",
+      "display_name_after": "Yuri Ivanovich Klyuchnikov",
+      "bdfutbol_id": "640134",
+      "merged": false
+    },
+    {
+      "club": "Rostselmash",
+      "source_id_before_merge": 9497500,
+      "resolved_source_id": 9497500,
+      "display_name_before": "Vernigorov",
+      "display_name_after": "Oleg Petrovich Vernigorov",
+      "bdfutbol_id": "1181185",
+      "merged": false
+    },
+    {
+      "club": "Rostselmash",
+      "source_id_before_merge": 9497501,
+      "resolved_source_id": 9497501,
+      "display_name_before": "Skokov",
+      "display_name_after": "Vladimir Borisovich Skokov",
+      "bdfutbol_id": "590688",
+      "merged": false
+    },
+    {
+      "club": "Asmaral Moskva",
+      "source_id_before_merge": 9496903,
+      "resolved_source_id": 9496903,
+      "display_name_before": "Moiseev",
+      "display_name_after": "Igor Alexandrovich Moiseev",
+      "bdfutbol_id": "1177753",
+      "merged": false
+    },
+    {
+      "club": "Asmaral Moskva",
+      "source_id_before_merge": 9496904,
+      "resolved_source_id": 9496904,
+      "display_name_before": "Krestobintsev",
+      "display_name_after": "Nikolay Petrovich Krestobintsev",
+      "bdfutbol_id": "1181043",
+      "merged": false
+    },
+    {
+      "club": "Asmaral Moskva",
+      "source_id_before_merge": 9496905,
+      "resolved_source_id": 9496905,
+      "display_name_before": "Shulgin",
+      "display_name_after": "Sergey Alexandrovich Shulgin",
+      "bdfutbol_id": "1178615",
+      "merged": false
+    },
+    {
+      "club": "Asmaral Moskva",
+      "source_id_before_merge": 9496906,
+      "resolved_source_id": 9496906,
+      "display_name_before": "Nikitin",
+      "display_name_after": "Sergey Vasilievich Nikitin",
+      "bdfutbol_id": "1181045",
+      "merged": false
+    },
+    {
+      "club": "Asmaral Moskva",
+      "source_id_before_merge": 9496907,
+      "resolved_source_id": 9496907,
+      "display_name_before": "Sergey Kuznetsov",
+      "display_name_after": "Sergey Ivanovich Kuznetsov",
+      "bdfutbol_id": "1181044",
+      "merged": false
+    },
+    {
+      "club": "Asmaral Moskva",
+      "source_id_before_merge": 9496908,
+      "resolved_source_id": 9496908,
+      "display_name_before": "Panferov",
+      "display_name_after": "Gleb Nikolaevich Panferov",
+      "bdfutbol_id": "1178818",
+      "merged": false
+    },
+    {
+      "club": "Asmaral Moskva",
+      "source_id_before_merge": 9496909,
+      "resolved_source_id": 9496909,
+      "display_name_before": "Ayupov",
+      "display_name_after": "Ansar Maksutovich Ayupov",
+      "bdfutbol_id": "62791",
+      "merged": false
+    },
+    {
+      "club": "Asmaral Moskva",
+      "source_id_before_merge": 9496910,
+      "resolved_source_id": 9496910,
+      "display_name_before": "Klyuev",
+      "display_name_after": "Denis Viktorovich Klyuev",
+      "bdfutbol_id": "62951",
+      "merged": false
+    },
+    {
+      "club": "Asmaral Moskva",
+      "source_id_before_merge": 9496911,
+      "resolved_source_id": 9496911,
+      "display_name_before": "Safronov",
+      "display_name_after": "Vitaliy Anatolyevich Safronov",
+      "bdfutbol_id": "590996",
+      "merged": false
+    },
+    {
+      "club": "Asmaral Moskva",
+      "source_id_before_merge": 9496912,
+      "resolved_source_id": 9496912,
+      "display_name_before": "Volotjok",
+      "display_name_after": "Oleg Viktorovich Volotjok",
+      "bdfutbol_id": "1181047",
+      "merged": false
+    },
+    {
+      "club": "Asmaral Moskva",
+      "source_id_before_merge": 9496913,
+      "resolved_source_id": 9496913,
+      "display_name_before": "Storchak",
+      "display_name_after": "Vasiliy Valerievich Storchak",
+      "bdfutbol_id": "1177744",
+      "merged": false
+    },
+    {
+      "club": "Asmaral Moskva",
+      "source_id_before_merge": 9496914,
+      "resolved_source_id": 9496914,
+      "display_name_before": "Shiyanov",
+      "display_name_after": "Aleksey Yuryevich Shiyanov",
+      "bdfutbol_id": "1177861",
+      "merged": false
+    },
+    {
+      "club": "Asmaral Moskva",
+      "source_id_before_merge": 9496915,
+      "resolved_source_id": 9496915,
+      "display_name_before": "Kamnev",
+      "display_name_after": "Konstantin Nikolayevich Kamnev",
+      "bdfutbol_id": "590844",
+      "merged": false
+    },
+    {
+      "club": "Asmaral Moskva",
+      "source_id_before_merge": 9496916,
+      "resolved_source_id": 9496916,
+      "display_name_before": "Golikov",
+      "display_name_after": "Mikhail Anatolyevich Golikov",
+      "bdfutbol_id": "1178255",
+      "merged": false
+    },
+    {
+      "club": "Asmaral Moskva",
+      "source_id_before_merge": 9496917,
+      "resolved_source_id": 9496917,
+      "display_name_before": "Mulikov",
+      "display_name_after": "Andrey Vladimirovich Mulikov",
+      "bdfutbol_id": "1178930",
+      "merged": false
+    },
+    {
+      "club": "Asmaral Moskva",
+      "source_id_before_merge": 9496918,
+      "resolved_source_id": 9496918,
+      "display_name_before": "Makarov",
+      "display_name_after": "Igor Vladimirovich Makarov",
+      "bdfutbol_id": "1179713",
+      "merged": false
+    },
+    {
+      "club": "Asmaral Moskva",
+      "source_id_before_merge": 9496919,
+      "resolved_source_id": 9496919,
+      "display_name_before": "Kovalenko",
+      "display_name_after": "Andrey Vladimirovich Kovalenko",
+      "bdfutbol_id": "1181055",
+      "merged": false
+    },
+    {
+      "club": "Asmaral Moskva",
+      "source_id_before_merge": 9496920,
+      "resolved_source_id": 9496920,
+      "display_name_before": "Zorya",
+      "display_name_after": "Sergey Anatolyevich Zorya",
+      "bdfutbol_id": "1181054",
+      "merged": false
+    },
+    {
+      "club": "Asmaral Moskva",
+      "source_id_before_merge": 9497502,
+      "resolved_source_id": 9497502,
+      "display_name_before": "Shikunov",
+      "display_name_after": "Valeriy Ivanovich Shikunov",
+      "bdfutbol_id": "1180148",
+      "merged": false
+    },
+    {
+      "club": "Asmaral Moskva",
+      "source_id_before_merge": 9497503,
+      "resolved_source_id": 9497503,
+      "display_name_before": "Nikulin",
+      "display_name_after": "Oleg Anatolyevich Nikulin",
+      "bdfutbol_id": "1181049",
+      "merged": false
+    },
+    {
+      "club": "Asmaral Moskva",
+      "source_id_before_merge": 9497504,
+      "resolved_source_id": 9497504,
+      "display_name_before": "Medvedev",
+      "display_name_after": "Sergey Viktorovich Medvedev",
+      "bdfutbol_id": "1181050",
+      "merged": false
+    },
+    {
+      "club": "Asmaral Moskva",
+      "source_id_before_merge": 9497505,
+      "resolved_source_id": 9497505,
+      "display_name_before": "Demin",
+      "display_name_after": "Eduard Viktorovich Dyomin",
+      "bdfutbol_id": "590616",
+      "merged": false
+    },
+    {
+      "club": "Asmaral Moskva",
+      "source_id_before_merge": 9497506,
+      "resolved_source_id": 9497506,
+      "display_name_before": "Semak",
+      "display_name_after": "Sergei Bogdanovitch Semak",
+      "bdfutbol_id": "84614",
+      "merged": false
+    },
+    {
+      "club": "Asmaral Moskva",
+      "source_id_before_merge": 9497507,
+      "resolved_source_id": 9497507,
+      "display_name_before": "Bekoev",
+      "display_name_after": "Akhsar Iranovich Bekoev",
+      "bdfutbol_id": "1181057",
+      "merged": false
+    },
+    {
+      "club": "Asmaral Moskva",
+      "source_id_before_merge": 9497508,
+      "resolved_source_id": 9497508,
+      "display_name_before": "Khakhalev",
+      "display_name_after": "Vladislav Gennadievich Khakhalev",
+      "bdfutbol_id": "1181058",
+      "merged": false
+    },
+    {
+      "club": "Asmaral Moskva",
+      "source_id_before_merge": 9497509,
+      "resolved_source_id": 9497509,
+      "display_name_before": "Grishin",
+      "display_name_after": "Sergey Sergeyevich Grishin",
+      "bdfutbol_id": "590580",
+      "merged": false
+    },
+    {
+      "club": "Asmaral Moskva",
+      "source_id_before_merge": 9497510,
+      "resolved_source_id": 9497510,
+      "display_name_before": "Kyrylov",
+      "display_name_after": "Oleg Nikolaevich Kyrylov",
+      "bdfutbol_id": "1181056",
+      "merged": false
+    },
+    {
+      "club": "Asmaral Moskva",
+      "source_id_before_merge": 9497511,
+      "resolved_source_id": 9497511,
+      "display_name_before": "Zudenkov",
+      "display_name_after": "Mikhail Viktorovich Zudenkov",
+      "bdfutbol_id": "1181052",
+      "merged": false
+    },
+    {
+      "club": "Asmaral Moskva",
+      "source_id_before_merge": 9497512,
+      "resolved_source_id": 9497512,
+      "display_name_before": "Gubernskiy",
+      "display_name_after": "Andrey Nikolaevich Gubernskiy",
+      "bdfutbol_id": "1181053",
+      "merged": false
+    },
+    {
+      "club": "Asmaral Moskva",
+      "source_id_before_merge": 9497513,
+      "resolved_source_id": 9497513,
+      "display_name_before": "Lushnikov",
+      "display_name_after": "Andrey Olegovich Lushnikov",
+      "bdfutbol_id": "1179578",
+      "merged": false
+    },
+    {
+      "club": "Asmaral Moskva",
+      "source_id_before_merge": 9497514,
+      "resolved_source_id": 9497514,
+      "display_name_before": "Zhilkin",
+      "display_name_after": "Sergey Borisovich Zhilkin",
+      "bdfutbol_id": "1181051",
+      "merged": false
+    },
+    {
+      "club": "Asmaral Moskva",
+      "source_id_before_merge": 9497515,
+      "resolved_source_id": 9497515,
+      "display_name_before": "Strikalov",
+      "display_name_after": "Gennadi Vladimirovich Strikalov",
+      "bdfutbol_id": "591103",
+      "merged": false
+    },
+    {
+      "club": "Asmaral Moskva",
+      "source_id_before_merge": 9497516,
+      "resolved_source_id": 9497516,
+      "display_name_before": "Zhdanov",
+      "display_name_after": "Sergey Mikhailovich Zhdanov",
+      "bdfutbol_id": "1178631",
+      "merged": false
+    }
+  ],
+  "next_front": []
+}

@@ -14,6 +14,8 @@ import EconomyWorkspace from './components/EconomyWorkspace.vue'
 import NewsWorkspace from './components/NewsWorkspace.vue'
 import NationalWorkspace from './components/NationalWorkspace.vue'
 import ClubWorkspace from './components/ClubWorkspace.vue'
+import StaffWorkspace from './components/StaffWorkspace.vue'
+import TrainingWorkspace from './components/TrainingWorkspace.vue'
 import HistoryWorkspace from './components/HistoryWorkspace.vue'
 import CalendarWorkspace from './components/CalendarWorkspace.vue'
 import { football9394Api } from './api.js'
@@ -23,7 +25,9 @@ const navigationGroups = [
     { id: 'home', label: 'Inicio' },
     { id: 'squad', label: 'Plantilla' },
     { id: 'tactics', label: 'Tácticas' },
+    { id: 'training', label: 'Entrenamiento' },
     { id: 'market', label: 'Mercado' },
+    { id: 'staff', label: 'Cuerpo técnico' },
   ] },
   { label: 'TEMPORADA', items: [
     { id: 'competitions', label: 'Competiciones' },
@@ -133,6 +137,10 @@ const careerRecords = ref({biggest_win:null,biggest_defeat:null,highest_scoring_
 const userManager = ref({reputation:50,job_offers:[],tenures:[],current_tenure:{}})
 const dressingRoom = ref({captain_id:null,leaders:[],competitions:[],mentorships:[],recent_events:[]})
 const reencounters = ref([])
+const staffState = ref({members:[],responsibilities:[],manager_responsibility_count:0,generated_count:0,provenance_note:''})
+const scoutingState = ref({active:[],recent_reports:[],responsibility:{}})
+const squadPlan = ref({priorities:[],expiring:[],succession:[],surplus:[]})
+const trainingState = ref({weekly_plan:[],players:[],session_options:[],intensity_options:[],focus_options:[],responsibility:{},high_risk_count:0,very_high_risk_count:0})
 
 const selectedCompetitionInfo = computed(()=>competitions.value.find(c=>`${c.kind}:${c.source_id}`===selectedCompetition.value)||null)
 const tableWindow = computed(()=>{
@@ -224,6 +232,10 @@ function applyCareerState(state){
  if(state.user_manager)userManager.value=state.user_manager
  if(state.dressing_room)dressingRoom.value=state.dressing_room
  if(state.reencounters)reencounters.value=state.reencounters
+ if(state.staff)staffState.value=state.staff
+ if(state.scouting)scoutingState.value=state.scouting
+ if(state.squad_plan)squadPlan.value=state.squad_plan
+ if(state.training)trainingState.value=state.training
 }
 function calendarRowsForUi(rows,state){
  const teamId=Number(state.team?.source_id||controlledTeamId.value)
@@ -306,6 +318,28 @@ async function appointCaptain(player){
  if(!careerId.value)return
  try{const result=await football9394Api.setCaptain(careerId.value,Number(player.id));applyCareerState(result.career);flash(`${player.name} es el nuevo capitán.`)}catch(error){flash(`No se pudo cambiar la capitanía: ${error.message}`)}
 }
+async function assignStaffResponsibility(payload){
+ if(!careerId.value||!payload?.key||!payload?.assignee)return
+ try{
+  const result=await football9394Api.assignStaffResponsibility(careerId.value,payload.key,payload.assignee)
+  applyCareerState(result.career)
+  flash('Responsabilidad actualizada.')
+ }catch(error){flash(`No se pudo cambiar la responsabilidad: ${error.message}`)}
+}
+async function saveTrainingPlan(payload){
+ if(!careerId.value)return
+ try{const result=await football9394Api.updateTraining(careerId.value,{intensity:payload?.intensity,weeklyPlan:payload?.weekly_plan});applyCareerState(result.career);flash('Plan semanal de entrenamiento guardado.')}catch(error){flash(`No se pudo guardar el entrenamiento: ${error.message}`)}
+}
+async function setTrainingFocus(payload){
+ if(!careerId.value||!payload?.playerId)return
+ try{const result=await football9394Api.setTrainingFocus(careerId.value,payload.playerId,payload.focus);applyCareerState(result.career);flash('Trabajo individual actualizado.')}catch(error){flash(`No se pudo cambiar el foco: ${error.message}`)}
+}
+async function applyPlanNeed(need){
+ marketQuery.value=''
+ marketPosition.value=need?.market_position||''
+ await searchMarket()
+ flash(need?.market_position?`Buscando ${need.label.toLowerCase()} según el plan de plantilla.`:'Mostrando mercado para ampliar la profundidad de plantilla.')
+}
 async function autoSelectLineup(){
  if(!careerId.value)return
  try{const result=await football9394Api.updateCareerSelection(careerId.value,{autoSelect:true});applyCareerState(result.career);flash('Mejor once disponible seleccionado.')}catch(error){flash(`No se pudo seleccionar el once: ${error.message}`)}
@@ -316,7 +350,7 @@ function flash(message){notice.value=message;window.setTimeout(()=>{notice.value
 async function openPlayer(row){
  selectedPlayer.value=profileFor(row);playerTab.value='profile'
  if(!careerId.value||!row?.id)return
- try{const detail=await football9394Api.careerPlayer(careerId.value,row.id);selectedPlayer.value={...detail,photo_url:historicalPlayerPhoto(detail.id),team_crest_url:historicalClubCrest(detail.team_id),market_value_display:formatSourceMoney(detail.estimated_transfer_value)}}catch{}
+ try{const detail=await football9394Api.careerPlayer(careerId.value,row.id);selectedPlayer.value={...detail,photo_url:historicalPlayerPhoto(detail.id),team_crest_url:historicalClubCrest(detail.team_id),market_value_display:detail.transfer_value_is_exact?formatSourceMoney(detail.estimated_transfer_value):`≈ ${formatSourceMoney(detail.estimated_transfer_value)}`}}catch{}
 }
 async function promisePlayerRole(payload){
  if(!careerId.value||!payload?.player?.id||!payload?.role)return
@@ -407,6 +441,22 @@ async function searchMarket(){
 async function toggleWatch(target){
  try{const watched=!Boolean(target[6]?.watched);const result=await football9394Api.watchPlayer(careerId.value,target[5],watched);applyCareerState(result.career);target[6].watched=watched;flash(watched?'Añadido a seguimiento.':'Eliminado del seguimiento.')}catch(error){flash(`No se pudo actualizar seguimiento: ${error.message}`)}
 }
+
+async function scoutMarketPlayer(playerOrTarget){
+ if(!careerId.value)return
+ const id=Number(Array.isArray(playerOrTarget)?playerOrTarget[5]:playerOrTarget?.id)
+ if(!id)return
+ try{
+  const result=await football9394Api.scoutPlayer(careerId.value,id)
+  applyCareerState(result.career)
+  if(selectedPlayer.value?.id===id){
+   const detail=await football9394Api.careerPlayer(careerId.value,id)
+   selectedPlayer.value={...detail,photo_url:historicalPlayerPhoto(detail.id),team_crest_url:historicalClubCrest(detail.team_id),market_value_display:detail.transfer_value_is_exact?formatSourceMoney(detail.estimated_transfer_value):`≈ ${formatSourceMoney(detail.estimated_transfer_value)}`}
+  }
+  await searchMarket()
+  flash(`Informe encargado · previsto ${formatDateShort(result.assignment.due_on)}.`)
+ }catch(error){flash(`No se pudo encargar el informe: ${error.message}`)}
+}
 async function submitTransfer(){
  if(!selectedTarget.value||!careerId.value)return
  try{const result=await football9394Api.openNegotiation(careerId.value,{playerId:selectedTarget.value[5],feeOffer:Number(transferFee.value),salaryOffer:Number(transferSalary.value),contractYears:Number(transferYears.value)});applyCareerState(result.career);selectedTarget.value=null;flash(`Oferta enviada · respuesta prevista ${result.negotiation.response_date}`)}catch(error){flash(`Negociación fallida: ${error.message}`)}
@@ -479,7 +529,7 @@ function handleShortcut(event){
  if(event.ctrlKey||event.metaKey||event.altKey)return
  const tag=String(event.target?.tagName||'').toLowerCase();if(['input','select','textarea','button'].includes(tag))return
  const key=String(event.key||'').toLowerCase()
- const routes={i:'home',p:'squad',t:'tactics',m:'market',g:'competitions',a:'calendar',n:'news',e:'economy',s:'national',h:'history'}
+ const routes={i:'home',p:'squad',t:'tactics',m:'market',f:'staff',g:'competitions',a:'calendar',n:'news',e:'economy',s:'national',h:'history'}
  if(key==='c'||key===' '){event.preventDefault();advance()}
  else if(routes[key])view.value=routes[key]
 }
@@ -590,6 +640,19 @@ onBeforeUnmount(()=>{
       @set-captain="appointCaptain"
     />
 
+    <StaffWorkspace
+      v-else-if="view==='staff'"
+      :staff="staffState"
+      @assign="assignStaffResponsibility"
+    />
+
+    <TrainingWorkspace
+      v-else-if="view==='training'"
+      :training="trainingState"
+      @save-plan="saveTrainingPlan"
+      @set-focus="setTrainingFocus"
+    />
+
     <TacticsWorkspace
       v-else-if="view==='tactics'"
       :formation="formation"
@@ -674,6 +737,8 @@ onBeforeUnmount(()=>{
       :active-negotiations="activeNegotiations"
       :incoming-offers="openIncomingOffers"
       :own-squad="squad"
+      :scouting="scoutingState"
+      :squad-plan="squadPlan"
       @update:query="marketQuery=$event"
       @update:position="marketPosition=$event"
       @update:free-agents="marketFreeAgents=$event"
@@ -682,7 +747,9 @@ onBeforeUnmount(()=>{
       @update:transfer-salary="transferSalary=$event"
       @update:transfer-years="transferYears=$event"
       @search="searchMarket"
+      @apply-plan="applyPlanNeed"
       @watch="toggleWatch"
+      @scout="scoutMarketPlayer"
       @open-player="openPlayer"
       @choose-target="chooseTarget"
       @submit="submitTransfer"
@@ -780,7 +847,7 @@ onBeforeUnmount(()=>{
     </div>
   </div>
 
-  <FootballPlayerProfileModal v-if="selectedPlayer" :player="selectedPlayer" :season="careerSeason" :tab="playerTab" @update:tab="playerTab=$event" @promise-role="promisePlayerRole" @close="selectedPlayer=null" />
+  <FootballPlayerProfileModal v-if="selectedPlayer" :player="selectedPlayer" :season="careerSeason" :tab="playerTab" @update:tab="playerTab=$event" @promise-role="promisePlayerRole" @scout-player="scoutMarketPlayer" @close="selectedPlayer=null" />
   <div v-if="notice" class="notice" role="status">{{notice}}</div>
   </template>
 </div>

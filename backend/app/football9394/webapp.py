@@ -120,6 +120,17 @@ class TransferListingPayload(BaseModel):
 class RolePromisePayload(BaseModel):
     role: str
 
+
+class StaffResponsibilityPayload(BaseModel):
+    assignee: str
+
+class TrainingPlanPayload(BaseModel):
+    intensity: str | None = None
+    weekly_plan: list[str] | None = None
+
+class TrainingFocusPayload(BaseModel):
+    focus: str
+
 class NationalSelectionPayload(BaseModel):
     player_ids: list[int]
 
@@ -410,6 +421,74 @@ def manager_career_calendar(career_id: str) -> list[dict]:
 @app.get("/api/football9394/careers/{career_id}/board")
 def manager_career_board(career_id: str) -> dict:
     return _load_manager_career(career_id).board_snapshot(persist=False)
+
+
+@app.get("/api/football9394/careers/{career_id}/staff")
+def manager_career_staff(career_id: str) -> dict:
+    return _load_manager_career(career_id).staff_snapshot()
+
+
+@app.put("/api/football9394/careers/{career_id}/staff/responsibilities/{responsibility_key}")
+def manager_assign_staff_responsibility(career_id: str, responsibility_key: str, payload: StaffResponsibilityPayload) -> dict:
+    career = _load_manager_career(career_id)
+    try:
+        staff = career.set_staff_responsibility(responsibility_key, payload.assignee)
+    except KeyError as exc:
+        raise HTTPException(status_code=404, detail=str(exc)) from exc
+    except ValueError as exc:
+        raise HTTPException(status_code=409, detail=str(exc)) from exc
+    _career_store().save(career.state)
+    return {"staff": staff, "career": career.snapshot()}
+
+
+@app.get("/api/football9394/careers/{career_id}/training")
+def manager_career_training(career_id: str) -> dict:
+    return _load_manager_career(career_id).training_snapshot()
+
+
+@app.put("/api/football9394/careers/{career_id}/training")
+def manager_update_training(career_id: str, payload: TrainingPlanPayload) -> dict:
+    career = _load_manager_career(career_id)
+    try:
+        training = career.set_training_plan(intensity=payload.intensity, weekly_plan=payload.weekly_plan)
+    except ValueError as exc:
+        raise HTTPException(status_code=422, detail=str(exc)) from exc
+    _career_store().save(career.state)
+    return {"training": training, "career": career.snapshot()}
+
+
+@app.put("/api/football9394/careers/{career_id}/training/players/{player_id}")
+def manager_update_training_focus(career_id: str, player_id: int, payload: TrainingFocusPayload) -> dict:
+    career = _load_manager_career(career_id)
+    try:
+        training = career.set_player_training_focus(player_id, payload.focus)
+    except ValueError as exc:
+        raise HTTPException(status_code=422, detail=str(exc)) from exc
+    _career_store().save(career.state)
+    return {"training": training, "career": career.snapshot()}
+
+
+@app.get("/api/football9394/careers/{career_id}/scouting")
+def manager_career_scouting(career_id: str) -> dict:
+    return _load_manager_career(career_id).scouting_snapshot()
+
+
+@app.post("/api/football9394/careers/{career_id}/scouting/{player_id}")
+def manager_start_scouting(career_id: str, player_id: int) -> dict:
+    career = _load_manager_career(career_id)
+    try:
+        assignment = career.start_scouting_player(player_id)
+    except KeyError as exc:
+        raise HTTPException(status_code=404, detail=str(exc)) from exc
+    except ValueError as exc:
+        raise HTTPException(status_code=409, detail=str(exc)) from exc
+    _career_store().save(career.state)
+    return {"assignment": assignment, "career": career.snapshot()}
+
+
+@app.get("/api/football9394/careers/{career_id}/squad-plan")
+def manager_squad_plan(career_id: str) -> dict:
+    return _load_manager_career(career_id).squad_plan_snapshot()
 
 
 @app.get("/api/football9394/careers/{career_id}/news")

@@ -1,0 +1,25 @@
+{
+  "checkpoint": "0.45.0-russia-rotor-torpedo-batch-deep",
+  "status": "pass",
+  "identity_conflicts_resolved": [
+    {
+      "retired_source_id": 9496652,
+      "canonical_source_id": 9497352,
+      "bdfutbol_id": "701521",
+      "player": "Andrey Alekseyevich Chernyshov",
+      "clubs": [
+        "Dynamo Moskva",
+        "Spartak Moskva"
+      ],
+      "decision": "merge_same_individual_profile_cross_club_and_preserve_both_spells"
+    }
+  ],
+  "policy": {
+    "identity_links_are_complete": true,
+    "metadata_is_not_fabricated": true,
+    "partial_metadata_explicit": true,
+    "ussr_birth_state_separate_from_successor_territory": true,
+    "citizenship_1993_not_inferred": true,
+    "transliterations_preserved": true
+  }
+}

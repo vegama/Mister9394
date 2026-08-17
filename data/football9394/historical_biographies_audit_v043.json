@@ -1,0 +1,13 @@
+{
+  "checkpoint": "0.43.0-belgium-final-six-deep",
+  "profiles_considered": 136,
+  "by_club": {
+    "RFC Liège": 24,
+    "Cercle Brugge": 24,
+    "Oostende": 19,
+    "KV Mechelen": 24,
+    "Gent": 25,
+    "Lierse": 20
+  },
+  "status": "pass"
+}

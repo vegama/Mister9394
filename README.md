@@ -1,5 +1,27 @@
 # Míster 93/94
 
+## Estado · checkpoint 0.49.0-training-load-scouting-capacity-flow
+
+La nueva pasada conecta varias funciones a la vez: **entrenamiento semanal, carga/fatiga/condición, riesgo médico, capacidad de scouting, geografía y envejecimiento de informes**, además de enlazar las necesidades del planificador directamente con el mercado. El usuario ya puede editar intensidad/sesiones/focos individuales desde la nueva superficie **Entrenamiento** y esas decisiones alteran estado real del jugador.
+
+El scouting ya no admite encargos infinitos: la capacidad depende de la estructura de staff, los desplazamientos añaden tiempo y los informes pierden confianza/precisión con los meses. Una lesión sufrida entrenando queda integrada con medicina/noticias y, si invalida una convocatoria guardada, el juego la repara de forma segura o explica que falta plantilla. Véase `docs/V049_TRAINING_LOAD_SCOUTING_CAPACITY_FLOW.md`.
+
+Regresión seleccionada: **85/85 pruebas ejecutadas PASS** en los grupos NF0/NF1/NF2/NF3, desarrollo, mercado, motor, F1–F8, M4–M14, gate M15 de cuatro perfiles, API y movilidad. El gate M15 de tres temporadas excede 180 s y se marca explícitamente como **no recertificado**, no como PASS. Frontend: **SFC/UI/Vue PASS 25/25**. `vite build` sigue sin certificarse porque el binario Vite no está materializado en este entorno.
+
+## Estado · checkpoint 0.48.0-functional-scouting-planning-staff-effects
+
+La nueva etapa **NF0–NF3** ya ha dejado de ser sólo infraestructura. La delegación del cuerpo técnico tiene consecuencias operativas y alimenta una primera vertical jugable de scouting, planificación de plantilla, medicina e informe del rival. El plan rector sigue en `docs/FM_REFERENCE_FUNCTIONAL_PLAN.md`.
+
+El mercado de jugadores externos ya no revela automáticamente la verdad del motor: muestra estimaciones y rangos según conocimiento persistente, permite encargar informes que tardan días y registra responsable/confianza. El planificador expone al usuario la misma lógica de necesidades que usa la IA, incluyendo cobertura, contratos, sucesión y excedentes. El área médica comunica intervalos y recomendaciones a través del responsable sanitario, y el análisis del rival limita la información táctica según la calidad del informe. Las negociaciones registran quién las dirige y su competencia tiene efectos moderados en tiempos y exigencias. Véase `docs/V048_FUNCTIONAL_SCOUTING_PLANNING_STAFF_EFFECTS.md`.
+
+Regresión seleccionada: **44/44 backend verdes** (30 del lote funcional/API/NF0/partido/mercado + 14 F1–F8) y gates frontend **SFC/UI/Vue PASS 24/24**. El `vite build` no se certifica en este entorno porque el binario Vite no está materializado; todos los gates previos sí pasan.
+
+## Estado · checkpoint 0.47.0-nf0-staff-responsibilities-base
+
+Se abre la nueva etapa de **profundidad funcional NF0–NF12**, inspirada en la filosofía de Football Manager pero adaptada a Míster 93/94. El plan rector queda guardado en `docs/FM_REFERENCE_FUNCTIONAL_PLAN.md`.
+
+NF0 ya tiene una primera vertical real: cuerpo técnico persistente por club, empleados generados claramente etiquetados cuando no existe fuente histórica individual, competencias funcionales, carga de trabajo y nueve responsabilidades que el usuario puede asumir o delegar sólo en personal elegible. La nueva superficie **Cuerpo técnico** está conectada a API y guardado; cambiar una responsabilidad persiste. Tests dedicados NF0 5/5, regresión API 16/16, movilidad afectada 2/2 y gates frontend SFC/UI/Vue PASS. NF0 sigue abierto: el siguiente paso es hacer que estas responsabilidades modifiquen información y resultados reales de scouting, médico, entrenamiento y mercado. Véase `docs/V047_NF0_STAFF_RESPONSIBILITIES_BASE.md`.
+
 ## Estado · checkpoint 0.40.0-belgium-antwerp-germinal-beveren-molenbeek-deep
 
 Bélgica sigue **abierta**. Después de profundizar Royal Antwerp, Germinal Ekeren, Beveren y Molenbeek, los huecos belgas bajan de 275→**183** fechas de nacimiento y de 248→**169** nacionalidades internacionales; también se reducen país de nacimiento 268→194, altura 322→262 y peso 369→330. La pasada corrige posiciones inferidas, separa homónimos (Steve/Michael Laeremans), conserva Estados históricos como Zaire cuando corresponde y documenta conflictos en lugar de inventar precisión. La regresión específica v0.36-v0.40 + identidad queda 26/26 PASS.

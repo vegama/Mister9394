@@ -17,5 +17,17 @@
   "not_separate_states_1993": {
     "76": "Montenegro was not a separate state in 1993; use FR Yugoslavia context",
     "129": "Kosovo was not a separate state in 1993; use FR Yugoslavia context"
+  },
+  "historical_birth_state_policy": {
+    "rule": "Place of birth, sovereign state at birth, 1993 citizenship/nationality and represented selection are independent facts.",
+    "ussr": "For births before dissolution in Soviet territory, historical_birth_state=USSR and a modern successor territory may be stored only in birth_territory_country_id; birth_country_id is not backfilled to the successor state.",
+    "other_historical_states": "The same rule applies to states such as the German Democratic Republic; modern territorial country IDs are lookup context only.",
+    "no_default": "Club, surname, birthplace, later nationality and profile nationality must never auto-assign 1993 citizenship or represented selection."
+  },
+  "transliteration_policy": {
+    "rule": "Keep source spellings/romanizations as aliases and choose a project display form without treating spelling variation as a separate person.",
+    "identity_gate": "Never merge identities on transliteration similarity alone; require stable evidence such as individual profile ID plus compatible club/season context.",
+    "profile_id_merge_gate": "A stable individual-profile ID is strong merge evidence when the historical club/season context is compatible.",
+    "cross_club_example": "Andrey Alekseyevich Chernyshov appears in Dynamo Moskva and Spartak Moskva staging but resolves to one BDFutbol individual profile and therefore one game identity."
   }
 }

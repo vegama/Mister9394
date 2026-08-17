@@ -1,0 +1,2369 @@
+{
+  "status": "complete",
+  "target_size": [
+    40,
+    55
+  ],
+  "format": "JPEG",
+  "mode": "RGB",
+  "converted": 168,
+  "skipped_existing": 2,
+  "unresolved": 0,
+  "invalid": 0,
+  "converted_rows": [
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\1100193.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9497269.jpg",
+      "original_size": [
+        118,
+        173
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9497269
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\1100565.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496598.jpg",
+      "original_size": [
+        120,
+        187
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496598
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\1100918.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496387.jpg",
+      "original_size": [
+        300,
+        390
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496387
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\1120556.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496611.jpg",
+      "original_size": [
+        217,
+        310
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496611
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\1127314.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496588.jpg",
+      "original_size": [
+        138,
+        205
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496588
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\1136862.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496568.jpg",
+      "original_size": [
+        107,
+        147
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496568
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\1136865.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9497292.jpg",
+      "original_size": [
+        117,
+        172
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9497292
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\1141650.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496607.jpg",
+      "original_size": [
+        133,
+        211
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496607
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\1150050.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9497308.jpg",
+      "original_size": [
+        273,
+        402
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9497308
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\1169816.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496569.jpg",
+      "original_size": [
+        142,
+        192
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496569
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\1170014.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496501.jpg",
+      "original_size": [
+        168,
+        221
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496501
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\1170016.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496602.jpg",
+      "original_size": [
+        133,
+        175
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496602
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\1171772.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496510.jpg",
+      "original_size": [
+        125,
+        182
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496510
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\1172029.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496565.jpg",
+      "original_size": [
+        128,
+        195
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496565
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\1173566.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496505.jpg",
+      "original_size": [
+        367,
+        480
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496505
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\1173610.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496509.jpg",
+      "original_size": [
+        148,
+        206
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496509
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\1173611.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496513.jpg",
+      "original_size": [
+        260,
+        373
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496513
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\1173814.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9497268.jpg",
+      "original_size": [
+        148,
+        222
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9497268
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\1173833.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496527.jpg",
+      "original_size": [
+        142,
+        210
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496527
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\1173844.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496586.jpg",
+      "original_size": [
+        257,
+        382
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496586
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\1173872.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496448.jpg",
+      "original_size": [
+        127,
+        186
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496448
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\1174844.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496535.jpg",
+      "original_size": [
+        131,
+        192
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496535
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\1175133.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496461.jpg",
+      "original_size": [
+        112,
+        167
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496461
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\1175139.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9497236.jpg",
+      "original_size": [
+        245,
+        347
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9497236
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\1175391.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496605.jpg",
+      "original_size": [
+        117,
+        161
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496605
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\1175418.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496606.jpg",
+      "original_size": [
+        80,
+        107
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496606
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\1175488.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496551.jpg",
+      "original_size": [
+        115,
+        151
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496551
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\1175498.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496555.jpg",
+      "original_size": [
+        101,
+        146
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496555
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\1175508.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496556.jpg",
+      "original_size": [
+        138,
+        198
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496556
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\1175509.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496558.jpg",
+      "original_size": [
+        131,
+        182
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496558
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\1175511.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496550.jpg",
+      "original_size": [
+        112,
+        160
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496550
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\1176188.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496490.jpg",
+      "original_size": [
+        112,
+        158
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496490
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\1176189.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496491.jpg",
+      "original_size": [
+        140,
+        183
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496491
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\1176274.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496533.jpg",
+      "original_size": [
+        130,
+        194
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496533
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\1176281.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496581.jpg",
+      "original_size": [
+        118,
+        178
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496581
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\1176291.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496531.jpg",
+      "original_size": [
+        177,
+        263
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496531
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\1176293.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496529.jpg",
+      "original_size": [
+        232,
+        367
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496529
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\1176296.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496528.jpg",
+      "original_size": [
+        287,
+        391
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496528
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\1176411.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496544.jpg",
+      "original_size": [
+        197,
+        277
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496544
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\1177909.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496511.jpg",
+      "original_size": [
+        158,
+        253
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496511
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\1178360.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496560.jpg",
+      "original_size": [
+        131,
+        202
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496560
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\1178568.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496534.jpg",
+      "original_size": [
+        330,
+        497
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496534
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\1178569.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496536.jpg",
+      "original_size": [
+        232,
+        355
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496536
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\1178572.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496576.jpg",
+      "original_size": [
+        232,
+        311
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496576
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\1178660.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9497345.jpg",
+      "original_size": [
+        117,
+        177
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9497345
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\1178709.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496554.jpg",
+      "original_size": [
+        120,
+        152
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496554
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\1178710.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496548.jpg",
+      "original_size": [
+        126,
+        167
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496548
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\1178714.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9497322.jpg",
+      "original_size": [
+        390,
+        545
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9497322
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\1178793.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9497305.jpg",
+      "original_size": [
+        300,
+        390
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9497305
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\1179555.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496516.jpg",
+      "original_size": [
+        141,
+        187
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496516
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\1179565.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496507.jpg",
+      "original_size": [
+        135,
+        196
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496507
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\1179619.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496573.jpg",
+      "original_size": [
+        157,
+        227
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496573
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\1179620.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496574.jpg",
+      "original_size": [
+        141,
+        207
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496574
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\1179621.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9497331.jpg",
+      "original_size": [
+        150,
+        212
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9497331
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\1179622.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496575.jpg",
+      "original_size": [
+        137,
+        192
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496575
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\1179810.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496451.jpg",
+      "original_size": [
+        136,
+        191
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496451
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\1179822.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9497330.jpg",
+      "original_size": [
+        302,
+        422
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9497330
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\1179829.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496580.jpg",
+      "original_size": [
+        136,
+        185
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496580
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\1179831.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496584.jpg",
+      "original_size": [
+        132,
+        185
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496584
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\1179837.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496587.jpg",
+      "original_size": [
+        337,
+        472
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496587
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\1179844.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9497311.jpg",
+      "original_size": [
+        511,
+        790
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9497311
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\1179907.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496537.jpg",
+      "original_size": [
+        580,
+        701
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496537
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\1179908.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496523.jpg",
+      "original_size": [
+        137,
+        172
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496523
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\1179909.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9497312.jpg",
+      "original_size": [
+        505,
+        736
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9497312
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\1179911.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9497313.jpg",
+      "original_size": [
+        165,
+        257
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9497313
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\1179940.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496596.jpg",
+      "original_size": [
+        102,
+        147
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496596
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\1179941.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496609.jpg",
+      "original_size": [
+        177,
+        242
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496609
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\1179943.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496604.jpg",
+      "original_size": [
+        312,
+        417
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496604
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\1179945.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9497348.jpg",
+      "original_size": [
+        187,
+        251
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9497348
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\1179946.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496601.jpg",
+      "original_size": [
+        95,
+        137
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496601
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\1179950.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496552.jpg",
+      "original_size": [
+        195,
+        262
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496552
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\41280.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496540.jpg",
+      "original_size": [
+        127,
+        190
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496540
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\42603.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9495347.jpg",
+      "original_size": [
+        812,
+        1268
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9495347
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\42795.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9497293.jpg",
+      "original_size": [
+        282,
+        382
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9497293
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\45594.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9497233.jpg",
+      "original_size": [
+        287,
+        457
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9497233
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\45600.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496603.jpg",
+      "original_size": [
+        247,
+        390
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496603
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\45601.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496589.jpg",
+      "original_size": [
+        191,
+        294
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496589
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\47785.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9495333.jpg",
+      "original_size": [
+        90,
+        165
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9495333
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\47967.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9495334.jpg",
+      "original_size": [
+        306,
+        548
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9495334
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\53273.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9497271.jpg",
+      "original_size": [
+        90,
+        169
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9497271
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\55344.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9495320.jpg",
+      "original_size": [
+        114,
+        196
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9495320
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\55558.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9495321.jpg",
+      "original_size": [
+        93,
+        170
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9495321
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\55559.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9495335.jpg",
+      "original_size": [
+        104,
+        182
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9495335
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\55570.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496006.jpg",
+      "original_size": [
+        70,
+        108
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496006
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\55571.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496436.jpg",
+      "original_size": [
+        142,
+        223
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496436
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\55572.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496579.jpg",
+      "original_size": [
+        112,
+        174
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496579
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\55573.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496373.jpg",
+      "original_size": [
+        70,
+        128
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496373
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\55575.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496440.jpg",
+      "original_size": [
+        64,
+        118
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496440
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\55576.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496370.jpg",
+      "original_size": [
+        89,
+        153
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496370
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\55581.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9495343.jpg",
+      "original_size": [
+        94,
+        156
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9495343
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\55583.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496450.jpg",
+      "original_size": [
+        260,
+        454
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496450
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\55587.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496582.jpg",
+      "original_size": [
+        166,
+        240
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496582
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\55594.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496459.jpg",
+      "original_size": [
+        248,
+        367
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496459
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\55597.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496368.jpg",
+      "original_size": [
+        142,
+        212
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496368
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\55599.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496492.jpg",
+      "original_size": [
+        254,
+        415
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496492
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\55602.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496369.jpg",
+      "original_size": [
+        145,
+        224
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496369
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\55604.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496522.jpg",
+      "original_size": [
+        199,
+        329
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496522
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\56029.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496612.jpg",
+      "original_size": [
+        163,
+        279
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496612
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\56070.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496435.jpg",
+      "original_size": [
+        184,
+        303
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496435
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\56368.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496578.jpg",
+      "original_size": [
+        143,
+        248
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496578
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\56576.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496926.jpg",
+      "original_size": [
+        301,
+        569
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496926
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\57065.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496532.jpg",
+      "original_size": [
+        103,
+        167
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496532
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\57067.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496583.jpg",
+      "original_size": [
+        185,
+        278
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496583
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\57633.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9495330.jpg",
+      "original_size": [
+        303,
+        448
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9495330
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\57638.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9497240.jpg",
+      "original_size": [
+        151,
+        261
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9497240
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\57913.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496443.jpg",
+      "original_size": [
+        97,
+        169
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496443
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\57975.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496378.jpg",
+      "original_size": [
+        129,
+        242
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496378
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\59641.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496506.jpg",
+      "original_size": [
+        110,
+        145
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496506
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\59693.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496384.jpg",
+      "original_size": [
+        143,
+        256
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496384
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\59697.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496382.jpg",
+      "original_size": [
+        87,
+        142
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496382
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\59709.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9494161.jpg",
+      "original_size": [
+        240,
+        443
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9494161
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\700577.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496567.jpg",
+      "original_size": [
+        206,
+        404
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496567
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\700578.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496372.jpg",
+      "original_size": [
+        100,
+        167
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496372
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\700592.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496542.jpg",
+      "original_size": [
+        86,
+        166
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496542
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\700597.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496499.jpg",
+      "original_size": [
+        106,
+        166
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496499
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\701145.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9495322.jpg",
+      "original_size": [
+        65,
+        128
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9495322
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\702191.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9497265.jpg",
+      "original_size": [
+        95,
+        149
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9497265
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\702407.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496517.jpg",
+      "original_size": [
+        117,
+        172
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496517
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\702408.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496386.jpg",
+      "original_size": [
+        126,
+        222
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496386
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\702409.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496496.jpg",
+      "original_size": [
+        138,
+        235
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496496
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\702418.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496375.jpg",
+      "original_size": [
+        90,
+        144
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496375
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\702419.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496454.jpg",
+      "original_size": [
+        98,
+        166
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496454
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\702569.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496563.jpg",
+      "original_size": [
+        87,
+        156
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496563
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\702611.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496383.jpg",
+      "original_size": [
+        177,
+        263
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496383
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\702612.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9495328.jpg",
+      "original_size": [
+        144,
+        245
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9495328
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\702613.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496376.jpg",
+      "original_size": [
+        145,
+        245
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496376
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\702722.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496439.jpg",
+      "original_size": [
+        101,
+        175
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496439
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\702723.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496445.jpg",
+      "original_size": [
+        81,
+        148
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496445
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\702726.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9497316.jpg",
+      "original_size": [
+        180,
+        238
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9497316
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\702734.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9497326.jpg",
+      "original_size": [
+        104,
+        160
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9497326
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\702737.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496530.jpg",
+      "original_size": [
+        221,
+        378
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496530
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\702747.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496377.jpg",
+      "original_size": [
+        155,
+        260
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496377
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\702758.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496502.jpg",
+      "original_size": [
+        214,
+        365
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496502
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\702759.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9497241.jpg",
+      "original_size": [
+        101,
+        150
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9497241
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\702778.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496520.jpg",
+      "original_size": [
+        95,
+        175
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496520
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\702779.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9497301.jpg",
+      "original_size": [
+        98,
+        171
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9497301
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\702820.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496525.jpg",
+      "original_size": [
+        213,
+        352
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496525
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\702823.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496564.jpg",
+      "original_size": [
+        127,
+        202
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496564
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\702825.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496545.jpg",
+      "original_size": [
+        75,
+        123
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496545
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\702879.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496585.jpg",
+      "original_size": [
+        90,
+        144
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496585
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\702886.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496549.jpg",
+      "original_size": [
+        205,
+        348
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496549
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\702890.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496526.jpg",
+      "original_size": [
+        103,
+        185
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496526
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\702935.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496599.jpg",
+      "original_size": [
+        88,
+        173
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496599
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\702937.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9497321.jpg",
+      "original_size": [
+        86,
+        155
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9497321
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\703103.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496508.jpg",
+      "original_size": [
+        264,
+        392
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496508
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\705929.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496577.jpg",
+      "original_size": [
+        105,
+        145
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496577
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\707164.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496521.jpg",
+      "original_size": [
+        146,
+        237
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496521
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\707940.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496570.jpg",
+      "original_size": [
+        166,
+        268
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496570
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\709140.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9494164.jpg",
+      "original_size": [
+        195,
+        322
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9494164
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\709341.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496925.jpg",
+      "original_size": [
+        195,
+        323
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496925
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\709357.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9497524.jpg",
+      "original_size": [
+        104,
+        176
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9497524
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\709458.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9494168.jpg",
+      "original_size": [
+        249,
+        394
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9494168
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\709459.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9497525.jpg",
+      "original_size": [
+        362,
+        612
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9497525
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\709462.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496938.jpg",
+      "original_size": [
+        107,
+        169
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496938
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\709463.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496936.jpg",
+      "original_size": [
+        317,
+        540
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496936
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\709465.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496940.jpg",
+      "original_size": [
+        227,
+        402
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496940
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\710158.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9494176.jpg",
+      "original_size": [
+        120,
+        215
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9494176
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\710166.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496927.jpg",
+      "original_size": [
+        142,
+        263
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496927
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\710176.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9494160.jpg",
+      "original_size": [
+        184,
+        333
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9494160
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\710177.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496923.jpg",
+      "original_size": [
+        131,
+        254
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496923
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\710181.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9494170.jpg",
+      "original_size": [
+        253,
+        385
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9494170
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\710182.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496924.jpg",
+      "original_size": [
+        220,
+        406
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496924
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\71783.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496503.jpg",
+      "original_size": [
+        100,
+        150
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9496503
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\85483.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9494219.jpg",
+      "original_size": [
+        263,
+        404
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9494219
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\85940.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9494244.jpg",
+      "original_size": [
+        245,
+        434
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9494244
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\91791.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9497294.jpg",
+      "original_size": [
+        422,
+        678
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9497294
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\95861.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9495308.jpg",
+      "original_size": [
+        151,
+        227
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9495308
+    },
+    {
+      "source": "data\\football9394\\bdfutbol_photos_raw\\98920.jpg",
+      "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9494209.jpg",
+      "original_size": [
+        460,
+        750
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9494209
+    }
+  ],
+  "unresolved_files": [],
+  "invalid_files": []
+}

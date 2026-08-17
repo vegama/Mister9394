@@ -1,5 +1,9 @@
 # Míster 93/94 — Plan maestro de estudio
 
+## Nueva etapa de profundidad funcional · NF0–NF12 (abierta en 0.47)
+
+Se abre una nueva etapa inspirada en la filosofía de gestión de Football Manager: staff real, delegación, conocimiento imperfecto, planificación, entrenamiento, táctica conductual, relaciones y consecuencias conectadas. Para evitar colisión con el antiguo bloque F1–F8 ya cerrado, el nuevo plan se identifica como **NF0–NF12**. NF0 (arquitectura humana del club y responsabilidades) está activo. Documento rector: `docs/FM_REFERENCE_FUNCTIONAL_PLAN.md`.
+
 ## Estado del plan · checkpoint 0.20.0-p10-plan-closed
 
 **P1–P10 cerrados.** La vertical de carrera ambiciosa está completa: firma individual de partido, mercado planificado y competitivo, reglamento 1993-94 blindado, carrera internacional paralela y gate final de perfiles/nómada/invariantes longitudinales. El reparto permanece congelado y el reglamento 1993-94 es permanente: no Bosman, no liberalización futura de extranjeros y no reformas automáticas de ventanas/inscripción.

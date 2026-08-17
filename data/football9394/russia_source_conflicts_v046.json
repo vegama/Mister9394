@@ -1,0 +1,154 @@
+{
+  "checkpoint": "0.46.0-russia-uralmash-asmaral-batch-deep",
+  "status": "pass",
+  "merge_groups": [
+    {
+      "bdfutbol_id": "591588",
+      "canonical_source_id": 9497401,
+      "retired_source_ids": [
+        9496736
+      ],
+      "target_source_ids": [
+        9496736
+      ],
+      "preexisting_canonical": true
+    },
+    {
+      "bdfutbol_id": "591077",
+      "canonical_source_id": 9496519,
+      "retired_source_ids": [
+        9496738
+      ],
+      "target_source_ids": [
+        9496738
+      ],
+      "preexisting_canonical": true
+    },
+    {
+      "bdfutbol_id": "590748",
+      "canonical_source_id": 9496757,
+      "retired_source_ids": [
+        9496770
+      ],
+      "target_source_ids": [
+        9496757,
+        9496770
+      ],
+      "preexisting_canonical": false
+    },
+    {
+      "bdfutbol_id": "63255",
+      "canonical_source_id": 9496647,
+      "retired_source_ids": [
+        9497426
+      ],
+      "target_source_ids": [
+        9497426
+      ],
+      "preexisting_canonical": true
+    },
+    {
+      "bdfutbol_id": "1180233",
+      "canonical_source_id": 9496670,
+      "retired_source_ids": [
+        9496773
+      ],
+      "target_source_ids": [
+        9496773
+      ],
+      "preexisting_canonical": true
+    },
+    {
+      "bdfutbol_id": "1179603",
+      "canonical_source_id": 9497436,
+      "retired_source_ids": [
+        9497469
+      ],
+      "target_source_ids": [
+        9497436,
+        9497469
+      ],
+      "preexisting_canonical": false
+    },
+    {
+      "bdfutbol_id": "6512",
+      "canonical_source_id": 9496812,
+      "retired_source_ids": [
+        9497495
+      ],
+      "target_source_ids": [
+        9496812,
+        9497495
+      ],
+      "preexisting_canonical": false
+    },
+    {
+      "bdfutbol_id": "1181061",
+      "canonical_source_id": 9497455,
+      "retired_source_ids": [
+        9496900
+      ],
+      "target_source_ids": [
+        9497455,
+        9496900
+      ],
+      "preexisting_canonical": false
+    },
+    {
+      "bdfutbol_id": "591008",
+      "canonical_source_id": 9497459,
+      "retired_source_ids": [
+        9496892
+      ],
+      "target_source_ids": [
+        9497459,
+        9496892
+      ],
+      "preexisting_canonical": false
+    },
+    {
+      "bdfutbol_id": "610593",
+      "canonical_source_id": 9496863,
+      "retired_source_ids": [
+        9496882
+      ],
+      "target_source_ids": [
+        9496863,
+        9496882
+      ],
+      "preexisting_canonical": false
+    },
+    {
+      "bdfutbol_id": "701741",
+      "canonical_source_id": 9495358,
+      "retired_source_ids": [
+        9497498
+      ],
+      "target_source_ids": [
+        9497498
+      ],
+      "preexisting_canonical": true
+    }
+  ],
+  "retired_source_ids": [
+    9496736,
+    9496738,
+    9496770,
+    9496773,
+    9496882,
+    9496892,
+    9496900,
+    9497426,
+    9497469,
+    9497495,
+    9497498
+  ],
+  "policy": {
+    "identity_links_are_complete": true,
+    "metadata_is_not_fabricated": true,
+    "ussr_birth_state_separate_from_successor_territory": true,
+    "citizenship_1993_not_inferred": true,
+    "transliterations_preserved": true,
+    "stable_profile_id_is_merge_gate": true
+  }
+}

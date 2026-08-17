@@ -1,0 +1,37 @@
+{
+  "checkpoint": "0.44.0-russia-spartak-deep",
+  "status": "pass",
+  "conflicts": [
+    {
+      "source_id": 9495357,
+      "player": "Ramiz Mehman oğlu Mamedov",
+      "field": "birth_date",
+      "prior": "1972-05-21",
+      "resolved": "1972-08-21",
+      "decision": "individual profile + independent corroboration wins",
+      "source_urls": [
+        "https://www.bdfutbol.com/en/j/j705104.html",
+        "https://www.transfermarkt.com/ramiz-mamedov/profil/spieler/67117"
+      ]
+    }
+  ],
+  "source_drift": {
+    "source_url": "https://www.bdfutbol.com/en/t/t1993-9410023.html",
+    "pinned_staging_rows": 33,
+    "current_page_additional_names": [
+      "Shmykov",
+      "Masalitin",
+      "Ternavskiy",
+      "Alenichev"
+    ],
+    "decision": "do_not_auto_add_in_v044",
+    "reason": "Current BDF page differs from the pinned staging snapshot; reconcile transfer/call-up timing before changing the 1993 roster cardinality."
+  },
+  "policy": {
+    "birth_state_separated": true,
+    "modern_successor_birth_backfill": false,
+    "citizenship_1993_separate": true,
+    "represented_selection_separate": true,
+    "transliterations_preserved": true
+  }
+}

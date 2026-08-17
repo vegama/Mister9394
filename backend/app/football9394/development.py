@@ -34,6 +34,10 @@ def initial_player_development(players: Iterable[dict[str, Any]]) -> dict[str, d
             "form": 70,
             "morale": 70,
             "condition": 100,
+            "training_load": 0,
+            "fatigue": 0,
+            "injury_risk": 12,
+            "last_training_session": None,
             "injury_days": 0,
             "current_injury": None,
             "injury_history": [],
@@ -73,6 +77,12 @@ def recover_one_day(state: dict[str, dict[str, Any]], *, game_date: date | None 
             availability_changed = True
         recovery = 2 if injury == 0 else 1
         row["condition"] = int(_clamp(int(row.get("condition") or 0) + recovery, 0, 100))
+        # Daily recovery clears part of accumulated workload. Training later in
+        # the day may add it back depending on the club plan.
+        row["training_load"] = max(0, int(row.get("training_load") or 0) - (5 if injury == 0 else 3))
+        row["fatigue"] = max(0, int(row.get("fatigue") or 0) - (4 if injury == 0 else 2))
+        row.setdefault("injury_risk", 12)
+        row.setdefault("last_training_session", None)
         form = int(row.get("form") or 70)
         if form > 70:
             form -= 1
@@ -142,6 +152,10 @@ def apply_match_development(
             minutes = 28
         row["season_minutes"] = int(row.get("season_minutes") or 0) + minutes
         row["condition"] = int(_clamp(int(row.get("condition") or 100) - rng.randint(7, 13), 0, 100))
+        # Match load feeds the same persistent workload model used by training.
+        match_load = 18 if pid in starter_set else 8
+        row["training_load"] = max(0, min(100, int(row.get("training_load") or 0) + match_load))
+        row["fatigue"] = max(0, min(100, int(row.get("fatigue") or 0) + (14 if pid in starter_set else 6)))
         form_delta = 2 if won else 1 if drew else -2
         morale_delta = 2 if won else 0 if drew else -1
         dev = 0.13 if won else 0.05 if drew else -0.08

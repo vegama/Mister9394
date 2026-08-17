@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "checkpoint": "0.43.0-belgium-final-six-deep",
+  "queue": [],
+  "completed_clubs": [
+    "RFC Liège",
+    "Cercle Brugge",
+    "Oostende",
+    "KV Mechelen",
+    "Gent",
+    "Lierse"
+  ],
+  "belgium_queue_complete": true,
+  "russia_status": "unlocked_next_but_untouched_in_v043"
+}

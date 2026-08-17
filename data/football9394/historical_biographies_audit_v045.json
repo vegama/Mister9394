@@ -1,0 +1,15 @@
+{
+  "checkpoint": "0.45.0-russia-rotor-torpedo-batch-deep",
+  "clubs": [
+    "Rotor Volgograd",
+    "Dynamo Moskva",
+    "Tekstilshchik Kamyshin",
+    "Lokomotiv Moskva",
+    "Spartak Vladikavkaz",
+    "Torpedo Moskva"
+  ],
+  "profiles_considered": 159,
+  "existing_source_backed_biographies_preserved": 159,
+  "cross_club_biography_merged_for_source_id": 9497352,
+  "status": "pass"
+}

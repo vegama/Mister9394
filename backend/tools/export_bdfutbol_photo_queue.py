@@ -70,6 +70,11 @@ def build_queue(registry_path: Path = DEFAULT_REGISTRY) -> list[dict[str, Any]]:
             "exact_name_birthdate_source_profile_gate_v039",
             "exact_name_birthdate_source_profile_gate_v040",
             "exact_name_birthdate_source_profile_gate_v041",
+            "exact_name_birthdate_source_profile_gate_v042",
+            "exact_name_birthdate_source_profile_gate_v043",
+            "exact_name_birthdate_source_profile_gate_v044",
+            "individual_profile_id_identity_gate_v045",
+            "individual_profile_id_identity_gate_v046",
         }:
             continue
         item = {field: row.get(field) for field in QUEUE_FIELDS}

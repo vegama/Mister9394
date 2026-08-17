@@ -1,0 +1,1285 @@
+{
+  "checkpoint": "0.45.0-russia-rotor-torpedo-batch-deep",
+  "clubs": [
+    "Rotor Volgograd",
+    "Dynamo Moskva",
+    "Tekstilshchik Kamyshin",
+    "Lokomotiv Moskva",
+    "Spartak Vladikavkaz",
+    "Torpedo Moskva"
+  ],
+  "players": [
+    {
+      "club": "Rotor Volgograd",
+      "source_id": 9496619,
+      "full_name": "Andrey Ivanovich Manannikov",
+      "bdfutbol_id": "1159052",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1159052.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9411034.html"
+    },
+    {
+      "club": "Rotor Volgograd",
+      "source_id": 9496620,
+      "full_name": "Sergey Vasilyevich Nechay",
+      "bdfutbol_id": "591228",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j591228.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9411034.html"
+    },
+    {
+      "club": "Rotor Volgograd",
+      "source_id": 9496621,
+      "full_name": "Volodymyr Vasylovich Gerashchenko",
+      "bdfutbol_id": "1162780",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1162780.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9411034.html"
+    },
+    {
+      "club": "Rotor Volgograd",
+      "source_id": 9496622,
+      "full_name": "Aleksandr Nikolayevich Shmarko",
+      "bdfutbol_id": "590257",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j590257.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9411034.html"
+    },
+    {
+      "club": "Rotor Volgograd",
+      "source_id": 9496623,
+      "full_name": "Valeriy Ivanovich Burlachenko",
+      "bdfutbol_id": "591097",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j591097.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9411034.html"
+    },
+    {
+      "club": "Rotor Volgograd",
+      "source_id": 9496624,
+      "full_name": "Igor Anatolyevich Menshchikov",
+      "bdfutbol_id": "590819",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j590819.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9411034.html"
+    },
+    {
+      "club": "Rotor Volgograd",
+      "source_id": 9496625,
+      "full_name": "Aleksandr Anatolyevich Tsarenko",
+      "bdfutbol_id": "1159058",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1159058.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9411034.html"
+    },
+    {
+      "club": "Rotor Volgograd",
+      "source_id": 9496626,
+      "full_name": "Aleksandr Valentinovich Zhidkov",
+      "bdfutbol_id": "590880",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j590880.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9411034.html"
+    },
+    {
+      "club": "Rotor Volgograd",
+      "source_id": 9496627,
+      "full_name": "Oleg Aleksandrovich Veretennikov",
+      "bdfutbol_id": "66381",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j66381.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9411034.html"
+    },
+    {
+      "club": "Rotor Volgograd",
+      "source_id": 9496628,
+      "full_name": "Valeriy Vyacheslavovich Yesipov",
+      "bdfutbol_id": "590185",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j590185.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9411034.html"
+    },
+    {
+      "club": "Rotor Volgograd",
+      "source_id": 9496629,
+      "full_name": "Vladimir Viktorovich Niederhaus",
+      "bdfutbol_id": "1159061",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1159061.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9411034.html"
+    },
+    {
+      "club": "Rotor Volgograd",
+      "source_id": 9496630,
+      "full_name": "Sergey Anatolyevich Gritsenko",
+      "bdfutbol_id": "1158991",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1158991.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9411034.html"
+    },
+    {
+      "club": "Rotor Volgograd",
+      "source_id": 9496631,
+      "full_name": "Andrey Valeryevich Kovalenko",
+      "bdfutbol_id": "591081",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j591081.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9411034.html"
+    },
+    {
+      "club": "Rotor Volgograd",
+      "source_id": 9496632,
+      "full_name": "Oleg Valerievich Stogov",
+      "bdfutbol_id": "1179649",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1179649.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9411034.html"
+    },
+    {
+      "club": "Rotor Volgograd",
+      "source_id": 9496633,
+      "full_name": "Alexey Petrovich Gerasimenko",
+      "bdfutbol_id": "44755",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j44755.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9411034.html"
+    },
+    {
+      "club": "Rotor Volgograd",
+      "source_id": 9496634,
+      "full_name": "Alexandr Borisovich Nikitin",
+      "bdfutbol_id": "1159068",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1159068.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9411034.html"
+    },
+    {
+      "club": "Rotor Volgograd",
+      "source_id": 9496635,
+      "full_name": "Aleksandr Alekseevich Eshchenko",
+      "bdfutbol_id": "1159064",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1159064.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9411034.html"
+    },
+    {
+      "club": "Rotor Volgograd",
+      "source_id": 9496636,
+      "full_name": "Oleg Mikhailovich Nechayev",
+      "bdfutbol_id": "590599",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j590599.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9411034.html"
+    },
+    {
+      "club": "Rotor Volgograd",
+      "source_id": 9497364,
+      "full_name": "Sergey Alekseyevich Kuznetsov",
+      "bdfutbol_id": "1159056",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1159056.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9411034.html"
+    },
+    {
+      "club": "Rotor Volgograd",
+      "source_id": 9497365,
+      "full_name": "Evgeniy Vladimirovich Shkilov",
+      "bdfutbol_id": "1159063",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1159063.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9411034.html"
+    },
+    {
+      "club": "Rotor Volgograd",
+      "source_id": 9497366,
+      "full_name": "Yuriy Stepanovich Konovalov",
+      "bdfutbol_id": "1178625",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1178625.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9411034.html"
+    },
+    {
+      "club": "Rotor Volgograd",
+      "source_id": 9497367,
+      "full_name": "Andrey Gennadievich Miroshnichenko",
+      "bdfutbol_id": "1159067",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1159067.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9411034.html"
+    },
+    {
+      "club": "Rotor Volgograd",
+      "source_id": 9497368,
+      "full_name": "Aleksey Yuryevich Perminov",
+      "bdfutbol_id": "1177846",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1177846.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9411034.html"
+    },
+    {
+      "club": "Dynamo Moskva",
+      "source_id": 9496637,
+      "full_name": "Valeriy Semenovich Kleymenov",
+      "bdfutbol_id": "1159118",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1159118.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9410165.html"
+    },
+    {
+      "club": "Dynamo Moskva",
+      "source_id": 9494086,
+      "full_name": "Omari Mikhailovich Tetradze",
+      "bdfutbol_id": "99702",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j99702.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9410165.html"
+    },
+    {
+      "club": "Dynamo Moskva",
+      "source_id": 9495358,
+      "full_name": "Yuri Mikhailovich Kovtun",
+      "bdfutbol_id": "701741",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j701741.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9410165.html"
+    },
+    {
+      "club": "Dynamo Moskva",
+      "source_id": 9496638,
+      "full_name": "Vyacheslav Vyacheslavovich Tsarev Jr.",
+      "bdfutbol_id": "590937",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j590937.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9410165.html"
+    },
+    {
+      "club": "Dynamo Moskva",
+      "source_id": 9496639,
+      "full_name": "Sergey Anatolyevich Timofeev",
+      "bdfutbol_id": "1177845",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1177845.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9410165.html"
+    },
+    {
+      "club": "Dynamo Moskva",
+      "source_id": 9496640,
+      "full_name": "Bakhva Otarovich Tedeyev",
+      "bdfutbol_id": "590232",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j590232.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9410165.html"
+    },
+    {
+      "club": "Dynamo Moskva",
+      "source_id": 9496641,
+      "full_name": "Yuriy Mykolayovych Kalitvintsev",
+      "bdfutbol_id": "44759",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j44759.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9410165.html"
+    },
+    {
+      "club": "Dynamo Moskva",
+      "source_id": 9496642,
+      "full_name": "Evgeniy Gennadyevich Smertin",
+      "bdfutbol_id": "590927",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j590927.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9410165.html"
+    },
+    {
+      "club": "Dynamo Moskva",
+      "source_id": 9496643,
+      "full_name": "Igor Vitalyevich Simutenkov",
+      "bdfutbol_id": "1084",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1084.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9410165.html"
+    },
+    {
+      "club": "Dynamo Moskva",
+      "source_id": 9496644,
+      "full_name": "Dmitri Nikolayevich Cheryshev",
+      "bdfutbol_id": "605",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j605.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9410165.html"
+    },
+    {
+      "club": "Dynamo Moskva",
+      "source_id": 9496645,
+      "full_name": "Yuriy Ivanovich Tishkov",
+      "bdfutbol_id": "1177858",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1177858.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9410165.html"
+    },
+    {
+      "club": "Dynamo Moskva",
+      "source_id": 9496646,
+      "full_name": "Andrey Ruslanovich Smetanin",
+      "bdfutbol_id": "590881",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j590881.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9410165.html"
+    },
+    {
+      "club": "Dynamo Moskva",
+      "source_id": 9496647,
+      "full_name": "Sergei Nikolayevich Krutov",
+      "bdfutbol_id": "63255",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j63255.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9410165.html"
+    },
+    {
+      "club": "Dynamo Moskva",
+      "source_id": 9496648,
+      "full_name": "Igor Ivanovich Dobrovolski",
+      "bdfutbol_id": "1078",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1078.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9410165.html"
+    },
+    {
+      "club": "Dynamo Moskva",
+      "source_id": 9496649,
+      "full_name": "Kirill Nikolaevich Rybakov",
+      "bdfutbol_id": "1177703",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1177703.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9410165.html"
+    },
+    {
+      "club": "Dynamo Moskva",
+      "source_id": 9496650,
+      "full_name": "Aleksey Viktorovich Selezov",
+      "bdfutbol_id": "1180830",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1180830.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9410165.html"
+    },
+    {
+      "club": "Dynamo Moskva",
+      "source_id": 9496651,
+      "full_name": "Dmitriy Sergeyevich Kramarenko",
+      "bdfutbol_id": "590772",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j590772.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9410165.html"
+    },
+    {
+      "club": "Dynamo Moskva",
+      "source_id": 9496652,
+      "full_name": "Andrey Alekseyevich Chernyshov",
+      "bdfutbol_id": "701521",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j701521.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9410165.html"
+    },
+    {
+      "club": "Dynamo Moskva",
+      "source_id": 9497369,
+      "full_name": "Sergei Petrovich Derkach",
+      "bdfutbol_id": "1071151",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1071151.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9410165.html"
+    },
+    {
+      "club": "Dynamo Moskva",
+      "source_id": 9497370,
+      "full_name": "Sargis Hovhannisyan",
+      "bdfutbol_id": "591149",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j591149.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9410165.html"
+    },
+    {
+      "club": "Dynamo Moskva",
+      "source_id": 9497371,
+      "full_name": "Yuriy Arkadyevich Gudymenko",
+      "bdfutbol_id": "1180179",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1180179.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9410165.html"
+    },
+    {
+      "club": "Dynamo Moskva",
+      "source_id": 9497372,
+      "full_name": "Sergey Vladimirovich Nekrasov",
+      "bdfutbol_id": "1159313",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1159313.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9410165.html"
+    },
+    {
+      "club": "Dynamo Moskva",
+      "source_id": 9497373,
+      "full_name": "Igor Valentinovich Varlamov",
+      "bdfutbol_id": "1160808",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1160808.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9410165.html"
+    },
+    {
+      "club": "Dynamo Moskva",
+      "source_id": 9497374,
+      "full_name": "Igor Yevgenyevich Sklyarov",
+      "bdfutbol_id": "1071146",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1071146.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9410165.html"
+    },
+    {
+      "club": "Dynamo Moskva",
+      "source_id": 9497375,
+      "full_name": "Aleksey Evgenievich Savchenko",
+      "bdfutbol_id": "1178270",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1178270.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9410165.html"
+    },
+    {
+      "club": "Dynamo Moskva",
+      "source_id": 9497376,
+      "full_name": "Aleksey Alexandrovich Filippov",
+      "bdfutbol_id": "1178257",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1178257.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9410165.html"
+    },
+    {
+      "club": "Dynamo Moskva",
+      "source_id": 9497377,
+      "full_name": "Igor Aleksandrovich Gavrilin",
+      "bdfutbol_id": "591053",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j591053.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9410165.html"
+    },
+    {
+      "club": "Dynamo Moskva",
+      "source_id": 9497378,
+      "full_name": "Vladimir Nikolaevich Kostyuk",
+      "bdfutbol_id": "1180829",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1180829.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9410165.html"
+    },
+    {
+      "club": "Dynamo Moskva",
+      "source_id": 9497379,
+      "full_name": "Maksim Viktorovich Layushkin",
+      "bdfutbol_id": "610553",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j610553.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9410165.html"
+    },
+    {
+      "club": "Tekstilshchik Kamyshin",
+      "source_id": 9496653,
+      "full_name": "Andrey Nikolayevich Samorukov",
+      "bdfutbol_id": "590926",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j590926.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9411094.html"
+    },
+    {
+      "club": "Tekstilshchik Kamyshin",
+      "source_id": 9496654,
+      "full_name": "Aleksey Slaviyevich Morozov",
+      "bdfutbol_id": "591050",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j591050.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9411094.html"
+    },
+    {
+      "club": "Tekstilshchik Kamyshin",
+      "source_id": 9496655,
+      "full_name": "Andrey Vladimirovich Prokhorov",
+      "bdfutbol_id": "1177862",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1177862.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9411094.html"
+    },
+    {
+      "club": "Tekstilshchik Kamyshin",
+      "source_id": 9496656,
+      "full_name": "Oleg Slavievich Morozov",
+      "bdfutbol_id": "591054",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j591054.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9411094.html"
+    },
+    {
+      "club": "Tekstilshchik Kamyshin",
+      "source_id": 9496657,
+      "full_name": "Oleg Yuryevich Rozin",
+      "bdfutbol_id": "1178629",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1178629.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9411094.html"
+    },
+    {
+      "club": "Tekstilshchik Kamyshin",
+      "source_id": 9496658,
+      "full_name": "Aleksandr Alexandrovich Minaev",
+      "bdfutbol_id": "1179680",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1179680.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9411094.html"
+    },
+    {
+      "club": "Tekstilshchik Kamyshin",
+      "source_id": 9496659,
+      "full_name": "Oleg Vyacheslavovich Elyshev",
+      "bdfutbol_id": "1178806",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1178806.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9411094.html"
+    },
+    {
+      "club": "Tekstilshchik Kamyshin",
+      "source_id": 9496660,
+      "full_name": "Sergey Vasilievich Volgin",
+      "bdfutbol_id": "1177745",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1177745.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9411094.html"
+    },
+    {
+      "club": "Tekstilshchik Kamyshin",
+      "source_id": 9496661,
+      "full_name": "Viktor Leonidovich Navochenko",
+      "bdfutbol_id": "591058",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j591058.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9411094.html"
+    },
+    {
+      "club": "Tekstilshchik Kamyshin",
+      "source_id": 9496662,
+      "full_name": "Sergey Vladimirovich Natalushko",
+      "bdfutbol_id": "591055",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j591055.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9411094.html"
+    },
+    {
+      "club": "Tekstilshchik Kamyshin",
+      "source_id": 9496663,
+      "full_name": "Rustem Radikovich Shaymukhametov",
+      "bdfutbol_id": "1181198",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1181198.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9411094.html"
+    },
+    {
+      "club": "Tekstilshchik Kamyshin",
+      "source_id": 9496664,
+      "full_name": "Vyacheslav Viktorovich Krykanov",
+      "bdfutbol_id": "1179685",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1179685.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9411094.html"
+    },
+    {
+      "club": "Tekstilshchik Kamyshin",
+      "source_id": 9496665,
+      "full_name": "Sergey Anatolyevich Sergeev",
+      "bdfutbol_id": "1180231",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1180231.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9411094.html"
+    },
+    {
+      "club": "Tekstilshchik Kamyshin",
+      "source_id": 9496666,
+      "full_name": "Andrey Ivanovich Karpenko",
+      "bdfutbol_id": "1180232",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1180232.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9411094.html"
+    },
+    {
+      "club": "Tekstilshchik Kamyshin",
+      "source_id": 9496667,
+      "full_name": "Yuriy Alekseevich Sobol",
+      "bdfutbol_id": "1180211",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1180211.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9411094.html"
+    },
+    {
+      "club": "Tekstilshchik Kamyshin",
+      "source_id": 9496668,
+      "full_name": "Andriy Viktorovych Yudin",
+      "bdfutbol_id": "1040408",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1040408.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9411094.html"
+    },
+    {
+      "club": "Tekstilshchik Kamyshin",
+      "source_id": 9496669,
+      "full_name": "Valeriy Anatolyevich Smolkov",
+      "bdfutbol_id": "1178271",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1178271.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9411094.html"
+    },
+    {
+      "club": "Tekstilshchik Kamyshin",
+      "source_id": 9496670,
+      "full_name": "Sergey Ivanovich Iljin",
+      "bdfutbol_id": "1180233",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1180233.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9411094.html"
+    },
+    {
+      "club": "Tekstilshchik Kamyshin",
+      "source_id": 9497380,
+      "full_name": "Vyacheslav Vitalievich Demin",
+      "bdfutbol_id": "1181069",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1181069.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9411094.html"
+    },
+    {
+      "club": "Tekstilshchik Kamyshin",
+      "source_id": 9497381,
+      "full_name": "Valeriy Vladimirovich Kleymenov",
+      "bdfutbol_id": "1178621",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1178621.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9411094.html"
+    },
+    {
+      "club": "Tekstilshchik Kamyshin",
+      "source_id": 9497382,
+      "full_name": "Sergey Nikolaevich Polstyanov",
+      "bdfutbol_id": "1179688",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1179688.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9411094.html"
+    },
+    {
+      "club": "Tekstilshchik Kamyshin",
+      "source_id": 9497383,
+      "full_name": "Vyacheslav Valerievich Nedorostkov",
+      "bdfutbol_id": "1181201",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1181201.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9411094.html"
+    },
+    {
+      "club": "Tekstilshchik Kamyshin",
+      "source_id": 9497384,
+      "full_name": "Valeriy Petrovich Zazdravnykh",
+      "bdfutbol_id": "1180159",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1180159.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9411094.html"
+    },
+    {
+      "club": "Tekstilshchik Kamyshin",
+      "source_id": 9497385,
+      "full_name": "Vasyl Arkadiyovych Evseev",
+      "bdfutbol_id": "42457",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j42457.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9411094.html"
+    },
+    {
+      "club": "Tekstilshchik Kamyshin",
+      "source_id": 9497386,
+      "full_name": "Oleh Ivanovych Tereshchenko",
+      "bdfutbol_id": "590933",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j590933.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9411094.html"
+    },
+    {
+      "club": "Tekstilshchik Kamyshin",
+      "source_id": 9497387,
+      "full_name": "Gennadiy Vladimirovich Soshenko",
+      "bdfutbol_id": "1181200",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1181200.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9411094.html"
+    },
+    {
+      "club": "Tekstilshchik Kamyshin",
+      "source_id": 9497388,
+      "full_name": "Mikhail Alexandrovich Bukin",
+      "bdfutbol_id": "1181199",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1181199.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9411094.html"
+    },
+    {
+      "club": "Lokomotiv Moskva",
+      "source_id": 9496671,
+      "full_name": "Sergei Ivanovich Ovchinnikov",
+      "bdfutbol_id": "71772",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j71772.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9410040.html"
+    },
+    {
+      "club": "Lokomotiv Moskva",
+      "source_id": 9495360,
+      "full_name": "Sergey Ivanovich Podpaliy",
+      "bdfutbol_id": "591959",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j591959.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9410040.html"
+    },
+    {
+      "club": "Lokomotiv Moskva",
+      "source_id": 9496672,
+      "full_name": "Ravil Rufailovich Sabitov",
+      "bdfutbol_id": "69694",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j69694.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9410040.html"
+    },
+    {
+      "club": "Lokomotiv Moskva",
+      "source_id": 9496673,
+      "full_name": "Oleg Anatolyevich Samatov",
+      "bdfutbol_id": "1159091",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1159091.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9410040.html"
+    },
+    {
+      "club": "Lokomotiv Moskva",
+      "source_id": 9496674,
+      "full_name": "Yuri Alekseyevich Drozdov",
+      "bdfutbol_id": "56468",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j56468.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9410040.html"
+    },
+    {
+      "club": "Lokomotiv Moskva",
+      "source_id": 9496675,
+      "full_name": "Aleksey Sayarovich Arifullin",
+      "bdfutbol_id": "590920",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j590920.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9410040.html"
+    },
+    {
+      "club": "Lokomotiv Moskva",
+      "source_id": 9496676,
+      "full_name": "Aleksei Viktorovich Kosolapov",
+      "bdfutbol_id": "107",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j107.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9410040.html"
+    },
+    {
+      "club": "Lokomotiv Moskva",
+      "source_id": 9496677,
+      "full_name": "Alexander Vladimirovich Smirnov",
+      "bdfutbol_id": "1159082",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1159082.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9410040.html"
+    },
+    {
+      "club": "Lokomotiv Moskva",
+      "source_id": 9496678,
+      "full_name": "Dimitri Anatolievich Alenichev",
+      "bdfutbol_id": "99450",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j99450.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9410040.html"
+    },
+    {
+      "club": "Lokomotiv Moskva",
+      "source_id": 9496679,
+      "full_name": "Oleg Sergeevich Garin",
+      "bdfutbol_id": "1159093",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1159093.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9410040.html"
+    },
+    {
+      "club": "Lokomotiv Moskva",
+      "source_id": 9496680,
+      "full_name": "Mukhsin Muslimovich Mukhamadiev",
+      "bdfutbol_id": "1159085",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1159085.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9410040.html"
+    },
+    {
+      "club": "Lokomotiv Moskva",
+      "source_id": 9496681,
+      "full_name": "Khasanbi Eduardovich Bidzhiyev",
+      "bdfutbol_id": "713473",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j713473.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9410040.html"
+    },
+    {
+      "club": "Lokomotiv Moskva",
+      "source_id": 9496682,
+      "full_name": "Vitaly Viktorovich Nikulkin",
+      "bdfutbol_id": "1159092",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1159092.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9410040.html"
+    },
+    {
+      "club": "Lokomotiv Moskva",
+      "source_id": 9496683,
+      "full_name": "Yuri Mikhailovich Baturenko",
+      "bdfutbol_id": "592051",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j592051.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9410040.html"
+    },
+    {
+      "club": "Lokomotiv Moskva",
+      "source_id": 9496684,
+      "full_name": "Khakim Kayumovich Fuzaylov",
+      "bdfutbol_id": "1180218",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1180218.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9410040.html"
+    },
+    {
+      "club": "Lokomotiv Moskva",
+      "source_id": 9496685,
+      "full_name": "Dmitriy Anatolyevich Gorkov",
+      "bdfutbol_id": "1159094",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1159094.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9410040.html"
+    },
+    {
+      "club": "Lokomotiv Moskva",
+      "source_id": 9496686,
+      "full_name": "Sergey Leonidovich Aleksandrov",
+      "bdfutbol_id": "1181115",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1181115.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9410040.html"
+    },
+    {
+      "club": "Lokomotiv Moskva",
+      "source_id": 9496687,
+      "full_name": "Oleg Alekseyevich Pashinin",
+      "bdfutbol_id": "590007",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j590007.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9410040.html"
+    },
+    {
+      "club": "Lokomotiv Moskva",
+      "source_id": 9497389,
+      "full_name": "Yuri Anatolyevich Petrov",
+      "bdfutbol_id": "85847",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j85847.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9410040.html"
+    },
+    {
+      "club": "Lokomotiv Moskva",
+      "source_id": 9497390,
+      "full_name": "Mikhail Ivanovich Maryushkin",
+      "bdfutbol_id": "1181110",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1181110.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9410040.html"
+    },
+    {
+      "club": "Lokomotiv Moskva",
+      "source_id": 9497391,
+      "full_name": "Vitaliy Vladimirovich But",
+      "bdfutbol_id": "1159084",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1159084.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9410040.html"
+    },
+    {
+      "club": "Lokomotiv Moskva",
+      "source_id": 503,
+      "full_name": "Rashid Mamatkulovich Rakhimov",
+      "bdfutbol_id": "2861",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j2861.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9410040.html"
+    },
+    {
+      "club": "Lokomotiv Moskva",
+      "source_id": 9497393,
+      "full_name": "Vladimir Aleksandrovich Maminov",
+      "bdfutbol_id": "590008",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j590008.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9410040.html"
+    },
+    {
+      "club": "Lokomotiv Moskva",
+      "source_id": 9497394,
+      "full_name": "Andrey Dmitrievich Fedin",
+      "bdfutbol_id": "1159090",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1159090.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9410040.html"
+    },
+    {
+      "club": "Lokomotiv Moskva",
+      "source_id": 9497395,
+      "full_name": "Valentin Gennadievich Kiselev",
+      "bdfutbol_id": "1159096",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1159096.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9410040.html"
+    },
+    {
+      "club": "Lokomotiv Moskva",
+      "source_id": 9497396,
+      "full_name": "Vitaliy Aleksandrovich Veselov",
+      "bdfutbol_id": "591059",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j591059.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9410040.html"
+    },
+    {
+      "club": "Lokomotiv Moskva",
+      "source_id": 9497397,
+      "full_name": "Alier Devlokhovich Ashurmamadov",
+      "bdfutbol_id": "1181111",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1181111.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9410040.html"
+    },
+    {
+      "club": "Lokomotiv Moskva",
+      "source_id": 9497398,
+      "full_name": "Vyacheslav Valerievich Chekmarev",
+      "bdfutbol_id": "1159087",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1159087.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9410040.html"
+    },
+    {
+      "club": "Lokomotiv Moskva",
+      "source_id": 9497399,
+      "full_name": "Mikhail Mikhailovich Evseev",
+      "bdfutbol_id": "1177709",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1177709.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9410040.html"
+    },
+    {
+      "club": "Spartak Vladikavkaz",
+      "source_id": 9495355,
+      "full_name": "Zaur Zalimbiyevich Khapov",
+      "bdfutbol_id": "590769",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j590769.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9410778.html"
+    },
+    {
+      "club": "Spartak Vladikavkaz",
+      "source_id": 9496688,
+      "full_name": "Gennadiy Anatolyevich Denisov",
+      "bdfutbol_id": "1177763",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1177763.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9410778.html"
+    },
+    {
+      "club": "Spartak Vladikavkaz",
+      "source_id": 9496689,
+      "full_name": "Sergey Inalovich Gazdanov",
+      "bdfutbol_id": "1180228",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1180228.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9410778.html"
+    },
+    {
+      "club": "Spartak Vladikavkaz",
+      "source_id": 9496690,
+      "full_name": "Artur Sardionovich Pagaev",
+      "bdfutbol_id": "590237",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j590237.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9410778.html"
+    },
+    {
+      "club": "Spartak Vladikavkaz",
+      "source_id": 9496691,
+      "full_name": "Ali Magomedovich Alchagirov",
+      "bdfutbol_id": "590955",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j590955.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9410778.html"
+    },
+    {
+      "club": "Spartak Vladikavkaz",
+      "source_id": 9496692,
+      "full_name": "Aleksandr Grigorievich Kostin",
+      "bdfutbol_id": "1181192",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1181192.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9410778.html"
+    },
+    {
+      "club": "Spartak Vladikavkaz",
+      "source_id": 9496693,
+      "full_name": "Igor Sergueievitch Yanovski",
+      "bdfutbol_id": "85488",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j85488.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9410778.html"
+    },
+    {
+      "club": "Spartak Vladikavkaz",
+      "source_id": 9496694,
+      "full_name": "Shamil Kuramagomedovich Isaev",
+      "bdfutbol_id": "1179678",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1179678.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9410778.html"
+    },
+    {
+      "club": "Spartak Vladikavkaz",
+      "source_id": 9496695,
+      "full_name": "Mikhail Mikhailovich Markhel",
+      "bdfutbol_id": "712210",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j712210.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9410778.html"
+    },
+    {
+      "club": "Spartak Vladikavkaz",
+      "source_id": 9496696,
+      "full_name": "Nazim Gadzhibaba ogly Süleymanov",
+      "bdfutbol_id": "1161235",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1161235.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9410778.html"
+    },
+    {
+      "club": "Spartak Vladikavkaz",
+      "source_id": 9496697,
+      "full_name": "Evgeniy Alexandrovich Saprykin",
+      "bdfutbol_id": "1181193",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1181193.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9410778.html"
+    },
+    {
+      "club": "Spartak Vladikavkaz",
+      "source_id": 9496698,
+      "full_name": "Ruslan Isidorovich Khubetsov",
+      "bdfutbol_id": "1180229",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1180229.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9410778.html"
+    },
+    {
+      "club": "Spartak Vladikavkaz",
+      "source_id": 9496699,
+      "full_name": "Inal Grigorievich Dzhioev",
+      "bdfutbol_id": "1162179",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1162179.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9410778.html"
+    },
+    {
+      "club": "Spartak Vladikavkaz",
+      "source_id": 9496700,
+      "full_name": "Marat Azikhanovich Dzoblaev",
+      "bdfutbol_id": "1179652",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1179652.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9410778.html"
+    },
+    {
+      "club": "Spartak Vladikavkaz",
+      "source_id": 9496701,
+      "full_name": "Roman Ivanovich Meleshko",
+      "bdfutbol_id": "1181194",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1181194.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9410778.html"
+    },
+    {
+      "club": "Spartak Vladikavkaz",
+      "source_id": 9496702,
+      "full_name": "Sergey Pavlovich Pimenov",
+      "bdfutbol_id": "1179682",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1179682.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9410778.html"
+    },
+    {
+      "club": "Spartak Vladikavkaz",
+      "source_id": 9496703,
+      "full_name": "Igor Borisovich Kachmazov",
+      "bdfutbol_id": "1160799",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1160799.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9410778.html"
+    },
+    {
+      "club": "Spartak Vladikavkaz",
+      "source_id": 9496704,
+      "full_name": "Ruslan Ruslanovich Suanov",
+      "bdfutbol_id": "721787",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j721787.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9410778.html"
+    },
+    {
+      "club": "Spartak Vladikavkaz",
+      "source_id": 9497400,
+      "full_name": "Vladimir Viktorovich Konovalov",
+      "bdfutbol_id": "1181195",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1181195.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9410778.html"
+    },
+    {
+      "club": "Spartak Vladikavkaz",
+      "source_id": 9497401,
+      "full_name": "Andrey Alekseyevich Sosnitsky",
+      "bdfutbol_id": "591588",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j591588.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9410778.html"
+    },
+    {
+      "club": "Spartak Vladikavkaz",
+      "source_id": 9497402,
+      "full_name": "Aleksandr Ivanovich Mozgovoy",
+      "bdfutbol_id": "1181197",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1181197.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9410778.html"
+    },
+    {
+      "club": "Spartak Vladikavkaz",
+      "source_id": 9497403,
+      "full_name": "Aleksey Viktorovich Ostaev",
+      "bdfutbol_id": "1181196",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1181196.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9410778.html"
+    },
+    {
+      "club": "Torpedo Moskva",
+      "source_id": 9496705,
+      "full_name": "Aleksandr Viktorovich Podshivalov",
+      "bdfutbol_id": "1162769",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1162769.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9410068.html"
+    },
+    {
+      "club": "Torpedo Moskva",
+      "source_id": 9496706,
+      "full_name": "Maksim Mikhailovich Cheltsov",
+      "bdfutbol_id": "1178941",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1178941.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9410068.html"
+    },
+    {
+      "club": "Torpedo Moskva",
+      "source_id": 9496707,
+      "full_name": "Andrey Igorevich Afanasyev",
+      "bdfutbol_id": "590924",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j590924.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9410068.html"
+    },
+    {
+      "club": "Torpedo Moskva",
+      "source_id": 9496708,
+      "full_name": "Igor Valeryevich Chugainov",
+      "bdfutbol_id": "51008",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j51008.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9410068.html"
+    },
+    {
+      "club": "Torpedo Moskva",
+      "source_id": 9496709,
+      "full_name": "Mikhail Nikolaevich Solovyov",
+      "bdfutbol_id": "1180236",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1180236.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9410068.html"
+    },
+    {
+      "club": "Torpedo Moskva",
+      "source_id": 9496710,
+      "full_name": "Maksim Yuryevich Putilin",
+      "bdfutbol_id": "1160509",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1160509.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9410068.html"
+    },
+    {
+      "club": "Torpedo Moskva",
+      "source_id": 9496711,
+      "full_name": "Dmitri Nikolayevich Ulyanov",
+      "bdfutbol_id": "610",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j610.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9410068.html"
+    },
+    {
+      "club": "Torpedo Moskva",
+      "source_id": 9496712,
+      "full_name": "Sergey Anatolyevich Borisov",
+      "bdfutbol_id": "1178862",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1178862.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9410068.html"
+    },
+    {
+      "club": "Torpedo Moskva",
+      "source_id": 9496713,
+      "full_name": "Gennadiy Valentinovich Filimonov",
+      "bdfutbol_id": "1177711",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1177711.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9410068.html"
+    },
+    {
+      "club": "Torpedo Moskva",
+      "source_id": 9496714,
+      "full_name": "Ivan Vladimirovich Pazemov",
+      "bdfutbol_id": "1178867",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1178867.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9410068.html"
+    },
+    {
+      "club": "Torpedo Moskva",
+      "source_id": 9496715,
+      "full_name": "Andrey Viktorovich Talalayev",
+      "bdfutbol_id": "708572",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j708572.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9410068.html"
+    },
+    {
+      "club": "Torpedo Moskva",
+      "source_id": 9496716,
+      "full_name": "Vladimir Vladimirovich Pchelnikov",
+      "bdfutbol_id": "590997",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j590997.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9410068.html"
+    },
+    {
+      "club": "Torpedo Moskva",
+      "source_id": 9496717,
+      "full_name": "Sergey Leonidovich Chumachenko",
+      "bdfutbol_id": "1178943",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1178943.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9410068.html"
+    },
+    {
+      "club": "Torpedo Moskva",
+      "source_id": 9496718,
+      "full_name": "Dimitri Anatolyevich Prokopenko",
+      "bdfutbol_id": "71823",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j71823.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9410068.html"
+    },
+    {
+      "club": "Torpedo Moskva",
+      "source_id": 9496719,
+      "full_name": "Andrey Anatolyevich Novgorodov",
+      "bdfutbol_id": "590791",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j590791.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9410068.html"
+    },
+    {
+      "club": "Torpedo Moskva",
+      "source_id": 9496720,
+      "full_name": "Sergey Viktorovich Shustikov",
+      "bdfutbol_id": "2480",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j2480.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9410068.html"
+    },
+    {
+      "club": "Torpedo Moskva",
+      "source_id": 9496721,
+      "full_name": "Nikolai Nikolayevich Savichev",
+      "bdfutbol_id": "591602",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j591602.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9410068.html"
+    },
+    {
+      "club": "Torpedo Moskva",
+      "source_id": 9496722,
+      "full_name": "Boris Alexandrovich Vostrosablin",
+      "bdfutbol_id": "1159379",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1159379.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9410068.html"
+    },
+    {
+      "club": "Torpedo Moskva",
+      "source_id": 9497404,
+      "full_name": "Gennadiy Alekseevich Grishin",
+      "bdfutbol_id": "1160511",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1160511.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9410068.html"
+    },
+    {
+      "club": "Torpedo Moskva",
+      "source_id": 9497405,
+      "full_name": "Aleksey Leonidovich Arefjev",
+      "bdfutbol_id": "1178870",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1178870.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9410068.html"
+    },
+    {
+      "club": "Torpedo Moskva",
+      "source_id": 9497406,
+      "full_name": "Andrey Sergeevich Kalaychev",
+      "bdfutbol_id": "1181083",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1181083.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9410068.html"
+    },
+    {
+      "club": "Torpedo Moskva",
+      "source_id": 9497407,
+      "full_name": "Vardan Baregamovich Khachatryan",
+      "bdfutbol_id": "1071846",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1071846.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9410068.html"
+    },
+    {
+      "club": "Torpedo Moskva",
+      "source_id": 9497408,
+      "full_name": "Igor Borisovich Aslanyan",
+      "bdfutbol_id": "1180219",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1180219.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9410068.html"
+    },
+    {
+      "club": "Torpedo Moskva",
+      "source_id": 9497409,
+      "full_name": "Serhiy Viktorovich Skachenko",
+      "bdfutbol_id": "85428",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j85428.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9410068.html"
+    },
+    {
+      "club": "Torpedo Moskva",
+      "source_id": 9497410,
+      "full_name": "Oleksandr Vladimirovich Sevidov",
+      "bdfutbol_id": "1181082",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1181082.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9410068.html"
+    },
+    {
+      "club": "Torpedo Moskva",
+      "source_id": 9497411,
+      "full_name": "Aleksandr Vladimirovich Kuzmichev",
+      "bdfutbol_id": "1179650",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1179650.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9410068.html"
+    },
+    {
+      "club": "Torpedo Moskva",
+      "source_id": 9497412,
+      "full_name": "Aleksandr Borisovich Sudarikov",
+      "bdfutbol_id": "1180238",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1180238.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9410068.html"
+    },
+    {
+      "club": "Torpedo Moskva",
+      "source_id": 9497413,
+      "full_name": "Mikhail Alexandrovich Smirnov",
+      "bdfutbol_id": "1178865",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1178865.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9410068.html"
+    },
+    {
+      "club": "Torpedo Moskva",
+      "source_id": 9497414,
+      "full_name": "Dmitriy Anatolyevich Kuznetsov",
+      "bdfutbol_id": "1180237",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1180237.html",
+      "squad_url": "https://www.bdfutbol.com/en/t/t1993-9410068.html"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "checkpoint": "0.46.0-russia-uralmash-asmaral-batch-deep",
+  "completed_clubs": [
+    "Spartak Moskva",
+    "Rotor Volgograd",
+    "Dynamo Moskva",
+    "Tekstilshchik Kamyshin",
+    "Lokomotiv Moskva",
+    "Spartak Vladikavkaz",
+    "Torpedo Moskva",
+    "Uralmash",
+    "CSKA Moskva",
+    "KAMAZ",
+    "Zhemchuzhina Sochi",
+    "Dynamo Stavropol",
+    "Lokomotiv Nizhny Novgorod",
+    "Krylia Sovetov",
+    "Luch Vladivostok",
+    "Okean Nakhodka",
+    "Rostselmash",
+    "Asmaral Moskva"
+  ],
+  "queue": [],
+  "next_club": null,
+  "staging_rows_completed_this_pass": 300,
+  "unique_identities_completed_this_pass": 294,
+  "target_player_objects_after_retirement": 289,
+  "russia_player_objects": 480,
+  "league_club_batch_complete": true
+}

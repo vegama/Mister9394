@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "checkpoint": "0.44.0-russia-spartak-deep",
+  "completed_clubs": [
+    "Spartak Moskva"
+  ],
+  "queue": [
+    "Rotor Volgograd",
+    "Dynamo Moskva",
+    "Tekstilshchik Kamyshin",
+    "Lokomotiv Moskva",
+    "Spartak Vladikavkaz",
+    "Torpedo Moskva",
+    "Uralmash",
+    "CSKA Moskva",
+    "KAMAZ",
+    "Zhemchuzhina Sochi",
+    "Dynamo Stavropol",
+    "Lokomotiv Nizhny Novgorod",
+    "Krylia Sovetov",
+    "Luch Vladivostok",
+    "Okean Nakhodka",
+    "Rostselmash",
+    "Asmaral Moskva"
+  ],
+  "next_club": "Rotor Volgograd",
+  "russia_players_total": 492,
+  "russia_previous_checkpoint_sha256": "f73e73c7dee70fd00d82f9679d189677161a662bc72b71a5a723584fb5715cfa",
+  "non_target_clubs_unchanged": true
+}

@@ -1,0 +1,698 @@
+{
+  "schema_version": 1,
+  "checkpoint": "0.44.0-russia-spartak-deep",
+  "status": "pass",
+  "target_club": "Spartak Moskva",
+  "profiles_curated": 33,
+  "profile_stats_before": {
+    "players": 492,
+    "missing_birth_date": 465,
+    "missing_birth_country_id": 465,
+    "birth_geography_unresolved": 465,
+    "missing_international_country_id": 455,
+    "missing_bdfutbol_id": 479,
+    "missing_height_cm": 479,
+    "missing_weight_kg": 483,
+    "historical_birth_state_resolved": 0,
+    "transliteration_layer_resolved": 0,
+    "selection_history_resolved": 0
+  },
+  "profile_stats_after": {
+    "players": 492,
+    "missing_birth_date": 449,
+    "missing_birth_country_id": 482,
+    "birth_geography_unresolved": 449,
+    "missing_international_country_id": 455,
+    "missing_bdfutbol_id": 452,
+    "missing_height_cm": 457,
+    "missing_weight_kg": 469,
+    "historical_birth_state_resolved": 33,
+    "transliteration_layer_resolved": 33,
+    "selection_history_resolved": 15
+  },
+  "russia_integrity": {
+    "previous_checkpoint_sha256": "f73e73c7dee70fd00d82f9679d189677161a662bc72b71a5a723584fb5715cfa",
+    "before_sha256": "f73e73c7dee70fd00d82f9679d189677161a662bc72b71a5a723584fb5715cfa",
+    "after_sha256": "e07f35db04e5979433ed1bfc3a9e2704758a636abe8f116903eb12d7c9473111",
+    "changed_intentionally": true,
+    "non_target_clubs_before_sha256": "13cfff122639c1edc512e710ba53df297c447065ec1136fac43fc5f650df738e",
+    "non_target_clubs_after_sha256": "13cfff122639c1edc512e710ba53df297c447065ec1136fac43fc5f650df738e",
+    "non_target_clubs_unchanged": true
+  },
+  "historical_identity_policy": {
+    "birth_state_separated": true,
+    "modern_successor_birth_backfill": false,
+    "citizenship_1993_separate": true,
+    "represented_selection_separate": true,
+    "transliterations_preserved": true
+  },
+  "profiles": {
+    "changes": [
+      {
+        "source_id": 9496613,
+        "display_name_before": "Gintaras Staučė",
+        "display_name_after": "Gintaras Mindaugovich Staučė",
+        "birth_date_before": "1969-12-24",
+        "birth_date_after": "1969-12-24",
+        "birth_country_id_before": 52,
+        "birth_country_id_after": null,
+        "historical_birth_state": "USSR",
+        "birth_territory_country_id": 52,
+        "role_before": 0,
+        "role_after": 0,
+        "bdfutbol_id": "98206",
+        "selection_country_ids": [
+          52
+        ]
+      },
+      {
+        "source_id": 9494088,
+        "display_name_before": "Viktor Onopko",
+        "display_name_after": "Viktor Savelyevich Onopko",
+        "birth_date_before": "1969-10-14",
+        "birth_date_after": "1969-10-14",
+        "birth_country_id_before": 85,
+        "birth_country_id_after": null,
+        "historical_birth_state": "USSR",
+        "birth_territory_country_id": 85,
+        "role_before": 3,
+        "role_after": 3,
+        "bdfutbol_id": "2609",
+        "selection_country_ids": [
+          40
+        ]
+      },
+      {
+        "source_id": 9495357,
+        "display_name_before": "Ramiz Mamedov",
+        "display_name_after": "Ramiz Mehman oğlu Mamedov",
+        "birth_date_before": "1972-05-21",
+        "birth_date_after": "1972-08-21",
+        "birth_country_id_before": 40,
+        "birth_country_id_after": null,
+        "historical_birth_state": "USSR",
+        "birth_territory_country_id": 40,
+        "role_before": 2,
+        "role_after": 2,
+        "bdfutbol_id": "705104",
+        "selection_country_ids": []
+      },
+      {
+        "source_id": 9496614,
+        "display_name_before": "Ivanov",
+        "display_name_after": "Andrei Yevgenyevich Ivanov",
+        "birth_date_before": null,
+        "birth_date_after": "1967-04-06",
+        "birth_country_id_before": null,
+        "birth_country_id_after": null,
+        "historical_birth_state": "USSR",
+        "birth_territory_country_id": 40,
+        "role_before": 3,
+        "role_after": 3,
+        "bdfutbol_id": "89302",
+        "selection_country_ids": []
+      },
+      {
+        "source_id": 9494081,
+        "display_name_before": "Yuri Nikiforov",
+        "display_name_after": "Yuri Valeryevich Nikiforov",
+        "birth_date_before": "1970-09-16",
+        "birth_date_after": "1970-09-16",
+        "birth_country_id_before": 40,
+        "birth_country_id_after": null,
+        "historical_birth_state": "USSR",
+        "birth_territory_country_id": 85,
+        "role_before": 3,
+        "role_after": 3,
+        "bdfutbol_id": "2660",
+        "selection_country_ids": [
+          85,
+          40
+        ]
+      },
+      {
+        "source_id": 9494089,
+        "display_name_before": "Igor Lediakhov",
+        "display_name_after": "Igor Anatolyevich Lediakhov",
+        "birth_date_before": "1968-05-22",
+        "birth_date_after": "1968-05-22",
+        "birth_country_id_before": 40,
+        "birth_country_id_after": null,
+        "historical_birth_state": "USSR",
+        "birth_territory_country_id": 40,
+        "role_before": 7,
+        "role_after": 7,
+        "bdfutbol_id": "1083",
+        "selection_country_ids": [
+          40
+        ]
+      },
+      {
+        "source_id": 9494084,
+        "display_name_before": "Valeri Karpin",
+        "display_name_after": "Valeri Georgievich Karpin",
+        "birth_date_before": "1969-02-02",
+        "birth_date_after": "1969-02-02",
+        "birth_country_id_before": 40,
+        "birth_country_id_after": null,
+        "historical_birth_state": "USSR",
+        "birth_territory_country_id": 39,
+        "role_before": 9,
+        "role_after": 9,
+        "bdfutbol_id": "2570",
+        "selection_country_ids": [
+          40
+        ]
+      },
+      {
+        "source_id": 9494083,
+        "display_name_before": "Andrey Pyatnitsky",
+        "display_name_after": "Andrey Vladimirovich Pyatnitsky",
+        "birth_date_before": "1967-09-27",
+        "birth_date_after": "1967-09-27",
+        "birth_country_id_before": 40,
+        "birth_country_id_after": null,
+        "historical_birth_state": "USSR",
+        "birth_territory_country_id": 209,
+        "role_before": 6,
+        "role_after": 6,
+        "bdfutbol_id": "58032",
+        "selection_country_ids": [
+          209,
+          40
+        ]
+      },
+      {
+        "source_id": 9494087,
+        "display_name_before": "Ilya Tsymbalar",
+        "display_name_after": "Ilya Vladimirovich Tsymbalar",
+        "birth_date_before": "1969-06-17",
+        "birth_date_after": "1969-06-17",
+        "birth_country_id_before": 40,
+        "birth_country_id_after": null,
+        "historical_birth_state": "USSR",
+        "birth_territory_country_id": 85,
+        "role_before": 7,
+        "role_after": 7,
+        "bdfutbol_id": "701760",
+        "selection_country_ids": [
+          85,
+          40
+        ]
+      },
+      {
+        "source_id": 9496615,
+        "display_name_before": "Nikolai Pisarev",
+        "display_name_after": "Nikolai Nikolayevich Pisarev",
+        "birth_date_before": "1968-11-23",
+        "birth_date_after": "1968-11-23",
+        "birth_country_id_before": 40,
+        "birth_country_id_after": null,
+        "historical_birth_state": "USSR",
+        "birth_territory_country_id": 40,
+        "role_before": 17,
+        "role_after": 17,
+        "bdfutbol_id": "2091",
+        "selection_country_ids": []
+      },
+      {
+        "source_id": 9494085,
+        "display_name_before": "Vladimir Beschastnykh",
+        "display_name_after": "Vladimir Yevgenyevich Beschastnykh",
+        "birth_date_before": "1974-04-01",
+        "birth_date_after": "1974-04-01",
+        "birth_country_id_before": 40,
+        "birth_country_id_after": null,
+        "historical_birth_state": "USSR",
+        "birth_territory_country_id": 40,
+        "role_before": 17,
+        "role_after": 17,
+        "bdfutbol_id": "2619",
+        "selection_country_ids": [
+          40
+        ]
+      },
+      {
+        "source_id": 2705,
+        "display_name_before": "Cherchesov",
+        "display_name_after": "Stanislav Salamovich Cherchesov",
+        "birth_date_before": "1963-09-02",
+        "birth_date_after": "1963-09-02",
+        "birth_country_id_before": 40,
+        "birth_country_id_after": null,
+        "historical_birth_state": "USSR",
+        "birth_territory_country_id": 40,
+        "role_before": 0,
+        "role_after": 0,
+        "bdfutbol_id": "80005",
+        "selection_country_ids": [
+          40
+        ]
+      },
+      {
+        "source_id": 9496616,
+        "display_name_before": "Fyodor Cherenkov",
+        "display_name_after": "Fyodor Fyodorovich Cherenkov",
+        "birth_date_before": "1959-07-25",
+        "birth_date_after": "1959-07-25",
+        "birth_country_id_before": 40,
+        "birth_country_id_after": null,
+        "historical_birth_state": "USSR",
+        "birth_territory_country_id": 40,
+        "role_before": 8,
+        "role_after": 8,
+        "bdfutbol_id": "41922",
+        "selection_country_ids": []
+      },
+      {
+        "source_id": 9494090,
+        "display_name_before": "Dmitri Khlestov",
+        "display_name_after": "Dmitri Alekseyevich Khlestov",
+        "birth_date_before": "1971-01-21",
+        "birth_date_after": "1971-01-21",
+        "birth_country_id_before": 40,
+        "birth_country_id_after": null,
+        "historical_birth_state": "USSR",
+        "birth_territory_country_id": 40,
+        "role_before": 1,
+        "role_after": 1,
+        "bdfutbol_id": "57627",
+        "selection_country_ids": [
+          40
+        ]
+      },
+      {
+        "source_id": 515,
+        "display_name_before": "Popov",
+        "display_name_after": "Dmitri Lvovich Popov",
+        "birth_date_before": "1967-02-27",
+        "birth_date_after": "1967-02-27",
+        "birth_country_id_before": 40,
+        "birth_country_id_after": null,
+        "historical_birth_state": "USSR",
+        "birth_territory_country_id": 40,
+        "role_before": 9,
+        "role_after": 9,
+        "bdfutbol_id": "603",
+        "selection_country_ids": [
+          40
+        ]
+      },
+      {
+        "source_id": 517,
+        "display_name_before": "Radchenko",
+        "display_name_after": "Dmitri Leonidovich Radchenko",
+        "birth_date_before": "1970-12-02",
+        "birth_date_after": "1970-12-02",
+        "birth_country_id_before": 40,
+        "birth_country_id_after": null,
+        "historical_birth_state": "USSR",
+        "birth_territory_country_id": 40,
+        "role_before": 17,
+        "role_after": 17,
+        "bdfutbol_id": "604",
+        "selection_country_ids": [
+          40
+        ]
+      },
+      {
+        "source_id": 9496617,
+        "display_name_before": "Aleksandr Pomazun",
+        "display_name_after": "Aleksandr Vasil'evich Pomazun",
+        "birth_date_before": "1971-10-11",
+        "birth_date_after": "1971-10-11",
+        "birth_country_id_before": 85,
+        "birth_country_id_after": null,
+        "historical_birth_state": "USSR",
+        "birth_territory_country_id": 85,
+        "role_before": 0,
+        "role_after": 0,
+        "bdfutbol_id": "590782",
+        "selection_country_ids": [
+          85
+        ]
+      },
+      {
+        "source_id": 9496618,
+        "display_name_before": "Dmitri Ananko",
+        "display_name_after": "Dmitri Vasilyevich Ananko",
+        "birth_date_before": "1973-09-29",
+        "birth_date_after": "1973-09-29",
+        "birth_country_id_before": 40,
+        "birth_country_id_after": null,
+        "historical_birth_state": "USSR",
+        "birth_territory_country_id": 40,
+        "role_before": 3,
+        "role_after": 3,
+        "bdfutbol_id": "84989",
+        "selection_country_ids": []
+      },
+      {
+        "source_id": 9497349,
+        "display_name_before": "Gashkin",
+        "display_name_after": "Andrey Aleksandrovich Gashkin",
+        "birth_date_before": null,
+        "birth_date_after": "1970-12-06",
+        "birth_country_id_before": null,
+        "birth_country_id_after": null,
+        "historical_birth_state": "USSR",
+        "birth_territory_country_id": 40,
+        "role_before": 9,
+        "role_after": 9,
+        "bdfutbol_id": "590816",
+        "selection_country_ids": []
+      },
+      {
+        "source_id": 9497350,
+        "display_name_before": "Tikhonov",
+        "display_name_after": "Andrey Valeryevich Tikhonov",
+        "birth_date_before": null,
+        "birth_date_after": "1970-10-16",
+        "birth_country_id_before": null,
+        "birth_country_id_after": null,
+        "historical_birth_state": "USSR",
+        "birth_territory_country_id": 40,
+        "role_before": 8,
+        "role_after": 8,
+        "bdfutbol_id": "56757",
+        "selection_country_ids": []
+      },
+      {
+        "source_id": 9497351,
+        "display_name_before": "Rodionov",
+        "display_name_after": "Sergei Yurievich Rodionov",
+        "birth_date_before": null,
+        "birth_date_after": "1962-09-03",
+        "birth_country_id_before": null,
+        "birth_country_id_after": null,
+        "historical_birth_state": "USSR",
+        "birth_territory_country_id": 40,
+        "role_before": 17,
+        "role_after": 17,
+        "bdfutbol_id": "41921",
+        "selection_country_ids": []
+      },
+      {
+        "source_id": 9497352,
+        "display_name_before": "Chernyshov",
+        "display_name_after": "Andrey Alekseyevich Chernyshov",
+        "birth_date_before": null,
+        "birth_date_after": "1968-01-07",
+        "birth_country_id_before": null,
+        "birth_country_id_after": null,
+        "historical_birth_state": "USSR",
+        "birth_territory_country_id": 40,
+        "role_before": 3,
+        "role_after": 3,
+        "bdfutbol_id": "701521",
+        "selection_country_ids": []
+      },
+      {
+        "source_id": 9497353,
+        "display_name_before": "Bondar",
+        "display_name_after": "Aleksandr Arkadyevich Bondar",
+        "birth_date_before": null,
+        "birth_date_after": "1967-11-21",
+        "birth_country_id_before": null,
+        "birth_country_id_after": null,
+        "historical_birth_state": "German Democratic Republic",
+        "birth_territory_country_id": 4,
+        "role_before": 17,
+        "role_after": 3,
+        "bdfutbol_id": "1177671",
+        "selection_country_ids": []
+      },
+      {
+        "source_id": 9497354,
+        "display_name_before": "Pogodin",
+        "display_name_after": "Serhiy Anatoliyovych Pohodin",
+        "birth_date_before": null,
+        "birth_date_after": "1968-04-29",
+        "birth_country_id_before": null,
+        "birth_country_id_after": null,
+        "historical_birth_state": "USSR",
+        "birth_territory_country_id": 85,
+        "role_before": 8,
+        "role_after": 8,
+        "bdfutbol_id": "2479",
+        "selection_country_ids": [
+          85
+        ]
+      },
+      {
+        "source_id": 9497355,
+        "display_name_before": "Chudin",
+        "display_name_after": "Sergey Sergeyevich Chudin",
+        "birth_date_before": null,
+        "birth_date_after": "1973-11-24",
+        "birth_country_id_before": null,
+        "birth_country_id_after": null,
+        "historical_birth_state": "USSR",
+        "birth_territory_country_id": 40,
+        "role_before": 3,
+        "role_after": 3,
+        "bdfutbol_id": "707174",
+        "selection_country_ids": []
+      },
+      {
+        "source_id": 9497356,
+        "display_name_before": "Chizhov",
+        "display_name_after": "Valeriy Nikolayevich Chizhov",
+        "birth_date_before": null,
+        "birth_date_after": "1975-04-14",
+        "birth_country_id_before": null,
+        "birth_country_id_after": null,
+        "historical_birth_state": "USSR",
+        "birth_territory_country_id": 40,
+        "role_before": 0,
+        "role_after": 0,
+        "bdfutbol_id": "590184",
+        "selection_country_ids": []
+      },
+      {
+        "source_id": 9497357,
+        "display_name_before": "Kechinov",
+        "display_name_after": "Valeriy Viktorovich Kechinov",
+        "birth_date_before": null,
+        "birth_date_after": "1974-08-05",
+        "birth_country_id_before": null,
+        "birth_country_id_after": null,
+        "historical_birth_state": "USSR",
+        "birth_territory_country_id": 209,
+        "role_before": 17,
+        "role_after": 7,
+        "bdfutbol_id": "590581",
+        "selection_country_ids": [
+          209,
+          40
+        ]
+      },
+      {
+        "source_id": 9497358,
+        "display_name_before": "Konovalov",
+        "display_name_after": "Andrey Stepanivich Konovalov",
+        "birth_date_before": null,
+        "birth_date_after": "1974-09-13",
+        "birth_country_id_before": null,
+        "birth_country_id_after": null,
+        "historical_birth_state": "USSR",
+        "birth_territory_country_id": 40,
+        "role_before": 7,
+        "role_after": 7,
+        "bdfutbol_id": "590021",
+        "selection_country_ids": []
+      },
+      {
+        "source_id": 9497359,
+        "display_name_before": "Gradilenko",
+        "display_name_after": "Dmitriy Vitalevich Gradilenko",
+        "birth_date_before": null,
+        "birth_date_after": "1969-08-11",
+        "birth_country_id_before": null,
+        "birth_country_id_after": null,
+        "historical_birth_state": "USSR",
+        "birth_territory_country_id": 40,
+        "role_before": 17,
+        "role_after": 3,
+        "bdfutbol_id": "591115",
+        "selection_country_ids": []
+      },
+      {
+        "source_id": 9497360,
+        "display_name_before": "Baksheev",
+        "display_name_after": "Vladimir Nikolaevich Baksheev",
+        "birth_date_before": null,
+        "birth_date_after": "1970-04-22",
+        "birth_country_id_before": null,
+        "birth_country_id_after": null,
+        "historical_birth_state": "USSR",
+        "birth_territory_country_id": 40,
+        "role_before": 16,
+        "role_after": 7,
+        "bdfutbol_id": "1159034",
+        "selection_country_ids": []
+      },
+      {
+        "source_id": 9497361,
+        "display_name_before": "Alexey Sergeev",
+        "display_name_after": "Alexey Vyacheslavovich Sergeev",
+        "birth_date_before": null,
+        "birth_date_after": "1966-06-05",
+        "birth_country_id_before": null,
+        "birth_country_id_after": null,
+        "historical_birth_state": "USSR",
+        "birth_territory_country_id": 40,
+        "role_before": 3,
+        "role_after": 3,
+        "bdfutbol_id": "650543",
+        "selection_country_ids": []
+      },
+      {
+        "source_id": 9497362,
+        "display_name_before": "Krestov",
+        "display_name_after": "Sergey Vladimirovich Krestov",
+        "birth_date_before": null,
+        "birth_date_after": "1972-10-06",
+        "birth_country_id_before": null,
+        "birth_country_id_after": null,
+        "historical_birth_state": "USSR",
+        "birth_territory_country_id": 40,
+        "role_before": 2,
+        "role_after": 17,
+        "bdfutbol_id": "1159043",
+        "selection_country_ids": []
+      },
+      {
+        "source_id": 9497363,
+        "display_name_before": "Rekuts",
+        "display_name_after": "Mikhail Viktorovich Rekuts",
+        "birth_date_before": null,
+        "birth_date_after": "1975-10-02",
+        "birth_country_id_before": null,
+        "birth_country_id_after": null,
+        "historical_birth_state": "USSR",
+        "birth_territory_country_id": 40,
+        "role_before": 6,
+        "role_after": 3,
+        "bdfutbol_id": "1159030",
+        "selection_country_ids": []
+      }
+    ],
+    "role_corrections": [
+      {
+        "source_id": 9497353,
+        "player": "Aleksandr Arkadyevich Bondar",
+        "role_before": 17,
+        "role_after": 3,
+        "broad_before": "DEL",
+        "broad_after": "DEF",
+        "reason": "Born in Magdeburg in 1967: historical birth state is GDR; modern Germany is retained only as territorial lookup, not as birth_country_id."
+      },
+      {
+        "source_id": 9497357,
+        "player": "Valeriy Viktorovich Kechinov",
+        "role_before": 17,
+        "role_after": 7,
+        "broad_before": "DEL",
+        "broad_after": "MED",
+        "reason": "Prior centre-forward inference removed: BDFutbol and independent career sources identify Kechinov as midfielder. Selection history is kept separate from nationality."
+      },
+      {
+        "source_id": 9497359,
+        "player": "Dmitriy Vitalevich Gradilenko",
+        "role_before": 17,
+        "role_after": 3,
+        "broad_before": "DEL",
+        "broad_after": "DEF",
+        "reason": "Prior forward inference removed: BDFutbol identifies Gradilenko as defender."
+      },
+      {
+        "source_id": 9497360,
+        "player": "Vladimir Nikolaevich Baksheev",
+        "role_before": 16,
+        "role_after": 7,
+        "broad_before": "DEL",
+        "broad_after": "MED",
+        "reason": "Prior left-wing inference is not retained as exact because the individual profile only supports Midfielder."
+      },
+      {
+        "source_id": 9497362,
+        "player": "Sergey Vladimirovich Krestov",
+        "role_before": 2,
+        "role_after": 17,
+        "broad_before": "DEF",
+        "broad_after": "DEL",
+        "reason": "Prior left-back inference removed: BDFutbol identifies Krestov as forward."
+      },
+      {
+        "source_id": 9497363,
+        "player": "Mikhail Viktorovich Rekuts",
+        "role_before": 6,
+        "role_after": 3,
+        "broad_before": "MED",
+        "broad_after": "DEF",
+        "reason": "Prior defensive-midfield inference reduced to broad Defender because that is the supported BDFutbol profile evidence."
+      }
+    ],
+    "bdfutbol_profiles_resolved": 33,
+    "historical_state_births": {
+      "USSR": 32,
+      "German Democratic Republic": 1
+    },
+    "selection_history_profiles": 7
+  },
+  "source_conflicts": [
+    {
+      "source_id": 9495357,
+      "player": "Ramiz Mehman oğlu Mamedov",
+      "field": "birth_date",
+      "prior": "1972-05-21",
+      "resolved": "1972-08-21",
+      "decision": "individual profile + independent corroboration wins",
+      "source_urls": [
+        "https://www.bdfutbol.com/en/j/j705104.html",
+        "https://www.transfermarkt.com/ramiz-mamedov/profil/spieler/67117"
+      ]
+    }
+  ],
+  "source_drift": {
+    "source_url": "https://www.bdfutbol.com/en/t/t1993-9410023.html",
+    "pinned_staging_rows": 33,
+    "current_page_additional_names": [
+      "Shmykov",
+      "Masalitin",
+      "Ternavskiy",
+      "Alenichev"
+    ],
+    "decision": "do_not_auto_add_in_v044",
+    "reason": "Current BDF page differs from the pinned staging snapshot; reconcile transfer/call-up timing before changing the 1993 roster cardinality."
+  },
+  "next_front": [
+    "Rotor Volgograd",
+    "Dynamo Moskva",
+    "Tekstilshchik Kamyshin",
+    "Lokomotiv Moskva",
+    "Spartak Vladikavkaz",
+    "Torpedo Moskva",
+    "Uralmash",
+    "CSKA Moskva",
+    "KAMAZ",
+    "Zhemchuzhina Sochi",
+    "Dynamo Stavropol",
+    "Lokomotiv Nizhny Novgorod",
+    "Krylia Sovetov",
+    "Luch Vladivostok",
+    "Okean Nakhodka",
+    "Rostselmash",
+    "Asmaral Moskva"
+  ],
+  "identity_registry": {
+    "created_profiles_updated": 30,
+    "canonical_preexisting_enriched_not_registered": [
+      2705,
+      515,
+      517
+    ],
+    "registry_photo_queue_synchronised": true
+  }
+}

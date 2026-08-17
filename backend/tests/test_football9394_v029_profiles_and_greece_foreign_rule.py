@@ -88,11 +88,13 @@ def test_turkey_individual_profiles_fix_roles_and_reconcile_roger_ljung():
 def test_russia_individual_profiles_fix_identity_nationality_and_roles():
     players = _players_by_id()
     stauce = players[9496613]
-    assert stauce["display_name"] == "Gintaras Staučė"
-    assert (int(stauce["birth_country_id"]), int(stauce["primary_role"])) == (52, 0)
+    assert stauce["display_name"] == "Gintaras Mindaugovich Staučė"
+    assert stauce.get("birth_country_id") is None
+    assert (stauce["historical_birth_state"], int(stauce["birth_territory_country_id"]), int(stauce["primary_role"])) == ("USSR", 52, 0)
 
     onopko = players[9494088]
-    assert (int(onopko["birth_country_id"]), int(onopko["international_country_id"])) == (85, 40)
+    assert onopko.get("birth_country_id") is None
+    assert (onopko["historical_birth_state"], int(onopko["birth_territory_country_id"]), int(onopko["international_country_id"])) == ("USSR", 85, 40)
     assert (onopko["height_cm"], onopko["weight_kg"]) == (188, 77)
 
     cherenkov = players[9496616]
@@ -100,7 +102,9 @@ def test_russia_individual_profiles_fix_identity_nationality_and_roles():
     assert cherenkov["attribute_source"] in {"fixed_source_comparable_role_correction_0.29", "fixed_source_comparable_profile_coherence_0.30", "fixed_source_comparable_role_correction_0.31"}
 
     pomazun = players[9496617]
-    assert int(pomazun["birth_country_id"]) == 85
+    assert pomazun.get("birth_country_id") is None
+    assert pomazun["historical_birth_state"] == "USSR"
+    assert int(pomazun["birth_territory_country_id"]) == 85
     assert int(pomazun["international_country_id"]) == 40
     assert int(pomazun["primary_role"]) == 0
 

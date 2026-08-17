@@ -85,6 +85,18 @@ def ingest_events(state: dict[str, Any], events: list[dict[str, Any]], *,
             pid=int(event.get("player_id") or 0); buyer=int(event.get("buyer_team_id") or 0)
             item=publish(state,key=key,date=date,category="Mercado",importance=2,
                 headline=f"{team_name(buyer)} pregunta por {player_name(pid)}",detail="Hay una oferta que requiere decisión del mánager.",entity={"player_id":pid,"team_id":buyer})
+        elif kind=="scouting_report_ready":
+            pid=int(event.get("player_id") or 0)
+            item=publish(state,key=key,date=date,category="Scouting",importance=2,
+                headline=f"Informe listo: {player_name(pid)}",
+                detail=f"{event.get('responsible') or 'El cuerpo técnico'} completa el seguimiento con {int(event.get('confidence') or 0)}% de confianza.",
+                entity={"player_id":pid})
+        elif kind=="training_injury":
+            pid=int(event.get("player_id") or 0); days=int(event.get("expected_days") or 0)
+            item=publish(state,key=key,date=date,category="Área médica",importance=3 if days>=14 else 2,
+                headline=f"{player_name(pid)} se lesiona en el entrenamiento",
+                detail=f"{event.get('injury') or 'Problemas físicos'} durante {event.get('session') or 'la sesión'}; la primera estimación es de {days} días.",
+                entity={"player_id":pid})
         elif kind=="manager_change":
             tid=int(event.get("team_id") or 0)
             old=str(event.get("from_manager_name") or "el anterior entrenador")

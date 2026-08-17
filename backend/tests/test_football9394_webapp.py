@@ -232,3 +232,33 @@ def test_role_promise_endpoint_persists_explicit_squad_commitment(monkeypatch, t
     detail = client.get(f'/api/football9394/careers/{cid}/players/{player_id}')
     assert detail.status_code == 200
     assert detail.json()['role_promise']['role'] == 'Titular'
+
+
+def test_nf0_staff_responsibility_api_persists_and_validates(monkeypatch, tmp_path):
+    import backend.app.football9394.webapp as webapp
+    monkeypatch.setattr(webapp, 'CAREER_SAVE_ROOT', tmp_path)
+    created = client.post('/api/football9394/careers', json={'team_id':16,'league_id':1,'seed':9394,'through_matchday':0})
+    assert created.status_code == 200
+    state = created.json(); cid = state['career_id']
+    staff = client.get(f'/api/football9394/careers/{cid}/staff')
+    assert staff.status_code == 200
+    payload = staff.json()
+    training = next(row for row in payload['responsibilities'] if row['key'] == 'first_team_training')
+    candidate = next(row for row in training['eligible_assignees'] if row['id'] != 'manager')
+    changed = client.put(
+        f'/api/football9394/careers/{cid}/staff/responsibilities/first_team_training',
+        json={'assignee': candidate['id']},
+    )
+    assert changed.status_code == 200
+    updated = next(row for row in changed.json()['staff']['responsibilities'] if row['key'] == 'first_team_training')
+    assert updated['assignee'] == candidate['id']
+    restored = client.get(f'/api/football9394/careers/{cid}/staff').json()
+    restored_training = next(row for row in restored['responsibilities'] if row['key'] == 'first_team_training')
+    assert restored_training['assignee'] == candidate['id']
+
+    physio = next(member for member in restored['members'] if member['role'] == 'physio')
+    invalid = client.put(
+        f'/api/football9394/careers/{cid}/staff/responsibilities/transfer_negotiation',
+        json={'assignee': physio['id']},
+    )
+    assert invalid.status_code == 409

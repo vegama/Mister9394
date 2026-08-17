@@ -1,7 +1,7 @@
 {
   "project": "Mister 93/94",
-  "checkpoint": "0.31.0-profiles-venues-referees-roster-hygiene",
-  "fork_stage": "historical-profiles-biographies-venues-referees-source-gated",
+  "checkpoint": "0.49.0-training-load-scouting-capacity-flow",
+  "fork_stage": "nf0-nf3-functional-staff-scouting-planning-medical",
   "season_start": "1993-94",
   "runtime_dataset": "data/football9394/historical_snapshot.json",
   "principles": [
@@ -135,7 +135,11 @@
     "greece-1993-94-is-active-only-through-historical-runtime-id-930047",
     "historical-league-roster-gates-use-real-identities-only-with-eighteen-player-minimum",
     "created-player-registry-never-includes-reused-original-mdb-identities",
-    "summer-hard-floor-repair-prefers-real-free-agents-and-nonplayable-historical-pools-before-active-club-surplus"
+    "summer-hard-floor-repair-prefers-real-free-agents-and-nonplayable-historical-pools-before-active-club-surplus",
+    "club-staff-is-persistent-per-club-and-survives-manager-mobility",
+    "career-generated-staff-is-never-presented-as-historical-source-data",
+    "club-responsibilities-can-be-owned-by-the-manager-or-only-eligible-staff",
+    "delegation-is-one-shared-state-to-be-consumed-by-scouting-training-medical-and-market-systems"
   ],
   "gates": {
     "manager_career": "12/12 PASS",
@@ -231,6 +235,15 @@
     "v0_23_created_player_profile_audit": "PASS: all created historical players reviewed against source-backed 1993-94 comparables; original 10,528 source players unchanged; no universal rating formula",
     "v0_24_bel_tur_rus_depth": "8/8 PASS: Belgium/Turkey/Russia depth, full-MDB reconciliation, fixed individual profiles, photo metadata, ~40-depth API, historical rules, 52-club foundation and modern-MDB source-row guard",
     "v0_24_created_player_registry": "PASS: 428 true external historical creations tracked; zero strong/ambiguous collisions and zero exact generated duplicates",
-    "v0_24_mdb_guard": "PASS: source league rows 52/57/15 are edition 2017 and are deliberately not bound to historical 1993-94 rules"
+    "v0_24_mdb_guard": "PASS: source league rows 52/57/15 are edition 2017 and are deliberately not bound to historical 1993-94 rules",
+    "v0_48_functional_batch": "6/6 new functional tests PASS: imperfect scouting, timed reports, squad planning, medical staff uncertainty, transfer handler, API surfaces",
+    "v0_48_targeted_backend": "44/44 PASS: 30 functional/API/NF0/matchday/market + 14 F1-F8 depth regression",
+    "v0_48_frontend_contract": "PASS: SFC structure + UI quality + Vue syntax 24/24",
+    "vite_production_build_0_48": "NOT CERTIFIED IN THIS ENVIRONMENT: all pre-build gates pass, then shell reports vite: not found because frontend dependencies are not materialized",
+    "v0_49_functional_batch": "7/7 new tests PASS: training plan/load, medical linkage, individual focus, scouting capacity/geography/aging, planner-market link and API",
+    "v0_49_selected_backend": "85/85 executed selected tests PASS across v0.49/v0.48/NF0/development/match/market/F1-F8/M4-M14/M15 four-profile/API/mobility groups",
+    "v0_49_three_season_gate": "NOT RE-CERTIFIED IN THIS EXECUTION: test_m15_three_season_product_gate_preserves_history_world_and_playability exceeds 180s execution window before a result",
+    "v0_49_frontend_contract": "PASS: SFC structure + UI quality + Vue syntax 25/25",
+    "vite_production_build_0_49": "NOT CERTIFIED IN THIS ENVIRONMENT: frontend/node_modules/.bin/vite is not materialized; SFC/UI/Vue pre-build gates pass"
   }
 }

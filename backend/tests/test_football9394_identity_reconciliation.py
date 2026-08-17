@@ -103,6 +103,11 @@ def test_creation_registry_and_bdfutbol_queue_contain_only_true_new_players():
             "exact_name_birthdate_source_profile_gate_v039",
             "exact_name_birthdate_source_profile_gate_v040",
             "exact_name_birthdate_source_profile_gate_v041",
+            "exact_name_birthdate_source_profile_gate_v042",
+            "exact_name_birthdate_source_profile_gate_v043",
+            "exact_name_birthdate_source_profile_gate_v044",
+            "individual_profile_id_identity_gate_v045",
+            "individual_profile_id_identity_gate_v046",
     }
     assert all(row["duplicate_check"] in allowed for row in rows)
     original_new=[row for row in rows if row["duplicate_check"]=="created_after_global_existing_player_comparison"]
