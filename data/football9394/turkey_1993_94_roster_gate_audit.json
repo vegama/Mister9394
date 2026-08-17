@@ -1,0 +1,3182 @@
+{
+  "schema_version": 1,
+  "season": "1993-94",
+  "league_id": 930057,
+  "status": "pass_turkey_1993_94_active",
+  "staged_rows": 288,
+  "unique_staged_identities": 288,
+  "clubs": 16,
+  "minimum_required": 18,
+  "minimum_active_roster": 18,
+  "roster_counts": {
+    "Galatasaray": 20,
+    "Fenerbahçe": 23,
+    "Trabzonspor": 20,
+    "Beşiktaş": 20,
+    "Samsunspor": 18,
+    "Kocaelispor": 19,
+    "Gençlerbirliği": 18,
+    "Gaziantepspor": 18,
+    "Bursaspor": 19,
+    "Altay": 18,
+    "Ankaragücü": 18,
+    "Kayserispor": 18,
+    "Zeytinburnuspor": 18,
+    "Karabükspor": 18,
+    "Karşıyaka": 18,
+    "Sarıyer": 18
+  },
+  "role_counts": {
+    "Galatasaray": {
+      "Goalkeeper": 1,
+      "Centre Back": 4,
+      "Defensive Midfielder": 3,
+      "Left Midfielder": 3,
+      "Centre Midfielder": 1,
+      "Attacking Midfielder": 1,
+      "Centre Forward": 3,
+      "Right Back": 1,
+      "Left Winger": 2,
+      "Left Back": 1
+    },
+    "Fenerbahçe": {
+      "Goalkeeper": 2,
+      "Centre Back": 4,
+      "Centre Midfielder": 7,
+      "Centre Forward": 3,
+      "Right Back": 2,
+      "Left Back": 1,
+      "Left Midfielder": 1,
+      "Right Midfielder": 2,
+      "Right Winger": 1
+    },
+    "Trabzonspor": {
+      "Centre Back": 5,
+      "Centre Midfielder": 1,
+      "Left Midfielder": 3,
+      "Defensive Midfielder": 2,
+      "Centre Forward": 4,
+      "Goalkeeper": 3,
+      "Right Midfielder": 1,
+      "Left Back": 1
+    },
+    "Beşiktaş": {
+      "Right Back": 2,
+      "Centre Back": 1,
+      "Libero": 1,
+      "Left Back": 1,
+      "Attacking Midfielder": 2,
+      "Centre Midfielder": 4,
+      "Centre Forward": 4,
+      "Goalkeeper": 2,
+      "Right Midfielder": 2,
+      "Right Winger": 1
+    },
+    "Samsunspor": {
+      "Centre Forward": 5,
+      "Goalkeeper": 2,
+      "Right Back": 1,
+      "Centre Back": 3,
+      "Left Back": 1,
+      "Right Midfielder": 1,
+      "Centre Midfielder": 2,
+      "Defensive Midfielder": 1,
+      "Left Midfielder": 1,
+      "Left Winger": 1
+    },
+    "Kocaelispor": {
+      "Centre Forward": 3,
+      "Goalkeeper": 1,
+      "Right Back": 2,
+      "Centre Back": 3,
+      "Left Back": 1,
+      "Right Midfielder": 2,
+      "Centre Midfielder": 3,
+      "Left Midfielder": 1,
+      "Right Winger": 2,
+      "Attacking Midfielder": 1
+    },
+    "Gençlerbirliği": {
+      "Goalkeeper": 2,
+      "Right Back": 1,
+      "Centre Back": 3,
+      "Left Back": 2,
+      "Right Midfielder": 1,
+      "Centre Midfielder": 2,
+      "Left Midfielder": 2,
+      "Centre Forward": 3,
+      "Left Winger": 1,
+      "Defensive Midfielder": 1
+    },
+    "Gaziantepspor": {
+      "Goalkeeper": 2,
+      "Right Back": 2,
+      "Centre Back": 3,
+      "Left Back": 1,
+      "Right Midfielder": 2,
+      "Centre Midfielder": 3,
+      "Left Midfielder": 1,
+      "Centre Forward": 2,
+      "Attacking Midfielder": 1,
+      "Right Winger": 1
+    },
+    "Bursaspor": {
+      "Centre Back": 4,
+      "Goalkeeper": 2,
+      "Right Back": 1,
+      "Left Back": 2,
+      "Right Midfielder": 1,
+      "Centre Midfielder": 2,
+      "Left Midfielder": 2,
+      "Centre Forward": 3,
+      "Left Winger": 1,
+      "Defensive Midfielder": 1
+    },
+    "Altay": {
+      "Goalkeeper": 2,
+      "Right Back": 2,
+      "Centre Back": 3,
+      "Left Back": 1,
+      "Right Midfielder": 2,
+      "Centre Midfielder": 3,
+      "Left Midfielder": 1,
+      "Centre Forward": 2,
+      "Attacking Midfielder": 1,
+      "Right Winger": 1
+    },
+    "Ankaragücü": {
+      "Centre Back": 4,
+      "Goalkeeper": 3,
+      "Left Back": 2,
+      "Right Midfielder": 1,
+      "Centre Midfielder": 2,
+      "Left Midfielder": 1,
+      "Centre Forward": 3,
+      "Left Winger": 1,
+      "Defensive Midfielder": 1
+    },
+    "Kayserispor": {
+      "Goalkeeper": 3,
+      "Right Back": 1,
+      "Centre Back": 3,
+      "Left Back": 1,
+      "Right Midfielder": 2,
+      "Centre Midfielder": 3,
+      "Left Midfielder": 1,
+      "Centre Forward": 2,
+      "Attacking Midfielder": 1,
+      "Right Winger": 1
+    },
+    "Zeytinburnuspor": {
+      "Goalkeeper": 3,
+      "Right Back": 1,
+      "Centre Back": 3,
+      "Left Back": 2,
+      "Right Midfielder": 1,
+      "Centre Midfielder": 2,
+      "Left Midfielder": 2,
+      "Centre Forward": 2,
+      "Defensive Midfielder": 1,
+      "Left Winger": 1
+    },
+    "Karabükspor": {
+      "Goalkeeper": 3,
+      "Right Back": 2,
+      "Centre Back": 3,
+      "Left Back": 1,
+      "Right Midfielder": 2,
+      "Centre Midfielder": 2,
+      "Left Midfielder": 1,
+      "Centre Forward": 3,
+      "Right Winger": 1
+    },
+    "Karşıyaka": {
+      "Goalkeeper": 1,
+      "Right Back": 1,
+      "Centre Back": 4,
+      "Left Back": 2,
+      "Right Midfielder": 1,
+      "Centre Midfielder": 2,
+      "Left Midfielder": 2,
+      "Centre Forward": 3,
+      "Defensive Midfielder": 1,
+      "Left Winger": 1
+    },
+    "Sarıyer": {
+      "Goalkeeper": 2,
+      "Right Back": 2,
+      "Centre Back": 3,
+      "Left Back": 1,
+      "Right Midfielder": 2,
+      "Centre Midfielder": 3,
+      "Left Midfielder": 1,
+      "Centre Forward": 2,
+      "Right Winger": 1,
+      "Attacking Midfielder": 1
+    }
+  },
+  "reused_existing_players": 27,
+  "created_players": 261,
+  "extra_verified_pool_players_reassigned": 13,
+  "extra_reassigned": [
+    {
+      "source_id": 9495317,
+      "display_name": "Rüştü Reçber",
+      "club": "Fenerbahçe"
+    },
+    {
+      "source_id": 9495325,
+      "display_name": "Emre Aşık",
+      "club": "Fenerbahçe"
+    },
+    {
+      "source_id": 9495326,
+      "display_name": "Sedat Balkanlı",
+      "club": "Bursaspor"
+    },
+    {
+      "source_id": 9495329,
+      "display_name": "Ergün Penbe",
+      "club": "Galatasaray"
+    },
+    {
+      "source_id": 9495338,
+      "display_name": "Rıza Çalımbay",
+      "club": "Beşiktaş"
+    },
+    {
+      "source_id": 9495339,
+      "display_name": "Turhan Sofuoğlu",
+      "club": "Fenerbahçe"
+    },
+    {
+      "source_id": 9495340,
+      "display_name": "Okan Buruk",
+      "club": "Galatasaray"
+    },
+    {
+      "source_id": 9495341,
+      "display_name": "Rıdvan Dilmen",
+      "club": "Fenerbahçe"
+    },
+    {
+      "source_id": 9495343,
+      "display_name": "İlker Yağcıoğlu",
+      "club": "Fenerbahçe"
+    },
+    {
+      "source_id": 9495345,
+      "display_name": "Sergen Yalçın",
+      "club": "Beşiktaş"
+    },
+    {
+      "source_id": 9495346,
+      "display_name": "Orhan Çıkırıkçı",
+      "club": "Trabzonspor"
+    },
+    {
+      "source_id": 9495349,
+      "display_name": "Hami Mandıralı",
+      "club": "Trabzonspor"
+    },
+    {
+      "source_id": 9495353,
+      "display_name": "Saffet Sancaklı",
+      "club": "Kocaelispor"
+    }
+  ],
+  "mixed_era_memberships_excluded": 41,
+  "position_provenance": {
+    "existing_historical_position": 27,
+    "bdfutbol_lineup_order_inference": 138,
+    "squad_balance_inference": 89,
+    "bdfutbol_goalkeeper_stat": 30,
+    "bdfutbol_goal_output_inference": 4
+  },
+  "otros_turquia_stranded_recognised_club": 0,
+  "modern_mdb_league_id_57_active": false,
+  "identities": [
+    {
+      "club": "Galatasaray",
+      "bdfutbol_name": "Hayrettin",
+      "identity_hint": null,
+      "source_id": 9495316,
+      "display_name": "Hayrettin Demirbaş",
+      "role": 0,
+      "position": "Goalkeeper",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Galatasaray",
+      "bdfutbol_name": "Stumpf",
+      "identity_hint": null,
+      "source_id": 9496352,
+      "display_name": "Stumpf",
+      "role": 1,
+      "position": "Right Back",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Galatasaray",
+      "bdfutbol_name": "Korkmaz",
+      "identity_hint": null,
+      "source_id": 9496353,
+      "display_name": "Korkmaz",
+      "role": 3,
+      "position": "Centre Back",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Galatasaray",
+      "bdfutbol_name": "Bülent",
+      "identity_hint": null,
+      "source_id": 9495319,
+      "display_name": "Bülent Korkmaz",
+      "role": 3,
+      "position": "Centre Back",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Galatasaray",
+      "bdfutbol_name": "Hamzaoğlu",
+      "identity_hint": null,
+      "source_id": 9495337,
+      "display_name": "Hamza Hamzaoğlu",
+      "role": 13,
+      "position": "Left Midfielder",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Galatasaray",
+      "bdfutbol_name": "Suat",
+      "identity_hint": null,
+      "source_id": 9495336,
+      "display_name": "Suat Kaya",
+      "role": 6,
+      "position": "Defensive Midfielder",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Galatasaray",
+      "bdfutbol_name": "Tugay",
+      "identity_hint": null,
+      "source_id": 9495331,
+      "display_name": "Tugay Kerimoğlu",
+      "role": 6,
+      "position": "Defensive Midfielder",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Galatasaray",
+      "bdfutbol_name": "Tepekule",
+      "identity_hint": null,
+      "source_id": 9495327,
+      "display_name": "Yusuf Tepekule",
+      "role": 3,
+      "position": "Centre Back",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Galatasaray",
+      "bdfutbol_name": "Götz",
+      "identity_hint": null,
+      "source_id": 9496354,
+      "display_name": "Götz",
+      "role": 13,
+      "position": "Left Midfielder",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Galatasaray",
+      "bdfutbol_name": "Şükür",
+      "identity_hint": null,
+      "source_id": 9495348,
+      "display_name": "Hakan Şükür",
+      "role": 17,
+      "position": "Centre Forward",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Galatasaray",
+      "bdfutbol_name": "Erdem",
+      "identity_hint": null,
+      "source_id": 9495354,
+      "display_name": "Arif Erdem",
+      "role": 17,
+      "position": "Centre Forward",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Galatasaray",
+      "bdfutbol_name": "Boloğlu",
+      "identity_hint": null,
+      "source_id": 9496355,
+      "display_name": "Boloğlu",
+      "role": 16,
+      "position": "Left Winger",
+      "position_source": "squad_balance_inference"
+    },
+    {
+      "club": "Galatasaray",
+      "bdfutbol_name": "Tütüneker",
+      "identity_hint": null,
+      "source_id": 9495342,
+      "display_name": "Uğur Tütüneker",
+      "role": 8,
+      "position": "Attacking Midfielder",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Galatasaray",
+      "bdfutbol_name": "Ljung",
+      "identity_hint": null,
+      "source_id": 9496356,
+      "display_name": "Ljung",
+      "role": 2,
+      "position": "Left Back",
+      "position_source": "squad_balance_inference"
+    },
+    {
+      "club": "Galatasaray",
+      "bdfutbol_name": "Keser",
+      "identity_hint": null,
+      "source_id": 9496357,
+      "display_name": "Keser",
+      "role": 6,
+      "position": "Defensive Midfielder",
+      "position_source": "squad_balance_inference"
+    },
+    {
+      "club": "Galatasaray",
+      "bdfutbol_name": "Türkyılmaz",
+      "identity_hint": null,
+      "source_id": 9496358,
+      "display_name": "Türkyılmaz",
+      "role": 13,
+      "position": "Left Midfielder",
+      "position_source": "squad_balance_inference"
+    },
+    {
+      "club": "Galatasaray",
+      "bdfutbol_name": "Bulut",
+      "identity_hint": null,
+      "source_id": 9496359,
+      "display_name": "Bulut",
+      "role": 17,
+      "position": "Centre Forward",
+      "position_source": "squad_balance_inference"
+    },
+    {
+      "club": "Galatasaray",
+      "bdfutbol_name": "Kocabey",
+      "identity_hint": null,
+      "source_id": 9496360,
+      "display_name": "Kocabey",
+      "role": 16,
+      "position": "Left Winger",
+      "position_source": "squad_balance_inference"
+    },
+    {
+      "club": "Fenerbahçe",
+      "bdfutbol_name": "İpekoğlu",
+      "identity_hint": null,
+      "source_id": 9495315,
+      "display_name": "Engin İpekoğlu",
+      "role": 0,
+      "position": "Goalkeeper",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Fenerbahçe",
+      "bdfutbol_name": "Yağcıoğlu",
+      "identity_hint": null,
+      "source_id": 9496361,
+      "display_name": "Yağcıoğlu",
+      "role": 1,
+      "position": "Right Back",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Fenerbahçe",
+      "bdfutbol_name": "Wagenhaus",
+      "identity_hint": null,
+      "source_id": 9496362,
+      "display_name": "Wagenhaus",
+      "role": 3,
+      "position": "Centre Back",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Fenerbahçe",
+      "bdfutbol_name": "Aşık",
+      "identity_hint": null,
+      "source_id": 9496363,
+      "display_name": "Aşık",
+      "role": 4,
+      "position": "Centre Back",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Fenerbahçe",
+      "bdfutbol_name": "Uche",
+      "identity_hint": null,
+      "source_id": 9496364,
+      "display_name": "Uche",
+      "role": 2,
+      "position": "Left Back",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Fenerbahçe",
+      "bdfutbol_name": "Oğuz",
+      "identity_hint": null,
+      "source_id": 9495332,
+      "display_name": "Oğuz Çetin",
+      "role": 7,
+      "position": "Centre Midfielder",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Fenerbahçe",
+      "bdfutbol_name": "Tayfur",
+      "identity_hint": null,
+      "source_id": 9496365,
+      "display_name": "Tayfur",
+      "role": 7,
+      "position": "Centre Midfielder",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Fenerbahçe",
+      "bdfutbol_name": "Müjdat",
+      "identity_hint": null,
+      "source_id": 9496366,
+      "display_name": "Müjdat",
+      "role": 7,
+      "position": "Centre Midfielder",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Fenerbahçe",
+      "bdfutbol_name": "Nielsen",
+      "identity_hint": null,
+      "source_id": 9496367,
+      "display_name": "Nielsen",
+      "role": 13,
+      "position": "Left Midfielder",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Fenerbahçe",
+      "bdfutbol_name": "Uygun",
+      "identity_hint": null,
+      "source_id": 9495352,
+      "display_name": "Bülent Uygun",
+      "role": 17,
+      "position": "Centre Forward",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Fenerbahçe",
+      "bdfutbol_name": "Çolak",
+      "identity_hint": null,
+      "source_id": 9496368,
+      "display_name": "Çolak",
+      "role": 17,
+      "position": "Centre Forward",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Fenerbahçe",
+      "bdfutbol_name": "Dağdelen",
+      "identity_hint": null,
+      "source_id": 9496369,
+      "display_name": "Dağdelen",
+      "role": 9,
+      "position": "Right Midfielder",
+      "position_source": "squad_balance_inference"
+    },
+    {
+      "club": "Fenerbahçe",
+      "bdfutbol_name": "Kocaman",
+      "identity_hint": null,
+      "source_id": 9495351,
+      "display_name": "Aykut Kocaman",
+      "role": 17,
+      "position": "Centre Forward",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Fenerbahçe",
+      "bdfutbol_name": "Sentürk",
+      "identity_hint": null,
+      "source_id": 9496370,
+      "display_name": "Sentürk",
+      "role": 12,
+      "position": "Right Winger",
+      "position_source": "squad_balance_inference"
+    },
+    {
+      "club": "Fenerbahçe",
+      "bdfutbol_name": "Kanburoğlu",
+      "identity_hint": null,
+      "source_id": 9496371,
+      "display_name": "Kanburoğlu",
+      "role": 3,
+      "position": "Centre Back",
+      "position_source": "squad_balance_inference"
+    },
+    {
+      "club": "Fenerbahçe",
+      "bdfutbol_name": "Alp",
+      "identity_hint": null,
+      "source_id": 9496372,
+      "display_name": "Alp",
+      "role": 1,
+      "position": "Right Back",
+      "position_source": "squad_balance_inference"
+    },
+    {
+      "club": "Fenerbahçe",
+      "bdfutbol_name": "Taşkıran",
+      "identity_hint": null,
+      "source_id": 9496373,
+      "display_name": "Taşkıran",
+      "role": 7,
+      "position": "Centre Midfielder",
+      "position_source": "squad_balance_inference"
+    },
+    {
+      "club": "Fenerbahçe",
+      "bdfutbol_name": "Yuvakuran",
+      "identity_hint": null,
+      "source_id": 9496374,
+      "display_name": "Yuvakuran",
+      "role": 9,
+      "position": "Right Midfielder",
+      "position_source": "squad_balance_inference"
+    },
+    {
+      "club": "Trabzonspor",
+      "bdfutbol_name": "Silin",
+      "identity_hint": null,
+      "source_id": 9496375,
+      "display_name": "Silin",
+      "role": 0,
+      "position": "Goalkeeper",
+      "position_source": "bdfutbol_goalkeeper_stat"
+    },
+    {
+      "club": "Trabzonspor",
+      "bdfutbol_name": "Ercan",
+      "identity_hint": null,
+      "source_id": 9495335,
+      "display_name": "Abdullah Ercan",
+      "role": 13,
+      "position": "Left Midfielder",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Trabzonspor",
+      "bdfutbol_name": "Aslan",
+      "identity_hint": null,
+      "source_id": 9496376,
+      "display_name": "Aslan",
+      "role": 3,
+      "position": "Centre Back",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Trabzonspor",
+      "bdfutbol_name": "Serdar",
+      "identity_hint": null,
+      "source_id": 9496377,
+      "display_name": "Serdar",
+      "role": 4,
+      "position": "Centre Back",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Trabzonspor",
+      "bdfutbol_name": "Ogün",
+      "identity_hint": null,
+      "source_id": 9495321,
+      "display_name": "Ogün Temizkanoğlu",
+      "role": 3,
+      "position": "Centre Back",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Trabzonspor",
+      "bdfutbol_name": "Çıkırıkçı",
+      "identity_hint": null,
+      "source_id": 9496378,
+      "display_name": "Çıkırıkçı",
+      "role": 9,
+      "position": "Right Midfielder",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Trabzonspor",
+      "bdfutbol_name": "Karaman",
+      "identity_hint": null,
+      "source_id": 9495333,
+      "display_name": "Ünal Karaman",
+      "role": 7,
+      "position": "Centre Midfielder",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Trabzonspor",
+      "bdfutbol_name": "Kafkas",
+      "identity_hint": null,
+      "source_id": 9495344,
+      "display_name": "Tolunay Kafkas",
+      "role": 6,
+      "position": "Defensive Midfielder",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Trabzonspor",
+      "bdfutbol_name": "Mandıralı",
+      "identity_hint": null,
+      "source_id": 9496379,
+      "display_name": "Mandıralı",
+      "role": 13,
+      "position": "Left Midfielder",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Trabzonspor",
+      "bdfutbol_name": "Arveladze",
+      "identity_hint": "Shota Arveladze",
+      "source_id": 9496380,
+      "display_name": "Shota Arveladze",
+      "role": 17,
+      "position": "Centre Forward",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Trabzonspor",
+      "bdfutbol_name": "Atila",
+      "identity_hint": null,
+      "source_id": 9495328,
+      "display_name": "Cengiz Atila",
+      "role": 3,
+      "position": "Centre Back",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Trabzonspor",
+      "bdfutbol_name": "Grischko",
+      "identity_hint": null,
+      "source_id": 9496381,
+      "display_name": "Grischko",
+      "role": 0,
+      "position": "Goalkeeper",
+      "position_source": "bdfutbol_goalkeeper_stat"
+    },
+    {
+      "club": "Trabzonspor",
+      "bdfutbol_name": "Soner",
+      "identity_hint": null,
+      "source_id": 9496382,
+      "display_name": "Soner",
+      "role": 2,
+      "position": "Left Back",
+      "position_source": "squad_balance_inference"
+    },
+    {
+      "club": "Trabzonspor",
+      "bdfutbol_name": "Çelik",
+      "identity_hint": null,
+      "source_id": 9496383,
+      "display_name": "Çelik",
+      "role": 6,
+      "position": "Defensive Midfielder",
+      "position_source": "squad_balance_inference"
+    },
+    {
+      "club": "Trabzonspor",
+      "bdfutbol_name": "Kaynak",
+      "identity_hint": null,
+      "source_id": 9496384,
+      "display_name": "Kaynak",
+      "role": 13,
+      "position": "Left Midfielder",
+      "position_source": "squad_balance_inference"
+    },
+    {
+      "club": "Trabzonspor",
+      "bdfutbol_name": "Arveladze",
+      "identity_hint": "Archil Arveladze",
+      "source_id": 9496385,
+      "display_name": "Archil Arveladze",
+      "role": 17,
+      "position": "Centre Forward",
+      "position_source": "bdfutbol_goal_output_inference"
+    },
+    {
+      "club": "Trabzonspor",
+      "bdfutbol_name": "Tümkaya",
+      "identity_hint": null,
+      "source_id": 9496386,
+      "display_name": "Tümkaya",
+      "role": 0,
+      "position": "Goalkeeper",
+      "position_source": "bdfutbol_goalkeeper_stat"
+    },
+    {
+      "club": "Trabzonspor",
+      "bdfutbol_name": "Özköylü",
+      "identity_hint": null,
+      "source_id": 9496387,
+      "display_name": "Özköylü",
+      "role": 4,
+      "position": "Centre Back",
+      "position_source": "squad_balance_inference"
+    },
+    {
+      "club": "Beşiktaş",
+      "bdfutbol_name": "Öğer",
+      "identity_hint": null,
+      "source_id": 9496388,
+      "display_name": "Öğer",
+      "role": 0,
+      "position": "Goalkeeper",
+      "position_source": "bdfutbol_goalkeeper_stat"
+    },
+    {
+      "club": "Beşiktaş",
+      "bdfutbol_name": "Çetin",
+      "identity_hint": null,
+      "source_id": 9495320,
+      "display_name": "Recep Çetin",
+      "role": 1,
+      "position": "Right Back",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Beşiktaş",
+      "bdfutbol_name": "Topçu",
+      "identity_hint": null,
+      "source_id": 9495330,
+      "display_name": "Mutlu Topçu",
+      "role": 2,
+      "position": "Left Back",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Beşiktaş",
+      "bdfutbol_name": "Günçar",
+      "identity_hint": null,
+      "source_id": 9495322,
+      "display_name": "Ali Günçar",
+      "role": 3,
+      "position": "Centre Back",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Beşiktaş",
+      "bdfutbol_name": "Keskin",
+      "identity_hint": null,
+      "source_id": 9495323,
+      "display_name": "Gökhan Keskin",
+      "role": 5,
+      "position": "Libero",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Beşiktaş",
+      "bdfutbol_name": "Çalımbay",
+      "identity_hint": null,
+      "source_id": 9496389,
+      "display_name": "Çalımbay",
+      "role": 9,
+      "position": "Right Midfielder",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Beşiktaş",
+      "bdfutbol_name": "Özdilek",
+      "identity_hint": null,
+      "source_id": 9495334,
+      "display_name": "Mehmet Özdilek",
+      "role": 8,
+      "position": "Attacking Midfielder",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Beşiktaş",
+      "bdfutbol_name": "Madida",
+      "identity_hint": null,
+      "source_id": 9496390,
+      "display_name": "Madida",
+      "role": 7,
+      "position": "Centre Midfielder",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Beşiktaş",
+      "bdfutbol_name": "Uçar",
+      "identity_hint": null,
+      "source_id": 9495347,
+      "display_name": "Feyyaz Uçar",
+      "role": 17,
+      "position": "Centre Forward",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Beşiktaş",
+      "bdfutbol_name": "Oktay",
+      "identity_hint": null,
+      "source_id": 9496391,
+      "display_name": "Oktay",
+      "role": 17,
+      "position": "Centre Forward",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Beşiktaş",
+      "bdfutbol_name": "Nartallo",
+      "identity_hint": null,
+      "source_id": 9496392,
+      "display_name": "Nartallo",
+      "role": 17,
+      "position": "Centre Forward",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Beşiktaş",
+      "bdfutbol_name": "Kurtulmuş",
+      "identity_hint": null,
+      "source_id": 9496393,
+      "display_name": "Kurtulmuş",
+      "role": 0,
+      "position": "Goalkeeper",
+      "position_source": "bdfutbol_goalkeeper_stat"
+    },
+    {
+      "club": "Beşiktaş",
+      "bdfutbol_name": "Metin",
+      "identity_hint": null,
+      "source_id": 9496394,
+      "display_name": "Metin",
+      "role": 12,
+      "position": "Right Winger",
+      "position_source": "squad_balance_inference"
+    },
+    {
+      "club": "Beşiktaş",
+      "bdfutbol_name": "Yalçın",
+      "identity_hint": null,
+      "source_id": 9496395,
+      "display_name": "Yalçın",
+      "role": 17,
+      "position": "Centre Forward",
+      "position_source": "bdfutbol_goal_output_inference"
+    },
+    {
+      "club": "Beşiktaş",
+      "bdfutbol_name": "Alpay",
+      "identity_hint": null,
+      "source_id": 9496396,
+      "display_name": "Alpay",
+      "role": 1,
+      "position": "Right Back",
+      "position_source": "squad_balance_inference"
+    },
+    {
+      "club": "Beşiktaş",
+      "bdfutbol_name": "Uzun",
+      "identity_hint": null,
+      "source_id": 9496397,
+      "display_name": "Uzun",
+      "role": 7,
+      "position": "Centre Midfielder",
+      "position_source": "squad_balance_inference"
+    },
+    {
+      "club": "Beşiktaş",
+      "bdfutbol_name": "Akbulut",
+      "identity_hint": null,
+      "source_id": 9496398,
+      "display_name": "Akbulut",
+      "role": 9,
+      "position": "Right Midfielder",
+      "position_source": "squad_balance_inference"
+    },
+    {
+      "club": "Beşiktaş",
+      "bdfutbol_name": "Tokaç",
+      "identity_hint": null,
+      "source_id": 9496399,
+      "display_name": "Tokaç",
+      "role": 8,
+      "position": "Attacking Midfielder",
+      "position_source": "squad_balance_inference"
+    },
+    {
+      "club": "Samsunspor",
+      "bdfutbol_name": "Aydın",
+      "identity_hint": null,
+      "source_id": 9496400,
+      "display_name": "Aydın",
+      "role": 0,
+      "position": "Goalkeeper",
+      "position_source": "bdfutbol_goalkeeper_stat"
+    },
+    {
+      "club": "Samsunspor",
+      "bdfutbol_name": "Arslan",
+      "identity_hint": null,
+      "source_id": 9496401,
+      "display_name": "Arslan",
+      "role": 1,
+      "position": "Right Back",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Samsunspor",
+      "bdfutbol_name": "Koloğlu",
+      "identity_hint": null,
+      "source_id": 9496402,
+      "display_name": "Koloğlu",
+      "role": 3,
+      "position": "Centre Back",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Samsunspor",
+      "bdfutbol_name": "Çıkla",
+      "identity_hint": null,
+      "source_id": 9496403,
+      "display_name": "Çıkla",
+      "role": 4,
+      "position": "Centre Back",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Samsunspor",
+      "bdfutbol_name": "Korkmaz",
+      "identity_hint": "Samsunspor Korkmaz A",
+      "source_id": 9496404,
+      "display_name": "Korkmaz",
+      "role": 2,
+      "position": "Left Back",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Samsunspor",
+      "bdfutbol_name": "Timofte",
+      "identity_hint": null,
+      "source_id": 9496405,
+      "display_name": "Timofte",
+      "role": 9,
+      "position": "Right Midfielder",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Samsunspor",
+      "bdfutbol_name": "Akyol",
+      "identity_hint": null,
+      "source_id": 9496406,
+      "display_name": "Akyol",
+      "role": 7,
+      "position": "Centre Midfielder",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Samsunspor",
+      "bdfutbol_name": "Gürsu",
+      "identity_hint": null,
+      "source_id": 9496407,
+      "display_name": "Gürsu",
+      "role": 7,
+      "position": "Centre Midfielder",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Samsunspor",
+      "bdfutbol_name": "Sağlam",
+      "identity_hint": null,
+      "source_id": 9495350,
+      "display_name": "Ertuğrul Sağlam",
+      "role": 17,
+      "position": "Centre Forward",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Samsunspor",
+      "bdfutbol_name": "Kubat",
+      "identity_hint": null,
+      "source_id": 9496408,
+      "display_name": "Kubat",
+      "role": 17,
+      "position": "Centre Forward",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Samsunspor",
+      "bdfutbol_name": "Korkmaz",
+      "identity_hint": "Samsunspor Korkmaz B",
+      "source_id": 9496409,
+      "display_name": "Korkmaz",
+      "role": 17,
+      "position": "Centre Forward",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Samsunspor",
+      "bdfutbol_name": "Aslan",
+      "identity_hint": null,
+      "source_id": 9496410,
+      "display_name": "Aslan",
+      "role": 0,
+      "position": "Goalkeeper",
+      "position_source": "bdfutbol_goalkeeper_stat"
+    },
+    {
+      "club": "Samsunspor",
+      "bdfutbol_name": "İsa",
+      "identity_hint": null,
+      "source_id": 9496411,
+      "display_name": "İsa",
+      "role": 6,
+      "position": "Defensive Midfielder",
+      "position_source": "squad_balance_inference"
+    },
+    {
+      "club": "Samsunspor",
+      "bdfutbol_name": "Korkmaz",
+      "identity_hint": null,
+      "source_id": 9496412,
+      "display_name": "Korkmaz",
+      "role": 13,
+      "position": "Left Midfielder",
+      "position_source": "squad_balance_inference"
+    },
+    {
+      "club": "Samsunspor",
+      "bdfutbol_name": "Constantin",
+      "identity_hint": null,
+      "source_id": 9496413,
+      "display_name": "Constantin",
+      "role": 17,
+      "position": "Centre Forward",
+      "position_source": "squad_balance_inference"
+    },
+    {
+      "club": "Samsunspor",
+      "bdfutbol_name": "Cheregi",
+      "identity_hint": null,
+      "source_id": 9496414,
+      "display_name": "Cheregi",
+      "role": 16,
+      "position": "Left Winger",
+      "position_source": "squad_balance_inference"
+    },
+    {
+      "club": "Samsunspor",
+      "bdfutbol_name": "İlhan",
+      "identity_hint": null,
+      "source_id": 9496415,
+      "display_name": "İlhan",
+      "role": 4,
+      "position": "Centre Back",
+      "position_source": "squad_balance_inference"
+    },
+    {
+      "club": "Samsunspor",
+      "bdfutbol_name": "Aykut",
+      "identity_hint": null,
+      "source_id": 9496416,
+      "display_name": "Aykut",
+      "role": 17,
+      "position": "Centre Forward",
+      "position_source": "bdfutbol_goal_output_inference"
+    },
+    {
+      "club": "Kocaelispor",
+      "bdfutbol_name": "Omerović",
+      "identity_hint": null,
+      "source_id": 9496417,
+      "display_name": "Omerović",
+      "role": 0,
+      "position": "Goalkeeper",
+      "position_source": "bdfutbol_goalkeeper_stat"
+    },
+    {
+      "club": "Kocaelispor",
+      "bdfutbol_name": "Mirković",
+      "identity_hint": null,
+      "source_id": 9496418,
+      "display_name": "Mirković",
+      "role": 1,
+      "position": "Right Back",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Kocaelispor",
+      "bdfutbol_name": "Kuzmanovski",
+      "identity_hint": null,
+      "source_id": 9496419,
+      "display_name": "Kuzmanovski",
+      "role": 3,
+      "position": "Centre Back",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Kocaelispor",
+      "bdfutbol_name": "Çakır",
+      "identity_hint": null,
+      "source_id": 9496420,
+      "display_name": "Çakır",
+      "role": 4,
+      "position": "Centre Back",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Kocaelispor",
+      "bdfutbol_name": "Usta",
+      "identity_hint": null,
+      "source_id": 9496421,
+      "display_name": "Usta",
+      "role": 2,
+      "position": "Left Back",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Kocaelispor",
+      "bdfutbol_name": "Akgün",
+      "identity_hint": null,
+      "source_id": 9496422,
+      "display_name": "Akgün",
+      "role": 9,
+      "position": "Right Midfielder",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Kocaelispor",
+      "bdfutbol_name": "Uzun",
+      "identity_hint": null,
+      "source_id": 9496423,
+      "display_name": "Uzun",
+      "role": 7,
+      "position": "Centre Midfielder",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Kocaelispor",
+      "bdfutbol_name": "Bacacı",
+      "identity_hint": null,
+      "source_id": 9496424,
+      "display_name": "Bacacı",
+      "role": 7,
+      "position": "Centre Midfielder",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Kocaelispor",
+      "bdfutbol_name": "Birol",
+      "identity_hint": null,
+      "source_id": 9496425,
+      "display_name": "Birol",
+      "role": 13,
+      "position": "Left Midfielder",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Kocaelispor",
+      "bdfutbol_name": "Sancaklı",
+      "identity_hint": null,
+      "source_id": 9496426,
+      "display_name": "Sancaklı",
+      "role": 17,
+      "position": "Centre Forward",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Kocaelispor",
+      "bdfutbol_name": "Kara",
+      "identity_hint": null,
+      "source_id": 9496427,
+      "display_name": "Kara",
+      "role": 17,
+      "position": "Centre Forward",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Kocaelispor",
+      "bdfutbol_name": "Boğuşlu",
+      "identity_hint": null,
+      "source_id": 9496428,
+      "display_name": "Boğuşlu",
+      "role": 12,
+      "position": "Right Winger",
+      "position_source": "squad_balance_inference"
+    },
+    {
+      "club": "Kocaelispor",
+      "bdfutbol_name": "Gürbüztürk",
+      "identity_hint": null,
+      "source_id": 9496429,
+      "display_name": "Gürbüztürk",
+      "role": 3,
+      "position": "Centre Back",
+      "position_source": "squad_balance_inference"
+    },
+    {
+      "club": "Kocaelispor",
+      "bdfutbol_name": "Yiğit",
+      "identity_hint": null,
+      "source_id": 9496430,
+      "display_name": "Yiğit",
+      "role": 1,
+      "position": "Right Back",
+      "position_source": "squad_balance_inference"
+    },
+    {
+      "club": "Kocaelispor",
+      "bdfutbol_name": "Zeki",
+      "identity_hint": null,
+      "source_id": 9496431,
+      "display_name": "Zeki",
+      "role": 7,
+      "position": "Centre Midfielder",
+      "position_source": "squad_balance_inference"
+    },
+    {
+      "club": "Kocaelispor",
+      "bdfutbol_name": "Kıldıran",
+      "identity_hint": null,
+      "source_id": 9496432,
+      "display_name": "Kıldıran",
+      "role": 9,
+      "position": "Right Midfielder",
+      "position_source": "squad_balance_inference"
+    },
+    {
+      "club": "Kocaelispor",
+      "bdfutbol_name": "Arslan",
+      "identity_hint": null,
+      "source_id": 9496433,
+      "display_name": "Arslan",
+      "role": 8,
+      "position": "Attacking Midfielder",
+      "position_source": "squad_balance_inference"
+    },
+    {
+      "club": "Kocaelispor",
+      "bdfutbol_name": "Yılmaz",
+      "identity_hint": null,
+      "source_id": 9496434,
+      "display_name": "Yılmaz",
+      "role": 12,
+      "position": "Right Winger",
+      "position_source": "squad_balance_inference"
+    },
+    {
+      "club": "Gençlerbirliği",
+      "bdfutbol_name": "Gültang",
+      "identity_hint": null,
+      "source_id": 9496435,
+      "display_name": "Gültang",
+      "role": 0,
+      "position": "Goalkeeper",
+      "position_source": "bdfutbol_goalkeeper_stat"
+    },
+    {
+      "club": "Gençlerbirliği",
+      "bdfutbol_name": "Sözeri",
+      "identity_hint": null,
+      "source_id": 9496436,
+      "display_name": "Sözeri",
+      "role": 1,
+      "position": "Right Back",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Gençlerbirliği",
+      "bdfutbol_name": "Penbe",
+      "identity_hint": null,
+      "source_id": 9496437,
+      "display_name": "Penbe",
+      "role": 3,
+      "position": "Centre Back",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Gençlerbirliği",
+      "bdfutbol_name": "Zafer",
+      "identity_hint": null,
+      "source_id": 9496438,
+      "display_name": "Zafer",
+      "role": 4,
+      "position": "Centre Back",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Gençlerbirliği",
+      "bdfutbol_name": "Taşkın",
+      "identity_hint": null,
+      "source_id": 9496439,
+      "display_name": "Taşkın",
+      "role": 2,
+      "position": "Left Back",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Gençlerbirliği",
+      "bdfutbol_name": "Diyadin",
+      "identity_hint": null,
+      "source_id": 9496440,
+      "display_name": "Diyadin",
+      "role": 9,
+      "position": "Right Midfielder",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Gençlerbirliği",
+      "bdfutbol_name": "Moshoeu",
+      "identity_hint": null,
+      "source_id": 9496441,
+      "display_name": "Moshoeu",
+      "role": 7,
+      "position": "Centre Midfielder",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Gençlerbirliği",
+      "bdfutbol_name": "Özdemir",
+      "identity_hint": null,
+      "source_id": 9496442,
+      "display_name": "Özdemir",
+      "role": 7,
+      "position": "Centre Midfielder",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Gençlerbirliği",
+      "bdfutbol_name": "Coşkun",
+      "identity_hint": null,
+      "source_id": 9496443,
+      "display_name": "Coşkun",
+      "role": 13,
+      "position": "Left Midfielder",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Gençlerbirliği",
+      "bdfutbol_name": "N'Gole",
+      "identity_hint": null,
+      "source_id": 9496444,
+      "display_name": "N'Gole",
+      "role": 17,
+      "position": "Centre Forward",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Gençlerbirliği",
+      "bdfutbol_name": "Şimşek",
+      "identity_hint": null,
+      "source_id": 9496445,
+      "display_name": "Şimşek",
+      "role": 17,
+      "position": "Centre Forward",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Gençlerbirliği",
+      "bdfutbol_name": "Šimunić",
+      "identity_hint": null,
+      "source_id": 9496446,
+      "display_name": "Šimunić",
+      "role": 0,
+      "position": "Goalkeeper",
+      "position_source": "bdfutbol_goalkeeper_stat"
+    },
+    {
+      "club": "Gençlerbirliği",
+      "bdfutbol_name": "Ace Khuse",
+      "identity_hint": null,
+      "source_id": 9496447,
+      "display_name": "Ace Khuse",
+      "role": 13,
+      "position": "Left Midfielder",
+      "position_source": "squad_balance_inference"
+    },
+    {
+      "club": "Gençlerbirliği",
+      "bdfutbol_name": "Çağdaş",
+      "identity_hint": null,
+      "source_id": 9496448,
+      "display_name": "Çağdaş",
+      "role": 17,
+      "position": "Centre Forward",
+      "position_source": "squad_balance_inference"
+    },
+    {
+      "club": "Gençlerbirliği",
+      "bdfutbol_name": "Işık",
+      "identity_hint": null,
+      "source_id": 9496449,
+      "display_name": "Işık",
+      "role": 16,
+      "position": "Left Winger",
+      "position_source": "squad_balance_inference"
+    },
+    {
+      "club": "Gençlerbirliği",
+      "bdfutbol_name": "Daşgün",
+      "identity_hint": null,
+      "source_id": 9496450,
+      "display_name": "Daşgün",
+      "role": 4,
+      "position": "Centre Back",
+      "position_source": "squad_balance_inference"
+    },
+    {
+      "club": "Gençlerbirliği",
+      "bdfutbol_name": "İsmailoğlu",
+      "identity_hint": null,
+      "source_id": 9496451,
+      "display_name": "İsmailoğlu",
+      "role": 2,
+      "position": "Left Back",
+      "position_source": "squad_balance_inference"
+    },
+    {
+      "club": "Gençlerbirliği",
+      "bdfutbol_name": "Kara",
+      "identity_hint": null,
+      "source_id": 9496452,
+      "display_name": "Kara",
+      "role": 6,
+      "position": "Defensive Midfielder",
+      "position_source": "squad_balance_inference"
+    },
+    {
+      "club": "Gaziantepspor",
+      "bdfutbol_name": "Akçevre",
+      "identity_hint": null,
+      "source_id": 9496453,
+      "display_name": "Akçevre",
+      "role": 0,
+      "position": "Goalkeeper",
+      "position_source": "bdfutbol_goalkeeper_stat"
+    },
+    {
+      "club": "Gaziantepspor",
+      "bdfutbol_name": "Okay",
+      "identity_hint": null,
+      "source_id": 9496454,
+      "display_name": "Okay",
+      "role": 1,
+      "position": "Right Back",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Gaziantepspor",
+      "bdfutbol_name": "Kumbasar",
+      "identity_hint": null,
+      "source_id": 9496455,
+      "display_name": "Kumbasar",
+      "role": 3,
+      "position": "Centre Back",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Gaziantepspor",
+      "bdfutbol_name": "Komphela",
+      "identity_hint": null,
+      "source_id": 9496456,
+      "display_name": "Komphela",
+      "role": 4,
+      "position": "Centre Back",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Gaziantepspor",
+      "bdfutbol_name": "Uçar",
+      "identity_hint": null,
+      "source_id": 9496457,
+      "display_name": "Uçar",
+      "role": 2,
+      "position": "Left Back",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Gaziantepspor",
+      "bdfutbol_name": "Fidan",
+      "identity_hint": null,
+      "source_id": 9496458,
+      "display_name": "Fidan",
+      "role": 9,
+      "position": "Right Midfielder",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Gaziantepspor",
+      "bdfutbol_name": "Özer",
+      "identity_hint": null,
+      "source_id": 9496459,
+      "display_name": "Özer",
+      "role": 7,
+      "position": "Centre Midfielder",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Gaziantepspor",
+      "bdfutbol_name": "Sönmez",
+      "identity_hint": null,
+      "source_id": 9496460,
+      "display_name": "Sönmez",
+      "role": 7,
+      "position": "Centre Midfielder",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Gaziantepspor",
+      "bdfutbol_name": "Çelik",
+      "identity_hint": null,
+      "source_id": 9496461,
+      "display_name": "Çelik",
+      "role": 13,
+      "position": "Left Midfielder",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Gaziantepspor",
+      "bdfutbol_name": "Bolić",
+      "identity_hint": null,
+      "source_id": 9496462,
+      "display_name": "Bolić",
+      "role": 17,
+      "position": "Centre Forward",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Gaziantepspor",
+      "bdfutbol_name": "Monteiro",
+      "identity_hint": null,
+      "source_id": 9496463,
+      "display_name": "Monteiro",
+      "role": 17,
+      "position": "Centre Forward",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Gaziantepspor",
+      "bdfutbol_name": "Bilir",
+      "identity_hint": null,
+      "source_id": 9496464,
+      "display_name": "Bilir",
+      "role": 0,
+      "position": "Goalkeeper",
+      "position_source": "bdfutbol_goalkeeper_stat"
+    },
+    {
+      "club": "Gaziantepspor",
+      "bdfutbol_name": "Toptaş",
+      "identity_hint": null,
+      "source_id": 9496465,
+      "display_name": "Toptaş",
+      "role": 1,
+      "position": "Right Back",
+      "position_source": "squad_balance_inference"
+    },
+    {
+      "club": "Gaziantepspor",
+      "bdfutbol_name": "Barut",
+      "identity_hint": null,
+      "source_id": 9496466,
+      "display_name": "Barut",
+      "role": 7,
+      "position": "Centre Midfielder",
+      "position_source": "squad_balance_inference"
+    },
+    {
+      "club": "Gaziantepspor",
+      "bdfutbol_name": "Karaçam",
+      "identity_hint": null,
+      "source_id": 9496467,
+      "display_name": "Karaçam",
+      "role": 9,
+      "position": "Right Midfielder",
+      "position_source": "squad_balance_inference"
+    },
+    {
+      "club": "Gaziantepspor",
+      "bdfutbol_name": "Özer",
+      "identity_hint": "Gaziantepspor Özer 19",
+      "source_id": 9496468,
+      "display_name": "Özer",
+      "role": 8,
+      "position": "Attacking Midfielder",
+      "position_source": "squad_balance_inference"
+    },
+    {
+      "club": "Gaziantepspor",
+      "bdfutbol_name": "Moloi",
+      "identity_hint": null,
+      "source_id": 9496469,
+      "display_name": "Moloi",
+      "role": 12,
+      "position": "Right Winger",
+      "position_source": "squad_balance_inference"
+    },
+    {
+      "club": "Gaziantepspor",
+      "bdfutbol_name": "Yungul",
+      "identity_hint": null,
+      "source_id": 9496470,
+      "display_name": "Yungul",
+      "role": 3,
+      "position": "Centre Back",
+      "position_source": "squad_balance_inference"
+    },
+    {
+      "club": "Bursaspor",
+      "bdfutbol_name": "Ganchev",
+      "identity_hint": null,
+      "source_id": 9496471,
+      "display_name": "Ganchev",
+      "role": 0,
+      "position": "Goalkeeper",
+      "position_source": "bdfutbol_goalkeeper_stat"
+    },
+    {
+      "club": "Bursaspor",
+      "bdfutbol_name": "Şen",
+      "identity_hint": null,
+      "source_id": 9496472,
+      "display_name": "Şen",
+      "role": 1,
+      "position": "Right Back",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Bursaspor",
+      "bdfutbol_name": "Okuroğlu",
+      "identity_hint": null,
+      "source_id": 9496473,
+      "display_name": "Okuroğlu",
+      "role": 3,
+      "position": "Centre Back",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Bursaspor",
+      "bdfutbol_name": "Örnek",
+      "identity_hint": null,
+      "source_id": 9496474,
+      "display_name": "Örnek",
+      "role": 4,
+      "position": "Centre Back",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Bursaspor",
+      "bdfutbol_name": "Vatansever",
+      "identity_hint": null,
+      "source_id": 9496475,
+      "display_name": "Vatansever",
+      "role": 2,
+      "position": "Left Back",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Bursaspor",
+      "bdfutbol_name": "Şengül",
+      "identity_hint": null,
+      "source_id": 9496476,
+      "display_name": "Şengül",
+      "role": 9,
+      "position": "Right Midfielder",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Bursaspor",
+      "bdfutbol_name": "Tunahan",
+      "identity_hint": null,
+      "source_id": 9496477,
+      "display_name": "Tunahan",
+      "role": 7,
+      "position": "Centre Midfielder",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Bursaspor",
+      "bdfutbol_name": "Velioğlu",
+      "identity_hint": null,
+      "source_id": 9496478,
+      "display_name": "Velioğlu",
+      "role": 7,
+      "position": "Centre Midfielder",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Bursaspor",
+      "bdfutbol_name": "Pingel",
+      "identity_hint": null,
+      "source_id": 9496479,
+      "display_name": "Pingel",
+      "role": 13,
+      "position": "Left Midfielder",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Bursaspor",
+      "bdfutbol_name": "Sørloth",
+      "identity_hint": null,
+      "source_id": 9496480,
+      "display_name": "Sørloth",
+      "role": 17,
+      "position": "Centre Forward",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Bursaspor",
+      "bdfutbol_name": "Durmuş",
+      "identity_hint": null,
+      "source_id": 9496481,
+      "display_name": "Durmuş",
+      "role": 17,
+      "position": "Centre Forward",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Bursaspor",
+      "bdfutbol_name": "Nevzat",
+      "identity_hint": null,
+      "source_id": 9496482,
+      "display_name": "Nevzat",
+      "role": 0,
+      "position": "Goalkeeper",
+      "position_source": "bdfutbol_goalkeeper_stat"
+    },
+    {
+      "club": "Bursaspor",
+      "bdfutbol_name": "Uzgur",
+      "identity_hint": null,
+      "source_id": 9496483,
+      "display_name": "Uzgur",
+      "role": 17,
+      "position": "Centre Forward",
+      "position_source": "squad_balance_inference"
+    },
+    {
+      "club": "Bursaspor",
+      "bdfutbol_name": "Balkanlı",
+      "identity_hint": null,
+      "source_id": 9496484,
+      "display_name": "Balkanlı",
+      "role": 16,
+      "position": "Left Winger",
+      "position_source": "squad_balance_inference"
+    },
+    {
+      "club": "Bursaspor",
+      "bdfutbol_name": "Gündüz",
+      "identity_hint": null,
+      "source_id": 9496485,
+      "display_name": "Gündüz",
+      "role": 4,
+      "position": "Centre Back",
+      "position_source": "squad_balance_inference"
+    },
+    {
+      "club": "Bursaspor",
+      "bdfutbol_name": "Evke",
+      "identity_hint": null,
+      "source_id": 9496486,
+      "display_name": "Evke",
+      "role": 2,
+      "position": "Left Back",
+      "position_source": "squad_balance_inference"
+    },
+    {
+      "club": "Bursaspor",
+      "bdfutbol_name": "Kılıç",
+      "identity_hint": null,
+      "source_id": 9496487,
+      "display_name": "Kılıç",
+      "role": 6,
+      "position": "Defensive Midfielder",
+      "position_source": "squad_balance_inference"
+    },
+    {
+      "club": "Bursaspor",
+      "bdfutbol_name": "Sofuoğlu",
+      "identity_hint": null,
+      "source_id": 9496488,
+      "display_name": "Sofuoğlu",
+      "role": 13,
+      "position": "Left Midfielder",
+      "position_source": "squad_balance_inference"
+    },
+    {
+      "club": "Altay",
+      "bdfutbol_name": "Göymen",
+      "identity_hint": null,
+      "source_id": 9495318,
+      "display_name": "Şanver Göymen",
+      "role": 0,
+      "position": "Goalkeeper",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Altay",
+      "bdfutbol_name": "Üstündağ",
+      "identity_hint": null,
+      "source_id": 9496489,
+      "display_name": "Üstündağ",
+      "role": 1,
+      "position": "Right Back",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Altay",
+      "bdfutbol_name": "İkizoğlu",
+      "identity_hint": null,
+      "source_id": 9496490,
+      "display_name": "İkizoğlu",
+      "role": 3,
+      "position": "Centre Back",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Altay",
+      "bdfutbol_name": "Akuygur",
+      "identity_hint": null,
+      "source_id": 9496491,
+      "display_name": "Akuygur",
+      "role": 4,
+      "position": "Centre Back",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Altay",
+      "bdfutbol_name": "Kırtoğlu",
+      "identity_hint": null,
+      "source_id": 9496492,
+      "display_name": "Kırtoğlu",
+      "role": 2,
+      "position": "Left Back",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Altay",
+      "bdfutbol_name": "Karapınar",
+      "identity_hint": null,
+      "source_id": 9496493,
+      "display_name": "Karapınar",
+      "role": 9,
+      "position": "Right Midfielder",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Altay",
+      "bdfutbol_name": "Suna",
+      "identity_hint": null,
+      "source_id": 9496494,
+      "display_name": "Suna",
+      "role": 7,
+      "position": "Centre Midfielder",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Altay",
+      "bdfutbol_name": "Kayalar",
+      "identity_hint": null,
+      "source_id": 9496495,
+      "display_name": "Kayalar",
+      "role": 7,
+      "position": "Centre Midfielder",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Altay",
+      "bdfutbol_name": "Sancarbarlaz",
+      "identity_hint": null,
+      "source_id": 9496496,
+      "display_name": "Sancarbarlaz",
+      "role": 13,
+      "position": "Left Midfielder",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Altay",
+      "bdfutbol_name": "Torunoğlu",
+      "identity_hint": null,
+      "source_id": 9496497,
+      "display_name": "Torunoğlu",
+      "role": 17,
+      "position": "Centre Forward",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Altay",
+      "bdfutbol_name": "Gusev",
+      "identity_hint": null,
+      "source_id": 9496498,
+      "display_name": "Gusev",
+      "role": 17,
+      "position": "Centre Forward",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Altay",
+      "bdfutbol_name": "Dağdelen",
+      "identity_hint": null,
+      "source_id": 9496499,
+      "display_name": "Dağdelen",
+      "role": 0,
+      "position": "Goalkeeper",
+      "position_source": "bdfutbol_goalkeeper_stat"
+    },
+    {
+      "club": "Altay",
+      "bdfutbol_name": "Mehmedi",
+      "identity_hint": null,
+      "source_id": 9496500,
+      "display_name": "Mehmedi",
+      "role": 7,
+      "position": "Centre Midfielder",
+      "position_source": "squad_balance_inference"
+    },
+    {
+      "club": "Altay",
+      "bdfutbol_name": "Kaymaz",
+      "identity_hint": null,
+      "source_id": 9496501,
+      "display_name": "Kaymaz",
+      "role": 9,
+      "position": "Right Midfielder",
+      "position_source": "squad_balance_inference"
+    },
+    {
+      "club": "Altay",
+      "bdfutbol_name": "Shelepnytskyi",
+      "identity_hint": null,
+      "source_id": 9496502,
+      "display_name": "Shelepnytskyi",
+      "role": 8,
+      "position": "Attacking Midfielder",
+      "position_source": "squad_balance_inference"
+    },
+    {
+      "club": "Altay",
+      "bdfutbol_name": "Iliev",
+      "identity_hint": null,
+      "source_id": 9496503,
+      "display_name": "Iliev",
+      "role": 12,
+      "position": "Right Winger",
+      "position_source": "squad_balance_inference"
+    },
+    {
+      "club": "Altay",
+      "bdfutbol_name": "Özhan",
+      "identity_hint": null,
+      "source_id": 9496504,
+      "display_name": "Özhan",
+      "role": 3,
+      "position": "Centre Back",
+      "position_source": "squad_balance_inference"
+    },
+    {
+      "club": "Altay",
+      "bdfutbol_name": "Acar",
+      "identity_hint": null,
+      "source_id": 9496505,
+      "display_name": "Acar",
+      "role": 1,
+      "position": "Right Back",
+      "position_source": "squad_balance_inference"
+    },
+    {
+      "club": "Ankaragücü",
+      "bdfutbol_name": "Erkan",
+      "identity_hint": null,
+      "source_id": 9496506,
+      "display_name": "Erkan",
+      "role": 0,
+      "position": "Goalkeeper",
+      "position_source": "bdfutbol_goalkeeper_stat"
+    },
+    {
+      "club": "Ankaragücü",
+      "bdfutbol_name": "Güller",
+      "identity_hint": null,
+      "source_id": 9495324,
+      "display_name": "Serhat Güller",
+      "role": 3,
+      "position": "Centre Back",
+      "position_source": "existing_historical_position"
+    },
+    {
+      "club": "Ankaragücü",
+      "bdfutbol_name": "Ertaş",
+      "identity_hint": null,
+      "source_id": 9496507,
+      "display_name": "Ertaş",
+      "role": 3,
+      "position": "Centre Back",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Ankaragücü",
+      "bdfutbol_name": "Günes",
+      "identity_hint": null,
+      "source_id": 9496508,
+      "display_name": "Günes",
+      "role": 4,
+      "position": "Centre Back",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Ankaragücü",
+      "bdfutbol_name": "Yücel",
+      "identity_hint": null,
+      "source_id": 9496509,
+      "display_name": "Yücel",
+      "role": 2,
+      "position": "Left Back",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Ankaragücü",
+      "bdfutbol_name": "Soydaş",
+      "identity_hint": null,
+      "source_id": 9496510,
+      "display_name": "Soydaş",
+      "role": 9,
+      "position": "Right Midfielder",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Ankaragücü",
+      "bdfutbol_name": "Agashkov",
+      "identity_hint": null,
+      "source_id": 9496511,
+      "display_name": "Agashkov",
+      "role": 7,
+      "position": "Centre Midfielder",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Ankaragücü",
+      "bdfutbol_name": "Mukhamadiev",
+      "identity_hint": null,
+      "source_id": 9496512,
+      "display_name": "Mukhamadiev",
+      "role": 7,
+      "position": "Centre Midfielder",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Ankaragücü",
+      "bdfutbol_name": "Çobanoğlu",
+      "identity_hint": null,
+      "source_id": 9496513,
+      "display_name": "Çobanoğlu",
+      "role": 13,
+      "position": "Left Midfielder",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Ankaragücü",
+      "bdfutbol_name": "Konya",
+      "identity_hint": null,
+      "source_id": 9496514,
+      "display_name": "Konya",
+      "role": 17,
+      "position": "Centre Forward",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Ankaragücü",
+      "bdfutbol_name": "Aydın",
+      "identity_hint": null,
+      "source_id": 9496515,
+      "display_name": "Aydın",
+      "role": 17,
+      "position": "Centre Forward",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Ankaragücü",
+      "bdfutbol_name": "Kayan",
+      "identity_hint": null,
+      "source_id": 9496516,
+      "display_name": "Kayan",
+      "role": 0,
+      "position": "Goalkeeper",
+      "position_source": "bdfutbol_goalkeeper_stat"
+    },
+    {
+      "club": "Ankaragücü",
+      "bdfutbol_name": "Yıldırım",
+      "identity_hint": null,
+      "source_id": 9496517,
+      "display_name": "Yıldırım",
+      "role": 16,
+      "position": "Left Winger",
+      "position_source": "squad_balance_inference"
+    },
+    {
+      "club": "Ankaragücü",
+      "bdfutbol_name": "Üstün",
+      "identity_hint": null,
+      "source_id": 9496518,
+      "display_name": "Üstün",
+      "role": 4,
+      "position": "Centre Back",
+      "position_source": "squad_balance_inference"
+    },
+    {
+      "club": "Ankaragücü",
+      "bdfutbol_name": "Matveev",
+      "identity_hint": null,
+      "source_id": 9496519,
+      "display_name": "Matveev",
+      "role": 2,
+      "position": "Left Back",
+      "position_source": "squad_balance_inference"
+    },
+    {
+      "club": "Ankaragücü",
+      "bdfutbol_name": "Hut",
+      "identity_hint": null,
+      "source_id": 9496520,
+      "display_name": "Hut",
+      "role": 6,
+      "position": "Defensive Midfielder",
+      "position_source": "squad_balance_inference"
+    },
+    {
+      "club": "Ankaragücü",
+      "bdfutbol_name": "Türksoy",
+      "identity_hint": null,
+      "source_id": 9496521,
+      "display_name": "Türksoy",
+      "role": 0,
+      "position": "Goalkeeper",
+      "position_source": "bdfutbol_goalkeeper_stat"
+    },
+    {
+      "club": "Ankaragücü",
+      "bdfutbol_name": "Gedikali",
+      "identity_hint": null,
+      "source_id": 9496522,
+      "display_name": "Gedikali",
+      "role": 17,
+      "position": "Centre Forward",
+      "position_source": "squad_balance_inference"
+    },
+    {
+      "club": "Kayserispor",
+      "bdfutbol_name": "Turunç",
+      "identity_hint": null,
+      "source_id": 9496523,
+      "display_name": "Turunç",
+      "role": 0,
+      "position": "Goalkeeper",
+      "position_source": "bdfutbol_goalkeeper_stat"
+    },
+    {
+      "club": "Kayserispor",
+      "bdfutbol_name": "Uğur",
+      "identity_hint": null,
+      "source_id": 9496524,
+      "display_name": "Uğur",
+      "role": 1,
+      "position": "Right Back",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Kayserispor",
+      "bdfutbol_name": "Soykök",
+      "identity_hint": null,
+      "source_id": 9496525,
+      "display_name": "Soykök",
+      "role": 3,
+      "position": "Centre Back",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Kayserispor",
+      "bdfutbol_name": "Şen",
+      "identity_hint": null,
+      "source_id": 9496526,
+      "display_name": "Şen",
+      "role": 4,
+      "position": "Centre Back",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Kayserispor",
+      "bdfutbol_name": "Sancaktar",
+      "identity_hint": null,
+      "source_id": 9496527,
+      "display_name": "Sancaktar",
+      "role": 2,
+      "position": "Left Back",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Kayserispor",
+      "bdfutbol_name": "Kılıç",
+      "identity_hint": null,
+      "source_id": 9496528,
+      "display_name": "Kılıç",
+      "role": 9,
+      "position": "Right Midfielder",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Kayserispor",
+      "bdfutbol_name": "Duran",
+      "identity_hint": null,
+      "source_id": 9496529,
+      "display_name": "Duran",
+      "role": 7,
+      "position": "Centre Midfielder",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Kayserispor",
+      "bdfutbol_name": "Devrim",
+      "identity_hint": null,
+      "source_id": 9496530,
+      "display_name": "Devrim",
+      "role": 7,
+      "position": "Centre Midfielder",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Kayserispor",
+      "bdfutbol_name": "Eken",
+      "identity_hint": null,
+      "source_id": 9496531,
+      "display_name": "Eken",
+      "role": 13,
+      "position": "Left Midfielder",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Kayserispor",
+      "bdfutbol_name": "Tüzün",
+      "identity_hint": null,
+      "source_id": 9496532,
+      "display_name": "Tüzün",
+      "role": 17,
+      "position": "Centre Forward",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Kayserispor",
+      "bdfutbol_name": "Levent",
+      "identity_hint": null,
+      "source_id": 9496533,
+      "display_name": "Levent",
+      "role": 17,
+      "position": "Centre Forward",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Kayserispor",
+      "bdfutbol_name": "Polat",
+      "identity_hint": null,
+      "source_id": 9496534,
+      "display_name": "Polat",
+      "role": 0,
+      "position": "Goalkeeper",
+      "position_source": "bdfutbol_goalkeeper_stat"
+    },
+    {
+      "club": "Kayserispor",
+      "bdfutbol_name": "Azman",
+      "identity_hint": null,
+      "source_id": 9496535,
+      "display_name": "Azman",
+      "role": 9,
+      "position": "Right Midfielder",
+      "position_source": "squad_balance_inference"
+    },
+    {
+      "club": "Kayserispor",
+      "bdfutbol_name": "Ağdere",
+      "identity_hint": null,
+      "source_id": 9496536,
+      "display_name": "Ağdere",
+      "role": 8,
+      "position": "Attacking Midfielder",
+      "position_source": "squad_balance_inference"
+    },
+    {
+      "club": "Kayserispor",
+      "bdfutbol_name": "Özdemir",
+      "identity_hint": null,
+      "source_id": 9496537,
+      "display_name": "Özdemir",
+      "role": 12,
+      "position": "Right Winger",
+      "position_source": "squad_balance_inference"
+    },
+    {
+      "club": "Kayserispor",
+      "bdfutbol_name": "Shabani",
+      "identity_hint": null,
+      "source_id": 9496538,
+      "display_name": "Shabani",
+      "role": 3,
+      "position": "Centre Back",
+      "position_source": "squad_balance_inference"
+    },
+    {
+      "club": "Kayserispor",
+      "bdfutbol_name": "Lugušić",
+      "identity_hint": null,
+      "source_id": 9496539,
+      "display_name": "Lugušić",
+      "role": 0,
+      "position": "Goalkeeper",
+      "position_source": "bdfutbol_goalkeeper_stat"
+    },
+    {
+      "club": "Kayserispor",
+      "bdfutbol_name": "Aktepe",
+      "identity_hint": null,
+      "source_id": 9496540,
+      "display_name": "Aktepe",
+      "role": 7,
+      "position": "Centre Midfielder",
+      "position_source": "squad_balance_inference"
+    },
+    {
+      "club": "Zeytinburnuspor",
+      "bdfutbol_name": "Ibrahimović",
+      "identity_hint": null,
+      "source_id": 9496541,
+      "display_name": "Ibrahimović",
+      "role": 0,
+      "position": "Goalkeeper",
+      "position_source": "bdfutbol_goalkeeper_stat"
+    },
+    {
+      "club": "Zeytinburnuspor",
+      "bdfutbol_name": "Sancak",
+      "identity_hint": null,
+      "source_id": 9496542,
+      "display_name": "Sancak",
+      "role": 1,
+      "position": "Right Back",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Zeytinburnuspor",
+      "bdfutbol_name": "Uzuner",
+      "identity_hint": null,
+      "source_id": 9496543,
+      "display_name": "Uzuner",
+      "role": 3,
+      "position": "Centre Back",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Zeytinburnuspor",
+      "bdfutbol_name": "Aydoğan",
+      "identity_hint": null,
+      "source_id": 9496544,
+      "display_name": "Aydoğan",
+      "role": 4,
+      "position": "Centre Back",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Zeytinburnuspor",
+      "bdfutbol_name": "Alpak",
+      "identity_hint": null,
+      "source_id": 9496545,
+      "display_name": "Alpak",
+      "role": 2,
+      "position": "Left Back",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Zeytinburnuspor",
+      "bdfutbol_name": "Gündoğdu",
+      "identity_hint": null,
+      "source_id": 9496546,
+      "display_name": "Gündoğdu",
+      "role": 9,
+      "position": "Right Midfielder",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Zeytinburnuspor",
+      "bdfutbol_name": "Gabriel",
+      "identity_hint": null,
+      "source_id": 9496547,
+      "display_name": "Gabriel",
+      "role": 7,
+      "position": "Centre Midfielder",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Zeytinburnuspor",
+      "bdfutbol_name": "Kanca",
+      "identity_hint": null,
+      "source_id": 9496548,
+      "display_name": "Kanca",
+      "role": 7,
+      "position": "Centre Midfielder",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Zeytinburnuspor",
+      "bdfutbol_name": "Yıldırım",
+      "identity_hint": null,
+      "source_id": 9496549,
+      "display_name": "Yıldırım",
+      "role": 13,
+      "position": "Left Midfielder",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Zeytinburnuspor",
+      "bdfutbol_name": "Kiremitçi",
+      "identity_hint": null,
+      "source_id": 9496550,
+      "display_name": "Kiremitçi",
+      "role": 17,
+      "position": "Centre Forward",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Zeytinburnuspor",
+      "bdfutbol_name": "Baytar",
+      "identity_hint": null,
+      "source_id": 9496551,
+      "display_name": "Baytar",
+      "role": 17,
+      "position": "Centre Forward",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Zeytinburnuspor",
+      "bdfutbol_name": "Kocakara",
+      "identity_hint": null,
+      "source_id": 9496552,
+      "display_name": "Kocakara",
+      "role": 0,
+      "position": "Goalkeeper",
+      "position_source": "bdfutbol_goalkeeper_stat"
+    },
+    {
+      "club": "Zeytinburnuspor",
+      "bdfutbol_name": "Reçber",
+      "identity_hint": null,
+      "source_id": 9496553,
+      "display_name": "Reçber",
+      "role": 4,
+      "position": "Centre Back",
+      "position_source": "squad_balance_inference"
+    },
+    {
+      "club": "Zeytinburnuspor",
+      "bdfutbol_name": "Ayçiçek",
+      "identity_hint": null,
+      "source_id": 9496554,
+      "display_name": "Ayçiçek",
+      "role": 2,
+      "position": "Left Back",
+      "position_source": "squad_balance_inference"
+    },
+    {
+      "club": "Zeytinburnuspor",
+      "bdfutbol_name": "Kılıç",
+      "identity_hint": null,
+      "source_id": 9496555,
+      "display_name": "Kılıç",
+      "role": 6,
+      "position": "Defensive Midfielder",
+      "position_source": "squad_balance_inference"
+    },
+    {
+      "club": "Zeytinburnuspor",
+      "bdfutbol_name": "Cvikl",
+      "identity_hint": null,
+      "source_id": 9496556,
+      "display_name": "Cvikl",
+      "role": 13,
+      "position": "Left Midfielder",
+      "position_source": "squad_balance_inference"
+    },
+    {
+      "club": "Zeytinburnuspor",
+      "bdfutbol_name": "Ece",
+      "identity_hint": null,
+      "source_id": 9496557,
+      "display_name": "Ece",
+      "role": 0,
+      "position": "Goalkeeper",
+      "position_source": "bdfutbol_goalkeeper_stat"
+    },
+    {
+      "club": "Zeytinburnuspor",
+      "bdfutbol_name": "Durak",
+      "identity_hint": null,
+      "source_id": 9496558,
+      "display_name": "Durak",
+      "role": 16,
+      "position": "Left Winger",
+      "position_source": "squad_balance_inference"
+    },
+    {
+      "club": "Karabükspor",
+      "bdfutbol_name": "Layiç",
+      "identity_hint": null,
+      "source_id": 9496559,
+      "display_name": "Layiç",
+      "role": 0,
+      "position": "Goalkeeper",
+      "position_source": "bdfutbol_goalkeeper_stat"
+    },
+    {
+      "club": "Karabükspor",
+      "bdfutbol_name": "Özkayımoğlu",
+      "identity_hint": null,
+      "source_id": 9496560,
+      "display_name": "Özkayımoğlu",
+      "role": 1,
+      "position": "Right Back",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Karabükspor",
+      "bdfutbol_name": "Ünsal",
+      "identity_hint": null,
+      "source_id": 9496561,
+      "display_name": "Ünsal",
+      "role": 3,
+      "position": "Centre Back",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Karabükspor",
+      "bdfutbol_name": "Açıkgöz",
+      "identity_hint": null,
+      "source_id": 9496562,
+      "display_name": "Açıkgöz",
+      "role": 4,
+      "position": "Centre Back",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Karabükspor",
+      "bdfutbol_name": "Özer",
+      "identity_hint": null,
+      "source_id": 9496563,
+      "display_name": "Özer",
+      "role": 2,
+      "position": "Left Back",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Karabükspor",
+      "bdfutbol_name": "Yurttaş",
+      "identity_hint": null,
+      "source_id": 9496564,
+      "display_name": "Yurttaş",
+      "role": 9,
+      "position": "Right Midfielder",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Karabükspor",
+      "bdfutbol_name": "Kalaycı",
+      "identity_hint": null,
+      "source_id": 9496565,
+      "display_name": "Kalaycı",
+      "role": 7,
+      "position": "Centre Midfielder",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Karabükspor",
+      "bdfutbol_name": "Çoban",
+      "identity_hint": null,
+      "source_id": 9496566,
+      "display_name": "Çoban",
+      "role": 7,
+      "position": "Centre Midfielder",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Karabükspor",
+      "bdfutbol_name": "Dağdelen",
+      "identity_hint": null,
+      "source_id": 9496567,
+      "display_name": "Dağdelen",
+      "role": 13,
+      "position": "Left Midfielder",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Karabükspor",
+      "bdfutbol_name": "İnal",
+      "identity_hint": null,
+      "source_id": 9496568,
+      "display_name": "İnal",
+      "role": 17,
+      "position": "Centre Forward",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Karabükspor",
+      "bdfutbol_name": "Şermet",
+      "identity_hint": null,
+      "source_id": 9496569,
+      "display_name": "Şermet",
+      "role": 17,
+      "position": "Centre Forward",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Karabükspor",
+      "bdfutbol_name": "Hasançebi",
+      "identity_hint": null,
+      "source_id": 9496570,
+      "display_name": "Hasançebi",
+      "role": 0,
+      "position": "Goalkeeper",
+      "position_source": "bdfutbol_goalkeeper_stat"
+    },
+    {
+      "club": "Karabükspor",
+      "bdfutbol_name": "Haraoui",
+      "identity_hint": null,
+      "source_id": 9496571,
+      "display_name": "Haraoui",
+      "role": 17,
+      "position": "Centre Forward",
+      "position_source": "bdfutbol_goal_output_inference"
+    },
+    {
+      "club": "Karabükspor",
+      "bdfutbol_name": "Nejat",
+      "identity_hint": null,
+      "source_id": 9496572,
+      "display_name": "Nejat",
+      "role": 12,
+      "position": "Right Winger",
+      "position_source": "squad_balance_inference"
+    },
+    {
+      "club": "Karabükspor",
+      "bdfutbol_name": "Çebi",
+      "identity_hint": null,
+      "source_id": 9496573,
+      "display_name": "Çebi",
+      "role": 3,
+      "position": "Centre Back",
+      "position_source": "squad_balance_inference"
+    },
+    {
+      "club": "Karabükspor",
+      "bdfutbol_name": "Bademci",
+      "identity_hint": null,
+      "source_id": 9496574,
+      "display_name": "Bademci",
+      "role": 1,
+      "position": "Right Back",
+      "position_source": "squad_balance_inference"
+    },
+    {
+      "club": "Karabükspor",
+      "bdfutbol_name": "Kıvanç",
+      "identity_hint": null,
+      "source_id": 9496575,
+      "display_name": "Kıvanç",
+      "role": 0,
+      "position": "Goalkeeper",
+      "position_source": "bdfutbol_goalkeeper_stat"
+    },
+    {
+      "club": "Karabükspor",
+      "bdfutbol_name": "Cankat",
+      "identity_hint": null,
+      "source_id": 9496576,
+      "display_name": "Cankat",
+      "role": 9,
+      "position": "Right Midfielder",
+      "position_source": "squad_balance_inference"
+    },
+    {
+      "club": "Karşıyaka",
+      "bdfutbol_name": "Valov",
+      "identity_hint": null,
+      "source_id": 9496577,
+      "display_name": "Valov",
+      "role": 0,
+      "position": "Goalkeeper",
+      "position_source": "bdfutbol_goalkeeper_stat"
+    },
+    {
+      "club": "Karşıyaka",
+      "bdfutbol_name": "Yavaş",
+      "identity_hint": null,
+      "source_id": 9496578,
+      "display_name": "Yavaş",
+      "role": 1,
+      "position": "Right Back",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Karşıyaka",
+      "bdfutbol_name": "Akbaş",
+      "identity_hint": null,
+      "source_id": 9496579,
+      "display_name": "Akbaş",
+      "role": 3,
+      "position": "Centre Back",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Karşıyaka",
+      "bdfutbol_name": "Mercan",
+      "identity_hint": null,
+      "source_id": 9496580,
+      "display_name": "Mercan",
+      "role": 4,
+      "position": "Centre Back",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Karşıyaka",
+      "bdfutbol_name": "Sır",
+      "identity_hint": null,
+      "source_id": 9496581,
+      "display_name": "Sır",
+      "role": 2,
+      "position": "Left Back",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Karşıyaka",
+      "bdfutbol_name": "Güneş",
+      "identity_hint": null,
+      "source_id": 9496582,
+      "display_name": "Güneş",
+      "role": 9,
+      "position": "Right Midfielder",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Karşıyaka",
+      "bdfutbol_name": "Kepoğlu",
+      "identity_hint": null,
+      "source_id": 9496583,
+      "display_name": "Kepoğlu",
+      "role": 7,
+      "position": "Centre Midfielder",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Karşıyaka",
+      "bdfutbol_name": "Çıkrıkçıoğlu",
+      "identity_hint": null,
+      "source_id": 9496584,
+      "display_name": "Çıkrıkçıoğlu",
+      "role": 7,
+      "position": "Centre Midfielder",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Karşıyaka",
+      "bdfutbol_name": "Yıldız",
+      "identity_hint": null,
+      "source_id": 9496585,
+      "display_name": "Yıldız",
+      "role": 13,
+      "position": "Left Midfielder",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Karşıyaka",
+      "bdfutbol_name": "Umut",
+      "identity_hint": null,
+      "source_id": 9496586,
+      "display_name": "Umut",
+      "role": 17,
+      "position": "Centre Forward",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Karşıyaka",
+      "bdfutbol_name": "Kiremitçi",
+      "identity_hint": null,
+      "source_id": 9496587,
+      "display_name": "Kiremitçi",
+      "role": 17,
+      "position": "Centre Forward",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Karşıyaka",
+      "bdfutbol_name": "Küçüktaka",
+      "identity_hint": null,
+      "source_id": 9496588,
+      "display_name": "Küçüktaka",
+      "role": 4,
+      "position": "Centre Back",
+      "position_source": "squad_balance_inference"
+    },
+    {
+      "club": "Karşıyaka",
+      "bdfutbol_name": "Taygun",
+      "identity_hint": null,
+      "source_id": 9496589,
+      "display_name": "Taygun",
+      "role": 2,
+      "position": "Left Back",
+      "position_source": "squad_balance_inference"
+    },
+    {
+      "club": "Karşıyaka",
+      "bdfutbol_name": "Kahraman",
+      "identity_hint": null,
+      "source_id": 9496590,
+      "display_name": "Kahraman",
+      "role": 6,
+      "position": "Defensive Midfielder",
+      "position_source": "squad_balance_inference"
+    },
+    {
+      "club": "Karşıyaka",
+      "bdfutbol_name": "Kanatlarovski",
+      "identity_hint": null,
+      "source_id": 9496591,
+      "display_name": "Kanatlarovski",
+      "role": 13,
+      "position": "Left Midfielder",
+      "position_source": "squad_balance_inference"
+    },
+    {
+      "club": "Karşıyaka",
+      "bdfutbol_name": "Bilal",
+      "identity_hint": null,
+      "source_id": 9496592,
+      "display_name": "Bilal",
+      "role": 17,
+      "position": "Centre Forward",
+      "position_source": "squad_balance_inference"
+    },
+    {
+      "club": "Karşıyaka",
+      "bdfutbol_name": "Topal",
+      "identity_hint": null,
+      "source_id": 9496593,
+      "display_name": "Topal",
+      "role": 16,
+      "position": "Left Winger",
+      "position_source": "squad_balance_inference"
+    },
+    {
+      "club": "Karşıyaka",
+      "bdfutbol_name": "Fedai",
+      "identity_hint": null,
+      "source_id": 9496594,
+      "display_name": "Fedai",
+      "role": 4,
+      "position": "Centre Back",
+      "position_source": "squad_balance_inference"
+    },
+    {
+      "club": "Sarıyer",
+      "bdfutbol_name": "Metin Mert",
+      "identity_hint": null,
+      "source_id": 9496595,
+      "display_name": "Metin Mert",
+      "role": 0,
+      "position": "Goalkeeper",
+      "position_source": "bdfutbol_goalkeeper_stat"
+    },
+    {
+      "club": "Sarıyer",
+      "bdfutbol_name": "Alkan",
+      "identity_hint": null,
+      "source_id": 9496596,
+      "display_name": "Alkan",
+      "role": 1,
+      "position": "Right Back",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Sarıyer",
+      "bdfutbol_name": "Yarovenko",
+      "identity_hint": null,
+      "source_id": 9496597,
+      "display_name": "Yarovenko",
+      "role": 3,
+      "position": "Centre Back",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Sarıyer",
+      "bdfutbol_name": "Ravcı",
+      "identity_hint": null,
+      "source_id": 9496598,
+      "display_name": "Ravcı",
+      "role": 4,
+      "position": "Centre Back",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Sarıyer",
+      "bdfutbol_name": "Bayram",
+      "identity_hint": null,
+      "source_id": 9496599,
+      "display_name": "Bayram",
+      "role": 2,
+      "position": "Left Back",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Sarıyer",
+      "bdfutbol_name": "Çalışkan",
+      "identity_hint": null,
+      "source_id": 9496600,
+      "display_name": "Çalışkan",
+      "role": 9,
+      "position": "Right Midfielder",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Sarıyer",
+      "bdfutbol_name": "Bıyıklı",
+      "identity_hint": null,
+      "source_id": 9496601,
+      "display_name": "Bıyıklı",
+      "role": 7,
+      "position": "Centre Midfielder",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Sarıyer",
+      "bdfutbol_name": "Kaplan",
+      "identity_hint": null,
+      "source_id": 9496602,
+      "display_name": "Kaplan",
+      "role": 7,
+      "position": "Centre Midfielder",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Sarıyer",
+      "bdfutbol_name": "Erdi",
+      "identity_hint": null,
+      "source_id": 9496603,
+      "display_name": "Erdi",
+      "role": 13,
+      "position": "Left Midfielder",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Sarıyer",
+      "bdfutbol_name": "Görgülü",
+      "identity_hint": null,
+      "source_id": 9496604,
+      "display_name": "Görgülü",
+      "role": 17,
+      "position": "Centre Forward",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Sarıyer",
+      "bdfutbol_name": "Güzeltepe",
+      "identity_hint": null,
+      "source_id": 9496605,
+      "display_name": "Güzeltepe",
+      "role": 17,
+      "position": "Centre Forward",
+      "position_source": "bdfutbol_lineup_order_inference"
+    },
+    {
+      "club": "Sarıyer",
+      "bdfutbol_name": "Engin",
+      "identity_hint": "Sarıyer Engin GK",
+      "source_id": 9496606,
+      "display_name": "Engin",
+      "role": 0,
+      "position": "Goalkeeper",
+      "position_source": "bdfutbol_goalkeeper_stat"
+    },
+    {
+      "club": "Sarıyer",
+      "bdfutbol_name": "Demirhan",
+      "identity_hint": null,
+      "source_id": 9496607,
+      "display_name": "Demirhan",
+      "role": 12,
+      "position": "Right Winger",
+      "position_source": "squad_balance_inference"
+    },
+    {
+      "club": "Sarıyer",
+      "bdfutbol_name": "Vazda",
+      "identity_hint": null,
+      "source_id": 9496608,
+      "display_name": "Vazda",
+      "role": 3,
+      "position": "Centre Back",
+      "position_source": "squad_balance_inference"
+    },
+    {
+      "club": "Sarıyer",
+      "bdfutbol_name": "Yıldırım",
+      "identity_hint": null,
+      "source_id": 9496609,
+      "display_name": "Yıldırım",
+      "role": 1,
+      "position": "Right Back",
+      "position_source": "squad_balance_inference"
+    },
+    {
+      "club": "Sarıyer",
+      "bdfutbol_name": "Engin",
+      "identity_hint": "Sarıyer Engin outfield",
+      "source_id": 9496610,
+      "display_name": "Engin",
+      "role": 7,
+      "position": "Centre Midfielder",
+      "position_source": "squad_balance_inference"
+    },
+    {
+      "club": "Sarıyer",
+      "bdfutbol_name": "Tekelioğlu",
+      "identity_hint": null,
+      "source_id": 9496611,
+      "display_name": "Tekelioğlu",
+      "role": 9,
+      "position": "Right Midfielder",
+      "position_source": "squad_balance_inference"
+    },
+    {
+      "club": "Sarıyer",
+      "bdfutbol_name": "Çimen",
+      "identity_hint": null,
+      "source_id": 9496612,
+      "display_name": "Çimen",
+      "role": 8,
+      "position": "Attacking Midfielder",
+      "position_source": "squad_balance_inference"
+    }
+  ],
+  "duplicate_policy": "explicit reuse only; no fuzzy surname merging",
+  "rating_policy": "fixed source-comparable attributes on the game scale; no football 75/25 rule"
+}

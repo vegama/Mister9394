@@ -1,0 +1,436 @@
+{
+  "source_players": 37312,
+  "new_batch": 61,
+  "exact_hidden_existing": 0,
+  "name_collisions": 0,
+  "missing": 61,
+  "results": [
+    {
+      "created_source_id": 9495300,
+      "display_name": "Glen De Boeck",
+      "birth_date": "1971-08-22",
+      "resolution": "missing_after_full_mdb_check",
+      "candidates": []
+    },
+    {
+      "created_source_id": 9495301,
+      "display_name": "Régis Genaux",
+      "birth_date": "1973-08-31",
+      "resolution": "missing_after_full_mdb_check",
+      "candidates": []
+    },
+    {
+      "created_source_id": 9495302,
+      "display_name": "Bruno Versavel",
+      "birth_date": "1967-08-27",
+      "resolution": "missing_after_full_mdb_check",
+      "candidates": []
+    },
+    {
+      "created_source_id": 9495303,
+      "display_name": "Michaël Goossens",
+      "birth_date": "1973-11-30",
+      "resolution": "missing_after_full_mdb_check",
+      "candidates": []
+    },
+    {
+      "created_source_id": 9495304,
+      "display_name": "Francis Severeyns",
+      "birth_date": "1968-01-08",
+      "resolution": "missing_after_full_mdb_check",
+      "candidates": []
+    },
+    {
+      "created_source_id": 9495305,
+      "display_name": "Bertrand Crasson",
+      "birth_date": "1971-10-05",
+      "resolution": "missing_after_full_mdb_check",
+      "candidates": []
+    },
+    {
+      "created_source_id": 9495306,
+      "display_name": "Pascal Plovie",
+      "birth_date": "1965-05-07",
+      "resolution": "missing_after_full_mdb_check",
+      "candidates": []
+    },
+    {
+      "created_source_id": 9495307,
+      "display_name": "Frank Dauwen",
+      "birth_date": "1967-11-03",
+      "resolution": "missing_after_full_mdb_check",
+      "candidates": []
+    },
+    {
+      "created_source_id": 9495308,
+      "display_name": "Johan Walem",
+      "birth_date": "1972-02-01",
+      "resolution": "missing_after_full_mdb_check",
+      "candidates": []
+    },
+    {
+      "created_source_id": 9495309,
+      "display_name": "Alain De Nil",
+      "birth_date": "1966-08-17",
+      "resolution": "missing_after_full_mdb_check",
+      "candidates": []
+    },
+    {
+      "created_source_id": 9495310,
+      "display_name": "Gunther Hofmans",
+      "birth_date": "1967-01-03",
+      "resolution": "missing_after_full_mdb_check",
+      "candidates": []
+    },
+    {
+      "created_source_id": 9495311,
+      "display_name": "Gilbert Bodart",
+      "birth_date": "1962-09-02",
+      "resolution": "missing_after_full_mdb_check",
+      "candidates": []
+    },
+    {
+      "created_source_id": 9495312,
+      "display_name": "Gert Verheyen",
+      "birth_date": "1970-09-20",
+      "resolution": "missing_after_full_mdb_check",
+      "candidates": []
+    },
+    {
+      "created_source_id": 9495313,
+      "display_name": "Gilles De Bilde",
+      "birth_date": "1971-06-09",
+      "resolution": "missing_after_full_mdb_check",
+      "candidates": []
+    },
+    {
+      "created_source_id": 9495314,
+      "display_name": "Alain Bettagno",
+      "birth_date": "1968-11-09",
+      "resolution": "missing_after_full_mdb_check",
+      "candidates": []
+    },
+    {
+      "created_source_id": 9495315,
+      "display_name": "Engin İpekoğlu",
+      "birth_date": "1961-06-07",
+      "resolution": "missing_after_full_mdb_check",
+      "candidates": []
+    },
+    {
+      "created_source_id": 9495316,
+      "display_name": "Hayrettin Demirbaş",
+      "birth_date": "1963-06-26",
+      "resolution": "missing_after_full_mdb_check",
+      "candidates": []
+    },
+    {
+      "created_source_id": 9495317,
+      "display_name": "Rüştü Reçber",
+      "birth_date": "1973-05-10",
+      "resolution": "missing_after_full_mdb_check",
+      "candidates": []
+    },
+    {
+      "created_source_id": 9495318,
+      "display_name": "Şanver Göymen",
+      "birth_date": "1967-01-22",
+      "resolution": "missing_after_full_mdb_check",
+      "candidates": []
+    },
+    {
+      "created_source_id": 9495319,
+      "display_name": "Bülent Korkmaz",
+      "birth_date": "1968-11-24",
+      "resolution": "missing_after_full_mdb_check",
+      "candidates": []
+    },
+    {
+      "created_source_id": 9495320,
+      "display_name": "Recep Çetin",
+      "birth_date": "1965-10-01",
+      "resolution": "missing_after_full_mdb_check",
+      "candidates": []
+    },
+    {
+      "created_source_id": 9495321,
+      "display_name": "Ogün Temizkanoğlu",
+      "birth_date": "1969-10-06",
+      "resolution": "missing_after_full_mdb_check",
+      "candidates": []
+    },
+    {
+      "created_source_id": 9495322,
+      "display_name": "Ali Günçar",
+      "birth_date": "1970-05-19",
+      "resolution": "missing_after_full_mdb_check",
+      "candidates": []
+    },
+    {
+      "created_source_id": 9495323,
+      "display_name": "Gökhan Keskin",
+      "birth_date": "1965-02-01",
+      "resolution": "missing_after_full_mdb_check",
+      "candidates": []
+    },
+    {
+      "created_source_id": 9495324,
+      "display_name": "Serhat Güller",
+      "birth_date": "1968-12-18",
+      "resolution": "missing_after_full_mdb_check",
+      "candidates": []
+    },
+    {
+      "created_source_id": 9495325,
+      "display_name": "Emre Aşık",
+      "birth_date": "1973-12-13",
+      "resolution": "missing_after_full_mdb_check",
+      "candidates": []
+    },
+    {
+      "created_source_id": 9495326,
+      "display_name": "Sedat Balkanlı",
+      "birth_date": "1965-01-15",
+      "resolution": "missing_after_full_mdb_check",
+      "candidates": []
+    },
+    {
+      "created_source_id": 9495327,
+      "display_name": "Yusuf Tepekule",
+      "birth_date": "1968-01-15",
+      "resolution": "missing_after_full_mdb_check",
+      "candidates": []
+    },
+    {
+      "created_source_id": 9495328,
+      "display_name": "Cengiz Atila",
+      "birth_date": "1966-07-27",
+      "resolution": "missing_after_full_mdb_check",
+      "candidates": []
+    },
+    {
+      "created_source_id": 9495329,
+      "display_name": "Ergün Penbe",
+      "birth_date": "1972-05-17",
+      "resolution": "missing_after_full_mdb_check",
+      "candidates": []
+    },
+    {
+      "created_source_id": 9495330,
+      "display_name": "Mutlu Topçu",
+      "birth_date": "1970-11-16",
+      "resolution": "missing_after_full_mdb_check",
+      "candidates": []
+    },
+    {
+      "created_source_id": 9495331,
+      "display_name": "Tugay Kerimoğlu",
+      "birth_date": "1970-08-24",
+      "resolution": "missing_after_full_mdb_check",
+      "candidates": []
+    },
+    {
+      "created_source_id": 9495332,
+      "display_name": "Oğuz Çetin",
+      "birth_date": "1963-02-15",
+      "resolution": "missing_after_full_mdb_check",
+      "candidates": []
+    },
+    {
+      "created_source_id": 9495333,
+      "display_name": "Ünal Karaman",
+      "birth_date": "1966-06-29",
+      "resolution": "missing_after_full_mdb_check",
+      "candidates": []
+    },
+    {
+      "created_source_id": 9495334,
+      "display_name": "Mehmet Özdilek",
+      "birth_date": "1966-04-01",
+      "resolution": "missing_after_full_mdb_check",
+      "candidates": []
+    },
+    {
+      "created_source_id": 9495335,
+      "display_name": "Abdullah Ercan",
+      "birth_date": "1971-12-08",
+      "resolution": "missing_after_full_mdb_check",
+      "candidates": []
+    },
+    {
+      "created_source_id": 9495336,
+      "display_name": "Suat Kaya",
+      "birth_date": "1967-08-26",
+      "resolution": "missing_after_full_mdb_check",
+      "candidates": []
+    },
+    {
+      "created_source_id": 9495337,
+      "display_name": "Hamza Hamzaoğlu",
+      "birth_date": "1970-01-15",
+      "resolution": "missing_after_full_mdb_check",
+      "candidates": []
+    },
+    {
+      "created_source_id": 9495338,
+      "display_name": "Rıza Çalımbay",
+      "birth_date": "1963-02-02",
+      "resolution": "missing_after_full_mdb_check",
+      "candidates": []
+    },
+    {
+      "created_source_id": 9495339,
+      "display_name": "Turhan Sofuoğlu",
+      "birth_date": "1965-08-19",
+      "resolution": "missing_after_full_mdb_check",
+      "candidates": []
+    },
+    {
+      "created_source_id": 9495340,
+      "display_name": "Okan Buruk",
+      "birth_date": "1973-10-19",
+      "resolution": "missing_after_full_mdb_check",
+      "candidates": []
+    },
+    {
+      "created_source_id": 9495341,
+      "display_name": "Rıdvan Dilmen",
+      "birth_date": "1962-08-15",
+      "resolution": "missing_after_full_mdb_check",
+      "candidates": []
+    },
+    {
+      "created_source_id": 9495342,
+      "display_name": "Uğur Tütüneker",
+      "birth_date": "1963-08-02",
+      "resolution": "missing_after_full_mdb_check",
+      "candidates": []
+    },
+    {
+      "created_source_id": 9495343,
+      "display_name": "İlker Yağcıoğlu",
+      "birth_date": "1966-03-10",
+      "resolution": "missing_after_full_mdb_check",
+      "candidates": []
+    },
+    {
+      "created_source_id": 9495344,
+      "display_name": "Tolunay Kafkas",
+      "birth_date": "1968-03-31",
+      "resolution": "missing_after_full_mdb_check",
+      "candidates": []
+    },
+    {
+      "created_source_id": 9495345,
+      "display_name": "Sergen Yalçın",
+      "birth_date": "1972-10-05",
+      "resolution": "missing_after_full_mdb_check",
+      "candidates": []
+    },
+    {
+      "created_source_id": 9495346,
+      "display_name": "Orhan Çıkırıkçı",
+      "birth_date": "1967-04-15",
+      "resolution": "missing_after_full_mdb_check",
+      "candidates": []
+    },
+    {
+      "created_source_id": 9495347,
+      "display_name": "Feyyaz Uçar",
+      "birth_date": "1963-10-27",
+      "resolution": "missing_after_full_mdb_check",
+      "candidates": []
+    },
+    {
+      "created_source_id": 9495348,
+      "display_name": "Hakan Şükür",
+      "birth_date": "1971-09-01",
+      "resolution": "missing_after_full_mdb_check",
+      "candidates": []
+    },
+    {
+      "created_source_id": 9495349,
+      "display_name": "Hami Mandıralı",
+      "birth_date": "1968-07-20",
+      "resolution": "missing_after_full_mdb_check",
+      "candidates": []
+    },
+    {
+      "created_source_id": 9495350,
+      "display_name": "Ertuğrul Sağlam",
+      "birth_date": "1969-11-19",
+      "resolution": "missing_after_full_mdb_check",
+      "candidates": []
+    },
+    {
+      "created_source_id": 9495351,
+      "display_name": "Aykut Kocaman",
+      "birth_date": "1965-04-05",
+      "resolution": "missing_after_full_mdb_check",
+      "candidates": []
+    },
+    {
+      "created_source_id": 9495352,
+      "display_name": "Bülent Uygun",
+      "birth_date": "1971-08-01",
+      "resolution": "missing_after_full_mdb_check",
+      "candidates": []
+    },
+    {
+      "created_source_id": 9495353,
+      "display_name": "Saffet Sancaklı",
+      "birth_date": "1966-02-27",
+      "resolution": "missing_after_full_mdb_check",
+      "candidates": []
+    },
+    {
+      "created_source_id": 9495354,
+      "display_name": "Arif Erdem",
+      "birth_date": "1972-01-02",
+      "resolution": "missing_after_full_mdb_check",
+      "candidates": []
+    },
+    {
+      "created_source_id": 9495355,
+      "display_name": "Zaur Khapov",
+      "birth_date": "1964-10-21",
+      "resolution": "missing_after_full_mdb_check",
+      "candidates": []
+    },
+    {
+      "created_source_id": 9495356,
+      "display_name": "Rashid Rahimov",
+      "birth_date": "1965-03-18",
+      "resolution": "missing_after_full_mdb_check",
+      "candidates": []
+    },
+    {
+      "created_source_id": 9495357,
+      "display_name": "Ramiz Mamedov",
+      "birth_date": "1972-05-21",
+      "resolution": "missing_after_full_mdb_check",
+      "candidates": []
+    },
+    {
+      "created_source_id": 9495358,
+      "display_name": "Yuri Kovtun",
+      "birth_date": "1970-01-05",
+      "resolution": "missing_after_full_mdb_check",
+      "candidates": []
+    },
+    {
+      "created_source_id": 9495359,
+      "display_name": "Vladimir Tatarchuk",
+      "birth_date": "1966-04-25",
+      "resolution": "missing_after_full_mdb_check",
+      "candidates": []
+    },
+    {
+      "created_source_id": 9495360,
+      "display_name": "Sergei Podpaly",
+      "birth_date": "1963-09-13",
+      "resolution": "missing_after_full_mdb_check",
+      "candidates": []
+    }
+  ]
+}

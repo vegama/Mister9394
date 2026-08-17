@@ -1,0 +1,121 @@
+{
+  "passed": true,
+  "profile_playability": {
+    "passed": true,
+    "matches_per_profile": 10,
+    "profiles": [
+      {
+        "profile": "favorito",
+        "league_id": 1,
+        "team_id": 3,
+        "matches_played": 10,
+        "lineup_decisions": 0,
+        "active": true,
+        "next_match_available": true,
+        "squad_size": 23,
+        "board_score": 39,
+        "memory_entries": 68,
+        "rules_ok": true
+      },
+      {
+        "profile": "medio",
+        "league_id": 1,
+        "team_id": 16,
+        "matches_played": 10,
+        "lineup_decisions": 0,
+        "active": true,
+        "next_match_available": true,
+        "squad_size": 25,
+        "board_score": 25,
+        "memory_entries": 69,
+        "rules_ok": true
+      },
+      {
+        "profile": "modesto_primera",
+        "league_id": 1,
+        "team_id": 692,
+        "matches_played": 10,
+        "lineup_decisions": 0,
+        "active": true,
+        "next_match_available": true,
+        "squad_size": 23,
+        "board_score": 64,
+        "memory_entries": 69,
+        "rules_ok": true
+      },
+      {
+        "profile": "division_inferior",
+        "league_id": 10,
+        "team_id": 27,
+        "matches_played": 10,
+        "lineup_decisions": 0,
+        "active": true,
+        "next_match_available": true,
+        "squad_size": 20,
+        "board_score": 26,
+        "memory_entries": 67,
+        "rules_ok": true
+      }
+    ]
+  },
+  "nomad_career": {
+    "passed": true,
+    "visited": [
+      3,
+      692,
+      13
+    ],
+    "tenures": 2
+  },
+  "long_horizon": {
+    "passed": true,
+    "horizons": [
+      {
+        "seasons": 3,
+        "year": 1996,
+        "rules_ok": true,
+        "ages_frozen": true,
+        "generated_players": 0,
+        "rules_policy": "frozen_1993_94"
+      },
+      {
+        "seasons": 10,
+        "year": 2003,
+        "rules_ok": true,
+        "ages_frozen": true,
+        "generated_players": 0,
+        "rules_policy": "frozen_1993_94"
+      },
+      {
+        "seasons": 20,
+        "year": 2013,
+        "rules_ok": true,
+        "ages_frozen": true,
+        "generated_players": 0,
+        "rules_policy": "frozen_1993_94"
+      },
+      {
+        "seasons": 30,
+        "year": 2023,
+        "rules_ok": true,
+        "ages_frozen": true,
+        "generated_players": 0,
+        "rules_policy": "frozen_1993_94"
+      }
+    ],
+    "scope": "long-horizon invariant probe; no fabricated season results"
+  },
+  "automated_dimensions": {
+    "realism": "regulatory + match/roster gates",
+    "clarity": "explainable state exposed by snapshots/UI gates",
+    "depth": "player memory, manager mobility, market/tactical consequences",
+    "economic_sporting_coherence": "covered by existing economy/roster gates",
+    "story_memory": "managed match history + tenures + persistent world state"
+  },
+  "human_only_dimensions": [
+    "diversión percibida",
+    "belleza percibida",
+    "ganas de continuar"
+  ],
+  "human_score_fabricated": false
+}

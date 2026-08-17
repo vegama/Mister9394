@@ -319,8 +319,37 @@ class Jet4MDB:
             raise MDBError("offset de fila inválido")
         return raw_start, start, next_start
 
-    @staticmethod
-    def _decode_scalar(col: Jet4Column, data: bytes, bool_bit: bool | None = None) -> Any:
+    def _decode_long_value(self, data: bytes) -> bytes | None:
+        """Resolve the Jet4 long-value envelope used by MEMO/OLE fields.
+
+        The supplied database uses the two common encodings needed here:
+        - 0x80000000: payload is stored inline after the 12-byte envelope.
+        - 0x40000000: payload is stored in a single row on another data page;
+          the second dword encodes ``page << 8 | row``.
+
+        Multi-page long values are intentionally left unresolved rather than
+        guessed.  This keeps the reader read-only and auditable while recovering
+        all gameplay MEMOs present in the source database.
+        """
+        if len(data) < 12:
+            return None
+        header = _u32(data, 0)
+        length = header & 0x3FFFFFFF
+        storage = header & 0xC0000000
+        if storage == 0x80000000:
+            return data[12:12 + length]
+        if storage == 0x40000000:
+            pointer = _u32(data, 4)
+            page_number, row_number = pointer >> 8, pointer & 0xFF
+            try:
+                pg = self.page(page_number)
+                _, start, end = self._row_bounds(pg, row_number)
+            except MDBError:
+                return None
+            return pg[start:min(end, start + length)]
+        return None
+
+    def _decode_scalar(self, col: Jet4Column, data: bytes, bool_bit: bool | None = None) -> Any:
         if col.col_type == MDB_BOOL:
             return bool(bool_bit)
         if not data:
@@ -347,7 +376,14 @@ class Jet4MDB:
                 return decode_jet4_text(data)
             if col.col_type == MDB_REPID and len(data) >= 16:
                 return data[:16].hex()
-            if col.col_type in (MDB_BINARY, MDB_OLE, MDB_MEMO, MDB_NUMERIC, MDB_COMPLEX):
+            if col.col_type in (MDB_MEMO, MDB_OLE):
+                payload = self._decode_long_value(data)
+                if payload is None:
+                    return data
+                if col.col_type == MDB_MEMO:
+                    return decode_jet4_text(payload)
+                return payload
+            if col.col_type in (MDB_BINARY, MDB_NUMERIC, MDB_COMPLEX):
                 return data
         except (struct.error, OverflowError, ValueError):
             return data
@@ -478,6 +514,56 @@ class Jet4MDB:
         if entry.object_type not in (1, 3, 6):
             raise MDBError(f"{name} no es una tabla (tipo={entry.object_type_name})")
         return self.read_table_def(entry.table_page, name)
+
+    def find_table_by_columns(
+        self, required_columns: set[str] | tuple[str, ...] | list[str], *,
+        excluded_columns: set[str] | tuple[str, ...] | list[str] = (),
+        min_rows: int = 0, name: str = ""
+    ) -> Jet4Table:
+        """Recover an orphan Jet4 TDEF by a distinctive column signature.
+
+        Some user tables in the supplied MDB (notably Entrenador, Pais and
+        Medio) still have live relationship/query references but no normal
+        MSysObjects table entry.  Scanning TDEF pages lets us recover those rows
+        without hard-coding physical page numbers.
+        """
+        required = {str(column).casefold() for column in required_columns}
+        excluded = {str(column).casefold() for column in excluded_columns}
+        matches: list[Jet4Table] = []
+        for page_number in range(self.page_count):
+            pg = self.page(page_number)
+            if not pg or pg[0] != 0x02:
+                continue
+            try:
+                table = self.read_table_def(page_number, "")
+            except MDBError:
+                continue
+            columns = {column.name.casefold() for column in table.columns}
+            if required.issubset(columns) and not (excluded & columns) and table.num_rows >= min_rows:
+                matches.append(table)
+        if len(matches) != 1:
+            raise MDBError(
+                f"firma TDEF ambigua/no encontrada {sorted(required)}: {len(matches)} coincidencias"
+            )
+        table = matches[0]
+        if name:
+            table = Jet4Table(
+                name=name, page=table.page, num_rows=table.num_rows,
+                max_cols=table.max_cols, num_var_cols=table.num_var_cols,
+                num_cols=table.num_cols, num_indexes=table.num_indexes,
+                num_real_indexes=table.num_real_indexes, table_type=table.table_type,
+                columns=table.columns,
+            )
+            self._table_cache[table.page] = table
+        return table
+
+    def rows_from_table(self, table: Jet4Table, *, limit: int | None = None) -> list[dict[str, Any]]:
+        out: list[dict[str, Any]] = []
+        for row in self.iter_rows(table):
+            out.append(row.values)
+            if limit is not None and len(out) >= limit:
+                break
+        return out
 
     def rows(self, name: str, *, limit: int | None = None) -> list[dict[str, Any]]:
         table = self.table(name)

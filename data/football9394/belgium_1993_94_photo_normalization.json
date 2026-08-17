@@ -1,0 +1,45 @@
+{
+  "status": "complete",
+  "target_size": [
+    40,
+    55
+  ],
+  "format": "JPEG",
+  "mode": "RGB",
+  "converted": 2,
+  "skipped_existing": 0,
+  "unresolved": 0,
+  "invalid": 0,
+  "converted_rows": [
+    {
+      "source": "/mnt/data/bel_photos_raw/89371.jpg",
+      "destination": "/mnt/data/mister9394_clean/Mister9394-0.24.0-bel-tur-rus-1993-data/frontend/public/historical9394/players/9494216.jpg",
+      "original_size": [
+        220,
+        330
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9494216
+    },
+    {
+      "source": "/mnt/data/bel_photos_raw/99947.jpg",
+      "destination": "/mnt/data/mister9394_clean/Mister9394-0.24.0-bel-tur-rus-1993-data/frontend/public/historical9394/players/9495172.jpg",
+      "original_size": [
+        412,
+        697
+      ],
+      "output_size": [
+        40,
+        55
+      ],
+      "mode": "RGB",
+      "source_id": 9495172
+    }
+  ],
+  "unresolved_files": [],
+  "invalid_files": []
+}

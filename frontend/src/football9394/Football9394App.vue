@@ -1,21 +1,54 @@
 <script setup>
-import { computed, onMounted, ref, watch } from 'vue'
+import { computed, onBeforeUnmount, onMounted, ref, watch } from 'vue'
 import FootballPlayerProfileModal from '../features/football9394/FootballPlayerProfileModal.vue'
+import ManagerSidebar from './components/ManagerSidebar.vue'
+import CareerSetup from './components/CareerSetup.vue'
+import ManagerTopbar from './components/ManagerTopbar.vue'
+import HomeDashboard from './components/HomeDashboard.vue'
+import SquadWorkspace from './components/SquadWorkspace.vue'
+import TacticsWorkspace from './components/TacticsWorkspace.vue'
+import LiveMatchWorkspace from './components/LiveMatchWorkspace.vue'
+import MarketWorkspace from './components/MarketWorkspace.vue'
+import CompetitionsWorkspace from './components/CompetitionsWorkspace.vue'
+import EconomyWorkspace from './components/EconomyWorkspace.vue'
+import NewsWorkspace from './components/NewsWorkspace.vue'
+import NationalWorkspace from './components/NationalWorkspace.vue'
+import ClubWorkspace from './components/ClubWorkspace.vue'
+import HistoryWorkspace from './components/HistoryWorkspace.vue'
+import CalendarWorkspace from './components/CalendarWorkspace.vue'
 import { football9394Api } from './api.js'
 
-const sections = [
-  ['home','Inicio'],['squad','Plantilla'],['tactics','Tácticas'],['competitions','Competiciones'],
-  ['market','Fichajes'],['national','Selecciones'],['club','Club'],['calendar','Calendario'],
+const navigationGroups = [
+  { label: 'GESTIÓN', items: [
+    { id: 'home', label: 'Inicio' },
+    { id: 'squad', label: 'Plantilla' },
+    { id: 'tactics', label: 'Tácticas' },
+    { id: 'market', label: 'Mercado' },
+  ] },
+  { label: 'TEMPORADA', items: [
+    { id: 'competitions', label: 'Competiciones' },
+    { id: 'calendar', label: 'Calendario' },
+    { id: 'news', label: 'Noticias' },
+  ] },
+  { label: 'CLUB Y MUNDO', items: [
+    { id: 'club', label: 'Club' },
+    { id: 'economy', label: 'Economía' },
+    { id: 'national', label: 'Selecciones' },
+    { id: 'history', label: 'Historia' },
+  ] },
 ]
 const view = ref('home')
+const sectionTitle = computed(() => navigationGroups.flatMap(group => group.items).find(item => item.id === view.value)?.label || 'Inicio')
 const careerId = ref('')
 const careerOptions = ref([])
 const showCareerSetup = ref(false)
 const selectedLeagueId = ref(null)
 const selectedTeamId = ref(null)
+const selectedAgePolicy = ref('frozen_attributes_dynamic')
 const careerSeason = ref('1993-94')
 const totalMatchdays = ref(38)
 const gameDate = ref('1993-10-23')
+const careerAgePolicy = ref('frozen_attributes_dynamic')
 const currentDate = computed(() => {
  const [y,m,d]=String(gameDate.value||'1993-10-23').split('-')
  const months=['ENE','FEB','MAR','ABR','MAY','JUN','JUL','AGO','SEP','OCT','NOV','DIC']
@@ -29,19 +62,35 @@ const pressing = ref('medium')
 const directness = ref('mixed')
 const defensiveLine = ref('medium')
 const marking = ref('zonal')
+const width = ref('normal')
+const offsideTrap = ref(false)
+const tacticalIdentity = ref({formation_label:'Equilibrio clásico'})
+const liveMatch = ref(null)
+const liveOutgoingId = ref(null)
+const liveIncomingId = ref(null)
+const lastMatchReport = ref(null)
 const selectedPlayer = ref(null)
 const playerTab = ref('profile')
 const selectedCompetition = ref('league:1')
 const notice = ref('')
+const isAdvancing = ref(false)
 const finances = ref({cash:0,starting_budget:0,debt:0,transfer_spend:0,transfer_income:0,matchday_income:0})
 const selectedTarget = ref(null)
 const transferFee = ref(0)
 const transferSalary = ref(0)
 const transferYears = ref(3)
+const marketQuery = ref('')
+const marketPosition = ref('')
+const marketFreeAgents = ref(false)
+const marketWatchedOnly = ref(false)
+const marketFlow = ref({watchlist:[],negotiations:[],listings:[],incoming_offers:[]})
+const economy = ref({cash:0,debt:0,monthly_wages:0,annual_wages:0,monthly_commercial_income:0,monthly_operating_expense:0,monthly_debt_service:0,projected_monthly_net:0,safety_reserve:0,transfer_room:0,status:'—',top_salaries:[],recent_ledger:[],contract_data_note:''})
 const nationalTeams = ref([])
 const selectedNationalTeam = ref(null)
 const nationalSquad = ref([])
 const internationalHistory = ref([])
+const internationalManager = ref({country_id:null,country_name:null,reputation:35,job_offers:[],selection:[]})
+const internationalTournaments = ref([])
 const specialProgress = ref({})
 const tournamentProgress = ref({})
 const recentWorldEvents = ref([])
@@ -56,21 +105,34 @@ const lineupDraft = ref([])
 const controlledTeam = ref({source_id:null,name:'Sin club',long_name:'Sin club',league:null,members:null,budget:null,debt:null})
 const controlledTeamId = computed(()=>Number(controlledTeam.value?.source_id||0))
 const selectedLeagueOption = computed(()=>careerOptions.value.find(row=>Number(row.source_id)===Number(selectedLeagueId.value))||null)
-const setupTeams = computed(()=>selectedLeagueOption.value?.teams||[])
-const selectedSetupTeam = computed(()=>setupTeams.value.find(team=>Number(team.source_id)===Number(selectedTeamId.value))||null)
 const lineupDraftPlayers = computed(()=>lineupDraft.value.map(id=>squad.value.find(p=>Number(p.id)===Number(id))).filter(Boolean))
 const standings = ref([])
 const competitionStandings = ref([])
 const competitionProgress = ref(null)
+const competitionDetail = ref(null)
+const competitionViewMode = ref('table')
 const squad = ref([])
 const competitions = ref([])
 const targets = ref([])
 const matches = ref([])
 const nextMatch = ref(null)
-const news = ref([
- ['HOY','La temporada utiliza el snapshot histórico normalizado de la base de datos.'],
- ['HOY','Los resultados mostrados pertenecen a esta partida simulada; no se presentan como resultados históricos reales.'],
-])
+const newsFeed = ref([])
+const historyState = ref({season_recaps:[],season_archive:[],honours:[],club_honours:[],board_history:[],ai_squad_audits:[]})
+const latestAiAudit = ref(null)
+const jobStatus = ref('active')
+const preseason = ref({active:false,label:'Temporada oficial',friendlies:[],pace:'event_driven'})
+const marketPeriod = ref({open:true,label:'Mercado',phase:'in_season',activity:'low'})
+const clubStatus = ref({score:50,tier:'MEDIO',trend:0,history:[]})
+const sourceManager = ref(null)
+const venueContext = ref(null)
+const storylines = ref([])
+const storylineArchive = ref([])
+const rivalries = ref([])
+const managerWorld = ref({history:[],pressure:{},unemployed_count:0})
+const careerRecords = ref({biggest_win:null,biggest_defeat:null,highest_scoring_match:null,longest_win_streak:0,longest_unbeaten_streak:0,matches_managed:0,wins:0,draws:0,losses:0})
+const userManager = ref({reputation:50,job_offers:[],tenures:[],current_tenure:{}})
+const dressingRoom = ref({captain_id:null,leaders:[],competitions:[],mentorships:[],recent_events:[]})
+const reencounters = ref([])
 
 const selectedCompetitionInfo = computed(()=>competitions.value.find(c=>`${c.kind}:${c.source_id}`===selectedCompetition.value)||null)
 const tableWindow = computed(()=>{
@@ -79,15 +141,12 @@ const tableWindow = computed(()=>{
  if(index<0)return rows.slice(0,7)
  return rows.slice(Math.max(0,index-3),Math.min(rows.length,index+4))
 })
-const competitionStatusLabel = computed(()=>{
- const row=selectedCompetitionInfo.value
- if(!row)return 'Cargando reglamento…'
- if(row.simulation_ready)return 'REGLAMENTO 1993-94 CERTIFICADO'
- if(row.rule_status==='historical_conflict')return 'CONFLICTO HISTÓRICO BLOQUEADO'
- if(row.rule_status==='structure_verified')return 'ESTRUCTURA VERIFICADA · REGLAS PENDIENTES'
- return 'REGLAMENTO PENDIENTE'
-})
-
+const activeNegotiations = computed(()=>[...(marketFlow.value.negotiations||[])].filter(n=>['waiting','countered'].includes(n.status)).reverse())
+const openIncomingOffers = computed(()=>[...(marketFlow.value.incoming_offers||[])].filter(o=>o.status==='open').reverse())
+const liveEvents = computed(()=>[...(liveMatch.value?.events||[])].slice(-18).reverse())
+const controlledLiveHome = computed(()=>Number(liveMatch.value?.home_team_id||0)===controlledTeamId.value)
+const liveOwnStats = computed(()=>controlledLiveHome.value?liveMatch.value?.home:liveMatch.value?.away)
+const liveOppStats = computed(()=>controlledLiveHome.value?liveMatch.value?.away:liveMatch.value?.home)
 function historicalPlayerPhoto(id){return id?`/historical9394/players/${Number(id)}.jpg`:null}
 function historicalClubCrest(id){return id?`/historical9394/clubs/${Number(id)}.gif`:null}
 function historicalStadiumPhoto(id){return id?`/historical9394/stadiums/${Number(id)}.jpg`:null}
@@ -95,6 +154,13 @@ function formatSourceMoney(value){
  if(value==null)return '—'
  return `${Number(value).toLocaleString('es-ES')} ptas.`
 }
+function formatDateShort(value){
+ if(!value)return '—'
+ const parts=String(value).split('-');return parts.length===3?`${parts[2]}/${parts[1]}/${parts[0]}`:String(value)
+}
+function eventLabel(row){return row?.stage || row?.progress?.stage || 'Temporada en curso'}
+function trendLabel(value){const n=Number(value||0);return n>0?`▲ +${n}`:n<0?`▼ ${n}`:'● ESTABLE'}
+function boardClass(risk){return String(risk||'').includes('ALTO')?'risk-high':risk==='RIESGO'?'risk-danger':risk==='VIGILANCIA'?'risk-watch':'risk-safe'}
 function toSquadRow(player){
  return {
   id:player.id,n:player.shirt_number??'—',name:player.display_name,pos:player.position,age:player.age??'—',overall:player.overall??'—',
@@ -110,6 +176,7 @@ function applyCareerState(state){
  if(state.career_id){careerId.value=state.career_id;window.localStorage?.setItem('mister9394-career-id',state.career_id)}
  if(state.game_date)gameDate.value=state.game_date
  if(state.season)careerSeason.value=state.season
+ if(state.age_policy)careerAgePolicy.value=state.age_policy
  if(state.total_matchdays)totalMatchdays.value=state.total_matchdays
  controlledTeam.value=state.team||controlledTeam.value
  if(state.league_id!=null)selectedCompetition.value=`league:${state.league_id}`
@@ -121,6 +188,8 @@ function applyCareerState(state){
  specialProgress.value=state.special_progress||specialProgress.value
  tournamentProgress.value=state.tournament_progress||tournamentProgress.value
  internationalHistory.value=state.international_history||internationalHistory.value
+ internationalManager.value=state.international_manager||internationalManager.value
+ internationalTournaments.value=state.international_tournaments||internationalTournaments.value
  recentWorldEvents.value=state.recent_world_events||recentWorldEvents.value
  aiTransfers.value=state.ai_transfer_history||aiTransfers.value
  managerDashboard.value=state.manager_dashboard||managerDashboard.value
@@ -131,7 +200,30 @@ function applyCareerState(state){
   tempo.value=state.tactics.tempo||tempo.value;pressing.value=state.tactics.pressing||pressing.value
   directness.value=state.tactics.directness||directness.value;defensiveLine.value=state.tactics.defensive_line||defensiveLine.value
   marking.value=state.tactics.marking||marking.value
+  width.value=state.tactics.width||width.value;offsideTrap.value=Boolean(state.tactics.offside_trap)
  }
+ tacticalIdentity.value=state.tactical_identity||tacticalIdentity.value
+ economy.value=state.economy||economy.value
+ marketFlow.value=state.market_flow||marketFlow.value
+ liveMatch.value=state.live_match||null
+ lastMatchReport.value=state.last_match_report||lastMatchReport.value
+ if(state.news_feed)newsFeed.value=state.news_feed
+ if(state.season_recaps)historyState.value={...historyState.value,season_recaps:state.season_recaps}
+ latestAiAudit.value=state.latest_ai_squad_audit||latestAiAudit.value
+ jobStatus.value=state.job_status||'active'
+ preseason.value=state.preseason||preseason.value
+ marketPeriod.value=state.market_period||state.market_flow?.period||marketPeriod.value
+ clubStatus.value=state.club_status||state.manager_dashboard?.club_status||clubStatus.value
+ sourceManager.value=state.source_manager||sourceManager.value
+ venueContext.value=state.venue||venueContext.value
+ if(state.storylines)storylines.value=state.storylines
+ if(state.storyline_archive)storylineArchive.value=state.storyline_archive
+ if(state.rivalries)rivalries.value=state.rivalries
+ if(state.manager_world)managerWorld.value=state.manager_world
+ if(state.career_records)careerRecords.value=state.career_records
+ if(state.user_manager)userManager.value=state.user_manager
+ if(state.dressing_room)dressingRoom.value=state.dressing_room
+ if(state.reencounters)reencounters.value=state.reencounters
 }
 function calendarRowsForUi(rows,state){
  const teamId=Number(state.team?.source_id||controlledTeamId.value)
@@ -140,27 +232,34 @@ function calendarRowsForUi(rows,state){
   const opponent=Number(m.home_team_id)===teamId?m.away_team:m.home_team
   const venue=Number(m.home_team_id)===teamId?'Casa':'Fuera'
   const status=m.played?`${m.home_goals}-${m.away_goals}`:'Pendiente'
-  return [m.date||`Jornada ${m.matchday}`,opponent,venue,leagueName,status,m.id]
+  return [m.date||`Jornada ${m.matchday}`,opponent,venue,m.competition_name||leagueName,status,m.id]
  })
 }
 async function refreshCareerData(state){
- const [calendarRows,marketRows]=await Promise.all([
-  football9394Api.careerCalendar(state.career_id),football9394Api.careerMarket(state.career_id,{limit:10}),
+ const [calendarRows,marketRows,competitionRows,newsRows]=await Promise.all([
+  football9394Api.careerCalendar(state.career_id),football9394Api.careerMarket(state.career_id,{limit:10}),football9394Api.careerCompetitions(state.career_id),football9394Api.careerNews(state.career_id,{limit:80}),
  ])
  const recent=calendarRows.filter(m=>m.played).slice(-3);const upcoming=calendarRows.filter(m=>!m.played).slice(0,6)
  matches.value=calendarRowsForUi([...recent,...upcoming],state)
  targets.value=marketRows.map(p=>[p.display_name,p.position,p.team_name,p.overall??'—',p.estimated_transfer_value??0,p.id,p])
+ competitions.value=competitionRows;newsFeed.value=newsRows
+ if(!competitionRows.some(c=>`${c.kind}:${c.source_id}`===selectedCompetition.value)&&competitionRows.length)selectedCompetition.value=`${competitionRows[0].kind}:${competitionRows[0].source_id}`
+ await loadSelectedCompetitionTable()
+}
+async function loadHistory(){
+ if(!careerId.value)return
+ try{historyState.value=await football9394Api.careerHistory(careerId.value)}catch(error){flash(`No se pudo cargar el historial: ${error.message}`)}
 }
 async function loadHistoricalCareer(){
  loadingHistoricalData.value=true;dataError.value=''
  try{
-  const [options,competitionRows,nationalRows]=await Promise.all([football9394Api.careerOptions(),football9394Api.competitions(),football9394Api.nationalTeams()])
-  careerOptions.value=options.leagues||[];competitions.value=competitionRows;nationalTeams.value=nationalRows
+  const [options,nationalRows]=await Promise.all([football9394Api.careerOptions(),football9394Api.nationalTeams()])
+  careerOptions.value=options.leagues||[];nationalTeams.value=nationalRows
   if(careerOptions.value.length){selectedLeagueId.value=careerOptions.value[0].source_id;selectedTeamId.value=careerOptions.value[0].teams?.[0]?.source_id??null}
   let state=null
   const savedId=window.localStorage?.getItem('mister9394-career-id')
   if(savedId){try{state=await football9394Api.career(savedId)}catch{window.localStorage?.removeItem('mister9394-career-id')}}
-  if(state){applyCareerState(state);await refreshCareerData(state);showCareerSetup.value=false}
+  if(state){applyCareerState(state);await refreshCareerData(state);await loadHistory();showCareerSetup.value=false}
   else showCareerSetup.value=true
  }catch(error){
   dataError.value=error.message||String(error);showCareerSetup.value=true
@@ -171,8 +270,8 @@ async function startCareer(){
  if(!selectedLeagueId.value||!selectedTeamId.value){flash('Selecciona una liga y un equipo.');return}
  loadingHistoricalData.value=true;dataError.value=''
  try{
-  const state=await football9394Api.createCareer({teamId:Number(selectedTeamId.value),leagueId:Number(selectedLeagueId.value),seed:9394,throughMatchday:0})
-  applyCareerState(state);await refreshCareerData(state);showCareerSetup.value=false;view.value='home'
+  const state=await football9394Api.createCareer({teamId:Number(selectedTeamId.value),leagueId:Number(selectedLeagueId.value),seed:9394,throughMatchday:0,agePolicy:selectedAgePolicy.value})
+  applyCareerState(state);await refreshCareerData(state);await loadHistory();showCareerSetup.value=false;view.value='home'
   flash(`Carrera iniciada · ${state.team.name}`)
  }catch(error){dataError.value=error.message||String(error);flash(`No se pudo crear la carrera: ${dataError.value}`)}
  finally{loadingHistoricalData.value=false}
@@ -203,38 +302,92 @@ async function saveSelection(){
   applyCareerState(result.career);flash('Once y convocatoria guardados.')
  }catch(error){flash(`No se pudo guardar el once: ${error.message}`)}
 }
+async function appointCaptain(player){
+ if(!careerId.value)return
+ try{const result=await football9394Api.setCaptain(careerId.value,Number(player.id));applyCareerState(result.career);flash(`${player.name} es el nuevo capitán.`)}catch(error){flash(`No se pudo cambiar la capitanía: ${error.message}`)}
+}
 async function autoSelectLineup(){
  if(!careerId.value)return
  try{const result=await football9394Api.updateCareerSelection(careerId.value,{autoSelect:true});applyCareerState(result.career);flash('Mejor once disponible seleccionado.')}catch(error){flash(`No se pudo seleccionar el once: ${error.message}`)}
 }
+function playerNameById(id){const own=squad.value.find(p=>Number(p.id)===Number(id));if(own)return own.name;const target=targets.value.find(p=>Number(p[5])===Number(id));return target?.[0]||`Jugador #${id}`}
 function openDecision(decision){if(decision?.action)view.value=decision.action}
 function flash(message){notice.value=message;window.setTimeout(()=>{notice.value=''},2200)}
-function openPlayer(row){selectedPlayer.value=profileFor(row);playerTab.value='profile'}
-async function advance(){
- if(!careerId.value){flash('La carrera todavía no está lista.');return}
+async function openPlayer(row){
+ selectedPlayer.value=profileFor(row);playerTab.value='profile'
+ if(!careerId.value||!row?.id)return
+ try{const detail=await football9394Api.careerPlayer(careerId.value,row.id);selectedPlayer.value={...detail,photo_url:historicalPlayerPhoto(detail.id),team_crest_url:historicalClubCrest(detail.team_id),market_value_display:formatSourceMoney(detail.estimated_transfer_value)}}catch{}
+}
+async function promisePlayerRole(payload){
+ if(!careerId.value||!payload?.player?.id||!payload?.role)return
  try{
-  const result=await football9394Api.advanceCareer(careerId.value)
+  const result=await football9394Api.setRolePromise(careerId.value,payload.player.id,payload.role)
   applyCareerState(result.career)
-  if(result.world_events?.length){
-   const event=result.world_events[result.world_events.length-1]
-   if(event.kind==='international_friendly')news.value.unshift(['HOY',`${event.home_name} ${event.home_goals}-${event.away_goals} ${event.away_name} · amistoso de la partida.`])
-   else if(event.kind==='ai_transfer')news.value.unshift(['HOY','El mercado internacional se ha movido: un club de la IA ha cerrado un traspaso.'])
-  }
+  const detail=result.player||await football9394Api.careerPlayer(careerId.value,payload.player.id)
+  selectedPlayer.value={...detail,photo_url:historicalPlayerPhoto(detail.id),team_crest_url:historicalClubCrest(detail.team_id),market_value_display:formatSourceMoney(detail.estimated_transfer_value)}
+  flash(`Rol acordado con ${detail.display_name||detail.name}: ${payload.role}.`)
+ }catch(error){flash(`No se pudo acordar el rol: ${error.message}`)}
+}
+async function advance(){
+ if(isAdvancing.value)return
+ if(liveMatch.value){view.value='match';flash('Tienes un partido en directo pendiente.');return}
+ if(!careerId.value){flash('La carrera todavía no está lista.');return}
+ if(jobStatus.value==='dismissed'){view.value='club';flash('Estás sin club. Elige un nuevo proyecto para continuar tu carrera.');return}
+ isAdvancing.value=true
+ try{
+  const result=await football9394Api.advanceCareerUntilEvent(careerId.value,14)
+  applyCareerState(result.career);await refreshCareerData(result.career)
+  if(result.world_events?.some(e=>e.kind==='season_rollover'))await loadHistory()
+  if(result.career_over){view.value='club';flash('El consejo ha terminado tu etapa en el club.');return}
   if(result.requires_match&&result.next_match)flash(`DÍA DE PARTIDO · ${result.next_match.home_team} - ${result.next_match.away_team}`)
+  else if(result.advanced_days>1)flash(`Continuado ${result.advanced_days} días · ${result.date}`)
   else flash(`Día avanzado · ${result.date}`)
  }catch(error){flash(`No se pudo avanzar: ${error.message}`)}
+ finally{isAdvancing.value=false}
+}
+
+async function acceptManagerJob(offerId){
+ if(!careerId.value)return
+ try{const state=await football9394Api.acceptManagerJob(careerId.value,offerId);applyCareerState(state);await refreshCareerData(state);view.value='home';flash(`Nueva etapa: ${state.team?.name||'club aceptado'}.`)}catch(error){flash(`No se pudo aceptar el banquillo: ${error.message}`)}
+}
+
+function currentTactics(){return {formation:formation.value,mentality:mentality.value,tempo:tempo.value,pressing:pressing.value,directness:directness.value,defensive_line:defensiveLine.value,marking:marking.value,width:width.value,offside_trap:Boolean(offsideTrap.value)}}
+async function saveTactics(){
+ if(!careerId.value)return
+ try{const result=await football9394Api.updateCareerTactics(careerId.value,currentTactics());applyCareerState(result.career);flash('Táctica guardada. Sus efectos se aplicarán al próximo minuto jugado.')}catch(error){flash(`No se pudo guardar la táctica: ${error.message}`)}
+}
+async function startLive(){
+ if(!careerId.value||!nextMatch.value){flash('No hay partido disponible.');return}
+ try{await football9394Api.updateCareerTactics(careerId.value,currentTactics());const result=await football9394Api.startLiveMatch(careerId.value);applyCareerState(result.career);liveMatch.value=result.match;view.value='match';flash('Partido iniciado. Tú diriges desde el primer minuto.')}catch(error){flash(`No se pudo iniciar: ${error.message}`)}
+}
+async function advanceLive(minutes=5){
+ if(!careerId.value||!liveMatch.value)return
+ try{const result=await football9394Api.advanceLiveMatch(careerId.value,minutes);applyCareerState(result.career);liveMatch.value=result.match}catch(error){flash(`Directo detenido: ${error.message}`)}
+}
+async function advanceToChance(){
+ if(!liveMatch.value||liveMatch.value.status==='finished')return
+ const notable=new Set(['shot_off','save','goal','corner','yellow','red','second_yellow_red','injury','halftime','fulltime'])
+ try{for(let i=0;i<20;i++){const before=(liveMatch.value.events||[]).length;const result=await football9394Api.advanceLiveMatch(careerId.value,1);applyCareerState(result.career);liveMatch.value=result.match;const fresh=(liveMatch.value.events||[]).slice(before);if(fresh.some(e=>notable.has(e.kind))||liveMatch.value.status!=='live')break}}catch(error){flash(`Directo detenido: ${error.message}`)}
+}
+async function applyLiveTactics(){
+ try{const result=await football9394Api.updateLiveTactics(careerId.value,currentTactics());liveMatch.value=result.match||result;flash(`Ajuste aplicado en el ${liveMatch.value.minute}'`)}catch(error){flash(`No se pudo cambiar la táctica: ${error.message}`)}
+}
+async function makeLiveSubstitution(){
+ if(!liveOutgoingId.value||!liveIncomingId.value){flash('Selecciona quién sale y quién entra.');return}
+ try{const result=await football9394Api.liveSubstitution(careerId.value,Number(liveOutgoingId.value),Number(liveIncomingId.value));liveMatch.value=result.match||result;liveOutgoingId.value=null;liveIncomingId.value=null;flash('Cambio realizado.')}catch(error){flash(`Cambio no válido: ${error.message}`)}
+}
+async function closeLiveMatch(){
+ try{const result=await football9394Api.finishLiveMatch(careerId.value);lastMatchReport.value=result.match;applyCareerState(result.career);await refreshCareerData(result.career);view.value='home';flash(`FINAL · ${result.match.home_team_name} ${result.match.home.goals}-${result.match.away.goals} ${result.match.away_team_name}`)}catch(error){flash(`No se pudo cerrar el partido: ${error.message}`)}
 }
 async function simulateControlledMatch(){
  if(!nextMatch.value||!careerId.value){flash('No hay próximo partido cargado.');return}
  try{
-  const tactics={formation:formation.value,mentality:mentality.value,tempo:tempo.value,pressing:pressing.value,directness:directness.value,defensive_line:defensiveLine.value,marking:marking.value,width:'normal',offside_trap:false}
+  const tactics=currentTactics()
   await football9394Api.updateCareerTactics(careerId.value,tactics)
   const newState=await football9394Api.playNextCareerMatchday(careerId.value)
   applyCareerState(newState)
   const played=newState.played_match
   const last=newState.last_controlled_result
-  if(played?.fixture_type==='tournament') news.value.unshift(['HOY',`${played.competition_name} · ${played.stage}: ${played.home_goals}-${played.away_goals}. Resultado persistido por el motor 1993-94.`])
-  else if(last)news.value.unshift(['HOY',`${last.home_team} ${last.home_goals}-${last.away_goals} ${last.away_team}. Resultado persistido por el motor 1993-94.`])
   await refreshCareerData(newState)
   if(played?.fixture_type==='tournament') flash(`FINAL · ${played.competition_name} · ${played.home_goals}-${played.away_goals}`)
   else flash(last?`FINAL · ${last.home_team} ${last.home_goals}-${last.away_goals} ${last.away_team}`:'Partido completado')
@@ -244,26 +397,28 @@ async function simulateControlledMatch(){
 function chooseTarget(row){
  selectedTarget.value=row
  transferFee.value=Math.round(Number(row[4]||0)*0.9)
- transferSalary.value=Number(row[6]?.contract?.salary||0)
+ transferSalary.value=Number(row[6]?.contract?.salary||row[6]?.market?.minimum_salary_hint||0)
  transferYears.value=3
+}
+async function searchMarket(){
+ if(!careerId.value)return
+ try{const rows=await football9394Api.careerMarket(careerId.value,{query:marketQuery.value,limit:30,position:marketPosition.value,freeAgents:marketFreeAgents.value,watched:marketWatchedOnly.value});targets.value=rows.map(p=>[p.display_name,p.position,p.team_name||'Libre',p.overall??'—',p.estimated_transfer_value??p.market?.market_value??0,p.id,p])}catch(error){flash(`Búsqueda fallida: ${error.message}`)}
+}
+async function toggleWatch(target){
+ try{const watched=!Boolean(target[6]?.watched);const result=await football9394Api.watchPlayer(careerId.value,target[5],watched);applyCareerState(result.career);target[6].watched=watched;flash(watched?'Añadido a seguimiento.':'Eliminado del seguimiento.')}catch(error){flash(`No se pudo actualizar seguimiento: ${error.message}`)}
 }
 async function submitTransfer(){
  if(!selectedTarget.value||!careerId.value)return
- try{
-  const result=await football9394Api.negotiateTransfer(careerId.value,selectedTarget.value[5],{feeOffer:Number(transferFee.value),salaryOffer:Number(transferSalary.value),contractYears:Number(transferYears.value)})
-  applyCareerState(result.career)
-  if(result.decision.accepted){
-   flash(`${selectedTarget.value[0]} fichado por ${formatSourceMoney(result.decision.fee)}`)
-   selectedTarget.value=null
-   const marketRows=await football9394Api.careerMarket(careerId.value,{limit:10})
-   targets.value=marketRows.map(p=>[p.display_name,p.position,p.team_name,p.overall??'—',p.estimated_transfer_value??0,p.id,p])
-  }else{
-   transferFee.value=result.decision.counter_fee||transferFee.value
-   transferSalary.value=result.decision.counter_salary||transferSalary.value
-   const counter=result.decision.counter_salary?` · ficha ${formatSourceMoney(result.decision.counter_salary)}`:''
-   flash(`Oferta rechazada · contraoferta ${formatSourceMoney(result.decision.counter_fee)}${counter}`)
-  }
- }catch(error){flash(`Negociación fallida: ${error.message}`)}
+ try{const result=await football9394Api.openNegotiation(careerId.value,{playerId:selectedTarget.value[5],feeOffer:Number(transferFee.value),salaryOffer:Number(transferSalary.value),contractYears:Number(transferYears.value)});applyCareerState(result.career);selectedTarget.value=null;flash(`Oferta enviada · respuesta prevista ${result.negotiation.response_date}`)}catch(error){flash(`Negociación fallida: ${error.message}`)}
+}
+async function counterNegotiation(row){
+ try{const result=await football9394Api.counterNegotiation(careerId.value,row.id,{feeOffer:Number(row.counter_fee??row.fee_offer),salaryOffer:Number(row.counter_salary??row.salary_offer),contractYears:Number(row.contract_years||3)});applyCareerState(result.career);flash(`Contraoferta enviada · respuesta ${result.negotiation.response_date}`)}catch(error){flash(`No se pudo responder: ${error.message}`)}
+}
+async function toggleTransferListing(row){
+ try{const listed=Boolean(row.profile?.transfer_listed);const result=listed?await football9394Api.unlistPlayer(careerId.value,row.id):await football9394Api.listPlayer(careerId.value,row.id,Number(row.profile?.estimated_transfer_value||0));applyCareerState(result.career);flash(listed?'Jugador retirado del mercado.':'Jugador puesto en el mercado.')}catch(error){flash(`No se pudo cambiar su situación: ${error.message}`)}
+}
+async function acceptIncomingOffer(offer){
+ try{const result=await football9394Api.acceptIncomingOffer(careerId.value,offer.id);applyCareerState(result.career);await refreshCareerData(result.career);flash(`Venta cerrada por ${formatSourceMoney(result.transfer.fee)}`)}catch(error){flash(`No se pudo aceptar: ${error.message}`)}
 }
 async function renewPlayer(row){
  if(!careerId.value||!row?.id)return
@@ -279,121 +434,353 @@ async function openNationalTeam(team){
  selectedNationalTeam.value=team
  try{
   const data=await football9394Api.nationalTeam(team.country_id,careerId.value)
+  selectedNationalTeam.value={...team,...data}
   nationalSquad.value=data.squad||[]
  }catch(error){flash(`No se pudo cargar la selección: ${error.message}`)}
 }
+async function acceptNationalJob(offerId){
+ if(!careerId.value)return
+ try{const result=await football9394Api.acceptNationalJob(careerId.value,offerId);applyCareerState(result.career);const country=nationalTeams.value.find(row=>Number(row.country_id)===Number(result.career.international_manager?.country_id));if(country)await openNationalTeam(country);flash(`Seleccionador de ${result.career.international_manager?.country_name||'la selección'}.`)}catch(error){flash(`No se pudo aceptar la selección: ${error.message}`)}
+}
+async function resignNationalJob(){
+ if(!careerId.value)return
+ try{const result=await football9394Api.resignNationalJob(careerId.value);applyCareerState(result.career);flash('Has dejado el cargo de seleccionador.')}catch(error){flash(`No se pudo dejar la selección: ${error.message}`)}
+}
+async function autoNationalSelection(){
+ if(!careerId.value)return
+ try{const result=await football9394Api.autoNationalSelection(careerId.value);applyCareerState(result.career);const country=nationalTeams.value.find(row=>Number(row.country_id)===Number(result.career.international_manager?.country_id));if(country)await openNationalTeam(country);flash('Convocatoria de 22 jugadores actualizada.')}catch(error){flash(`No se pudo actualizar la convocatoria: ${error.message}`)}
+}
 
 async function loadSelectedCompetitionTable(){
- if(!careerId.value)return
+ if(!careerId.value||!selectedCompetition.value)return
  const [kind,id]=String(selectedCompetition.value).split(':')
- if(kind!=='league'){competitionStandings.value=[];competitionProgress.value=null;return}
  try{
-  const data=await football9394Api.careerLeagueStandings(careerId.value,Number(id))
-  competitionStandings.value=data.rows||[]
-  competitionProgress.value=data
- }catch{competitionStandings.value=[];competitionProgress.value=null}
+  const data=await football9394Api.careerCompetition(careerId.value,kind,Number(id))
+  competitionDetail.value=data;competitionStandings.value=data.standings||[];competitionProgress.value=data
+  if(!competitionStandings.value.length&&competitionViewMode.value==='table')competitionViewMode.value='results'
+ }catch(error){competitionStandings.value=[];competitionProgress.value=null;competitionDetail.value=null;flash(`No se pudo abrir la competición: ${error.message}`)}
 }
-const selectedCompetitionRuntime = computed(()=>{
- const [kind,id]=String(selectedCompetition.value).split(':')
- if(kind==='tournament')return tournamentProgress.value[id]||null
- if(kind==='league'&&specialProgress.value[id])return specialProgress.value[id]
- return competitionProgress.value
-})
+const selectedCompetitionRuntime = computed(()=>competitionDetail.value)
+const latestNews = computed(()=>newsFeed.value.slice(0,5))
+const newsCategories = computed(()=>['Todas',...new Set(newsFeed.value.map(n=>n.category).filter(Boolean))])
+const newsCategory = ref('Todas')
+const filteredNews = computed(()=>newsCategory.value==='Todas'?newsFeed.value:newsFeed.value.filter(n=>n.category===newsCategory.value))
+const latestRecap = computed(()=>historyState.value.season_recaps?.slice(-1)[0]||null)
+const currentBoard = computed(()=>managerDashboard.value.board||{score:null,label:managerDashboard.value.board_confidence,risk:'ESTABLE',reasons:[],components:{}})
+const competitionRecentResults = computed(()=>[...(competitionDetail.value?.results||[])].slice(-24).reverse())
+const competitionCalendarRows = computed(()=>[...(competitionDetail.value?.calendar||[])].filter(r=>!r.played).slice(0,28))
+const competitionHonours = computed(()=>[...(competitionDetail.value?.honours||[])].reverse())
 const selectedNationalHistory = computed(()=>{
  const id=selectedNationalTeam.value?.country_id
  if(!id)return []
  return internationalHistory.value.filter(m=>m.home_country_id===id||m.away_country_id===id).slice(-6).reverse()
 })
+function handleShortcut(event){
+ if(event.ctrlKey||event.metaKey||event.altKey)return
+ const tag=String(event.target?.tagName||'').toLowerCase();if(['input','select','textarea','button'].includes(tag))return
+ const key=String(event.key||'').toLowerCase()
+ const routes={i:'home',p:'squad',t:'tactics',m:'market',g:'competitions',a:'calendar',n:'news',e:'economy',s:'national',h:'history'}
+ if(key==='c'||key===' '){event.preventDefault();advance()}
+ else if(routes[key])view.value=routes[key]
+}
+const validViews=new Set(navigationGroups.flatMap(group=>group.items.map(item=>item.id)).concat(['match']))
+let syncingHistory=false
+function applyRouteFromLocation(){
+ const route=String(window.location.hash||'').replace(/^#/,'')
+ if(route&&validViews.has(route)&&route!==view.value){syncingHistory=true;view.value=route;queueMicrotask(()=>{syncingHistory=false})}
+}
 watch(selectedLeagueId,()=>{const league=selectedLeagueOption.value;selectedTeamId.value=league?.teams?.[0]?.source_id??null})
 watch(selectedCompetition,loadSelectedCompetitionTable)
 watch(careerId,()=>{if(careerId.value)loadSelectedCompetitionTable()})
-
-onMounted(loadHistoricalCareer)
+watch(view,next=>{
+ if(syncingHistory||!validViews.has(next))return
+ const hash=`#${next}`
+ if(window.location.hash!==hash)window.history.pushState({view:next},'',hash)
+})
+onMounted(()=>{
+ applyRouteFromLocation();loadHistoricalCareer()
+ window.addEventListener('keydown',handleShortcut)
+ window.addEventListener('popstate',applyRouteFromLocation)
+ window.addEventListener('hashchange',applyRouteFromLocation)
+})
+onBeforeUnmount(()=>{
+ window.removeEventListener('keydown',handleShortcut)
+ window.removeEventListener('popstate',applyRouteFromLocation)
+ window.removeEventListener('hashchange',applyRouteFromLocation)
+})
 </script>
 
 <template>
 <div class="m9394-shell">
-  <section v-if="showCareerSetup" class="career-setup football-frame">
-    <div class="career-setup-card football-panel">
-      <div class="m9394-brand setup-brand"><span class="m9394-ball">⚽</span><div><strong>MÍSTER 93/94</strong><small>NUEVA CARRERA</small></div></div>
-      <h1>Empieza tu carrera</h1>
-      <p>Elige una competición y el club que vas a dirigir. El mundo seguirá simulando el resto de ligas y competiciones.</p>
-      <label>LIGA
-        <select v-model.number="selectedLeagueId"><option v-for="league in careerOptions" :key="league.source_id" :value="league.source_id">{{league.country}} · {{league.name}} · {{league.team_count}} clubes</option></select>
-      </label>
-      <label>EQUIPO
-        <select v-model.number="selectedTeamId"><option v-for="team in setupTeams" :key="team.source_id" :value="team.source_id">{{team.long_name || team.name}}</option></select>
-      </label>
-      <div v-if="selectedSetupTeam" class="setup-club-preview">
-        <img class="setup-crest" :src="historicalClubCrest(selectedSetupTeam.source_id)" alt="">
-        <div class="setup-club-copy"><strong>{{selectedSetupTeam.long_name || selectedSetupTeam.name}}</strong><span>{{selectedSetupTeam.squad_size}} jugadores · núcleo {{selectedSetupTeam.average_top_11}}/100</span><small>{{selectedSetupTeam.members ?? '—'}} socios · presupuesto {{formatSourceMoney(selectedSetupTeam.budget)}} · deuda {{formatSourceMoney(selectedSetupTeam.debt)}}</small></div>
-        <img v-if="selectedSetupTeam.stadium_id" class="setup-stadium" :src="historicalStadiumPhoto(selectedSetupTeam.stadium_id)" alt="">
-        <div class="setup-top-players"><span v-for="p in selectedSetupTeam.top_players" :key="p.id"><img :src="historicalPlayerPhoto(p.id)" alt="" @error="$event.currentTarget.style.visibility='hidden'"><b>{{p.name}}</b><small>{{p.position}} · {{p.overall}}</small></span></div>
-      </div>
-      <div class="career-setup-meta"><span>Temporada inicial 1993-94</span><span>{{selectedLeagueOption?.rounds || '—'}} partidos por club / formato histórico</span></div>
-      <button type="button" class="football-button primary start-career" :disabled="loadingHistoricalData||!selectedTeamId" @click="startCareer">{{loadingHistoricalData?'CREANDO PARTIDA…':'EMPEZAR CARRERA'}}</button>
-      <button v-if="careerId" type="button" class="football-button" @click="showCareerSetup=false">VOLVER A LA CARRERA ACTUAL</button>
-      <div v-if="dataError" class="data-error">{{dataError}}</div>
-    </div>
-  </section>
+  <CareerSetup
+    v-if="showCareerSetup"
+    :career-options="careerOptions"
+    :selected-league-id="selectedLeagueId"
+    :selected-team-id="selectedTeamId" :age-policy="selectedAgePolicy"
+    :loading="loadingHistoricalData"
+    :current-career-id="careerId"
+    :error="dataError"
+    @update:selected-league-id="selectedLeagueId=$event"
+    @update:selected-team-id="selectedTeamId=$event"
+    @update:age-policy="selectedAgePolicy=$event"
+    @start="startCareer"
+    @back="showCareerSetup=false"
+  />
   <template v-else>
-  <header class="m9394-top football-frame">
-    <div class="m9394-brand"><span class="m9394-ball">⚽</span><div><strong>MÍSTER 93/94</strong><small>MANAGER DE FÚTBOL</small></div></div>
-    <div class="m9394-context"><strong>{{ controlledTeam.name }}</strong><span>{{ controlledTeam.league?.name || 'Sin liga' }} · {{ controlledTeam.league?.country || '' }}</span></div>
-    <div class="m9394-date"><b>{{ currentDate }}</b><span>Jornada {{currentMatchday}}</span></div>
-    <button type="button" class="football-button" @click="openCareerSetup">NUEVA CARRERA</button>
-    <button type="button" class="football-button primary" @click="advance">CONTINUAR <i>▶</i></button>
-  </header>
+  <div class="manager-layout">
+    <ManagerSidebar
+      :groups="navigationGroups"
+      :active="view"
+      :club="controlledTeam"
+      :season="careerSeason"
+      :crest-url="historicalClubCrest(controlledTeamId)"
+      @navigate="view=$event"
+      @new-career="openCareerSetup"
+    />
+    <div class="manager-main">
+      <ManagerTopbar
+        :title="sectionTitle"
+        :date="currentDate"
+        :matchday="currentMatchday"
+        :pending-count="managerDashboard.pending_decisions?.length || 0"
+        :preseason="preseason.active"
+        :busy="isAdvancing"
+        @advance="advance"
+      />
 
-  <nav class="m9394-nav football-frame" aria-label="Secciones principales">
-    <button v-for="item in sections" :key="item[0]" type="button" class="football-button nav-button" :class="{active:view===item[0]}" @click="view=item[0]">{{ item[1] }}</button>
-  </nav>
+  <main class="m9394-workspace"><div v-if="dataError" class="data-error">Error de datos: {{dataError}}</div>
+    <HomeDashboard
+      v-if="view==='home'"
+      :next-match="nextMatch"
+      :season="careerSeason"
+      :controlled-team-id="controlledTeamId"
+      :loading="loadingHistoricalData"
+      :team="controlledTeam"
+      :squad="squad"
+      :preseason="preseason"
+      :market-period="marketPeriod"
+      :club-status="clubStatus"
+      :table-window="tableWindow"
+      :standings="standings"
+      :dashboard="managerDashboard"
+      :latest-news="latestNews"
+      :current-board="currentBoard"
+      :storylines="storylines"
+      :rivalries="rivalries"
+      @navigate="view=$event"
+      @start-live="startLive"
+      @simulate="simulateControlledMatch"
+    />
 
-  <main class="m9394-workspace football-frame"><div v-if="dataError" class="data-error">Error de datos: {{dataError}}</div>
-    <section v-if="view==='home'" class="screen-grid home-screen">
-      <article class="football-panel next-match"><h2>PRÓXIMO PARTIDO</h2><div v-if="nextMatch" class="match-poster"><div><small v-if="nextMatch.fixture_type==='tournament'">{{nextMatch.competition_name}} · {{nextMatch.stage}}</small><small v-else>LIGA · JORNADA {{nextMatch.matchday}}</small><b>{{nextMatch.home_team}}</b><span>{{nextMatch.home_team_id===controlledTeamId?'Nuestro campo':'Rival'}}</span></div><strong>VS</strong><div><small>PARTIDA {{careerSeason}}</small><b>{{nextMatch.away_team}}</b><span>{{nextMatch.away_team_id===controlledTeamId?'Nuestro equipo':'Rival'}}</span></div></div><div v-else class="empty-football-state">{{loadingHistoricalData?'Cargando calendario histórico…':'Sin próximo partido'}}</div><div class="decision-row"><button type="button" class="football-button" @click="view='tactics'">PREPARAR PARTIDO</button><button type="button" class="football-button" @click="simulateControlledMatch">SIMULAR PARTIDO</button><button type="button" class="football-button" @click="view='squad'">CONVOCATORIA</button></div></article>
-      <article class="football-panel mini-table"><h2>CLASIFICACIÓN</h2><table><tbody><tr v-for="(r,i) in tableWindow" :key="r[0]" :class="{controlled:r[8]===controlledTeamId}"><td>{{ standings.indexOf(r)+1 }}º</td><td>{{r[0]}}</td><td class="points">{{r[7]}}</td></tr></tbody></table><button type="button" class="football-button compact" @click="view='competitions'">VER COMPLETA</button></article>
-      <article class="football-panel inbox"><h2>BANDEJA DEL MÍSTER</h2><button v-for="d in managerDashboard.pending_decisions" :key="d.kind" type="button" class="news-row decision-news" @click="openDecision(d)"><b>{{d.priority==='high'?'URGENTE':'PEND.'}}</b><span><strong>{{d.title}}</strong><small>{{d.detail}}</small></span></button><button v-for="n in news.slice(0,2)" :key="n[0]+n[1]" type="button" class="news-row secondary-news"><b>{{n[0]}}</b><span>{{n[1]}}</span></button><div v-if="!managerDashboard.pending_decisions?.length" class="inbox-clear">No hay decisiones obligatorias. Puedes continuar.</div></article>
-      <article class="football-panel status"><h2>ESTADO DEL EQUIPO</h2><div class="status-grid"><div class="metric green"><small>FORMA</small><b>{{managerDashboard.form_label}}</b></div><div class="metric yellow"><small>MORAL</small><b>{{managerDashboard.morale_average}}</b></div><div class="metric blue"><small>POSICIÓN</small><b>{{managerDashboard.position?`${managerDashboard.position}º`:'—'}}</b></div><div class="metric red"><small>NO DISP.</small><b>{{managerDashboard.unavailable_count}}</b></div></div><div class="form-strip"><span v-for="(r,i) in managerDashboard.recent_form" :key="i" :class="`form-${r}`">{{r}}</span></div><p>Objetivo del consejo: <b>{{managerDashboard.board_expectation?.title}}</b></p><p>Confianza: <strong>{{managerDashboard.board_confidence}}</strong></p></article>
-    </section>
+    <SquadWorkspace
+      v-else-if="view==='squad'"
+      :squad="squad"
+      :lineup-draft="lineupDraft"
+      :lineup-players="lineupDraftPlayers"
+      :formation="formation"
+      :selection="selection"
+      :dressing-room="dressingRoom"
+      @toggle-starter="toggleStarter"
+      @open-player="openPlayer"
+      @renew="renewPlayer"
+      @toggle-listing="toggleTransferListing"
+      @auto-select="autoSelectLineup"
+      @save-selection="saveSelection"
+      @open-tactics="view='tactics'"
+      @set-captain="appointCaptain"
+    />
 
-    <section v-else-if="view==='squad'" class="screen-grid squad-screen">
-      <article class="football-panel roster"><h2>PLANTILLA · PRIMER EQUIPO <small>{{lineupDraft.length}}/11 TITULARES</small></h2><table><thead><tr><th>XI</th><th>Nº</th><th>JUGADOR</th><th>POS</th><th>EDAD</th><th>MEDIA</th><th>FORMA</th><th>MORAL</th><th>CONTRATO</th><th>EST.</th><th></th></tr></thead><tbody><tr v-for="p in squad" :key="p.id" :class="{selectedStarter:isStarter(p.id)}" @dblclick="openPlayer(p)"><td><button type="button" class="lineup-toggle" :class="{active:isStarter(p.id)}" @click.stop="toggleStarter(p)">{{isStarter(p.id)?'✓':'+'}}</button></td><td>{{p.n}}</td><td><button type="button" class="player-link" @click="openPlayer(p)">{{p.name}}</button></td><td>{{p.pos}}</td><td>{{p.age}}</td><td class="rating-cell">{{p.overall}}</td><td class="good-cell">{{p.form}}</td><td class="warn-cell">{{p.morale}}</td><td>{{p.contractEnd}}</td><td :class="p.status==='LES.'?'bad-cell':'good-text'">{{p.status}}</td><td><button type="button" class="football-button tiny" @click.stop="renewPlayer(p)">RENOVAR</button></td></tr></tbody></table></article>
-      <aside class="football-panel lineup"><h2>ONCE REAL · {{formation}}</h2><div class="lineup-sheet"><div v-for="p in lineupDraftPlayers" :key="p.id" class="lineup-player"><img :src="historicalPlayerPhoto(p.id)" alt="" @error="$event.currentTarget.style.visibility='hidden'"><span><b>{{p.name}}</b><small>{{p.pos}} · {{p.overall}}</small></span></div></div><p v-if="selection.issues?.length" class="selection-error">{{selection.issues.join(' ')}}</p><div class="decision-row vertical"><button type="button" class="football-button" @click="autoSelectLineup">MEJOR ONCE DISPONIBLE</button><button type="button" class="football-button primary" @click="saveSelection">GUARDAR ONCE Y CONVOCATORIA</button><button type="button" class="football-button" @click="view='tactics'">EDITAR TÁCTICA</button></div></aside>
-    </section>
+    <TacticsWorkspace
+      v-else-if="view==='tactics'"
+      :formation="formation"
+      :mentality="mentality"
+      :tempo="tempo"
+      :pressing="pressing"
+      :directness="directness"
+      :defensive-line="defensiveLine"
+      :marking="marking"
+      :width="width"
+      :offside-trap="offsideTrap"
+      :identity="tacticalIdentity"
+      :players="lineupDraftPlayers"
+      :live="Boolean(liveMatch)"
+      @update:formation="formation=$event"
+      @update:mentality="mentality=$event"
+      @update:tempo="tempo=$event"
+      @update:pressing="pressing=$event"
+      @update:directness="directness=$event"
+      @update:defensive-line="defensiveLine=$event"
+      @update:marking="marking=$event"
+      @update:width="width=$event"
+      @update:offside-trap="offsideTrap=$event"
+      @save="saveTactics"
+      @apply-live="applyLiveTactics"
+    />
 
-    <section v-else-if="view==='tactics'" class="screen-grid tactics-screen">
-      <article class="football-panel"><h2>FORMACIÓN</h2><div class="formation-row"><button v-for="f in ['4-4-2','4-3-3','3-5-2','5-3-2']" :key="f" type="button" class="football-button" :class="{active:formation===f}" @click="formation=f">{{f}}</button></div><div class="big-pitch football-pitch"><span class="tactic-label">{{formation}}</span></div></article>
-      <article class="football-panel"><h2>ÓRDENES DEL EQUIPO</h2><div class="order-grid"><label>MENTALIDAD<select v-model="mentality"><option value="balanced">Equilibrada</option><option value="defensive">Defensiva</option><option value="attacking">Ofensiva</option></select></label><label>RITMO<select v-model="tempo"><option value="normal">Normal</option><option value="slow">Lento</option><option value="high">Alto</option></select></label><label>PRESIÓN<select v-model="pressing"><option value="medium">Media</option><option value="low">Baja</option><option value="high">Alta</option></select></label><label>PASE<select v-model="directness"><option value="mixed">Mixto</option><option value="short">Corto</option><option value="direct">Directo</option></select></label><label>LÍNEA DEFENSIVA<select v-model="defensiveLine"><option value="medium">Media</option><option value="low">Baja</option><option value="high">Alta</option></select></label><label>MARCAJE<select v-model="marking"><option value="zonal">Zonal</option><option value="man">Al hombre</option></select></label></div><div class="era-note"><b>FÚTBOL 1993-94</b><p>Las órdenes son deliberadamente claras. La profundidad está en cómo interactúan jugadores, cansancio, rival y contexto; no en cincuenta sliders.</p></div></article>
-    </section>
+    <LiveMatchWorkspace
+      v-else-if="view==='match'"
+      :match="liveMatch"
+      :season="careerSeason"
+      :formation="formation"
+      :tactical-identity="tacticalIdentity"
+      :events="liveEvents"
+      :outgoing-id="liveOutgoingId"
+      :incoming-id="liveIncomingId"
+      :league-name="controlledTeam.league?.name || ''"
+      @update:outgoing-id="liveOutgoingId=$event"
+      @update:incoming-id="liveIncomingId=$event"
+      @advance="advanceLive"
+      @chance="advanceToChance"
+      @close="closeLiveMatch"
+      @substitute="makeLiveSubstitution"
+      @open-tactics="view='tactics'"
+      @back="view='home'"
+    />
 
-    <section v-else-if="view==='competitions'" class="screen-grid competition-screen">
-      <article class="football-panel standings"><h2>CLASIFICACIÓN</h2><div class="toolbar"><select v-model="selectedCompetition"><option v-for="c in competitions" :key="`${c.kind}:${c.source_id}`" :value="`${c.kind}:${c.source_id}`">{{c.country?`${c.country} · `:''}}{{c.name}}</option></select><b>{{competitionStatusLabel}}</b></div><table v-if="competitionStandings.length"><thead><tr><th>POS</th><th>EQUIPO</th><th>PJ</th><th>PG</th><th>PE</th><th>PP</th><th>GF</th><th>GC</th><th>DG</th><th>PTS</th></tr></thead><tbody><tr v-for="r in competitionStandings" :key="r.team_id" :class="{controlled:r.team_id===controlledTeamId}"><td>{{r.position}}º</td><td>{{r.team_name}}</td><td>{{r.played}}</td><td class="good-cell">{{r.wins}}</td><td class="warn-cell">{{r.draws}}</td><td class="bad-cell">{{r.losses}}</td><td class="blue-cell">{{r.goals_for}}</td><td class="bad-cell">{{r.goals_against}}</td><td>{{r.goal_difference>0?'+':''}}{{r.goal_difference}}</td><td class="points">{{r.points}}</td></tr></tbody></table><div v-else class="competition-readiness"><strong>{{selectedCompetitionInfo?.name}}</strong><span>{{selectedCompetitionInfo?.country}}</span><p>{{competitionStatusLabel}}</p><small v-if="selectedCompetitionInfo?.simulation_ready">Competición activa de la MDB con runtime histórico 1993-94 certificado.</small><small v-else>La competición permanece visible, pero el motor no inventará reglas hasta certificar su formato histórico.</small></div></article>
-      <aside class="side-stack"><article class="football-panel rules"><h2>REGLAS 1993-94</h2><template v-if="selectedCompetition==='league:1'"><p><b>Victoria</b> 2 puntos</p><p><b>Empate</b> 1 punto</p><p><b>Descenso</b> 19º y 20º</p><p><b>Promoción</b> 17º y 18º</p><p>Los filiales no pueden compartir categoría con el primer equipo.</p></template><template v-else><p><b>Estado</b> {{competitionStatusLabel}}</p><p v-if="selectedCompetitionRuntime"><b>Progreso de partida</b> {{selectedCompetitionRuntime.stage || `Jornada ${selectedCompetitionRuntime.completed_round}`}} · {{selectedCompetitionRuntime.result_count ?? selectedCompetitionRuntime.event_count ?? 0}} eventos/partidos</p><p v-if="selectedCompetitionInfo?.format_id"><b>Formato</b> {{selectedCompetitionInfo.format_id}}</p><p v-if="selectedCompetitionInfo?.ruleset_id"><b>Ruleset</b> {{selectedCompetitionInfo.ruleset_id}}</p><p v-if="selectedCompetitionInfo?.pyramid_floor"><b>Suelo de pirámide</b> Sin descenso deportivo mientras no exista una categoría inferior en los datos.</p><p>Sin fallback moderno: si no está certificado, queda bloqueado.</p></template></article><article class="football-panel"><h2>ESTADO DEL MUNDO</h2><div class="fixture-list"><p>{{competitions.length}} competiciones activas</p><p>Brasil / APSL / J.League: avance incremental</p><p>Copas UEFA y Copa del Rey: calendario de fases persistente</p></div></article></aside>
-    </section>
 
-    <section v-else-if="view==='market'" class="screen-grid market-screen">
-      <article class="football-panel"><h2>FICHAJES · SEGUIMIENTO</h2><div class="target-row target-head"><span>JUGADOR</span><span>POS</span><span>CLUB</span><span>MEDIA</span><span>VALOR</span><span></span></div><div v-for="t in targets" :key="t[0]" class="target-row"><strong>{{t[0]}}</strong><span>{{t[1]}}</span><small>{{t[2]}}</small><b>{{t[3]}}</b><span>{{formatSourceMoney(t[4])}}</span><button type="button" class="football-button tiny" @click="chooseTarget(t)">NEGOCIAR</button></div></article>
-      <aside class="football-panel market-summary"><h2>MERCADO</h2><div class="budget"><small>CAJA DISPONIBLE</small><b>{{formatSourceMoney(finances.cash)}}</b></div><p>Las ofertas alteran plantilla, contrato y caja. Los demás clubes también fichan y renuevan por sí mismos.</p><div v-if="selectedTarget" class="transfer-box"><strong>{{selectedTarget[0]}}</strong><label>Traspaso<input v-model.number="transferFee" type="number" min="0"></label><label>Ficha anual<input v-model.number="transferSalary" type="number" min="0"></label><label>Años<input v-model.number="transferYears" type="number" min="1" max="6"></label><button type="button" class="football-button primary" @click="submitTransfer">ENVIAR OFERTA</button></div><button v-else type="button" class="football-button" @click="flash('Usa el listado para iniciar una negociación')">BUSCAR JUGADOR</button><div class="ai-market"><small>ÚLTIMOS MOVIMIENTOS IA</small><p v-for="m in aiTransfers.slice(-4).reverse()" :key="`${m.date}-${m.player_id}`">{{m.date}} · {{formatSourceMoney(m.fee)}}</p><p v-if="!aiTransfers.length">Aún no hay operaciones IA en esta partida.</p></div></aside>
-    </section>
+    <CompetitionsWorkspace
+      v-else-if="view==='competitions'"
+      :selected-competition="selectedCompetition"
+      :competitions="competitions"
+      :detail="competitionDetail"
+      :view-mode="competitionViewMode"
+      :standings="competitionStandings"
+      :recent-results="competitionRecentResults"
+      :calendar-rows="competitionCalendarRows"
+      :honours="competitionHonours"
+      :controlled-team-id="controlledTeamId"
+      :season="careerSeason"
+      :crest-for="historicalClubCrest"
+      :format-date="formatDateShort"
+      :event-label="eventLabel"
+      @update:selected-competition="selectedCompetition=$event"
+      @update:view-mode="competitionViewMode=$event"
+    />
 
-    <section v-else-if="view==='national'" class="screen-grid national-screen">
-      <article class="football-panel national-list"><h2>SELECCIONES</h2><button v-for="nt in nationalTeams" :key="nt.country_id" type="button" class="national-row" :class="{active:selectedNationalTeam?.country_id===nt.country_id}" @click="openNationalTeam(nt)"><strong>{{nt.name}}</strong><span>{{nt.eligible_players}} elegibles</span><b>{{nt.average_top_22}}</b></button></article>
-      <article class="football-panel national-squad"><h2>{{selectedNationalTeam?.name || 'SELECCIONA UN PAÍS'}}</h2><div v-if="!selectedNationalTeam" class="empty-football-state">Las selecciones se forman con PaisInternacional de la MDB. La edad permanece congelada, pero el estado de carrera sí afecta la convocatoria.</div><template v-else><div class="national-history"><small>PARTIDOS DE LA PARTIDA · AMISTOSOS GENERADOS, NO RESULTADOS HISTÓRICOS</small><p v-for="m in selectedNationalHistory" :key="`${m.date}-${m.home_country_id}-${m.away_country_id}`"><b>{{m.date}}</b> {{m.home_name}} {{m.home_goals}}-{{m.away_goals}} {{m.away_name}}</p><p v-if="!selectedNationalHistory.length">Todavía no ha llegado una ventana internacional.</p></div><table><thead><tr><th>JUGADOR</th><th>CLUB</th><th>POS</th><th>MEDIA</th><th>FORMA</th><th>ESTADO</th></tr></thead><tbody><tr v-for="p in nationalSquad" :key="p.id"><td><button type="button" class="player-link" @click="selectedPlayer=p;playerTab='profile'">{{p.display_name}}</button></td><td>{{p.team_name}}</td><td>{{p.position}}</td><td class="rating-cell">{{p.overall}}</td><td class="good-cell">{{p.form ?? '—'}}</td><td>{{p.status}}</td></tr></tbody></table></template></article>
-    </section>
+    <MarketWorkspace
+      v-else-if="view==='market'"
+      :period="marketPeriod"
+      :query="marketQuery"
+      :position="marketPosition"
+      :free-agents="marketFreeAgents"
+      :watched-only="marketWatchedOnly"
+      :targets="targets"
+      :selected-target="selectedTarget"
+      :transfer-fee="transferFee"
+      :transfer-salary="transferSalary"
+      :transfer-years="transferYears"
+      :transfer-room="economy.transfer_room"
+      :market-flow="marketFlow"
+      :active-negotiations="activeNegotiations"
+      :incoming-offers="openIncomingOffers"
+      :own-squad="squad"
+      @update:query="marketQuery=$event"
+      @update:position="marketPosition=$event"
+      @update:free-agents="marketFreeAgents=$event"
+      @update:watched-only="marketWatchedOnly=$event"
+      @update:transfer-fee="transferFee=$event"
+      @update:transfer-salary="transferSalary=$event"
+      @update:transfer-years="transferYears=$event"
+      @search="searchMarket"
+      @watch="toggleWatch"
+      @open-player="openPlayer"
+      @choose-target="chooseTarget"
+      @submit="submitTransfer"
+      @counter="counterNegotiation"
+      @accept-offer="acceptIncomingOffer"
+    />
 
-    <section v-else-if="view==='club'" class="screen-grid club-screen">
-      <article class="football-panel club-hero-modern"><h2>{{controlledTeam.name}}</h2><div class="club-identity"><img class="club-real-crest" :src="historicalClubCrest(controlledTeamId)" alt=""><div><strong>{{controlledTeam.long_name}}</strong><span>Estadio histórico #{{controlledTeam.stadium_id || '—'}}</span><small>{{controlledTeam.league?.name}} · Temporada {{careerSeason}}</small></div><img v-if="controlledTeam.stadium_id" class="club-stadium-photo" :src="historicalStadiumPhoto(controlledTeam.stadium_id)" alt=""></div><div class="club-metrics"><div><small>Caja de carrera</small><b>{{formatSourceMoney(finances.cash)}}</b></div><div><small>Ingresos partidos</small><b>{{formatSourceMoney(finances.matchday_income)}}</b></div><div><small>Ingresos comerciales</small><b>{{formatSourceMoney(finances.commercial_income)}}</b></div><div><small>Gasto salarial</small><b>{{formatSourceMoney(finances.wage_expense)}}</b></div><div><small>Operación</small><b>{{formatSourceMoney(finances.operating_expense)}}</b></div><div><small>Traspasos</small><b>{{formatSourceMoney(finances.transfer_spend)}}</b></div><div><small>Socios</small><b>{{controlledTeam.members ?? '—'}}</b></div><div><small>Plantilla</small><b>{{squad.length}}</b></div></div></article>
-      <aside class="football-panel"><h2>CONSEJO</h2><div class="board-goal"><small>OBJETIVO</small><b>{{managerDashboard.board_expectation?.title}}</b><span>Posición esperada: {{managerDashboard.board_expectation?.expected_position || '—'}}ª · Confianza {{managerDashboard.board_confidence}}</span></div><div class="board-goal"><small>ECONOMÍA</small><b>{{finances.net_operating>=0?'EQUILIBRADA':'TENSIÓN'}}</b><span>Se contabilizan salarios, operación, deuda, ingresos comerciales y taquilla.</span></div><div class="board-goal"><small>EDAD</small><b>CONGELADA</b><span>Los futbolistas evolucionan por rendimiento y lesiones, no por edad.</span></div></aside>
-    </section>
 
-    <section v-else-if="view==='calendar'" class="screen-grid calendar-screen">
-      <article class="football-panel"><h2>CALENDARIO</h2><div class="calendar-row calendar-head"><span>FECHA</span><span>RIVAL</span><span>SEDE</span><span>COMPETICIÓN</span><span>ESTADO</span></div><div v-for="m in matches" :key="m[0]+m[1]" class="calendar-row"><b>{{m[0]}}</b><strong>{{m[1]}}</strong><span>{{m[2]}}</span><span>{{m[3]}}</span><em>{{m[4]}}</em></div></article>
-      <aside class="football-panel"><h2>SEMANA</h2><div class="week-plan"><button type="button" class="plan active">SÁB · Viaje</button><button type="button" class="plan">DOM · Partido</button><button type="button" class="plan">LUN · Recuperación</button><button type="button" class="plan">MAR · Entrenamiento</button></div></aside>
-    </section>
+    <EconomyWorkspace
+      v-else-if="view==='economy'"
+      :economy="economy"
+      :format-money="formatSourceMoney"
+      @open-player="openPlayer"
+    />
+
+    <NewsWorkspace
+      v-else-if="view==='news'"
+      :categories="newsCategories"
+      :category="newsCategory"
+      :news="filteredNews"
+      :manager-world="managerWorld"
+      :format-date="formatDateShort"
+      @update:category="newsCategory=$event"
+    />
+
+
+    <NationalWorkspace
+      v-else-if="view==='national'"
+      :teams="nationalTeams"
+      :selected-team="selectedNationalTeam"
+      :squad="nationalSquad"
+      :history="selectedNationalHistory"
+      :manager="internationalManager"
+      :tournaments="internationalTournaments"
+      :format-date="formatDateShort"
+      @select-team="openNationalTeam"
+      @open-player="openPlayer({id:$event.id,name:$event.display_name,profile:$event})"
+      @accept-job="acceptNationalJob"
+      @resign-job="resignNationalJob"
+      @auto-selection="autoNationalSelection"
+    />
+
+    <ClubWorkspace
+      v-else-if="view==='club'"
+      :team="controlledTeam"
+      :controlled-team-id="controlledTeamId"
+      :season="careerSeason"
+      :squad="squad"
+      :lineup-players="lineupDraftPlayers"
+      :formation="formation"
+      :tactical-identity="tacticalIdentity"
+      :standings="standings"
+      :next-match="nextMatch"
+      :source-manager="sourceManager"
+      :venue="venueContext"
+      :finances="finances"
+      :club-status="clubStatus"
+      :current-board="currentBoard"
+      :storylines="storylines"
+      :rivalries="rivalries"
+      :career-records="careerRecords"
+      :manager-career="userManager"
+      :age-policy="careerAgePolicy"
+      :dashboard="managerDashboard"
+      :job-status="jobStatus"
+      :crest-for="historicalClubCrest"
+      :stadium-for="historicalStadiumPhoto"
+      :format-money="formatSourceMoney"
+      :trend-label="trendLabel"
+      :board-class="boardClass"
+      :format-date="formatDateShort"
+      @open-player="openPlayer"
+      @navigate="view=$event"
+      @accept-job="acceptManagerJob"
+    />
+
+    <HistoryWorkspace
+      v-else-if="view==='history'"
+      :latest-recap="latestRecap"
+      :history-state="historyState"
+      :latest-ai-audit="latestAiAudit"
+      :career-records="careerRecords"
+      :storyline-archive="storylineArchive"
+      :manager-career="userManager"
+    />
+
+    <CalendarWorkspace
+      v-else-if="view==='calendar'"
+      :matches="matches"
+      :preseason="preseason"
+      :market-period="marketPeriod"
+      :format-date="formatDateShort"
+    />
   </main>
+    </div>
+  </div>
 
-  <FootballPlayerProfileModal v-if="selectedPlayer" :player="selectedPlayer" :season="careerSeason" :tab="playerTab" @update:tab="playerTab=$event" @close="selectedPlayer=null" />
+  <FootballPlayerProfileModal v-if="selectedPlayer" :player="selectedPlayer" :season="careerSeason" :tab="playerTab" @update:tab="playerTab=$event" @promise-role="promisePlayerRole" @close="selectedPlayer=null" />
   <div v-if="notice" class="notice" role="status">{{notice}}</div>
   </template>
 </div>

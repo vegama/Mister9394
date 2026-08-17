@@ -6,11 +6,36 @@ from dataclasses import dataclass
 from typing import Any
 
 
+# Career market-value anchors in 1993-94 pesetas.  The source club ``budget``
+# field is useful for hierarchy but is not a complete annual accounts figure,
+# so transfer values must not be compressed to that field alone.  The curve is
+# deliberately steep at elite level: ordinary squad players remain affordable
+# while genuine world stars occupy the hundreds-of-millions/billion-peseta
+# scale expected by a period football manager.  These are gameplay estimates,
+# not claims about each player's historical transfer fee.
+_TRANSFER_VALUE_ANCHORS: tuple[tuple[int, int], ...] = (
+    (40, 250_000), (45, 500_000), (50, 1_200_000), (55, 2_500_000),
+    (60, 5_000_000), (65, 10_000_000), (70, 20_000_000), (75, 38_000_000),
+    (80, 85_000_000), (85, 180_000_000), (89, 450_000_000), (90, 600_000_000),
+    (95, 1_200_000_000), (100, 2_000_000_000),
+)
+
+
+def _interpolate_money(rating: int, anchors: tuple[tuple[int, int], ...], *, floor: int) -> int:
+    rating = max(1, min(100, int(rating)))
+    if rating <= anchors[0][0]:
+        return int(floor)
+    for (r0, v0), (r1, v1) in zip(anchors, anchors[1:]):
+        if rating <= r1:
+            ratio = (rating - r0) / max(1, r1 - r0)
+            value = v0 + (v1 - v0) * ratio
+            return max(int(floor), int(round(value / 50_000.0) * 50_000))
+    return int(anchors[-1][1])
+
+
 def estimated_transfer_value(player: dict[str, Any], *, overall: int | None = None) -> int:
     rating = int(overall or player.get("overall") or player.get("category") or 60)
-    # Career-internal peseta scale calibrated to source club budgets. This is a
-    # gameplay estimate, not presented as a historical market-value fact.
-    return max(250_000, (max(1, rating - 42) ** 2) * 20_000)
+    return _interpolate_money(rating, _TRANSFER_VALUE_ANCHORS, floor=250_000)
 
 
 def initial_finances(team: dict[str, Any]) -> dict[str, int]:
@@ -20,9 +45,13 @@ def initial_finances(team: dict[str, Any]) -> dict[str, int]:
 
 
 def matchday_income(team: dict[str, Any]) -> int:
-    members = int(team.get("members") or 0)
-    # Conservative operating pulse because MDB monetary scales are heterogeneous.
-    return max(100_000, members * 85)
+    members = max(0, int(team.get("members") or 0))
+    # ``Socios`` in the historical source is not a literal turnstile count and
+    # spans wildly different national conventions.  A linear multiplier made
+    # the clubs with the largest source values print money forever.  Square-root
+    # scaling preserves the advantage of a huge support without letting it grow
+    # twenty times faster than a normal top-flight club.
+    return max(100_000, min(2_500_000, round((members ** 0.5) * 5_000)))
 
 
 def negotiate_transfer(

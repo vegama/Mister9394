@@ -16,6 +16,8 @@ from pathlib import Path
 from typing import Any
 
 from .mdb_import import HISTORICAL_COUNTRY_NAMES
+from .player_identity import age_on as player_age_on
+from .position_roles import ROLES_9394, role_api
 
 REPO_ROOT = Path(__file__).resolve().parents[3]
 DEFAULT_SNAPSHOT_PATH = REPO_ROOT / "data" / "football9394" / "historical_snapshot.json"
@@ -25,9 +27,43 @@ DEFAULT_GAME_DATE = date(1993, 10, 23)
 # being guessed so data-quality work can resolve them later.
 PRESENTATION_COUNTRIES = {
     **HISTORICAL_COUNTRY_NAMES,
+    13: "Arabia Saudí",
+    14: "Argelia",
+    15: "Australia",
+    16: "Austria",
+    17: "Bélgica",
+    19: "Bolivia",
+    21: "Bulgaria",
     20: "Bosnia y Herzegovina",
+    22: "Canadá",
+    23: "Chile",
+    28: "Corea del Sur",
+    31: "Croacia",
+    33: "Dinamarca",
+    36: "Eslovaquia",
+    40: "Rusia",
+    41: "Finlandia",
+    42: "Ghana",
+    44: "Irlanda del Norte",
+    45: "Gales",
+    46: "Irlanda",
+    47: "Grecia",
+    56: "Marruecos",
+    59: "Nigeria",
+    60: "Noruega",
+    61: "República Checa",
     62: "Brasil",
+    66: "Camerún",
+    68: "Paraguay",
+    70: "Polonia",
+    72: "Rumanía",
+    75: "Yugoslavia",
+    79: "Suecia",
+    80: "Suiza",
+    84: "Turquía",
+    85: "Ucrania",
     87: "Mozambique",
+    93: "Hungría",
     117: "Cabo Verde",
     120: "Guinea Ecuatorial",
 }
@@ -105,10 +141,18 @@ class FootballUniverseSnapshot9394:
         return dict(self.payload.get("source_counts") or {})
 
     def universe_summary(self) -> dict[str, Any]:
+        enrichment = dict(self.payload.get("world_cup_1994_enrichment") or {})
         return {
             "season": self.payload.get("season", "1993-94"),
             "counts": self.counts,
-            "default_team_id": 16 if 16 in self.teams_by_id else next(iter(self.teams_by_id), None),
+            "runtime_counts": {
+                "teams": len(self.teams_by_id),
+                "players": len(self.players_by_id),
+                "market_container_teams": sum(1 for row in self.payload.get("teams", []) if row.get("market_container")),
+                "world_cup_1994_added_players": int(enrichment.get("added_players") or 0),
+            },
+            "world_cup_1994_enrichment": enrichment,
+            "default_team_id": 16 if 16 in self.teams_by_id else next((tid for tid,row in self.teams_by_id.items() if not row.get("market_container")), None),
             "competitions": {
                 "leagues": len(self.leagues_by_id),
                 "tournaments": len(self.tournaments_by_id),
@@ -177,6 +221,27 @@ class FootballUniverseSnapshot9394:
         overall = row.get("overall") or row.get("category")
         attributes = dict(row.get("attributes") or {})
         broad = str(row.get("broad_position") or "").strip().upper() or None
+        specialist = role_api(row)
+        source_ratings = {str(key): int(value or 0) for key, value in dict(row.get("role_ratings") or {}).items()}
+        primary_role = row.get("primary_role")
+        position_profiles: list[dict[str, Any]] = []
+        for role_id, role in ROLES_9394.items():
+            rating = int(source_ratings.get(str(role_id), 0) or 0)
+            if role_id == primary_role:
+                rating = max(100, rating)
+            if rating <= 0:
+                continue
+            position_profiles.append({
+                "source_id": role_id,
+                "code": role.code,
+                "name": role.name,
+                "squad_slot": role.squad_slot,
+                "side": role.side,
+                "aptitude": rating,
+                "primary": role_id == primary_role,
+            })
+        position_profiles.sort(key=lambda item: (not item["primary"], -int(item["aptitude"]), int(item["source_id"])))
+        hidden_traits = {key: bool(value) for key, value in dict(row.get("hidden_traits") or {}).items() if bool(value)}
         status = "Disponible" if not row.get("retired") else "Retirado"
         return {
             "id": int(row["source_id"]),
@@ -188,15 +253,21 @@ class FootballUniverseSnapshot9394:
             "surname1": row.get("surname1"),
             "surname2": row.get("surname2"),
             "birth_date": row.get("birth_date"),
-            "age": age_on(row.get("birth_date"), game_date),
+            "age": player_age_on(row, game_date),
             "nationality": PRESENTATION_COUNTRIES.get(country_id, f"País {country_id}" if country_id else "—"),
             "nationality_id": country_id,
-            "position": BROAD_POSITION_NAMES.get(broad, broad or "—"),
-            "position_short": BROAD_POSITION_NAMES.get(broad, broad or "—"),
-            "positions": [BROAD_POSITION_NAMES.get(broad, broad)] if broad else [],
-            "primary_role": row.get("primary_role"),
+            "basque_origin": bool(row.get("basque_origin")),
+            "position": specialist["name"],
+            "position_short": specialist["code"],
+            "positions": [profile["name"] for profile in position_profiles] or [specialist["name"]],
+            "position_profiles": position_profiles,
+            "source_role_ratings": source_ratings,
+            "primary_role": primary_role,
+            "specialist_role": specialist,
+            "broad_position": broad,
             "preferred_foot": FOOT_NAMES.get(row.get("preferred_foot"), "—"),
             "shirt_number": row.get("shirt_number"),
+            "favorite_shirt_number": row.get("favorite_shirt_number"),
             "height_cm": row.get("height_cm"),
             "weight_kg": row.get("weight_kg"),
             "overall": overall,
@@ -208,6 +279,15 @@ class FootballUniverseSnapshot9394:
             "loan": bool(row.get("loan")),
             "initially_reserve": bool(row.get("initially_reserve")),
             "attributes": attributes,
+            "source_traits": hidden_traits,
+            "development": {
+                "progression_mean": row.get("progression_mean"),
+                "fan_affection": row.get("fan_affection"),
+                "academy_team_id": row.get("academy_team_id"),
+                "previous_team_id": row.get("previous_team_id"),
+                "previous_team_years": row.get("previous_team_years"),
+                "buyback_option": bool(row.get("buyback_option")),
+            },
             "salary": row.get("salary"),
             "release_clause": row.get("release_clause"),
             "contract": {
@@ -218,10 +298,20 @@ class FootballUniverseSnapshot9394:
                 "loan": bool(row.get("loan")),
                 "parent_club_name": team.get("name") if team else None,
             },
-            "medical": {"status": status, "history": []},
+            "medical": {
+                "status": status,
+                "history": [],
+                "injury_proneness": row.get("injury_proneness"),
+            },
             "season_stats": {},
             "career": [],
             "scout": {},
+            "historical_squad_1994": bool(row.get("historical_squad_1994")),
+            "world_cup_1994": dict(row.get("world_cup_1994") or {}) or None,
+            "historical_data_source": row.get("historical_data_source"),
+            "attribute_source": row.get("attribute_source"),
+            "historical_club_1994": row.get("historical_club_1994"),
+            "market_container_origin": row.get("market_container_origin"),
         }
 
     def player(self, player_id: int, *, game_date: date = DEFAULT_GAME_DATE) -> dict[str, Any] | None:

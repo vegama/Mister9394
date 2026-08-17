@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "checkpoint": "0.24.0-bel-tur-rus-1993-data",
+  "profile_method_version": "0.23-source-comparable-fixed-data",
+  "policy": {
+    "new_universal_rating_rule": false,
+    "runtime_formula_added": false,
+    "original_players_modified": false,
+    "created_players_materialised_as_fixed_data": true
+  },
+  "counts": {
+    "source_backed_original_players": 10528,
+    "created_players_reviewed": 428,
+    "overall_changes": 0,
+    "old_unique_attribute_vectors": 428,
+    "new_unique_attribute_vectors": 428,
+    "old_duplicate_vector_groups": 0,
+    "new_duplicate_vector_groups": 0,
+    "max_old_vector_reuse": 1,
+    "max_new_vector_reuse": 1,
+    "pending_profile_reviews": 0,
+    "explicit_attribute_patch_players": 12
+  },
+  "overall_changes": [],
+  "pending_profile_reviews": [],
+  "original_player_hash_changes": []
+}

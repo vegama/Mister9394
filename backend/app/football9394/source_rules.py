@@ -101,6 +101,24 @@ _add("league", 102, "Serie B", "Italia", "certified_complex", ready=True, rulese
 _add("league", 49, "Primera División", "Uruguay", "certified_simple", ready=True, ruleset="uru_primera_1993",
      notes=("13 clubes, 24 partidos por club y dos puntos por victoria; la transición con Segunda queda sin enlazar porque esa división no está en la MDB.",))
 
+# Historical Belgian league reconstructed from the 1993-94 roster gate.  The modern
+# MDB row 52 stays deliberately unbound; 930052 is the frozen historical runtime.
+_add("league", 930052, "Eerste Klasse / Division 1", "Bélgica", "certified_simple", ready=True,
+     ruleset="bel_first_division_1993_94",
+     notes=("18 clubes, 34 jornadas y dos puntos por victoria; roster gate histórico 1993-94 superado.",))
+
+# Historical Turkish 1993-94 league reconstructed from BDFutbol rosters. The
+# stale MDB source row 57 remains deliberately unbound.
+_add("league", 930057, "1. Lig", "Turquía", "certified_simple", ready=True,
+     ruleset="tur_first_division_1993_94",
+     notes=("16 clubes, 30 jornadas y tres puntos por victoria; roster gate histórico 1993-94 superado.",))
+
+# Historical Russian 1993 league reconstructed from BDFutbol rosters. The stale
+# MDB source row 15 remains deliberately unbound.
+_add("league", 930015, "Supreme League", "Rusia", "certified_simple", ready=True,
+     ruleset="rus_supreme_league_1993",
+     notes=("18 clubes, 34 jornadas y dos puntos por victoria; roster gate histórico 1993 superado.",))
+
 # Dutch 1993-94 pyramid: both source leagues are certified together because
 # their movement is decided by one shared nacompetitie runtime.
 _add("league", 31, "Eredivisie", "Países Bajos", "certified_complex", ready=True, ruleset="ned_eredivisie_1993_94", format_id="ned_nacompetitie_1993_94",

@@ -1,0 +1,12 @@
+{
+  "status": "complete",
+  "clubs": 18,
+  "converted": 15,
+  "retained": 3,
+  "missing": [],
+  "target_size": [
+    40,
+    40
+  ],
+  "format": "GIF"
+}

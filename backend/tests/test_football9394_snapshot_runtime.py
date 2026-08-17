@@ -62,3 +62,31 @@ def test_premier_and_bundesliga_are_source_bound_to_their_1993_94_scoring():
     bundesliga = registry.resolve_source("league", 13)
     assert (premier.teams, premier.rounds, premier.points_win, premier.direct_relegation_places) == (22, 42, 3, (20,21,22))
     assert (bundesliga.teams, bundesliga.rounds, bundesliga.points_win, bundesliga.direct_relegation_places) == (18, 34, 2, (16,17,18))
+
+
+def test_player_api_exposes_source_polyvalence_traits_and_development_data():
+    universe = default_runtime_snapshot()
+    laudrup = universe.player(11)
+    assert laudrup["display_name"] == "Laudrup"
+    assert laudrup["position"] == "Mediapunta por el centro"
+    assert laudrup["positions"] == ["Mediapunta por el centro", "Mediapunta izquierdo", "Mediapunta derecho"]
+    assert laudrup["source_traits"] == {"killer_pass": True, "first_time_play": True}
+    assert laudrup["development"]["progression_mean"] == 2
+    assert laudrup["development"]["fan_affection"] == 8
+    assert laudrup["medical"]["injury_proneness"] == 0
+
+
+def test_player_source_roles_preserve_historical_polyvalence():
+    universe = default_runtime_snapshot()
+    hierro = universe.player(26)
+    assert hierro["position"] == "Organizador defensivo"
+    assert {item["code"] for item in hierro["position_profiles"]} >= {"MCD", "DFC-D", "DFC-I", "LIB", "MC"}
+    assert all(item["aptitude"] == 100 for item in hierro["position_profiles"])
+
+
+def test_source_preserves_basque_origin_flag_for_athletic_policy():
+    universe = default_runtime_snapshot()
+    athletic = universe.squad(6)
+    assert len(athletic) >= 20
+    assert all(player["basque_origin"] for player in athletic)
+    assert universe.player(9)["basque_origin"] is False

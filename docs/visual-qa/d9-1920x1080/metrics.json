@@ -1,0 +1,25 @@
+{
+  "viewport": "1920x1080 Chromium",
+  "method": "exact Vue component templates + project CSS + representative 1993-94 Barcelona data/assets; no Vite bundle",
+  "all_surfaces": {
+    "horizontal_overflow": false,
+    "visible_text_below_11px": 0,
+    "page_errors": 0,
+    "vue_warnings": 0
+  },
+  "critical_viewport": {
+    "tactics_save_visible": true,
+    "tactics_player_fit_scrolls_inside_panel": true,
+    "prematch_lineup_and_bench_controls_visible": true,
+    "live_stats_substitutions_and_tactical_button_visible": true,
+    "postmatch_dead_substitution_controls_removed": true,
+    "market_primary_flow_fits_1080": true,
+    "competition_primary_flow_fits_1080": true
+  },
+  "intentional_scroll": {
+    "home": "news archive continues below first viewport; next match, decisions, table, board and squad pulse are visible first",
+    "squad": "roster is a scrollable working table; XI panel remains sticky",
+    "player": "deep dossier uses vertical detail after identity/fit/resources above fold",
+    "club": "stars/economy/history continue below the football command centre"
+  }
+}

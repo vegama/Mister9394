@@ -463,3 +463,66 @@ for _rules in (
     ITALY_SERIE_A_1993_94, ITALY_SERIE_B_1993_94,
 ):
     _rules.validate()
+
+BELGIUM_FIRST_DIVISION_1993_94 = CompetitionRules9394(
+    id="bel_first_division_1993_94",
+    name="Eerste Klasse / Division 1",
+    country="Bélgica",
+    points_win=2, points_draw=1, points_loss=0,
+    teams=18, rounds=34,
+    tie_breakers=("overall_wins", "overall_goal_difference", "overall_goals_scored"),
+    direct_relegation_places=(17, 18),
+    notes=(
+        "Dieciocho clubes y 34 jornadas; dos puntos por victoria.",
+        "Waregem y Genk ocuparon las dos plazas de descenso en 1993-94.",
+        "La clasificación histórica conservada prioriza victorias y diferencia de goles para separar empates de puntos.",
+    ),
+)
+
+TURKEY_FIRST_DIVISION_1993_94 = CompetitionRules9394(
+    id="tur_first_division_1993_94",
+    name="1. Lig",
+    country="Turquía",
+    points_win=3, points_draw=1, points_loss=0,
+    teams=16, rounds=30,
+    tie_breakers=("overall_goal_difference", "overall_goals_scored"),
+    direct_relegation_places=(14, 15, 16),
+    notes=(
+        "Dieciséis clubes y 30 jornadas.",
+        "Turquía ya otorgaba tres puntos por victoria en 1993-94; no se aplica el sistema de dos puntos de otras ligas europeas de la época.",
+        "Los tres últimos descendían de la máxima categoría.",
+    ),
+)
+
+RUSSIA_SUPREME_LEAGUE_1993 = CompetitionRules9394(
+    id="rus_supreme_league_1993",
+    name="Supreme League 1993",
+    country="Rusia",
+    points_win=2, points_draw=1, points_loss=0,
+    teams=18, rounds=34,
+    tie_breakers=(
+        "head_to_head_points", "head_to_head_goal_difference",
+        "overall_wins", "overall_goal_difference", "overall_goals_scored",
+    ),
+    direct_relegation_places=(15, 16, 17, 18),
+    notes=(
+        "Temporada rusa disputada por año natural en 1993; el motor la integra en el mundo congelado 1993-94 sin renombrarla como una liga 1993-94.",
+        "Dieciocho clubes, 34 jornadas y dos puntos por victoria.",
+        "Vladivostok, Okean Nakhodka, RostSelMash y Asmaral ocuparon las cuatro plazas de descenso.",
+    ),
+)
+
+GREECE_ALPHA_ETHNIKI_1993_94 = CompetitionRules9394(
+    id="gre_alpha_ethniki_1993_94",
+    name="Alpha Ethniki",
+    country="Grecia",
+    points_win=3, points_draw=1, points_loss=0,
+    teams=18, rounds=34,
+    tie_breakers=("overall_wins", "overall_goals_scored", "overall_goal_difference"),
+    direct_relegation_places=(16, 17, 18),
+    notes=(
+        "Dieciocho clubes y 34 jornadas; tres puntos por victoria, sistema introducido en Grecia en 1992-93.",
+        "Panachaiki, Apollon Kalamarias y Naousa ocuparon las tres plazas de descenso en 1993-94.",
+        "El orden de los empates de la tabla histórica es compatible con priorizar victorias y después goles marcados antes de la diferencia general; se conserva como criterio histórico de reconstrucción.",
+    ),
+)

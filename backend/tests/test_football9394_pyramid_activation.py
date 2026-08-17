@@ -58,6 +58,15 @@ def test_spanish_cup_and_segunda_b_promotion_are_admitted():
 
 def test_every_historical_source_row_has_admission_status():
     activations, _ = _activation()
-    assert len(activations) == 28
-    assert sum(row.active for row in activations.values()) == 26
+    assert len(activations) == 32
+    assert sum(row.active for row in activations.values()) == 30
     assert sum(row.reason == "source_not_admitted" for row in activations.values()) == 2
+
+
+def test_belgium_historical_runtime_is_simulation_ready():
+    activations, pyramids = _activation()
+    row = activations[("league", 930052)]
+    assert row.active is True
+    assert row.simulation_ready is True
+    assert row.reason == "included_simulation_ready_standalone"
+    assert pyramids["Bélgica"].has_pyramid is False

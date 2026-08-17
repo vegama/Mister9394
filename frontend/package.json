@@ -1,13 +1,15 @@
 {
   "name": "mister-9394-frontend",
   "private": true,
-  "version": "0.3.1",
+  "version": "0.28.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "npm run check:sfc && vite build",
+    "build": "npm run check:sfc && npm run check:ui && npm run check:vue && vite build",
     "preview": "vite preview",
-    "check:sfc": "node tools/sfc-structure.mjs"
+    "check:sfc": "node tools/sfc-structure.mjs",
+    "check:ui": "node tools/ui-quality.mjs",
+    "check:vue": "node tools/vue-script-syntax.mjs"
   },
   "dependencies": {
     "vue": "3.5.40"

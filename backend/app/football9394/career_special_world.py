@@ -19,6 +19,7 @@ from .schedule import generate_round_robin_cycles
 from .special_league_runtime import DecidedMatch9394, _resolve_no_draw, _special_table
 from .standings import LeagueMatch9394, build_league_table
 from .team_builder import build_snapshot_team_sheet_with_repair
+from .foreign_rules import competition_foreign_rule
 
 SPECIAL_CALENDAR_FIDELITY = "historical_format_runtime_cadence_dates_not_source_authoritative"
 
@@ -74,17 +75,37 @@ def _fast_score(runtime, home_id: str, away_id: str, *, seed: int, no_draw: bool
     return {"home_team_id":home_id,"away_team_id":away_id,"home_goals":hg,"away_goals":ag,"winner_team_id":winner,"decided_by":decided,"bootstrap":True}
 
 
-def _full_score(runtime, home_id: str, away_id: str, *, seed: int, no_draw: bool=False, golden_goal: bool=False) -> dict[str,Any]:
-    if home_id in HISTORICAL_REPAIR_CLUBS:
-        home=_synthetic_sheet(home_id,HISTORICAL_REPAIR_CLUBS[home_id])
-    else:
-        home,_=build_snapshot_team_sheet_with_repair(runtime._career_universe,int(home_id))
-        home=type(home)(home.team_id,home.team_name,tuple(runtime._apply_development_to_footballer(p) for p in home.starters),tuple(runtime._apply_development_to_footballer(p) for p in home.bench),home.tactics)
-    if away_id in HISTORICAL_REPAIR_CLUBS:
-        away=_synthetic_sheet(away_id,HISTORICAL_REPAIR_CLUBS[away_id])
-    else:
-        away,_=build_snapshot_team_sheet_with_repair(runtime._career_universe,int(away_id))
-        away=type(away)(away.team_id,away.team_name,tuple(runtime._apply_development_to_footballer(p) for p in away.starters),tuple(runtime._apply_development_to_footballer(p) for p in away.bench),away.tactics)
+def _full_score(runtime, home_id: str, away_id: str, *, seed: int, no_draw: bool=False, golden_goal: bool=False,
+                competition_kind: str = "league", source_id: int | None = None) -> dict[str,Any]:
+    inferred_source=source_id
+    if inferred_source is None and competition_kind=="league":
+        try: inferred_source=runtime._current_league_for_team(int(home_id))
+        except (TypeError,ValueError): inferred_source=None
+
+    def sheet(team_id:str):
+        if team_id in HISTORICAL_REPAIR_CLUBS:
+            return _synthetic_sheet(team_id,HISTORICAL_REPAIR_CLUBS[team_id])
+        rule=None
+        if inferred_source is not None:
+            rule=competition_foreign_rule(runtime.universe,kind=competition_kind,source_id=int(inferred_source),team_id=int(team_id))
+        try:
+            return runtime._sheet(int(team_id),foreign_rule=rule)
+        except ValueError as exc:
+            # Only incomplete historical source data may use the dedicated
+            # repair path.  A foreign-player-rule conflict is a real rules
+            # failure and must never be bypassed by a fallback XI.
+            message=str(exc)
+            repairable=(
+                "futbolistas históricos disponibles" in message
+                or "plantilla histórica no contiene portero" in message
+                or "once especializado completo" in message
+            )
+            if not repairable:
+                raise
+            repaired,_=build_snapshot_team_sheet_with_repair(runtime._career_universe,int(team_id))
+            return type(repaired)(repaired.team_id,repaired.team_name,tuple(runtime._apply_development_to_footballer(p) for p in repaired.starters),tuple(runtime._apply_development_to_footballer(p) for p in repaired.bench),repaired.tactics)
+
+    home=sheet(home_id);away=sheet(away_id)
     engine=FootballMatchEngine9394(profile=ERA_BASELINE_1993_94)
     result=engine.simulate(home,away,seed=seed)
     runtime._apply_match_player_state(result,home,away,seed)
@@ -95,10 +116,20 @@ def _full_score(runtime, home_id: str, away_id: str, *, seed: int, no_draw: bool
     return row
 
 
-def _score(runtime, home_id: str, away_id: str, *, seed: int, bootstrap: bool, no_draw: bool=False, golden_goal: bool=False) -> dict[str,Any]:
-    return (_fast_score(runtime,home_id,away_id,seed=seed,no_draw=no_draw,golden_goal=golden_goal) if bootstrap
-            else _full_score(runtime,home_id,away_id,seed=seed,no_draw=no_draw,golden_goal=golden_goal))
-
+def _score(runtime, home_id: str, away_id: str, *, seed: int, bootstrap: bool, no_draw: bool=False, golden_goal: bool=False,
+           competition_kind: str = "league", source_id: int | None = None) -> dict[str,Any]:
+    controlled = str(int(runtime.state.get("team_id") or 0))
+    # Background world matches use the calibrated strength model.  Running the
+    # full event engine for hundreds of AI-only APSL/Brazil/J.League fixtures
+    # made season rollover progressively slower without creating decisions for
+    # the human.  Any fixture involving the controlled club still uses the full
+    # source-player/coach/referee engine.
+    if bootstrap or controlled not in {str(home_id), str(away_id)}:
+        row = _fast_score(runtime,home_id,away_id,seed=seed,no_draw=no_draw,golden_goal=golden_goal)
+        row["bootstrap"] = bool(bootstrap)
+        row["simulation_model"] = "fast_bootstrap" if bootstrap else "fast_background_v2"
+        return row
+    return _full_score(runtime,home_id,away_id,seed=seed,no_draw=no_draw,golden_goal=golden_goal,competition_kind=competition_kind,source_id=source_id)
 
 def _league_group_table(ids: list[str] | tuple[str,...], rows: list[dict[str,Any]], rules) -> tuple:
     matches=[LeagueMatch9394(str(r["home_team_id"]),str(r["away_team_id"]),int(r["home_goals"]),int(r["away_goals"])) for r in rows]

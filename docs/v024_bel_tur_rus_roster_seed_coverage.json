@@ -1,0 +1,924 @@
+{
+  "schema_version": 1,
+  "checkpoint": "0.24.0",
+  "purpose": "Seed coverage from already verified historical-player metadata before full BDFutbol roster import. This is not the activation gate.",
+  "leagues": [
+    {
+      "country": "Bélgica",
+      "historical_runtime_league_id": 930052,
+      "clubs": [
+        {
+          "name": "Anderlecht",
+          "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9410015.html",
+          "verified_seed_players": [
+            {
+              "source_id": 9495305,
+              "display_name": "Bertrand Crasson",
+              "historical_club_1994": "RSC Anderlecht",
+              "overall": 75,
+              "match_score": 1.0
+            },
+            {
+              "source_id": 9495302,
+              "display_name": "Bruno Versavel",
+              "historical_club_1994": "RSC Anderlecht",
+              "overall": 75,
+              "match_score": 1.0
+            },
+            {
+              "source_id": 9495308,
+              "display_name": "Johan Walem",
+              "historical_club_1994": "RSC Anderlecht",
+              "overall": 74,
+              "match_score": 1.0
+            }
+          ],
+          "verified_seed_count": 3,
+          "activation_minimum": 18,
+          "remaining_to_minimum": 15
+        },
+        {
+          "name": "Club Brugge",
+          "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9410004.html",
+          "verified_seed_players": [
+            {
+              "source_id": 9495312,
+              "display_name": "Gert Verheyen",
+              "historical_club_1994": "Club Brugge",
+              "overall": 75,
+              "match_score": 1.0
+            },
+            {
+              "source_id": 9495306,
+              "display_name": "Pascal Plovie",
+              "historical_club_1994": "Club Brugge",
+              "overall": 74,
+              "match_score": 1.0
+            }
+          ],
+          "verified_seed_count": 2,
+          "activation_minimum": 18,
+          "remaining_to_minimum": 16
+        },
+        {
+          "name": "FC Seraing",
+          "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9412101.html",
+          "verified_seed_players": [],
+          "verified_seed_count": 0,
+          "activation_minimum": 18,
+          "remaining_to_minimum": 18
+        },
+        {
+          "name": "Charleroi",
+          "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9410718.html",
+          "verified_seed_players": [],
+          "verified_seed_count": 0,
+          "activation_minimum": 18,
+          "remaining_to_minimum": 18
+        },
+        {
+          "name": "Royal Antwerp",
+          "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9410010.html",
+          "verified_seed_players": [
+            {
+              "source_id": 9495304,
+              "display_name": "Francis Severeyns",
+              "historical_club_1994": "Royal Antwerp FC",
+              "overall": 75,
+              "match_score": 1.0
+            }
+          ],
+          "verified_seed_count": 1,
+          "activation_minimum": 18,
+          "remaining_to_minimum": 17
+        },
+        {
+          "name": "Standard Liège",
+          "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9410012.html",
+          "verified_seed_players": [
+            {
+              "source_id": 9495314,
+              "display_name": "Alain Bettagno",
+              "historical_club_1994": "Standard Liège",
+              "overall": 73,
+              "match_score": 1.0
+            },
+            {
+              "source_id": 9495311,
+              "display_name": "Gilbert Bodart",
+              "historical_club_1994": "Standard Liège",
+              "overall": 77,
+              "match_score": 1.0
+            },
+            {
+              "source_id": 9495303,
+              "display_name": "Michaël Goossens",
+              "historical_club_1994": "Standard Liège",
+              "overall": 72,
+              "match_score": 1.0
+            },
+            {
+              "source_id": 9495301,
+              "display_name": "Régis Genaux",
+              "historical_club_1994": "Standard Liège",
+              "overall": 73,
+              "match_score": 1.0
+            }
+          ],
+          "verified_seed_count": 4,
+          "activation_minimum": 18,
+          "remaining_to_minimum": 14
+        },
+        {
+          "name": "Oostende",
+          "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9410949.html",
+          "verified_seed_players": [],
+          "verified_seed_count": 0,
+          "activation_minimum": 18,
+          "remaining_to_minimum": 18
+        },
+        {
+          "name": "KV Mechelen",
+          "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9411101.html",
+          "verified_seed_players": [
+            {
+              "source_id": 9495300,
+              "display_name": "Glen De Boeck",
+              "historical_club_1994": "KV Mechelen",
+              "overall": 74,
+              "match_score": 1.0
+            }
+          ],
+          "verified_seed_count": 1,
+          "activation_minimum": 18,
+          "remaining_to_minimum": 17
+        },
+        {
+          "name": "Beveren",
+          "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9412039.html",
+          "verified_seed_players": [],
+          "verified_seed_count": 0,
+          "activation_minimum": 18,
+          "remaining_to_minimum": 18
+        },
+        {
+          "name": "Germinal Ekeren",
+          "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9411039.html",
+          "verified_seed_players": [
+            {
+              "source_id": 9495310,
+              "display_name": "Gunther Hofmans",
+              "historical_club_1994": "Germinal Ekeren",
+              "overall": 72,
+              "match_score": 1.0
+            }
+          ],
+          "verified_seed_count": 1,
+          "activation_minimum": 18,
+          "remaining_to_minimum": 17
+        },
+        {
+          "name": "Lommel",
+          "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9411701.html",
+          "verified_seed_players": [],
+          "verified_seed_count": 0,
+          "activation_minimum": 18,
+          "remaining_to_minimum": 18
+        },
+        {
+          "name": "Cercle Brugge",
+          "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9410785.html",
+          "verified_seed_players": [
+            {
+              "source_id": 9495312,
+              "display_name": "Gert Verheyen",
+              "historical_club_1994": "Club Brugge",
+              "overall": 75,
+              "match_score": 0.75
+            },
+            {
+              "source_id": 9495306,
+              "display_name": "Pascal Plovie",
+              "historical_club_1994": "Club Brugge",
+              "overall": 74,
+              "match_score": 0.75
+            }
+          ],
+          "verified_seed_count": 2,
+          "activation_minimum": 18,
+          "remaining_to_minimum": 16
+        },
+        {
+          "name": "RFC Liège",
+          "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9410266.html",
+          "verified_seed_players": [],
+          "verified_seed_count": 0,
+          "activation_minimum": 18,
+          "remaining_to_minimum": 18
+        },
+        {
+          "name": "Lierse",
+          "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9410070.html",
+          "verified_seed_players": [],
+          "verified_seed_count": 0,
+          "activation_minimum": 18,
+          "remaining_to_minimum": 18
+        },
+        {
+          "name": "Gent",
+          "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9410090.html",
+          "verified_seed_players": [
+            {
+              "source_id": 9495309,
+              "display_name": "Alain De Nil",
+              "historical_club_1994": "KAA Gent",
+              "overall": 73,
+              "match_score": 1.0
+            },
+            {
+              "source_id": 9495307,
+              "display_name": "Frank Dauwen",
+              "historical_club_1994": "KAA Gent",
+              "overall": 73,
+              "match_score": 1.0
+            }
+          ],
+          "verified_seed_count": 2,
+          "activation_minimum": 18,
+          "remaining_to_minimum": 16
+        },
+        {
+          "name": "Molenbeek",
+          "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9410067.html",
+          "verified_seed_players": [],
+          "verified_seed_count": 0,
+          "activation_minimum": 18,
+          "remaining_to_minimum": 18
+        },
+        {
+          "name": "Waregem",
+          "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9410295.html",
+          "verified_seed_players": [],
+          "verified_seed_count": 0,
+          "activation_minimum": 18,
+          "remaining_to_minimum": 18
+        },
+        {
+          "name": "Genk",
+          "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9410201.html",
+          "verified_seed_players": [
+            {
+              "source_id": 9495309,
+              "display_name": "Alain De Nil",
+              "historical_club_1994": "KAA Gent",
+              "overall": 73,
+              "match_score": 0.75
+            },
+            {
+              "source_id": 9495307,
+              "display_name": "Frank Dauwen",
+              "historical_club_1994": "KAA Gent",
+              "overall": 73,
+              "match_score": 0.75
+            }
+          ],
+          "verified_seed_count": 2,
+          "activation_minimum": 18,
+          "remaining_to_minimum": 16
+        }
+      ],
+      "verified_seed_total": 18
+    },
+    {
+      "country": "Turquía",
+      "historical_runtime_league_id": 930057,
+      "clubs": [
+        {
+          "name": "Galatasaray",
+          "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9410020.html",
+          "verified_seed_players": [
+            {
+              "source_id": 9495354,
+              "display_name": "Arif Erdem",
+              "historical_club_1994": "Galatasaray SK",
+              "overall": 72,
+              "match_score": 1.0
+            },
+            {
+              "source_id": 9495319,
+              "display_name": "Bülent Korkmaz",
+              "historical_club_1994": "Galatasaray SK",
+              "overall": 78,
+              "match_score": 1.0
+            },
+            {
+              "source_id": 9495329,
+              "display_name": "Ergün Penbe",
+              "historical_club_1994": "Galatasaray SK",
+              "overall": 69,
+              "match_score": 1.0
+            },
+            {
+              "source_id": 9495348,
+              "display_name": "Hakan Şükür",
+              "historical_club_1994": "Galatasaray SK",
+              "overall": 79,
+              "match_score": 1.0
+            },
+            {
+              "source_id": 9495337,
+              "display_name": "Hamza Hamzaoğlu",
+              "historical_club_1994": "Galatasaray SK",
+              "overall": 72,
+              "match_score": 1.0
+            },
+            {
+              "source_id": 9495316,
+              "display_name": "Hayrettin Demirbaş",
+              "historical_club_1994": "Galatasaray SK",
+              "overall": 75,
+              "match_score": 1.0
+            },
+            {
+              "source_id": 9495340,
+              "display_name": "Okan Buruk",
+              "historical_club_1994": "Galatasaray SK",
+              "overall": 70,
+              "match_score": 1.0
+            },
+            {
+              "source_id": 9495336,
+              "display_name": "Suat Kaya",
+              "historical_club_1994": "Galatasaray SK",
+              "overall": 74,
+              "match_score": 1.0
+            },
+            {
+              "source_id": 9495331,
+              "display_name": "Tugay Kerimoğlu",
+              "historical_club_1994": "Galatasaray SK",
+              "overall": 77,
+              "match_score": 1.0
+            },
+            {
+              "source_id": 9495342,
+              "display_name": "Uğur Tütüneker",
+              "historical_club_1994": "Galatasaray SK",
+              "overall": 73,
+              "match_score": 1.0
+            },
+            {
+              "source_id": 9495327,
+              "display_name": "Yusuf Tepekule",
+              "historical_club_1994": "Galatasaray SK",
+              "overall": 70,
+              "match_score": 1.0
+            }
+          ],
+          "verified_seed_count": 11,
+          "activation_minimum": 18,
+          "remaining_to_minimum": 7
+        },
+        {
+          "name": "Fenerbahçe",
+          "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9410178.html",
+          "verified_seed_players": [
+            {
+              "source_id": 9495351,
+              "display_name": "Aykut Kocaman",
+              "historical_club_1994": "Fenerbahçe SK",
+              "overall": 78,
+              "match_score": 1.0
+            },
+            {
+              "source_id": 9495352,
+              "display_name": "Bülent Uygun",
+              "historical_club_1994": "Fenerbahçe SK",
+              "overall": 72,
+              "match_score": 1.0
+            },
+            {
+              "source_id": 9495325,
+              "display_name": "Emre Aşık",
+              "historical_club_1994": "Fenerbahçe SK",
+              "overall": 70,
+              "match_score": 1.0
+            },
+            {
+              "source_id": 9495315,
+              "display_name": "Engin İpekoğlu",
+              "historical_club_1994": "Fenerbahçe SK",
+              "overall": 77,
+              "match_score": 1.0
+            },
+            {
+              "source_id": 9495332,
+              "display_name": "Oğuz Çetin",
+              "historical_club_1994": "Fenerbahçe SK",
+              "overall": 78,
+              "match_score": 1.0
+            },
+            {
+              "source_id": 9495317,
+              "display_name": "Rüştü Reçber",
+              "historical_club_1994": "Fenerbahçe SK",
+              "overall": 70,
+              "match_score": 1.0
+            },
+            {
+              "source_id": 9495341,
+              "display_name": "Rıdvan Dilmen",
+              "historical_club_1994": "Fenerbahçe SK",
+              "overall": 75,
+              "match_score": 1.0
+            },
+            {
+              "source_id": 9495339,
+              "display_name": "Turhan Sofuoğlu",
+              "historical_club_1994": "Fenerbahçe SK",
+              "overall": 73,
+              "match_score": 1.0
+            },
+            {
+              "source_id": 9495343,
+              "display_name": "İlker Yağcıoğlu",
+              "historical_club_1994": "Fenerbahçe SK",
+              "overall": 72,
+              "match_score": 1.0
+            }
+          ],
+          "verified_seed_count": 9,
+          "activation_minimum": 18,
+          "remaining_to_minimum": 9
+        },
+        {
+          "name": "Trabzonspor",
+          "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9410047.html",
+          "verified_seed_players": [
+            {
+              "source_id": 9495335,
+              "display_name": "Abdullah Ercan",
+              "historical_club_1994": "Trabzonspor",
+              "overall": 73,
+              "match_score": 1.0
+            },
+            {
+              "source_id": 9495328,
+              "display_name": "Cengiz Atila",
+              "historical_club_1994": "Trabzonspor",
+              "overall": 71,
+              "match_score": 1.0
+            },
+            {
+              "source_id": 9495349,
+              "display_name": "Hami Mandıralı",
+              "historical_club_1994": "Trabzonspor",
+              "overall": 78,
+              "match_score": 1.0
+            },
+            {
+              "source_id": 9495321,
+              "display_name": "Ogün Temizkanoğlu",
+              "historical_club_1994": "Trabzonspor",
+              "overall": 76,
+              "match_score": 1.0
+            },
+            {
+              "source_id": 9495346,
+              "display_name": "Orhan Çıkırıkçı",
+              "historical_club_1994": "Trabzonspor",
+              "overall": 77,
+              "match_score": 1.0
+            },
+            {
+              "source_id": 9495344,
+              "display_name": "Tolunay Kafkas",
+              "historical_club_1994": "Trabzonspor",
+              "overall": 72,
+              "match_score": 1.0
+            },
+            {
+              "source_id": 9495333,
+              "display_name": "Ünal Karaman",
+              "historical_club_1994": "Trabzonspor",
+              "overall": 77,
+              "match_score": 1.0
+            }
+          ],
+          "verified_seed_count": 7,
+          "activation_minimum": 18,
+          "remaining_to_minimum": 11
+        },
+        {
+          "name": "Beşiktaş",
+          "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9410031.html",
+          "verified_seed_players": [
+            {
+              "source_id": 9495322,
+              "display_name": "Ali Günçar",
+              "historical_club_1994": "Beşiktaş JK",
+              "overall": 72,
+              "match_score": 1.0
+            },
+            {
+              "source_id": 9495347,
+              "display_name": "Feyyaz Uçar",
+              "historical_club_1994": "Beşiktaş JK",
+              "overall": 77,
+              "match_score": 1.0
+            },
+            {
+              "source_id": 9495323,
+              "display_name": "Gökhan Keskin",
+              "historical_club_1994": "Beşiktaş JK",
+              "overall": 76,
+              "match_score": 1.0
+            },
+            {
+              "source_id": 9495334,
+              "display_name": "Mehmet Özdilek",
+              "historical_club_1994": "Beşiktaş JK",
+              "overall": 77,
+              "match_score": 1.0
+            },
+            {
+              "source_id": 9495330,
+              "display_name": "Mutlu Topçu",
+              "historical_club_1994": "Beşiktaş JK",
+              "overall": 70,
+              "match_score": 1.0
+            },
+            {
+              "source_id": 9495320,
+              "display_name": "Recep Çetin",
+              "historical_club_1994": "Beşiktaş JK",
+              "overall": 76,
+              "match_score": 1.0
+            },
+            {
+              "source_id": 9495338,
+              "display_name": "Rıza Çalımbay",
+              "historical_club_1994": "Beşiktaş JK",
+              "overall": 77,
+              "match_score": 1.0
+            },
+            {
+              "source_id": 9495345,
+              "display_name": "Sergen Yalçın",
+              "historical_club_1994": "Beşiktaş JK",
+              "overall": 73,
+              "match_score": 1.0
+            }
+          ],
+          "verified_seed_count": 8,
+          "activation_minimum": 18,
+          "remaining_to_minimum": 10
+        },
+        {
+          "name": "Samsunspor",
+          "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9411698.html",
+          "verified_seed_players": [
+            {
+              "source_id": 9495350,
+              "display_name": "Ertuğrul Sağlam",
+              "historical_club_1994": "Samsunspor",
+              "overall": 75,
+              "match_score": 1.0
+            }
+          ],
+          "verified_seed_count": 1,
+          "activation_minimum": 18,
+          "remaining_to_minimum": 17
+        },
+        {
+          "name": "Kocaelispor",
+          "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9410861.html",
+          "verified_seed_players": [
+            {
+              "source_id": 9495353,
+              "display_name": "Saffet Sancaklı",
+              "historical_club_1994": "Kocaelispor",
+              "overall": 73,
+              "match_score": 1.0
+            }
+          ],
+          "verified_seed_count": 1,
+          "activation_minimum": 18,
+          "remaining_to_minimum": 17
+        },
+        {
+          "name": "Gençlerbirliği",
+          "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9410358.html",
+          "verified_seed_players": [],
+          "verified_seed_count": 0,
+          "activation_minimum": 18,
+          "remaining_to_minimum": 18
+        },
+        {
+          "name": "Gaziantepspor",
+          "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9410300.html",
+          "verified_seed_players": [],
+          "verified_seed_count": 0,
+          "activation_minimum": 18,
+          "remaining_to_minimum": 18
+        },
+        {
+          "name": "Bursaspor",
+          "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9410247.html",
+          "verified_seed_players": [
+            {
+              "source_id": 9495326,
+              "display_name": "Sedat Balkanlı",
+              "historical_club_1994": "Bursaspor",
+              "overall": 71,
+              "match_score": 1.0
+            }
+          ],
+          "verified_seed_count": 1,
+          "activation_minimum": 18,
+          "remaining_to_minimum": 17
+        },
+        {
+          "name": "Altay",
+          "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9411414.html",
+          "verified_seed_players": [
+            {
+              "source_id": 9495318,
+              "display_name": "Şanver Göymen",
+              "historical_club_1994": "Altay İzmir",
+              "overall": 70,
+              "match_score": 1.0
+            }
+          ],
+          "verified_seed_count": 1,
+          "activation_minimum": 18,
+          "remaining_to_minimum": 17
+        },
+        {
+          "name": "Ankaragücü",
+          "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9410353.html",
+          "verified_seed_players": [
+            {
+              "source_id": 9495324,
+              "display_name": "Serhat Güller",
+              "historical_club_1994": "Ankaragücü",
+              "overall": 71,
+              "match_score": 1.0
+            }
+          ],
+          "verified_seed_count": 1,
+          "activation_minimum": 18,
+          "remaining_to_minimum": 17
+        },
+        {
+          "name": "Kayserispor",
+          "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9410432.html",
+          "verified_seed_players": [
+            {
+              "source_id": 9495353,
+              "display_name": "Saffet Sancaklı",
+              "historical_club_1994": "Kocaelispor",
+              "overall": 73,
+              "match_score": 0.727
+            }
+          ],
+          "verified_seed_count": 1,
+          "activation_minimum": 18,
+          "remaining_to_minimum": 17
+        },
+        {
+          "name": "Zeytinburnuspor",
+          "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-949025.html",
+          "verified_seed_players": [],
+          "verified_seed_count": 0,
+          "activation_minimum": 18,
+          "remaining_to_minimum": 18
+        },
+        {
+          "name": "Karabükspor",
+          "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9410744.html",
+          "verified_seed_players": [],
+          "verified_seed_count": 0,
+          "activation_minimum": 18,
+          "remaining_to_minimum": 18
+        },
+        {
+          "name": "Karşıyaka",
+          "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-949026.html",
+          "verified_seed_players": [],
+          "verified_seed_count": 0,
+          "activation_minimum": 18,
+          "remaining_to_minimum": 18
+        },
+        {
+          "name": "Sarıyer",
+          "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-949024.html",
+          "verified_seed_players": [],
+          "verified_seed_count": 0,
+          "activation_minimum": 18,
+          "remaining_to_minimum": 18
+        }
+      ],
+      "verified_seed_total": 41
+    },
+    {
+      "country": "Rusia",
+      "historical_runtime_league_id": 930015,
+      "clubs": [
+        {
+          "name": "Spartak Moskva",
+          "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9410023.html",
+          "verified_seed_players": [
+            {
+              "source_id": 9495357,
+              "display_name": "Ramiz Mamedov",
+              "historical_club_1994": "Spartak Moskva",
+              "overall": 75,
+              "match_score": 1.0
+            }
+          ],
+          "verified_seed_count": 1,
+          "activation_minimum": 18,
+          "remaining_to_minimum": 17
+        },
+        {
+          "name": "Rotor Volgograd",
+          "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9411034.html",
+          "verified_seed_players": [],
+          "verified_seed_count": 0,
+          "activation_minimum": 18,
+          "remaining_to_minimum": 18
+        },
+        {
+          "name": "Dynamo Moskva",
+          "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9410165.html",
+          "verified_seed_players": [
+            {
+              "source_id": 9495358,
+              "display_name": "Yuri Kovtun",
+              "historical_club_1994": "Dinamo Moskva",
+              "overall": 75,
+              "match_score": 0.923
+            }
+          ],
+          "verified_seed_count": 1,
+          "activation_minimum": 18,
+          "remaining_to_minimum": 17
+        },
+        {
+          "name": "Tekstilshchik Kamyshin",
+          "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9411094.html",
+          "verified_seed_players": [],
+          "verified_seed_count": 0,
+          "activation_minimum": 18,
+          "remaining_to_minimum": 18
+        },
+        {
+          "name": "Lokomotiv Moskva",
+          "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9410040.html",
+          "verified_seed_players": [
+            {
+              "source_id": 9495360,
+              "display_name": "Sergei Podpaly",
+              "historical_club_1994": "Lokomotiv Moskva",
+              "overall": 74,
+              "match_score": 1.0
+            }
+          ],
+          "verified_seed_count": 1,
+          "activation_minimum": 18,
+          "remaining_to_minimum": 17
+        },
+        {
+          "name": "Spartak Vladikavkaz",
+          "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9410778.html",
+          "verified_seed_players": [
+            {
+              "source_id": 9495355,
+              "display_name": "Zaur Khapov",
+              "historical_club_1994": "Spartak Vladikavkaz",
+              "overall": 75,
+              "match_score": 1.0
+            }
+          ],
+          "verified_seed_count": 1,
+          "activation_minimum": 18,
+          "remaining_to_minimum": 17
+        },
+        {
+          "name": "Torpedo Moskva",
+          "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9410068.html",
+          "verified_seed_players": [],
+          "verified_seed_count": 0,
+          "activation_minimum": 18,
+          "remaining_to_minimum": 18
+        },
+        {
+          "name": "Uralmash",
+          "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9411709.html",
+          "verified_seed_players": [],
+          "verified_seed_count": 0,
+          "activation_minimum": 18,
+          "remaining_to_minimum": 18
+        },
+        {
+          "name": "CSKA Moskva",
+          "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9410030.html",
+          "verified_seed_players": [
+            {
+              "source_id": 9495357,
+              "display_name": "Ramiz Mamedov",
+              "historical_club_1994": "Spartak Moskva",
+              "overall": 75,
+              "match_score": 0.72
+            }
+          ],
+          "verified_seed_count": 1,
+          "activation_minimum": 18,
+          "remaining_to_minimum": 17
+        },
+        {
+          "name": "KAMAZ",
+          "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9411710.html",
+          "verified_seed_players": [],
+          "verified_seed_count": 0,
+          "activation_minimum": 18,
+          "remaining_to_minimum": 18
+        },
+        {
+          "name": "Zhemchuzhina Sochi",
+          "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9422018.html",
+          "verified_seed_players": [],
+          "verified_seed_count": 0,
+          "activation_minimum": 18,
+          "remaining_to_minimum": 18
+        },
+        {
+          "name": "Dynamo Stavropol",
+          "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9422021.html",
+          "verified_seed_players": [],
+          "verified_seed_count": 0,
+          "activation_minimum": 18,
+          "remaining_to_minimum": 18
+        },
+        {
+          "name": "Lokomotiv Nizhny Novgorod",
+          "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9422016.html",
+          "verified_seed_players": [],
+          "verified_seed_count": 0,
+          "activation_minimum": 18,
+          "remaining_to_minimum": 18
+        },
+        {
+          "name": "Krylia Sovetov",
+          "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9410800.html",
+          "verified_seed_players": [],
+          "verified_seed_count": 0,
+          "activation_minimum": 18,
+          "remaining_to_minimum": 18
+        },
+        {
+          "name": "Luch Vladivostok",
+          "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9422002.html",
+          "verified_seed_players": [],
+          "verified_seed_count": 0,
+          "activation_minimum": 18,
+          "remaining_to_minimum": 18
+        },
+        {
+          "name": "Okean Nakhodka",
+          "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9422022.html",
+          "verified_seed_players": [],
+          "verified_seed_count": 0,
+          "activation_minimum": 18,
+          "remaining_to_minimum": 18
+        },
+        {
+          "name": "Rostselmash",
+          "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9410748.html",
+          "verified_seed_players": [],
+          "verified_seed_count": 0,
+          "activation_minimum": 18,
+          "remaining_to_minimum": 18
+        },
+        {
+          "name": "Asmaral Moskva",
+          "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9422023.html",
+          "verified_seed_players": [
+            {
+              "source_id": 9495357,
+              "display_name": "Ramiz Mamedov",
+              "historical_club_1994": "Spartak Moskva",
+              "overall": 75,
+              "match_score": 0.786
+            }
+          ],
+          "verified_seed_count": 1,
+          "activation_minimum": 18,
+          "remaining_to_minimum": 17
+        }
+      ],
+      "verified_seed_total": 6
+    }
+  ]
+}

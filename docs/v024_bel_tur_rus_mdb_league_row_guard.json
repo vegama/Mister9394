@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "checkpoint": "0.24.0",
+  "status": "pass_modern_source_rows_blocked",
+  "purpose": "Prevent the supplied MDB 2017 league rows from being mistaken for reconstructed 1993-94 Belgium/Turkey/Russia competitions.",
+  "source": "basedatos(1).mdb / Liga",
+  "rows": [
+    {
+      "source_league_id": 52,
+      "country": "Bélgica",
+      "source_name": "Jupiler Pro League",
+      "source_edition": "2017",
+      "source_teams": 16,
+      "historical_teams": 18,
+      "runtime_binding_allowed": false,
+      "historical_runtime_league_id": 930052
+    },
+    {
+      "source_league_id": 57,
+      "country": "Turquía",
+      "source_name": "Süper Lig",
+      "source_edition": "2017",
+      "source_teams": 18,
+      "historical_teams": 16,
+      "runtime_binding_allowed": false,
+      "historical_runtime_league_id": 930057
+    },
+    {
+      "source_league_id": 15,
+      "country": "Rusia",
+      "source_name": "Premier Liga",
+      "source_edition": "2017",
+      "source_teams": 16,
+      "historical_teams": 18,
+      "runtime_binding_allowed": false,
+      "historical_runtime_league_id": 930015
+    }
+  ],
+  "policy": "Historical rules may be registered by explicit 1993-94 alias, but the modern MDB source IDs remain unresolved until reconstructed historical league rows are built and all club rosters pass the minimum-player gate."
+}

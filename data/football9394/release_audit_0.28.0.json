@@ -1,0 +1,73 @@
+{
+  "checkpoint": "0.28.0-greece-1993-94-active",
+  "snapshot": {
+    "players": 12179,
+    "teams": 534,
+    "leagues": 27,
+    "duplicate_player_ids": 0,
+    "duplicate_team_ids": 0,
+    "duplicate_league_ids": 0
+  },
+  "historical_leagues": {
+    "930052": {
+      "country": "Bélgica",
+      "present": true,
+      "teams": 18,
+      "minimum_roster": 19,
+      "maximum_roster": 27,
+      "players_on_active_teams": 406
+    },
+    "930057": {
+      "country": "Turquía",
+      "present": true,
+      "teams": 16,
+      "minimum_roster": 18,
+      "maximum_roster": 23,
+      "players_on_active_teams": 301
+    },
+    "930015": {
+      "country": "Rusia",
+      "present": true,
+      "teams": 18,
+      "minimum_roster": 18,
+      "maximum_roster": 18,
+      "players_on_active_teams": 324
+    },
+    "930047": {
+      "country": "Grecia",
+      "present": true,
+      "teams": 18,
+      "minimum_roster": 18,
+      "maximum_roster": 18,
+      "players_on_active_teams": 324
+    }
+  },
+  "created_player_registry": {
+    "rows": 1651,
+    "semantic_noncreated_rows": [],
+    "photo_queue_rows": 1651,
+    "registry_queue_match": true,
+    "forbidden_original_ids_present": []
+  },
+  "greece_identity_corrections": [
+    {
+      "source_id": 9494159,
+      "display_name": "Thanasis Kolitsidakis",
+      "birth_date": "1966-11-21",
+      "birth_date_source": "cross_source_bdfutbol_verified_v0.28"
+    },
+    {
+      "source_id": 9494175,
+      "display_name": "Savvas Kofidis",
+      "birth_date": "1961-02-05",
+      "birth_date_source": "cross_source_bdfutbol_verified_v0.28"
+    }
+  ],
+  "validation": {
+    "targeted_pytest": "51 passed in 27.46s",
+    "python_compileall": "pass",
+    "frontend_static_gates": "SFC/UI/Vue syntax passed",
+    "frontend_vite_bundle": "not_run_to_completion: vite dependency not installed in checkpoint environment",
+    "longitudinal_gate": "extended 10-season test exceeds execution window after universe expansion; first 1994 rollover explicitly validated with no active club below 18"
+  }
+}

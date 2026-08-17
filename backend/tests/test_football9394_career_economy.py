@@ -30,3 +30,10 @@ def test_monthly_economy_posts_income_wages_and_operating_costs():
     assert posting["wage_expense"]>0
     assert posting["operating_expense"]>0
     assert finances["cash"] == before + posting["net"]
+
+
+def test_period_peseta_salary_curve_uses_credible_elite_order_of_magnitude():
+    assert inferred_annual_salary({'overall': 75}) == 9_000_000
+    assert inferred_annual_salary({'overall': 80}) == 18_000_000
+    assert inferred_annual_salary({'overall': 89}) == 125_000_000
+    assert inferred_annual_salary({'overall': 90}) > inferred_annual_salary({'overall': 89})

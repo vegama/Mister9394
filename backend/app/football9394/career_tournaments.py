@@ -17,6 +17,7 @@ from .match_engine import ERA_BASELINE_1993_94, FootballMatchEngine9394, Simulat
 from .rules import CompetitionRules9394
 from .schedule import generate_round_robin_cycles
 from .standings import LeagueMatch9394, build_league_table
+from .foreign_rules import competition_foreign_rule
 
 TOURNAMENT_CALENDAR_FIDELITY="historical_format_stage_cadence_dates_not_source_authoritative"
 
@@ -76,11 +77,13 @@ def _prepare_reduction(ids: list[str], target: int, *, seed: int) -> tuple[list[
     return byes,_pair(playing)
 
 
-def _played_leg(runtime,a:str,b:str,*,seed:int,neutral:bool=False) -> dict[str,Any]:
+def _played_leg(runtime,a:str,b:str,*,seed:int,source_id:int,neutral:bool=False) -> dict[str,Any]:
     controlled=str(int(runtime.state["team_id"]))
     tactics=dict(runtime.state.get("tactics") or {})
-    home=runtime._sheet(int(a), tactics if str(a)==controlled else None)
-    away=runtime._sheet(int(b), tactics if str(b)==controlled else None)
+    home_rule=competition_foreign_rule(runtime.universe,kind="tournament",source_id=int(source_id),team_id=int(a))
+    away_rule=competition_foreign_rule(runtime.universe,kind="tournament",source_id=int(source_id),team_id=int(b))
+    home=runtime._sheet(int(a), tactics if str(a)==controlled else None, foreign_rule=home_rule)
+    away=runtime._sheet(int(b), tactics if str(b)==controlled else None, foreign_rule=away_rule)
     profile=ERA_BASELINE_1993_94
     if neutral:
         profile=SimulationProfile9394(id="era_1993_94_neutral",target_goals_per_match=profile.target_goals_per_match,
@@ -91,14 +94,15 @@ def _played_leg(runtime,a:str,b:str,*,seed:int,neutral:bool=False) -> dict[str,A
     return {"home_team_id":a,"away_team_id":b,"home_goals":result.home.goals,"away_goals":result.away.goals,"bootstrap":False}
 
 
-def _single(runtime,a:str,b:str,*,seed:int,bootstrap:bool,neutral:bool=False) -> dict[str,Any]:
+def _single(runtime,a:str,b:str,*,seed:int,bootstrap:bool,source_id:int,neutral:bool=False) -> dict[str,Any]:
     if bootstrap:
-        return _score(runtime,a,b,seed=seed,bootstrap=True,no_draw=True)
-    row=_played_leg(runtime,a,b,seed=seed,neutral=neutral)
+        return _score(runtime,a,b,seed=seed,bootstrap=True,no_draw=True,competition_kind="tournament",source_id=source_id)
+    row=_played_leg(runtime,a,b,seed=seed,source_id=source_id,neutral=neutral)
     if row["home_goals"]!=row["away_goals"]:
         winner=a if row["home_goals"]>row["away_goals"] else b;decided="single_leg"
     else:
-        home=runtime._sheet(int(a));away=runtime._sheet(int(b))
+        home_rule=competition_foreign_rule(runtime.universe,kind="tournament",source_id=int(source_id),team_id=int(a));away_rule=competition_foreign_rule(runtime.universe,kind="tournament",source_id=int(source_id),team_id=int(b))
+        home=runtime._sheet(int(a),foreign_rule=home_rule);away=runtime._sheet(int(b),foreign_rule=away_rule)
         rng=Random(seed^0x909394);delta=(sum(p.overall for p in home.starters)-sum(p.overall for p in away.starters))/(11*120)
         winner=a if rng.random()<max(.3,min(.7,.5+delta)) else b;decided="extra_time_penalties"
     return {**row,"winner_team_id":winner,"decided_by":decided}
@@ -128,8 +132,8 @@ def play_pending_tournament_match(runtime) -> tuple[dict[str,Any],list[dict[str,
         raise ValueError("no hay partido de copa/continental pendiente")
     sid=int(pending["source_id"]);s=runtime.state["daily_tournaments"][str(sid)]
     a,b=str(pending["home_team_id"]),str(pending["away_team_id"]);seed=int(pending["seed"])
-    row=(_single(runtime,a,b,seed=seed,bootstrap=False,neutral=bool(pending.get("neutral")))
-         if pending.get("single") else _played_leg(runtime,a,b,seed=seed,neutral=bool(pending.get("neutral"))))
+    row=(_single(runtime,a,b,seed=seed,bootstrap=False,source_id=sid,neutral=bool(pending.get("neutral")))
+         if pending.get("single") else _played_leg(runtime,a,b,seed=seed,source_id=sid,neutral=bool(pending.get("neutral"))))
     if pending.get("leg") is not None: row["leg"]=int(pending["leg"])
     dest=pending.get("destination")
     if dest=="ucl_group":
@@ -138,6 +142,41 @@ def play_pending_tournament_match(runtime) -> tuple[dict[str,Any],list[dict[str,
     elif dest=="tie":
         tie=s["pending_ties"][int(pending["tie_index"])]
         # Idempotence protects reload/retry after a successful save boundary.
+        if not any(int(x.get("leg") or 0)==int(pending.get("leg") or 0) and str(x.get("home_team_id"))==a for x in tie["legs"]):
+            tie["legs"].append(row)
+    else:
+        raise ValueError(f"destino de partido pendiente no soportado: {dest}")
+    row.update({"source_id":sid,"competition_name":s.get("name") or f"Torneo {sid}","stage":pending["stage"]})
+    runtime.state["pending_world_match"]=None
+    runtime._post_matchday_income(int(a),competition=f"tournament:{sid}",reference=pending["stage"])
+    runtime._rebuild_rosters()
+    followup=process_daily_tournaments(runtime,runtime.current_date,bootstrap=False)
+    return row,followup
+
+
+def commit_pending_tournament_result(runtime, result, home_sheet, away_sheet) -> tuple[dict[str,Any],list[dict[str,Any]]]:
+    """Commit a controlled live-match result into the same cup state machine."""
+    pending=runtime.state.get("pending_world_match")
+    if not pending or pending.get("kind")!="tournament":
+        raise ValueError("no hay partido de copa/continental pendiente")
+    sid=int(pending["source_id"]);s=runtime.state["daily_tournaments"][str(sid)]
+    a,b=str(pending["home_team_id"]),str(pending["away_team_id"]);seed=int(pending["seed"])
+    runtime._apply_match_player_state(result,home_sheet,away_sheet,seed,competition=s.get("name") or f"Torneo {sid}")
+    row={"home_team_id":a,"away_team_id":b,"home_goals":int(result.home.goals),"away_goals":int(result.away.goals),"bootstrap":False}
+    if pending.get("single"):
+        if row["home_goals"]!=row["away_goals"]:
+            winner=a if row["home_goals"]>row["away_goals"] else b;decided="single_leg"
+        else:
+            rng=Random(seed^0x909394);delta=(sum(p.overall for p in home_sheet.starters)-sum(p.overall for p in away_sheet.starters))/(11*120)
+            winner=a if rng.random()<max(.3,min(.7,.5+delta)) else b;decided="extra_time_penalties"
+        row.update({"winner_team_id":winner,"decided_by":decided})
+    if pending.get("leg") is not None: row["leg"]=int(pending["leg"])
+    dest=pending.get("destination")
+    if dest=="ucl_group":
+        row.update({"round":int(pending["round"]),"group":str(pending["group"])})
+        s["group_results"][str(pending["group"])].append(row)
+    elif dest=="tie":
+        tie=s["pending_ties"][int(pending["tie_index"])]
         if not any(int(x.get("leg") or 0)==int(pending.get("leg") or 0) and str(x.get("home_team_id"))==a for x in tie["legs"]):
             tie["legs"].append(row)
     else:
@@ -185,7 +224,7 @@ def _process_ucl(runtime,s,day:date,bootstrap:bool) -> list[dict[str,Any]]:
                     if not bootstrap and _queue_controlled_match(runtime,source_id=1,stage=f"Grupo {g} · Jornada {rnd}",day=day,
                         home_id=f.home_team_id,away_id=f.away_team_id,seed=seed,destination="ucl_group",group=g,round_number=rnd):
                         return events+[{"kind":"controlled_match_pending","source_id":1,"stage":f"Grupo {g}","round":rnd,"date":day.isoformat()}]
-                    row=_score(runtime,f.home_team_id,f.away_team_id,seed=seed,bootstrap=bootstrap);row.update({"round":rnd,"group":g})
+                    row=_score(runtime,f.home_team_id,f.away_team_id,seed=seed,bootstrap=bootstrap,competition_kind="tournament",source_id=1);row.update({"round":rnd,"group":g})
                     s["group_results"][g].append(row)
             if all(sum(1 for r in s["group_results"][g] if int(r.get("round") or 0)==rnd)==2 for g in ("A","B")):
                 if not any(e.get("kind")=="competition_round" and e.get("round")==rnd and e.get("stage")=="groups" for e in s.get("events",[])+events):
@@ -206,7 +245,7 @@ def _process_ucl(runtime,s,day:date,bootstrap:bool) -> list[dict[str,Any]]:
             a,b=tie["team_a"],tie["team_b"];seed=seed0+10000+idx
             if not bootstrap and _queue_controlled_match(runtime,source_id=1,stage="Semifinales",day=day,home_id=a,away_id=b,seed=seed,destination="tie",tie_index=idx,leg=1,single=True):
                 return events+[{"kind":"controlled_match_pending","source_id":1,"stage":"Semifinales","date":day.isoformat()}]
-            row=_single(runtime,a,b,seed=seed,bootstrap=bootstrap);row["leg"]=1;tie["legs"].append(row)
+            row=_single(runtime,a,b,seed=seed,bootstrap=bootstrap,source_id=1);row["leg"]=1;tie["legs"].append(row)
         if all(t.get("legs") for t in s["pending_ties"]):
             for tie in s["pending_ties"]: tie["winner_team_id"]=tie["legs"][0]["winner_team_id"]
             s["current_ids"]=[t["winner_team_id"] for t in s["pending_ties"]];s["results"].extend([t["legs"][0] for t in s["pending_ties"]]);s["pending_ties"]=[];s["stage"]="final"
@@ -219,7 +258,7 @@ def _process_ucl(runtime,s,day:date,bootstrap:bool) -> list[dict[str,Any]]:
             seed=seed0+11000
             if not bootstrap and _queue_controlled_match(runtime,source_id=1,stage="Final",day=day,home_id=a,away_id=b,seed=seed,destination="tie",tie_index=0,leg=1,neutral=True,single=True):
                 return events+[{"kind":"controlled_match_pending","source_id":1,"stage":"Final","date":day.isoformat()}]
-            row=_single(runtime,a,b,seed=seed,bootstrap=bootstrap,neutral=True);row["leg"]=1;tie["legs"].append(row)
+            row=_single(runtime,a,b,seed=seed,bootstrap=bootstrap,source_id=1,neutral=True);row["leg"]=1;tie["legs"].append(row)
         row=tie["legs"][0];s["results"].append(row);s.update({"champion_team_id":row["winner_team_id"],"runner_up_team_id":b if row["winner_team_id"]==a else a,"completed":True,"stage":"completed","pending_ties":[]})
         events.append({"kind":"competition_completed","source_id":1,"champion_team_id":s["champion_team_id"],"date":day.isoformat(),"bootstrap":bootstrap})
     return events
@@ -242,8 +281,8 @@ def _process_standard_knockout(runtime,s,day:date,bootstrap:bool,stages,source_i
             if not bootstrap and _queue_controlled_match(runtime,source_id=source_id,stage=name,day=day,home_id=a,away_id=b,
                 seed=seed,destination="tie",tie_index=idx,leg=1,neutral=(source_id==90 and name=="Final"),single=is_single):
                 return events+[{"kind":"controlled_match_pending","source_id":source_id,"stage":name,"date":day.isoformat()}]
-            row=(_single(runtime,a,b,seed=seed,bootstrap=bootstrap,neutral=(source_id==90 and name=="Final"))
-                 if is_single else _score(runtime,a,b,seed=seed,bootstrap=bootstrap))
+            row=(_single(runtime,a,b,seed=seed,bootstrap=bootstrap,source_id=source_id,neutral=(source_id==90 and name=="Final"))
+                 if is_single else _score(runtime,a,b,seed=seed,bootstrap=bootstrap,competition_kind="tournament",source_id=source_id))
             row["leg"]=1;tie["legs"].append(row)
         if legs==1:
             if not all(t["legs"] for t in s["pending_ties"]): break
@@ -264,7 +303,7 @@ def _process_standard_knockout(runtime,s,day:date,bootstrap:bool,stages,source_i
             if not bootstrap and _queue_controlled_match(runtime,source_id=source_id,stage=name,day=day,home_id=b,away_id=a,
                 seed=seed,destination="tie",tie_index=idx,leg=2,single=False):
                 return events+[{"kind":"controlled_match_pending","source_id":source_id,"stage":name,"date":day.isoformat()}]
-            row=_score(runtime,b,a,seed=seed,bootstrap=bootstrap);row["leg"]=2;tie["legs"].append(row)
+            row=_score(runtime,b,a,seed=seed,bootstrap=bootstrap,competition_kind="tournament",source_id=source_id);row["leg"]=2;tie["legs"].append(row)
         if not all(len(t["legs"])>=2 for t in s["pending_ties"]): break
         winners=[];losers=[]
         for tie in s["pending_ties"]:
@@ -306,7 +345,7 @@ def _process_copa(runtime,s,day:date,bootstrap:bool) -> list[dict[str,Any]]:
                 if not bootstrap and _queue_controlled_match(runtime,source_id=3,stage=name,day=day,home_id=a,away_id=b,seed=seed,
                     destination="tie",tie_index=0,leg=1,neutral=True,single=True):
                     return events+[{"kind":"controlled_match_pending","source_id":3,"stage":name,"date":day.isoformat()}]
-                row=_single(runtime,a,b,seed=seed,bootstrap=bootstrap,neutral=True);row["leg"]=1;tie["legs"].append(row)
+                row=_single(runtime,a,b,seed=seed,bootstrap=bootstrap,source_id=3,neutral=True);row["leg"]=1;tie["legs"].append(row)
             row=tie["legs"][0];s["results"].append(row);s.update({"current_ids":[row["winner_team_id"]],"champion_team_id":row["winner_team_id"],"runner_up_team_id":b if row["winner_team_id"]==a else a,"completed":True,"stage":"completed","pending_ties":[],"byes":[]})
             events.append({"kind":"competition_completed","source_id":3,"champion_team_id":s["champion_team_id"],"date":day.isoformat(),"bootstrap":bootstrap});continue
         # First legs.
@@ -316,7 +355,7 @@ def _process_copa(runtime,s,day:date,bootstrap:bool) -> list[dict[str,Any]]:
             if not bootstrap and _queue_controlled_match(runtime,source_id=3,stage=name,day=day,home_id=a,away_id=b,seed=seed,
                 destination="tie",tie_index=idx,leg=1,single=False):
                 return events+[{"kind":"controlled_match_pending","source_id":3,"stage":name,"date":day.isoformat()}]
-            row=_score(runtime,a,b,seed=seed,bootstrap=bootstrap);row["leg"]=1;tie["legs"].append(row)
+            row=_score(runtime,a,b,seed=seed,bootstrap=bootstrap,competition_kind="tournament",source_id=3);row["leg"]=1;tie["legs"].append(row)
         if day<leg2_date: break
         # Second legs.
         for idx,tie in enumerate(s["pending_ties"]):
@@ -325,7 +364,7 @@ def _process_copa(runtime,s,day:date,bootstrap:bool) -> list[dict[str,Any]]:
             if not bootstrap and _queue_controlled_match(runtime,source_id=3,stage=name,day=day,home_id=b,away_id=a,seed=seed,
                 destination="tie",tie_index=idx,leg=2,single=False):
                 return events+[{"kind":"controlled_match_pending","source_id":3,"stage":name,"date":day.isoformat()}]
-            row=_score(runtime,b,a,seed=seed,bootstrap=bootstrap);row["leg"]=2;tie["legs"].append(row)
+            row=_score(runtime,b,a,seed=seed,bootstrap=bootstrap,competition_kind="tournament",source_id=3);row["leg"]=2;tie["legs"].append(row)
         if not all(len(t["legs"])>=2 for t in s["pending_ties"]): break
         winners=[]
         for tie in s["pending_ties"]:

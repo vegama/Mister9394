@@ -13,7 +13,7 @@ from datetime import date
 from typing import Any
 
 from .match_engine import ERA_BASELINE_1993_94, FootballMatchEngine9394, FootballTactics9394, Footballer9394, TeamSheet9394
-from .national_teams import national_team_catalog, select_national_squad
+from .national_teams import eligible_national_players, national_team_catalog, select_national_squad
 from .snapshot_runtime import FootballUniverseSnapshot9394
 
 
@@ -35,9 +35,19 @@ def _attr(api: dict[str, Any], key: str, fallback: int) -> int:
         return fallback
 
 
+def _slot(api:dict[str,Any]) -> str:
+    return str((api.get("specialist_role") or {}).get("squad_slot") or "CM").upper()
+
+def _broad(api:dict[str,Any]) -> str:
+    slot=_slot(api)
+    if slot=="GK": return "POR"
+    if slot in {"RB","LB","CB"}: return "DEF"
+    if slot in {"ST","RW","LW"}: return "DEL"
+    return "MED"
+
 def _footballer(api: dict[str, Any]) -> Footballer9394:
-    pos=str(api.get("position") or "MED").upper()
-    mapped={"POR":"GK","DEF":"DF","MED":"MF","DEL":"ST"}.get(pos,"MF")
+    slot=_slot(api)
+    mapped="GK" if slot=="GK" else "DF" if slot in {"RB","LB","CB"} else "ST" if slot in {"ST","RW","LW"} else "MF"
     overall=max(1,min(100,int(api.get("overall") or 60)))
     return Footballer9394(
         id=str(api["id"]), name=str(api.get("display_name") or api["id"]), position=mapped, overall=overall,
@@ -54,11 +64,30 @@ def build_national_sheet(
     country_id: int,
     *,
     development: dict[str,dict[str,Any]] | None = None,
+    selected_player_ids: list[int] | None = None,
 ) -> TeamSheet9394:
-    squad=select_national_squad(universe,country_id,development=development)
+    if selected_player_ids:
+        wanted=[int(pid) for pid in selected_player_ids]
+        eligible={int(p["source_id"]):p for p in eligible_national_players(universe,country_id,development=development)}
+        squad=[]
+        for pid in wanted:
+            source=eligible.get(pid)
+            if source is None:
+                continue
+            api=universe.player_api(source)
+            if development:
+                state=development.get(str(pid),{})
+                api["overall"]=state.get("overall",api.get("overall"))
+                api["form"]=state.get("form");api["morale"]=state.get("morale");api["condition"]=state.get("condition")
+                if int(state.get("injury_days") or 0)>0: api["status"]=f"Lesionado · {state['injury_days']} d"
+            squad.append(api)
+        if len(squad)<11:
+            raise ValueError("la convocatoria guardada ya no permite formar un once internacional")
+    else:
+        squad=select_national_squad(universe,country_id,development=development)
     by={"POR":[],"DEF":[],"MED":[],"DEL":[]}
     for row in squad:
-        by.setdefault(str(row.get("position") or "MED").upper(),[]).append(row)
+        by.setdefault(_broad(row),[]).append(row)
     chosen=(by["POR"][:1]+by["DEF"][:4]+by["MED"][:4]+by["DEL"][:2])
     chosen_ids={int(p["id"]) for p in chosen}
     if len(chosen)<11:
@@ -92,12 +121,13 @@ def simulate_generated_friendlies(
     development: dict[str,dict[str,Any]] | None,
     window_index: int,
     seed: int,
+    selections: dict[int,list[int]] | None = None,
 ) -> list[dict[str,Any]]:
     engine=FootballMatchEngine9394(profile=ERA_BASELINE_1993_94)
     outputs=[]
     for index,(home_id,away_id) in enumerate(generated_pairings(universe,window_index=window_index)):
-        home=build_national_sheet(universe,home_id,development=development)
-        away=build_national_sheet(universe,away_id,development=development)
+        home=build_national_sheet(universe,home_id,development=development,selected_player_ids=(selections or {}).get(int(home_id)))
+        away=build_national_sheet(universe,away_id,development=development,selected_player_ids=(selections or {}).get(int(away_id)))
         result=engine.simulate(home,away,seed=seed+window_index*1000+index)
         outputs.append({
             "kind":"international_friendly","generated_fixture":True,"historical_result":False,

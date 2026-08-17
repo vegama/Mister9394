@@ -1,0 +1,392 @@
+{
+  "status": "complete",
+  "squads": 24,
+  "players": 528,
+  "source_existing_players": 261,
+  "added_players": 267,
+  "market_container_players": 265,
+  "playable_club_assignments": 2,
+  "market_container_teams": 19,
+  "identity_source": "Fjelstul World Cup Database",
+  "detailed_attribute_policy": "source players unchanged; missing-player attributes derived conservatively from 1993-94 tournament context",
+  "foreign_rule_policy": "normal_historical_rules_apply",
+  "countries": {
+    "COL": {
+      "country_id": 26,
+      "name": "Colombia",
+      "existing": 7,
+      "added": 15,
+      "container": 15,
+      "playable_club": 0
+    },
+    "ROU": {
+      "country_id": 72,
+      "name": "Rumanía",
+      "existing": 6,
+      "added": 16,
+      "container": 16,
+      "playable_club": 0
+    },
+    "CHE": {
+      "country_id": 80,
+      "name": "Suiza",
+      "existing": 4,
+      "added": 18,
+      "container": 18,
+      "playable_club": 0
+    },
+    "USA": {
+      "country_id": 38,
+      "name": "Estados Unidos",
+      "existing": 8,
+      "added": 14,
+      "container": 13,
+      "playable_club": 1
+    },
+    "BRA": {
+      "country_id": 62,
+      "name": "Brasil",
+      "existing": 22,
+      "added": 0,
+      "container": 0,
+      "playable_club": 0
+    },
+    "CMR": {
+      "country_id": 66,
+      "name": "Camerún",
+      "existing": 5,
+      "added": 17,
+      "container": 16,
+      "playable_club": 1
+    },
+    "RUS": {
+      "country_id": 40,
+      "name": "Rusia",
+      "existing": 11,
+      "added": 11,
+      "container": 11,
+      "playable_club": 0
+    },
+    "SWE": {
+      "country_id": 79,
+      "name": "Suecia",
+      "existing": 10,
+      "added": 12,
+      "container": 12,
+      "playable_club": 0
+    },
+    "BOL": {
+      "country_id": 19,
+      "name": "Bolivia",
+      "existing": 2,
+      "added": 20,
+      "container": 20,
+      "playable_club": 0
+    },
+    "DEU": {
+      "country_id": 4,
+      "name": "Alemania",
+      "existing": 22,
+      "added": 0,
+      "container": 0,
+      "playable_club": 0
+    },
+    "KOR": {
+      "country_id": 28,
+      "name": "Corea del Sur",
+      "existing": 1,
+      "added": 21,
+      "container": 21,
+      "playable_club": 0
+    },
+    "ESP": {
+      "country_id": 11,
+      "name": "España",
+      "existing": 22,
+      "added": 0,
+      "container": 0,
+      "playable_club": 0
+    },
+    "ARG": {
+      "country_id": 63,
+      "name": "Argentina",
+      "existing": 21,
+      "added": 1,
+      "container": 1,
+      "playable_club": 0
+    },
+    "BGR": {
+      "country_id": 21,
+      "name": "Bulgaria",
+      "existing": 10,
+      "added": 12,
+      "container": 12,
+      "playable_club": 0
+    },
+    "GRC": {
+      "country_id": 47,
+      "name": "Grecia",
+      "existing": 0,
+      "added": 22,
+      "container": 22,
+      "playable_club": 0
+    },
+    "NGA": {
+      "country_id": 59,
+      "name": "Nigeria",
+      "existing": 10,
+      "added": 12,
+      "container": 12,
+      "playable_club": 0
+    },
+    "ITA": {
+      "country_id": 5,
+      "name": "Italia",
+      "existing": 22,
+      "added": 0,
+      "container": 0,
+      "playable_club": 0
+    },
+    "IRL": {
+      "country_id": 46,
+      "name": "Irlanda",
+      "existing": 18,
+      "added": 4,
+      "container": 4,
+      "playable_club": 0
+    },
+    "MEX": {
+      "country_id": 64,
+      "name": "México",
+      "existing": 22,
+      "added": 0,
+      "container": 0,
+      "playable_club": 0
+    },
+    "NOR": {
+      "country_id": 60,
+      "name": "Noruega",
+      "existing": 10,
+      "added": 12,
+      "container": 12,
+      "playable_club": 0
+    },
+    "BEL": {
+      "country_id": 17,
+      "name": "Bélgica",
+      "existing": 3,
+      "added": 19,
+      "container": 19,
+      "playable_club": 0
+    },
+    "MAR": {
+      "country_id": 56,
+      "name": "Marruecos",
+      "existing": 4,
+      "added": 18,
+      "container": 18,
+      "playable_club": 0
+    },
+    "NLD": {
+      "country_id": 3,
+      "name": "Países Bajos",
+      "existing": 21,
+      "added": 1,
+      "container": 1,
+      "playable_club": 0
+    },
+    "SAU": {
+      "country_id": 13,
+      "name": "Arabia Saudí",
+      "existing": 0,
+      "added": 22,
+      "container": 22,
+      "playable_club": 0
+    }
+  },
+  "containers": [
+    {
+      "source_id": 9400003,
+      "name": "Otros-Países Bajos",
+      "country_id": 3
+    },
+    {
+      "source_id": 9400013,
+      "name": "Otros-Arabia Saudí",
+      "country_id": 13
+    },
+    {
+      "source_id": 9400017,
+      "name": "Otros-Bélgica",
+      "country_id": 17
+    },
+    {
+      "source_id": 9400019,
+      "name": "Otros-Bolivia",
+      "country_id": 19
+    },
+    {
+      "source_id": 9400021,
+      "name": "Otros-Bulgaria",
+      "country_id": 21
+    },
+    {
+      "source_id": 9400026,
+      "name": "Otros-Colombia",
+      "country_id": 26
+    },
+    {
+      "source_id": 9400028,
+      "name": "Otros-Corea del Sur",
+      "country_id": 28
+    },
+    {
+      "source_id": 9400038,
+      "name": "Otros-Estados Unidos",
+      "country_id": 38
+    },
+    {
+      "source_id": 9400040,
+      "name": "Otros-Rusia",
+      "country_id": 40
+    },
+    {
+      "source_id": 9400046,
+      "name": "Otros-Irlanda",
+      "country_id": 46
+    },
+    {
+      "source_id": 9400047,
+      "name": "Otros-Grecia",
+      "country_id": 47
+    },
+    {
+      "source_id": 9400056,
+      "name": "Otros-Marruecos",
+      "country_id": 56
+    },
+    {
+      "source_id": 9400059,
+      "name": "Otros-Nigeria",
+      "country_id": 59
+    },
+    {
+      "source_id": 9400060,
+      "name": "Otros-Noruega",
+      "country_id": 60
+    },
+    {
+      "source_id": 9400063,
+      "name": "Otros-Argentina",
+      "country_id": 63
+    },
+    {
+      "source_id": 9400066,
+      "name": "Otros-Camerún",
+      "country_id": 66
+    },
+    {
+      "source_id": 9400072,
+      "name": "Otros-Rumanía",
+      "country_id": 72
+    },
+    {
+      "source_id": 9400079,
+      "name": "Otros-Suecia",
+      "country_id": 79
+    },
+    {
+      "source_id": 9400080,
+      "name": "Otros-Suiza",
+      "country_id": 80
+    }
+  ],
+  "playable_club_overrides": [
+    {
+      "team_code": "CMR",
+      "player": "thomas n kono",
+      "team_id": 793,
+      "team_name": "CE L'Hospitalet"
+    },
+    {
+      "team_code": "IRL",
+      "player": "alan kelly",
+      "team_id": 336,
+      "team_name": "Sheffield United  FC"
+    },
+    {
+      "team_code": "IRL",
+      "player": "alan kernaghan",
+      "team_id": 253,
+      "team_name": "Manchester City FC"
+    },
+    {
+      "team_code": "IRL",
+      "player": "eddie mcgoldrick",
+      "team_id": 79,
+      "team_name": "Arsenal FC"
+    },
+    {
+      "team_code": "IRL",
+      "player": "john sheridan",
+      "team_id": 337,
+      "team_name": "Sheffield Wednesday FC"
+    },
+    {
+      "team_code": "IRL",
+      "player": "paul mcgrath",
+      "team_id": 249,
+      "team_name": "Aston Villa FC"
+    },
+    {
+      "team_code": "IRL",
+      "player": "phil babb",
+      "team_id": 323,
+      "team_name": "Coventry City FC"
+    },
+    {
+      "team_code": "IRL",
+      "player": "terry phelan",
+      "team_id": 253,
+      "team_name": "Manchester City FC"
+    },
+    {
+      "team_code": "IRL",
+      "player": "tony cascarino",
+      "team_id": 80,
+      "team_name": "Chelsea FC"
+    },
+    {
+      "team_code": "RUS",
+      "player": "dmitri popov",
+      "team_id": 17,
+      "team_name": "Racing Santander"
+    },
+    {
+      "team_code": "RUS",
+      "player": "sergei yuran",
+      "team_id": 303,
+      "team_name": "SL Benfica"
+    },
+    {
+      "team_code": "USA",
+      "player": "hugo perez",
+      "team_id": 734,
+      "team_name": "Los Angeles Salsa"
+    }
+  ],
+  "verified_source_corrections": [
+    {
+      "source_id": 515,
+      "display_name": "Popov",
+      "before": {
+        "birth_date": "1967-02-27T00:00:00"
+      },
+      "after": {
+        "birth_date": "1967-02-27T00:00:00"
+      },
+      "source": "BDFutbol · Dmitri Lvovich Popov"
+    }
+  ],
+  "created_player_registry_rows": 367
+}

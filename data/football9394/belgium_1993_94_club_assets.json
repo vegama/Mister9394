@@ -1,0 +1,218 @@
+{
+  "schema_version": 1,
+  "season": "1993-94",
+  "country": "Bélgica",
+  "asset_contract": {
+    "format": "GIF",
+    "size": [
+      40,
+      40
+    ],
+    "runtime_path": "/historical9394/clubs/{team_id}.gif"
+  },
+  "policy": [
+    "Reuse an MDB team id only when it represents the same historical club.",
+    "Do not merge extinct historical clubs into successor entities merely to reuse an asset.",
+    "BDFutbol crest images are normalized offline; the frontend keeps its existing team-id lookup."
+  ],
+  "clubs": [
+    {
+      "historical_position": 1,
+      "name": "Anderlecht",
+      "team_id": 415,
+      "identity_status": "reused_exact_mdb_club",
+      "bdfutbol_team_id": 10015,
+      "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9410015.html",
+      "bdfutbol_crest_url": "https://www.bdfutbol.com/i/eg/10015d.png",
+      "runtime_crest_path": "/historical9394/clubs/415.gif",
+      "crest_status": "retained_existing_game_asset"
+    },
+    {
+      "historical_position": 2,
+      "name": "Club Brugge",
+      "team_id": 453,
+      "identity_status": "reused_exact_mdb_club",
+      "bdfutbol_team_id": 10004,
+      "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9410004.html",
+      "bdfutbol_crest_url": "https://www.bdfutbol.com/i/eg/10004c.png",
+      "runtime_crest_path": "/historical9394/clubs/453.gif",
+      "crest_status": "normalized_bdfutbol_40x40_gif"
+    },
+    {
+      "historical_position": 3,
+      "name": "FC Seraing",
+      "team_id": 9352001,
+      "identity_status": "historical_team_id_required",
+      "bdfutbol_team_id": 12101,
+      "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9412101.html",
+      "bdfutbol_crest_url": "https://www.bdfutbol.com/i/eg/12101.png",
+      "runtime_crest_path": "/historical9394/clubs/9352001.gif",
+      "crest_status": "normalized_bdfutbol_40x40_gif"
+    },
+    {
+      "historical_position": 4,
+      "name": "Charleroi",
+      "team_id": 454,
+      "identity_status": "reused_exact_mdb_club",
+      "bdfutbol_team_id": 10718,
+      "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9410718.html",
+      "bdfutbol_crest_url": "https://www.bdfutbol.com/i/eg/10718.png",
+      "runtime_crest_path": "/historical9394/clubs/454.gif",
+      "crest_status": "normalized_bdfutbol_40x40_gif"
+    },
+    {
+      "historical_position": 5,
+      "name": "Royal Antwerp",
+      "team_id": 1032,
+      "identity_status": "reused_exact_mdb_club",
+      "bdfutbol_team_id": 10010,
+      "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9410010.html",
+      "bdfutbol_crest_url": "https://www.bdfutbol.com/i/eg/10010.png",
+      "runtime_crest_path": "/historical9394/clubs/1032.gif",
+      "crest_status": "normalized_bdfutbol_40x40_gif"
+    },
+    {
+      "historical_position": 6,
+      "name": "Standard Liège",
+      "team_id": 409,
+      "identity_status": "reused_exact_mdb_club",
+      "bdfutbol_team_id": 10012,
+      "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9410012.html",
+      "bdfutbol_crest_url": "https://www.bdfutbol.com/i/eg/10012.png",
+      "runtime_crest_path": "/historical9394/clubs/409.gif",
+      "crest_status": "retained_existing_game_asset"
+    },
+    {
+      "historical_position": 7,
+      "name": "Oostende",
+      "team_id": 908,
+      "identity_status": "reused_exact_mdb_club",
+      "bdfutbol_team_id": 10949,
+      "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9410949.html",
+      "bdfutbol_crest_url": "https://www.bdfutbol.com/i/eg/10949.png",
+      "runtime_crest_path": "/historical9394/clubs/908.gif",
+      "crest_status": "normalized_bdfutbol_40x40_gif"
+    },
+    {
+      "historical_position": 8,
+      "name": "KV Mechelen",
+      "team_id": 459,
+      "identity_status": "reused_exact_mdb_club",
+      "bdfutbol_team_id": 11101,
+      "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9411101.html",
+      "bdfutbol_crest_url": "https://www.bdfutbol.com/i/eg/11101b.png",
+      "runtime_crest_path": "/historical9394/clubs/459.gif",
+      "crest_status": "retained_existing_game_asset"
+    },
+    {
+      "historical_position": 9,
+      "name": "Beveren",
+      "team_id": 9352002,
+      "identity_status": "historical_team_id_required",
+      "bdfutbol_team_id": 12039,
+      "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9412039.html",
+      "bdfutbol_crest_url": "https://www.bdfutbol.com/i/eg/12039.png",
+      "runtime_crest_path": "/historical9394/clubs/9352002.gif",
+      "crest_status": "normalized_bdfutbol_40x40_gif"
+    },
+    {
+      "historical_position": 10,
+      "name": "Germinal Ekeren",
+      "team_id": 9352003,
+      "identity_status": "historical_team_id_required",
+      "bdfutbol_team_id": 11039,
+      "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9411039.html",
+      "bdfutbol_crest_url": "https://www.bdfutbol.com/i/eg/11039.png",
+      "runtime_crest_path": "/historical9394/clubs/9352003.gif",
+      "crest_status": "normalized_bdfutbol_40x40_gif"
+    },
+    {
+      "historical_position": 11,
+      "name": "Lommel",
+      "team_id": 9352004,
+      "identity_status": "historical_team_id_required",
+      "bdfutbol_team_id": 11701,
+      "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9411701.html",
+      "bdfutbol_crest_url": "https://www.bdfutbol.com/i/eg/11701.png",
+      "runtime_crest_path": "/historical9394/clubs/9352004.gif",
+      "crest_status": "normalized_bdfutbol_40x40_gif"
+    },
+    {
+      "historical_position": 12,
+      "name": "Cercle Brugge",
+      "team_id": 455,
+      "identity_status": "reused_exact_mdb_club",
+      "bdfutbol_team_id": 10785,
+      "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9410785.html",
+      "bdfutbol_crest_url": "https://www.bdfutbol.com/i/eg/10785e.png",
+      "runtime_crest_path": "/historical9394/clubs/455.gif",
+      "crest_status": "normalized_bdfutbol_40x40_gif"
+    },
+    {
+      "historical_position": 13,
+      "name": "RFC Liège",
+      "team_id": 9352005,
+      "identity_status": "historical_team_id_required",
+      "bdfutbol_team_id": 10266,
+      "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9410266.html",
+      "bdfutbol_crest_url": "https://www.bdfutbol.com/i/eg/10266d.png",
+      "runtime_crest_path": "/historical9394/clubs/9352005.gif",
+      "crest_status": "normalized_bdfutbol_40x40_gif"
+    },
+    {
+      "historical_position": 14,
+      "name": "Lierse",
+      "team_id": 851,
+      "identity_status": "reused_exact_mdb_club",
+      "bdfutbol_team_id": 10070,
+      "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9410070.html",
+      "bdfutbol_crest_url": "https://www.bdfutbol.com/i/eg/10070.png",
+      "runtime_crest_path": "/historical9394/clubs/851.gif",
+      "crest_status": "normalized_bdfutbol_40x40_gif"
+    },
+    {
+      "historical_position": 15,
+      "name": "Gent",
+      "team_id": 456,
+      "identity_status": "reused_exact_mdb_club",
+      "bdfutbol_team_id": 10090,
+      "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9410090.html",
+      "bdfutbol_crest_url": "https://www.bdfutbol.com/i/eg/10090f.png",
+      "runtime_crest_path": "/historical9394/clubs/456.gif",
+      "crest_status": "normalized_bdfutbol_40x40_gif"
+    },
+    {
+      "historical_position": 16,
+      "name": "Molenbeek",
+      "team_id": 9352006,
+      "identity_status": "historical_team_id_required",
+      "bdfutbol_team_id": 10067,
+      "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9410067.html",
+      "bdfutbol_crest_url": "https://www.bdfutbol.com/i/eg/10067.png",
+      "runtime_crest_path": "/historical9394/clubs/9352006.gif",
+      "crest_status": "normalized_bdfutbol_40x40_gif"
+    },
+    {
+      "historical_position": 17,
+      "name": "Waregem",
+      "team_id": 466,
+      "identity_status": "reused_exact_mdb_club",
+      "bdfutbol_team_id": 10295,
+      "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9410295.html",
+      "bdfutbol_crest_url": "https://www.bdfutbol.com/i/eg/10295.png",
+      "runtime_crest_path": "/historical9394/clubs/466.gif",
+      "crest_status": "normalized_bdfutbol_40x40_gif"
+    },
+    {
+      "historical_position": 18,
+      "name": "Genk",
+      "team_id": 462,
+      "identity_status": "reused_exact_mdb_club",
+      "bdfutbol_team_id": 10201,
+      "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9410201.html",
+      "bdfutbol_crest_url": "https://www.bdfutbol.com/i/eg/10201c.png",
+      "runtime_crest_path": "/historical9394/clubs/462.gif",
+      "crest_status": "normalized_bdfutbol_40x40_gif"
+    }
+  ]
+}

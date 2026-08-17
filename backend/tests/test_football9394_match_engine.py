@@ -63,18 +63,25 @@ def test_spanish_top_flight_profile_is_calibrated_near_1993_94_goal_environment(
     from backend.app.football9394.match_engine import SPAIN_PRIMERA_SIMULATION_1993_94
     from backend.app.football9394.snapshot_runtime import default_runtime_snapshot
     from backend.app.football9394.team_builder import build_snapshot_team_sheet
+    from backend.app.football9394.coaching import source_coach_for_team
+    from backend.app.football9394.tactical_ai import ai_tactics_for_squad
+    from backend.app.football9394.refereeing import referee_for_match
 
     universe = default_runtime_snapshot()
     engine = FootballMatchEngine9394(profile=SPAIN_PRIMERA_SIMULATION_1993_94)
-    sheets = {int(team["source_id"]): build_snapshot_team_sheet(universe, int(team["source_id"]))
-              for team in universe.teams(league_id=1)}
+    sheets = {}
+    for team in universe.teams(league_id=1):
+        team_id = int(team["source_id"])
+        coach = source_coach_for_team(universe, team_id)
+        plan = ai_tactics_for_squad(universe.players_by_team[team_id], coach)
+        sheets[team_id] = build_snapshot_team_sheet(universe, team_id, tactics=plan, coach_profile=coach)
     total_goals = 0
     fixtures = universe.league_calendar(1)
     for fixture in fixtures:
         home_id, away_id = int(fixture["home_team_id"]), int(fixture["away_team_id"])
+        seed = 9394000 + int(fixture["matchday"]) * 100 + int(fixture["id"])
         result = engine.simulate(
-            sheets[home_id], sheets[away_id],
-            seed=9394000 + int(fixture["matchday"]) * 100 + int(fixture["id"]),
+            sheets[home_id], sheets[away_id], seed=seed, referee=referee_for_match(1, seed=seed),
         )
         total_goals += result.home.goals + result.away.goals
 
@@ -82,3 +89,21 @@ def test_spanish_top_flight_profile_is_calibrated_near_1993_94_goal_environment(
     target = SPAIN_PRIMERA_SIMULATION_1993_94.target_goals_per_match
     assert target is not None
     assert abs(observed - target) < 0.08
+
+
+def test_source_referee_profile_changes_discipline_without_changing_player_ratings():
+    from backend.app.football9394.match_engine import RefereeProfile9394
+
+    engine = FootballMatchEngine9394()
+    strict = RefereeProfile9394('strict','Estricto',yellow_tendency=7.0,red_tendency=0.8,quality=80)
+    lenient = RefereeProfile9394('lenient','Permisivo',yellow_tendency=2.0,red_tendency=0.2,quality=80)
+    strict_cards=[]; lenient_cards=[]
+    for seed in range(180):
+        strict_result=engine.simulate(sheet('H'),sheet('A'),seed=seed,referee=strict)
+        lenient_result=engine.simulate(sheet('H'),sheet('A'),seed=seed,referee=lenient)
+        strict_cards.append(strict_result.home.yellow_cards+strict_result.away.yellow_cards)
+        lenient_cards.append(lenient_result.home.yellow_cards+lenient_result.away.yellow_cards)
+    assert sum(strict_cards) > sum(lenient_cards)
+    result=engine.simulate(sheet('H'),sheet('A'),seed=9394,referee=strict)
+    assert result.referee_id == 'strict'
+    assert result.referee_name == 'Estricto'

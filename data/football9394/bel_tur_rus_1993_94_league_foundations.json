@@ -1,0 +1,444 @@
+{
+  "schema_version": 1,
+  "purpose": "authoritative participant/roster-source foundation before activating Belgium, Turkey and Russia historical leagues",
+  "policy": [
+    "Never use MDB source league rosters because source IDs 52/57/15 point to 2017 editions in the supplied database.",
+    "Each historical player is reconciled against current snapshot and full MDB before creation.",
+    "League remains non-playable until every club passes the minimum squad gate."
+  ],
+  "leagues": [
+    {
+      "key": "bel_1993_94",
+      "name": "Eerste Klasse / Division 1",
+      "country": "Bélgica",
+      "source_league_id": 52,
+      "historical_season": "1993-94",
+      "teams": 18,
+      "rounds": 34,
+      "points_win": 2,
+      "direct_relegation_places": [
+        17,
+        18
+      ],
+      "activation_status": "active_historical_roster_gate_passed",
+      "roster_gate_minimum_players_per_club": 18,
+      "clubs": [
+        {
+          "historical_position": 1,
+          "name": "Anderlecht",
+          "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9410015.html",
+          "roster_status": "complete_historical_1993_94",
+          "team_id": 415
+        },
+        {
+          "historical_position": 2,
+          "name": "Club Brugge",
+          "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9410004.html",
+          "roster_status": "complete_historical_1993_94",
+          "team_id": 453
+        },
+        {
+          "historical_position": 3,
+          "name": "FC Seraing",
+          "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9412101.html",
+          "roster_status": "complete_historical_1993_94",
+          "team_id": 9352001
+        },
+        {
+          "historical_position": 4,
+          "name": "Charleroi",
+          "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9410718.html",
+          "roster_status": "complete_historical_1993_94",
+          "team_id": 454
+        },
+        {
+          "historical_position": 5,
+          "name": "Royal Antwerp",
+          "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9410010.html",
+          "roster_status": "complete_historical_1993_94",
+          "team_id": 1032
+        },
+        {
+          "historical_position": 6,
+          "name": "Standard Liège",
+          "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9410012.html",
+          "roster_status": "complete_historical_1993_94",
+          "team_id": 409
+        },
+        {
+          "historical_position": 7,
+          "name": "Oostende",
+          "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9410949.html",
+          "roster_status": "complete_historical_1993_94",
+          "team_id": 908
+        },
+        {
+          "historical_position": 8,
+          "name": "KV Mechelen",
+          "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9411101.html",
+          "roster_status": "complete_historical_1993_94",
+          "team_id": 459
+        },
+        {
+          "historical_position": 9,
+          "name": "Beveren",
+          "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9412039.html",
+          "roster_status": "complete_historical_1993_94",
+          "team_id": 9352002
+        },
+        {
+          "historical_position": 10,
+          "name": "Germinal Ekeren",
+          "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9411039.html",
+          "roster_status": "complete_historical_1993_94",
+          "team_id": 9352003
+        },
+        {
+          "historical_position": 11,
+          "name": "Lommel",
+          "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9411701.html",
+          "roster_status": "complete_historical_1993_94",
+          "team_id": 9352004
+        },
+        {
+          "historical_position": 12,
+          "name": "Cercle Brugge",
+          "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9410785.html",
+          "roster_status": "complete_historical_1993_94",
+          "team_id": 455
+        },
+        {
+          "historical_position": 13,
+          "name": "RFC Liège",
+          "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9410266.html",
+          "roster_status": "complete_historical_1993_94",
+          "team_id": 9352005
+        },
+        {
+          "historical_position": 14,
+          "name": "Lierse",
+          "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9410070.html",
+          "roster_status": "complete_historical_1993_94",
+          "team_id": 851
+        },
+        {
+          "historical_position": 15,
+          "name": "Gent",
+          "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9410090.html",
+          "roster_status": "complete_historical_1993_94",
+          "team_id": 456
+        },
+        {
+          "historical_position": 16,
+          "name": "Molenbeek",
+          "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9410067.html",
+          "roster_status": "complete_historical_1993_94",
+          "team_id": 9352006
+        },
+        {
+          "historical_position": 17,
+          "name": "Waregem",
+          "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9410295.html",
+          "roster_status": "complete_historical_1993_94",
+          "team_id": 466
+        },
+        {
+          "historical_position": 18,
+          "name": "Genk",
+          "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9410201.html",
+          "roster_status": "complete_historical_1993_94",
+          "team_id": 462
+        }
+      ],
+      "historical_runtime_league_id": 930052,
+      "source_mdb_row_is_historical": false,
+      "source_mdb_row_blocked_from_runtime_binding": true,
+      "activated_runtime_league_id": 930052
+    },
+    {
+      "key": "tur_1993_94",
+      "name": "1. Lig",
+      "country": "Turquía",
+      "source_league_id": 57,
+      "historical_season": "1993-94",
+      "teams": 16,
+      "rounds": 30,
+      "points_win": 3,
+      "direct_relegation_places": [
+        14,
+        15,
+        16
+      ],
+      "activation_status": "active_historical_roster_gate_passed",
+      "roster_gate_minimum_players_per_club": 18,
+      "clubs": [
+        {
+          "historical_position": 1,
+          "name": "Galatasaray",
+          "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9410020.html",
+          "roster_status": "complete_historical_1993_94",
+          "team_id": 645
+        },
+        {
+          "historical_position": 2,
+          "name": "Fenerbahçe",
+          "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9410178.html",
+          "roster_status": "complete_historical_1993_94",
+          "team_id": 9357001
+        },
+        {
+          "historical_position": 3,
+          "name": "Trabzonspor",
+          "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9410047.html",
+          "roster_status": "complete_historical_1993_94",
+          "team_id": 9357002
+        },
+        {
+          "historical_position": 4,
+          "name": "Beşiktaş",
+          "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9410031.html",
+          "roster_status": "complete_historical_1993_94",
+          "team_id": 644
+        },
+        {
+          "historical_position": 5,
+          "name": "Samsunspor",
+          "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9411698.html",
+          "roster_status": "complete_historical_1993_94",
+          "team_id": 9357003
+        },
+        {
+          "historical_position": 6,
+          "name": "Kocaelispor",
+          "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9410861.html",
+          "roster_status": "complete_historical_1993_94",
+          "team_id": 9357004
+        },
+        {
+          "historical_position": 7,
+          "name": "Gençlerbirliği",
+          "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9410358.html",
+          "roster_status": "complete_historical_1993_94",
+          "team_id": 9357005
+        },
+        {
+          "historical_position": 8,
+          "name": "Gaziantepspor",
+          "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9410300.html",
+          "roster_status": "complete_historical_1993_94",
+          "team_id": 9357006
+        },
+        {
+          "historical_position": 9,
+          "name": "Bursaspor",
+          "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9410247.html",
+          "roster_status": "complete_historical_1993_94",
+          "team_id": 9357007
+        },
+        {
+          "historical_position": 10,
+          "name": "Altay",
+          "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9411414.html",
+          "roster_status": "complete_historical_1993_94",
+          "team_id": 9357008
+        },
+        {
+          "historical_position": 11,
+          "name": "Ankaragücü",
+          "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9410353.html",
+          "roster_status": "complete_historical_1993_94",
+          "team_id": 9357009
+        },
+        {
+          "historical_position": 12,
+          "name": "Kayserispor",
+          "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9410432.html",
+          "roster_status": "complete_historical_1993_94",
+          "team_id": 9357010
+        },
+        {
+          "historical_position": 13,
+          "name": "Zeytinburnuspor",
+          "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-949025.html",
+          "roster_status": "complete_historical_1993_94",
+          "team_id": 9357011
+        },
+        {
+          "historical_position": 14,
+          "name": "Karabükspor",
+          "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9410744.html",
+          "roster_status": "complete_historical_1993_94",
+          "team_id": 9357012
+        },
+        {
+          "historical_position": 15,
+          "name": "Karşıyaka",
+          "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-949026.html",
+          "roster_status": "complete_historical_1993_94",
+          "team_id": 9357013
+        },
+        {
+          "historical_position": 16,
+          "name": "Sarıyer",
+          "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-949024.html",
+          "roster_status": "complete_historical_1993_94",
+          "team_id": 9357014
+        }
+      ],
+      "historical_runtime_league_id": 930057,
+      "source_mdb_row_is_historical": false,
+      "source_mdb_row_blocked_from_runtime_binding": true,
+      "activated_runtime_league_id": 930057
+    },
+    {
+      "key": "rus_1993",
+      "name": "Supreme League",
+      "country": "Rusia",
+      "source_league_id": 15,
+      "historical_season": "1993",
+      "teams": 18,
+      "rounds": 34,
+      "points_win": 2,
+      "direct_relegation_places": [
+        15,
+        16,
+        17,
+        18
+      ],
+      "activation_status": "active_historical_roster_gate_passed",
+      "roster_gate_minimum_players_per_club": 18,
+      "clubs": [
+        {
+          "historical_position": 1,
+          "name": "Spartak Moskva",
+          "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9410023.html",
+          "roster_status": "complete_historical_1993",
+          "team_id": 617
+        },
+        {
+          "historical_position": 2,
+          "name": "Rotor Volgograd",
+          "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9411034.html",
+          "roster_status": "complete_historical_1993",
+          "team_id": 9315001
+        },
+        {
+          "historical_position": 3,
+          "name": "Dynamo Moskva",
+          "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9410165.html",
+          "roster_status": "complete_historical_1993",
+          "team_id": 9315002
+        },
+        {
+          "historical_position": 4,
+          "name": "Tekstilshchik Kamyshin",
+          "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9411094.html",
+          "roster_status": "complete_historical_1993",
+          "team_id": 9315003
+        },
+        {
+          "historical_position": 5,
+          "name": "Lokomotiv Moskva",
+          "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9410040.html",
+          "roster_status": "complete_historical_1993",
+          "team_id": 9315004
+        },
+        {
+          "historical_position": 6,
+          "name": "Spartak Vladikavkaz",
+          "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9410778.html",
+          "roster_status": "complete_historical_1993",
+          "team_id": 9315005
+        },
+        {
+          "historical_position": 7,
+          "name": "Torpedo Moskva",
+          "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9410068.html",
+          "roster_status": "complete_historical_1993",
+          "team_id": 1087
+        },
+        {
+          "historical_position": 8,
+          "name": "Uralmash",
+          "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9411709.html",
+          "roster_status": "complete_historical_1993",
+          "team_id": 9315006
+        },
+        {
+          "historical_position": 9,
+          "name": "CSKA Moskva",
+          "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9410030.html",
+          "roster_status": "complete_historical_1993",
+          "team_id": 9315007
+        },
+        {
+          "historical_position": 10,
+          "name": "KAMAZ",
+          "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9411710.html",
+          "roster_status": "complete_historical_1993",
+          "team_id": 9315008
+        },
+        {
+          "historical_position": 11,
+          "name": "Zhemchuzhina Sochi",
+          "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9422018.html",
+          "roster_status": "complete_historical_1993",
+          "team_id": 9315009
+        },
+        {
+          "historical_position": 12,
+          "name": "Dynamo Stavropol",
+          "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9422021.html",
+          "roster_status": "complete_historical_1993",
+          "team_id": 9315010
+        },
+        {
+          "historical_position": 13,
+          "name": "Lokomotiv Nizhny Novgorod",
+          "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9422016.html",
+          "roster_status": "complete_historical_1993",
+          "team_id": 9315011
+        },
+        {
+          "historical_position": 14,
+          "name": "Krylia Sovetov",
+          "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9410800.html",
+          "roster_status": "complete_historical_1993",
+          "team_id": 9315012
+        },
+        {
+          "historical_position": 15,
+          "name": "Luch Vladivostok",
+          "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9422002.html",
+          "roster_status": "complete_historical_1993",
+          "team_id": 9315013
+        },
+        {
+          "historical_position": 16,
+          "name": "Okean Nakhodka",
+          "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9422022.html",
+          "roster_status": "complete_historical_1993",
+          "team_id": 9315014
+        },
+        {
+          "historical_position": 17,
+          "name": "Rostselmash",
+          "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9410748.html",
+          "roster_status": "complete_historical_1993",
+          "team_id": 9315015
+        },
+        {
+          "historical_position": 18,
+          "name": "Asmaral Moskva",
+          "bdfutbol_squad_url": "https://www.bdfutbol.com/en/t/t1993-9422023.html",
+          "roster_status": "complete_historical_1993",
+          "team_id": 9315016
+        }
+      ],
+      "historical_runtime_league_id": 930015,
+      "source_mdb_row_is_historical": false,
+      "source_mdb_row_blocked_from_runtime_binding": true,
+      "activated_runtime_league_id": 930015
+    }
+  ]
+}

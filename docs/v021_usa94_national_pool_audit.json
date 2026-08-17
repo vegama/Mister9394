@@ -1,0 +1,327 @@
+{
+  "checkpoint": "0.21.0-studio-usa94-national-pool",
+  "runtime_counts": {
+    "teams": 460,
+    "players": 10805
+  },
+  "source_provenance_counts": {
+    "all_leagues": 259,
+    "historical_leagues": 23,
+    "admitted_historical_leagues": 21,
+    "non_admitted_historical_leagues": 2,
+    "all_tournaments": 87,
+    "historical_tournaments": 5,
+    "all_teams": 2281,
+    "historical_teams": 441,
+    "domestic_teams": 410,
+    "continental_only_teams": 31,
+    "all_players": 37312,
+    "historical_players": 10528,
+    "league_calendar_rows": 380
+  },
+  "functional_definition": {
+    "squad_size": 22,
+    "POR_min": 2,
+    "DEF_min": 5,
+    "MED_min": 5,
+    "DEL_min": 3
+  },
+  "functional_national_teams": 39,
+  "functional_names": [
+    "Alemania",
+    "Arabia Saudí",
+    "Argentina",
+    "Austria",
+    "Bolivia",
+    "Brasil",
+    "Bulgaria",
+    "Bélgica",
+    "Camerún",
+    "Canadá",
+    "Colombia",
+    "Corea del Sur",
+    "Croacia",
+    "Dinamarca",
+    "Escocia",
+    "España",
+    "Estados Unidos",
+    "Francia",
+    "Gales",
+    "Grecia",
+    "Inglaterra",
+    "Irlanda",
+    "Italia",
+    "Japón",
+    "Marruecos",
+    "México",
+    "Nigeria",
+    "Noruega",
+    "Países Bajos",
+    "Polonia",
+    "Portugal",
+    "República Checa",
+    "Rumanía",
+    "Rusia",
+    "Suecia",
+    "Suiza",
+    "Turquía",
+    "Ucrania",
+    "Uruguay"
+  ],
+  "usa94": {
+    "countries": 24,
+    "squad_slots": 528,
+    "all_24_functional": true,
+    "source_existing_players": 251,
+    "added_players": 277,
+    "market_container_players": 265,
+    "playable_club_assignments": 12,
+    "market_container_teams": 19
+  },
+  "next_data_targets": [
+    {
+      "country_id": 75,
+      "name": "Yugoslavia",
+      "eligible_players": 46,
+      "positions": {
+        "POR": 1,
+        "DEF": 18,
+        "MED": 17,
+        "DEL": 10
+      },
+      "minimum_missing": {
+        "total": 0,
+        "POR": 1,
+        "DEF": 0,
+        "MED": 0,
+        "DEL": 0
+      },
+      "presentation_mapped": true,
+      "temporal_status": "requires_1993_94_verification_before_enabling"
+    },
+    {
+      "country_id": 68,
+      "name": "Paraguay",
+      "eligible_players": 36,
+      "positions": {
+        "POR": 6,
+        "DEF": 4,
+        "MED": 12,
+        "DEL": 14
+      },
+      "minimum_missing": {
+        "total": 0,
+        "POR": 0,
+        "DEF": 1,
+        "MED": 0,
+        "DEL": 0
+      },
+      "presentation_mapped": true,
+      "temporal_status": "requires_1993_94_verification_before_enabling"
+    },
+    {
+      "country_id": 44,
+      "name": "Irlanda del Norte",
+      "eligible_players": 25,
+      "positions": {
+        "POR": 1,
+        "DEF": 9,
+        "MED": 12,
+        "DEL": 3
+      },
+      "minimum_missing": {
+        "total": 0,
+        "POR": 1,
+        "DEF": 0,
+        "MED": 0,
+        "DEL": 0
+      },
+      "presentation_mapped": true,
+      "temporal_status": "requires_1993_94_verification_before_enabling"
+    },
+    {
+      "country_id": 36,
+      "name": "Eslovaquia",
+      "eligible_players": 21,
+      "positions": {
+        "POR": 2,
+        "DEF": 10,
+        "MED": 5,
+        "DEL": 4
+      },
+      "minimum_missing": {
+        "total": 1,
+        "POR": 0,
+        "DEF": 0,
+        "MED": 0,
+        "DEL": 0
+      },
+      "presentation_mapped": true,
+      "temporal_status": "requires_1993_94_verification_before_enabling"
+    },
+    {
+      "country_id": 93,
+      "name": "Hungría",
+      "eligible_players": 22,
+      "positions": {
+        "POR": 3,
+        "DEF": 3,
+        "MED": 11,
+        "DEL": 5
+      },
+      "minimum_missing": {
+        "total": 0,
+        "POR": 0,
+        "DEF": 2,
+        "MED": 0,
+        "DEL": 0
+      },
+      "presentation_mapped": true,
+      "temporal_status": "requires_1993_94_verification_before_enabling"
+    },
+    {
+      "country_id": 20,
+      "name": "Bosnia y Herzegovina",
+      "eligible_players": 21,
+      "positions": {
+        "POR": 1,
+        "DEF": 4,
+        "MED": 9,
+        "DEL": 7
+      },
+      "minimum_missing": {
+        "total": 1,
+        "POR": 1,
+        "DEF": 1,
+        "MED": 0,
+        "DEL": 0
+      },
+      "presentation_mapped": true,
+      "temporal_status": "requires_1993_94_verification_before_enabling"
+    },
+    {
+      "country_id": 12,
+      "name": "Angola",
+      "eligible_players": 18,
+      "positions": {
+        "POR": 2,
+        "DEF": 5,
+        "MED": 5,
+        "DEL": 6
+      },
+      "minimum_missing": {
+        "total": 4,
+        "POR": 0,
+        "DEF": 0,
+        "MED": 0,
+        "DEL": 0
+      },
+      "presentation_mapped": false,
+      "temporal_status": "requires_1993_94_verification_before_enabling"
+    },
+    {
+      "country_id": 23,
+      "name": "Chile",
+      "eligible_players": 19,
+      "positions": {
+        "POR": 0,
+        "DEF": 3,
+        "MED": 6,
+        "DEL": 10
+      },
+      "minimum_missing": {
+        "total": 3,
+        "POR": 2,
+        "DEF": 2,
+        "MED": 0,
+        "DEL": 0
+      },
+      "presentation_mapped": false,
+      "temporal_status": "requires_1993_94_verification_before_enabling"
+    },
+    {
+      "country_id": 65,
+      "name": "Islandia",
+      "eligible_players": 17,
+      "positions": {
+        "POR": 0,
+        "DEF": 5,
+        "MED": 5,
+        "DEL": 7
+      },
+      "minimum_missing": {
+        "total": 5,
+        "POR": 2,
+        "DEF": 0,
+        "MED": 0,
+        "DEL": 0
+      },
+      "presentation_mapped": false,
+      "temporal_status": "requires_1993_94_verification_before_enabling"
+    },
+    {
+      "country_id": 41,
+      "name": "Finlandia",
+      "eligible_players": 18,
+      "positions": {
+        "POR": 0,
+        "DEF": 3,
+        "MED": 8,
+        "DEL": 7
+      },
+      "minimum_missing": {
+        "total": 4,
+        "POR": 2,
+        "DEF": 2,
+        "MED": 0,
+        "DEL": 0
+      },
+      "presentation_mapped": false,
+      "temporal_status": "requires_1993_94_verification_before_enabling"
+    },
+    {
+      "country_id": 49,
+      "name": "Israel",
+      "eligible_players": 16,
+      "positions": {
+        "POR": 1,
+        "DEF": 3,
+        "MED": 5,
+        "DEL": 7
+      },
+      "minimum_missing": {
+        "total": 6,
+        "POR": 1,
+        "DEF": 2,
+        "MED": 0,
+        "DEL": 0
+      },
+      "presentation_mapped": false,
+      "temporal_status": "requires_1993_94_verification_before_enabling"
+    },
+    {
+      "country_id": 15,
+      "name": "Australia",
+      "eligible_players": 15,
+      "positions": {
+        "POR": 3,
+        "DEF": 2,
+        "MED": 8,
+        "DEL": 2
+      },
+      "minimum_missing": {
+        "total": 7,
+        "POR": 0,
+        "DEF": 3,
+        "MED": 0,
+        "DEL": 1
+      },
+      "presentation_mapped": false,
+      "temporal_status": "requires_1993_94_verification_before_enabling"
+    }
+  ],
+  "notes": [
+    "source country metadata is mixed-edition; non-USA94 candidates require explicit 1993-94 temporal validation before activation",
+    "next targets are density candidates only; they are not exposed as functional until the strict squad gate passes"
+  ]
+}

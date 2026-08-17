@@ -6,7 +6,7 @@ from backend.app.football9394.world_career import WorldCareerStore9394, simulate
 def test_world_season_runs_every_admitted_competition_and_builds_rollover_projection(tmp_path):
     payload = simulate_world_season_1993_94(seed=51)
     assert payload["status"] == "complete"
-    assert payload["competition_count"] == 26
+    assert payload["competition_count"] == 30
     assert payload["all_competitions_complete"] is True
     assert len(payload["honours"]) >= 20
     assert len(payload["movement"]["resolved_links"]) == 8
@@ -25,8 +25,8 @@ def test_world_season_runs_every_admitted_competition_and_builds_rollover_projec
     assert projection["competition_pools"]["league:3"]["ready"] is True
     assert projection["competition_pools"]["league:3"]["sporting_relegation"] is False
     assert projection["blocked_source_keys"] == []
-    assert projection["admitted_league_count"] == 21
-    assert projection["projected_league_count"] == 21
+    assert projection["admitted_league_count"] == 22
+    assert projection["projected_league_count"] == 22
     assert projection["all_admitted_leagues_ready"] is True
     assert projection["competition_pools"]["league:47"]["actual"] == 32
     assert payload["movement"]["unresolved_links"] == []
@@ -39,7 +39,7 @@ def test_world_season_runs_every_admitted_competition_and_builds_rollover_projec
     restored = store.load(payload["career_id"])
     assert path.exists()
     assert restored["career_id"] == payload["career_id"]
-    assert restored["competition_count"] == 26
+    assert restored["competition_count"] == 30
 
 
 def test_store_rejects_empty_career_id(tmp_path):

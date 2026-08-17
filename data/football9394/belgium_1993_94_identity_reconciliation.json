@@ -1,0 +1,751 @@
+{
+  "staged_players": 413,
+  "snapshot_unique": 70,
+  "snapshot_ambiguous": 6,
+  "mdb_unique": 26,
+  "mdb_ambiguous": 10,
+  "unresolved": 301,
+  "duplicate_traps": [
+    {
+      "club": "Club Brugge",
+      "name": "Medved",
+      "age": 25,
+      "snapshot_candidates": [
+        {
+          "source_id": 5397,
+          "display_name": "Shawn Medved",
+          "birth_date": "1967-06-16T00:00:00",
+          "team_id": 1758,
+          "team_name": "Fort Lauderdale",
+          "historical_club_1994": null,
+          "overall": 69,
+          "broad_position": "MED",
+          "score": 95
+        },
+        {
+          "source_id": 9494207,
+          "display_name": "Dirk Medved",
+          "birth_date": "1968-09-15T00:00:00",
+          "team_id": 9400017,
+          "team_name": "Otros-Bélgica",
+          "historical_club_1994": null,
+          "overall": 77,
+          "broad_position": "DEF",
+          "score": 95
+        }
+      ]
+    },
+    {
+      "club": "FC Seraing",
+      "name": "Varga",
+      "age": 34,
+      "mdb_candidates": [
+        {
+          "mdb_id": 10998,
+          "display_name": "Banel Varga",
+          "apodo": "Varga",
+          "birth_date": "1962-01-07T00:00:00",
+          "team_id": 1479,
+          "team_name": "ASA Târgu Mureș",
+          "primary_role": 11,
+          "overall": 0,
+          "category": 71,
+          "score": 100
+        },
+        {
+          "mdb_id": 20982,
+          "display_name": "Krisztián Varga",
+          "apodo": "Varga",
+          "birth_date": "1970-01-19T00:00:00",
+          "team_id": 785,
+          "team_name": "Novara",
+          "primary_role": 8,
+          "overall": 66,
+          "category": 53,
+          "score": 100
+        },
+        {
+          "mdb_id": 31806,
+          "display_name": "Kristopher Varga",
+          "apodo": "Varga",
+          "birth_date": "1972-06-23T00:00:00",
+          "team_id": 1,
+          "team_name": "Jugadores libres",
+          "primary_role": 10,
+          "overall": 62,
+          "category": 59,
+          "score": 100
+        },
+        {
+          "mdb_id": 36020,
+          "display_name": "Igor Varga",
+          "apodo": "Varga",
+          "birth_date": "1966-10-25T00:00:00",
+          "team_id": 1673,
+          "team_name": "FC Hradec Králové",
+          "primary_role": 8,
+          "overall": 53,
+          "category": 50,
+          "score": 100
+        },
+        {
+          "mdb_id": 38439,
+          "display_name": "Róbert Varga",
+          "apodo": "Varga",
+          "birth_date": "1968-03-08T00:00:00",
+          "team_id": 2064,
+          "team_name": "MFK Zemplín Michalovce",
+          "primary_role": 12,
+          "overall": 79,
+          "category": 0,
+          "score": 100
+        }
+      ]
+    },
+    {
+      "club": "Charleroi",
+      "name": "Gérard",
+      "age": 21,
+      "mdb_candidates": [
+        {
+          "mdb_id": 21109,
+          "display_name": "Hugo Gérard",
+          "apodo": "Gérard",
+          "birth_date": "1969-01-07T00:00:00",
+          "team_id": 1928,
+          "team_name": "Miami Fusion",
+          "primary_role": 3,
+          "overall": 60,
+          "category": 50,
+          "score": 100
+        },
+        {
+          "mdb_id": 10057,
+          "display_name": "Gerard Wiekens",
+          "apodo": "Wiekens",
+          "birth_date": "1973-02-25T00:00:00",
+          "team_id": 2356,
+          "team_name": "SC Veendam",
+          "primary_role": 3,
+          "overall": 70,
+          "category": 71,
+          "score": 95
+        }
+      ]
+    },
+    {
+      "club": "Charleroi",
+      "name": "Remy",
+      "age": 20,
+      "snapshot_candidates": [
+        {
+          "source_id": 5936,
+          "display_name": "Rémy",
+          "birth_date": "1971-08-06T00:00:00",
+          "team_id": 234,
+          "team_name": "AJ Auxerre",
+          "historical_club_1994": null,
+          "overall": 72,
+          "broad_position": "DEF",
+          "score": 110
+        },
+        {
+          "source_id": 6387,
+          "display_name": "Jacques Remy",
+          "birth_date": "1972-03-03T00:00:00",
+          "team_id": 244,
+          "team_name": "SM Caen",
+          "historical_club_1994": null,
+          "overall": 70,
+          "broad_position": "DEL",
+          "score": 95
+        }
+      ]
+    },
+    {
+      "club": "Standard Liège",
+      "name": "Goossens",
+      "age": 20,
+      "snapshot_candidates": [
+        {
+          "source_id": 9495303,
+          "display_name": "Michaël Goossens",
+          "birth_date": "1973-11-30T00:00:00",
+          "team_id": 9400017,
+          "team_name": "Otros-Bélgica",
+          "historical_club_1994": "Standard Liège",
+          "overall": 72,
+          "broad_position": "DEL",
+          "score": 140
+        },
+        {
+          "source_id": 10034,
+          "display_name": "Goossens",
+          "birth_date": "1969-01-08T00:00:00",
+          "team_id": 1072,
+          "team_name": "FC Eindhoven",
+          "historical_club_1994": null,
+          "overall": 67,
+          "broad_position": "DEF",
+          "score": 110
+        }
+      ]
+    },
+    {
+      "club": "Standard Liège",
+      "name": "Smeets",
+      "age": 19,
+      "mdb_candidates": [
+        {
+          "mdb_id": 31795,
+          "display_name": "Vincent Smeets",
+          "apodo": "Smeets",
+          "birth_date": "1971-08-09T00:00:00",
+          "team_id": 1,
+          "team_name": "Jugadores libres",
+          "primary_role": 17,
+          "overall": 64,
+          "category": 62,
+          "score": 100
+        },
+        {
+          "mdb_id": 31797,
+          "display_name": "Erik Smeets",
+          "apodo": "Smeets",
+          "birth_date": "1964-04-16T00:00:00",
+          "team_id": 1,
+          "team_name": "Jugadores libres",
+          "primary_role": 17,
+          "overall": 61,
+          "category": 59,
+          "score": 100
+        }
+      ]
+    },
+    {
+      "club": "Oostende",
+      "name": "Origi",
+      "age": 26,
+      "mdb_candidates": [
+        {
+          "mdb_id": 13870,
+          "display_name": "McDonald Origi Wanyama",
+          "apodo": "Origi",
+          "birth_date": "1964-04-04T00:00:00",
+          "team_id": 991,
+          "team_name": "US Latina",
+          "primary_role": 7,
+          "overall": 69,
+          "category": 77,
+          "score": 100
+        },
+        {
+          "mdb_id": 21465,
+          "display_name": "Nathan Origi",
+          "apodo": "Origi",
+          "birth_date": "1974-12-22T00:00:00",
+          "team_id": 460,
+          "team_name": "KSC Lokeren",
+          "primary_role": 8,
+          "overall": 46,
+          "category": 50,
+          "score": 100
+        }
+      ]
+    },
+    {
+      "club": "Oostende",
+      "name": "Gérard",
+      "age": 22,
+      "mdb_candidates": [
+        {
+          "mdb_id": 21109,
+          "display_name": "Hugo Gérard",
+          "apodo": "Gérard",
+          "birth_date": "1969-01-07T00:00:00",
+          "team_id": 1928,
+          "team_name": "Miami Fusion",
+          "primary_role": 3,
+          "overall": 60,
+          "category": 50,
+          "score": 100
+        },
+        {
+          "mdb_id": 5628,
+          "display_name": "Gerard Thomas Creaney",
+          "apodo": "Gerry Creaney",
+          "birth_date": "1970-04-13T00:00:00",
+          "team_id": 493,
+          "team_name": "Celtic FC",
+          "primary_role": 17,
+          "overall": 71,
+          "category": 71,
+          "score": 95
+        },
+        {
+          "mdb_id": 5790,
+          "display_name": "Gerard Joseph Britton",
+          "apodo": "Gerry Britton",
+          "birth_date": "1970-10-20T00:00:00",
+          "team_id": 913,
+          "team_name": "Partick Thistle FC",
+          "primary_role": 17,
+          "overall": 70,
+          "category": 70,
+          "score": 95
+        }
+      ]
+    },
+    {
+      "club": "KV Mechelen",
+      "name": "Janssen",
+      "age": 19,
+      "snapshot_candidates": [
+        {
+          "source_id": 9483,
+          "display_name": "Janssen",
+          "birth_date": "1971-09-17T00:00:00",
+          "team_id": 1891,
+          "team_name": "Fortuna Sittard",
+          "historical_club_1994": null,
+          "overall": 66,
+          "broad_position": "DEF",
+          "score": 110
+        },
+        {
+          "source_id": 9498,
+          "display_name": "Janssen",
+          "birth_date": "1963-08-10T00:00:00",
+          "team_id": 1891,
+          "team_name": "Fortuna Sittard",
+          "historical_club_1994": null,
+          "overall": 75,
+          "broad_position": "MED",
+          "score": 110
+        }
+      ]
+    },
+    {
+      "club": "Germinal Ekeren",
+      "name": "Pierre",
+      "age": 19,
+      "mdb_candidates": [
+        {
+          "mdb_id": 35344,
+          "display_name": "Saheed Adebayo Pierre",
+          "apodo": "Pierre",
+          "birth_date": "1959-05-10T00:00:00",
+          "team_id": 365,
+          "team_name": "Wycombe Wanderers FC",
+          "primary_role": 17,
+          "overall": 59,
+          "category": 55,
+          "score": 100
+        },
+        {
+          "mdb_id": 6213,
+          "display_name": "Pierre Bastou",
+          "apodo": "Pierre Bastou",
+          "birth_date": "1973-08-01T00:00:00",
+          "team_id": 243,
+          "team_name": "AS Saint-Etienne",
+          "primary_role": 9,
+          "overall": 67,
+          "category": 68,
+          "score": 95
+        }
+      ]
+    },
+    {
+      "club": "Cercle Brugge",
+      "name": "Weber",
+      "age": 29,
+      "snapshot_candidates": [
+        {
+          "source_id": 25485,
+          "display_name": "Weber",
+          "birth_date": "1974-08-07T00:00:00",
+          "team_id": 489,
+          "team_name": "Brøndby IF",
+          "historical_club_1994": null,
+          "overall": 57,
+          "broad_position": "MED",
+          "score": 110
+        },
+        {
+          "source_id": 9494220,
+          "display_name": "Josip Weber",
+          "birth_date": "1964-11-16T00:00:00",
+          "team_id": 9400017,
+          "team_name": "Otros-Bélgica",
+          "historical_club_1994": null,
+          "overall": 79,
+          "broad_position": "DEL",
+          "score": 95
+        }
+      ]
+    },
+    {
+      "club": "RFC Liège",
+      "name": "Lecomte",
+      "age": 25,
+      "mdb_candidates": [
+        {
+          "mdb_id": 16016,
+          "display_name": "Lamine Lecomte",
+          "apodo": "Lecomte",
+          "birth_date": "1966-02-01T00:00:00",
+          "team_id": 259,
+          "team_name": "Sunderland AFC",
+          "primary_role": 3,
+          "overall": 61,
+          "category": 75,
+          "score": 100
+        },
+        {
+          "mdb_id": 22443,
+          "display_name": "Charly Lecomte",
+          "apodo": "Lecomte",
+          "birth_date": "1971-05-15T00:00:00",
+          "team_id": 207,
+          "team_name": "US Concarneau",
+          "primary_role": 17,
+          "overall": 61,
+          "category": 50,
+          "score": 100
+        }
+      ]
+    },
+    {
+      "club": "Gent",
+      "name": "Karačić",
+      "age": 33,
+      "mdb_candidates": [
+        {
+          "mdb_id": 31715,
+          "display_name": "Filip Karačić",
+          "apodo": "Karačić",
+          "birth_date": "1974-07-13T00:00:00",
+          "team_id": 483,
+          "team_name": "GNK Dinamo Zagreb",
+          "primary_role": 3,
+          "overall": 68,
+          "category": 68,
+          "score": 100
+        },
+        {
+          "mdb_id": 33837,
+          "display_name": "Abid Karačić",
+          "apodo": "Karačić",
+          "birth_date": "1970-08-05T00:00:00",
+          "team_id": 1832,
+          "team_name": "NK Inter Zaprešić",
+          "primary_role": 12,
+          "overall": 0,
+          "category": 50,
+          "score": 100
+        }
+      ]
+    },
+    {
+      "club": "Molenbeek",
+      "name": "Williams",
+      "age": 27,
+      "snapshot_candidates": [
+        {
+          "source_id": 1836,
+          "display_name": "Williams",
+          "birth_date": "1969-11-21T00:00:00",
+          "team_id": 337,
+          "team_name": "Sheffield Wednesday FC",
+          "historical_club_1994": null,
+          "overall": 72,
+          "broad_position": "MED",
+          "score": 110
+        },
+        {
+          "source_id": 1938,
+          "display_name": "Williams",
+          "birth_date": "1973-02-03T00:00:00",
+          "team_id": 249,
+          "team_name": "Aston Villa FC",
+          "historical_club_1994": null,
+          "overall": 67,
+          "broad_position": "MED",
+          "score": 110
+        },
+        {
+          "source_id": 1958,
+          "display_name": "Williams",
+          "birth_date": "1968-05-11T00:00:00",
+          "team_id": 323,
+          "team_name": "Coventry City FC",
+          "historical_club_1994": null,
+          "overall": 77,
+          "broad_position": "DEL",
+          "score": 110
+        },
+        {
+          "source_id": 1965,
+          "display_name": "Williams",
+          "birth_date": "1969-09-11T00:00:00",
+          "team_id": 323,
+          "team_name": "Coventry City FC",
+          "historical_club_1994": null,
+          "overall": 70,
+          "broad_position": "DEL",
+          "score": 110
+        },
+        {
+          "source_id": 2215,
+          "display_name": "Williams",
+          "birth_date": "1962-01-05T00:00:00",
+          "team_id": 327,
+          "team_name": "Ipswich Town FC",
+          "historical_club_1994": null,
+          "overall": 75,
+          "broad_position": "MED",
+          "score": 110
+        }
+      ]
+    },
+    {
+      "club": "Molenbeek",
+      "name": "Jacobs",
+      "age": 26,
+      "mdb_candidates": [
+        {
+          "mdb_id": 15783,
+          "display_name": "Thulani Jacobs",
+          "apodo": "Jacobs",
+          "birth_date": "1967-04-11T00:00:00",
+          "team_id": 1,
+          "team_name": "Jugadores libres",
+          "primary_role": 6,
+          "overall": 70,
+          "category": 73,
+          "score": 140
+        },
+        {
+          "mdb_id": 37872,
+          "display_name": "Sergio Vicenzo Jacobs",
+          "apodo": "Jacobs",
+          "birth_date": "1967-04-17T00:00:00",
+          "team_id": 2332,
+          "team_name": "SV Robinhood",
+          "primary_role": 0,
+          "overall": 59,
+          "category": 0,
+          "score": 140
+        },
+        {
+          "mdb_id": 18606,
+          "display_name": "Adam Richard Jacobs",
+          "apodo": "Jacobs",
+          "birth_date": "1963-11-28T00:00:00",
+          "team_id": 342,
+          "team_name": "Birmingham City FC",
+          "primary_role": 0,
+          "overall": 64,
+          "category": 60,
+          "score": 100
+        },
+        {
+          "mdb_id": 26398,
+          "display_name": "Furkan Muharrem Jacobs",
+          "apodo": "Jacobs",
+          "birth_date": "1974-06-02T00:00:00",
+          "team_id": 1,
+          "team_name": "Jugadores libres",
+          "primary_role": 13,
+          "overall": 46,
+          "category": 50,
+          "score": 100
+        }
+      ]
+    },
+    {
+      "club": "Molenbeek",
+      "name": "Albert",
+      "age": 19,
+      "mdb_candidates": [
+        {
+          "mdb_id": 3868,
+          "display_name": "Albert Argemí Moncunill",
+          "apodo": "Argemí",
+          "birth_date": "1973-10-08T00:00:00",
+          "team_id": 696,
+          "team_name": "UE Sant Andreu",
+          "primary_role": 0,
+          "overall": 61,
+          "category": 62,
+          "score": 95
+        },
+        {
+          "mdb_id": 4129,
+          "display_name": "Albert Colomé Nou",
+          "apodo": "Colomé",
+          "birth_date": "1974-03-01T00:00:00",
+          "team_id": 2307,
+          "team_name": "AEC Manlleu",
+          "primary_role": 17,
+          "overall": 59,
+          "category": 60,
+          "score": 95
+        },
+        {
+          "mdb_id": 4180,
+          "display_name": "Albert Arbusá Grabulosa",
+          "apodo": "Arbusá",
+          "birth_date": "1975-02-14T00:00:00",
+          "team_id": 48,
+          "team_name": "Girona FC",
+          "primary_role": 17,
+          "overall": 55,
+          "category": 56,
+          "score": 95
+        },
+        {
+          "mdb_id": 4183,
+          "display_name": "Albert Redondo Prat",
+          "apodo": "Redondo",
+          "birth_date": "1974-12-05T00:00:00",
+          "team_id": 48,
+          "team_name": "Girona FC",
+          "primary_role": 6,
+          "overall": 55,
+          "category": 56,
+          "score": 95
+        }
+      ]
+    }
+  ],
+  "clubs": {
+    "Anderlecht": {
+      "players": 24,
+      "snapshot_unique": 14,
+      "mdb_unique": 1,
+      "unresolved": 9,
+      "ambiguous": 0
+    },
+    "Club Brugge": {
+      "players": 21,
+      "snapshot_unique": 9,
+      "mdb_unique": 0,
+      "unresolved": 11,
+      "ambiguous": 1
+    },
+    "FC Seraing": {
+      "players": 19,
+      "snapshot_unique": 2,
+      "mdb_unique": 4,
+      "unresolved": 12,
+      "ambiguous": 1
+    },
+    "Charleroi": {
+      "players": 20,
+      "snapshot_unique": 1,
+      "mdb_unique": 1,
+      "unresolved": 16,
+      "ambiguous": 2
+    },
+    "Royal Antwerp": {
+      "players": 24,
+      "snapshot_unique": 5,
+      "mdb_unique": 3,
+      "unresolved": 16,
+      "ambiguous": 0
+    },
+    "Standard Liège": {
+      "players": 24,
+      "snapshot_unique": 8,
+      "mdb_unique": 1,
+      "unresolved": 13,
+      "ambiguous": 2
+    },
+    "Oostende": {
+      "players": 19,
+      "snapshot_unique": 1,
+      "mdb_unique": 1,
+      "unresolved": 15,
+      "ambiguous": 2
+    },
+    "KV Mechelen": {
+      "players": 24,
+      "snapshot_unique": 7,
+      "mdb_unique": 0,
+      "unresolved": 16,
+      "ambiguous": 1
+    },
+    "Beveren": {
+      "players": 23,
+      "snapshot_unique": 1,
+      "mdb_unique": 2,
+      "unresolved": 20,
+      "ambiguous": 0
+    },
+    "Germinal Ekeren": {
+      "players": 25,
+      "snapshot_unique": 3,
+      "mdb_unique": 2,
+      "unresolved": 19,
+      "ambiguous": 1
+    },
+    "Lommel": {
+      "players": 22,
+      "snapshot_unique": 1,
+      "mdb_unique": 4,
+      "unresolved": 17,
+      "ambiguous": 0
+    },
+    "Cercle Brugge": {
+      "players": 24,
+      "snapshot_unique": 3,
+      "mdb_unique": 0,
+      "unresolved": 20,
+      "ambiguous": 1
+    },
+    "RFC Liège": {
+      "players": 24,
+      "snapshot_unique": 5,
+      "mdb_unique": 0,
+      "unresolved": 18,
+      "ambiguous": 1
+    },
+    "Lierse": {
+      "players": 20,
+      "snapshot_unique": 2,
+      "mdb_unique": 2,
+      "unresolved": 16,
+      "ambiguous": 0
+    },
+    "Gent": {
+      "players": 25,
+      "snapshot_unique": 2,
+      "mdb_unique": 2,
+      "unresolved": 20,
+      "ambiguous": 1
+    },
+    "Molenbeek": {
+      "players": 25,
+      "snapshot_unique": 2,
+      "mdb_unique": 0,
+      "unresolved": 20,
+      "ambiguous": 3
+    },
+    "Waregem": {
+      "players": 27,
+      "snapshot_unique": 4,
+      "mdb_unique": 1,
+      "unresolved": 22,
+      "ambiguous": 0
+    },
+    "Genk": {
+      "players": 23,
+      "snapshot_unique": 0,
+      "mdb_unique": 2,
+      "unresolved": 21,
+      "ambiguous": 0
+    }
+  }
+}

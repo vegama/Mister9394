@@ -1,0 +1,236 @@
+{
+  "p6": {
+    "passed": true,
+    "matches": 120,
+    "environment": {
+      "matches": 120,
+      "goals": 2.642,
+      "shots": 21.7,
+      "shots_on_target": 9.308,
+      "corners": 4.55,
+      "fouls": 12.767,
+      "yellow_cards": 0.767,
+      "red_cards": 0.058,
+      "penalties": 0.108,
+      "injuries": 0.092,
+      "set_piece_chances": 2.108
+    },
+    "target_goals_per_match": 2.6026315789473684,
+    "signature_starts": {
+      "portero": 240,
+      "recuperador": 756,
+      "desborde": 432,
+      "creador": 300,
+      "aereo": 408,
+      "balon_parado": 456,
+      "finalizador": 48
+    },
+    "per_start": {
+      "portero": {
+        "shots": 0.279,
+        "shots_on_target": 0.083,
+        "chances_created": 0.267,
+        "set_piece_chances": 0.0,
+        "saves": 3.317,
+        "goals": 0.017,
+        "assists": 0.021
+      },
+      "recuperador": {
+        "shots": 0.44,
+        "shots_on_target": 0.168,
+        "chances_created": 0.542,
+        "set_piece_chances": 0.0,
+        "saves": 0.0,
+        "goals": 0.046,
+        "assists": 0.058
+      },
+      "desborde": {
+        "shots": 1.47,
+        "shots_on_target": 0.634,
+        "chances_created": 1.086,
+        "set_piece_chances": 0.125,
+        "saves": 0.0,
+        "goals": 0.171,
+        "assists": 0.118
+      },
+      "creador": {
+        "shots": 1.07,
+        "shots_on_target": 0.453,
+        "chances_created": 1.473,
+        "set_piece_chances": 0.057,
+        "saves": 0.0,
+        "goals": 0.15,
+        "assists": 0.183
+      },
+      "aereo": {
+        "shots": 1.343,
+        "shots_on_target": 0.591,
+        "chances_created": 0.684,
+        "set_piece_chances": 0.015,
+        "saves": 0.0,
+        "goals": 0.172,
+        "assists": 0.066
+      },
+      "balon_parado": {
+        "shots": 1.11,
+        "shots_on_target": 0.515,
+        "chances_created": 1.086,
+        "set_piece_chances": 0.379,
+        "saves": 0.0,
+        "goals": 0.132,
+        "assists": 0.11
+      },
+      "finalizador": {
+        "shots": 2.25,
+        "shots_on_target": 0.896,
+        "chances_created": 0.583,
+        "set_piece_chances": 0.0,
+        "saves": 0.0,
+        "goals": 0.25,
+        "assists": 0.062
+      }
+    },
+    "checks": {
+      "environment": {
+        "goals": true,
+        "shots": true,
+        "shots_on_target": true,
+        "corners": true,
+        "fouls": true,
+        "discipline": true,
+        "rare_events": true,
+        "set_pieces": true
+      },
+      "signatures": {
+        "goalkeepers_save": true,
+        "creators_create": true,
+        "set_piece_specialists_take_set_pieces": true,
+        "finishers_shoot": true,
+        "wing_dribblers_attack": true,
+        "aerial_forwards_attack": true
+      }
+    }
+  },
+  "p10": {
+    "passed": true,
+    "profile_playability": {
+      "passed": true,
+      "matches_per_profile": 10,
+      "profiles": [
+        {
+          "profile": "favorito",
+          "league_id": 1,
+          "team_id": 3,
+          "matches_played": 10,
+          "lineup_decisions": 0,
+          "active": true,
+          "next_match_available": true,
+          "squad_size": 23,
+          "board_score": 12,
+          "memory_entries": 68,
+          "rules_ok": true
+        },
+        {
+          "profile": "medio",
+          "league_id": 1,
+          "team_id": 16,
+          "matches_played": 10,
+          "lineup_decisions": 1,
+          "active": true,
+          "next_match_available": true,
+          "squad_size": 25,
+          "board_score": 71,
+          "memory_entries": 70,
+          "rules_ok": true
+        },
+        {
+          "profile": "modesto_primera",
+          "league_id": 1,
+          "team_id": 692,
+          "matches_played": 10,
+          "lineup_decisions": 1,
+          "active": true,
+          "next_match_available": true,
+          "squad_size": 23,
+          "board_score": 63,
+          "memory_entries": 69,
+          "rules_ok": true
+        },
+        {
+          "profile": "division_inferior",
+          "league_id": 10,
+          "team_id": 27,
+          "matches_played": 10,
+          "lineup_decisions": 0,
+          "active": true,
+          "next_match_available": true,
+          "squad_size": 20,
+          "board_score": 49,
+          "memory_entries": 68,
+          "rules_ok": true
+        }
+      ]
+    },
+    "nomad_career": {
+      "passed": true,
+      "visited": [
+        3,
+        692,
+        13
+      ],
+      "tenures": 2
+    },
+    "long_horizon": {
+      "passed": true,
+      "horizons": [
+        {
+          "seasons": 3,
+          "year": 1996,
+          "rules_ok": true,
+          "ages_frozen": true,
+          "generated_players": 0,
+          "rules_policy": "frozen_1993_94"
+        },
+        {
+          "seasons": 10,
+          "year": 2003,
+          "rules_ok": true,
+          "ages_frozen": true,
+          "generated_players": 0,
+          "rules_policy": "frozen_1993_94"
+        },
+        {
+          "seasons": 20,
+          "year": 2013,
+          "rules_ok": true,
+          "ages_frozen": true,
+          "generated_players": 0,
+          "rules_policy": "frozen_1993_94"
+        },
+        {
+          "seasons": 30,
+          "year": 2023,
+          "rules_ok": true,
+          "ages_frozen": true,
+          "generated_players": 0,
+          "rules_policy": "frozen_1993_94"
+        }
+      ],
+      "scope": "long-horizon invariant probe; no fabricated season results"
+    },
+    "automated_dimensions": {
+      "realism": "regulatory + match/roster gates",
+      "clarity": "explainable state exposed by snapshots/UI gates",
+      "depth": "player memory, manager mobility, market/tactical consequences",
+      "economic_sporting_coherence": "covered by existing economy/roster gates",
+      "story_memory": "managed match history + tenures + persistent world state"
+    },
+    "human_only_dimensions": [
+      "diversión percibida",
+      "belleza percibida",
+      "ganas de continuar"
+    ],
+    "human_score_fabricated": false
+  },
+  "passed": true
+}

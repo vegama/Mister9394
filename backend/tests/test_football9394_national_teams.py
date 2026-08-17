@@ -10,5 +10,5 @@ def test_source_backed_national_teams_exist_and_select_balanced_squad():
     squad = select_national_squad(universe, 11)
     assert len(squad) == 22
     assert len({p["id"] for p in squad}) == 22
-    assert sum(p["position"] == "POR" for p in squad) >= 2
+    assert sum(p.get("broad_position") == "POR" for p in squad) >= 2
     assert all(p["nationality_id"] == 11 for p in squad)

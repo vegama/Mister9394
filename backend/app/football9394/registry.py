@@ -7,7 +7,7 @@ from .rules import (
     CompetitionRules9394, SPAIN_PRIMERA_1993_94, SPAIN_SEGUNDA_1993_94,
     ENGLAND_PREMIER_1993_94, GERMANY_BUNDESLIGA_1993_94, SCOTLAND_PREMIER_1993_94,
     ITALY_SERIE_A_1993_94, ITALY_SERIE_B_1993_94, FRANCE_DIVISION_1_1993_94, PORTUGAL_PRIMEIRA_1993_94,
-    NETHERLANDS_EREDIVISIE_1993_94, NETHERLANDS_EERSTE_1993_94, SPAIN_SEGUNDA_B_1993_94, ARGENTINA_PRIMERA_1993_94, MEXICO_PRIMERA_1993_94, COLOMBIA_PRIMERA_A_1993, URUGUAY_PRIMERA_1993,
+    NETHERLANDS_EREDIVISIE_1993_94, NETHERLANDS_EERSTE_1993_94, SPAIN_SEGUNDA_B_1993_94, ARGENTINA_PRIMERA_1993_94, MEXICO_PRIMERA_1993_94, COLOMBIA_PRIMERA_A_1993, URUGUAY_PRIMERA_1993, BELGIUM_FIRST_DIVISION_1993_94, TURKEY_FIRST_DIVISION_1993_94, RUSSIA_SUPREME_LEAGUE_1993, GREECE_ALPHA_ETHNIKI_1993_94,
 )
 
 
@@ -132,6 +132,10 @@ def default_registry_9394() -> HistoricalCompetitionRegistry9394:
     registry.register(ITALY_SERIE_A_1993_94, aliases=("Serie A 1993-94",))
     registry.register(ITALY_SERIE_B_1993_94, aliases=("Serie B 1993-94",))
     registry.register(SCOTLAND_PREMIER_1993_94, aliases=("Scottish Premier 1993-94", "Premier Division Scotland 1993-94"))
+    registry.register(BELGIUM_FIRST_DIVISION_1993_94, aliases=("Belgian First Division 1993-94", "Pro League 1993-94"), include_name_alias=False)
+    registry.register(TURKEY_FIRST_DIVISION_1993_94, aliases=("Turkish First Division 1993-94", "Süper Lig 1993-94"), include_name_alias=False)
+    registry.register(RUSSIA_SUPREME_LEAGUE_1993, aliases=("Russian Supreme League 1993", "Russian Premier 1993"), include_name_alias=False)
+    registry.register(GREECE_ALPHA_ETHNIKI_1993_94, aliases=("Greek Alpha Ethniki 1993-94", "Alpha Ethniki 1993-94"), include_name_alias=False)
     registry.register_source("league", 1, SPAIN_PRIMERA_1993_94)
     registry.register_source("league", 2, SPAIN_SEGUNDA_1993_94)
     registry.register_source("league", 5, ENGLAND_PREMIER_1993_94)
@@ -149,4 +153,8 @@ def default_registry_9394() -> HistoricalCompetitionRegistry9394:
     registry.register_source("league", 4, ITALY_SERIE_A_1993_94)
     registry.register_source("league", 102, ITALY_SERIE_B_1993_94)
     registry.register_source("league", 38, SCOTLAND_PREMIER_1993_94)
+    registry.register_source("league", 930052, BELGIUM_FIRST_DIVISION_1993_94)
+    registry.register_source("league", 930057, TURKEY_FIRST_DIVISION_1993_94)
+    registry.register_source("league", 930015, RUSSIA_SUPREME_LEAGUE_1993)
+    registry.register_source("league", 930047, GREECE_ALPHA_ETHNIKI_1993_94)
     return registry

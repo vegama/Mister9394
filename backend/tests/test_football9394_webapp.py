@@ -33,15 +33,15 @@ def test_competition_audit_has_no_career_limbo_rows():
     response=client.get('/api/football9394/rule-audit')
     assert response.status_code == 200
     data=response.json()
-    assert data['total'] == 28
-    assert data['active'] == 26
+    assert data['total'] == 32
+    assert data['active'] == 30
     assert data['excluded'] == 2
     assert data['non_admitted'] == 2
     assert data['unresolved'] == 0
     assert data['all_source_rows_closed'] is True
     # Default endpoint follows the original MDB's admitted selector.
     active=client.get('/api/football9394/competitions').json()
-    assert len(active) == 26
+    assert len(active) == 30
     assert all(row['active'] for row in active)
 
 
@@ -178,7 +178,8 @@ def test_new_career_options_expose_real_league_and_team_selection(monkeypatch, t
     assert state['league_id']==14 and state['team']['source_id']==team_id
     calendar=client.get(f"/api/football9394/careers/{state['career_id']}/calendar")
     assert calendar.status_code==200
-    assert len(calendar.json())==38
+    assert len(calendar.json())==42
+    assert sum(1 for row in calendar.json() if row.get('fixture_type')=='friendly')==4
 
 
 def test_career_selection_and_dashboard_endpoints(monkeypatch, tmp_path):
@@ -194,3 +195,40 @@ def test_career_selection_and_dashboard_endpoints(monkeypatch, tmp_path):
     assert auto.status_code == 200
     assert auto.json()['selection']['valid'] is True
     assert len(auto.json()['selection']['starter_ids']) == 11
+
+
+def test_dismissed_manager_can_accept_same_league_job_through_api(monkeypatch, tmp_path):
+    import backend.app.football9394.webapp as webapp
+    monkeypatch.setattr(webapp, 'CAREER_SAVE_ROOT', tmp_path)
+    created = client.post('/api/football9394/careers', json={'team_id':3,'league_id':1,'seed':9911,'through_matchday':0})
+    assert created.status_code == 200
+    cid = created.json()['career_id']
+    career = webapp._load_manager_career(cid)
+    career.state['job_status'] = 'dismissed'
+    career._handle_user_dismissal()
+    webapp._career_store().save(career.state)
+    state = client.get(f'/api/football9394/careers/{cid}').json()
+    offer = state['user_manager']['job_offers'][0]
+    accepted = client.post(f"/api/football9394/careers/{cid}/jobs/{offer['id']}/accept")
+    assert accepted.status_code == 200
+    payload = accepted.json()
+    assert payload['job_status'] == 'active'
+    assert payload['team']['source_id'] == offer['team_id']
+    assert payload['league_id'] == 1
+    assert payload['selection']['valid'] is True
+
+
+def test_role_promise_endpoint_persists_explicit_squad_commitment(monkeypatch, tmp_path):
+    import backend.app.football9394.webapp as webapp
+    monkeypatch.setattr(webapp, 'CAREER_SAVE_ROOT', tmp_path)
+    state = client.post('/api/football9394/careers', json={'team_id':16,'league_id':1,'seed':1515,'through_matchday':0}).json()
+    cid = state['career_id']
+    player_id = state['squad'][0]['id']
+    promised = client.post(f'/api/football9394/careers/{cid}/players/{player_id}/role-promise', json={'role':'Titular'})
+    assert promised.status_code == 200
+    payload = promised.json()
+    assert payload['result']['role'] == 'Titular'
+    assert payload['player']['role_promise']['status'] == 'active'
+    detail = client.get(f'/api/football9394/careers/{cid}/players/{player_id}')
+    assert detail.status_code == 200
+    assert detail.json()['role_promise']['role'] == 'Titular'

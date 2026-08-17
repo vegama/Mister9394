@@ -1,0 +1,706 @@
+{
+  "schema_version": 1,
+  "checkpoint": "0.23.0-created-player-profile-audit",
+  "policy": {
+    "new_universal_rating_rule": false,
+    "runtime_formula_added": false,
+    "original_players_modified": false,
+    "created_players_materialised_as_fixed_data": true
+  },
+  "counts": {
+    "source_backed_original_players": 10528,
+    "created_players_reviewed": 367,
+    "overall_changes": 97,
+    "old_unique_attribute_vectors": 224,
+    "new_unique_attribute_vectors": 367,
+    "old_duplicate_vector_groups": 90,
+    "new_duplicate_vector_groups": 0,
+    "max_old_vector_reuse": 5,
+    "max_new_vector_reuse": 1,
+    "pending_profile_reviews": 0,
+    "explicit_attribute_patch_players": 6
+  },
+  "overall_changes": [
+    {
+      "source_id": 9494000,
+      "display_name": "Óscar Córdoba",
+      "before": 76,
+      "after": 79,
+      "reason": "Colombia first-choice goalkeeper at USA 94; source scale comparison with Mondragon and leading keepers"
+    },
+    {
+      "source_id": 9494001,
+      "display_name": "Andrés Escobar",
+      "before": 74,
+      "after": 81,
+      "reason": "established Colombia/Atletico Nacional international central defender; old 74 baseline materially understated him"
+    },
+    {
+      "source_id": 9494002,
+      "display_name": "Alexis Mendoza",
+      "before": 75,
+      "after": 77,
+      "reason": "senior Colombia central defender; generic baseline compressed him too far"
+    },
+    {
+      "source_id": 9494003,
+      "display_name": "Luis Fernando Herrera",
+      "before": 76,
+      "after": 78,
+      "reason": "experienced Colombia starting defender; calibrated below the elite Colombian core"
+    },
+    {
+      "source_id": 9494004,
+      "display_name": "Hermán Gaviria",
+      "before": 74,
+      "after": 76,
+      "reason": "Colombia starter and scorer at USA 94; modest correction"
+    },
+    {
+      "source_id": 9494005,
+      "display_name": "Gabriel Gómez",
+      "before": 74,
+      "after": 76,
+      "reason": "experienced Colombia midfielder; modest correction"
+    },
+    {
+      "source_id": 9494006,
+      "display_name": "Antony de Ávila",
+      "before": 74,
+      "after": 77,
+      "reason": "established international forward; generic 74 baseline too flat"
+    },
+    {
+      "source_id": 9494008,
+      "display_name": "Iván Valenciano",
+      "before": 74,
+      "after": 75,
+      "reason": "prolific domestic forward but reserve at USA 94; placed below Asprilla/Valencia tier"
+    },
+    {
+      "source_id": 9494010,
+      "display_name": "Leonel Álvarez",
+      "before": 75,
+      "after": 80,
+      "reason": "established Colombia holding midfielder and USA 94 starter; old 75 baseline understated his senior standing"
+    },
+    {
+      "source_id": 9494011,
+      "display_name": "Mauricio Serna",
+      "before": 75,
+      "after": 74,
+      "reason": "squad midfielder not used at USA 94; retain below established starters in 1993-94"
+    },
+    {
+      "source_id": 9494013,
+      "display_name": "Wilson Pérez",
+      "before": 75,
+      "after": 77,
+      "reason": "Colombia starting defender at USA 94; modest upward correction from generic baseline"
+    },
+    {
+      "source_id": 9494015,
+      "display_name": "Florin Prunea",
+      "before": 76,
+      "after": 77,
+      "reason": "Romania first-choice goalkeeper for most of USA 94"
+    },
+    {
+      "source_id": 9494016,
+      "display_name": "Daniel Prodan",
+      "before": 77,
+      "after": 79,
+      "reason": "Romania starting central defender through five USA 94 matches"
+    },
+    {
+      "source_id": 9494017,
+      "display_name": "Dorinel Munteanu",
+      "before": 76,
+      "after": 79,
+      "reason": "Romania ever-present midfielder at USA 94; established senior international"
+    },
+    {
+      "source_id": 9494018,
+      "display_name": "Iulian Chiriță",
+      "before": 78,
+      "after": 75,
+      "reason": "unused USA 94 squad midfielder; old 78 generic result was too generous"
+    },
+    {
+      "source_id": 9494019,
+      "display_name": "Ilie Dumitrescu",
+      "before": 76,
+      "after": 82,
+      "reason": "key Steaua attacker and five-start/two-goal USA 94 performer; old 76 baseline clearly low"
+    },
+    {
+      "source_id": 9494020,
+      "display_name": "Bogdan Stelea",
+      "before": 76,
+      "after": 77,
+      "reason": "Romania international goalkeeper in strong 1993-94 pool"
+    },
+    {
+      "source_id": 9494021,
+      "display_name": "Tibor Selymes",
+      "before": 75,
+      "after": 77,
+      "reason": "Romania starting left-sided defender; modest correction"
+    },
+    {
+      "source_id": 9494022,
+      "display_name": "Gheorghe Mihali",
+      "before": 76,
+      "after": 77,
+      "reason": "Romania starting defender; retained below Popescu/Belodedici tier"
+    },
+    {
+      "source_id": 9494023,
+      "display_name": "Basarab Panduru",
+      "before": 77,
+      "after": 78,
+      "reason": "high-level technical Romanian midfielder; old country baseline slightly low"
+    },
+    {
+      "source_id": 9494035,
+      "display_name": "Alain Geiger",
+      "before": 76,
+      "after": 79,
+      "reason": "Switzerland veteran defensive leader and four-start USA 94 player"
+    },
+    {
+      "source_id": 9494036,
+      "display_name": "Georges Bregy",
+      "before": 75,
+      "after": 77,
+      "reason": "Switzerland veteran midfielder and USA 94 scorer"
+    },
+    {
+      "source_id": 9494051,
+      "display_name": "Thomas Dooley",
+      "before": 75,
+      "after": 77,
+      "reason": "experienced USA starter with Bundesliga background"
+    },
+    {
+      "source_id": 9494052,
+      "display_name": "John Harkes",
+      "before": 76,
+      "after": 78,
+      "reason": "established USA/English-league midfielder and USA 94 starter"
+    },
+    {
+      "source_id": 9494054,
+      "display_name": "Eric Wynalda",
+      "before": 76,
+      "after": 77,
+      "reason": "USA first-choice forward and USA 94 scorer"
+    },
+    {
+      "source_id": 9494056,
+      "display_name": "Cobi Jones",
+      "before": 71,
+      "after": 74,
+      "reason": "young but important pace option at USA 94"
+    },
+    {
+      "source_id": 9494059,
+      "display_name": "Brad Friedel",
+      "before": 73,
+      "after": 72,
+      "reason": "young reserve goalkeeper in 1993-94; later reputation intentionally not back-projected"
+    },
+    {
+      "source_id": 9494060,
+      "display_name": "Claudio Reyna",
+      "before": 73,
+      "after": 72,
+      "reason": "elite prospect but did not play at USA 94; avoid rating later-career reputation into 1993-94"
+    },
+    {
+      "source_id": 9494061,
+      "display_name": "Paul Caligiuri",
+      "before": 71,
+      "after": 75,
+      "reason": "USA four-start defender; modest correction over old 71"
+    },
+    {
+      "source_id": 9494062,
+      "display_name": "Fernando Clavijo",
+      "before": 71,
+      "after": 73,
+      "reason": "USA starting veteran defender; old 71 slightly low"
+    },
+    {
+      "source_id": 9494068,
+      "display_name": "Roger Milla",
+      "before": 74,
+      "after": 75,
+      "reason": "veteran technical forward; age reduces physical level but not finishing/anticipation class"
+    },
+    {
+      "source_id": 9494073,
+      "display_name": "Stephen Tataw",
+      "before": 74,
+      "after": 76,
+      "reason": "Cameroon captain/starting defender at USA 94"
+    },
+    {
+      "source_id": 9494076,
+      "display_name": "Marc-Vivien Foé",
+      "before": 74,
+      "after": 73,
+      "reason": "young Cameroon starter; retain developmental 1993-94 level rather than later reputation"
+    },
+    {
+      "source_id": 9494079,
+      "display_name": "Thomas N'Kono",
+      "before": 74,
+      "after": 77,
+      "reason": "veteran elite Cameroon goalkeeper; old 74 baseline understated established level despite reserve WC role"
+    },
+    {
+      "source_id": 9494103,
+      "display_name": "Carlos Trucco",
+      "before": 72,
+      "after": 75,
+      "reason": "Bolivia first-choice USA 94 goalkeeper"
+    },
+    {
+      "source_id": 9494108,
+      "display_name": "Carlos Borja",
+      "before": 70,
+      "after": 73,
+      "reason": "Bolivia veteran midfielder and three-start USA 94 player"
+    },
+    {
+      "source_id": 9494110,
+      "display_name": "José Milton Melgar",
+      "before": 72,
+      "after": 76,
+      "reason": "experienced Bolivia midfield organiser and three-start USA 94 player"
+    },
+    {
+      "source_id": 9494120,
+      "display_name": "William Ramallo",
+      "before": 71,
+      "after": 73,
+      "reason": "Bolivia starting striker at USA 94"
+    },
+    {
+      "source_id": 9494122,
+      "display_name": "Julio César Baldivieso",
+      "before": 69,
+      "after": 73,
+      "reason": "young but first-choice attacking midfielder at USA 94"
+    },
+    {
+      "source_id": 9494123,
+      "display_name": "Choi In-young",
+      "before": 70,
+      "after": 72,
+      "reason": "South Korea first-choice USA 94 goalkeeper"
+    },
+    {
+      "source_id": 9494130,
+      "display_name": "Kim Joo-sung",
+      "before": 71,
+      "after": 77,
+      "reason": "senior South Korea star and three-start USA 94 midfielder"
+    },
+    {
+      "source_id": 9494131,
+      "display_name": "Ko Jeong-woon",
+      "before": 70,
+      "after": 73,
+      "reason": "three-start South Korea attacker; modest upward correction"
+    },
+    {
+      "source_id": 9494132,
+      "display_name": "Seo Jung-won",
+      "before": 70,
+      "after": 74,
+      "reason": "attacking international with a USA 94 goal; above generic domestic baseline"
+    },
+    {
+      "source_id": 9494137,
+      "display_name": "Ha Seok-ju",
+      "before": 70,
+      "after": 73,
+      "reason": "senior attacking midfielder/wing option; modest correction"
+    },
+    {
+      "source_id": 9494139,
+      "display_name": "Hwang Sun-hong",
+      "before": 70,
+      "after": 76,
+      "reason": "South Korea first-choice striker and USA 94 scorer"
+    },
+    {
+      "source_id": 9494141,
+      "display_name": "Hong Myung-bo",
+      "before": 69,
+      "after": 78,
+      "reason": "South Korea defensive leader; three starts and two goals at USA 94; old 69 baseline was a major outlier"
+    },
+    {
+      "source_id": 9494145,
+      "display_name": "Borislav Mihaylov",
+      "before": 74,
+      "after": 79,
+      "reason": "Bulgaria captain/first-choice goalkeeper through seven USA 94 matches"
+    },
+    {
+      "source_id": 9494147,
+      "display_name": "Trifon Ivanov",
+      "before": 76,
+      "after": 80,
+      "reason": "established Bulgaria central defender and USA 94 core starter"
+    },
+    {
+      "source_id": 9494148,
+      "display_name": "Tsanko Tsvetanov",
+      "before": 74,
+      "after": 76,
+      "reason": "six-start Bulgaria defender"
+    },
+    {
+      "source_id": 9494149,
+      "display_name": "Zlatko Yankov",
+      "before": 76,
+      "after": 78,
+      "reason": "six-start Bulgaria midfielder at USA 94"
+    },
+    {
+      "source_id": 9494150,
+      "display_name": "Nasko Sirakov",
+      "before": 76,
+      "after": 79,
+      "reason": "senior Bulgaria striker and USA 94 starter/scorer"
+    },
+    {
+      "source_id": 9494151,
+      "display_name": "Daniel Borimirov",
+      "before": 75,
+      "after": 77,
+      "reason": "Bulgaria midfielder/scorer at USA 94; modest correction"
+    },
+    {
+      "source_id": 9494153,
+      "display_name": "Nikolay Iliev",
+      "before": 75,
+      "after": 77,
+      "reason": "established Bulgaria defender; old baseline slightly low"
+    },
+    {
+      "source_id": 9494158,
+      "display_name": "Stratos Apostolakis",
+      "before": 71,
+      "after": 76,
+      "reason": "experienced Greece defender; corrected above generic baseline"
+    },
+    {
+      "source_id": 9494160,
+      "display_name": "Stelios Manolas",
+      "before": 71,
+      "after": 79,
+      "reason": "long-established AEK and Greece central defender/captain-level player"
+    },
+    {
+      "source_id": 9494161,
+      "display_name": "Ioannis Kalitzakis",
+      "before": 71,
+      "after": 75,
+      "reason": "first-choice Greece defender at USA 94"
+    },
+    {
+      "source_id": 9494162,
+      "display_name": "Panagiotis Tsalouchidis",
+      "before": 72,
+      "after": 76,
+      "reason": "established Greece midfielder and USA 94 starter"
+    },
+    {
+      "source_id": 9494163,
+      "display_name": "Dimitris Saravakos",
+      "before": 70,
+      "after": 80,
+      "reason": "established Panathinaikos/Greek international attacking midfielder; generic 70 baseline was untenable"
+    },
+    {
+      "source_id": 9494164,
+      "display_name": "Nikos Nioplias",
+      "before": 70,
+      "after": 74,
+      "reason": "Greece starting midfielder at USA 94"
+    },
+    {
+      "source_id": 9494165,
+      "display_name": "Nikos Machlas",
+      "before": 72,
+      "after": 73,
+      "reason": "young but starting Greece forward at USA 94"
+    },
+    {
+      "source_id": 9494166,
+      "display_name": "Tasos Mitropoulos",
+      "before": 71,
+      "after": 78,
+      "reason": "veteran Greece international midfielder; old 71 baseline compressed senior status"
+    },
+    {
+      "source_id": 9494170,
+      "display_name": "Vasilis Dimitriadis",
+      "before": 69,
+      "after": 74,
+      "reason": "established AEK striker; generic 69 baseline too low"
+    },
+    {
+      "source_id": 9494175,
+      "display_name": "Savvas Kofidis",
+      "before": 70,
+      "after": 74,
+      "reason": "Greece starting midfielder at USA 94"
+    },
+    {
+      "source_id": 9494177,
+      "display_name": "Alexis Alexandris",
+      "before": 70,
+      "after": 74,
+      "reason": "established domestic striker; generic baseline slightly low"
+    },
+    {
+      "source_id": 9494179,
+      "display_name": "Augustine Eguavoen",
+      "before": 77,
+      "after": 78,
+      "reason": "senior Nigeria starting defender"
+    },
+    {
+      "source_id": 9494180,
+      "display_name": "Stephen Keshi",
+      "before": 77,
+      "after": 78,
+      "reason": "veteran Nigeria defensive leader; balanced for age/role in 1993-94"
+    },
+    {
+      "source_id": 9494181,
+      "display_name": "Uche Okechukwu",
+      "before": 77,
+      "after": 80,
+      "reason": "established Brondby/Fenerbahce-level Nigeria central defender and four-start USA 94 player"
+    },
+    {
+      "source_id": 9494182,
+      "display_name": "Chidi Nwanu",
+      "before": 76,
+      "after": 77,
+      "reason": "Nigeria starting defender at USA 94"
+    },
+    {
+      "source_id": 9494184,
+      "display_name": "Emmanuel Amunike",
+      "before": 76,
+      "after": 81,
+      "reason": "key Nigeria attacker; four starts/two goals at USA 94 and high-level 1993-94 trajectory"
+    },
+    {
+      "source_id": 9494186,
+      "display_name": "Daniel Amokachi",
+      "before": 75,
+      "after": 81,
+      "reason": "Club Brugge/Nigeria power forward; four starts/two goals at USA 94"
+    },
+    {
+      "source_id": 9494187,
+      "display_name": "Sunday Oliseh",
+      "before": 76,
+      "after": 78,
+      "reason": "young but already four-start Nigeria central midfielder at USA 94"
+    },
+    {
+      "source_id": 9494188,
+      "display_name": "Alloysius Agu",
+      "before": 74,
+      "after": 73,
+      "reason": "reserve goalkeeper behind Rufai; old 74 slightly generous"
+    },
+    {
+      "source_id": 9494189,
+      "display_name": "Michael Emenalo",
+      "before": 74,
+      "after": 75,
+      "reason": "Nigeria starting defender at USA 94; modest correction"
+    },
+    {
+      "source_id": 9494190,
+      "display_name": "Uche Okafor",
+      "before": 74,
+      "after": 73,
+      "reason": "unused USA 94 squad defender; kept below first-choice defensive tier"
+    },
+    {
+      "source_id": 9494191,
+      "display_name": "John Aldridge",
+      "before": 77,
+      "after": 80,
+      "reason": "proven Liverpool/Tranmere-era goalscorer and Ireland USA 94 scorer"
+    },
+    {
+      "source_id": 9494195,
+      "display_name": "Erik Mykland",
+      "before": 74,
+      "after": 77,
+      "reason": "Norway creative midfield starter; generic 74 baseline too low"
+    },
+    {
+      "source_id": 9494197,
+      "display_name": "Kjetil Rekdal",
+      "before": 75,
+      "after": 77,
+      "reason": "Norway midfielder and USA 94 scorer"
+    },
+    {
+      "source_id": 9494209,
+      "display_name": "Philippe Albert",
+      "before": 78,
+      "after": 80,
+      "reason": "Belgium starting defender and two-goal USA 94 performer"
+    },
+    {
+      "source_id": 9494211,
+      "display_name": "Lorenzo Staelens",
+      "before": 79,
+      "after": 80,
+      "reason": "Belgium four-start midfielder; established Club Brugge player"
+    },
+    {
+      "source_id": 9494213,
+      "display_name": "Luc Nilis",
+      "before": 78,
+      "after": 80,
+      "reason": "high-level Anderlecht/Belgium forward in 1993-94"
+    },
+    {
+      "source_id": 9494214,
+      "display_name": "Marc Degryse",
+      "before": 79,
+      "after": 81,
+      "reason": "Belgium attacking leader behind Scifo tier; USA 94 starter/scorer"
+    },
+    {
+      "source_id": 9494217,
+      "display_name": "Michel De Wolf",
+      "before": 78,
+      "after": 79,
+      "reason": "experienced Belgium starting defender"
+    },
+    {
+      "source_id": 9494220,
+      "display_name": "Josip Weber",
+      "before": 78,
+      "after": 79,
+      "reason": "Belgium starting striker at USA 94"
+    },
+    {
+      "source_id": 9494228,
+      "display_name": "Abdelkrim El Hadrioui",
+      "before": 72,
+      "after": 74,
+      "reason": "Morocco three-start defender"
+    },
+    {
+      "source_id": 9494229,
+      "display_name": "Tahar El Khalej",
+      "before": 72,
+      "after": 77,
+      "reason": "senior Morocco midfielder/defensive organiser; generic 72 baseline too low"
+    },
+    {
+      "source_id": 9494231,
+      "display_name": "Mustapha Hadji",
+      "before": 72,
+      "after": 75,
+      "reason": "young attacking midfielder already in USA 94 squad; calibrated below later peak"
+    },
+    {
+      "source_id": 9494232,
+      "display_name": "Mohammed Chaouch",
+      "before": 72,
+      "after": 75,
+      "reason": "Morocco starting forward and USA 94 scorer"
+    },
+    {
+      "source_id": 9494233,
+      "display_name": "Rachid Daoudi",
+      "before": 73,
+      "after": 76,
+      "reason": "Morocco set-piece/creative midfielder and USA 94 starter"
+    },
+    {
+      "source_id": 9494245,
+      "display_name": "Mohamed Al-Deayea",
+      "before": 69,
+      "after": 74,
+      "reason": "Saudi Arabia first-choice goalkeeper at USA 94"
+    },
+    {
+      "source_id": 9494247,
+      "display_name": "Mohammed Al-Khilaiwi",
+      "before": 68,
+      "after": 72,
+      "reason": "four-start Saudi Arabia defender"
+    },
+    {
+      "source_id": 9494249,
+      "display_name": "Ahmed Jamil Madani",
+      "before": 67,
+      "after": 72,
+      "reason": "Saudi Arabia starting central defender"
+    },
+    {
+      "source_id": 9494250,
+      "display_name": "Fuad Anwar",
+      "before": 67,
+      "after": 74,
+      "reason": "Saudi Arabia midfield core and two-goal USA 94 player"
+    },
+    {
+      "source_id": 9494252,
+      "display_name": "Fahad Al-Bishi",
+      "before": 69,
+      "after": 72,
+      "reason": "four-start Saudi Arabia midfielder"
+    },
+    {
+      "source_id": 9494253,
+      "display_name": "Majed Abdullah",
+      "before": 69,
+      "after": 75,
+      "reason": "historic Saudi striker, still a USA 94 starter but late-career; balanced below prime reputation"
+    },
+    {
+      "source_id": 9494254,
+      "display_name": "Saeed Al-Owairan",
+      "before": 67,
+      "after": 75,
+      "reason": "Saudi Arabia attacking reference and four-start USA 94 scorer; generic 67 was too low"
+    },
+    {
+      "source_id": 9494256,
+      "display_name": "Sami Al-Jaber",
+      "before": 68,
+      "after": 72,
+      "reason": "young Saudi Arabia striker and USA 94 scorer"
+    },
+    {
+      "source_id": 9494257,
+      "display_name": "Mohamed Abd Al-Jawad",
+      "before": 67,
+      "after": 72,
+      "reason": "experienced Saudi Arabia starting defender"
+    }
+  ],
+  "pending_profile_reviews": [],
+  "original_player_hash_changes": []
+}

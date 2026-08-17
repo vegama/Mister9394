@@ -1,0 +1,158 @@
+{
+  "schema_version": 1,
+  "purpose": "Activate the complete 1993-94 Greek Alpha Ethniki only after an 18-real-player-per-club gate.",
+  "policy": {
+    "fictional_fillers": false,
+    "minimum_real_players_per_club": 18,
+    "identity_reconciliation": "explicit verified reuse only; no surname-only merge",
+    "specialist_positions": "verified where available; otherwise inferred inside the RSSSF broad roster section and marked as inference",
+    "ratings": "fixed source-comparable materialised attributes; season performance anchor; no football 75/25 rule"
+  },
+  "league": {
+    "key": "gre_1993_94",
+    "name": "Alpha Ethniki",
+    "country": "Grecia",
+    "source_league_id": null,
+    "historical_runtime_league_id": 930047,
+    "historical_season": "1993-94",
+    "teams": 18,
+    "rounds": 34,
+    "points_win": 3,
+    "direct_relegation_places": [
+      16,
+      17,
+      18
+    ],
+    "activation_status": "active_historical_roster_gate_passed",
+    "roster_gate_minimum_players_per_club": 18,
+    "source_url": "https://www.rsssf.org/tablesg/grk94.html",
+    "clubs": [
+      {
+        "historical_position": 1,
+        "name": "AEK Athinon",
+        "rsssf_roster_url": "https://www.rsssf.org/tablesg/grk94.html",
+        "roster_status": "complete_historical_1993_94",
+        "team_id": 9347001
+      },
+      {
+        "historical_position": 2,
+        "name": "Panathinaikos",
+        "rsssf_roster_url": "https://www.rsssf.org/tablesg/grk94.html",
+        "roster_status": "complete_historical_1993_94",
+        "team_id": 9347002
+      },
+      {
+        "historical_position": 3,
+        "name": "Olympiakos Pireas",
+        "rsssf_roster_url": "https://www.rsssf.org/tablesg/grk94.html",
+        "roster_status": "complete_historical_1993_94",
+        "team_id": 9347003
+      },
+      {
+        "historical_position": 4,
+        "name": "Aris Thessalonikis",
+        "rsssf_roster_url": "https://www.rsssf.org/tablesg/grk94.html",
+        "roster_status": "complete_historical_1993_94",
+        "team_id": 9347004
+      },
+      {
+        "historical_position": 5,
+        "name": "PAOK Thessalonikis",
+        "rsssf_roster_url": "https://www.rsssf.org/tablesg/grk94.html",
+        "roster_status": "complete_historical_1993_94",
+        "team_id": 9347005
+      },
+      {
+        "historical_position": 6,
+        "name": "Iraklis Thessalonikis",
+        "rsssf_roster_url": "https://www.rsssf.org/tablesg/grk94.html",
+        "roster_status": "complete_historical_1993_94",
+        "team_id": 9347006
+      },
+      {
+        "historical_position": 7,
+        "name": "OFI Irakliou",
+        "rsssf_roster_url": "https://www.rsssf.org/tablesg/grk94.html",
+        "roster_status": "complete_historical_1993_94",
+        "team_id": 9347007
+      },
+      {
+        "historical_position": 8,
+        "name": "Skoda Xanthi",
+        "rsssf_roster_url": "https://www.rsssf.org/tablesg/grk94.html",
+        "roster_status": "complete_historical_1993_94",
+        "team_id": 9347008
+      },
+      {
+        "historical_position": 9,
+        "name": "Panionios",
+        "rsssf_roster_url": "https://www.rsssf.org/tablesg/grk94.html",
+        "roster_status": "complete_historical_1993_94",
+        "team_id": 9347009
+      },
+      {
+        "historical_position": 10,
+        "name": "AE Larisa",
+        "rsssf_roster_url": "https://www.rsssf.org/tablesg/grk94.html",
+        "roster_status": "complete_historical_1993_94",
+        "team_id": 9347010
+      },
+      {
+        "historical_position": 11,
+        "name": "Levadiakos",
+        "rsssf_roster_url": "https://www.rsssf.org/tablesg/grk94.html",
+        "roster_status": "complete_historical_1993_94",
+        "team_id": 9347011
+      },
+      {
+        "historical_position": 12,
+        "name": "Athinaikos",
+        "rsssf_roster_url": "https://www.rsssf.org/tablesg/grk94.html",
+        "roster_status": "complete_historical_1993_94",
+        "team_id": 9347012
+      },
+      {
+        "historical_position": 13,
+        "name": "Apollon Athinas",
+        "rsssf_roster_url": "https://www.rsssf.org/tablesg/grk94.html",
+        "roster_status": "complete_historical_1993_94",
+        "team_id": 9347013
+      },
+      {
+        "historical_position": 14,
+        "name": "Edessaikos",
+        "rsssf_roster_url": "https://www.rsssf.org/tablesg/grk94.html",
+        "roster_status": "complete_historical_1993_94",
+        "team_id": 9347014
+      },
+      {
+        "historical_position": 15,
+        "name": "Doxa Dramas",
+        "rsssf_roster_url": "https://www.rsssf.org/tablesg/grk94.html",
+        "roster_status": "complete_historical_1993_94",
+        "team_id": 9347015
+      },
+      {
+        "historical_position": 16,
+        "name": "Panachaiki",
+        "rsssf_roster_url": "https://www.rsssf.org/tablesg/grk94.html",
+        "roster_status": "complete_historical_1993_94",
+        "team_id": 9347016
+      },
+      {
+        "historical_position": 17,
+        "name": "Apollon Kalamarias",
+        "rsssf_roster_url": "https://www.rsssf.org/tablesg/grk94.html",
+        "roster_status": "complete_historical_1993_94",
+        "team_id": 9347017
+      },
+      {
+        "historical_position": 18,
+        "name": "Naousa",
+        "rsssf_roster_url": "https://www.rsssf.org/tablesg/grk94.html",
+        "roster_status": "complete_historical_1993_94",
+        "team_id": 9347018
+      }
+    ]
+  }
+}

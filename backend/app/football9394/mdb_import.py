@@ -55,11 +55,15 @@ class HistoricalLeagueRow9394:
     team_count: int
     turns: int
     yellow_card_cycle: int | None
+    max_foreigners_starting: int | None
+    max_foreigners_squad: int | None
+    prefer_nationals: bool
     source_start: datetime | None
     source_end: datetime | None
     source_edition: str
     admitted: bool
     signable: bool
+    source_rule_hints: dict[str, Any]
 
 
 @dataclass(frozen=True, slots=True)
@@ -85,7 +89,10 @@ class HistoricalTournamentRow9394:
     knockout_teams: int | None
     group1_count: int | None
     group1_qualifiers: int | None
+    max_foreigners_starting: int | None
+    max_foreigners_squad: int | None
     admitted: bool
+    source_rule_hints: dict[str, Any]
 
 
 @dataclass(frozen=True, slots=True)
@@ -109,6 +116,19 @@ class HistoricalTeamRow9394:
     sporting_director_level: int | None
     women_flag: bool
     activation_reason: str
+    familiar_name: str | None
+    very_short_name: str | None
+    president: str | None
+    secondary_stadium_id: int | None
+    training_ground: str | None
+    youth_residence: str | None
+    main_rival_id: int | None
+    regional_rival_id: int | None
+    honours: dict[str, int | None]
+    academy_style: int | None
+    special_academy_pattern_id: int | None
+    initial_points_sanction: int | None
+    fifa_registration_ban_until: datetime | None
 
 
 @dataclass(frozen=True, slots=True)
@@ -138,6 +158,19 @@ class HistoricalPlayerRow9394:
     initially_reserve: bool
     retired: bool
     attributes: dict[str, int | float | None]
+    birth_city_id: int | None
+    naturalized_country_id: int | None
+    basque_origin: bool
+    favorite_shirt_number: int | None
+    injury_proneness: int | None
+    progression_mean: int | None
+    fan_affection: int | None
+    academy_team_id: int | None
+    previous_team_id: int | None
+    previous_team_years: int | None
+    buyback_option: int | None
+    role_ratings: dict[str, int]
+    hidden_traits: dict[str, bool]
 
 
 @dataclass(frozen=True, slots=True)
@@ -227,6 +260,7 @@ def load_historical_snapshot(path: str | Path) -> HistoricalSnapshot9394:
     raw_calendar_league = db.rows("CalendarioLiga")
     raw_calendar_tournament = db.rows("CalendarioTorneo")
     raw_calendar_tournament_no_cwc = db.rows("CalendarioTorneoSinRecopa")
+    raw_calendar_tournament_final = db.rows("CalendarioTorneoFinal")
 
     league_rows = [row for row in raw_leagues if _active_league(row)]
     tournament_rows = [row for row in raw_tournaments if _active_tournament(row)]
@@ -258,14 +292,44 @@ def load_historical_snapshot(path: str | Path) -> HistoricalSnapshot9394:
             team_count=_as_int(row.get("NumeroEquipos")) or 0,
             turns=_as_int(row.get("NumVueltas")) or 0,
             yellow_card_cycle=_as_int(row.get("CicloAmarillas")),
+            max_foreigners_starting=_as_int(row.get("Ex11")),
+            max_foreigners_squad=_as_int(row.get("ExPlantilla")),
+            prefer_nationals=bool(row.get("PrefFichNacionales")),
             source_start=_dt(row.get("InicioCompeticion")),
             source_end=_dt(row.get("FinCompeticion")),
             source_edition=str(row.get("EdicionTemporada") or ""),
             admitted=bool(row.get("ADMITIDA")),
             signable=bool(row.get("FICHABLE")),
+            source_rule_hints={
+                "P1": _as_int(row.get("P1")), "P2": _as_int(row.get("P2")),
+                "P3": _as_int(row.get("P3")), "P4": _as_int(row.get("P4")),
+                "P5": _as_int(row.get("P5")), "P6": _as_int(row.get("P6")),
+                "PY": _as_int(row.get("PY")), "PZ": _as_int(row.get("PZ")),
+                "positions": [_as_int(row.get(f"Pos{i}")) for i in range(1, 14)],
+                "CC": _as_int(row.get("CC")),
+                "days": {day: _as_int(row.get(source)) for day, source in {
+                    "monday": "Lunes", "tuesday": "Martes", "wednesday": "Miercoles",
+                    "thursday": "Jueves", "friday": "Viernes", "saturday": "Sabado",
+                    "sunday": "Domingo",
+                }.items()},
+                "winter_break": bool(row.get("Paron_navidad")),
+                "old_glories": bool(row.get("ViejasGlorias")),
+                "var": bool(row.get("VAR")),
+            },
         )
         for row in sorted(league_rows, key=lambda r: (int(r.get("IdPais") or 0), int(r.get("Nivel") or 0), int(r.get("Id") or 0)))
     )
+
+    final_venue_hints: dict[int, list[dict[str, Any]]] = {}
+    for row in raw_calendar_tournament_final:
+        tournament_id = _as_int(row.get("Torneo"))
+        if tournament_id not in tournament_ids:
+            continue
+        final_venue_hints.setdefault(tournament_id, []).append({
+            "stadium_id": _as_int(row.get("Estadio")),
+            "fixed": bool(row.get("Fijo")),
+            "all_matches": bool(row.get("Todo")),
+        })
 
     normalized_tournaments = tuple(
         HistoricalTournamentRow9394(
@@ -290,7 +354,36 @@ def load_historical_snapshot(path: str | Path) -> HistoricalSnapshot9394:
             knockout_teams=_as_int(row.get("Num_equipos_eliminatorias")),
             group1_count=_as_int(row.get("Num_grupos_fase1")),
             group1_qualifiers=_as_int(row.get("Fase_grupos1_clasifican")),
+            max_foreigners_starting=_as_int(row.get("Ex11")),
+            max_foreigners_squad=_as_int(row.get("ExPlantilla")),
             admitted=bool(row.get("Admitido")),
+            source_rule_hints={
+                "friendly": bool(row.get("Amistoso")),
+                "promotion_type": _as_int(row.get("TipoAscenso")),
+                "supercup": bool(row.get("Supercopa")),
+                "level": _as_int(row.get("Nivel")),
+                "group2_count": _as_int(row.get("Num_grupos_fase2")),
+                "group2_qualifiers": _as_int(row.get("Fase_grupos2_clasifican")),
+                "group1_to_minor_competition_position": _as_int(row.get("Pos_fase1_a_comp_menor")),
+                "repeat_group_champions": bool(row.get("duplicar_campeones_de_grupo")),
+                "guests": _as_int(row.get("Invitados")),
+                "invited_confederation": _as_int(row.get("ConfederacionInvitada")),
+                "every_n_years": _as_int(row.get("Cada_x_años")),
+                "third_place_final": bool(row.get("Final_consolacion")),
+                "maximum_audience": _as_int(row.get("Maxima_audiencia")),
+                "winter_break": bool(row.get("Paron_navidad")),
+                "previous_champion_id": _as_int(row.get("CampeonAnterior")),
+                "previous_runner_up_id": _as_int(row.get("SubcampeonAnterior")),
+                "champion_to_final_stage": bool(row.get("Campeon_a_fase_final")),
+                "minor_champion_to_final_stage": bool(row.get("Campeon_torneo_menor_a_fase_final")),
+                "host_friendly_id": _as_int(row.get("AnfitrionAmistoso")),
+                "final_venue_hints": list(final_venue_hints.get(int(row["Id"]), ())),
+                "days": {day: _as_int(row.get(source)) for day, source in {
+                    "monday": "Lunes", "tuesday": "Martes", "wednesday": "Miercoles",
+                    "thursday": "Jueves", "friday": "Viernes", "saturday": "Sabado",
+                    "sunday": "Domingo",
+                }.items()},
+            },
         )
         for row in sorted(tournament_rows, key=lambda r: int(r.get("Id") or 0))
     )
@@ -323,6 +416,30 @@ def load_historical_snapshot(path: str | Path) -> HistoricalSnapshot9394:
             sporting_director_level=_as_int(row.get("Secretario_tecnico_estrella")),
             women_flag=bool(row.get("Femenino")),
             activation_reason=reason,
+            familiar_name=str(row.get("NombreFamiliar")) if row.get("NombreFamiliar") else None,
+            very_short_name=str(row.get("NombreMuyCorto")) if row.get("NombreMuyCorto") else None,
+            president=str(row.get("Presidente")) if row.get("Presidente") else None,
+            secondary_stadium_id=_as_int(row.get("EstadioSecundario")),
+            training_ground=str(row.get("CiudadDeportiva")) if row.get("CiudadDeportiva") else None,
+            youth_residence=str(row.get("ResidenciaJuveniles")) if row.get("ResidenciaJuveniles") else None,
+            main_rival_id=_as_int(row.get("MaximoRival")),
+            regional_rival_id=_as_int(row.get("MaximoRivalRegional")),
+            honours={
+                "intercontinental": _as_int(row.get("PalmaresIntercontinentales")),
+                "continental": _as_int(row.get("PalmaresContinentales")),
+                "continental_2": _as_int(row.get("PalmaresContinentales2")),
+                "continental_3": _as_int(row.get("PalmaresContinentales3")),
+                "continental_4": _as_int(row.get("PalmaresContinentales4")),
+                "continental_supercups": _as_int(row.get("PalmaresSuperCopasContinentales")),
+                "national_leagues": _as_int(row.get("PalmaresLigasNacionales")),
+                "national_cups": _as_int(row.get("PalmaresCopasNacionales")),
+                "national_cups_2": _as_int(row.get("PalmaresCopasNacionales2")),
+                "national_supercups": _as_int(row.get("PalmaresSuperCopasNacionales")),
+            },
+            academy_style=_as_int(row.get("Estilo_cantera")),
+            special_academy_pattern_id=_as_int(row.get("Canterano_especial")),
+            initial_points_sanction=_as_int(row.get("SancionPuntosInicialesLiga")),
+            fifa_registration_ban_until=_dt(row.get("SancionFIFAFichajesNoJueganHasta")),
         ))
 
     player_attribute_map = {
@@ -369,6 +486,27 @@ def load_historical_snapshot(path: str | Path) -> HistoricalSnapshot9394:
             initially_reserve=bool(row.get("InicialmenteEnFilial")),
             retired=bool(row.get("Retirado")),
             attributes=attributes,
+            birth_city_id=_as_int(row.get("CiudadNacimiento")),
+            naturalized_country_id=_as_int(row.get("PaisNacionalizado")),
+            basque_origin=bool(row.get("OrigenVasco")),
+            favorite_shirt_number=_as_int(row.get("DorsalFavorito")),
+            injury_proneness=_as_int(row.get("Lesiones")),
+            progression_mean=_as_int(row.get("ProgresionMedia")),
+            fan_affection=_as_int(row.get("AfectoActualAficion")),
+            academy_team_id=_as_int(row.get("CanteranoDe")),
+            previous_team_id=_as_int(row.get("EquipoAnterior")),
+            previous_team_years=_as_int(row.get("AñosEquipoAnterior")),
+            buyback_option=_as_int(row.get("OpcionRecompra")),
+            role_ratings={str(role_id): (_as_int(row.get(f"Rol{role_id + 1}")) or 0) for role_id in range(18)},
+            hidden_traits={
+                "individualist": bool(row.get("Oculto_individualista")),
+                "killer_pass": bool(row.get("Oculto_ultimo_pase")),
+                "holds_ball": bool(row.get("Oculto_conservar_balon")),
+                "long_shots": bool(row.get("Oculto_tiro_media_distancia")),
+                "cuts_inside": bool(row.get("Oculto_tiende_al_centro")),
+                "first_time_play": bool(row.get("Oculto_primer_toque")),
+                "dives": bool(row.get("Oculto_piscinero")),
+            },
         ))
 
     league_calendar_rows = tuple(
