@@ -1,0 +1,88 @@
+{
+  "kind": "rc-persona-playtest",
+  "status": "passed",
+  "passed": true,
+  "checks": {
+    "novice_understands_first_action": true,
+    "novice_reaches_meaningful_decision": true,
+    "novice_has_visible_back": true,
+    "novice_back_returns_home": true,
+    "expert_market_in_two_actions": true,
+    "market_inquiry_becomes_visible_process": true,
+    "market_keeps_dark_visual_grammar": true,
+    "career_progresses_to_matchday": true,
+    "matchday_home_exposes_preview": true,
+    "match_topbar_keeps_orientation": true,
+    "preview_has_context_and_control": true,
+    "preview_does_not_start_clock": true,
+    "matchday_keeps_dark_visual_grammar": true,
+    "postmatch_is_explained": true,
+    "postmatch_grid_has_no_orphan_half_row": true,
+    "postmatch_returns_to_career": true,
+    "postmatch_changes_next_event": true,
+    "no_browser_page_errors": true
+  },
+  "observations": {
+    "dist": "deploy_dist",
+    "mode": "policy-safe-compiled-bundle-proxy",
+    "career_id_created": true,
+    "market_candidate": [
+      "☆",
+      "Ronaldo",
+      "Brasil · Finalizador",
+      "Referencia básica · confianza 25%"
+    ],
+    "direct_advances_to_matchday": [
+      {
+        "seconds": 1.55,
+        "date": "1993-07-04",
+        "requires_match": false,
+        "advanced_days": 3,
+        "reason": null,
+        "requires_decision": false
+      },
+      {
+        "seconds": 1.6,
+        "date": "1993-07-07",
+        "requires_match": false,
+        "advanced_days": 3,
+        "reason": null,
+        "requires_decision": false
+      },
+      {
+        "seconds": 1.33,
+        "date": "1993-07-10",
+        "requires_match": false,
+        "advanced_days": 3,
+        "reason": null,
+        "requires_decision": false
+      },
+      {
+        "seconds": 1.54,
+        "date": "1993-07-13",
+        "requires_match": false,
+        "advanced_days": 3,
+        "reason": null,
+        "requires_decision": false
+      },
+      {
+        "seconds": 1.27,
+        "date": "1993-07-16",
+        "requires_match": false,
+        "advanced_days": 3,
+        "reason": null,
+        "requires_decision": false
+      },
+      {
+        "seconds": 0.75,
+        "date": "1993-07-17",
+        "requires_match": true,
+        "advanced_days": 1,
+        "reason": null,
+        "requires_decision": false
+      }
+    ],
+    "page_errors": [],
+    "requests": 159
+  }
+}

@@ -34,7 +34,7 @@ export function useNavigationContext({ liveMatch, lastMatchReport, matchActionBu
   const routeEntity=ref(null)
   const routeEntityTab=ref('')
   const routeDepth=ref(Number(window.history.state?.m9394Depth||0))
-  const sectionTitle = computed(() => navigationGroups.flatMap(group => group.items).find(item => item.id === view.value)?.label || 'Inicio')
+  const sectionTitle = computed(() => view.value === 'match' ? 'Partido' : (navigationGroups.flatMap(group => group.items).find(item => item.id === view.value)?.label || 'Inicio'))
   const validViews = new Set(navigationGroups.flatMap(group => group.items.map(item => item.id)).concat(['match']))
   const canGoBack=computed(()=>routeDepth.value>0 || Boolean(routeEntity.value))
   let syncingHistory = false

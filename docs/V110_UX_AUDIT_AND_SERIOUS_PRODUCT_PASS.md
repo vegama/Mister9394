@@ -678,3 +678,9 @@ La pasada v1.1.2 mueve UX-4/UX-5/UX-7 desde “source diseñado” a **contratos
 - Backend: H 7/7, M 5/5; carrera 14/14 por ejecuciones segmentadas, incluidos dos rollovers longitudinales.
 
 La build sigue **no certificada** porque `vite`/`frontend/dist` no están disponibles en este entorno. Este bloqueo se conserva explícito como P1 de release, no se sustituye por la harness visual.
+
+---
+
+## Addendum RC v1.1.2 — 18-08-2026
+
+Los pendientes de browser/playtest descritos en la sección I reflejan el momento de la auditoría inicial. El cierre actual está documentado en `docs/qa/V112_RC_PRODUCTION_PLAYTEST.md`: bundle compilado Chromium **58/58**, personas **18/18**, source gates verdes y H+M **12/12**. Se corrigieron durante el render real P1 de contraste en Nueva carrera/Mercado/matchday, sticky topbar y orientación de la previa. No quedan P0/P1 conocidos en los recorridos certificados. El único smoke no ejecutable en este entorno es servir localhost por HTTP debido a la política corporativa de Chromium.

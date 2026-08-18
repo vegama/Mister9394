@@ -83,3 +83,132 @@
 
 /* V1.1.1 · entity dossiers on the dark game shell */
 :root[data-football-era="1993-94"] .football9394-team-modal,:root[data-football-era="1993-94"] .football9394-match-context{background:#09131f!important;border-color:#31445a!important;color:#e8eff7!important}:root[data-football-era="1993-94"] .team-profile-shell,:root[data-football-era="1993-94"] .match-context-body{background:#08131f!important}:root[data-football-era="1993-94"] .team-profile-summary-grid,:root[data-football-era="1993-94"] .team-profile-squad,:root[data-football-era="1993-94"] .team-profile-rail .football-panel,:root[data-football-era="1993-94"] .match-context-team,:root[data-football-era="1993-94"] .match-context-explanation article{background:#0e1b29!important;border-color:#26384c!important;color:#e8eff7!important}:root[data-football-era="1993-94"] .team-profile-summary-grid article,:root[data-football-era="1993-94"] .team-honours-list div{border-color:#26384c!important}:root[data-football-era="1993-94"] .team-profile-summary-grid span,:root[data-football-era="1993-94"] .team-stadium-card span,:root[data-football-era="1993-94"] .match-context-score small,:root[data-football-era="1993-94"] .match-context-score span,:root[data-football-era="1993-94"] .match-context-explanation p{color:#8fa1b4!important}:root[data-football-era="1993-94"] .entity-link,:root[data-football-era="1993-94"] .fixture-team-link,:root[data-football-era="1993-94"] .calendar-team-link,:root[data-football-era="1993-94"] .text-action{color:#82b8f4}:root[data-football-era="1993-94"] .modern-participants button{background:#0d1926;border-color:#203044;color:#dce7f2}:root[data-football-era="1993-94"] .modern-participants button:hover{background:#112235}:root[data-football-era="1993-94"] .modern-participants button.controlled{background:#102c50}:root[data-football-era="1993-94"] .player-hero-club-link{background:transparent}:root[data-football-era="1993-94"] .match-context-team:hover{border-color:#438ff4;box-shadow:0 8px 24px #0005}
+
+/* V1.1.2 RC · production visual coherence: career setup + empty states */
+:root[data-football-era="1993-94"] .redesigned-career-setup{
+  background:radial-gradient(circle at 78% -12%,#173a61 0,transparent 34%),linear-gradient(180deg,#08131f,#07111d);
+  color:var(--f-text)
+}
+:root[data-football-era="1993-94"] .career-setup-shell{
+  background:#0b1622;border-color:#2a3a4d;box-shadow:0 24px 70px rgba(0,0,0,.38)
+}
+:root[data-football-era="1993-94"] .career-setup-header{
+  background:linear-gradient(180deg,#101d2b,#0c1824);border-bottom-color:#2a3a4d
+}
+:root[data-football-era="1993-94"] .career-setup-header h1,
+:root[data-football-era="1993-94"] .career-setup-header strong,
+:root[data-football-era="1993-94"] .browser-column-head strong,
+:root[data-football-era="1993-94"] .league-choice strong,
+:root[data-football-era="1993-94"] .club-choice strong,
+:root[data-football-era="1993-94"] .setup-club-facts b,
+:root[data-football-era="1993-94"] .setup-top-players h3,
+:root[data-football-era="1993-94"] .setup-top-players b{color:#eef4fb}
+:root[data-football-era="1993-94"] .career-setup-header p,
+:root[data-football-era="1993-94"] .league-choice small,
+:root[data-football-era="1993-94"] .club-choice small,
+:root[data-football-era="1993-94"] .setup-club-facts small,
+:root[data-football-era="1993-94"] .setup-top-players small{color:#9fb0c2}
+:root[data-football-era="1993-94"] .career-browser-column{background:#091521;border-color:#26374a}
+:root[data-football-era="1993-94"] .browser-column-head{background:#0d1926;border-color:#26374a}
+:root[data-football-era="1993-94"] .browser-column-head input{
+  background:#08131f;color:#eef4fb;border-color:#3a4c63;box-shadow:none
+}
+:root[data-football-era="1993-94"] .browser-column-head input::placeholder{color:#718297}
+:root[data-football-era="1993-94"] .browser-column-head input:focus{border-color:#438ff4;box-shadow:0 0 0 3px rgba(67,143,244,.18)}
+:root[data-football-era="1993-94"] .league-choice{color:#dce7f2;border-bottom-color:#1f3041}
+:root[data-football-era="1993-94"] .league-choice>b{background:#14283c;color:#b7c8da}
+:root[data-football-era="1993-94"] .league-choice:hover{background:#112235}
+:root[data-football-era="1993-94"] .league-choice.active{background:linear-gradient(90deg,#12345b,#10243a);box-shadow:inset 3px 0 #43c985}
+:root[data-football-era="1993-94"] .league-choice.active>b{background:#153b29;color:#7de0a4}
+:root[data-football-era="1993-94"] .club-choice{background:#0e1b29;border-color:#293b50;color:#e6eef7}
+:root[data-football-era="1993-94"] .club-choice:hover{background:#132439;border-color:#49627f}
+:root[data-football-era="1993-94"] .club-choice.active{background:linear-gradient(90deg,#12345b,#10243a);border-color:#438ff4;box-shadow:0 0 0 2px rgba(67,143,244,.14)}
+:root[data-football-era="1993-94"] .club-choice-crest{background:#e8eef3}
+:root[data-football-era="1993-94"] .career-club-preview{background:#0a1521;color:#eef4fb}
+:root[data-football-era="1993-94"] .setup-club-facts span{border-color:#26374a;background:#0d1926}
+:root[data-football-era="1993-94"] .setup-top-players>span{background:#0e1b29;border:1px solid #293b50;border-radius:9px;color:#e8eff7}
+:root[data-football-era="1993-94"] .setup-player-photo{background:#182534}
+:root[data-football-era="1993-94"] .setup-era-note{background:#10243a;border:1px solid #24435f}
+:root[data-football-era="1993-94"] .setup-era-note b{color:#7fb7f4}
+:root[data-football-era="1993-94"] .setup-era-note span{color:#9fb0c2}
+:root[data-football-era="1993-94"] .setup-empty{color:#9fb0c2}
+:root[data-football-era="1993-94"] .inbox-clear{
+  background:linear-gradient(180deg,#0e1b29,#0b1723);border-color:#31445a;color:#9fb0c2
+}
+:root[data-football-era="1993-94"] .manager-inbox-modern .inbox-clear b{color:#6ee09f}
+
+/* V1.1.2 RC · market workspace must not fall back to light-table surfaces */
+:root[data-football-era="1993-94"] .market-searchbar{background:#0d1926;border-color:#26374a}
+:root[data-football-era="1993-94"] .market-searchbar input,
+:root[data-football-era="1993-94"] .market-searchbar select,
+:root[data-football-era="1993-94"] .deal-form input,
+:root[data-football-era="1993-94"] .deal-form select{background:#08131f;color:#eef4fb;border-color:#3a4c63}
+:root[data-football-era="1993-94"] .market-searchbar input::placeholder{color:#718297}
+:root[data-football-era="1993-94"] .filter-toggle{background:#111f2e;color:#c3d0dd;border-color:#314258}
+:root[data-football-era="1993-94"] .filter-toggle:hover{background:#17283a;border-color:#49627f}
+:root[data-football-era="1993-94"] .filter-toggle.active{background:#153b29;color:#79dda0;border-color:#2c7653}
+:root[data-football-era="1993-94"] .market-result-head{background:#101d2a;color:#8294a8;border-color:#273749}
+:root[data-football-era="1993-94"] .market-player-row{background:#0c1824;color:#dce6f0;border-bottom-color:#203145}
+:root[data-football-era="1993-94"] .market-player-row:hover{background:#112235}
+:root[data-football-era="1993-94"] .market-player-row.selected{background:#102a25;box-shadow:inset 3px 0 #43c985}
+:root[data-football-era="1993-94"] .market-player-identity{color:#e8eff7}
+:root[data-football-era="1993-94"] .market-player-identity small,
+:root[data-football-era="1993-94"] .market-club,
+:root[data-football-era="1993-94"] .market-value{color:#93a3b5}
+:root[data-football-era="1993-94"] .market-rating{color:#e0b64f}
+:root[data-football-era="1993-94"] .market-photo{background:#182534;border-color:#34465b}
+:root[data-football-era="1993-94"] .market-window-status{background:#10291f;border-color:#28563f}
+:root[data-football-era="1993-94"] .market-window-status.closed{background:#35171c;border-color:#6b3037}
+:root[data-football-era="1993-94"] .quota-modern{background:#0d1926;border-color:#26374a}
+:root[data-football-era="1993-94"] .negotiation-card{border-bottom-color:#223345}
+
+/* V1.1.2 RC · matchday surfaces stay inside the dark game grammar */
+:root[data-football-era="1993-94"] .live-command-bar{background:rgba(13,25,38,.96);border-color:#31445a;box-shadow:0 10px 28px rgba(0,0,0,.24)}
+:root[data-football-era="1993-94"] .match-world-context{background:#203145;border-color:#31445a}
+:root[data-football-era="1993-94"] .match-world-context>span{background:#0d1926}
+:root[data-football-era="1993-94"] .match-world-context small{color:#8294a8}
+:root[data-football-era="1993-94"] .match-world-context em{color:#9fb0c2}
+:root[data-football-era="1993-94"] .match-preview-v2,
+:root[data-football-era="1993-94"] .match-post-v2{background:#223345;border-color:#31445a}
+:root[data-football-era="1993-94"] .match-preview-v2>div,
+:root[data-football-era="1993-94"] .match-post-v2>div{background:#0d1926}
+:root[data-football-era="1993-94"] .match-preview-v2 small,
+:root[data-football-era="1993-94"] .match-post-v2 small{color:#8294a8}
+:root[data-football-era="1993-94"] .match-preview-v2 span,
+:root[data-football-era="1993-94"] .match-preview-v2 em,
+:root[data-football-era="1993-94"] .match-post-v2 span,
+:root[data-football-era="1993-94"] .match-post-v2 em{color:#9fb0c2}
+:root[data-football-era="1993-94"] .preview-key-players>span,
+:root[data-football-era="1993-94"] .post-causes>span{border-color:#26374a}
+:root[data-football-era="1993-94"] .preview-ready,
+:root[data-football-era="1993-94"] .post-verdict{background:#10291f!important}
+:root[data-football-era="1993-94"] .prematch-elevens{background:#0b1622;border-color:#31445a}
+:root[data-football-era="1993-94"] .prematch-elevens>header{border-color:#26374a;background:#0d1926}
+:root[data-football-era="1993-94"] .prematch-elevens>header small,
+:root[data-football-era="1993-94"] .prematch-elevens>header em{color:#93a3b5}
+:root[data-football-era="1993-94"] .prematch-xi{background:#0d1926;border-color:#31445a}
+:root[data-football-era="1993-94"] .prematch-xi-title{background:#101d2a;border-color:#26374a}
+:root[data-football-era="1993-94"] .prematch-xi-title span,
+:root[data-football-era="1993-94"] .prematch-xi li small{color:#93a3b5}
+:root[data-football-era="1993-94"] .prematch-xi li{border-color:#203145}
+:root[data-football-era="1993-94"] .prematch-versus b{background:#14283c;border-color:#3a5470;color:#dce8f4}
+:root[data-football-era="1993-94"] .prematch-versus span{color:#93a3b5}
+:root[data-football-era="1993-94"] .modern-commentary .commentary-feed p.routine,
+:root[data-football-era="1993-94"] .live-stat-row{border-color:#203145}
+:root[data-football-era="1993-94"] .modern-commentary .commentary-feed p.notable{background:#102235;border-color:#29425b}
+:root[data-football-era="1993-94"] .modern-commentary .commentary-feed .event-goal{background:#10291f;border-color:#28563f}
+:root[data-football-era="1993-94"] .modern-commentary .commentary-feed .event-red,
+:root[data-football-era="1993-94"] .modern-commentary .commentary-feed .event-second_yellow_red{background:#35171c;border-color:#6b3037}
+:root[data-football-era="1993-94"] .modern-commentary .commentary-feed .event-injury{background:#30240e;border-color:#6b5523}
+:root[data-football-era="1993-94"] .possession-track{background:#1b2a3b}
+
+/* V1.1.2 RC · final home/postmatch visual polish */
+:root[data-football-era="1993-94"] .inbox-clear{display:grid;gap:3px}
+:root[data-football-era="1993-94"] .inbox-clear b{color:#6ee09f}
+:root[data-football-era="1993-94"] .table-window-v2>div.controlled{background:#10291f;box-shadow:inset 3px 0 #43c985}
+:root[data-football-era="1993-94"] .table-window-v2>div.controlled>b{color:#8fa1b4}
+:root[data-football-era="1993-94"] .table-window-v2>div.controlled>strong{color:#79dda0}
+:root[data-football-era="1993-94"] .board-confidence-v2{background:#0d1926;border:1px solid #26374a}
+:root[data-football-era="1993-94"] .board-confidence-v2 small{color:#93a3b5}
+:root[data-football-era="1993-94"] .board-confidence-v2 strong{color:#79dda0}
+:root[data-football-era="1993-94"] .match-post-v2>div:last-child:nth-child(odd){grid-column:1/-1}

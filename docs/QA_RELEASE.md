@@ -53,24 +53,27 @@ Comprobar:
 Un timeout del entorno no se registra como fallo funcional: los bloques largos deben ejecutarse por segmentos y conservar resultados verificables.
 
 
-## Evidencia de la continuación 18-08-2026
+## Evidencia RC vigente — 18-08-2026
 
-Certificado en source:
+Bundle disponible en `deploy_dist` y ejecutado realmente en Chromium contra FastAPI mediante el modo policy-safe.
 
-- `sync_product_version.py --check`: PASS 1.1.1;
-- `check:version`: PASS;
-- `check:sfc`: PASS;
-- `check:ui`: PASS;
-- `check:ux`: PASS (navegación + entidades + feedback runtime + onboarding + accesibilidad teclado + workspaces);
-- `check:vue`: 38/38;
-- `test_football9394_v100_h_release.py`: 7/7;
-- J partido: 4/4; K gestión: 6/6; L emoción: 6/6; M refactor: 5/5, ejecutados por fichero.
+```bash
+PYTHONPATH=. python backend/tools/rc_production_browser_gate.py --policy-safe
+PYTHONPATH=. python backend/tools/rc_persona_playtest.py
+PYTHONPATH=. python backend/tools/rc_launcher_http_smoke.py
+cd frontend
+npm run check:version
+npm run check:sfc
+npm run check:ui
+npm run check:ux
+npm run check:network
+npm run check:vue
+cd ..
+PYTHONPATH=. pytest -q backend/tests/test_football9394_v100_h_release.py backend/tests/test_football9394_v100_m_refactor.py
+```
 
-No certificado aún:
+Resultado vigente: producción **58/58**, personas **18/18**, launcher HTTP **6/6**, network **10/10**, Vue **38/38**, H+M **13/13**. Carrera longitudinal conserva evidencia **14/14 segmentada**.
 
-- `vite build`: binario `vite` ausente en el `node_modules` truncado; `npm ci` bloqueado por DNS del entorno;
-- Chromium/visual actual: depende del bundle anterior;
-- `test_football9394_webapp.py`: muestra 16 casos ejecutados sin fallo pero no concluye antes del timeout;
-- `test_football9394_manager_career.py`: muestra 5 casos ejecutados sin fallo pero no concluye antes del timeout.
+El Chromium gestionado bloquea navegación normal a localhost (`ERR_BLOCKED_BY_ADMINISTRATOR`), de modo que no se certifica aquí el servidor HTTP estático. `--policy-safe` no sustituye el bundle: inyecta el JS/CSS compilado de `deploy_dist` y enruta las llamadas al backend real para ejercer la aplicación. El launcher y su servidor HTTP sí están certificados por transporte con `rc_launcher_http_smoke.py` (health/index/assets 6/6). Lo único no reproducible aquí es que Chromium gestionado abra directamente ese localhost.
 
-Un punto mostrado como `.` antes de un timeout no se promueve a certificación global: sólo se registran como verdes las invocaciones que retornan código 0.
+Ver `docs/qa/V112_RC_PRODUCTION_PLAYTEST.md`.

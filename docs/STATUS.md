@@ -2,7 +2,7 @@
 
 Fecha: 18-08-2026  
 Versión: **1.1.2**  
-Checkpoint: **1.1.2-rc-browser-contracts-source**
+Checkpoint: **1.1.2-rc-production-playtest-candidate**
 
 ## Base preservada
 
@@ -61,31 +61,27 @@ Se han adaptado patrones de producto, no su apariencia ni sus reglas: foco de de
 - destructive matchday: los 7 casos han sido validados de forma segmentada; el archivo completo monolítico excede la ventana y no se contabiliza como una ejecución completa;
 - assets: 10.195 retratos preservados; microintento de 4, 0 añadidos y 4 fallos DNS, no bloqueantes.
 
-## Evidencia visual
+## Evidencia RC de producción
 
-Las capturas `docs/visual-qa/d9-1920x1080/` se han usado como evidencia histórica, pero son anteriores al dark pass actual y a v1.1.2. No se consideran certificación del render vigente.
+El repositorio incluye `deploy_dist` y se ha ejecutado el bundle compilado real contra FastAPI real mediante Chromium. El gate de producción queda **58/58 PASS** y el playtest de personas **18/18 PASS**. Las capturas vigentes están en `docs/visual-qa/rc-production-browser/` y `docs/visual-qa/rc-persona-playtest/`.
 
-## Siguiente frente
+P1/P2 encontrados durante el render real y corregidos: contraste de Nueva carrera; topbar sticky rota por `overflow-x:hidden`; superficies claras heredadas en Mercado; previa/postpartido fuera de la gramática oscura; orientación global `Inicio` dentro del partido; hueco de media fila en postpartido; estados vacíos de Inicio sin separación; resaltados excesivamente claros en tabla/consejo.
 
-**v1.1.x Beta / RC final.** La matriz responsive/zoom, la serialización de rutas y la red/doble envío ya tienen gates ejecutables. Falta el E2E sobre `frontend/dist`: F5 literal, recorrido de primera carrera, flujo experto y playtest humano sobre la build servida. Cero P0; P1 explícitos y finitos.
+## Gates vigentes
 
-### Limitación de entorno actual
+- producción Chromium sobre bundle compilado: **58/58**;
+- personas nuevo/experto/partido→consecuencia: **18/18**;
+- frontend: version/SFC/UI/UX PASS, network **10/10**, Vue **38/38**;
+- release H + refactor M: **13/13**;
+- carrera longitudinal: **14/14 segmentada**, incluidos 93/94→94/95→95/96;
+- no quedan P0/P1 conocidos en los recorridos certificados.
 
-`npm run build` alcanza todos los gates previos y queda bloqueado únicamente en `vite build` porque el `node_modules` materializado no contiene el binario `vite`; `npm ci` no puede repararlo al no disponer de DNS/salida al registro. No se declara bundle ni Chromium actual como certificados. `test_football9394_webapp.py` sigue sin certificarse como suite monolítica porque algunas ejecuciones retienen/degradan el proceso pese a mostrar casos verdes. `test_football9394_manager_career.py`, en cambio, queda **14/14 certificado mediante ejecuciones segmentadas aisladas**, incluidos ambos rollovers; el agregado no se usa como autoridad.
+## Decisión actual
 
-## Addendum v1.1.2 — contratos browser/RC ejecutables
+**RC candidate jugable.** UX-4, UX-5, UX-6 y UX-7 quedan validados sobre el bundle compilado; UX-8 tiene playtest ejecutable de persona nueva, experta y ciclo partido→consecuencia. El launcher real ya ha sido ejecutado por HTTP: health, index y assets pasan **6/6**. Sólo queda sin reproducir en este entorno la navegación Chromium directa a ese localhost por política corporativa; la misma build sí está ejercida en Chromium mediante el modo policy-safe.
 
-- Chromium source-CSS: **8/8** en 1920×1080, 1366×768, 1280×720, 1024×768 y equivalentes de 200 % de zoom.
-- Bug real corregido: a ≤700 px la navegación ya no aparece arriba ni envuelve dos filas; es una barra inferior fija, horizontal y con espacio reservado en el workspace.
-- `Saltar al contenido` usa patrón visualmente oculto compatible con tabulación real; command palette conserva foco/retorno.
-- `navigationRoute.js` extrae serialización/parsing de ruta; gate Chromium de History API: **9/9** (sección, entidad, pestaña, Atrás, Adelante y remount desde URL/history).
-- `requestTransport.js` extrae red; `npm run check:network`: **10/10** para doble POST, GET independiente, estado lento, limpieza, offline, timeout y sanitización 500.
-- `test_football9394_manager_career.py`: **14/14** verificados por ejecuciones segmentadas, incluidos rollover 93/94→94/95 y repetición hasta 95/96.
-- Viajes API de partido/mercado: directo hasta descanso+cambio, Resultado desde previa, negociación multidía persistente y volver previa→XI comprobados de forma aislada; los tres últimos cierran limpiamente 1/1 en la pasada final.
-- `rc_production_browser_gate.py` queda listo para bundle real: nueva carrera, matriz de viewport, Ctrl+K, Inicio/Plantilla/Mercado, Atrás/Adelante y `reload()` literal. En este entorno devuelve **BLOCKED** porque no existe `frontend/dist/index.html`; no se interpreta como PASS.
-- `run_rc_quality_gate.py` deja trazabilidad por gate y aislamiento de procesos para evitar que una suite monolítica contaminada o retenida convierta un timeout en un falso verde.
-- Micro-lote assets v1.1.2: 4 intentos, 0 añadidos por DNS, 10.195 retratos preservados; no bloqueante.
+### Limitación de entorno
 
-### Bloqueo RC restante
+El Chromium gestionado de este entorno aplica `URLBlocklist=["*"]` y rechaza `http://127.0.0.1` con `ERR_BLOCKED_BY_ADMINISTRATOR`. El navegador mantiene `http_static_server_certified=false` dentro del gate Chromium, pero el servidor HTTP/launcher se certifica por separado con `rc_launcher_http_smoke.py` **6/6**. El modo `policy-safe` ejecuta el mismo JS/CSS de `deploy_dist`, proxýa sus `/api` al backend real y ha permitido validar History API, Atrás/Adelante, `page.reload()` literal, red, doble clic y los recorridos de juego. No se presenta el bloqueo del navegador corporativo como fallo del producto ni como PASS del servidor HTTP.
 
-Obtener dependencias npm completas, generar `frontend/dist`, ejecutar `python backend/tools/rc_production_browser_gate.py` y realizar playtest humano nuevo/intermedio/experto/destructivo sobre esa misma build.
+La evidencia detallada está en `docs/qa/V112_RC_PRODUCTION_PLAYTEST.md`.

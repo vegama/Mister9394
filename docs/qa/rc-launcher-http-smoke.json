@@ -1,0 +1,61 @@
+{
+  "kind": "rc-launcher-http-smoke",
+  "status": "passed",
+  "passed": true,
+  "checks": {
+    "launcher_starts": true,
+    "health_is_canonical": true,
+    "index_is_served": true,
+    "index_references_bundle": true,
+    "bundle_assets_are_served": true,
+    "bundle_mime_types_are_valid": true
+  },
+  "observations": {
+    "base": "http://127.0.0.1:45263",
+    "health": {
+      "ok": true,
+      "version": "1.1.2",
+      "season": "1993-94",
+      "players_per_team": 11,
+      "max_used_substitutes": 2,
+      "domain": "football-native",
+      "historical_data": {
+        "loaded": true,
+        "counts": {
+          "all_leagues": 259,
+          "historical_leagues": 23,
+          "admitted_historical_leagues": 21,
+          "non_admitted_historical_leagues": 2,
+          "all_tournaments": 87,
+          "historical_tournaments": 5,
+          "all_teams": 2281,
+          "historical_teams": 441,
+          "domestic_teams": 410,
+          "continental_only_teams": 31,
+          "all_players": 37312,
+          "historical_players": 10528,
+          "league_calendar_rows": 380
+        }
+      }
+    },
+    "asset_refs": [
+      "index-94a754db.js",
+      "index-aed6cc31.css"
+    ],
+    "assets": [
+      {
+        "asset": "index-94a754db.js",
+        "status": 200,
+        "content_type": "text/javascript; charset=utf-8",
+        "bytes": 423418
+      },
+      {
+        "asset": "index-aed6cc31.css",
+        "status": 200,
+        "content_type": "text/css; charset=utf-8",
+        "bytes": 267869
+      }
+    ],
+    "launcher_output_tail": []
+  }
+}

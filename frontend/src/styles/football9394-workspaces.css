@@ -72,7 +72,7 @@
 
 /* R9 · interaction states */
 .continue-button:disabled{opacity:.72;cursor:progress;box-shadow:none}.manager-sidebar button:focus-visible,.manager-topbar button:focus-visible,.m9394-workspace button:focus-visible,.career-setup button:focus-visible,.career-setup input:focus-visible,.career-setup select:focus-visible{outline:3px solid #b9dfc9;outline-offset:2px}
-.manager-main{overflow-x:hidden}
+.manager-main{overflow-x:clip}
 
 @media(max-width:1180px){
   .career-browser{grid-template-columns:260px minmax(330px,1fr)}.career-club-preview{grid-column:1/-1;border-top:1px solid var(--f-line)}.setup-stadium-cover{min-height:190px}

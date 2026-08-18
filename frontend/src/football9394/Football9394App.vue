@@ -73,7 +73,7 @@ const { busy: matchActionBusy, run: withMatchAction } = useAsyncActionLock()
 const { view, routeEntity, routeEntityTab, canGoBack, sectionTitle, navigationGroups, replaceRoute, openEntityRoute, setEntityTab, closeEntityRoute, navigateBack, reconcileRouteAfterCareerLoad } = useNavigationContext({
   liveMatch, lastMatchReport, matchActionBusy, flash, cancelPreviewAndNavigate,
 })
-const sectionContext = computed(() => navigationGroups.find(group => group.items.some(item => item.id === view.value))?.label || 'Centro de mando')
+const sectionContext = computed(() => view.value === 'match' ? 'DÍA DE PARTIDO' : (navigationGroups.find(group => group.items.some(item => item.id === view.value))?.label || 'Centro de mando'))
 const careerCalendarRows = ref([])
 const selectedCompetition = ref('league:1')
 const notice = ref('')

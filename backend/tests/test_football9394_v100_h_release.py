@@ -114,3 +114,16 @@ def test_recovery_error_is_readable_when_no_valid_copy_survives(tmp_path):
     assert "No se pudo abrir el save" in message
     assert path.name in message
     assert backup.name in message
+
+
+def test_launcher_accepts_certified_deploy_dist_fallback(monkeypatch, tmp_path):
+    import run_football9394 as launcher
+
+    frontend = tmp_path / "frontend-dist"
+    deploy = tmp_path / "deploy-dist"
+    deploy.mkdir(parents=True)
+    (deploy / "index.html").write_text("<div id=app></div>", encoding="utf-8")
+    monkeypatch.setattr(launcher, "FRONTEND_DIST", frontend)
+    monkeypatch.setattr(launcher, "DEPLOY_DIST", deploy)
+    assert launcher.resolve_frontend_dist() == deploy
+

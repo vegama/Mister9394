@@ -15,6 +15,19 @@ from backend.app.football9394.product_meta import product_version
 
 ROOT = Path(__file__).resolve().parent
 FRONTEND_DIST = ROOT / "frontend" / "dist"
+DEPLOY_DIST = ROOT / "deploy_dist"
+
+
+def resolve_frontend_dist() -> Path | None:
+    """Return the packaged frontend without making a rebuilt dist mandatory.
+
+    Source/dev builds prefer frontend/dist. Release source checkpoints may carry
+    the already-certified deploy_dist bundle instead.
+    """
+    for candidate in (FRONTEND_DIST, DEPLOY_DIST):
+        if (candidate / "index.html").is_file():
+            return candidate
+    return None
 
 
 def _open_browser_later(url: str) -> None:
@@ -36,8 +49,9 @@ def main() -> int:
     parser.add_argument("--no-browser", action="store_true")
     args = parser.parse_args()
 
-    if not args.dev_api and not (FRONTEND_DIST / "index.html").is_file():
-        print("ERROR: falta frontend/dist. Ejecuta el gate de release: cd frontend && npm ci && npm run build", file=sys.stderr)
+    frontend_dist = resolve_frontend_dist()
+    if not args.dev_api and frontend_dist is None:
+        print("ERROR: falta un bundle de producción (frontend/dist o deploy_dist). Ejecuta: cd frontend && npm ci && npm run build", file=sys.stderr)
         return 2
 
     paths = default_app_paths().ensure()
@@ -45,7 +59,8 @@ def main() -> int:
     env["MISTER9394_SAVE_DIR"] = str(paths.saves)
     env["MISTER9394_BACKUP_DIR"] = str(paths.backups)
     env["MISTER9394_LOG_DIR"] = str(paths.logs)
-    env["MISTER9394_FRONTEND_DIST"] = str(FRONTEND_DIST)
+    if frontend_dist is not None:
+        env["MISTER9394_FRONTEND_DIST"] = str(frontend_dist)
 
     cmd = [
         sys.executable, "-m", "uvicorn", "backend.app.football9394.webapp:app",
@@ -57,6 +72,8 @@ def main() -> int:
     url = f"http://{args.host}:{args.port}"
     log_path = paths.logs / f"mister9394-{datetime.now().strftime('%Y%m%d')}.log"
     print(f"Míster 93/94 v{product_version()} · {url}")
+    if frontend_dist is not None:
+        print(f"Frontend: {frontend_dist.relative_to(ROOT)}")
     print(f"Saves: {paths.saves}")
     print(f"Backups: {paths.backups}")
     print(f"Log: {log_path}")

@@ -1,3 +1,5 @@
+> **Documento histórico del cierre source.** Ha sido superado por [`V112_RC_PRODUCTION_PLAYTEST.md`](V112_RC_PRODUCTION_PLAYTEST.md): el repo actual sí contiene `deploy_dist` y los gates de producción/playtest ya se han ejecutado.
+
 # v1.1.2 — RC browser contracts · evidencia de cierre source/browser
 
 Fecha: 18-08-2026
