@@ -102,7 +102,7 @@ const pitchStyle = profile => {
         <div v-if="player.league_suspension_active_for_next_match" class="player-profile-availability-alert"><b>Sanción para el próximo partido de liga</b><span>{{player.league_suspension_reason || 'Sanción disciplinaria'}} · {{player.league_suspension_matches}} partido{{Number(player.league_suspension_matches)===1?'':'s'}}</span></div>
       </div>
       <div class="player-hero-rating"><small>NIVEL ACTUAL</small><b>{{overallDisplay}}</b><strong>{{ratingLabel}}</strong></div>
-      <div class="player-hero-photo"><PersonAvatar :person="photoPerson" :size="112" :height="146" decorative /></div>
+      <div class="player-hero-photo"><PersonAvatar :person="photoPerson" :size="188" :height="252" decorative /></div>
     </div>
     <div class="player-pulse-strip">
       <span><small>Encaje con tu plan</small><b>{{tacticalFit.label || '—'}}<em v-if="tacticalFit.score">{{tacticalFit.score}}/100</em></b></span>

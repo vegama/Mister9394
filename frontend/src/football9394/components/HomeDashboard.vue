@@ -7,7 +7,7 @@ const props = defineProps({
   preseason: { type: Object, default: () => ({}) }, marketPeriod: { type: Object, default: () => ({}) }, clubStatus: { type: Object, default: () => ({}) },
   tableWindow: { type: Array, default: () => [] }, standings: { type: Array, default: () => [] }, dashboard: { type: Object, default: () => ({}) }, latestNews: { type: Array, default: () => [] }, currentBoard: { type: Object, default: () => ({}) },
   storylines: { type: Array, default: () => [] }, rivalries: { type: Array, default: () => [] },
-  selection: { type: Object, default: () => ({starter_ids:[],valid:false,issues:[]}) },
+  selection: { type: Object, default: () => ({starter_ids:[],bench_ids:[],valid:false,issues:[]}) },
   formation: { type: String, default: '4-4-2' }, gameDate: { type: String, default: '' }, lineupDirty: { type: Boolean, default: false },
 })
 const emit = defineEmits(['navigate','start-live','continue'])
@@ -27,20 +27,20 @@ const nextOpponent = computed(() => {
 })
 const hasMatchDecision = computed(() => Boolean(props.nextMatch))
 const isMatchDay = computed(() => Boolean(props.nextMatch?.date && props.gameDate && String(props.nextMatch.date)===String(props.gameDate)))
-const selectionReady = computed(() => Boolean(!props.lineupDirty && props.selection?.valid && (props.selection?.starter_ids || []).length===11))
+const selectionReady = computed(() => Boolean(!props.lineupDirty && props.selection?.valid && (props.selection?.starter_ids || []).length===11 && (props.selection?.bench_ids || []).length===5))
 const unavailableStarters = computed(() => {
   const ids=new Set((props.selection?.starter_ids || []).map(Number))
   return props.squad.filter(p=>ids.has(Number(p.id)) && p.status!=='DISP.')
 })
 const matchReadiness = computed(() => [
-  {label:'Once',value:props.lineupDirty?'Sin guardar':selectionReady.value?'Legal':'Revisar',ok:selectionReady.value,action:'squad'},
+  {label:'Convocatoria',value:props.lineupDirty?'Sin guardar':selectionReady.value?'11 + 5 lista':'Revisar',ok:selectionReady.value,action:'squad'},
   {label:'Sistema',value:props.formation || '—',ok:true,action:'tactics'},
   {label:'Bajas en XI',value:String(unavailableStarters.value.length),ok:unavailableStarters.value.length===0,action:'squad'},
   {label:'Partido',value:isMatchDay.value?'Hoy':dateShort(props.nextMatch?.date),ok:isMatchDay.value,action:isMatchDay.value?'match':'calendar'},
 ])
 const primaryMatchAction = computed(() => {
   if(!props.nextMatch)return {label:'Continuar',kind:'continue'}
-  if(!selectionReady.value)return {label:'Corregir once',kind:'navigate',target:'squad'}
+  if(!selectionReady.value)return {label:'Completar convocatoria',kind:'navigate',target:'squad'}
   if(isMatchDay.value)return {label:'Ir a la previa',kind:'start-live'}
   return {label:'Preparar plan',kind:'navigate',target:'tactics'}
 })

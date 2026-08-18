@@ -23,6 +23,8 @@ import ChampionsWorkspace from './components/ChampionsWorkspace.vue'
 import SeasonEndOverlay from './components/SeasonEndOverlay.vue'
 import { football9394Api } from './api.js'
 
+const productVersion=__MISTER9394_VERSION__
+
 const navigationGroups = [
   { label: 'GESTIÓN', items: [
     { id: 'home', label: 'Inicio' },
@@ -121,12 +123,21 @@ const simulatedThroughMatchday = ref(7)
 const managerDashboard = ref({position:null,points:0,recent_form:[],form_label:'Sin partidos',morale_average:70,unavailable_count:0,board_expectation:{title:'—'},board_confidence:'A la espera',pending_decisions:[]})
 const selection = ref({starter_ids:[],bench_ids:[],starters:[],bench:[],valid:false,issues:[]})
 const lineupDraft = ref([])
+const benchDraft = ref([])
 
 const controlledTeam = ref({source_id:null,name:'Sin club',long_name:'Sin club',league:null,members:null,budget:null,debt:null})
 const controlledTeamId = computed(()=>Number(controlledTeam.value?.source_id||0))
 const selectedLeagueOption = computed(()=>careerOptions.value.find(row=>Number(row.source_id)===Number(selectedLeagueId.value))||null)
 const lineupDraftPlayers = computed(()=>lineupDraft.value.map(id=>squad.value.find(p=>Number(p.id)===Number(id))).filter(Boolean))
-const lineupDirty = computed(()=>{const saved=[...(selection.value?.starter_ids||[])].map(Number).sort((a,b)=>a-b);const draft=[...lineupDraft.value].map(Number).sort((a,b)=>a-b);return JSON.stringify(saved)!==JSON.stringify(draft)})
+const benchDraftPlayers = computed(()=>benchDraft.value.map(id=>squad.value.find(p=>Number(p.id)===Number(id))).filter(Boolean))
+const lineupDirty = computed(()=>{
+ const savedStarters=[...(selection.value?.starter_ids||[])].map(Number).sort((a,b)=>a-b)
+ const draftStarters=[...lineupDraft.value].map(Number).sort((a,b)=>a-b)
+ const savedBench=[...(selection.value?.bench_ids||[])].map(Number).sort((a,b)=>a-b)
+ const draftBench=[...benchDraft.value].map(Number).sort((a,b)=>a-b)
+ return JSON.stringify(savedStarters)!==JSON.stringify(draftStarters) || JSON.stringify(savedBench)!==JSON.stringify(draftBench)
+})
+const matchdaySelectionComplete = computed(()=>lineupDraft.value.length===11 && benchDraft.value.length===5)
 const isMatchDay = computed(()=>Boolean(nextMatch.value?.date && gameDate.value && String(nextMatch.value.date)===String(gameDate.value)))
 const standings = ref([])
 const competitionStandings = ref([])
@@ -240,6 +251,7 @@ function applyCareerState(state){
  managerDashboard.value=state.manager_dashboard||managerDashboard.value
  selection.value=state.selection||selection.value
  lineupDraft.value=[...(state.selection?.starter_ids||[])]
+ benchDraft.value=[...(state.selection?.bench_ids||[])]
  if(state.tactics){
   formation.value=state.tactics.formation||formation.value;mentality.value=state.tactics.mentality||mentality.value
   tempo.value=state.tactics.tempo||tempo.value;pressing.value=state.tactics.pressing||pressing.value
@@ -351,19 +363,70 @@ function profileFor(row){
  return {id:row.id,display_name:row.name,team_id:controlledTeamId.value,team_name:controlledTeam.value.name,photo_url:historicalPlayerPhoto(row.id),team_crest_url:historicalClubCrest(controlledTeamId.value),shirt_number:row.n,age:row.age,nationality:row.nationality,position:row.pos,positions:[row.pos],overall:row.overall,attributes:{}}
 }
 function isStarter(playerId){return lineupDraft.value.includes(Number(playerId))}
+function isBench(playerId){return benchDraft.value.includes(Number(playerId))}
 function toggleStarter(player){
  const id=Number(player.id)
  if(player.status!=='DISP.'&&!isStarter(id)){flash(`${player.name} no está disponible.`);return}
  if(isStarter(id)){lineupDraft.value=lineupDraft.value.filter(x=>x!==id);return}
- if(lineupDraft.value.length>=11){flash('El once ya tiene 11 futbolistas. Quita uno antes de añadir otro.');return}
+ if(lineupDraft.value.length>=11){flash('El once ya tiene 11 futbolistas. Sustituye o arrastra a este jugador sobre un titular.');return}
+ if(isBench(id))benchDraft.value=benchDraft.value.filter(x=>x!==id)
  lineupDraft.value=[...lineupDraft.value,id]
+}
+function toggleBench(player){
+ const id=Number(player.id)
+ if(player.status!=='DISP.'&&!isBench(id)){flash(`${player.name} no está disponible.`);return}
+ if(isStarter(id)){flash(`${player.name} ya está en el once titular.`);return}
+ if(isBench(id)){benchDraft.value=benchDraft.value.filter(x=>x!==id);return}
+ if(benchDraft.value.length>=5){flash('El banquillo ya tiene los 5 suplentes permitidos en 1993-94.');return}
+ benchDraft.value=[...benchDraft.value,id]
+}
+function replaceStarterFromDrag({sourceId,targetId}){
+ const source=Number(sourceId);const target=Number(targetId)
+ if(!source||!target||source===target)return
+ const sourcePlayer=squad.value.find(p=>Number(p.id)===source)
+ if(!sourcePlayer||sourcePlayer.status!=='DISP.'){flash('Ese futbolista no está disponible para la convocatoria.');return}
+ const targetIndex=lineupDraft.value.findIndex(id=>Number(id)===target)
+ if(targetIndex<0)return
+ if(isStarter(source)){
+  const sourceIndex=lineupDraft.value.findIndex(id=>Number(id)===source)
+  const next=[...lineupDraft.value];[next[sourceIndex],next[targetIndex]]=[next[targetIndex],next[sourceIndex]];lineupDraft.value=next;return
+ }
+ const nextStarters=[...lineupDraft.value];nextStarters[targetIndex]=source;lineupDraft.value=nextStarters
+ const benchIndex=benchDraft.value.findIndex(id=>Number(id)===source)
+ if(benchIndex>=0){const nextBench=[...benchDraft.value];nextBench[benchIndex]=target;benchDraft.value=nextBench}
+ else if(benchDraft.value.length<5)benchDraft.value=[...benchDraft.value,target]
+ flash(`${sourcePlayer.name} entra en el XI.`)
+}
+function replaceBenchFromDrag({sourceId,targetId}){
+ const source=Number(sourceId);const target=Number(targetId||0)
+ if(!source||source===target)return
+ const sourcePlayer=squad.value.find(p=>Number(p.id)===source)
+ if(!sourcePlayer||sourcePlayer.status!=='DISP.')return
+ if(!target){
+  if(isStarter(source)){flash(`${sourcePlayer.name} ya está en el XI. Arrástralo sobre un suplente para intercambiar posiciones.`);return}
+  if(isBench(source))return
+  if(benchDraft.value.length>=5){flash('El banquillo ya tiene 5 suplentes. Sustituye uno de ellos.');return}
+  benchDraft.value=[...benchDraft.value,source];return
+ }
+ const targetBenchIndex=benchDraft.value.findIndex(id=>Number(id)===target)
+ if(targetBenchIndex<0)return
+ if(isStarter(source)){
+  const starterIndex=lineupDraft.value.findIndex(id=>Number(id)===source)
+  const nextStarters=[...lineupDraft.value];nextStarters[starterIndex]=target;lineupDraft.value=nextStarters
+  const nextBench=[...benchDraft.value];nextBench[targetBenchIndex]=source;benchDraft.value=nextBench;return
+ }
+ const sourceBenchIndex=benchDraft.value.findIndex(id=>Number(id)===source)
+ if(sourceBenchIndex>=0){const next=[...benchDraft.value];[next[sourceBenchIndex],next[targetBenchIndex]]=[next[targetBenchIndex],next[sourceBenchIndex]];benchDraft.value=next;return}
+ const next=[...benchDraft.value];next[targetBenchIndex]=source;benchDraft.value=next
 }
 async function saveSelection({silent=false}={}){
  if(!careerId.value)return false
+ if(lineupDraft.value.length!==11){flash('Completa los 11 titulares antes de guardar la convocatoria.');return false}
+ if(benchDraft.value.length!==5){flash('Completa los 5 jugadores de banquillo antes de guardar la convocatoria.');return false}
  try{
-  const result=await football9394Api.updateCareerSelection(careerId.value,{starterIds:lineupDraft.value})
-  applyCareerState(result.career);if(!silent)flash('Once y convocatoria guardados.');return true
- }catch(error){flash(`No se pudo guardar el once: ${error.message}`);return false}
+  const result=await football9394Api.updateCareerSelection(careerId.value,{starterIds:lineupDraft.value,benchIds:benchDraft.value})
+  applyCareerState(result.career);if(!silent)flash('Convocatoria completa guardada: 11 titulares + 5 suplentes.');return true
+ }catch(error){flash(`No se pudo guardar la convocatoria: ${error.message}`);return false}
 }
 async function goToTacticsFromSquad(){
  if(lineupDirty.value){const saved=await saveSelection({silent:true});if(!saved)return;flash('Once guardado. Ya puedes ajustar el plan.')}
@@ -444,7 +507,7 @@ async function applyPlanNeed(need){
 }
 async function autoSelectLineup(){
  if(!careerId.value)return
- try{const result=await football9394Api.updateCareerSelection(careerId.value,{autoSelect:true});applyCareerState(result.career);flash('Mejor once disponible seleccionado.')}catch(error){flash(`No se pudo seleccionar el once: ${error.message}`)}
+ try{const result=await football9394Api.updateCareerSelection(careerId.value,{autoSelect:true});applyCareerState(result.career);flash('Mejor convocatoria disponible seleccionada: 11 + 5.')}catch(error){flash(`No se pudo seleccionar el once: ${error.message}`)}
 }
 function playerNameById(id){const own=squad.value.find(p=>Number(p.id)===Number(id));if(own)return own.name;const target=targets.value.find(p=>Number(p[5])===Number(id));return target?.[0]||`Jugador #${id}`}
 async function openDecision(decision){if(decision?.action)await navigateTo(decision.action)}
@@ -505,7 +568,8 @@ async function requestBoardProject(requestType){
 function currentTactics(){return {formation:formation.value,mentality:mentality.value,tempo:tempo.value,pressing:pressing.value,directness:directness.value,defensive_line:defensiveLine.value,marking:marking.value,width:width.value,offside_trap:Boolean(offsideTrap.value),build_up:buildUp.value,final_third:finalThird.value,transition:transition.value}}
 async function saveTactics(){
  if(!careerId.value)return
- try{const result=await football9394Api.updateCareerTactics(careerId.value,currentTactics());applyCareerState(result.career);flash('Táctica guardada. Sus efectos se aplicarán al próximo minuto jugado.')}catch(error){flash(`No se pudo guardar la táctica: ${error.message}`)}
+ if(lineupDirty.value){const saved=await saveSelection({silent:true});if(!saved)return}
+ try{const result=await football9394Api.updateCareerTactics(careerId.value,currentTactics());applyCareerState(result.career);flash('Táctica y convocatoria guardadas.')}catch(error){flash(`No se pudo guardar la táctica: ${error.message}`)}
 }
 async function withMatchAction(task){
  if(matchActionBusy.value)return null
@@ -516,7 +580,7 @@ async function startLive(){
  if(!careerId.value||!nextMatch.value){flash('No hay partido disponible.');return}
  if(!isMatchDay.value){flash(`La previa se abre el día del partido (${formatDateShort(nextMatch.value.date)}). Mientras tanto puedes preparar XI y táctica.`);return}
  if(lineupDirty.value){const saved=await saveSelection({silent:true});if(!saved){view.value='squad';return}}
- if(!selection.value?.valid){view.value='squad';flash('El once debe ser legal antes de abrir la previa.');return}
+ if(!selection.value?.valid || !matchdaySelectionComplete.value){view.value='squad';flash('La convocatoria debe quedar completa y legal: 11 titulares + 5 suplentes.');return}
  await withMatchAction(async()=>{
   try{await football9394Api.updateCareerTactics(careerId.value,currentTactics());const result=await football9394Api.startLiveMatch(careerId.value);applyCareerState(result.career);liveMatch.value=result.match;view.value='match';flash('Previa preparada. Revisa los dos onces y decide si jugar o ver el resultado.')}catch(error){flash(`No se pudo abrir la previa: ${error.message}`)}
  })
@@ -770,6 +834,7 @@ onBeforeUnmount(()=>{
         :pending-count="managerDashboard.pending_decisions?.length || 0"
         :preseason="preseason.active"
         :busy="isAdvancing"
+        :version="productVersion"
         @advance="advance"
       />
 
@@ -806,10 +871,15 @@ onBeforeUnmount(()=>{
       :squad="squad"
       :lineup-draft="lineupDraft"
       :lineup-players="lineupDraftPlayers"
+      :bench-draft="benchDraft"
+      :bench-players="benchDraftPlayers"
       :formation="formation"
       :selection="selection"
       :dressing-room="dressingRoom"
       @toggle-starter="toggleStarter"
+      @toggle-bench="toggleBench"
+      @replace-starter="replaceStarterFromDrag"
+      @replace-bench="replaceBenchFromDrag"
       @open-player="openPlayer"
       @renew="renewPlayer"
       @toggle-listing="toggleTransferListing"
@@ -854,6 +924,9 @@ onBeforeUnmount(()=>{
       :plan="tacticalPlan"
       :briefing="matchBriefing"
       :players="lineupDraftPlayers"
+      :bench-players="benchDraftPlayers"
+      :lineup-draft="lineupDraft"
+      :bench-draft="benchDraft"
       :live="Boolean(liveMatch)"
       :live-status="liveMatch?.status || ''"
       :live-minute="Number(liveMatch?.minute || 0)"
@@ -876,6 +949,8 @@ onBeforeUnmount(()=>{
       @set-player-instruction="setTacticalPlayerInstruction"
       @set-opposition-instruction="setOppositionInstruction"
       @set-piece-taker="setSetPieceTaker"
+      @replace-starter="replaceStarterFromDrag"
+      @replace-bench="replaceBenchFromDrag"
       @apply-live="applyLiveTactics"
       @open-squad="cancelPreviewAndNavigate('squad')"
       @start-live="startLive"
@@ -1018,6 +1093,8 @@ onBeforeUnmount(()=>{
       :season="careerSeason"
       :squad="squad"
       :lineup-players="lineupDraftPlayers"
+      :bench-draft="benchDraft"
+      :bench-players="benchDraftPlayers"
       :formation="formation"
       :tactical-identity="tacticalIdentity"
       :standings="standings"

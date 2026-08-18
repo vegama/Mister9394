@@ -17,6 +17,8 @@ from time import perf_counter
 from typing import Any
 from uuid import uuid4
 
+from .atomic_json_store import atomic_json_save, recover_json_load
+
 from .career_market import estimated_transfer_value, matchday_income, negotiate_transfer
 from .career_economy import (
     annual_wage_commitment,
@@ -217,9 +219,11 @@ def _league_match_payload(matchday: int, fixture_id: int, home_id: int, away_id:
 @dataclass(slots=True)
 class ManagerCareerStore9394:
     root: Path
+    backup_root: Path
 
-    def __init__(self, root: str | Path):
+    def __init__(self, root: str | Path, backup_root: str | Path | None = None):
         self.root = Path(root)
+        self.backup_root = Path(backup_root) if backup_root is not None else self.root.parent / "backups"
 
     def path_for(self, career_id: str) -> Path:
         safe = "".join(ch for ch in str(career_id) if ch.isalnum() or ch in "-_")
@@ -227,21 +231,22 @@ class ManagerCareerStore9394:
             raise ValueError("career_id inválido")
         return self.root / f"{safe}.json"
 
-    def save(self, state: dict[str, Any]) -> Path:
-        state["schema"] = CAREER_SCHEMA_9394
-        path = self.path_for(str(state.get("career_id") or ""))
-        path.parent.mkdir(parents=True, exist_ok=True)
-        tmp = path.with_suffix(".json.tmp")
-        tmp.write_text(json.dumps(state, ensure_ascii=False, indent=2), encoding="utf-8")
-        tmp.replace(path)
-        return path
-
-    def load(self, career_id: str) -> dict[str, Any]:
-        payload = json.loads(self.path_for(career_id).read_text(encoding="utf-8"))
+    @staticmethod
+    def _validate(payload: dict[str, Any]) -> None:
         schema = int(payload.get("schema") or 0)
         if schema < 1 or schema > CAREER_SCHEMA_9394:
             raise ValueError("save de carrera Míster 93/94 incompatible")
-        return payload
+        if not str(payload.get("career_id") or "").strip():
+            raise ValueError("save de carrera sin career_id")
+
+    def save(self, state: dict[str, Any]) -> Path:
+        state["schema"] = CAREER_SCHEMA_9394
+        path = self.path_for(str(state.get("career_id") or ""))
+        return atomic_json_save(path, state, validator=self._validate, backup_root=self.backup_root)
+
+    def load(self, career_id: str) -> dict[str, Any]:
+        path = self.path_for(career_id)
+        return recover_json_load(path, validator=self._validate, backup_root=self.backup_root)
 
 
 class _CareerUniverseView:

@@ -4,6 +4,8 @@ from dataclasses import asdict
 import os
 from pathlib import Path
 from fastapi import FastAPI, HTTPException
+from fastapi.responses import FileResponse
+from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
 
 from .laws import LAWS_1993_94
@@ -25,8 +27,10 @@ from .pyramid_floor import active_pyramid_floors, is_floor_league
 from .world_career import simulate_world_season_1993_94
 from .manager_career import ManagerCareerRuntime9394, ManagerCareerStore9394, career_selectable_leagues
 from .national_teams import national_team_catalog, national_team_snapshot
+from .app_paths import default_app_paths
+from .product_meta import product_version
 
-app = FastAPI(title="Míster 93/94 API", version="0.8.0")
+app = FastAPI(title="Míster 93/94 API", version=product_version())
 
 
 class TacticsPayload(BaseModel):
@@ -175,14 +179,12 @@ class NationalSelectionPayload(BaseModel):
     player_ids: list[int]
 
 
-CAREER_SAVE_ROOT = Path(os.environ.get(
-    "MISTER9394_SAVE_DIR",
-    Path(__file__).resolve().parents[3] / "data" / "football9394" / "careers",
-))
+CAREER_SAVE_ROOT = default_app_paths().saves
 
 
 def _career_store() -> ManagerCareerStore9394:
-    return ManagerCareerStore9394(CAREER_SAVE_ROOT)
+    backup_override = os.environ.get("MISTER9394_BACKUP_DIR")
+    return ManagerCareerStore9394(CAREER_SAVE_ROOT, backup_root=backup_override or None)
 
 
 def _load_manager_career(career_id: str) -> ManagerCareerRuntime9394:
@@ -223,6 +225,7 @@ def _sheet(name: str, level: int, tactics: TacticsPayload) -> TeamSheet9394:
 def health() -> dict:
     return {
         "ok": True,
+        "version": product_version(),
         "season": "1993-94",
         "players_per_team": LAWS_1993_94.players_per_team,
         "max_used_substitutes": LAWS_1993_94.max_used_substitutes,
@@ -1077,3 +1080,29 @@ def simulate_world_season(payload: WorldSeasonPayload) -> dict:
     # WorldCareerStore9394 at the user-data directory; the development API is
     # intentionally stateless unless a caller explicitly persists it.
     return season
+
+
+# Production shell: the release launcher serves the built Vue app and the API
+# from the same origin. API routes are registered first, so the SPA fallback
+# cannot shadow /api/football9394/* endpoints.
+_FRONTEND_DIST = Path(os.environ.get(
+    "MISTER9394_FRONTEND_DIST",
+    Path(__file__).resolve().parents[3] / "frontend" / "dist",
+))
+if _FRONTEND_DIST.is_dir():
+    _ASSETS_DIR = _FRONTEND_DIST / "assets"
+    if _ASSETS_DIR.is_dir():
+        app.mount("/assets", StaticFiles(directory=_ASSETS_DIR), name="frontend-assets")
+
+    @app.get("/{spa_path:path}", include_in_schema=False)
+    def frontend_spa(spa_path: str):
+        if spa_path == "api" or spa_path.startswith("api/"):
+            raise HTTPException(status_code=404, detail="API route not found")
+        requested = (_FRONTEND_DIST / spa_path).resolve()
+        try:
+            requested.relative_to(_FRONTEND_DIST.resolve())
+        except ValueError:
+            requested = _FRONTEND_DIST / "index.html"
+        if spa_path and requested.is_file():
+            return FileResponse(requested)
+        return FileResponse(_FRONTEND_DIST / "index.html")

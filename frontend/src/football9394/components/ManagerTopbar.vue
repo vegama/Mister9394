@@ -6,6 +6,7 @@ defineProps({
   pendingCount: { type: Number, default: 0 },
   preseason: { type: Boolean, default: false },
   busy: { type: Boolean, default: false },
+  version: { type: String, default: '' },
 })
 const emit = defineEmits(['advance'])
 </script>
@@ -13,7 +14,7 @@ const emit = defineEmits(['advance'])
 <template>
   <header class="manager-topbar">
     <div class="topbar-heading">
-      <small>Míster 93/94</small>
+      <small>Míster 93/94 <span v-if="version" class="topbar-version">v{{ version }}</span></small>
       <h1>{{ title }}</h1>
     </div>
     <div class="topbar-meta">

@@ -11,6 +11,7 @@ modern/default rule.
 """
 
 from dataclasses import dataclass
+from .atomic_json_store import atomic_json_save, recover_json_load
 from datetime import datetime, timezone
 import json
 from pathlib import Path
@@ -363,9 +364,11 @@ def simulate_world_season_1993_94(*, seed: int = 9394, universe: FootballUnivers
 @dataclass(slots=True)
 class WorldCareerStore9394:
     root: Path
+    backup_root: Path
 
-    def __init__(self, root: str | Path):
+    def __init__(self, root: str | Path, backup_root: str | Path | None = None):
         self.root = Path(root)
+        self.backup_root = Path(backup_root) if backup_root is not None else self.root.parent / "backups"
 
     def path_for(self, career_id: str) -> Path:
         safe = "".join(ch for ch in str(career_id) if ch.isalnum() or ch in "-_")
@@ -373,18 +376,18 @@ class WorldCareerStore9394:
             raise ValueError("career_id inválido")
         return self.root / f"{safe}.json"
 
+    @staticmethod
+    def _validate(payload: dict[str, Any]) -> None:
+        if int(payload.get("schema", 0)) != WORLD_SAVE_SCHEMA:
+            raise ValueError(f"schema de carrera no soportado: {payload.get('schema')}")
+        if not str(payload.get("career_id") or "").strip():
+            raise ValueError("save de mundo sin career_id")
+
     def save(self, payload: dict[str, Any]) -> Path:
         career_id = str(payload.get("career_id") or "")
         path = self.path_for(career_id)
-        path.parent.mkdir(parents=True, exist_ok=True)
-        tmp = path.with_suffix(path.suffix + ".tmp")
-        tmp.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
-        tmp.replace(path)
-        return path
+        return atomic_json_save(path, payload, validator=self._validate, backup_root=self.backup_root)
 
     def load(self, career_id: str) -> dict[str, Any]:
         path = self.path_for(career_id)
-        payload = json.loads(path.read_text(encoding="utf-8"))
-        if int(payload.get("schema", 0)) != WORLD_SAVE_SCHEMA:
-            raise ValueError(f"schema de carrera no soportado: {payload.get('schema')}")
-        return payload
+        return recover_json_load(path, validator=self._validate, backup_root=self.backup_root)
