@@ -1,12 +1,23 @@
 <script setup>
+import UiPageHeader from '../../components/ui/UiPageHeader.vue'
+import UiEmptyState from '../../components/ui/UiEmptyState.vue'
 defineProps({categories:{type:Array,default:()=>[]},category:{type:String,default:'Todas'},news:{type:Array,default:()=>[]},managerWorld:{type:Object,default:()=>({history:[],pressure:{},unemployed_count:0})},informationWorld:{type:Object,default:()=>({threads:[],media_reputation:{}})},formatDate:{type:Function,required:true}})
-const emit=defineEmits(['update:category'])
+const emit=defineEmits(['update:category','open-entity'])
+function actionsFor(item){
+ const entity=item?.entity||{}
+ const actions=[]
+ if(entity.player_id)actions.push({type:'player',id:entity.player_id,label:'Ver jugador'})
+ if(entity.team_id)actions.push({type:'team',id:entity.team_id,label:'Ver club'})
+ if(entity.opponent_id)actions.push({type:'team',id:entity.opponent_id,label:'Ver rival'})
+ if(entity.competition_id)actions.push({type:'competition',id:entity.competition_id,kind:entity.competition_kind||'league',label:'Ver competición'})
+ return actions
+}
 </script>
 <template>
 <section class="screen-grid news-screen modern-r7">
-  <article class="football-panel news-archive"><header class="workspace-heading"><div><small>Memoria viva</small><h2>Noticias</h2><p>La hemeroteca sólo recoge hechos ocurridos realmente en esta partida.</p></div></header>
+  <article class="football-panel news-archive"><UiPageHeader eyebrow="MEMORIA VIVA" title="Noticias" description="La hemeroteca convierte hechos reales de tu partida en contexto: qué pasó, a quién afecta y por qué vuelve a importar." :status="`${news.length} noticia${news.length===1?'':'s'}`" />
     <nav class="chip-filter"><button v-for="cat in categories" :key="cat" type="button" :class="{active:category===cat}" @click="emit('update:category',cat)">{{cat}}</button></nav>
-    <div class="news-stream"><article v-for="n in news" :key="n.id" class="story-card modern-story" :class="`importance-${n.importance}`"><time>{{formatDate(n.date)}}</time><div><small>{{n.category}}</small><h3>{{n.headline}}</h3><p>{{n.detail}}</p></div></article><div v-if="!news.length" class="empty-football-state">Todavía no hay hechos suficientes para abrir la hemeroteca.</div></div>
+    <div class="news-stream"><article v-for="n in news" :key="n.id" class="story-card modern-story" :class="`importance-${n.importance}`"><time>{{formatDate(n.date)}}</time><div><small>{{n.category}}</small><h3>{{n.headline}}</h3><p>{{n.detail}}</p><div v-if="actionsFor(n).length" class="story-actions"><button v-for="action in actionsFor(n)" :key="`${action.type}-${action.id}`" type="button" class="text-action" @click="emit('open-entity',action)">{{action.label}} →</button></div></div></article><UiEmptyState v-if="!news.length" title="Todavía no hay hechos suficientes para abrir la hemeroteca" detail="La portada se alimenta de resultados, fichajes, lesiones, contratos, selecciones y cambios de carrera que hayan ocurrido realmente." hint="Continúa la partida: cuando un hecho tenga contexto suficiente aparecerá aquí sin generar noticias de relleno." /></div>
   </article>
   <aside class="side-stack news-world-rail">
     <article class="football-panel editorial-note"><span class="editorial-mark">93</span><h2>Una partida, una historia</h2><p>Resultados, fichajes, lesiones, contratos, selecciones y transiciones de temporada alimentan esta portada. No hay noticias de relleno.</p></article>

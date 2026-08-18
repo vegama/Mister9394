@@ -1,0 +1,264 @@
+{
+  "kind": "source-css-shell-browser-matrix",
+  "production_bundle_certified": false,
+  "note": "Carga CSS real + DOM representativo. El E2E del bundle de producción sigue siendo un gate separado.",
+  "cases": [
+    {
+      "name": "1920x1080",
+      "physical_reference": "1920x1080",
+      "layout_viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "zoom_percent": 100,
+      "metrics": {
+        "clientWidth": 1920,
+        "scrollWidth": 1920,
+        "clientHeight": 1080,
+        "scrollHeight": 1172,
+        "activeTag": "BODY"
+      },
+      "checks": {
+        "no_global_horizontal_overflow": true,
+        "continue_visible": true,
+        "topbar_visible": true,
+        "main_has_width": true,
+        "navigation_visible": true,
+        "mobile_nav_at_bottom": true,
+        "mobile_nav_single_row": true,
+        "topbar_at_top": true,
+        "skip_link_focus": true,
+        "command_keyboard": true,
+        "error_state_in_viewport": true,
+        "slow_state_in_viewport": true
+      },
+      "passed": true,
+      "screenshot": "docs/visual-qa/rc-browser-matrix/1920x1080.png"
+    },
+    {
+      "name": "1366x768",
+      "physical_reference": "1366x768",
+      "layout_viewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "zoom_percent": 100,
+      "metrics": {
+        "clientWidth": 1366,
+        "scrollWidth": 1366,
+        "clientHeight": 768,
+        "scrollHeight": 1125,
+        "activeTag": "BODY"
+      },
+      "checks": {
+        "no_global_horizontal_overflow": true,
+        "continue_visible": true,
+        "topbar_visible": true,
+        "main_has_width": true,
+        "navigation_visible": true,
+        "mobile_nav_at_bottom": true,
+        "mobile_nav_single_row": true,
+        "topbar_at_top": true,
+        "skip_link_focus": true,
+        "command_keyboard": true,
+        "error_state_in_viewport": true,
+        "slow_state_in_viewport": true
+      },
+      "passed": true,
+      "screenshot": "docs/visual-qa/rc-browser-matrix/1366x768.png"
+    },
+    {
+      "name": "1280x720",
+      "physical_reference": "1280x720",
+      "layout_viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "zoom_percent": 100,
+      "metrics": {
+        "clientWidth": 1280,
+        "scrollWidth": 1280,
+        "clientHeight": 720,
+        "scrollHeight": 1125,
+        "activeTag": "BODY"
+      },
+      "checks": {
+        "no_global_horizontal_overflow": true,
+        "continue_visible": true,
+        "topbar_visible": true,
+        "main_has_width": true,
+        "navigation_visible": true,
+        "mobile_nav_at_bottom": true,
+        "mobile_nav_single_row": true,
+        "topbar_at_top": true,
+        "skip_link_focus": true,
+        "command_keyboard": true,
+        "error_state_in_viewport": true,
+        "slow_state_in_viewport": true
+      },
+      "passed": true,
+      "screenshot": "docs/visual-qa/rc-browser-matrix/1280x720.png"
+    },
+    {
+      "name": "1024x768",
+      "physical_reference": "1024x768",
+      "layout_viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "zoom_percent": 100,
+      "metrics": {
+        "clientWidth": 1024,
+        "scrollWidth": 1024,
+        "clientHeight": 768,
+        "scrollHeight": 1155,
+        "activeTag": "BODY"
+      },
+      "checks": {
+        "no_global_horizontal_overflow": true,
+        "continue_visible": true,
+        "topbar_visible": true,
+        "main_has_width": true,
+        "navigation_visible": true,
+        "mobile_nav_at_bottom": true,
+        "mobile_nav_single_row": true,
+        "topbar_at_top": true,
+        "skip_link_focus": true,
+        "command_keyboard": true,
+        "error_state_in_viewport": true,
+        "slow_state_in_viewport": true
+      },
+      "passed": true,
+      "screenshot": "docs/visual-qa/rc-browser-matrix/1024x768.png"
+    },
+    {
+      "name": "1920x1080-z200",
+      "physical_reference": "1920x1080",
+      "layout_viewport": {
+        "width": 960,
+        "height": 540
+      },
+      "zoom_percent": 200,
+      "metrics": {
+        "clientWidth": 960,
+        "scrollWidth": 960,
+        "clientHeight": 540,
+        "scrollHeight": 1165,
+        "activeTag": "BODY"
+      },
+      "checks": {
+        "no_global_horizontal_overflow": true,
+        "continue_visible": true,
+        "topbar_visible": true,
+        "main_has_width": true,
+        "navigation_visible": true,
+        "mobile_nav_at_bottom": true,
+        "mobile_nav_single_row": true,
+        "topbar_at_top": true,
+        "skip_link_focus": true,
+        "command_keyboard": true,
+        "error_state_in_viewport": true,
+        "slow_state_in_viewport": true
+      },
+      "passed": true,
+      "screenshot": "docs/visual-qa/rc-browser-matrix/1920x1080-z200.png"
+    },
+    {
+      "name": "1366x768-z200",
+      "physical_reference": "1366x768",
+      "layout_viewport": {
+        "width": 683,
+        "height": 384
+      },
+      "zoom_percent": 200,
+      "metrics": {
+        "clientWidth": 683,
+        "scrollWidth": 683,
+        "clientHeight": 384,
+        "scrollHeight": 1827,
+        "activeTag": "BODY"
+      },
+      "checks": {
+        "no_global_horizontal_overflow": true,
+        "continue_visible": true,
+        "topbar_visible": true,
+        "main_has_width": true,
+        "navigation_visible": true,
+        "mobile_nav_at_bottom": true,
+        "mobile_nav_single_row": true,
+        "topbar_at_top": true,
+        "skip_link_focus": true,
+        "command_keyboard": true,
+        "error_state_in_viewport": true,
+        "slow_state_in_viewport": true
+      },
+      "passed": true,
+      "screenshot": "docs/visual-qa/rc-browser-matrix/1366x768-z200.png"
+    },
+    {
+      "name": "1280x720-z200",
+      "physical_reference": "1280x720",
+      "layout_viewport": {
+        "width": 640,
+        "height": 360
+      },
+      "zoom_percent": 200,
+      "metrics": {
+        "clientWidth": 640,
+        "scrollWidth": 640,
+        "clientHeight": 360,
+        "scrollHeight": 1843,
+        "activeTag": "BODY"
+      },
+      "checks": {
+        "no_global_horizontal_overflow": true,
+        "continue_visible": true,
+        "topbar_visible": true,
+        "main_has_width": true,
+        "navigation_visible": true,
+        "mobile_nav_at_bottom": true,
+        "mobile_nav_single_row": true,
+        "topbar_at_top": true,
+        "skip_link_focus": true,
+        "command_keyboard": true,
+        "error_state_in_viewport": true,
+        "slow_state_in_viewport": true
+      },
+      "passed": true,
+      "screenshot": "docs/visual-qa/rc-browser-matrix/1280x720-z200.png"
+    },
+    {
+      "name": "1024x768-z200",
+      "physical_reference": "1024x768",
+      "layout_viewport": {
+        "width": 512,
+        "height": 384
+      },
+      "zoom_percent": 200,
+      "metrics": {
+        "clientWidth": 512,
+        "scrollWidth": 512,
+        "clientHeight": 384,
+        "scrollHeight": 1949,
+        "activeTag": "BODY"
+      },
+      "checks": {
+        "no_global_horizontal_overflow": true,
+        "continue_visible": true,
+        "topbar_visible": true,
+        "main_has_width": true,
+        "navigation_visible": true,
+        "mobile_nav_at_bottom": true,
+        "mobile_nav_single_row": true,
+        "topbar_at_top": true,
+        "skip_link_focus": true,
+        "command_keyboard": true,
+        "error_state_in_viewport": true,
+        "slow_state_in_viewport": true
+      },
+      "passed": true,
+      "screenshot": "docs/visual-qa/rc-browser-matrix/1024x768-z200.png"
+    }
+  ],
+  "passed": true
+}

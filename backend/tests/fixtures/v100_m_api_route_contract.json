@@ -1,0 +1,447 @@
+[
+  {
+    "method": "GET",
+    "path": "/api/football9394/career-options",
+    "handler": "manager_career_options"
+  },
+  {
+    "method": "GET",
+    "path": "/api/football9394/career/bootstrap",
+    "handler": "career_bootstrap"
+  },
+  {
+    "method": "POST",
+    "path": "/api/football9394/careers",
+    "handler": "create_manager_career"
+  },
+  {
+    "method": "GET",
+    "path": "/api/football9394/careers/{career_id}",
+    "handler": "get_manager_career"
+  },
+  {
+    "method": "POST",
+    "path": "/api/football9394/careers/{career_id}/advance",
+    "handler": "advance_manager_career"
+  },
+  {
+    "method": "POST",
+    "path": "/api/football9394/careers/{career_id}/advance-until-event",
+    "handler": "advance_manager_career_until_event"
+  },
+  {
+    "method": "GET",
+    "path": "/api/football9394/careers/{career_id}/board",
+    "handler": "manager_career_board"
+  },
+  {
+    "method": "GET",
+    "path": "/api/football9394/careers/{career_id}/board-project",
+    "handler": "manager_board_project"
+  },
+  {
+    "method": "POST",
+    "path": "/api/football9394/careers/{career_id}/board-project/requests/{request_type}",
+    "handler": "manager_board_request"
+  },
+  {
+    "method": "GET",
+    "path": "/api/football9394/careers/{career_id}/calendar",
+    "handler": "manager_career_calendar"
+  },
+  {
+    "method": "POST",
+    "path": "/api/football9394/careers/{career_id}/captain/{player_id}",
+    "handler": "manager_set_captain"
+  },
+  {
+    "method": "GET",
+    "path": "/api/football9394/careers/{career_id}/competitions",
+    "handler": "manager_career_competitions"
+  },
+  {
+    "method": "GET",
+    "path": "/api/football9394/careers/{career_id}/competitions/{kind}/{source_id}",
+    "handler": "manager_career_competition"
+  },
+  {
+    "method": "POST",
+    "path": "/api/football9394/careers/{career_id}/contracts/{player_id}/renew",
+    "handler": "manager_career_renew_contract"
+  },
+  {
+    "method": "GET",
+    "path": "/api/football9394/careers/{career_id}/dashboard",
+    "handler": "manager_career_dashboard"
+  },
+  {
+    "method": "POST",
+    "path": "/api/football9394/careers/{career_id}/dressing-room/concerns/{concern_id}",
+    "handler": "manager_respond_concern"
+  },
+  {
+    "method": "GET",
+    "path": "/api/football9394/careers/{career_id}/economy",
+    "handler": "manager_career_economy"
+  },
+  {
+    "method": "GET",
+    "path": "/api/football9394/careers/{career_id}/history",
+    "handler": "manager_career_history"
+  },
+  {
+    "method": "POST",
+    "path": "/api/football9394/careers/{career_id}/incoming-offers/{offer_id}/accept",
+    "handler": "manager_accept_incoming_offer"
+  },
+  {
+    "method": "GET",
+    "path": "/api/football9394/careers/{career_id}/information-world",
+    "handler": "manager_information_world"
+  },
+  {
+    "method": "POST",
+    "path": "/api/football9394/careers/{career_id}/job/resign",
+    "handler": "manager_resign_club_job"
+  },
+  {
+    "method": "POST",
+    "path": "/api/football9394/careers/{career_id}/jobs/{offer_id}/accept",
+    "handler": "manager_accept_job_offer"
+  },
+  {
+    "method": "POST",
+    "path": "/api/football9394/careers/{career_id}/jobs/{opportunity_id}/apply",
+    "handler": "manager_apply_for_job"
+  },
+  {
+    "method": "GET",
+    "path": "/api/football9394/careers/{career_id}/leagues/{source_id}/standings",
+    "handler": "manager_career_league_standings"
+  },
+  {
+    "method": "GET",
+    "path": "/api/football9394/careers/{career_id}/live",
+    "handler": "manager_live_match"
+  },
+  {
+    "method": "POST",
+    "path": "/api/football9394/careers/{career_id}/live/advance",
+    "handler": "advance_manager_live_match"
+  },
+  {
+    "method": "POST",
+    "path": "/api/football9394/careers/{career_id}/live/finish",
+    "handler": "finish_manager_live_match"
+  },
+  {
+    "method": "DELETE",
+    "path": "/api/football9394/careers/{career_id}/live/preview",
+    "handler": "cancel_manager_live_preview"
+  },
+  {
+    "method": "POST",
+    "path": "/api/football9394/careers/{career_id}/live/result",
+    "handler": "simulate_manager_live_match"
+  },
+  {
+    "method": "POST",
+    "path": "/api/football9394/careers/{career_id}/live/start",
+    "handler": "start_manager_live_match"
+  },
+  {
+    "method": "POST",
+    "path": "/api/football9394/careers/{career_id}/live/substitution",
+    "handler": "substitute_manager_live_match"
+  },
+  {
+    "method": "PUT",
+    "path": "/api/football9394/careers/{career_id}/live/tactics",
+    "handler": "update_manager_live_tactics"
+  },
+  {
+    "method": "GET",
+    "path": "/api/football9394/careers/{career_id}/market",
+    "handler": "manager_career_market"
+  },
+  {
+    "method": "GET",
+    "path": "/api/football9394/careers/{career_id}/market-flow",
+    "handler": "manager_market_flow"
+  },
+  {
+    "method": "POST",
+    "path": "/api/football9394/careers/{career_id}/market-inquiry/{player_id}",
+    "handler": "manager_market_inquiry"
+  },
+  {
+    "method": "GET",
+    "path": "/api/football9394/careers/{career_id}/match-briefing",
+    "handler": "manager_match_briefing"
+  },
+  {
+    "method": "POST",
+    "path": "/api/football9394/careers/{career_id}/national-job/resign",
+    "handler": "manager_resign_national_job"
+  },
+  {
+    "method": "POST",
+    "path": "/api/football9394/careers/{career_id}/national-job/{offer_id}/accept",
+    "handler": "manager_accept_national_job"
+  },
+  {
+    "method": "PUT",
+    "path": "/api/football9394/careers/{career_id}/national-selection",
+    "handler": "manager_set_national_selection"
+  },
+  {
+    "method": "PUT",
+    "path": "/api/football9394/careers/{career_id}/national-selection/auto",
+    "handler": "manager_auto_national_selection"
+  },
+  {
+    "method": "POST",
+    "path": "/api/football9394/careers/{career_id}/negotiations",
+    "handler": "manager_open_negotiation"
+  },
+  {
+    "method": "DELETE",
+    "path": "/api/football9394/careers/{career_id}/negotiations/{negotiation_id}",
+    "handler": "manager_withdraw_negotiation"
+  },
+  {
+    "method": "PUT",
+    "path": "/api/football9394/careers/{career_id}/negotiations/{negotiation_id}",
+    "handler": "manager_counter_negotiation"
+  },
+  {
+    "method": "GET",
+    "path": "/api/football9394/careers/{career_id}/news",
+    "handler": "manager_career_news"
+  },
+  {
+    "method": "POST",
+    "path": "/api/football9394/careers/{career_id}/play-next",
+    "handler": "play_next_manager_matchday"
+  },
+  {
+    "method": "GET",
+    "path": "/api/football9394/careers/{career_id}/players/{player_id}",
+    "handler": "manager_career_player"
+  },
+  {
+    "method": "POST",
+    "path": "/api/football9394/careers/{career_id}/players/{player_id}/discipline",
+    "handler": "manager_discipline_player"
+  },
+  {
+    "method": "POST",
+    "path": "/api/football9394/careers/{career_id}/players/{player_id}/role-promise",
+    "handler": "manager_set_role_promise"
+  },
+  {
+    "method": "GET",
+    "path": "/api/football9394/careers/{career_id}/professional-career",
+    "handler": "manager_professional_career"
+  },
+  {
+    "method": "GET",
+    "path": "/api/football9394/careers/{career_id}/scouting",
+    "handler": "manager_career_scouting"
+  },
+  {
+    "method": "POST",
+    "path": "/api/football9394/careers/{career_id}/scouting/{player_id}",
+    "handler": "manager_start_scouting"
+  },
+  {
+    "method": "PUT",
+    "path": "/api/football9394/careers/{career_id}/selection",
+    "handler": "update_manager_selection"
+  },
+  {
+    "method": "GET",
+    "path": "/api/football9394/careers/{career_id}/squad-plan",
+    "handler": "manager_squad_plan"
+  },
+  {
+    "method": "GET",
+    "path": "/api/football9394/careers/{career_id}/staff",
+    "handler": "manager_career_staff"
+  },
+  {
+    "method": "GET",
+    "path": "/api/football9394/careers/{career_id}/staff-reports",
+    "handler": "manager_staff_reports"
+  },
+  {
+    "method": "PUT",
+    "path": "/api/football9394/careers/{career_id}/staff/responsibilities/{responsibility_key}",
+    "handler": "manager_assign_staff_responsibility"
+  },
+  {
+    "method": "GET",
+    "path": "/api/football9394/careers/{career_id}/tactical-plan",
+    "handler": "manager_tactical_plan"
+  },
+  {
+    "method": "PUT",
+    "path": "/api/football9394/careers/{career_id}/tactical-plan",
+    "handler": "manager_update_tactical_plan"
+  },
+  {
+    "method": "PUT",
+    "path": "/api/football9394/careers/{career_id}/tactical-plan/opposition/{player_id}",
+    "handler": "manager_update_opposition_instruction"
+  },
+  {
+    "method": "PUT",
+    "path": "/api/football9394/careers/{career_id}/tactical-plan/players/{player_id}",
+    "handler": "manager_update_player_instruction"
+  },
+  {
+    "method": "PUT",
+    "path": "/api/football9394/careers/{career_id}/tactical-plan/set-pieces/{kind}",
+    "handler": "manager_update_set_piece_taker"
+  },
+  {
+    "method": "PUT",
+    "path": "/api/football9394/careers/{career_id}/tactics",
+    "handler": "update_manager_tactics"
+  },
+  {
+    "method": "GET",
+    "path": "/api/football9394/careers/{career_id}/teams/{team_id}",
+    "handler": "manager_career_team"
+  },
+  {
+    "method": "GET",
+    "path": "/api/football9394/careers/{career_id}/training",
+    "handler": "manager_career_training"
+  },
+  {
+    "method": "PUT",
+    "path": "/api/football9394/careers/{career_id}/training",
+    "handler": "manager_update_training"
+  },
+  {
+    "method": "PUT",
+    "path": "/api/football9394/careers/{career_id}/training/match-preparation",
+    "handler": "manager_update_match_preparation"
+  },
+  {
+    "method": "PUT",
+    "path": "/api/football9394/careers/{career_id}/training/players/{player_id}",
+    "handler": "manager_update_training_focus"
+  },
+  {
+    "method": "PUT",
+    "path": "/api/football9394/careers/{career_id}/training/recovery/{player_id}",
+    "handler": "manager_update_training_recovery"
+  },
+  {
+    "method": "DELETE",
+    "path": "/api/football9394/careers/{career_id}/transfer-list/{player_id}",
+    "handler": "manager_unlist_player"
+  },
+  {
+    "method": "POST",
+    "path": "/api/football9394/careers/{career_id}/transfer-list/{player_id}",
+    "handler": "manager_list_player"
+  },
+  {
+    "method": "POST",
+    "path": "/api/football9394/careers/{career_id}/transfers/{player_id}",
+    "handler": "manager_career_transfer"
+  },
+  {
+    "method": "POST",
+    "path": "/api/football9394/careers/{career_id}/watchlist/{player_id}",
+    "handler": "manager_watchlist"
+  },
+  {
+    "method": "GET",
+    "path": "/api/football9394/careers/{career_id}/world",
+    "handler": "manager_career_world"
+  },
+  {
+    "method": "GET",
+    "path": "/api/football9394/competitions",
+    "handler": "competitions"
+  },
+  {
+    "method": "GET",
+    "path": "/api/football9394/health",
+    "handler": "health"
+  },
+  {
+    "method": "GET",
+    "path": "/api/football9394/leagues/{league_id}/calendar",
+    "handler": "league_calendar"
+  },
+  {
+    "method": "POST",
+    "path": "/api/football9394/matches/simulate",
+    "handler": "simulate_match"
+  },
+  {
+    "method": "GET",
+    "path": "/api/football9394/national-teams",
+    "handler": "national_teams"
+  },
+  {
+    "method": "GET",
+    "path": "/api/football9394/national-teams/{country_id}",
+    "handler": "national_team"
+  },
+  {
+    "method": "GET",
+    "path": "/api/football9394/players",
+    "handler": "players"
+  },
+  {
+    "method": "GET",
+    "path": "/api/football9394/players/{player_id}",
+    "handler": "player"
+  },
+  {
+    "method": "GET",
+    "path": "/api/football9394/rule-audit",
+    "handler": "rule_audit"
+  },
+  {
+    "method": "GET",
+    "path": "/api/football9394/rules/{competition}",
+    "handler": "competition_rules"
+  },
+  {
+    "method": "GET",
+    "path": "/api/football9394/teams",
+    "handler": "teams"
+  },
+  {
+    "method": "GET",
+    "path": "/api/football9394/teams/{team_id}",
+    "handler": "team"
+  },
+  {
+    "method": "GET",
+    "path": "/api/football9394/teams/{team_id}/calendar",
+    "handler": "team_calendar"
+  },
+  {
+    "method": "GET",
+    "path": "/api/football9394/teams/{team_id}/squad",
+    "handler": "team_squad"
+  },
+  {
+    "method": "GET",
+    "path": "/api/football9394/universe",
+    "handler": "universe"
+  },
+  {
+    "method": "POST",
+    "path": "/api/football9394/world/seasons/simulate",
+    "handler": "simulate_world_season"
+  }
+]

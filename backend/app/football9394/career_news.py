@@ -80,7 +80,7 @@ def ingest_events(state: dict[str, Any], events: list[dict[str, Any]], *,
             champion=int(event.get("champion_team_id") or 0); name=str(event.get("competition_name") or f"Competición {event.get('source_id')}")
             cause=f"competition-title:{state.get('season')}:{event.get('competition_kind') or 'competition'}:{event.get('source_id')}:{champion}"
             item=publish(state,key=key,date=date,category="Competiciones",importance=5,
-                headline=f"{team_name(champion)} conquista {name}",detail="El título queda registrado en el palmarés de esta partida.",entity={"team_id":champion,"competition_id":event.get("source_id")},cause=cause)
+                headline=f"{team_name(champion)} conquista {name}",detail="El título queda registrado en el palmarés de esta partida.",entity={"team_id":champion,"competition_id":event.get("source_id"),"competition_kind":event.get("competition_kind") or "league"},cause=cause)
         elif kind=="season_rollover":
             item=publish(state,key=key,date=date,category="Temporada",importance=5,
                 headline=f"Comienza la temporada {event.get('to_season')}",

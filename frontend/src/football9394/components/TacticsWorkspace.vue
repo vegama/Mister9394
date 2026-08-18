@@ -1,6 +1,9 @@
 <script setup>
 import { computed } from 'vue'
 import LineupPitch from './LineupPitch.vue'
+import UiPageHeader from '../../components/ui/UiPageHeader.vue'
+import UiProcessTrail from '../../components/ui/UiProcessTrail.vue'
+import UiActionDock from '../../components/ui/UiActionDock.vue'
 
 const props = defineProps({
   formation: { type: String, default: '4-4-2' },
@@ -44,6 +47,14 @@ const selectionReady = computed(() => Boolean(props.lineupDraft.length===11 && p
 const benchSlots = computed(() => Array.from({length:5},(_,index)=>props.benchPlayers[index] || null))
 const atHalftime = computed(() => props.live && props.liveStatus==='halftime')
 const opponentName = computed(() => props.briefing?.opponent?.team_name || (Number(props.nextMatch?.home_team_id||0)===Number(props.controlledTeamId) ? props.nextMatch?.away_team : props.nextMatch?.home_team) || 'Próximo rival')
+const prepSteps = computed(() => props.live ? [
+  {id:'live',label:atHalftime.value?'Descanso':'Partido en curso',detail:atHalftime.value?'Ajusta el plan antes de la 2ª parte':`Minuto ${props.liveMinute}`,active:true},
+  {id:'apply',label:'Aplicar cambios',detail:'Vuelve al directo con el plan actualizado'},
+] : [
+  {id:'squad',label:'Convocatoria',detail:selectionReady.value?'11 + 5 listos':'Completa titulares y banquillo',done:selectionReady.value},
+  {id:'tactics',label:'Táctica',detail:`${props.formation} · ${opponentName.value}`,active:true},
+  {id:'preview',label:'Previa',detail:isMatchDay.value?'Disponible hoy':'Se abrirá el día de partido'},
+])
 const instructionFor = id => (props.plan?.individual_instructions || []).find(row=>Number(row.player_id)===Number(id)) || {duty:'support',freedom:'balanced',pressing:'normal'}
 function updateIndividual(player,key,value){
  const current=instructionFor(player.id)
@@ -70,13 +81,10 @@ function dropOnBench(event,target=null){
 
 <template>
   <section class="screen-grid tactics-screen redesigned-tactics">
-    <div v-if="!live" class="match-prep-flow" aria-label="Flujo de preparación de partido">
-      <button type="button" class="prep-step done" @click="emit('open-squad')"><small>1 · CONVOCATORIA</small><strong>{{selectionReady?'11 + 5 listos':'Revisar'}}</strong><span>{{selectionReady?'✓':'→'}}</span></button>
-      <div class="prep-step current"><small>2 · TÁCTICA</small><strong>{{formation}}</strong><span>Ahora</span></div>
-      <button type="button" class="prep-step" :class="{done:isMatchDay && selectionReady}" :disabled="!isMatchDay || !selectionReady || busy" @click="emit('start-live')"><small>3 · PREVIA</small><strong>{{isMatchDay?'Abrir partido':'Esperando día de partido'}}</strong><span>{{isMatchDay&&selectionReady?'→':'·'}}</span></button>
-      <div class="prep-opponent"><small>PRÓXIMO RIVAL</small><strong>{{opponentName}}</strong><span>{{isMatchDay?'Hoy':(nextMatch?.date || 'Sin fecha')}}</span></div>
-    </div>
-    <div v-else class="match-prep-flow live-plan-flow"><div class="prep-step current"><small>{{atHalftime?'DESCANSO':`PARTIDO · ${liveMinute}'`}}</small><strong>{{atHalftime?'Plan para la 2ª parte':'Ajuste táctico'}}</strong><span>{{formation}}</span></div><div class="prep-opponent"><small>EFECTO</small><strong>{{atHalftime?'Se aplicará al reanudar':'Se aplica al directo'}}</strong><span>Vuelve al banquillo al confirmar</span></div></div>
+    <UiPageHeader :eyebrow="live?'DÍA DE PARTIDO':'PREPARACIÓN'" :title="live?(atHalftime?'Descanso · reajuste táctico':`Directo · ${liveMinute}'`):'Plan de partido'" :description="live?'Cambia sólo lo que puedas explicar por lo que estás viendo en el partido.':`Prepara el ${formation} contra ${opponentName} y llega a la previa con once, banquillo y órdenes coherentes.`" :status="isMatchDay?'Partido hoy':(nextMatch?.date || 'Sin fecha')">
+      <template #actions><button v-if="!live" type="button" class="football-button" @click="emit('open-squad')">← Convocatoria</button><button v-if="!live && isMatchDay" type="button" class="football-button primary" :disabled="!selectionReady || busy" @click="emit('start-live')">Abrir previa →</button></template>
+    </UiPageHeader>
+    <UiProcessTrail class="tactics-process-trail" :steps="prepSteps" :active-step="live?'live':'tactics'" aria-label="Preparación del partido" />
     <article class="football-panel tactics-board-panel">
       <header class="panel-feature-head compact-head"><div><small>MODELO DE JUEGO</small><h2>{{ identity.formation_label || 'Plan de partido' }}</h2><p>El once y la estructura se leen de un vistazo antes de tocar una orden.</p></div></header>
       <div class="formation-switcher"><button v-for="f in ['4-4-2','4-3-3','4-2-3-1','4-5-1','4-4-1-1','4-3-1-2','4-2-4','3-5-2','3-4-3','3-4-1-2','5-3-2','5-4-1','5-2-3']" :key="f" type="button" :class="{active:formation===f}" @click="emit('update:formation',f)">{{f}}</button></div>
@@ -148,7 +156,7 @@ function dropOnBench(event,target=null){
         <header><small>QUIÉN EJECUTA EL PLAN</small><strong>El sistema depende de los futbolistas</strong></header>
         <div class="tactical-player-fit-list"><span v-for="p in fitRows" :key="p.id" :class="fitTone(p.fit)"><b>{{p.name}}</b><small>{{p.pos}} · {{p.role}}</small><em>{{p.fit?`${p.fit}/100`:'sin evaluar'}}</em></span></div>
       </article>
-      <div class="tactics-footer"><p>La táctica modifica comportamientos y riesgos; un plan exigente sólo funciona si el once tiene perfiles compatibles para ejecutarlo.</p><div><button v-if="!live" type="button" class="football-button" @click="emit('open-squad')">← Revisar convocatoria</button><button v-if="!live" type="button" class="football-button" :disabled="busy" @click="emit('save')">Guardar táctica</button><button v-if="!live && isMatchDay" type="button" class="football-button primary" :disabled="busy || !selectionReady" @click="emit('start-live')">{{busy?'Preparando…':'Guardar e ir a la previa'}} →</button><button v-if="live" type="button" class="football-button primary" :disabled="busy" @click="emit('apply-live')">{{busy?'Aplicando…':atHalftime?'Aplicar para la 2ª parte →':'Aplicar y volver al partido →'}}</button></div></div>
+      <UiActionDock class="tactics-footer" :eyebrow="live?'CAMBIO EN DIRECTO':'SIGUIENTE PASO'" :title="live?(atHalftime?'Plan para la 2ª parte · confirma los ajustes':'Aplica el ajuste y vuelve al banquillo'):(isMatchDay?'Guarda el plan y abre la previa':'Guarda el plan; podrás abrir la previa el día de partido')" detail="La táctica cambia comportamientos y riesgos; un plan exigente sólo funciona si el once tiene perfiles compatibles." :tone="weakFits.length?'warning':'accent'" sticky><button v-if="!live" type="button" class="football-button" @click="emit('open-squad')">← Revisar convocatoria</button><button v-if="!live" type="button" class="football-button" :disabled="busy" @click="emit('save')">Guardar táctica</button><button v-if="!live && isMatchDay" type="button" class="football-button primary" :disabled="busy || !selectionReady" @click="emit('start-live')">{{busy?'Preparando…':'Guardar e ir a la previa'}} →</button><button v-if="live" type="button" class="football-button primary" :disabled="busy" @click="emit('apply-live')">{{busy?'Aplicando…':atHalftime?'Aplicar para la 2ª parte →':'Aplicar y volver al partido →'}}</button></UiActionDock>
     </article>
   </section>
 </template>

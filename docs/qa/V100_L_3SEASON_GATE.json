@@ -1,0 +1,76 @@
+{
+  "checkpoint": "1.0.0-l-emotion-milestones-closed",
+  "generated_at": "2026-08-18",
+  "seasons_executed": 3,
+  "final_audit": {
+    "season": "1996-97",
+    "active_clubs": 444,
+    "squad_min": 18,
+    "squad_median": 22,
+    "squad_max": 25,
+    "negative_cash_clubs": 0,
+    "archive_seasons": 3,
+    "manager_recaps": 3,
+    "honours": 87,
+    "transitions": 3,
+    "health": "healthy",
+    "save_megabytes": 16.52
+  },
+  "career_milestones_count": 6,
+  "career_milestones": [
+    {
+      "season": "1993-94",
+      "kind": "champion",
+      "title": "Campeón: Primera División",
+      "importance": 10,
+      "team_id": 16,
+      "outcome": "title"
+    },
+    {
+      "season": "1993-94",
+      "kind": "season_end",
+      "title": "Fin de temporada 1993-94",
+      "importance": 10,
+      "team_id": 16,
+      "outcome": "great"
+    },
+    {
+      "season": "1994-95",
+      "kind": "champion",
+      "title": "Campeón: Primera División",
+      "importance": 10,
+      "team_id": 16,
+      "outcome": "title"
+    },
+    {
+      "season": "1994-95",
+      "kind": "season_end",
+      "title": "Fin de temporada 1994-95",
+      "importance": 10,
+      "team_id": 16,
+      "outcome": "great"
+    },
+    {
+      "season": "1995-96",
+      "kind": "champion",
+      "title": "Campeón: Primera División",
+      "importance": 10,
+      "team_id": 16,
+      "outcome": "title"
+    },
+    {
+      "season": "1995-96",
+      "kind": "season_end",
+      "title": "Fin de temporada 1995-96",
+      "importance": 10,
+      "team_id": 16,
+      "outcome": "great"
+    }
+  ],
+  "assertions": {
+    "personal_stream_not_flooded_by_global_honours": true,
+    "one_season_end_per_archived_season": true,
+    "final_world_health_healthy": true,
+    "negative_cash_clubs_zero": true
+  }
+}

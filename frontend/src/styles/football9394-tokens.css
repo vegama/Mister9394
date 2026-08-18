@@ -1,0 +1,22 @@
+:root[data-football-era="1993-94"]{
+  --f-bg:#eef1f3;
+  --f-panel:#ffffff;
+  --f-panel2:#ffffff;
+  --f-line:#dfe5e2;
+  --f-line-strong:#ccd6d1;
+  --f-text:#17211e;
+  --f-muted:#6d7975;
+  --f-green:#1f6848;
+  --f-lime:#5fa774;
+  --f-gold:#9c741d;
+  --f-red:#b04444;
+  --f-blue:#376f9f;
+  --f-soft:#f6f8f7;
+  --f-soft-green:#edf6f1;
+  --f-sidebar:#101816;
+  --f-sidebar-soft:#18231f;
+  --f-shadow:0 8px 24px rgba(19,34,29,.07);
+  --f-radius:16px;
+}
+:root[data-football-era="1993-94"] body{background:var(--f-bg);color:var(--f-text)}
+

@@ -1,6 +1,6 @@
 {
   "project": "Mister 93/94",
-  "checkpoint": "1.0.0-h-release-hygiene-closed",
+  "checkpoint": "1.0.0-j-match-closed",
   "fork_stage": "v100-h-release-hygiene-closed",
   "season_start": "1993-94",
   "runtime_dataset": "data/football9394/historical_snapshot.json",
@@ -162,7 +162,10 @@
     "version-file-is-the-single-release-version-source",
     "production-launcher-serves-frontend-and-api-from-one-origin",
     "career-saves-are-atomic-fsynced-backed-up-and-recoverable",
-    "user-data-saves-backups-and-logs-live-outside-the-repository"
+    "user-data-saves-backups-and-logs-live-outside-the-repository",
+    "committed-league-match-persists-complete-same-competition-matchday-results",
+    "manual-play-and-instant-result-share-one-postmatch-persistence-contract",
+    "postmatch-report-exposes-table-morale-next-fixture-and-next-match-absences"
   ],
   "gates": {
     "manager_career": "12/12 PASS",
@@ -276,7 +279,11 @@
     "v0_51_nf9_nf12_functional": "10/10 PASS: career application/interview/contracts/cross-league handover, resignation memory, board sale pressure and anti-exploit requests, causal rumour cooling/confirmation, longitudinal economy and save/API persistence.",
     "v0_51_selected_backend": "81/81 PASS across explicitly executed NF9-NF12, web/API, NF3-NF8, mobility, economy, v0.49, v0.48, NF0 staff, market and F1-F8 groups.",
     "v0_51_frontend_contract": "PASS: SFC structure + UI quality + Vue syntax; 26/26 SFCs parse.",
-    "vite_production_build_0_51": "NOT CERTIFIED in this environment: prebuild checks pass, then shell reports vite: not found; no production-build PASS inferred."
+    "vite_production_build_0_51": "NOT CERTIFIED in this environment: prebuild checks pass, then shell reports vite: not found; no production-build PASS inferred.",
+    "v1_0_j_match_closure": "4/4 PASS: complete matchday results, persisted postmatch consequences, manual/Instant Result contract parity, and realistic delegated bench changes under the historical two-substitution cap.",
+    "v1_0_j_destructive_matchday": "PASS: core loop 3/3, destructive wave4 6/6, destructive base first six passed before execution cut and isolated seventh 1/1 PASS; no assertion failure observed.",
+    "v1_0_j_frontend_contract": "PASS: SFC structure, UI quality and Vue script syntax 28/28; postmatch and Home both surface the complete latest matchday.",
+    "v1_0_j_assets": "PASS non-blocking microbatch: 10,195 runtime portraits retained; 4 download attempts failed only due DNS/network and are traced in docs/v100_j_asset_microbatch_attempt.json."
   },
-  "version": "1.0.0-h"
+  "version": "1.1.2"
 }

@@ -10,7 +10,7 @@ const props = defineProps({
   embedded: { type: Boolean, default: false },
   season: { type: String, default: '1993-94' },
 })
-const emit = defineEmits(['close', 'update:tab', 'promise-role', 'scout-player'])
+const emit = defineEmits(['close', 'update:tab', 'promise-role', 'scout-player', 'open-team'])
 
 const tabs = [
   { id: 'profile', label: 'Resumen' }, { id: 'attributes', label: 'Atributos' },
@@ -93,7 +93,8 @@ const pitchStyle = profile => {
 <BaseModal :embedded="embedded" size="full" layer="entity" panel-class="football9394-player-modal player-profile-v2" close-label="Cerrar ficha del jugador" aria-label="Ficha futbolista 1993-94" @close="emit('close')">
   <template #header>
     <div class="player-hero-v2">
-      <div class="player-hero-club"><div class="player-hero-crest"><img v-if="crestUrl" :src="crestUrl" alt=""><span v-else>{{clubMonogram}}</span></div><small>{{player.team_name || 'SIN CLUB'}}</small></div>
+      <button v-if="player.team_id" type="button" class="player-hero-club player-hero-club-link" :aria-label="`Abrir ficha de ${player.team_name||'club'}`" @click="emit('open-team',player.team_id)"><div class="player-hero-crest"><img v-if="crestUrl" :src="crestUrl" alt=""><span v-else>{{clubMonogram}}</span></div><small>{{player.team_name || 'SIN CLUB'}}</small><span>Ver club →</span></button>
+      <div v-else class="player-hero-club"><div class="player-hero-crest"><img v-if="crestUrl" :src="crestUrl" alt=""><span v-else>{{clubMonogram}}</span></div><small>{{player.team_name || 'SIN CLUB'}}</small></div>
       <div class="player-hero-copy">
         <span class="player-eyebrow">#{{player.shirt_number ?? '—'}} · {{positions[0] || player.position || 'Sin demarcación'}} · {{player.nationality || '—'}}</span>
         <h2>{{displayName}}</h2>

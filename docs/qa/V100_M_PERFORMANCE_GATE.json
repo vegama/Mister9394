@@ -1,0 +1,25 @@
+{
+  "date": "2026-08-18",
+  "checkpoint": "1.0.0-m",
+  "environment_note": "source checkpoint / local container; medians over 5 deterministic career creations",
+  "seconds": {
+    "create_career_median": 0.3439,
+    "create_career_max": 0.7439,
+    "snapshot_median": 0.0443,
+    "snapshot_max": 0.2445,
+    "market_snapshot_median": 0.0043,
+    "market_snapshot_max": 0.0058,
+    "league_standings_median": 0.0002,
+    "league_standings_max": 0.0002,
+    "advance_day_median": 0.1302,
+    "advance_day_max": 0.1539
+  },
+  "longitudinal_reference": {
+    "source": "docs/qa/V100_G_LONGITUDINAL_SOAK.md",
+    "mature_season_seconds": "3.4-4.3",
+    "late_rollover_seconds": "~2",
+    "warning_threshold_seconds": 12
+  },
+  "result": "PASS",
+  "note": "V1.0-M relocates behavior without introducing an intentional algorithmic path change. G/K/L regression gates remain green after extraction."
+}

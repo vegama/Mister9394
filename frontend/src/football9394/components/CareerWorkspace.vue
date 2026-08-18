@@ -1,5 +1,7 @@
 <script setup>
 import { computed } from 'vue'
+import UiPageHeader from '../../components/ui/UiPageHeader.vue'
+import UiEmptyState from '../../components/ui/UiEmptyState.vue'
 const props=defineProps({career:{type:Object,default:()=>({})},jobStatus:{type:String,default:'active'},formatMoney:{type:Function,required:true},formatDate:{type:Function,required:true}})
 const emit=defineEmits(['apply-job','accept-job','resign'])
 const contract=computed(()=>props.career.active_contract||{})
@@ -8,7 +10,7 @@ const countryRows=computed(()=>Object.entries(props.career.reputation_by_country
 <template>
 <section class="screen-grid career-screen modern-r7">
   <article class="football-panel career-main">
-    <header class="workspace-heading"><div><small>TRAYECTORIA PROFESIONAL</small><h2>Tu carrera</h2><p>Reputación, contrato, candidaturas y proyectos viven contigo aunque cambies de club o país.</p></div><span class="status-chip" :class="jobStatus==='active'?'positive':'negative'">{{jobStatus==='active'?'Con club':'Sin club'}}</span></header>
+    <UiPageHeader eyebrow="TRAYECTORIA PROFESIONAL" title="Tu carrera" description="Reputación, contrato, candidaturas, relaciones y proyectos viven contigo aunque cambies de club o país." :status="jobStatus==='active'?'Con club':'Sin club'" />
     <div class="economy-kpis modern-kpis">
       <div class="hero-kpi"><small>Reputación</small><b>{{career.reputation ?? 50}}<em>/100</em></b><span>global</span></div>
       <div><small>Contrato</small><b>{{contract.team_name||'Sin contrato'}}</b></div>
@@ -21,7 +23,7 @@ const countryRows=computed(()=>Object.entries(props.career.reputation_by_country
     <section class="career-market-section"><header class="workspace-heading compact"><div><small>MERCADO DE BANQUILLOS</small><h3>Vacantes y clubes en revisión</h3><p>La lista nace del estado real de los banquillos, la presión y tu reputación local.</p></div></header>
       <div class="career-job-offers">
         <article v-for="job in career.available_jobs||[]" :key="job.id"><small>{{job.country}} · {{job.league_name}}</small><strong>{{job.team_name}}</strong><span>{{job.position}}º ahora · expectativa {{job.expected_position}}º</span><em>Encaje {{Math.round(job.suitability)}}/100 · presión {{job.manager_pressure}}/100</em><button type="button" class="football-button" @click="emit('apply-job',job.id)">Presentar candidatura</button></article>
-        <div v-if="!career.available_jobs?.length" class="empty-football-state">No hay un banquillo compatible en revisión ahora mismo.</div>
+        <UiEmptyState v-if="!career.available_jobs?.length" title="No hay un banquillo compatible en revisión" detail="Ningún club libre o bajo presión encaja ahora con tu reputación y el estado real del mercado de entrenadores." hint="Sigue compitiendo o amplía tu reputación local: el mercado cambiará con resultados, destituciones y finales de contrato." />
       </div>
     </section>
     <section v-if="career.career_offers?.length" class="career-market-section"><header class="workspace-heading compact"><div><small>PROPUESTAS</small><h3>Ofertas sobre la mesa</h3></div></header><div class="career-job-offers"><article v-for="offer in career.career_offers" :key="offer.id"><small>{{offer.league_name}}</small><strong>{{offer.team_name}}</strong><span>{{offer.project_preview?.objective||'Proyecto deportivo'}}</span><em>Encaje {{Math.round(offer.suitability||0)}}/100</em><button type="button" class="football-button primary" @click="emit('accept-job',offer.id)">Aceptar proyecto</button></article></div></section>

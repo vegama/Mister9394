@@ -1,11 +1,23 @@
-async function footballRequest(path, options={}){
-  const response=await fetch(path,{headers:{'Content-Type':'application/json',...(options.headers||{})},...options})
-  const text=await response.text()
-  let body=null
-  try{body=text?JSON.parse(text):null}catch{body={detail:text||'Respuesta no válida'}}
-  if(!response.ok) throw new Error(body?.detail||`Error HTTP ${response.status}`)
-  return body
+import { computed, ref } from 'vue'
+import { createFootballRequestTransport } from './requestTransport.js'
+
+const pendingRequests=ref(0)
+const slowRequests=ref(0)
+const lastNetworkError=ref('')
+
+export const footballNetworkState={
+  pending:computed(()=>pendingRequests.value>0),
+  slow:computed(()=>slowRequests.value>0),
+  pendingCount:computed(()=>pendingRequests.value),
+  lastError:lastNetworkError,
 }
+const transport=createFootballRequestTransport({
+  onPending:delta=>{pendingRequests.value=Math.max(0,pendingRequests.value+delta)},
+  onSlow:delta=>{slowRequests.value=Math.max(0,slowRequests.value+delta)},
+  onError:message=>{lastNetworkError.value=String(message||'')},
+})
+const footballRequest=transport.request
+
 
 export const football9394Api={
   health:()=>footballRequest('/api/football9394/health'),
@@ -75,6 +87,7 @@ export const football9394Api={
   },
   negotiateTransfer:(careerId,playerId,{feeOffer,salaryOffer=0,contractYears=3})=>footballRequest(`/api/football9394/careers/${careerId}/transfers/${playerId}`,{method:'POST',body:JSON.stringify({fee_offer:feeOffer,salary_offer:salaryOffer,contract_years:contractYears})}),
   careerPlayer:(careerId,playerId)=>footballRequest(`/api/football9394/careers/${careerId}/players/${playerId}`),
+  careerTeam:(careerId,teamId)=>footballRequest(`/api/football9394/careers/${careerId}/teams/${Number(teamId)}`),
   setRolePromise:(careerId,playerId,role)=>footballRequest(`/api/football9394/careers/${careerId}/players/${Number(playerId)}/role-promise`,{method:'POST',body:JSON.stringify({role})}),
   respondDressingConcern:(careerId,concernId,response)=>footballRequest(`/api/football9394/careers/${careerId}/dressing-room/concerns/${encodeURIComponent(concernId)}`,{method:'POST',body:JSON.stringify({response})}),
   disciplinePlayer:(careerId,playerId,action)=>footballRequest(`/api/football9394/careers/${careerId}/players/${Number(playerId)}/discipline`,{method:'POST',body:JSON.stringify({action})}),

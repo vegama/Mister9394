@@ -1,0 +1,6 @@
+{
+  "kind": "production-browser-e2e",
+  "status": "blocked",
+  "reason": "Falta frontend/dist/index.html. Ejecuta npm ci && npm run build antes del RC E2E.",
+  "passed": false
+}

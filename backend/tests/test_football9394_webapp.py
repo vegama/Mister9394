@@ -4,6 +4,11 @@ from backend.app.football9394.webapp import app
 client = TestClient(app)
 
 
+def teardown_module():
+    """Close the shared TestClient so the RC pytest process exits cleanly."""
+    client.close()
+
+
 def test_football_api_is_separate_and_exposes_1993_94_laws():
     response=client.get('/api/football9394/health')
     assert response.status_code == 200

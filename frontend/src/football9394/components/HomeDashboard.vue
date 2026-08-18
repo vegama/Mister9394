@@ -9,8 +9,9 @@ const props = defineProps({
   storylines: { type: Array, default: () => [] }, rivalries: { type: Array, default: () => [] },
   selection: { type: Object, default: () => ({starter_ids:[],bench_ids:[],valid:false,issues:[]}) },
   formation: { type: String, default: '4-4-2' }, gameDate: { type: String, default: '' }, lineupDirty: { type: Boolean, default: false },
+  lastMatchReport: { type: Object, default: null },
 })
-const emit = defineEmits(['navigate','start-live','continue'])
+const emit = defineEmits(['navigate','open-decision','start-live','continue'])
 const dateShort = value => { if(!value)return '—'; const p=String(value).split('-'); return p.length===3?`${p[2]}/${p[1]}/${p[0]}`:String(value) }
 const matchContext = row => { if(!row)return 'SIN PARTIDO'; if(row.fixture_type==='friendly')return 'PRETEMPORADA · AMISTOSO'; if(row.fixture_type==='tournament')return `${row.competition_name||'COPA'} · ${row.stage||''}`; return `LIGA · JORNADA ${row.matchday||'—'}` }
 const trendLabel = value => { const n=Number(value||0); return n>0?`▲ +${n}`:n<0?`▼ ${n}`:'● ESTABLE' }
@@ -53,6 +54,11 @@ function runPrimaryMatchAction(){
 const storyAction = story => story.kind==='transfer_saga'?'market':story.kind==='player_tension'?'squad':story.kind==='rivalry'?'tactics':'competitions'
 const storyLabel = story => ({table_pressure:'TEMPORADA',streak:'RACHA',player_tension:'VESTUARIO',transfer_saga:'MERCADO',rivalry:'RIVALIDAD',manager_change:'BANQUILLOS'}[story.kind]||'HISTORIA')
 const summerBriefing = computed(()=>props.dashboard?.summer_briefing?.season===props.season ? props.dashboard.summer_briefing : null)
+const blockingDecision = computed(()=>props.dashboard?.blocking_decisions?.[0] || null)
+const activeProcesses = computed(()=>props.dashboard?.active_processes || [])
+const recentChanges = computed(()=>props.dashboard?.recent_changes || [])
+const lastRoundSummary = computed(()=>props.lastMatchReport?.round_summary || null)
+const lastRoundResults = computed(()=>lastRoundSummary.value?.results || [])
 </script>
 
 <template>
@@ -103,10 +109,30 @@ const summerBriefing = computed(()=>props.dashboard?.summer_briefing?.season===p
       <main class="home-story-main">
         <article class="football-panel home-decisions-v2">
           <header class="editorial-head"><span><small>AHORA</small><h2>Lo que necesita tu decisión</h2></span><b v-if="dashboard.pending_decisions?.length">{{dashboard.pending_decisions.length}}</b></header>
+          <div v-if="blockingDecision" class="home-blocking-note"><span><small>CONTINUAR SE DETIENE AQUÍ</small><strong>{{blockingDecision.title}}</strong></span><button type="button" @click="emit('open-decision',blockingDecision)">Resolver →</button></div>
           <div v-if="dashboard.pending_decisions?.length" class="decision-stack-v2">
-            <button v-for="d in dashboard.pending_decisions" :key="`${d.kind}-${d.title}`" type="button" class="decision-story" :class="{urgent:d.priority==='high'}" @click="emit('navigate',d.action)"><span class="decision-marker">{{d.priority==='high'?'!':'•'}}</span><span><small>{{d.priority==='high'?'URGENTE':'PENDIENTE'}}</small><strong>{{d.title}}</strong><em>{{d.detail}}</em></span><i>→</i></button>
+            <button v-for="d in dashboard.pending_decisions" :key="`${d.kind}-${d.title}`" type="button" class="decision-story" :class="{urgent:d.priority==='high',blocking:d.blocking}" @click="emit('open-decision',d)">
+              <span class="decision-marker">{{d.priority==='high'?'!':'•'}}</span>
+              <span class="decision-copy"><small>{{d.status || (d.priority==='high'?'URGENTE':'PENDIENTE')}} · {{d.owner || 'Tú (mánager)'}}</small><strong>{{d.title}}</strong><em>{{d.detail}}</em><span class="decision-next"><b>Siguiente:</b> {{d.next_step}}</span><span class="decision-impact"><b>Si esperas:</b> {{d.consequence}}</span></span><i>→</i>
+            </button>
           </div>
           <div v-else class="inbox-clear editorial-clear"><b>Sin asuntos pendientes</b><span>El mundo puede avanzar. Continuar parará cuando aparezca una decisión real.</span></div>
+        </article>
+
+        <article class="football-panel home-processes-v2">
+          <header class="editorial-head"><span><small>EN CURSO</small><h2>Quién está trabajando y qué falta</h2></span></header>
+          <div v-if="activeProcesses.length" class="process-stack-v2">
+            <button v-for="p in activeProcesses" :key="p.id" type="button" class="process-story" @click="emit('navigate',p.action)"><span><small>{{p.area}} · {{p.status}}</small><strong>{{p.title}}</strong><em>{{p.owner}}</em><span>{{p.next_step}}</span><i>{{p.consequence}}</i></span><b>{{p.requires_action?'!':'→'}}</b></button>
+          </div>
+          <div v-else class="inbox-clear editorial-clear"><b>Nadie espera por ti</b><span>No hay procesos activos que necesiten seguimiento. Puedes avanzar con tranquilidad.</span></div>
+        </article>
+
+        <article class="football-panel home-changes-v2">
+          <header class="editorial-head"><span><small>QUÉ CAMBIÓ</small><h2>Desde los últimos avances</h2></span></header>
+          <div v-if="recentChanges.length" class="change-stack-v2">
+            <button v-for="c in recentChanges" :key="`${c.id}-${c.date}`" type="button" class="change-story" @click="emit('navigate',c.action)"><time>{{dateShort(c.date)}}</time><span><small>{{c.area}}</small><strong>{{c.title}}</strong><em>{{c.detail}}</em></span><i>→</i></button>
+          </div>
+          <div v-else class="inbox-clear editorial-clear"><b>Sin cambios relevantes</b><span>Cuando el mundo cambie tu contexto, aparecerá aquí con su origen y destino.</span></div>
         </article>
 
         <article class="football-panel home-squad-story">
@@ -130,6 +156,11 @@ const summerBriefing = computed(()=>props.dashboard?.summer_briefing?.season===p
           <div class="table-window-v2"><div v-for="r in tableWindow" :key="r[8]" :class="{controlled:r[8]===controlledTeamId}"><b>{{standings.indexOf(r)+1}}</b><span>{{r[0]}}</span><strong>{{r[7]}} pts</strong></div></div>
         </article>
 
+        <article v-if="lastRoundResults.length" class="football-panel home-round-v2">
+          <header class="editorial-head compact"><span><small>ÚLTIMA JORNADA</small><h3>{{lastRoundSummary.label}}</h3></span><button type="button" @click="emit('navigate','competitions')">Competición →</button></header>
+          <div class="home-round-grid"><span v-for="row in lastRoundResults" :key="row.fixture_id" :class="{controlled:row.controlled}"><em>{{row.home_team}}</em><strong>{{row.home_goals}}–{{row.away_goals}}</strong><em>{{row.away_team}}</em></span></div>
+        </article>
+
         <article class="football-panel home-board-v2">
           <header class="editorial-head compact"><span><small>CONSEJO</small><h3>{{dashboard.board_expectation?.title || 'Objetivo'}}</h3></span></header>
           <div class="board-confidence-v2" :class="boardClass(currentBoard.risk)"><small>Confianza</small><strong>{{dashboard.board_confidence || 'A la espera'}}</strong><b v-if="currentBoard.score!=null">{{currentBoard.score}}/100</b></div>
@@ -145,4 +176,8 @@ const summerBriefing = computed(()=>props.dashboard?.summer_briefing?.season===p
 <style scoped>
 .home-readiness-strip{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:-4px 0 12px}.home-readiness-strip button{display:grid;grid-template-columns:1fr auto;gap:2px 8px;text-align:left;padding:10px 12px;border:1px solid var(--line,#d7dde6);border-radius:9px;background:var(--surface,#fff);cursor:pointer}.home-readiness-strip button small{grid-column:1/-1;font-size:11px;font-weight:900;letter-spacing:.08em;color:var(--text-soft,#687386)}.home-readiness-strip button strong{font-size:13px}.home-readiness-strip button span{font-weight:900}.home-readiness-strip button.attention{border-color:color-mix(in srgb,var(--warning,#b26b00) 45%,var(--line,#d7dde6))}.home-readiness-strip button.ready span{color:var(--success,#237a45)}@media(max-width:900px){.home-readiness-strip{grid-template-columns:1fr 1fr}}
 .home-summer-briefing{display:grid;gap:10px;margin:0 0 12px;padding:13px 14px;border:1px solid #cbded1;border-radius:11px;background:#f4faf6}.home-summer-briefing>header{display:flex;justify-content:space-between;gap:16px;align-items:start}.home-summer-briefing>header span{display:grid;gap:2px}.home-summer-briefing>header small{font-size:11px;font-weight:900;letter-spacing:.08em;color:var(--f-action,#236b4f)}.home-summer-briefing>header strong{font-size:16px}.home-summer-briefing>header em{font-size:11px;font-style:normal;color:var(--text-soft,#687386)}.home-summer-briefing>header>b{white-space:nowrap;padding:5px 8px;border-radius:999px;background:#fff;font-size:11px}.home-summer-briefing>div{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px}.home-summer-briefing button{display:grid;grid-template-columns:1fr auto;gap:6px;align-items:center;padding:9px 10px;border:1px solid var(--line,#d7dde6);border-radius:8px;background:#fff;text-align:left;cursor:pointer}.home-summer-briefing button span{display:grid;gap:2px;min-width:0}.home-summer-briefing button small{font-size:11px;color:var(--text-soft,#687386);font-weight:850}.home-summer-briefing button strong{font-size:11px;line-height:1.3}.home-summer-briefing button.ready,.home-summer-briefing button.done{border-color:#bdd8c8}.home-summer-briefing button.attention{border-color:#e1be82;background:#fffaf0}@media(max-width:900px){.home-summer-briefing>div{grid-template-columns:1fr 1fr}}@media(max-width:650px){.home-summer-briefing>div{grid-template-columns:1fr}.home-summer-briefing>header{display:grid}}
+.home-blocking-note{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 14px;border-bottom:1px solid var(--line);background:color-mix(in srgb,var(--f-gold) 10%,var(--surface));}.home-blocking-note>span{display:grid;gap:2px}.home-blocking-note small{font-size:11px;font-weight:900;letter-spacing:.08em;color:var(--f-gold)}.home-blocking-note strong{font-size:12px}.home-blocking-note button{border:0;background:transparent;color:var(--f-gold);font-size:11px;font-weight:900;cursor:pointer}.decision-copy{display:grid!important;gap:3px}.decision-next,.decision-impact{font-size:11px;line-height:1.35;color:var(--text-soft)}.decision-next b{color:var(--f-green)}.decision-impact b{color:var(--f-gold)}.decision-story.blocking{box-shadow:inset 3px 0 var(--f-gold)}
+.process-stack-v2,.change-stack-v2{display:grid}.process-story{display:grid;grid-template-columns:minmax(0,1fr) 28px;gap:10px;align-items:center;padding:13px 16px;border:0;border-bottom:1px solid var(--line);background:transparent;color:inherit;text-align:left;cursor:pointer}.process-story:last-child,.change-story:last-child{border-bottom:0}.process-story:hover,.change-story:hover{background:color-mix(in srgb,var(--f-action) 6%,transparent)}.process-story>span{display:grid;gap:2px}.process-story small,.change-story small{font-size:11px;font-weight:900;letter-spacing:.07em;color:var(--f-action)}.process-story strong,.change-story strong{font-size:12px}.process-story em{font-size:11px;font-style:normal;color:var(--f-green)}.process-story span>span,.process-story span>i{font-size:11px;font-style:normal;line-height:1.35;color:var(--text-soft)}.process-story>b{font-size:15px;color:var(--f-action)}.change-story{display:grid;grid-template-columns:76px minmax(0,1fr) 20px;gap:10px;align-items:start;padding:12px 16px;border:0;border-bottom:1px solid var(--line);background:transparent;color:inherit;text-align:left;cursor:pointer}.change-story time{font-size:11px;color:var(--text-soft);font-weight:800}.change-story>span{display:grid;gap:2px}.change-story em{font-size:11px;font-style:normal;line-height:1.35;color:var(--text-soft)}.change-story>i{font-style:normal;color:var(--f-action)}
+
+.home-round-grid{display:grid}.home-round-grid>span{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:7px;align-items:center;padding:8px 12px;border-bottom:1px solid var(--line);font-size:11px}.home-round-grid>span:last-child{border-bottom:0}.home-round-grid>span.controlled{background:color-mix(in srgb,var(--f-action) 9%,transparent);font-weight:850}.home-round-grid em{font-style:normal;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.home-round-grid em:last-child{text-align:right}.home-round-grid strong{font-size:12px}
 </style>

@@ -1,0 +1,52 @@
+{
+  "kind": "source-route-browser-history-contract",
+  "literal_production_f5": false,
+  "note": "History API real en Chromium + remount documental. El reload() literal pertenece al gate E2E de frontend/dist.",
+  "checks": {
+    "initial_home": true,
+    "section_push": true,
+    "entity_and_tab_serialized": true,
+    "remount_reconstructs_url": true,
+    "remount_preserves_history_state": true,
+    "real_browser_back": true,
+    "real_browser_forward": true,
+    "invalid_tab_sanitized": true,
+    "entity_id_roundtrip": true
+  },
+  "observations": {
+    "entity_url": "about:blank#squad/player/123?entityTab=medical",
+    "after_back": {
+      "url": "about:blank#squad",
+      "route": {
+        "target": "squad",
+        "entity": null,
+        "entityTab": ""
+      },
+      "history": {
+        "view": "squad",
+        "m9394Depth": 1
+      }
+    },
+    "after_forward": {
+      "url": "about:blank#squad/player/123?entityTab=medical",
+      "route": {
+        "target": "squad",
+        "entity": {
+          "type": "player",
+          "id": "123"
+        },
+        "entityTab": "medical"
+      },
+      "history": {
+        "view": "squad",
+        "entity": {
+          "type": "player",
+          "id": "123"
+        },
+        "entityTab": "medical",
+        "m9394Depth": 2
+      }
+    }
+  },
+  "passed": true
+}

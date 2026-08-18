@@ -1,9 +1,11 @@
-import { readFileSync } from 'node:fs'
+import { readFileSync, readdirSync } from 'node:fs'
 import { resolve } from 'node:path'
 
 const files = [
   'src/styles/core.css',
-  'src/styles/football9394-manager.css',
+  ...readdirSync(resolve(process.cwd(), 'src/styles'))
+    .filter(name => name.startsWith('football9394-') && name.endsWith('.css'))
+    .map(name => `src/styles/${name}`),
 ]
 const problems = []
 for (const file of files) {
@@ -42,6 +44,9 @@ for (const file of requiredWorkspaces) {
   catch { problems.push(`falta workspace moderno requerido: ${file}`) }
 }
 const rootApp = readFileSync(resolve(process.cwd(), 'src/football9394/Football9394App.vue'), 'utf8')
+const navigationContext = readFileSync(resolve(process.cwd(), 'src/football9394/composables/useNavigationContext.js'), 'utf8')
+const navigationSurface = `${rootApp}\n${navigationContext}`
+const entityPresentation = readFileSync(resolve(process.cwd(), 'src/football9394/entityPresentation.js'), 'utf8')
 for (const legacyInline of [
   `<section v-if="view==='home'"`,
   `<section v-else-if="view==='squad'"`,
@@ -65,7 +70,7 @@ for (const required of ['career-browser','league-choice','club-choice','setup-st
   if (!setup.includes(required)) problems.push(`R8 incompleto: falta ${required} en CareerSetup`)
 }
 for (const required of ['popstate','hashchange','history.pushState','isAdvancing']) {
-  if (!rootApp.includes(required)) problems.push(`R9 incompleto: falta ${required} en navegación/continuar`)
+  if (!navigationSurface.includes(required)) problems.push(`R9 incompleto: falta ${required} en navegación/continuar`)
 }
 
 
@@ -132,7 +137,7 @@ for (const required of ['lineupDirty','isMatchDay','cancelPreviewAndNavigate','c
 // browser history must restore the only safe match surface, while the bench
 // must expose historical substitution limits and irreversible dismissals.
 for (const required of ['reconcileRouteAfterCareerLoad','replaceRoute','lastMatchReport.value?.committed','applyRouteFromLocation']) {
-  if (!rootApp.includes(required)) problems.push(`v1.0 navegación destructiva no protegida: falta ${required}`)
+  if (!navigationSurface.includes(required)) problems.push(`v1.0 navegación destructiva no protegida: falta ${required}`)
 }
 for (const required of ['controlled_sent_off','substitutionsRemaining','Descanso · revisa táctica y cambios',"match.minute>0 && match.status!=='finished'",'Sin cambios disponibles']) {
   if (!liveWorkspace.includes(required)) problems.push(`v1.0 incidencias de partido no protegidas: falta ${required}`)
@@ -152,7 +157,29 @@ for (const required of ['league_suspension_active_for_next_match','Sanción para
   if (!playerProfile.includes(required)) problems.push(`v1.0 ficha no explica la sanción activa: falta ${required}`)
 }
 for (const required of ['calendar_context','Rival por confirmar','availability_count']) {
-  if (!rootApp.includes(required) && !homeDashboard.includes(required)) problems.push(`v1.0 disponibilidad/calendario no comparten contexto: falta ${required}`)
+  if (!rootApp.includes(required) && !homeDashboard.includes(required) && !entityPresentation.includes(required)) problems.push(`v1.0 disponibilidad/calendario no comparten contexto: falta ${required}`)
+}
+
+// V1.0-I daily UX: Home must separate actionable decisions from work that is
+// merely in progress, explain why Continue stops, and preserve everyday context.
+for (const required of ['home-blocking-note','Quién está trabajando y qué falta','QUÉ CAMBIÓ','decision-next','decision-impact']) {
+  if (!homeDashboard.includes(required)) problems.push(`V1.0-I Inicio no explica el trabajo cotidiano: falta ${required}`)
+}
+for (const required of ['blocking_decisions','continue_status','persistDailyWorkspace','restoreDailyWorkspace','Continuar detenido']) {
+  if (!rootApp.includes(required)) problems.push(`V1.0-I Continuar/persistencia no está conectado: falta ${required}`)
+}
+// V1.0-J match closure: the post-match view must expose the complete league
+// round and the consequence chain, and Home must keep that round visible.
+for (const required of ['RESULTADOS DE LA COMPETICIÓN','roundSummary','nextAbsences','BAJAS PARA EL SIGUIENTE PARTIDO']) {
+  if (!liveWorkspace.includes(required)) problems.push(`V1.0-J postpartido incompleto: falta ${required}`)
+}
+for (const required of ['lastMatchReport','lastRoundResults','ÚLTIMA JORNADA','home-round-grid']) {
+  if (!homeDashboard.includes(required) && !rootApp.includes(required)) problems.push(`V1.0-J resultados de jornada no persisten en Inicio: falta ${required}`)
+}
+
+const topbar = readFileSync(resolve(process.cwd(), 'src/football9394/components/ManagerTopbar.vue'), 'utf8')
+for (const required of ['continueStatus',"continueStatus?.state==='blocked'","continueStatus?.label || 'Continuar'"]) {
+  if (!topbar.includes(required) && !rootApp.includes(required)) problems.push(`V1.0-I topbar no comunica la interrupción: falta ${required}`)
 }
 
 // D9 Chromium layout fixes discovered by the 1920x1080 visual pass. The
@@ -222,7 +249,10 @@ for (const required of ['preparation.context?.phase','preparation.preparation_in
   if (!liveWorkspace.includes(required)) problems.push(`v0.17 cierre P5 no visible: falta ${required}`)
 }
 
-const managerCss = readFileSync(resolve(process.cwd(), 'src/styles/football9394-manager.css'), 'utf8')
+const managerCss = files
+  .filter(file => file.startsWith('src/styles/football9394-'))
+  .map(file => readFileSync(resolve(process.cwd(), file), 'utf8'))
+  .join('\n')
 for (const required of [
   '.modern-commentary.preflight,.modern-commentary.finished{min-height:0}',
   '.tactical-player-fit-list{display:grid',

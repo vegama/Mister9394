@@ -1,6 +1,10 @@
 <script setup>
-import { computed, ref } from 'vue'
+import { computed, onMounted, ref, watch } from 'vue'
 import LineupPitch from './LineupPitch.vue'
+import UiPageHeader from '../../components/ui/UiPageHeader.vue'
+import UiActionDock from '../../components/ui/UiActionDock.vue'
+import UiEmptyState from '../../components/ui/UiEmptyState.vue'
+import UiDataTable from '../../components/ui/UiDataTable.vue'
 
 const props = defineProps({
   squad: { type: Array, default: () => [] },
@@ -19,6 +23,27 @@ const position = ref('')
 const availability = ref('all')
 const sort = ref('overall')
 const replaceTarget = ref(null)
+const squadViewStorageKey = 'mister9394:squad-view:v1'
+
+onMounted(() => {
+  try {
+    const stored = JSON.parse(sessionStorage.getItem(squadViewStorageKey) || '{}')
+    if (typeof stored.query === 'string') query.value = stored.query
+    if (typeof stored.position === 'string') position.value = stored.position
+    if (['all','available','unavailable'].includes(stored.availability)) availability.value = stored.availability
+    if (['overall','form','position','name'].includes(stored.sort)) sort.value = stored.sort
+  } catch (_) {}
+})
+watch([query, position, availability, sort], () => {
+  try {
+    sessionStorage.setItem(squadViewStorageKey, JSON.stringify({
+      query: query.value,
+      position: position.value,
+      availability: availability.value,
+      sort: sort.value,
+    }))
+  } catch (_) {}
+})
 
 const positionOptions = computed(() => [...new Set(props.squad.map(p => p.pos).filter(Boolean))].sort())
 const unavailableCount = computed(() => props.squad.filter(p => p.status !== 'DISP.').length)
@@ -92,15 +117,14 @@ function dropOnBench(event, target=null) {
 <template>
   <section class="screen-grid squad-screen redesigned-squad">
     <article class="football-panel roster modern-roster">
-      <header class="panel-feature-head">
-        <div><small>PRIMER EQUIPO</small><h2>Plantilla</h2><p>Construye la convocatoria completa, arrastra cambios al campo y entra en cada ficha sin perder el contexto.</p></div>
-        <div class="roster-kpis">
+      <UiPageHeader eyebrow="PRIMER EQUIPO" title="Plantilla" description="Construye la convocatoria completa, compara disponibilidad y entra en cada ficha sin perder el contexto." :status="`${filteredSquad.length} visibles`">
+        <template #actions><div class="roster-kpis">
           <span><small>Plantilla</small><b>{{ squad.length }}</b></span>
           <span><small>Media</small><b>{{ averageOverall }}</b></span>
           <span><small>No disponibles</small><b>{{ unavailableCount }}</b></span>
           <span class="selection-kpi"><small>Convocatoria</small><b>{{ lineupDraft.length + benchDraft.length }}/16</b><em>{{lineupDraft.length}} XI · {{benchDraft.length}} banquillo</em></span>
-        </div>
-      </header>
+        </div></template>
+      </UiPageHeader>
 
       <div class="roster-toolbar">
         <label class="search-field"><span>Buscar</span><input v-model="query" type="search" placeholder="Nombre del jugador"></label>
@@ -110,8 +134,7 @@ function dropOnBench(event, target=null) {
       </div>
 
       <div class="squad-rule-strip"><span>Puestos históricos especializados</span><span>Convocatoria: 11 titulares + 5 suplentes</span><span v-if="selection.foreign_rule">Extranjeros: máx. {{selection.foreign_rule.max_starting ?? '—'}} en XI · {{selection.foreign_rule.max_squad ?? 'sin tope'}} en convocatoria</span></div>
-      <div class="roster-table-wrap">
-        <table>
+      <UiDataTable class="roster-table-wrap" aria-label="Plantilla del primer equipo" sticky>
           <thead><tr><th>Conv.</th><th>Jugador</th><th>Pos.</th><th>Edad</th><th>Media</th><th>Forma</th><th>Moral</th><th>Contrato</th><th>Estado</th><th>Acciones</th></tr></thead>
           <tbody>
             <tr v-for="p in filteredSquad" :key="p.id" :class="{selectedStarter:isStarter(p.id),selectedBench:isBench(p.id)}" @dblclick="emit('open-player', p)">
@@ -120,10 +143,9 @@ function dropOnBench(event, target=null) {
               <td><span class="position-chip">{{p.pos}}</span></td><td>{{p.age}}</td><td class="rating-cell"><b>{{p.overall}}</b></td><td class="good-cell">{{p.form}}</td><td class="warn-cell">{{p.morale}}</td><td>{{p.contractEnd}}</td><td><span class="status-chip" :class="p.status==='DISP.'?'available':'unavailable'">{{p.status}}</span><small v-if="p.profile?.squad_dynamics?.satisfaction!=null" class="satisfaction-note">Ánimo rol {{p.profile.squad_dynamics.satisfaction}}/100</small></td>
               <td><div class="row-actions"><button v-if="!isCaptain(p.id)" type="button" class="icon-action" title="Nombrar capitán" @click.stop="emit('set-captain',p)">Capitán</button><button type="button" class="icon-action" title="Renovar" @click.stop="emit('renew',p)">Renovar</button><button type="button" class="icon-action" :class="{active:p.profile?.transfer_listed}" @click.stop="emit('toggle-listing',p)">{{p.profile?.transfer_listed?'Quitar mercado':'Transferible'}}</button></div></td>
             </tr>
-            <tr v-if="!filteredSquad.length"><td colspan="10"><div class="table-empty">No hay jugadores que coincidan con estos filtros.</div></td></tr>
+            <tr v-if="!filteredSquad.length"><td colspan="10"><UiEmptyState compact icon="⌕" title="No hay jugadores con estos filtros" description="La plantilla sigue intacta: cambia búsqueda, posición o disponibilidad para volver a ver jugadores." /></td></tr>
           </tbody>
-        </table>
-      </div>
+      </UiDataTable>
     </article>
 
     <aside class="football-panel lineup modern-lineup-card">
@@ -171,7 +193,7 @@ function dropOnBench(event, target=null) {
         <div class="dressing-cohesion"><small>COHESIÓN</small><b>{{dressingRoom.squad_cohesion ?? '—'}}<em v-if="dressingRoom.squad_cohesion!=null">/100</em></b><span>{{(dressingRoom.social_groups||[]).length}} grupos sociales detectados</span></div>
         <div v-if="dressingRoom.mentorships?.length" class="mentorship-list"><small>TUTELAS</small><span v-for="pair in dressingRoom.mentorships.slice(0,2)" :key="pair.protege_id">{{pair.mentor_name}} → {{pair.protege_name}}</span></div>
       </section>
-      <div class="lineup-actions lineup-flow-actions"><span class="lineup-flow-copy"><small>SIGUIENTE PASO</small><strong>{{hasLineupChanges?'Guarda la convocatoria completa':'Convocatoria sincronizada con la carrera'}}</strong></span><button type="button" class="football-button" @click="emit('auto-select')">Mejor 11 + 5</button><button type="button" class="football-button" :disabled="!hasLineupChanges || !draftComplete" @click="emit('save-selection')">Guardar convocatoria</button><button type="button" class="football-button primary" :disabled="!draftComplete" @click="emit('open-tactics')">{{hasLineupChanges?'Guardar y abrir táctica':'Abrir táctica'}} →</button></div>
+      <UiActionDock class="lineup-flow-actions" eyebrow="SIGUIENTE PASO" :title="hasLineupChanges?'Guarda la convocatoria completa':'Convocatoria sincronizada con la carrera'" :detail="draftComplete?'El once y los cinco suplentes están completos.':'Necesitas 11 titulares y 5 suplentes para llegar al partido.'" :tone="!draftComplete?'warning':'accent'" sticky><button type="button" class="football-button" @click="emit('auto-select')">Mejor 11 + 5</button><button type="button" class="football-button" :disabled="!hasLineupChanges || !draftComplete" @click="emit('save-selection')">Guardar convocatoria</button><button type="button" class="football-button primary" :disabled="!draftComplete" @click="emit('open-tactics')">{{hasLineupChanges?'Guardar y abrir táctica':'Abrir táctica'}} →</button></UiActionDock>
     </aside>
   </section>
 </template>

@@ -38,7 +38,7 @@ function playerPerson(row){return {id:row.player_id,display_name:row.name,positi
 
     <section v-if="selectedHonour" class="champion-story-card">
       <header class="champion-story-head">
-        <div class="champion-story-title"><img :src="crestFor(selectedHonour.team_id)" alt=""><span><small>{{selectedHonour.competition_name}} · {{selectedHonour.season}}</small><h3>{{selectedHonour.team_name}}</h3><p>La foto fija del campeón en el momento de levantar el título.</p></span></div>
+        <div class="champion-story-title"><img :src="crestFor(selectedHonour.team_id)" alt=""><span><small>{{selectedHonour.competition_name}} · {{selectedHonour.season}}</small><h3>{{selectedHonour.team_name}}</h3><p>La foto fija del campeón en el momento de levantar el título.</p><div class="champion-context"><span v-if="selectedHonour.champion_points!=null"><small>Puntos</small><b>{{selectedHonour.champion_points}}</b></span><span v-if="selectedHonour.runner_up_team_name"><small>Subcampeón</small><b>{{selectedHonour.runner_up_team_name}}</b></span><span v-if="selectedHonour.margin_points!=null"><small>Margen</small><b>{{selectedHonour.margin_points}} pts</b></span></div></span></div>
         <b>CAMPEÓN</b>
       </header>
       <div class="champion-story-body">

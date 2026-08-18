@@ -24,7 +24,7 @@ npm ci
 npm run build
 ```
 
-`build` ejecuta antes `check:version`, `check:sfc`, `check:ui` y `check:vue`.
+`build` ejecuta antes `check:version`, `check:sfc`, `check:ui`, `check:ux` y `check:vue`.
 
 ## Gate launcher de producción
 
@@ -51,3 +51,26 @@ Comprobar:
 - Playtest humano: claridad, continuidad de tareas y tiempo hasta decisión.
 
 Un timeout del entorno no se registra como fallo funcional: los bloques largos deben ejecutarse por segmentos y conservar resultados verificables.
+
+
+## Evidencia de la continuación 18-08-2026
+
+Certificado en source:
+
+- `sync_product_version.py --check`: PASS 1.1.1;
+- `check:version`: PASS;
+- `check:sfc`: PASS;
+- `check:ui`: PASS;
+- `check:ux`: PASS (navegación + entidades + feedback runtime + onboarding + accesibilidad teclado + workspaces);
+- `check:vue`: 38/38;
+- `test_football9394_v100_h_release.py`: 7/7;
+- J partido: 4/4; K gestión: 6/6; L emoción: 6/6; M refactor: 5/5, ejecutados por fichero.
+
+No certificado aún:
+
+- `vite build`: binario `vite` ausente en el `node_modules` truncado; `npm ci` bloqueado por DNS del entorno;
+- Chromium/visual actual: depende del bundle anterior;
+- `test_football9394_webapp.py`: muestra 16 casos ejecutados sin fallo pero no concluye antes del timeout;
+- `test_football9394_manager_career.py`: muestra 5 casos ejecutados sin fallo pero no concluye antes del timeout.
+
+Un punto mostrado como `.` antes de un timeout no se promueve a certificación global: sólo se registran como verdes las invocaciones que retornan código 0.

@@ -40,6 +40,10 @@ Todos admiten override por variables `MISTER9394_*`.
 
 Los stores de carrera del mánager y mundo usan este contrato.
 
-## Límites de refactor
+## Refactor progresivo V1.0-M
 
-La arquitectura actual tiene concentraciones grandes en carrera, API, app raíz y CSS. V1.0-M debe extraer piezas tras tests de caracterización; la reescritura total está fuera de alcance antes del RC.
+La primera extracción pre-RC ya está materializada: `ManagerCareerRuntime9394` compone runtimes de historia/rollover y mercado; FastAPI agrupa routers por dominio; el root Vue delega navegación, persistencia de contexto y locks asíncronos; y el CSS conserva un entrypoint estable sobre seis capas ordenadas. Los snapshots de rutas y firmas en `backend/tests/fixtures/` son contratos de compatibilidad.
+
+## Límite antes del RC
+
+No se abre una segunda reescritura arquitectónica en N. Cualquier extracción adicional debe responder a un P0/P1 demostrado por QA y conservar los contratos de caracterización de M.

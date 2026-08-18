@@ -273,3 +273,42 @@ def test_career_options_expose_useful_club_preview_details():
     assert team['average_top_11'] > 0
     assert len(team['top_players']) <= 3
     assert {'members', 'budget', 'debt', 'stadium_id'} <= set(team)
+
+
+def test_cross_entity_team_detail_preserves_career_context_and_scouting_uncertainty():
+    career = ManagerCareerRuntime9394.create(team_id=16, seed=123, through_matchday=0)
+    other_id = next(int(row["team_id"]) for row in career.standings() if int(row["team_id"]) != 16)
+
+    external = career.team_detail(other_id)
+    own = career.team_detail(16)
+
+    assert external["team"]["source_id"] == other_id
+    assert external["venue"] and external["venue"]["name"]
+    assert external["standing"] and external["standing"]["team_id"] == other_id
+    assert external["squad"] and all(player["team_id"] == other_id for player in external["squad"])
+    assert any(player["overall_is_exact"] is False and player["overall_range"] for player in external["squad"])
+    assert own["controlled"] is True
+    assert own["manager"]["user_managed"] is True
+    assert any(player["overall_is_exact"] is True for player in own["squad"])
+
+
+def test_cross_entity_team_detail_api_is_available_and_returns_404_for_unknown_team(monkeypatch, tmp_path):
+    from fastapi.testclient import TestClient
+    import backend.app.football9394.webapp as webapp
+
+    monkeypatch.setattr(webapp, "CAREER_SAVE_ROOT", tmp_path)
+    client = TestClient(webapp.app)
+    created = client.post("/api/football9394/careers", json={"team_id": 16, "league_id": 1, "seed": 1111, "through_matchday": 0})
+    assert created.status_code == 200
+    career_id = created.json()["career_id"]
+    other_id = next(int(row["team_id"]) for row in created.json()["standings"] if int(row["team_id"]) != 16)
+
+    detail = client.get(f"/api/football9394/careers/{career_id}/teams/{other_id}")
+    assert detail.status_code == 200
+    payload = detail.json()
+    assert payload["team"]["source_id"] == other_id
+    assert payload["squad"]
+    assert any(player["overall_is_exact"] is False for player in payload["squad"])
+
+    missing = client.get(f"/api/football9394/careers/{career_id}/teams/999999")
+    assert missing.status_code == 404

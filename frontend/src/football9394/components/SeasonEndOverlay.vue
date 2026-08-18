@@ -16,6 +16,8 @@ const majorChampions=computed(()=>[...(props.recap?.champions||[])].slice(0,8))
 const teamOfSeason=computed(()=>props.recap?.league_awards?.team_of_season||[])
 const leagueChampion=computed(()=>props.recap?.champions?.find(row=>row.competition_kind==='league'&&Number(row.source_id)===Number(props.recap?.league_id))||null)
 const summer=computed(()=>props.recap?.next_season_briefing||null)
+const milestones=computed(()=>[...(props.recap?.milestones||[])].sort((a,b)=>Number(b.importance||0)-Number(a.importance||0)).slice(0,6))
+const movementLabel=computed(()=>props.recap?.movement?.reason==='promotion'?'ASCENSO':props.recap?.movement?.reason==='relegation'?'DESCENSO':null)
 function photo(id){return id?`/historical9394/players/${Number(id)}.jpg`:''}
 </script>
 
@@ -24,7 +26,7 @@ function photo(id){return id?`/historical9394/players/${Number(id)}.jpg`:''}
   <section class="season-end-screen">
     <header class="season-end-hero">
       <div class="season-end-club"><img :src="crestFor(recap.team_id)" alt="" @error="$event.currentTarget.style.visibility='hidden'"></div>
-      <div><small>FIN DE TEMPORADA · {{recap.season}}</small><h1>{{recap.headline}}</h1><p>{{recap.team_name}} · {{recap.league_name}}</p></div>
+      <div><small>FIN DE TEMPORADA · {{recap.season}}</small><h1>{{recap.headline}}</h1><p>{{recap.team_name}} · {{recap.league_name}}</p><b v-if="movementLabel" class="season-end-movement">{{movementLabel}}</b></div>
       <button class="season-end-close" type="button" aria-label="Cerrar" @click="$emit('close')">×</button>
     </header>
 
@@ -35,22 +37,17 @@ function photo(id){return id?`/historical9394/players/${Number(id)}.jpg`:''}
       <span><small>Goles</small><b>{{recap.goals_for??0}}–{{recap.goals_against??0}}</b></span>
     </div>
 
+    <section v-if="milestones.length" class="season-end-section season-end-milestones">
+      <header><small>MOMENTOS DE LA TEMPORADA</small><h2>Lo que quedará en la memoria</h2></header>
+      <div class="season-end-milestones-grid"><article v-for="item in milestones" :key="item.key"><small>{{item.kind.replaceAll('_',' ').toUpperCase()}}</small><strong>{{item.title}}</strong><span>{{item.summary}}</span></article></div>
+    </section>
+
     <section v-if="awards.length" class="season-end-section">
       <header><small>PREMIOS DE LIGA</small><h2>Los protagonistas de {{recap.season}}</h2></header>
       <div class="season-awards-grid">
         <article v-for="award in awards" :key="award[0]" class="season-award-card">
           <img :src="photo(award[1].player_id)" alt="" @error="$event.currentTarget.style.display='none'">
           <div><small>{{award[0]}}</small><strong>{{award[1].name}}</strong><span>{{award[1].team_name}}</span><b>{{award[1][award[2]]}} {{award[3]}}</b></div>
-        </article>
-      </div>
-    </section>
-
-    <section v-if="recap.league_awards?.team_of_season?.length" class="season-end-section">
-      <header><small>XI DE LA TEMPORADA</small><h2>El once más destacado de la liga</h2></header>
-      <div class="season-xi-grid">
-        <article v-for="player in recap.league_awards.team_of_season" :key="player.player_id" class="season-xi-player">
-          <img :src="photo(player.player_id)" alt="" @error="$event.currentTarget.style.display='none'">
-          <div><strong>{{player.name}}</strong><span>{{player.position}} · {{player.team_name}}</span></div><b>{{player.average_rating}}</b>
         </article>
       </div>
     </section>

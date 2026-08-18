@@ -88,7 +88,7 @@ def build_season_dossier(
         if lo <= when <= hi:
             international.append(deepcopy(row))
     return {
-        "dossier_version": 1,
+        "dossier_version": 2,
         "season": str(season),
         "closed_on": str(closed_on),
         "manager_segments": segments,
@@ -98,6 +98,7 @@ def build_season_dossier(
         "league_tables": {str(lid): deepcopy(table) for lid, table in tables.items()},
         "league_awards": deepcopy((recap or {}).get("league_awards") or {}),
         "managed_recap": deepcopy(recap or {}),
+        "career_milestones": deepcopy((recap or {}).get("milestones") or []),
         "international_milestones": international,
         "anomalies": {
             "no_awards": not bool((recap or {}).get("league_awards")),

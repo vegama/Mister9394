@@ -20,7 +20,7 @@ ROOT = Path(__file__).resolve().parents[2]
 
 def test_version_file_is_single_release_source():
     version = (ROOT / "VERSION").read_text(encoding="utf-8").strip()
-    assert version == "1.0.0-h"
+    assert version == product_version()
     assert product_version() == version
     project = json.loads((ROOT / "project_football9394.json").read_text(encoding="utf-8"))
     package = json.loads((ROOT / "frontend" / "package.json").read_text(encoding="utf-8"))

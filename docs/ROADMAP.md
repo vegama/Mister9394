@@ -1,34 +1,48 @@
-# Roadmap canónico V1.0-I → V1.0-N
+# Roadmap canónico — Míster 93/94 v1.1.x Beta / RC
 
 Fecha: 18-08-2026  
-Base: **V1.0-H cerrada**.
+Base: **1.1.2-rc-browser-contracts-source**.
 
-## V1.0-I — UX cotidiana
+## UX-0 — Auditoría viva + Design System · CERRADO BASE
 
-Inicio centrado en Ahora / Próximo partido / Qué cambió / Pulso del club; interrupciones de Continuar justificadas; procesos multi-sistema con estado, responsable, siguiente paso y CTA; retorno contextual; persistencia de filtros, pestañas y selección.
+Primitivas compartidas, suelo de legibilidad, focus/reduce-motion y `check:ux` integrado en build.
 
-**Gate:** un jugador identifica la siguiente decisión en ≤10 s en al menos el 90 % de escenarios de playtest preparados.
+## UX-1 — Shell y arquitectura de información · CERRADO BASE
 
-## V1.0-J — Partido
+HOY / EQUIPO / CLUB / TEMPORADA / CARRERA Y MUNDO, búsqueda Ctrl/Cmd+K y continuidad de decisiones desde Inicio.
 
-Cerrar el bucle previa → partido/Resultado → postpartido con equivalencia persistente, cambios IA realistas, lesiones/sanciones/expulsiones y relato causal legible.
+## UX-2 — Trabajo diario · CERRADO BASE
 
-## V1.0-K — Mercado, staff y entrenamiento
+Plantilla, Táctica, Entrenamiento, Mercado y Staff comparten jerarquía de cabecera/proceso/acción. Plantilla persiste filtros y orden durante la sesión.
 
-Procesos continuos y explicables: necesidad → dossier → comparación → negociación/espera → decisión → consecuencia. La delegación reduce clics sin ocultar decisiones críticas.
+## UX-3 — Contexto de temporada · CERRADO BASE
 
-## V1.0-L — Emoción y hitos
+Calendario, Competiciones, Noticias y Carrera usan estados vacíos explicativos y componentes comunes donde reducen fricción real.
 
-Dar peso a campeones, fin de temporada, ascensos, descensos, rivalidades, cambios de club y memoria histórica sin convertirlo en cinemáticas obligatorias.
+## UX-4 — Navegación de entidades · BROWSER CONTRACT CERRADO / PRODUCCIÓN PENDIENTE
 
-## V1.0-M — Refactor progresivo
+Jugador, club, partido y competición usan navegación contextual; `Football9394App.vue` delega la carga/sincronización en `useEntityNavigation`; las fichas de jugador preservan pestaña en URL/history; Atrás/Adelante/F5 restauran el contexto soportado; la cabecera ofrece retorno visible; Noticias puede saltar a jugador, club o competición. El contrato puro de ruta está verificado con History API real de Chromium (Atrás/Adelante/remount); falta `reload()` literal sobre el bundle de producción.
 
-Extraer responsabilidades de `manager_career.py`, `webapp.py`, `Football9394App.vue` y CSS mediante tests de caracterización. No se permite reescritura destructiva.
+## UX-5 — Feedback, error y estados runtime · CONTRATO EJECUTABLE CERRADO / PRODUCCIÓN PENDIENTE
 
-## V1.0-N — Beta / RC
+Las operaciones lentas muestran feedback a partir de 500 ms; existe timeout de 15 s con lenguaje de jugador; las mutaciones idénticas simultáneas se colapsan para evitar doble envío; los errores de entidad permanecen visibles con Reintentar/Volver; Empty y Error están separados. `check:network` ejecuta dedupe, lentitud, offline, timeout y sanitización 500. Falta observar foco/recuperación sobre la UI de producción.
 
-Pirámide final: smoke rápido, integración, destructivo, soak y playtest humano. Cero P0; P1 explícitos y finitos; candidato reproducible desde repo limpio.
+## UX-6 — Onboarding contextual + velocidad experta · SOURCE CERRADO BASE / PLAYTEST PENDIENTE
+
+La primera carrera muestra una guía contextual y descartable sólo antes del primer partido dirigido, orientada a prioridad → 11+5 → consecuencias; no existe tutorial largo. La command palette admite flechas, selección activa y Enter además de Ctrl/Cmd+K. Falta medir en playtest tiempo a primera decisión y velocidad experta.
+
+## UX-7 — Visual / responsive / accesibilidad · CHROMIUM SOURCE-CSS 8/8 / BUNDLE PENDIENTE
+
+Chromium ya verifica 1920×1080, 1366×768, 1280×720, 1024×768 y sus equivalentes a 200 % sin overflow global, con CTA/topbar/nav/errores visibles y teclado básico. Falta repetir la matriz sobre `frontend/dist` real.
+
+## UX-8 — Playtest · BLOQUE RC
+
+15 min nuevo, 1 h intermedio, varias horas, hardcore, teclado y usuario destructivo/Atrás. Medir clics, tiempo, dudas, retrocesos y abandono.
+
+## UX-9 — Release candidate
+
+Cero P0. P1 finitos y explícitos. Source gates, browser, partido, mercado, transición de temporada, soak y build reproducible desde repo limpio.
 
 ## Regla paralela permanente
 
-Cada pasada intenta avanzar assets mediante un micro-lote acotado y con trazabilidad. Los fallos de red/fuente nunca bloquean el objetivo principal.
+Cada pasada intenta un micro-lote de assets con trazabilidad y sin bloquear producto. v1.1.2: 4 intentos BDFutbol, 0 añadidos por DNS, 10.195 fotos preservadas.

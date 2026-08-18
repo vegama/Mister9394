@@ -1,0 +1,1285 @@
+Quiero que realices una **auditoría profunda y un plan integral de rediseño, usabilidad y experiencia de usuario (UX) de este videojuego**.
+
+No quiero una revisión superficial centrada únicamente en colores, botones o estética. Quiero que analices el juego como lo haría un estudio profesional antes de una gran revisión de producto.
+
+Actúa simultáneamente como:
+
+* Director de videojuego.
+* Director de producto.
+* Lead UX Designer especializado en videojuegos.
+* Lead UI Designer.
+* Game Designer.
+* Diseñador de interacción.
+* Especialista en arquitectura de información.
+* Especialista en accesibilidad.
+* Especialista en onboarding y aprendizaje.
+* Especialista en retención y reducción de fricción.
+* Jugador experto del género.
+* Jugador intermedio.
+* Jugador nuevo que abre el juego por primera vez.
+* Beta tester especialmente crítico.
+* QA especializado en interfaces, navegación y estados extremos.
+
+Tu objetivo principal debe ser:
+
+> Conseguir que el juego sea más bonito, moderno, comprensible, cómodo, rápido de utilizar, coherente, inmersivo y agradable de jugar, sin eliminar profundidad ni convertirlo en una interfaz excesivamente simplificada.
+
+La prioridad absoluta debe ser siempre la experiencia del jugador.
+
+Una funcionalidad técnicamente potente no debe considerarse bien resuelta si el jugador no entiende:
+
+* qué está ocurriendo;
+* por qué está ocurriendo;
+* qué información es importante;
+* qué puede hacer;
+* qué debería hacer;
+* qué ocurrirá después;
+* dónde debe pulsar;
+* cómo volver atrás;
+* cómo comparar alternativas;
+* qué consecuencias tendrá su decisión.
+
+# 1. PRIMERA FASE: ENTENDER EL JUEGO
+
+Antes de proponer cambios, inspecciona todo el material disponible:
+
+* código;
+* estructura del proyecto;
+* pantallas;
+* componentes;
+* navegación;
+* menús;
+* estilos;
+* assets;
+* capturas;
+* datos;
+* documentación;
+* flujos existentes;
+* estados de carga;
+* mensajes;
+* modales;
+* formularios;
+* tablas;
+* fichas;
+* pantallas de detalle;
+* sistema de navegación;
+* comportamiento de Atrás/Adelante;
+* comportamiento tras recargar;
+* resolución objetivo;
+* funcionamiento real del juego.
+
+No presupongas que una funcionalidad funciona simplemente porque exista código para ella.
+
+Diferencia claramente entre:
+
+* funcionalidad implementada;
+* funcionalidad parcialmente implementada;
+* funcionalidad visible pero poco usable;
+* funcionalidad técnicamente existente pero difícil de descubrir;
+* funcionalidad duplicada;
+* funcionalidad que debería fusionarse;
+* funcionalidad que debería eliminarse;
+* funcionalidad que necesita rediseño;
+* funcionalidad ausente.
+
+Identifica también qué tipo de juego intenta ser y cuál debería ser su fantasía principal para el usuario.
+
+Por ejemplo:
+
+> “Soy el responsable de un club y cada pantalla me ayuda a entender el estado del mundo, tomar decisiones y sentir sus consecuencias.”
+
+Todas las decisiones posteriores deben reforzar esa fantasía.
+
+# 2. AUDITORÍA VISUAL COMPLETA
+
+Analiza la identidad visual actual.
+
+Revisa:
+
+* paleta de colores;
+* contraste;
+* fondos;
+* tarjetas;
+* bordes;
+* sombras;
+* tipografía;
+* tamaños;
+* pesos tipográficos;
+* espaciado;
+* densidad;
+* alineaciones;
+* iconografía;
+* botones;
+* pestañas;
+* tablas;
+* menús;
+* cabeceras;
+* barras laterales;
+* navegación;
+* formularios;
+* modales;
+* tooltips;
+* badges;
+* estados;
+* gráficos;
+* imágenes;
+* fotografías;
+* escudos;
+* logotipos;
+* avatares;
+* ilustraciones.
+
+Determina si existe una verdadera gramática visual común o si cada pantalla parece diseñada de manera independiente.
+
+Busca especialmente:
+
+* exceso de gris;
+* colores sin significado;
+* falta de jerarquía;
+* botones principales que no destacan;
+* demasiados elementos compitiendo por atención;
+* abuso de cajas;
+* paneles innecesarios;
+* espacios desperdiciados;
+* zonas excesivamente comprimidas;
+* texto demasiado pequeño;
+* textos secundarios demasiado prominentes;
+* inconsistencia entre pantallas;
+* elementos que parecen clicables y no lo son;
+* elementos clicables que no parecen clicables.
+
+Propón un sistema visual coherente para todo el juego.
+
+Debe definir al menos:
+
+* color principal;
+* color secundario;
+* colores semánticos;
+* fondo principal;
+* fondo secundario;
+* tarjetas;
+* bordes;
+* estados hover;
+* estados seleccionados;
+* estados deshabilitados;
+* éxito;
+* advertencia;
+* peligro;
+* información;
+* tipografía;
+* escalas de tamaño;
+* espaciado;
+* radios;
+* iconografía;
+* jerarquía de botones.
+
+No diseñes cada pantalla como una excepción.
+
+Crea un pequeño **Design System reutilizable**.
+
+# 3. AUDITORÍA DE USABILIDAD
+
+Recorre el juego como si fueras realmente un jugador.
+
+Para cada pantalla responde:
+
+1. ¿Qué quiere conseguir aquí el jugador?
+2. ¿Cuál debería ser la información más importante?
+3. ¿Está visible sin buscarla?
+4. ¿Cuál es la acción principal?
+5. ¿Está suficientemente clara?
+6. ¿Hay acciones secundarias compitiendo con ella?
+7. ¿Cuántos clics hacen falta para completar una tarea habitual?
+8. ¿Existe información redundante?
+9. ¿Falta información necesaria para decidir?
+10. ¿La pantalla tiene una jerarquía visual clara?
+11. ¿El jugador sabe dónde está?
+12. ¿Sabe cómo volver?
+13. ¿Sabe qué ocurrió después de realizar una acción?
+14. ¿Puede deshacer o corregir errores cuando tenga sentido?
+15. ¿El estado se conserva correctamente?
+16. ¿La navegación se comporta de manera predecible?
+
+Busca sistemáticamente problemas de:
+
+* demasiados clics;
+* navegación circular;
+* navegación sin salida;
+* pantallas interminables;
+* scroll excesivo;
+* modales innecesarios;
+* acciones escondidas;
+* información duplicada;
+* falta de contexto;
+* pérdida de filtros;
+* pérdida de posición;
+* pérdida de selección;
+* pérdida de pestaña activa;
+* formularios incómodos;
+* botones ambiguos;
+* nombres poco claros;
+* mensajes técnicos;
+* ausencia de feedback;
+* esperas sin indicador de carga;
+* cambios de pantalla bruscos;
+* información relevante separada artificialmente.
+
+# 4. ARQUITECTURA DE INFORMACIÓN
+
+Analiza cómo está organizada toda la información del juego.
+
+Determina si los menús y submenús responden a la lógica mental del jugador o a la estructura interna del código.
+
+La arquitectura debe construirse pensando:
+
+> “¿Dónde esperaría encontrar esto un jugador?”
+
+y no:
+
+> “¿En qué módulo está implementado?”
+
+Propón, si es necesario:
+
+* menú principal;
+* navegación secundaria;
+* pestañas;
+* subpestañas;
+* breadcrumbs;
+* accesos rápidos;
+* buscador;
+* elementos recientes;
+* favoritos;
+* historial;
+* enlaces contextuales;
+* navegación mediante entidades relacionadas.
+
+Evita obligar al jugador a memorizar rutas.
+
+Una entidad importante debería poder abrirse naturalmente desde donde aparece.
+
+Por ejemplo:
+
+Jugador → ficha.
+
+Equipo → ficha del equipo.
+
+Competición → clasificación.
+
+Partido → previa/directo/postpartido.
+
+Lesión → jugador/área médica.
+
+Noticia → protagonista relacionado.
+
+Operación de mercado → jugador/agente/club.
+
+# 5. FLUJOS COMPLETOS
+
+No analices únicamente pantallas aisladas.
+
+Analiza procesos completos de principio a fin.
+
+Para cada proceso importante identifica:
+
+* inicio;
+* información necesaria;
+* actores involucrados;
+* decisiones;
+* pasos;
+* esperas;
+* cambios de estado;
+* resultado;
+* consecuencias;
+* cómo se comunica el resultado al usuario.
+
+Un flujo debe sentirse continuo.
+
+El jugador debería poder entender siempre:
+
+* qué ha sucedido;
+* quién está trabajando;
+* qué está esperando;
+* qué falta;
+* qué puede hacer ahora;
+* si debe intervenir;
+* qué consecuencias se esperan.
+
+Ejemplos de flujos a revisar según el tipo de juego:
+
+Necesidad → búsqueda → información → comparación → decisión → negociación → resolución → consecuencias.
+
+Preparación → selección → estrategia → evento → reacción → resultado → consecuencias.
+
+Problema → diagnóstico → responsable → alternativas → decisión → resolución.
+
+Noticia → contexto → protagonista → acción posible → consecuencia.
+
+No quiero “pantallas conectadas”.
+
+Quiero **experiencias conectadas**.
+
+# 6. REDUCCIÓN DE FRICCIÓN
+
+Localiza cualquier operación que el jugador realice frecuentemente.
+
+Para cada una calcula mentalmente:
+
+* clics necesarios;
+* cambios de pantalla;
+* scroll;
+* tiempo de interpretación;
+* necesidad de recordar información de otra pantalla.
+
+Después intenta reducirlos.
+
+Aplica especialmente:
+
+* acciones contextuales;
+* edición directa;
+* drag & drop cuando tenga sentido;
+* comparación paralela;
+* filtros persistentes;
+* orden persistente;
+* pestañas persistentes;
+* vistas guardadas;
+* botones de siguiente/anterior;
+* atajos;
+* accesos recientes;
+* acciones rápidas;
+* tooltips útiles;
+* confirmación únicamente para acciones destructivas.
+
+No añadas confirmaciones innecesarias.
+
+# 7. JERARQUÍA DE INFORMACIÓN
+
+Cada pantalla debe responder en pocos segundos a:
+
+* ¿Dónde estoy?
+* ¿Qué está pasando?
+* ¿Qué es importante?
+* ¿Tengo algo pendiente?
+* ¿Qué puedo hacer?
+
+Clasifica la información en:
+
+Nivel 1 — crítica.
+
+Nivel 2 — importante para decidir.
+
+Nivel 3 — contexto.
+
+Nivel 4 — detalle avanzado.
+
+No muestres todo con el mismo peso visual.
+
+La profundidad debe existir sin obligar a consumirla constantemente.
+
+Utiliza progresive disclosure:
+
+* resumen;
+* detalle;
+* profundidad avanzada.
+
+# 8. PANTALLA DE INICIO
+
+Si existe una pantalla de inicio/dashboard, trátala como el centro operativo del juego.
+
+Debe responder:
+
+> “¿Qué necesita mi atención ahora?”
+
+No debe ser únicamente una colección de estadísticas.
+
+Evalúa incluir:
+
+* próximo evento;
+* resultados recientes;
+* estado del equipo/proyecto;
+* tareas pendientes;
+* alertas;
+* decisiones;
+* mensajes;
+* lesiones;
+* sanciones;
+* negociaciones;
+* objetivos;
+* calendario;
+* noticias relevantes;
+* accesos rápidos.
+
+Diferencia claramente:
+
+* información;
+* recomendación;
+* advertencia;
+* decisión requerida.
+
+Evita convertirla en un panel lleno de ruido.
+
+# 9. LISTADOS Y TABLAS
+
+Revisa todas las tablas.
+
+Una tabla debe permitir trabajar, no simplemente mirar datos.
+
+Analiza:
+
+* columnas;
+* anchura;
+* alineación;
+* números;
+* unidades;
+* ordenación;
+* filtros;
+* búsqueda;
+* columnas personalizables;
+* sticky headers;
+* selección;
+* navegación;
+* acciones;
+* comparación.
+
+No muestres veinte columnas simplemente porque existen veinte campos.
+
+Determina qué información necesita el jugador para esa decisión concreta.
+
+# 10. FICHAS DE ENTIDADES
+
+Revisa fichas de:
+
+* jugadores/personajes;
+* equipos;
+* empleados;
+* competiciones;
+* partidos;
+* organizaciones;
+* cualquier entidad principal.
+
+Las fichas deben tener una jerarquía estable.
+
+Ejemplo conceptual:
+
+Cabecera:
+foto + nombre + identidad + estado + acciones principales.
+
+Resumen:
+lo que necesito saber ahora.
+
+Secciones:
+rendimiento;
+situación;
+atributos;
+historial;
+contrato;
+relaciones;
+salud;
+estadísticas;
+etc.
+
+No mezcles toda la información en un único scroll gigantesco.
+
+# 11. ESTADOS VACÍOS
+
+Revisa todas las situaciones donde todavía no existe información.
+
+Nunca dejes simplemente:
+
+“No hay datos”.
+
+El estado vacío debe explicar:
+
+* por qué está vacío;
+* si es normal;
+* cómo conseguir información;
+* qué acción puede realizar el usuario.
+
+# 12. FEEDBACK
+
+Cada acción debe tener una respuesta visible.
+
+Analiza:
+
+* loading;
+* skeleton;
+* progreso;
+* éxito;
+* error;
+* cambios guardados;
+* operación pendiente;
+* operación completada;
+* operación rechazada.
+
+No permitas que el jugador pulse algo y tenga que preguntarse si ha ocurrido.
+
+Para operaciones de varios segundos, utiliza feedback inmediato.
+
+# 13. ERRORES
+
+Los errores deben explicarse en lenguaje de usuario.
+
+Evita mensajes como:
+
+* null;
+* undefined;
+* error 500;
+* exception;
+* invalid state.
+
+Explica:
+
+* qué ocurrió;
+* qué impacto tiene;
+* qué puede hacer el jugador.
+
+# 14. NAVEGACIÓN Y ESTADO
+
+Haz pruebas destructivas.
+
+Comprueba sistemáticamente:
+
+* F5;
+* Atrás;
+* Adelante;
+* abrir nueva pestaña cuando proceda;
+* entrar y salir de una ficha;
+* regresar desde un detalle;
+* cambiar filtros;
+* cambiar orden;
+* cambiar pestañas;
+* realizar una acción y volver.
+
+Verifica qué información debe conservarse:
+
+* sección;
+* filtro;
+* orden;
+* scroll;
+* selección;
+* pestaña;
+* contexto.
+
+El usuario no debe perder constantemente el lugar desde el que estaba trabajando.
+
+# 15. RESOLUCIÓN Y RESPONSIVE
+
+Determina una resolución objetivo principal y trabaja primero para ella.
+
+Por ejemplo:
+
+1920×1080.
+
+Analiza cada pantalla con el viewport real disponible, no únicamente el tamaño total del monitor.
+
+Evita:
+
+* scroll horizontal;
+* botones fuera de pantalla;
+* modales mayores que el viewport;
+* tablas ilegibles;
+* cabeceras gigantes;
+* zonas vacías;
+* elementos que obliguen a hacer zoom.
+
+Después comprueba comportamiento razonable en resoluciones menores.
+
+# 16. ACCESIBILIDAD
+
+Revisa:
+
+* contraste;
+* tamaño de letra;
+* color como único indicador;
+* estados hover/focus;
+* navegación mediante teclado;
+* áreas clicables;
+* iconos sin texto;
+* legibilidad;
+* información transmitida únicamente mediante colores.
+
+El diseño debe funcionar incluso para alguien que no distinga perfectamente rojo, amarillo y verde.
+
+# 17. CONSISTENCIA
+
+Busca especialmente inconsistencias.
+
+Ejemplos:
+
+* “Guardar” en una pantalla y “Aceptar” en otra para la misma acción;
+* botón principal a veces a la derecha y otras a la izquierda;
+* iconos diferentes para lo mismo;
+* fichas que se abren de maneras diferentes;
+* unos listados con filtros y otros sin ellos;
+* distintas escalas tipográficas;
+* formatos de fechas diferentes;
+* unidades diferentes;
+* lenguaje mezclado;
+* pluralización incorrecta.
+
+Define reglas globales.
+
+# 18. ONBOARDING
+
+Analiza la experiencia de un jugador que inicia una partida por primera vez.
+
+No quiero un tutorial gigantesco.
+
+Busca mecanismos como:
+
+* onboarding contextual;
+* consejos únicamente cuando sean relevantes;
+* primeras acciones guiadas;
+* explicaciones breves;
+* destacados;
+* tooltips;
+* recomendaciones;
+* ayuda integrada.
+
+Pregunta:
+
+> ¿Cuánto tarda un jugador nuevo en comprender qué debe hacer?
+
+> ¿Cuánto tarda en llegar a su primera decisión interesante?
+
+Reduce ambos tiempos.
+
+# 19. JUGADOR EXPERTO
+
+El rediseño tampoco debe ralentizar al jugador veterano.
+
+Incluye:
+
+* accesos directos;
+* edición rápida;
+* acciones en lote;
+* filtros;
+* teclado cuando tenga sentido;
+* personalización;
+* vistas guardadas;
+* navegación directa.
+
+Diseña simultáneamente para:
+
+* descubrimiento del principiante;
+* velocidad del experto.
+
+# 20. CARGA COGNITIVA
+
+Identifica pantallas donde el jugador tenga que procesar demasiada información.
+
+No soluciones esto eliminando profundidad.
+
+Soluciónalo mediante:
+
+* agrupación;
+* jerarquía;
+* progresive disclosure;
+* comparaciones;
+* resúmenes;
+* indicadores;
+* recomendaciones;
+* contexto.
+
+# 21. DISEÑO DE DECISIONES
+
+Una decisión importante debería mostrar:
+
+* contexto;
+* alternativas;
+* diferencias;
+* riesgos;
+* coste;
+* consecuencia probable;
+* recomendación cuando exista.
+
+Evita decisiones ciegas.
+
+Cuando sea útil, permite comparar A / B / C en la misma pantalla.
+
+# 22. INMERSIÓN
+
+Identifica puntos donde la interfaz rompe la fantasía del juego.
+
+La UI no debería sentirse como operar una base de datos.
+
+Los sistemas deben convertirse en historias y situaciones.
+
+Siempre que tenga sentido, conecta:
+
+hecho → persona → contexto → decisión → consecuencia.
+
+Por ejemplo, es mejor:
+
+“Tu capitán está preocupado por la falta de minutos de X”
+
+que:
+
+“Moral -4”.
+
+Los números pueden existir, pero deben apoyar la narrativa en vez de sustituirla.
+
+# 23. MICROCOPY
+
+Revisa textos, etiquetas, mensajes, tooltips y botones.
+
+Sustituye textos técnicos por lenguaje natural.
+
+Los botones deben expresar acciones.
+
+Mejor:
+
+“Negociar contrato”
+
+que:
+
+“Procesar”.
+
+Mejor:
+
+“Ver informe médico”
+
+que:
+
+“Detalles”.
+
+# 24. RITMO DEL JUEGO
+
+Analiza cuánto tiempo pasa el usuario:
+
+* navegando;
+* esperando;
+* leyendo;
+* tomando decisiones;
+* realizando trabajo administrativo.
+
+La mayor parte del tiempo debería dedicarse a:
+
+* comprender situaciones;
+* comparar opciones;
+* tomar decisiones;
+* observar consecuencias.
+
+Reduce tareas burocráticas sin valor jugable.
+
+# 25. PRUEBAS CON PERSONAS FICTICIAS
+
+Simula varias sesiones:
+
+Jugador A:
+nuevo en el género.
+
+Jugador B:
+conoce el género.
+
+Jugador C:
+jugador hardcore.
+
+Jugador D:
+juega rápido y utiliza principalmente accesos directos.
+
+Jugador E:
+comete errores y navega constantemente hacia atrás.
+
+Describe dónde se atascaría cada uno.
+
+# 26. TEST DE LOS 5 SEGUNDOS
+
+Para cada pantalla importante realiza mentalmente este test:
+
+Tras verla durante cinco segundos, ¿puede el usuario responder?
+
+* dónde está;
+* qué está pasando;
+* qué debería mirar;
+* cuál es la acción principal.
+
+Si no, rediseñarla.
+
+# 27. TEST DE LOS 3 CLICS
+
+No debe utilizarse como regla rígida, pero analiza las tareas frecuentes.
+
+Una operación habitual no debería necesitar una ruta absurdamente larga.
+
+Enumera las operaciones con mayor coste de navegación y propón cómo reducirlas.
+
+# 28. TEST DE COHERENCIA DE FLUJO
+
+Haz pruebas completas.
+
+Por ejemplo:
+
+Inicio → aviso → protagonista → información → decisión → consecuencia → regreso.
+
+El usuario debe poder seguir el hilo sin perder contexto.
+
+# 29. TESTS DE ESTADOS EXTREMOS
+
+No pruebes únicamente el camino perfecto.
+
+Comprueba:
+
+* listas vacías;
+* texto muy largo;
+* nombres largos;
+* muchas notificaciones;
+* ninguna notificación;
+* muchos elementos;
+* pocos elementos;
+* datos incompletos;
+* imágenes ausentes;
+* errores de carga;
+* elementos deshabilitados;
+* empate;
+* cancelación;
+* aplazamiento;
+* rechazo;
+* operación que caduca;
+* usuario que vuelve después de varios días;
+* acciones ya resueltas.
+
+# 30. ESTÉTICA DEL JUEGO
+
+Propón una dirección artística clara para la interfaz.
+
+No quiero una skin genérica de dashboard SaaS.
+
+Debe sentirse como un videojuego.
+
+Busca:
+
+* personalidad;
+* identidad;
+* atmósfera;
+* emoción;
+* ritmo;
+* jerarquía;
+* detalles visuales;
+* buen uso de fotografías;
+* escudos/logos;
+* fondos;
+* color contextual;
+* momentos especiales.
+
+Reserva tratamientos visuales más espectaculares para:
+
+* grandes eventos;
+* partidos/eventos decisivos;
+* títulos;
+* récords;
+* fichajes importantes;
+* finales de temporada;
+* hitos;
+* celebraciones.
+
+No conviertas todas las pantallas en “especiales”, porque entonces ninguna lo será.
+
+# 31. SISTEMA DE COMPONENTES
+
+Después de analizar las pantallas, define componentes reutilizables.
+
+Por ejemplo:
+
+* AppShell;
+* Sidebar;
+* TopBar;
+* Breadcrumbs;
+* PageHeader;
+* EntityHeader;
+* Tabs;
+* DataTable;
+* FilterBar;
+* Search;
+* StatCard;
+* StatusBadge;
+* Alert;
+* Timeline;
+* ActionPanel;
+* DecisionCard;
+* ComparisonPanel;
+* EmptyState;
+* LoadingState;
+* Modal;
+* Drawer;
+* Tooltip;
+* Toast;
+* PersonCard;
+* EventCard.
+
+Para cada componente define cuándo debe utilizarse.
+
+# 32. NO REDISEÑAR SIN NECESIDAD
+
+No cambies algo simplemente porque puedas hacerlo diferente.
+
+Clasifica cada elemento en:
+
+* mantener;
+* pulir;
+* reorganizar;
+* rediseñar;
+* sustituir;
+* eliminar.
+
+Prioriza cambios que mejoren realmente la experiencia.
+
+# 33. PRIORIZACIÓN
+
+Después de la auditoría, clasifica todos los problemas.
+
+P0 — bloquea o rompe la experiencia.
+
+P1 — problema grave de usabilidad.
+
+P2 — problema importante.
+
+P3 — mejora deseable.
+
+P4 — pulido.
+
+Además, para cada cambio estima:
+
+* impacto UX;
+* frecuencia;
+* coste aproximado;
+* riesgo técnico;
+* dependencia.
+
+Prioriza:
+
+alto impacto + alta frecuencia + coste razonable.
+
+# 34. PLAN DE TRABAJO
+
+No termines únicamente con recomendaciones.
+
+Convierte el análisis en un plan de ejecución.
+
+Divide el rediseño en fases.
+
+Por ejemplo:
+
+Fase UX-0 — Auditoría y sistema visual.
+
+Fase UX-1 — Shell, navegación y componentes globales.
+
+Fase UX-2 — Inicio/dashboard.
+
+Fase UX-3 — Pantallas principales de trabajo.
+
+Fase UX-4 — Flujos principales.
+
+Fase UX-5 — Fichas y navegación entre entidades.
+
+Fase UX-6 — Estados, feedback, errores y persistencia.
+
+Fase UX-7 — Partidas/eventos de alta intensidad.
+
+Fase UX-8 — Onboarding y ayuda contextual.
+
+Fase UX-9 — Accesibilidad.
+
+Fase UX-10 — Pulido y validación.
+
+Adapta las fases al juego real después de estudiarlo.
+
+# 35. PARA CADA FASE
+
+Incluye:
+
+Objetivo.
+
+Problema que resuelve.
+
+Pantallas afectadas.
+
+Cambios visuales.
+
+Cambios de interacción.
+
+Cambios técnicos necesarios.
+
+Componentes reutilizables.
+
+Criterios de aceptación.
+
+Pruebas.
+
+Riesgos.
+
+Dependencias.
+
+# 36. CRITERIOS DE ACEPTACIÓN
+
+No utilices expresiones ambiguas como:
+
+“mejorar la interfaz”.
+
+Utiliza criterios comprobables.
+
+Ejemplo:
+
+* La acción principal puede identificarse en menos de cinco segundos.
+* Ningún modal supera la altura visible del viewport.
+* No existe scroll horizontal a 1920×1080.
+* Atrás restaura filtros y pestaña.
+* F5 conserva la URL y el contexto válido.
+* Todas las operaciones superiores a 500 ms muestran feedback.
+* Todas las entidades principales tienen navegación cruzada.
+* Ningún botón crítico queda fuera del viewport.
+* Las acciones destructivas requieren confirmación.
+* Las acciones rutinarias no requieren confirmación innecesaria.
+
+# 37. PRUEBAS DE REGRESIÓN
+
+Después de cada fase verifica que no se haya roto:
+
+* navegación;
+* datos;
+* lógica de negocio;
+* estados;
+* persistencia;
+* responsive;
+* accesibilidad;
+* rendimiento.
+
+No aceptes un rediseño visual que introduzca errores funcionales.
+
+# 38. PLAYTEST
+
+Diseña una prueba de juego de al menos:
+
+* primeros 15 minutos;
+* primera hora;
+* varias horas;
+* sesión de jugador experto.
+
+Registra:
+
+* clics innecesarios;
+* dudas;
+* errores;
+* retrocesos;
+* tiempo buscando información;
+* pantallas ignoradas;
+* funciones que nadie descubre;
+* operaciones repetitivas;
+* decisiones sin suficiente contexto.
+
+# 39. MÉTRICAS UX
+
+Propón métricas que puedan utilizarse para comprobar la mejora:
+
+* clics por tarea;
+* tiempo por tarea;
+* errores por tarea;
+* pantallas visitadas;
+* abandono de flujo;
+* tiempo hasta primera decisión relevante;
+* número de retrocesos;
+* frecuencia de uso de cada sección;
+* elementos ignorados;
+* acciones canceladas.
+
+# 40. PRINCIPIO FUNDAMENTAL
+
+Antes de aceptar cualquier funcionalidad o pantalla, pregúntate:
+
+> ¿Cómo vive esto el jugador?
+
+No:
+
+> ¿Está implementado?
+
+sino:
+
+> ¿Se entiende, se encuentra, se usa fácilmente, da suficiente contexto, produce feedback y conecta con las consecuencias posteriores?
+
+# 41. EVITAR ESTOS ERRORES
+
+No quiero:
+
+* dashboards corporativos genéricos;
+* rediseño basado únicamente en cambiar colores;
+* glassmorphism gratuito;
+* animaciones innecesarias;
+* enormes cantidades de tarjetas;
+* información escondida detrás de demasiados clics;
+* menús interminables;
+* iconos ambiguos;
+* texto minúsculo;
+* scroll infinito;
+* modales para todo;
+* una estética distinta en cada módulo;
+* sobrecargar Inicio;
+* simplificar eliminando profundidad;
+* interfaces bonitas pero lentas;
+* interfaces profundas pero incómodas;
+* recomendaciones teóricas sin aplicación al juego real.
+
+# 42. FORMATO DEL INFORME
+
+Entrega finalmente:
+
+## A. Diagnóstico ejecutivo
+
+Máximo 15-20 conclusiones realmente importantes.
+
+## B. Problemas críticos
+
+Ordenados por severidad.
+
+Para cada problema:
+
+* ubicación;
+* problema;
+* evidencia;
+* impacto en el jugador;
+* propuesta;
+* prioridad.
+
+## C. Nueva dirección UX
+
+Describe cómo debería sentirse utilizar el juego después del rediseño.
+
+## D. Nueva dirección visual
+
+Define:
+
+* identidad;
+* paleta;
+* tipografía;
+* densidad;
+* componentes;
+* estilo de navegación;
+* iconografía;
+* uso de imágenes.
+
+## E. Arquitectura de información propuesta
+
+Menús, pestañas y conexiones.
+
+## F. Flujos principales
+
+Documenta paso a paso los procesos más importantes.
+
+## G. Rediseño pantalla por pantalla
+
+Para cada pantalla importante:
+
+* problemas actuales;
+* objetivo;
+* nueva jerarquía;
+* información;
+* acciones;
+* layout;
+* navegación;
+* comportamiento;
+* estados vacíos;
+* errores;
+* responsive.
+
+## H. Design System
+
+Componentes y reglas globales.
+
+## I. Plan de implementación
+
+Dividido en fases pequeñas y cerrables.
+
+## J. Matriz de prioridades
+
+Impacto / esfuerzo / riesgo / prioridad.
+
+## K. Plan de pruebas
+
+Incluyendo UX, QA, navegación, responsive y regresión.
+
+## L. Definition of Done
+
+Condiciones concretas necesarias para considerar terminado el rediseño.
+
+# 43. SI TIENES ACCESO AL CÓDIGO
+
+Si tienes acceso al repositorio, no te limites a escribir el informe.
+
+Relaciona cada problema con:
+
+* archivo;
+* componente;
+* vista;
+* ruta;
+* servicio;
+* CSS;
+* estado;
+* código responsable.
+
+Detecta también componentes duplicados que deberían unificarse.
+
+Propón una arquitectura que reduzca futuras inconsistencias.
+
+No realices todavía cambios masivos sin haber entendido las dependencias.
+
+# 44. SI TIENES CAPTURAS
+
+Analiza visualmente cada captura.
+
+No describas simplemente lo que aparece.
+
+Busca:
+
+* qué llama primero la atención;
+* qué debería llamar primero la atención;
+* ruido;
+* alineaciones;
+* espacios;
+* contraste;
+* consistencia;
+* densidad;
+* jerarquía;
+* legibilidad;
+* affordance;
+* zonas desaprovechadas.
+
+# 45. BENCHMARK
+
+Cuando tenga sentido, utiliza como referencias conceptuales productos y videojuegos que resuelvan especialmente bien problemas equivalentes.
+
+No copies su apariencia.
+
+Estudia:
+
+* cómo jerarquizan;
+* cómo muestran profundidad;
+* cómo reducen clics;
+* cómo contextualizan decisiones;
+* cómo utilizan información progresiva;
+* cómo conectan pantallas;
+* cómo presentan eventos importantes.
+
+Explica qué principio merece adaptarse y por qué.
+
+# 46. OBJETIVO FINAL
+
+El resultado debe conseguir que el jugador tenga la sensación de que:
+
+* siempre sabe dónde está;
+* siempre entiende qué está ocurriendo;
+* encuentra rápidamente lo que necesita;
+* las acciones frecuentes son rápidas;
+* las decisiones importantes tienen contexto;
+* la profundidad está disponible sin resultar abrumadora;
+* las consecuencias de sus decisiones son visibles;
+* la navegación parece natural;
+* el juego tiene personalidad;
+* cada pantalla pertenece al mismo producto;
+* utilizar la interfaz resulta agradable;
+* el juego parece terminado y profesional.
+
+No quiero solamente una interfaz más bonita.
+
+Quiero convertir el conjunto completo en una **experiencia de juego coherente, intuitiva, rápida, profunda y visualmente atractiva**.
+
+Y una última regla:
+
+> Si tienes que elegir entre añadir una nueva funcionalidad o conseguir que una funcionalidad existente se entienda y se disfrute mucho mejor, prioriza primero la experiencia del jugador.

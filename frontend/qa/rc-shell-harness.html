@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="es" data-football-era="1993-94">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Míster 93/94 · RC shell harness</title>
+  <link rel="stylesheet" href="../src/styles/core.css" />
+  <link rel="stylesheet" href="../src/styles/football9394-manager.css" />
+  <style>
+    /* QA-only fixtures. Product classes remain untouched. */
+    .qa-only-note{font-size:11px;color:var(--f-muted);margin:8px 0 0}
+    .qa-command-hidden{display:none}
+    .qa-command-open{display:grid}
+    .qa-state-hidden{display:none!important}
+    .qa-table-wrap{max-width:100%;overflow:auto}
+  </style>
+</head>
+<body>
+<div id="app" class="m9394-shell">
+  <a id="skip-link" class="m9394-skip-link" href="#m9394-main">Saltar al contenido</a>
+  <div class="manager-layout">
+    <aside class="manager-sidebar" aria-label="Navegación principal">
+      <div class="sidebar-brand"><div class="brand-mark" aria-hidden="true"><span></span><i></i></div><div><strong>Míster</strong><small>93/94</small></div></div>
+      <div class="sidebar-club"><div class="sidebar-crest"><span>RMA</span></div><div class="sidebar-club-copy"><strong>Real Madrid</strong><span>Primera División</span></div></div>
+      <nav class="sidebar-nav">
+        <section class="sidebar-nav-group"><small>HOY</small><button class="sidebar-nav-item active" type="button"><span class="sidebar-nav-icon">HO</span><span>Inicio</span></button></section>
+        <section class="sidebar-nav-group"><small>EQUIPO</small><button class="sidebar-nav-item" type="button"><span class="sidebar-nav-icon">PL</span><span>Plantilla</span></button><button class="sidebar-nav-item" type="button"><span class="sidebar-nav-icon">TA</span><span>Táctica</span></button><button class="sidebar-nav-item" type="button"><span class="sidebar-nav-icon">EN</span><span>Entrenamiento</span></button></section>
+        <section class="sidebar-nav-group"><small>CLUB</small><button class="sidebar-nav-item" type="button"><span class="sidebar-nav-icon">ME</span><span>Mercado</span></button><button class="sidebar-nav-item" type="button"><span class="sidebar-nav-icon">ST</span><span>Staff</span></button></section>
+        <section class="sidebar-nav-group"><small>TEMPORADA</small><button class="sidebar-nav-item" type="button"><span class="sidebar-nav-icon">CA</span><span>Calendario</span></button><button class="sidebar-nav-item" type="button"><span class="sidebar-nav-icon">CO</span><span>Competiciones</span></button></section>
+        <section class="sidebar-nav-group"><small>CARRERA Y MUNDO</small><button class="sidebar-nav-item" type="button"><span class="sidebar-nav-icon">CR</span><span>Carrera</span></button></section>
+      </nav>
+      <div class="sidebar-footer"><div><small>Temporada</small><strong>1993-94</strong></div><button class="sidebar-career-button" type="button">Nueva carrera</button></div>
+    </aside>
+    <div class="manager-main">
+      <header class="manager-topbar">
+        <div class="topbar-heading-row"><button type="button" class="topbar-back" aria-label="Volver al contexto anterior">←</button><div class="topbar-heading"><small>Centro de mando <span class="topbar-version">· v1.1.2</span></small><h1>Inicio</h1></div></div>
+        <div class="topbar-meta">
+          <button id="open-command" type="button" class="topbar-search" aria-label="Ir rápidamente a una sección"><b aria-hidden="true">⌕</b><span>Ir a…</span><kbd>Ctrl K</kbd></button>
+          <div class="topbar-date"><span>23 oct 1993</span><small>Jornada 8</small></div>
+          <div class="attention-pill" role="status"><b>2</b><span>decisiones pendientes</span></div>
+          <button id="continue-button" type="button" class="continue-button"><span>Continuar</span><i aria-hidden="true">→</i></button>
+        </div>
+      </header>
+
+      <div class="f-decision-focus">
+        <div class="f-decision-focus__copy"><small>DECISIÓN ABIERTA · Mercado</small><strong>Necesitas un lateral derecho</strong><p><b>Ahora:</b> compara A/B/C. <b>Después:</b> decidir si negocias o sigues observando.</p></div>
+        <div class="f-decision-focus__actions"><button class="football-button" type="button">Volver a Inicio</button><button class="football-button primary" type="button">Ver candidatos</button></div>
+      </div>
+
+      <main id="m9394-main" class="m9394-workspace" tabindex="-1">
+        <section class="first-run-guide">
+          <div class="first-run-mark">1</div>
+          <div class="first-run-copy"><small>PRIMEROS MINUTOS</small><strong>Prepara tu primer partido sin perderte por los menús</strong><p>Empieza por lo que necesita atención, completa el 11 + 5 y llega a la previa sabiendo qué ocurrirá después.</p><div class="first-run-steps"><span class="ready"><b>1</b> Prioridades</span><span><b>2</b> 11 + 5</span><span><b>3</b> Partido</span></div></div>
+          <div class="first-run-actions"><button class="football-button primary" type="button">Preparar convocatoria</button><button class="football-button text-action" type="button">Omitir guía</button><span>Puedes volver desde Inicio</span></div>
+        </section>
+
+        <section class="screen-grid home-screen">
+          <article class="football-panel next-match">
+            <div class="match-poster"><div><small>PRÓXIMO PARTIDO · LIGA</small><b>Real Madrid</b><span>Bernabéu · Casa</span></div><strong>VS</strong><div><small>SÁBADO · 20:00</small><b>Barcelona</b><span>Jornada 8</span></div></div>
+            <div class="career-rhythm"><span class="active">Ahora · preparar partido</span><span>Después · resultado y consecuencias</span><em>2 decisiones abiertas</em></div>
+            <div class="decision-row"><button class="football-button" type="button">Ver convocatoria</button><button class="football-button" type="button">Táctica</button><button class="football-button primary" type="button">Ir al partido</button></div>
+          </article>
+
+          <article class="football-panel status"><h2>Estado del equipo <small>hoy</small></h2><div style="padding:16px;display:grid;gap:10px"><div class="f-ui-action-dock tone-warning"><div class="f-ui-action-dock__copy"><strong>Hierro está tocado</strong><small>El médico recomienda decidir antes de cerrar la convocatoria.</small></div><div class="f-ui-action-dock__actions"><button class="football-button" type="button">Ver informe</button></div></div><div class="f-ui-empty-state is-compact"><div class="f-ui-empty-state__icon">✓</div><div class="f-ui-empty-state__copy"><strong>Sin sanciones nuevas</strong><span>No necesitas actuar aquí.</span></div></div></div></article>
+
+          <article class="football-panel mini-table"><h2>Clasificación <small>Primera</small></h2><div class="f-ui-data-table has-sticky-first" tabindex="0"><table><thead><tr><th>Pos</th><th>Equipo</th><th>PJ</th><th>G</th><th>E</th><th>P</th><th>GF</th><th>GC</th><th>Pts</th></tr></thead><tbody><tr class="controlled"><td>1</td><td>Real Madrid</td><td>7</td><td>5</td><td>1</td><td>1</td><td>18</td><td>7</td><td class="points">11</td></tr><tr><td>2</td><td>Barcelona</td><td>7</td><td>5</td><td>0</td><td>2</td><td>16</td><td>8</td><td class="points">10</td></tr><tr><td>3</td><td>Deportivo</td><td>7</td><td>4</td><td>2</td><td>1</td><td>13</td><td>6</td><td class="points">10</td></tr></tbody></table></div></article>
+
+          <article class="football-panel inbox"><h2>Qué necesita atención <small>priorizado</small></h2><button class="news-row decision-news" type="button"><b>DECISIÓN</b><span><strong>El lateral derecho condiciona el plan del domingo</strong><small>Director deportivo · abre comparación A/B/C</small></span></button><button class="news-row secondary-news" type="button"><b>INFO</b><span><strong>La plantilla respondió bien al trabajo defensivo</strong><small>Entrenamiento · sin acción obligatoria</small></span></button></article>
+        </section>
+
+        <section style="margin-top:16px" class="f-ui-page-header"><div class="f-ui-page-header__copy"><small class="f-ui-eyebrow">MATRIZ RC</small><h2>Trabajo profundo sin scroll horizontal global</h2><p>Esta tabla fuerza densidad y valida que el overflow quede encapsulado en el componente de trabajo, no en toda la aplicación.</p></div><div class="f-ui-page-header__right"><span class="f-ui-page-header__status">QA</span><button class="football-button primary" type="button">Acción principal</button></div></section>
+        <div class="f-ui-data-table is-sticky has-sticky-first" tabindex="0"><table style="min-width:1050px"><thead><tr><th>Jugador</th><th>Pos</th><th>Estado</th><th>Forma</th><th>Moral</th><th>Contrato</th><th>Salario</th><th>Minutos</th><th>Goles</th><th>Asistencias</th><th>Scouting</th><th>Acción</th></tr></thead><tbody><tr><td>Fernando Hierro</td><td>DFC</td><td>TOCADO</td><td>7.8</td><td>Alta</td><td>1996</td><td>75 M ptas</td><td>630</td><td>2</td><td>1</td><td>Interno</td><td><button class="football-button tiny">Abrir ficha</button></td></tr></tbody></table></div>
+        <p class="qa-only-note">Harness de QA: usa las hojas de estilo reales del producto; no sustituye el E2E del bundle de producción.</p>
+      </main>
+    </div>
+  </div>
+
+  <div id="slow-state" class="network-slow-indicator qa-state-hidden" role="status"><span></span><strong>Procesando…</strong><small>La operación está tardando más de lo habitual.</small></div>
+  <div id="error-state" class="entity-route-error qa-state-hidden" role="alert"><span><small>NO SE HA PODIDO CARGAR</small><strong>No hemos podido actualizar esta ficha. Tu partida no se ha perdido.</strong></span><button type="button">Reintentar</button><button type="button" class="secondary">Volver</button></div>
+
+  <div id="command-overlay" class="command-palette-backdrop qa-command-hidden" role="dialog" aria-modal="true" aria-label="Ir rápidamente a una sección">
+    <section class="command-palette"><header><span><small>IR A…</small><strong>Navegación rápida</strong></span><button id="close-command" type="button" aria-label="Cerrar">×</button></header><label class="command-search"><span class="sr-only">Buscar sección</span><input id="command-input" placeholder="Plantilla, Mercado, Calendario…" /></label><div class="command-results"><button type="button" class="keyboard-active"><span><small>EQUIPO</small><strong>Plantilla</strong></span><b>Enter</b></button><button type="button"><span><small>CLUB</small><strong>Mercado</strong></span><b>Enter</b></button><button type="button"><span><small>TEMPORADA</small><strong>Calendario</strong></span><b>Enter</b></button></div><footer><span>↑↓ mover</span><span>Enter abrir</span><span>Esc cerrar</span></footer></section>
+  </div>
+</div>
+<script>
+  const params = new URLSearchParams(location.search)
+  if (params.get('state') === 'slow') document.getElementById('slow-state').classList.remove('qa-state-hidden')
+  if (params.get('state') === 'error') document.getElementById('error-state').classList.remove('qa-state-hidden')
+  const overlay = document.getElementById('command-overlay')
+  const opener = document.getElementById('open-command')
+  const input = document.getElementById('command-input')
+  function openCommand(){ overlay.classList.remove('qa-command-hidden'); overlay.classList.add('qa-command-open'); input.focus() }
+  function closeCommand(){ overlay.classList.add('qa-command-hidden'); overlay.classList.remove('qa-command-open'); opener.focus() }
+  opener.addEventListener('click', openCommand)
+  document.getElementById('close-command').addEventListener('click', closeCommand)
+  document.addEventListener('keydown', (event) => { if ((event.ctrlKey || event.metaKey) && event.key.toLowerCase()==='k'){event.preventDefault();openCommand()} if(event.key==='Escape' && overlay.classList.contains('qa-command-open')) closeCommand() })
+</script>
+</body>
+</html>

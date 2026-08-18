@@ -2,9 +2,9 @@
 
 Manager de fútbol ambientado en la temporada 1993-94, con reglas históricas por competición, carrera persistente, mundo autónomo, mercado, economía en pesetas, selecciones, historia y transición longitudinal de temporadas.
 
-**Versión canónica:** `1.0.0-h`  
-**Checkpoint:** `1.0.0-h-release-hygiene-closed`  
-**Estado:** V1.0-H cerrada. El siguiente frente canónico es **V1.0-I — UX cotidiana: Inicio, Continuar y procesos legibles**.
+**Versión canónica:** `1.1.2`  
+**Checkpoint:** `1.1.2-rc-browser-contracts-source`  
+**Estado:** responsive/zoom, navegación browser-source y red/doble envío ya tienen gates ejecutables. El bloqueo RC final es el **bundle `frontend/dist` + E2E Chromium de producción + playtest humano**.
 
 La única fuente de versión es [`VERSION`](VERSION). Los metadatos derivados se verifican con `python backend/tools/sync_product_version.py --check` y el build frontend incluye el mismo gate.
 
@@ -30,6 +30,17 @@ Para desarrollo sólo-API:
 python run_football9394.py --dev-api --port 8000
 ```
 
+Gates RC reproducibles antes del bundle final:
+
+```bash
+python backend/tools/rc_browser_matrix.py
+python backend/tools/rc_navigation_history.py
+cd frontend && npm run check:network && cd ..
+python backend/tools/rc_production_browser_gate.py
+```
+
+El último comando sólo puede quedar verde si existe `frontend/dist`; si falta, devuelve `BLOCKED` y no se interpreta como un pase.
+
 ## Datos del usuario y recuperación
 
 Saves, backups y logs viven fuera del repositorio. La ubicación puede personalizarse con `MISTER9394_USER_DATA_DIR`, `MISTER9394_SAVE_DIR`, `MISTER9394_BACKUP_DIR` y `MISTER9394_LOG_DIR`.
@@ -39,7 +50,9 @@ Los saves usan escritura atómica, validación antes del reemplazo, `fsync`, bac
 ## Documentación canónica
 
 - [`docs/STATUS.md`](docs/STATUS.md): estado real del producto.
-- [`docs/ROADMAP.md`](docs/ROADMAP.md): siguientes frentes I→N.
+- [`docs/ROADMAP.md`](docs/ROADMAP.md): cierre v1.1.x Beta / RC.
+- [`docs/V110_UX_AUDIT_AND_SERIOUS_PRODUCT_PASS.md`](docs/V110_UX_AUDIT_AND_SERIOUS_PRODUCT_PASS.md): auditoría A–L y cambios de producto.
+- [`docs/PLAN_V110_SERIOUS_UX_RELEASE.md`](docs/PLAN_V110_SERIOUS_UX_RELEASE.md): plan vivo de cierre UX/RC.
 - [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md): arquitectura y límites técnicos.
 - [`docs/QA_RELEASE.md`](docs/QA_RELEASE.md): gates de release y comandos.
 - [`docs/archive/checkpoints/`](docs/archive/checkpoints/): planes, auditorías y cierres históricos preservados.

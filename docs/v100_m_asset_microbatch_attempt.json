@@ -1,0 +1,53 @@
+{
+  "generated_at": "2026-08-18T10:21:09.313928+00:00",
+  "policy": "best_effort_non_blocking_every_development_pass",
+  "asset_lane": "historical_player_portraits_bdfutbol",
+  "runtime_player_photos_before": 10195,
+  "runtime_player_photos_after": 10195,
+  "runtime_player_photos_added": 0,
+  "normalize_existing": {
+    "status": "complete",
+    "converted": 0,
+    "skipped_existing": 385,
+    "unresolved": 0,
+    "invalid": 0
+  },
+  "download_attempt": {
+    "status": "complete_with_errors",
+    "processed": 4,
+    "downloaded": 0,
+    "already_in_game": 15,
+    "already_downloaded": 0,
+    "no_photo_available": 0,
+    "failed": 4,
+    "raw_dir": "data/football9394/bdfutbol_photos_raw",
+    "downloaded_rows": [],
+    "no_photo_available_ids": [],
+    "failed_rows": [
+      {
+        "bdfutbol_id": "1181057",
+        "error": "[Errno -3] Temporary failure in name resolution"
+      },
+      {
+        "bdfutbol_id": "1159002",
+        "error": "[Errno -3] Temporary failure in name resolution"
+      },
+      {
+        "bdfutbol_id": "1181179",
+        "error": "[Errno -3] Temporary failure in name resolution"
+      },
+      {
+        "bdfutbol_id": "1181214",
+        "error": "[Errno -3] Temporary failure in name resolution"
+      }
+    ]
+  },
+  "normalize_downloads": {
+    "status": "complete",
+    "converted": 0,
+    "skipped_existing": 385,
+    "unresolved": 0,
+    "invalid": 0
+  },
+  "checkpoint_blocked": false
+}
