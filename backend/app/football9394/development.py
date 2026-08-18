@@ -50,6 +50,8 @@ def initial_player_development(players: Iterable[dict[str, Any]]) -> dict[str, d
             "season_rating_count": 0,
             "season_yellows": 0,
             "season_reds": 0,
+            "league_suspension_matches": 0,
+            "league_suspension_reason": None,
             "development_points": 0.0,
             "physical_delta": 0,
             "technical_delta": 0,
@@ -127,6 +129,7 @@ def apply_match_development(
     source_players: dict[int, dict[str, Any]] | None = None,
     game_date=None,
     age_reference_date=None,
+    record_season_stats: bool = True,
 ) -> None:
     """Apply a restrained per-match development pulse.
 
@@ -144,13 +147,15 @@ def apply_match_development(
         row = state.get(pid)
         if row is None:
             continue
-        row["season_appearances"] = int(row.get("season_appearances") or 0) + 1
         if pid in starter_set:
-            row["season_starts"] = int(row.get("season_starts") or 0) + 1
             minutes = 90
         else:
             minutes = 28
-        row["season_minutes"] = int(row.get("season_minutes") or 0) + minutes
+        if record_season_stats:
+            row["season_appearances"] = int(row.get("season_appearances") or 0) + 1
+            if pid in starter_set:
+                row["season_starts"] = int(row.get("season_starts") or 0) + 1
+            row["season_minutes"] = int(row.get("season_minutes") or 0) + minutes
         row["condition"] = int(_clamp(int(row.get("condition") or 100) - rng.randint(7, 13), 0, 100))
         # Match load feeds the same persistent workload model used by training.
         match_load = 18 if pid in starter_set else 8
@@ -165,14 +170,16 @@ def apply_match_development(
         if pid in starter_set:
             _add_attribute_evidence(row, ("consistency", "work_rate"), 0.018 if won else 0.008 if drew else -0.006)
         if pid in goal_set:
-            row["season_goals"] = int(row.get("season_goals") or 0) + 1
+            if record_season_stats:
+                row["season_goals"] = int(row.get("season_goals") or 0) + 1
             form_delta += 3
             morale_delta += 2
             dev += 0.22
             _add_attribute_evidence(row, ("finishing", "off_ball"), 0.16)
             _add_attribute_evidence(row, ("shot_power",), 0.05)
         if pid in assist_set:
-            row["season_assists"] = int(row.get("season_assists") or 0) + 1
+            if record_season_stats:
+                row["season_assists"] = int(row.get("season_assists") or 0) + 1
             form_delta += 1
             dev += 0.08
             _add_attribute_evidence(row, ("vision", "short_pass"), 0.12)

@@ -63,9 +63,9 @@ function chooseLeague(id){clubQuery.value='';emit('update:selectedLeagueId',Numb
             <img class="setup-crest" :src="clubCrest(team.source_id)" alt="">
             <div><small>{{league?.country}} · {{league?.name}}</small><h2>{{team.long_name||team.name}}</h2></div>
           </div>
-          <div class="setup-club-facts"><span><small>Plantilla</small><b>{{team.squad_size}}</b></span><span><small>Nivel XI</small><b>{{team.average_top_11}}</b></span><span><small>Socios</small><b>{{team.members??'—'}}</b></span><span><small>Presupuesto</small><b>{{money(team.budget)}}</b></span><span><small>Deuda</small><b>{{money(team.debt)}}</b></span><span><small>Formato</small><b>{{league?.rounds||'—'}} partidos</b></span></div>
+          <div class="setup-club-facts"><span><small>Plantilla</small><b>{{team.squad_size}}</b></span><span><small>Nivel XI</small><b>{{team.average_top_11}}</b></span><span><small>Socios</small><b>{{team.members??'—'}}</b></span><span><small>Presupuesto fichajes</small><b>{{money(team.budget)}}</b></span><span><small>Deuda</small><b>{{money(team.debt)}}</b></span><span><small>Formato</small><b>{{league?.rounds||'—'}} partidos</b></span></div>
           <div class="setup-top-players"><h3>Referentes</h3><span v-for="p in team.top_players" :key="p.id"><span class="setup-player-photo"><img :src="playerPhoto(p.id)" alt="" @error="$event.currentTarget.style.visibility='hidden'"></span><b>{{p.name}}</b><small>{{p.position}} · {{p.overall}}</small></span></div>
-          <div class="setup-era-note"><b>Temporada 1993-94</b><span>Reglas, mercado y competiciones históricas activas.</span></div>
+          <div class="setup-era-note"><b>Temporada 1993-94 · pesetas</b><span>Reglas, mercado y competiciones históricas activas. Las cifras económicas jugables se muestran en ptas.</span></div>
           <div class="setup-age-policy">
             <h3>Evolución de jugadores</h3>
             <button type="button" class="age-policy-choice" :class="{active:agePolicy==='frozen_attributes_dynamic'}" @click="emit('update:agePolicy','frozen_attributes_dynamic')">

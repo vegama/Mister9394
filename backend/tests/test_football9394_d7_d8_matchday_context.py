@@ -20,3 +20,6 @@ def test_live_match_exposes_opponent_coach_key_players_referee_and_venue():
 
     assert live["referee"] and live["referee"]["name"]
     assert live["venue"] and live["venue"]["name"]
+    assert len(live["controlled_on_pitch"]) == 11
+    assert len(live["opponent_on_pitch"]) == 11
+    assert all(row["id"] and row["display_name"] and row["position"] for row in live["opponent_on_pitch"])

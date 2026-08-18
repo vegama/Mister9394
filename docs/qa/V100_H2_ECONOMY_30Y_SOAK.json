@@ -1,0 +1,109 @@
+{
+  "checkpoint": "V1.0-H2 — economía profunda + asset micro-pass",
+  "date": "2026-08-18",
+  "currency": {
+    "code": "ESP",
+    "name": "pesetas",
+    "label": "ptas."
+  },
+  "horizons": [
+    {
+      "horizon_seasons": 3,
+      "season": "1996-97",
+      "status": "healthy",
+      "issues": [],
+      "active_clubs": 444,
+      "squad_min": 18,
+      "squad_median": 22,
+      "squad_max": 25,
+      "coverage_failures": 0,
+      "negative_cash_clubs": 0,
+      "negative_cash_ratio": 0.0,
+      "max_cash_ptas": 878612538,
+      "max_debt_ptas": 545315834,
+      "transition_ms": 2775,
+      "save_megabytes": 16.48
+    },
+    {
+      "horizon_seasons": 10,
+      "season": "2003-04",
+      "status": "healthy",
+      "issues": [],
+      "active_clubs": 444,
+      "squad_min": 18,
+      "squad_median": 21,
+      "squad_max": 25,
+      "coverage_failures": 0,
+      "negative_cash_clubs": 0,
+      "negative_cash_ratio": 0.0,
+      "max_cash_ptas": 1030700758,
+      "max_debt_ptas": 506644693,
+      "transition_ms": 3548,
+      "save_megabytes": 24.93
+    },
+    {
+      "horizon_seasons": 20,
+      "season": "2013-14",
+      "status": "warning",
+      "issues": [
+        {
+          "severity": "warning",
+          "code": "summer_latency",
+          "detail": "La transición de verano consumió 12.3 s."
+        }
+      ],
+      "active_clubs": 444,
+      "squad_min": 18,
+      "squad_median": 19,
+      "squad_max": 25,
+      "coverage_failures": 0,
+      "negative_cash_clubs": 0,
+      "negative_cash_ratio": 0.0,
+      "max_cash_ptas": 1438752255,
+      "max_debt_ptas": 456108690,
+      "transition_ms": 12350,
+      "save_megabytes": 30.72
+    },
+    {
+      "horizon_seasons": 30,
+      "season": "2023-24",
+      "status": "healthy",
+      "issues": [],
+      "active_clubs": 444,
+      "squad_min": 18,
+      "squad_median": 18,
+      "squad_max": 25,
+      "coverage_failures": 0,
+      "negative_cash_clubs": 0,
+      "negative_cash_ratio": 0.0,
+      "max_cash_ptas": 1712980609,
+      "max_debt_ptas": 410613471,
+      "transition_ms": 4346,
+      "save_megabytes": 34.48
+    }
+  ],
+  "final": {
+    "season": "2023-24",
+    "status": "healthy",
+    "active_clubs": 444,
+    "negative_cash_clubs": 0,
+    "coverage_failures": 0,
+    "illegal_ai_xi": 0,
+    "wage_budget_violations_active": 0,
+    "squad_min": 18,
+    "squad_median": 18,
+    "squad_max": 25,
+    "max_cash_ptas": 1712980609,
+    "median_cash_ptas_active": 170847068,
+    "max_debt_ptas": 410613471,
+    "clubs_ever_using_financing": 76,
+    "cumulative_financing_draws_ptas": 5719002471,
+    "save_megabytes": 34.48,
+    "transition_ms": 4346,
+    "archive_seasons": 30,
+    "honours": 870,
+    "season_recaps": 30,
+    "season_dossiers": 30
+  },
+  "note": "La única advertencia en los hitos 3/10/20/30 aparece en la temporada 20 y es summer_latency (12,3 s); no es una incidencia económica. La temporada 30 termina healthy."
+}

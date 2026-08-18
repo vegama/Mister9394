@@ -1,5 +1,17 @@
 # Míster 93/94
 
+
+## v1.0.0 · H1 — Economía en pesetas · EN DESARROLLO / PRIMER CIERRE
+
+El plan de estudio **V1.0-H→N** ya forma parte del repo (`docs/V100_H_N_STUDIO_ADVANCE_PLAN.md`) y el primer ataque se ha adelantado a economía. H1 fija **ESP/pesetas** como moneda de gameplay, conserva el presupuesto fuente para auditoría y separa **tesorería, presupuesto de fichajes y reserva operativa**. Mercado de usuario e IA consumen ahora el mismo margen utilizable; ventas, cesiones y respaldo del consejo actualizan ambos sobres de forma coherente. Detalle y cifras auditadas: `docs/V100_H1_ECONOMY_PESETAS.md`.
+
+La escala alta de jugadores no se aplana: el ancla de rating 89 permanece en torno a **450 M ptas. de valor** y **125 M ptas./año de ficha**; el cambio corrige especialmente clubes cuyo `Presupuesto` fuente era demasiado pequeño para funcionar como caja total.
+
+
+## v1.0.0 · F — Club, competiciones, mundo e historia · CERRADO
+
+El histórico de carrera usa dossiers de temporada independientes, migra saves antiguos, conserva todos los clubes dirigidos durante una misma temporada, congela campeones/protagonistas y deduplica noticias por causa canónica. Gate destructivo F: 7/7; regresión combinada directa: 24/24; frontend SFC/UI/Vue verde. Detalle: `docs/V100_F_CLUB_WORLD_HISTORY_CLOSED.md`.
+
 ## Estado · checkpoint 0.51.0-nf9-nf12-professional-world
 
 La pasada **NF9→NF12** conecta cuatro capas que ya comparten realidad: **carrera profesional, consejo/proyecto, mundo informativo causal y economía longitudinal**. El entrenador puede buscar empleo, presentar candidatura, pasar entrevista, firmar en otra liga sin resetear el mundo, recibir ofertas con contrato vigente o dimitir conservando reputación, relaciones y memoria. El consejo mantiene objetivos, filosofía y márgenes de proyecto, puede exigir una venta por una crisis real y resuelve peticiones con condiciones y memoria anti-exploit. Véase `docs/V051_NF9_NF12_PROFESSIONAL_WORLD.md` y `docs/FM_REFERENCE_FUNCTIONAL_PLAN.md`.
@@ -187,3 +199,8 @@ npm run check:vue
 El runtime consume `data/football9394/historical_snapshot.json`. La MDB fuente completa se utiliza para trazabilidad/verificación y no se duplica en el repo limpio. Los clubes fuera del selector de carrera pueden seguir existiendo en el universo cuando una competición o la historia los necesita.
 
 Los contratos/salarios de jugador que la MDB no proporciona de forma utilizable se marcan como datos inferidos por la carrera; no se presentan como hechos históricos. La MDB sí contiene contratos/sueldos de entrenador, pero pertenecen a una fuente de edición temporalmente mixta y requieren curación antes de etiquetarlos como 1993-94.
+
+
+## Plan v1.0.0 de estudio
+
+El cierre de producto hacia v1.0.0 se gobierna desde [`docs/V100_STUDIO_RELEASE_PLAN.md`](docs/V100_STUDIO_RELEASE_PLAN.md). Los assets históricos continúan como carril paralelo de presupuesto limitado; la prioridad de release es jugabilidad, UX, continuidad, simulación y robustez.

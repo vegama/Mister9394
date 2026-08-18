@@ -79,7 +79,7 @@ def test_belgium_turkey_russia_historical_rules():
     tur=TURKEY_FIRST_DIVISION_1993_94
     rus=RUSSIA_SUPREME_LEAGUE_1993
     assert (bel.teams,bel.rounds,bel.points_win,bel.direct_relegation_places)==(18,34,2,(17,18))
-    assert (tur.teams,tur.rounds,tur.points_win,tur.direct_relegation_places)==(16,30,3,(14,15,16))
+    assert (tur.teams,tur.rounds,tur.points_win,tur.direct_relegation_places)==(16,30,2,(14,15,16))
     assert (rus.teams,rus.rounds,rus.points_win,rus.direct_relegation_places)==(18,34,2,(15,16,17,18))
 
 
@@ -213,7 +213,7 @@ def test_greece_roster_gate_is_complete_unique_and_playable():
 
 def test_greece_historical_rules_and_runtime_binding():
     gre=GREECE_ALPHA_ETHNIKI_1993_94
-    assert (gre.teams,gre.rounds,gre.points_win,gre.direct_relegation_places)==(18,34,3,(16,17,18))
+    assert (gre.teams,gre.rounds,gre.points_win,gre.direct_relegation_places)==(18,34,2,(16,17,18))
     snapshot=default_runtime_snapshot()
     ids={int(row.get('source_id') or 0) for row in snapshot.payload['leagues']}
     assert 930047 in ids

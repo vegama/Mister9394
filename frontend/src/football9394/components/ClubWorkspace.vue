@@ -1,6 +1,7 @@
 <script setup>
 import { computed } from 'vue'
 import LineupPitch from './LineupPitch.vue'
+import PersonAvatar from '../../components/PersonAvatar.vue'
 
 const props = defineProps({
   team:{type:Object,default:()=>({})},
@@ -52,6 +53,10 @@ const honours = computed(() => {
   return Number(h.national_leagues||0)+Number(h.national_cups||0)+Number(h.continental||0)+Number(h.continental_2||0)+Number(h.continental_3||0)+Number(h.continental_supercups||0)+Number(h.national_supercups||0)
 })
 const moneyPulse = computed(() => Number(props.finances.cash||0) - Number(props.finances.debt||0))
+const withHistoricalPhoto = person => {
+  const id = Number(person?.id ?? person?.source_id ?? 0) || null
+  return {...(person||{}), photo_url: person?.photo_url || (id ? `/historical9394/players/${id}.jpg` : null)}
+}
 </script>
 
 <template>
@@ -111,7 +116,7 @@ const moneyPulse = computed(() => Number(props.finances.cash||0) - Number(props.
         <header><div><small>VESTUARIO</small><h3>Futbolistas que definen al equipo</h3></div><button type="button" class="text-action" @click="emit('navigate','squad')">Plantilla completa →</button></header>
         <div class="club-star-grid">
           <button v-for="player in topPlayers" :key="player.id" type="button" class="club-star-card" @click="emit('open-player',player)">
-            <span class="club-star-photo"><img :src="`/historical9394/players/${Number(player.id)}.jpg`" alt="" @error="$event.currentTarget.style.display='none'"></span>
+            <span class="club-star-photo"><PersonAvatar :person="withHistoricalPhoto(player)" :size="52" :height="72" :shirt-number="player.n" variant="player" decorative /></span>
             <span class="club-star-copy"><small>#{{player.n}} · {{player.pos}}</small><strong>{{player.name}}</strong><em>{{player.profile?.identity?.archetype || 'Futbolista de plantilla'}}</em></span>
             <b>{{player.overall}}</b>
           </button>
@@ -123,7 +128,7 @@ const moneyPulse = computed(() => Number(props.finances.cash||0) - Number(props.
       <article class="club-section club-source-manager">
         <header><div><small>CONTEXTO HISTÓRICO</small><h3>{{managerCareer.tenures?.length ? 'Entrenador antes de tu llegada' : 'Entrenador al inicio'}}</h3></div></header>
         <div class="source-manager-body" v-if="sourceManager">
-          <span class="manager-monogram">{{String(sourceManager.display_name||'DT').split(/\s+/).slice(0,2).map(x=>x[0]).join('')}}</span>
+          <span class="source-manager-photo"><PersonAvatar :person="withHistoricalPhoto(sourceManager)" :size="58" :height="76" decorative /></span>
           <div><strong>{{sourceManager.display_name}}</strong><p>{{managerStyle}}</p><small>Calidad {{sourceManager.coaching_quality ?? '—'}} · ojo {{sourceManager.player_judgement || '—'}} <template v-if="agePolicy!=='frozen_attributes_dynamic'"> · cantera {{sourceManager.youth_usage || '—'}}</template></small></div>
         </div>
         <p class="source-context-note">Referencia de la base histórica. En el club que diriges, las decisiones tácticas y de plantilla son tuyas.</p>
@@ -164,7 +169,7 @@ const moneyPulse = computed(() => Number(props.finances.cash||0) - Number(props.
 
       <article class="club-section club-money-snapshot">
         <header><div><small>RECURSOS</small><h3>Margen para decidir</h3></div><button type="button" class="text-action" @click="emit('navigate','economy')">Economía →</button></header>
-        <strong>{{formatMoney(finances.cash)}}</strong><span>Caja disponible</span>
+        <strong>{{formatMoney(finances.cash)}}</strong><span>Tesorería · ptas.</span>
         <div class="money-detail"><small>Deuda</small><b>{{formatMoney(finances.debt)}}</b></div><div class="money-detail"><small>Balance caja/deuda</small><b :class="moneyPulse>=0?'good-cell':'bad-cell'">{{formatMoney(moneyPulse)}}</b></div>
       </article>
     </aside>

@@ -1,7 +1,7 @@
 {
   "project": "Mister 93/94",
-  "checkpoint": "0.51.0-nf9-nf12-professional-world",
-  "fork_stage": "nf9-nf12-professional-world",
+  "checkpoint": "1.0.0-h1-economy-pesetas",
+  "fork_stage": "v100-h1-economy-pesetas",
   "season_start": "1993-94",
   "runtime_dataset": "data/football9394/historical_snapshot.json",
   "principles": [
@@ -154,7 +154,11 @@
     "market-rumour-negotiation-news-reaction-and-consequence-share-one-causal-thread",
     "longitudinal-economy-reuses-real-cash-flows-and-tracks-season-categories-without-double-booking",
     "financial-crises-can-create-debt-draws-and-board-required-sales",
-    "promotion-relegation-and-prize-income-remain-visible-in-longitudinal-economic-history"
+    "promotion-relegation-and-prize-income-remain-visible-in-longitudinal-economic-history",
+    "all-gameplay-money-is-period-pesetas-esp",
+    "historical-source-budget-is-preserved-but-not-treated-as-total-treasury",
+    "treasury-transfer-budget-and-operating-reserve-are-separate-financial-concepts",
+    "user-and-ai-transfer-spending-respects-the-same-budget-envelope"
   ],
   "gates": {
     "manager_career": "12/12 PASS",

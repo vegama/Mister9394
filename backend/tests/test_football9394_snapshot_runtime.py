@@ -55,12 +55,12 @@ def test_bootstrap_api_exposes_real_snapshot_and_simulated_matchday_state():
     assert payload["next_match"]["away_team"] == "Racing Santander"
 
 
-def test_premier_and_bundesliga_are_source_bound_to_their_1993_94_scoring():
+def test_premier_and_bundesliga_follow_the_gamewide_two_point_scoring_policy():
     from backend.app.football9394.registry import default_registry_9394
     registry = default_registry_9394()
     premier = registry.resolve_source("league", 5)
     bundesliga = registry.resolve_source("league", 13)
-    assert (premier.teams, premier.rounds, premier.points_win, premier.direct_relegation_places) == (22, 42, 3, (20,21,22))
+    assert (premier.teams, premier.rounds, premier.points_win, premier.direct_relegation_places) == (22, 42, 2, (20,21,22))
     assert (bundesliga.teams, bundesliga.rounds, bundesliga.points_win, bundesliga.direct_relegation_places) == (18, 34, 2, (16,17,18))
 
 

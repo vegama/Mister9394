@@ -11,6 +11,8 @@ sales can trigger replacement chains instead of being isolated events.
 from datetime import date
 from typing import Any
 
+from .career_economy import transfer_spending_power
+
 from .career_ai import squad_audit
 from .career_economy import effective_contract
 from .player_identity import tactical_fit
@@ -88,7 +90,7 @@ def refresh_recruitment_plans(
         coach=coach_profile_getter(int(tid)) if coach_profile_getter else None
         plans[str(tid)]=recruitment_plan(
             team_id=int(tid),players=players_by_team.get(int(tid),[]),development=development,contracts=contracts,
-            cash=int((club_finances.get(str(tid)) or {}).get("cash") or 0),current_date=current_date,coach_profile=coach,
+            cash=transfer_spending_power(club_finances.get(str(tid)) or {}),current_date=current_date,coach_profile=coach,
         )
     return plans
 

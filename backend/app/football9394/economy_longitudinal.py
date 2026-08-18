@@ -17,7 +17,8 @@ def season_bucket(state: dict[str, Any], *, team_id: int, season: str) -> dict[s
     return state["economy_seasons"].setdefault(key, {
         "season": season, "team_id": int(team_id), "gate_receipts": 0, "memberships": 0, "television": 0,
         "prize_money": 0, "sponsorship": 0, "wages": 0, "bonuses": 0, "transfer_spend": 0,
-        "transfer_income": 0, "operations": 0, "debt_service": 0, "board_injections": 0, "net": 0,
+        "transfer_income": 0, "operations": 0, "debt_service": 0, "debt_interest": 0, "debt_principal": 0,
+        "board_injections": 0, "financing_draws": 0, "net": 0,
     })
 
 
@@ -28,8 +29,10 @@ def post(state: dict[str, Any], *, team_id: int, season: str, category: str, amo
         bucket[category] = 0
     bucket[category] = int(bucket.get(category) or 0) + int(amount)
     income_keys = {"gate_receipts", "memberships", "television", "prize_money", "sponsorship", "transfer_income", "board_injections"}
-    expense_keys = {"wages", "bonuses", "transfer_spend", "operations", "debt_service"}
-    bucket["net"] = sum(int(bucket.get(k) or 0) for k in income_keys) - sum(int(bucket.get(k) or 0) for k in expense_keys)
+    expense_keys = {"wages", "bonuses", "transfer_spend", "operations"}
+    debt_components = int(bucket.get("debt_interest") or 0) + int(bucket.get("debt_principal") or 0)
+    debt_cash_cost = debt_components if debt_components else int(bucket.get("debt_service") or 0)
+    bucket["net"] = sum(int(bucket.get(k) or 0) for k in income_keys) - sum(int(bucket.get(k) or 0) for k in expense_keys) - debt_cash_cost
     return dict(bucket)
 
 

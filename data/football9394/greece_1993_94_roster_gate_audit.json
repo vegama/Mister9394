@@ -6091,7 +6091,9 @@
       "primary_domestic_numerical_clause_recovered": false,
       "runtime_encoded": false,
       "reason": "No guessed numeric rule: source corroboration is strong but the exact Greek 1993-94 domestic regulatory clause is not yet recovered; Cypriot equivalence must also be represented."
-    }
+    },
+    "runtime_game_policy_points_win": 2,
+    "runtime_game_policy_note": "La evidencia RSSSF conserva 3 puntos como dato de fuente; Míster 93/94 aplica la regla global de juego 2 victoria / 1 empate / 0 derrota."
   },
   "source_roster_exhaustive": true,
   "minimum_is_floor_not_target": true,

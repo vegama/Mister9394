@@ -16,6 +16,7 @@ const query = ref('')
 const position = ref('')
 const availability = ref('all')
 const sort = ref('overall')
+const replaceTarget = ref(null)
 
 const positionOptions = computed(() => [...new Set(props.squad.map(p => p.pos).filter(Boolean))].sort())
 const unavailableCount = computed(() => props.squad.filter(p => p.status !== 'DISP.').length)
@@ -48,9 +49,25 @@ const lineupFit = computed(() => {
 })
 const tensions = computed(() => props.squad.filter(p=>p.profile?.squad_dynamics?.wants_move || Number(p.profile?.squad_dynamics?.satisfaction||100)<45).slice(0,4))
 const fragileStarters = computed(() => props.lineupPlayers.filter(p=>p.status!=='DISP.' || Number(p.profile?.condition ?? p.profile?.match_condition ?? 100)<70).slice(0,3))
+const lineupCandidates = computed(() => [...props.squad]
+  .filter(p => !isStarter(p.id))
+  .sort((a,b) => (a.status==='DISP.'?0:1)-(b.status==='DISP.'?0:1) || Number(b.overall||0)-Number(a.overall||0)))
+const savedStarterIds = computed(() => [...(props.selection?.starter_ids || [])].map(Number).sort((a,b)=>a-b))
+const draftStarterIds = computed(() => [...props.lineupDraft].map(Number).sort((a,b)=>a-b))
+const hasLineupChanges = computed(() => JSON.stringify(savedStarterIds.value)!==JSON.stringify(draftStarterIds.value))
+const draftComplete = computed(() => props.lineupDraft.length===11)
+const lineupStateLabel = computed(() => hasLineupChanges.value ? (draftComplete.value?'SIN GUARDAR':'INCOMPLETO') : (props.selection?.valid?'LISTO':'REVISAR'))
 const isStarter = id => props.lineupDraft.includes(Number(id))
 const isCaptain = id => Number(props.dressingRoom?.captain_id||0)===Number(id)
 const photo = id => id ? `/historical9394/players/${Number(id)}.jpg` : null
+const choosePitchPlayer = player => { replaceTarget.value = player || null }
+const cancelReplace = () => { replaceTarget.value = null }
+const removeReplaceTarget = () => { if (!replaceTarget.value) return; emit('toggle-starter', replaceTarget.value); replaceTarget.value = null }
+const lineupAction = player => {
+  if (isStarter(player.id)) { emit('toggle-starter', player); if (Number(replaceTarget.value?.id||0)===Number(player.id)) replaceTarget.value=null; return }
+  if (replaceTarget.value) { emit('toggle-starter', replaceTarget.value); emit('toggle-starter', player); replaceTarget.value=null; return }
+  emit('toggle-starter', player)
+}
 </script>
 
 <template>
@@ -74,7 +91,7 @@ const photo = id => id ? `/historical9394/players/${Number(id)}.jpg` : null
           <thead><tr><th>XI</th><th>Jugador</th><th>Pos.</th><th>Edad</th><th>Media</th><th>Forma</th><th>Moral</th><th>Contrato</th><th>Estado</th><th>Acciones</th></tr></thead>
           <tbody>
             <tr v-for="p in filteredSquad" :key="p.id" :class="{selectedStarter:isStarter(p.id)}" @dblclick="emit('open-player', p)">
-              <td><button type="button" class="lineup-toggle" :class="{active:isStarter(p.id)}" :aria-label="isStarter(p.id) ? `Quitar a ${p.name} del once` : `Añadir a ${p.name} al once`" @click.stop="emit('toggle-starter', p)">{{isStarter(p.id)?'✓':'+'}}</button></td>
+              <td><button type="button" class="lineup-toggle" :class="{active:isStarter(p.id)}" :aria-label="isStarter(p.id) ? `Quitar a ${p.name} del once` : `Añadir a ${p.name} al once`" @click.stop="lineupAction(p)">{{isStarter(p.id)?'Quitar':'Titular'}}</button></td>
               <td><button type="button" class="player-cell" @click="emit('open-player', p)"><span class="roster-photo"><img :src="photo(p.id)" alt="" @error="$event.currentTarget.style.display='none'"></span><span><strong>{{p.name}} <em v-if="isCaptain(p.id)" class="captain-badge">C</em></strong><small>#{{p.n}} · {{p.nationality || '—'}} · {{p.profile?.squad_dynamics?.role || 'Plantilla'}}</small><small v-if="p.profile?.identity?.archetype" class="player-football-identity">{{p.profile.identity.archetype}} · encaje {{p.profile?.tactical_fit?.label || '—'}}</small></span></button></td>
               <td><span class="position-chip">{{p.pos}}</span></td><td>{{p.age}}</td><td class="rating-cell"><b>{{p.overall}}</b></td><td class="good-cell">{{p.form}}</td><td class="warn-cell">{{p.morale}}</td><td>{{p.contractEnd}}</td><td><span class="status-chip" :class="p.status==='DISP.'?'available':'unavailable'">{{p.status}}</span><small v-if="p.profile?.squad_dynamics?.satisfaction!=null" class="satisfaction-note">Ánimo rol {{p.profile.squad_dynamics.satisfaction}}/100</small></td>
               <td><div class="row-actions"><button v-if="!isCaptain(p.id)" type="button" class="icon-action" title="Nombrar capitán" @click.stop="emit('set-captain',p)">Capitán</button><button type="button" class="icon-action" title="Renovar" @click.stop="emit('renew',p)">Renovar</button><button type="button" class="icon-action" :class="{active:p.profile?.transfer_listed}" @click.stop="emit('toggle-listing',p)">{{p.profile?.transfer_listed?'Quitar mercado':'Transferible'}}</button><button type="button" class="icon-action" title="Advertencia disciplinaria" @click.stop="emit('discipline',{playerId:p.id,action:'warning'})">Aviso</button></div></td>
@@ -91,10 +108,25 @@ const photo = id => id ? `/historical9394/players/${Number(id)}.jpg` : null
         <span><small>TENSIONES</small><b>{{tensions.length}}</b><em>{{tensions.length?tensions.map(p=>p.name).join(' · '):'vestuario estable'}}</em></span>
         <span><small>RIESGO XI</small><b>{{fragileStarters.length}}</b><em>{{fragileStarters.length?'revisa disponibilidad':'sin alertas'}}</em></span>
       </div>
-      <div class="lineup-card-head"><span><small>ONCE ACTUAL</small><strong>{{formation}}</strong></span><b :class="lineupDraft.length===11?'ready':'pending'">{{lineupDraft.length===11?'LISTO':'INCOMPLETO'}}</b></div>
-      <LineupPitch :formation="formation" :players="lineupPlayers" compact />
-      <div v-if="selection.issues?.length" class="selection-message error">{{selection.issues.join(' ')}}</div>
-      <div v-if="selection.warnings?.length" class="selection-message warning">{{selection.warnings.join(' ')}}</div>
+      <div class="lineup-card-head"><span><small>ONCE ACTUAL</small><strong>{{formation}}</strong><em v-if="hasLineupChanges">Cambios pendientes de guardar</em></span><b :class="!hasLineupChanges && selection.valid?'ready':'pending'">{{lineupStateLabel}}</b></div>
+      <LineupPitch :formation="formation" :players="lineupPlayers" compact interactive :selected-player-id="Number(replaceTarget?.id||0)" @select-player="choosePitchPlayer" />
+      <div class="lineup-builder-help" :class="{active:replaceTarget}">
+        <template v-if="replaceTarget"><span><small>CAMBIO EN EL XI</small><strong>{{replaceTarget.name}}</strong><em>Elige directamente su sustituto en la lista inferior.</em></span><div><button type="button" @click="removeReplaceTarget">Quitar del XI</button><button type="button" @click="cancelReplace">Cancelar</button></div></template>
+        <template v-else><span><small>SELECCIÓN DIRECTA</small><strong>Construye el once desde el campo</strong><em>Pulsa un titular para cambiarlo y después elige su sustituto. Si faltan jugadores, pulsa cualquiera de los disponibles.</em></span></template>
+      </div>
+      <section class="lineup-bench-picker" :class="{choosing:replaceTarget}">
+        <header><span><small>{{replaceTarget ? 'ELIGE SUSTITUTO' : 'DISPONIBLES'}}</small><strong>{{replaceTarget ? `Por ${replaceTarget.name}` : 'Banquillo y resto de plantilla'}}</strong></span><b>{{lineupCandidates.filter(p=>p.status==='DISP.').length}} aptos</b></header>
+        <div class="lineup-bench-list">
+          <button v-for="p in lineupCandidates" :key="p.id" type="button" class="lineup-bench-player" :disabled="p.status!=='DISP.'" @click="lineupAction(p)">
+            <span class="lineup-bench-photo"><img :src="photo(p.id)" alt="" @error="$event.currentTarget.style.display='none'"></span>
+            <span class="lineup-bench-copy"><strong>{{p.name}}</strong><small>{{p.pos}} · {{p.overall}} · {{p.status}}</small></span>
+            <em>{{replaceTarget ? 'Cambiar' : 'Añadir'}}</em>
+          </button>
+        </div>
+      </section>
+      <div v-if="hasLineupChanges && !draftComplete" class="selection-message warning">Tu borrador tiene {{lineupDraft.length}}/11 titulares. Completa el once antes de guardarlo.</div>
+      <div v-if="!hasLineupChanges && selection.issues?.length" class="selection-message error">{{selection.issues.join(' ')}}</div>
+      <div v-if="!hasLineupChanges && selection.warnings?.length" class="selection-message warning">{{selection.warnings.join(' ')}}</div>
       <section class="dressing-room-card">
         <header><span><small>VESTUARIO</small><strong>Jerarquía y competencia</strong></span><b>{{dressingRoom.leaders?.length || 0}} líderes</b></header>
         <div class="leadership-strip"><span v-for="leader in dressingRoom.leaders?.slice(0,4)" :key="leader.player_id"><b>{{leader.captain?'C · ':''}}{{leader.name}}</b><small>{{leader.relationship}} · liderazgo {{Math.round(leader.score)}}</small></span></div>
@@ -104,11 +136,12 @@ const photo = id => id ? `/historical9394/players/${Number(id)}.jpg` : null
         <div v-if="dressingRoom.concerns?.length" class="dressing-concerns"><small>ASUNTOS ABIERTOS</small><article v-for="concern in dressingRoom.concerns.slice(0,3)" :key="concern.id"><span><b>{{concern.player_name}}</b><em>{{concern.detail || concern.summary || concern.cause_label || concern.kind}}</em></span><div><button type="button" @click="emit('respond-concern',{id:concern.id,response:'reassure'})">Tranquilizar</button><button type="button" @click="emit('respond-concern',{id:concern.id,response:'explain'})">Explicar</button><button type="button" @click="emit('respond-concern',{id:concern.id,response:'firm'})">Ser firme</button></div></article></div>
         <div v-if="dressingRoom.mentorships?.length" class="mentorship-list"><small>TUTELAS</small><span v-for="pair in dressingRoom.mentorships.slice(0,2)" :key="pair.protege_id">{{pair.mentor_name}} → {{pair.protege_name}}</span></div>
       </section>
-      <div class="lineup-actions"><button type="button" class="football-button" @click="emit('auto-select')">Mejor once disponible</button><button type="button" class="football-button primary" @click="emit('save-selection')">Guardar once</button><button type="button" class="football-button" @click="emit('open-tactics')">Abrir táctica</button></div>
+      <div class="lineup-actions lineup-flow-actions"><span class="lineup-flow-copy"><small>SIGUIENTE PASO</small><strong>{{hasLineupChanges?'Guarda este XI antes de preparar el plan':'Once sincronizado con la carrera'}}</strong></span><button type="button" class="football-button" @click="emit('auto-select')">Mejor once disponible</button><button type="button" class="football-button" :disabled="!hasLineupChanges || !draftComplete" @click="emit('save-selection')">Guardar once</button><button type="button" class="football-button primary" :disabled="!draftComplete" @click="emit('open-tactics')">{{hasLineupChanges?'Guardar y abrir táctica':'Abrir táctica'}} →</button></div>
     </aside>
   </section>
 </template>
 
 <style scoped>
-.dressing-cohesion{display:grid;grid-template-columns:1fr auto;gap:2px 10px;padding:9px 0;border-top:1px solid var(--line,#d7dde6)}.dressing-cohesion small,.social-group-list>small,.dressing-concerns>small{grid-column:1/-1;font-size:10px;font-weight:800;letter-spacing:.07em;color:var(--text-soft,#687386)}.dressing-cohesion b em{font-size:10px;font-style:normal}.dressing-cohesion span{font-size:10px;color:var(--text-soft,#687386)}.social-group-list,.dressing-concerns{display:grid;gap:6px;padding:9px 0;border-top:1px solid var(--line,#d7dde6)}.social-group-list>span{display:flex;justify-content:space-between;gap:8px;font-size:11px}.social-group-list em{font-style:normal;color:var(--text-soft,#687386)}.dressing-concerns article{display:grid;gap:6px;padding:7px;background:var(--surface-soft,#f5f7fa);border-radius:7px}.dressing-concerns article>span{display:grid}.dressing-concerns article em{font-size:10px;font-style:normal;color:var(--text-soft,#687386)}.dressing-concerns article>div{display:flex;flex-wrap:wrap;gap:5px}.dressing-concerns button{border:1px solid var(--line,#d7dde6);border-radius:6px;background:var(--surface,#fff);padding:4px 6px;font-size:10px;cursor:pointer}
+.dressing-cohesion{display:grid;grid-template-columns:1fr auto;gap:2px 10px;padding:9px 0;border-top:1px solid var(--line,#d7dde6)}.dressing-cohesion small,.social-group-list>small,.dressing-concerns>small{grid-column:1/-1;font-size:10px;font-weight:800;letter-spacing:.07em;color:var(--text-soft,#687386)}.dressing-cohesion b em{font-size:11px;font-style:normal}.dressing-cohesion span{font-size:10px;color:var(--text-soft,#687386)}.social-group-list,.dressing-concerns{display:grid;gap:6px;padding:9px 0;border-top:1px solid var(--line,#d7dde6)}.social-group-list>span{display:flex;justify-content:space-between;gap:8px;font-size:11px}.social-group-list em{font-style:normal;color:var(--text-soft,#687386)}.dressing-concerns article{display:grid;gap:6px;padding:7px;background:var(--surface-soft,#f5f7fa);border-radius:7px}.dressing-concerns article>span{display:grid}.dressing-concerns article em{font-size:11px;font-style:normal;color:var(--text-soft,#687386)}.dressing-concerns article>div{display:flex;flex-wrap:wrap;gap:5px}.dressing-concerns button{border:1px solid var(--line,#d7dde6);border-radius:6px;background:var(--surface,#fff);padding:4px 6px;font-size:10px;cursor:pointer}
+.lineup-card-head span{display:grid}.lineup-card-head span em{font-size:11px;font-style:normal;color:var(--text-soft,#687386)}.lineup-flow-actions{position:sticky;bottom:0;z-index:4;display:flex;align-items:center;gap:7px;padding:10px 0 2px;background:linear-gradient(to top,var(--surface,#fff) 82%,transparent)}.lineup-flow-copy{display:grid;margin-right:auto;min-width:190px}.lineup-flow-copy small{font-size:11px;font-weight:900;letter-spacing:.08em;color:var(--text-soft,#687386)}.lineup-flow-copy strong{font-size:11px}@media(max-width:1000px){.lineup-flow-actions{position:static;flex-wrap:wrap}.lineup-flow-copy{width:100%}}
 </style>

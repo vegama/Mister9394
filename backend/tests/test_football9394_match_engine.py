@@ -1,6 +1,7 @@
 from statistics import mean
+from random import Random
 
-from backend.app.football9394.match_engine import FootballMatchEngine9394, FootballTactics9394, Footballer9394, TeamSheet9394
+from backend.app.football9394.match_engine import FootballMatchEngine9394, FootballTactics9394, Footballer9394, TeamSheet9394, _SideState
 
 
 def player(i: int, pos: str, overall: int = 70) -> Footballer9394:
@@ -26,6 +27,23 @@ def sheet(team_id: str, level: int = 70, tactics: FootballTactics9394 | None = N
     bench=tuple(clone(player(i,pos,level-2),i,'b') for i,pos in enumerate(['GK','DF','DF','MF','ST']))
     return TeamSheet9394(team_id,team_id,starters,bench,tactics or FootballTactics9394())
 
+
+
+
+def test_ai_substitution_reacts_to_score_and_never_uses_more_than_two_changes():
+    engine=FootballMatchEngine9394()
+    home=sheet('HOME'); away=sheet('AWAY')
+    side=_SideState.from_sheet(home); opponent=_SideState.from_sheet(away)
+    side.goals=0; opponent.goals=1
+    for footballer in side.available_players():
+        if footballer.position != 'GK':
+            side.fatigue[footballer.id]=60.0
+    events=[]
+    for minute in (58,70,78):
+        engine._maybe_substitute(side,minute,Random(9394+minute),events,opponent=opponent)
+    assert side.substitutions == 2
+    assert len([event for event in events if event.kind=='substitution']) == 2
+    assert all('buscar el partido' in event.detail for event in events if event.kind=='substitution')
 
 def test_engine_enforces_1993_94_matchday_squad_and_substitution_cap():
     engine=FootballMatchEngine9394()

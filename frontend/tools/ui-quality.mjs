@@ -112,6 +112,49 @@ for (const required of ['d7-match-preview','d7-match-post','d8-world-context','o
   if (!liveWorkspace.includes(required)) problems.push(`D7-D8 jornada de partido incompleta: falta ${required}`)
 }
 
+// v1.0 Wave 2: the core daily loop must be state-aware and reversible before kickoff.
+for (const required of ['home-readiness-strip','runPrimaryMatchAction','selectionReady','isMatchDay']) {
+  if (!homeDashboard.includes(required)) problems.push(`v1.0 Inicio no orienta el siguiente paso: falta ${required}`)
+}
+for (const required of ['lineup-flow-actions','hasLineupChanges','Guardar y abrir táctica']) {
+  if (!squadWorkspace.includes(required)) problems.push(`v1.0 XI/Plantilla pierde continuidad: falta ${required}`)
+}
+for (const required of ['match-prep-flow','Guardar e ir a la previa','open-squad','start-live']) {
+  if (!tacticsWorkspace.includes(required)) problems.push(`v1.0 Táctica pierde el flujo XI→previa: falta ${required}`)
+}
+for (const required of ['Revisar XI','preflight-note','edit-lineup','post-impact','CONSECUENCIAS YA APLICADAS','NOTAS DEL EQUIPO']) {
+  if (!liveWorkspace.includes(required)) problems.push(`v1.0 Previa no permite corrección segura: falta ${required}`)
+}
+for (const required of ['lineupDirty','isMatchDay','cancelPreviewAndNavigate','cancelLivePreview','commitFinishedLiveMatch','Hay una acción de partido en curso','El partido está en juego. Usa Directo, Táctica o Cambios']) {
+  if (!rootApp.includes(required)) problems.push(`v1.0 continuidad del bucle principal no conectada: falta ${required}`)
+}
+// v1.0 Wave 3 destructive navigation + match incident contract. Reload and
+// browser history must restore the only safe match surface, while the bench
+// must expose historical substitution limits and irreversible dismissals.
+for (const required of ['reconcileRouteAfterCareerLoad','replaceRoute','lastMatchReport.value?.committed','applyRouteFromLocation']) {
+  if (!rootApp.includes(required)) problems.push(`v1.0 navegación destructiva no protegida: falta ${required}`)
+}
+for (const required of ['controlled_sent_off','substitutionsRemaining','Descanso · revisa táctica y cambios',"match.minute>0 && match.status!=='finished'",'Sin cambios disponibles']) {
+  if (!liveWorkspace.includes(required)) problems.push(`v1.0 incidencias de partido no protegidas: falta ${required}`)
+}
+// v1.0 Wave 4: chained edge cases must be visible, not merely simulated.
+for (const required of ['controlled_forced_off','controlled_absences','injury_forced_off','no puede continuar','replaceablePlayers','Bajas conocidas antes del partido']) {
+  if (!liveWorkspace.includes(required)) problems.push(`v1.0 lesión sin cambios no está explicada en el banquillo: falta ${required}`)
+}
+for (const required of ['liveStatus','atHalftime','Plan para la 2ª parte','Aplicar para la 2ª parte','briefing.own_absences','TUS BAJAS']) {
+  if (!tacticsWorkspace.includes(required)) problems.push(`v1.0 ajuste táctico de descanso no está contextualizado: falta ${required}`)
+}
+const calendarWorkspace = readFileSync(resolve(process.cwd(), 'src/football9394/components/CalendarWorkspace.vue'), 'utf8')
+for (const required of ['calendarState','Sin partido programado','availability_count']) {
+  if (!calendarWorkspace.includes(required)) problems.push(`v1.0 calendario vacío/aplazado no tiene estado explícito: falta ${required}`)
+}
+for (const required of ['league_suspension_active_for_next_match','Sanción para el próximo partido de liga']) {
+  if (!playerProfile.includes(required)) problems.push(`v1.0 ficha no explica la sanción activa: falta ${required}`)
+}
+for (const required of ['calendar_context','Rival por confirmar','availability_count']) {
+  if (!rootApp.includes(required) && !homeDashboard.includes(required)) problems.push(`v1.0 disponibilidad/calendario no comparten contexto: falta ${required}`)
+}
+
 // D9 Chromium layout fixes discovered by the 1920x1080 visual pass. The
 // preview must carry useful team information instead of an empty commentary
 // canvas, finished matches must not keep dead substitution controls, and the
@@ -194,4 +237,4 @@ if (problems.length) {
   for (const problem of problems) console.error(`- ${problem}`)
   process.exit(1)
 }
-console.log('UI quality gate OK: R1-R10 + D1-D9 + v0.10-v0.11 + v0.15-v0.17 frozen-age/dressing-room/tactical-prep preserved')
+console.log('UI quality gate OK: R1-R10 + D1-D9 + v0.10-v0.11 + v0.15-v0.17 + v1.0 core-loop/destructive continuity preserved')

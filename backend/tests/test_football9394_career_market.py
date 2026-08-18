@@ -16,3 +16,7 @@ def test_period_peseta_value_curve_reaches_superstar_scale_without_flattening_mi
     assert estimated_transfer_value({'overall': 89}) == 450_000_000
     assert estimated_transfer_value({'overall': 95}) == 1_200_000_000
     assert estimated_transfer_value({'overall': 75}) < estimated_transfer_value({'overall': 80})
+
+
+def test_romario_period_anchor_matches_h1_economy_scale():
+    assert estimated_transfer_value({'overall': 89}) == 450_000_000

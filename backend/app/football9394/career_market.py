@@ -38,10 +38,11 @@ def estimated_transfer_value(player: dict[str, Any], *, overall: int | None = No
     return _interpolate_money(rating, _TRANSFER_VALUE_ANCHORS, floor=250_000)
 
 
-def initial_finances(team: dict[str, Any]) -> dict[str, int]:
-    budget = int(team.get("budget") or 0)
-    debt = int(team.get("debt") or 0)
-    return {"cash": budget, "starting_budget": budget, "debt": debt, "transfer_spend": 0, "transfer_income": 0, "matchday_income": 0}
+def initial_finances(team: dict[str, Any]) -> dict[str, Any]:
+    # Compatibility shim for older callers.  H1 moved the canonical financial
+    # baseline to career_economy so treasury and transfer budget cannot diverge.
+    from .career_economy import initial_club_finances
+    return initial_club_finances(team)
 
 
 def matchday_income(team: dict[str, Any]) -> int:

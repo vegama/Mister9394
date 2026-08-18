@@ -663,7 +663,7 @@ def manager_career_competition(career_id: str, kind: str, source_id: int) -> dic
 @app.get("/api/football9394/careers/{career_id}/history")
 def manager_career_history(career_id: str) -> dict:
     career=_load_manager_career(career_id)
-    return {"season_recaps":list(career.state.get("season_recaps") or []),"season_archive":list(career.state.get("season_archive") or []),"honours":list(career.state.get("honours") or []),"club_honours":list((career.state.get("club_honours") or {}).get(str(int(career.state["team_id"])),[])),"board_history":list(career.state.get("board_history") or []),"ai_squad_audits":list(career.state.get("ai_squad_audits") or [])}
+    return {"season_recaps":list(career.state.get("season_recaps") or []),"season_archive":list(career.state.get("season_archive") or []),"season_dossiers":list(career.state.get("season_dossiers") or []),"honours":list(career.state.get("honours") or []),"club_honours":list((career.state.get("club_honours") or {}).get(str(int(career.state["team_id"])),[])),"board_history":list(career.state.get("board_history") or []),"ai_squad_audits":list(career.state.get("ai_squad_audits") or []),"summer_briefing":dict(career.state.get("summer_briefing") or {}),"longitudinal_health":list(career.state.get("longitudinal_health") or [])}
 
 
 @app.post("/api/football9394/careers/{career_id}/advance-until-event")
@@ -779,12 +779,28 @@ def start_manager_live_match(career_id: str) -> dict:
     _career_store().save(career.state);return {"match":match,"career":career.snapshot()}
 
 
+@app.delete("/api/football9394/careers/{career_id}/live/preview")
+def cancel_manager_live_preview(career_id: str) -> dict:
+    career=_load_manager_career(career_id)
+    try: state=career.cancel_live_preview()
+    except ValueError as exc: raise HTTPException(status_code=409, detail=str(exc)) from exc
+    _career_store().save(career.state);return {"career":state}
+
+
 @app.post("/api/football9394/careers/{career_id}/live/advance")
 def advance_manager_live_match(career_id: str, payload: LiveAdvancePayload) -> dict:
     career=_load_manager_career(career_id)
     try: match=career.advance_live_match(payload.minutes)
     except ValueError as exc: raise HTTPException(status_code=409, detail=str(exc)) from exc
     _career_store().save(career.state);return {"match":match,"career":career.snapshot()}
+
+
+@app.post("/api/football9394/careers/{career_id}/live/result")
+def simulate_manager_live_match(career_id: str) -> dict:
+    career=_load_manager_career(career_id)
+    try: result=career.simulate_live_match()
+    except ValueError as exc: raise HTTPException(status_code=409, detail=str(exc)) from exc
+    _career_store().save(career.state);return result
 
 
 @app.put("/api/football9394/careers/{career_id}/live/tactics")

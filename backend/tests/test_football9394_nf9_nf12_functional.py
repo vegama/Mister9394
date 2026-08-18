@@ -170,7 +170,7 @@ def test_nf9_nf12_save_schema_and_surfaces_survive_reload():
     assert snap["professional_career"]["active_contract"]
     assert "board_project" in snap and "information_world" in snap
     assert "longitudinal" in snap["economy"] and "health" in snap["economy"]
-    assert restored.state["schema"] == CAREER_SCHEMA_9394 == 22
+    assert restored.state["schema"] == CAREER_SCHEMA_9394 == 23
 
 
 def test_nf9_nf12_api_surfaces_persist(monkeypatch, tmp_path):

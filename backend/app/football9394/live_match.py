@@ -29,6 +29,7 @@ def _serialize_side(side: _SideState) -> dict[str, Any]:
         "fatigue": {str(k): round(float(v), 4) for k, v in side.fatigue.items()},
         "yellow_by_player": {str(k): int(v) for k, v in side.yellow_by_player.items()},
         "sent_off": sorted(str(x) for x in side.sent_off),
+        "forced_off": sorted(str(x) for x in side.forced_off),
         "goals": side.goals, "shots": side.shots, "shots_on_target": side.shots_on_target,
         "corners": side.corners, "offsides": side.offsides, "fouls": side.fouls,
         "yellows": side.yellows, "reds": side.reds, "possession_ticks": side.possession_ticks,
@@ -44,6 +45,7 @@ def _restore_side(sheet: TeamSheet9394, raw: dict[str, Any]) -> _SideState:
     side.fatigue = {str(k): float(v) for k, v in (raw.get("fatigue") or {}).items()}
     side.yellow_by_player = {str(k): int(v) for k, v in (raw.get("yellow_by_player") or {}).items()}
     side.sent_off = {str(x) for x in raw.get("sent_off", [])}
+    side.forced_off = {str(x) for x in raw.get("forced_off", [])}
     for name in ("goals", "shots", "shots_on_target", "corners", "offsides", "fouls", "yellows", "reds", "possession_ticks", "substitutions"):
         setattr(side, name, int(raw.get(name) or 0))
     return side
@@ -97,15 +99,25 @@ class LiveMatchEngine9394:
             return
         player = rng.choice(players)
         events.append(MatchEvent9394(minute, "injury", side.sheet.team_id, player.id, player.name, "Problemas físicos"))
-        if not auto_sub or side.substitutions >= LAWS_1993_94.max_used_substitutes or not side.bench or rng.random() >= 0.58:
+        forced_off = rng.random() < 0.58
+        if not forced_off:
             return
-        replacement = max(side.bench, key=lambda p: self.engine._replacement_fit(p, player))
-        idx = side.on_pitch.index(player); side.on_pitch[idx] = replacement; side.bench.remove(replacement)
-        side.substitutions += 1
-        events.append(MatchEvent9394(minute, "injury_substitution", side.sheet.team_id, replacement.id, replacement.name,
-                                     f"Entra {replacement.name}; sale lesionado {player.name}", player.id, player.name))
+        if auto_sub and side.substitutions < LAWS_1993_94.max_used_substitutes and side.bench:
+            replacement = max(side.bench, key=lambda p: self.engine._replacement_fit(p, player))
+            idx = side.on_pitch.index(player); side.on_pitch[idx] = replacement; side.bench.remove(replacement)
+            side.substitutions += 1
+            events.append(MatchEvent9394(minute, "injury_substitution", side.sheet.team_id, replacement.id, replacement.name,
+                                         f"Entra {replacement.name}; sale lesionado {player.name}", player.id, player.name))
+            return
+        side.forced_off.add(player.id)
+        detail = f"{player.name} no puede continuar"
+        if side.substitutions >= LAWS_1993_94.max_used_substitutes or not side.bench:
+            detail += " y no quedan cambios"
+        else:
+            detail += "; necesita sustitución"
+        events.append(MatchEvent9394(minute, "injury_forced_off", side.sheet.team_id, player.id, player.name, detail))
 
-    def advance(self, state: dict[str, Any], home_sheet: TeamSheet9394, away_sheet: TeamSheet9394, *, minutes: int = 5) -> dict[str, Any]:
+    def advance(self, state: dict[str, Any], home_sheet: TeamSheet9394, away_sheet: TeamSheet9394, *, minutes: int = 5, auto_controlled: bool = False) -> dict[str, Any]:
         if state.get("status") == "finished":
             return state
         if state.get("status") == "halftime":
@@ -131,12 +143,12 @@ class LiveMatchEngine9394:
             self.engine._accumulate_fatigue(home, minute, venue=venue); self.engine._accumulate_fatigue(away, minute, venue=venue)
             rng = Random(int(state["seed"]) * 100003 + minute * 7919 + 17)
             if minute in (58, 70, 78):
-                if str(home.sheet.team_id) != controlled:
+                if auto_controlled or str(home.sheet.team_id) != controlled:
                     self.engine._maybe_manager_adjustment(home, away, minute, events)
-                    self.engine._maybe_substitute(home, minute, rng, events)
-                if str(away.sheet.team_id) != controlled:
+                    self.engine._maybe_substitute(home, minute, rng, events, opponent=away)
+                if auto_controlled or str(away.sheet.team_id) != controlled:
                     self.engine._maybe_manager_adjustment(away, home, minute, events)
-                    self.engine._maybe_substitute(away, minute, rng, events)
+                    self.engine._maybe_substitute(away, minute, rng, events, opponent=home)
             activity = (self.engine._activity(home.sheet.tactics, venue=venue) + self.engine._activity(away.sheet.tactics, venue=venue)) / 2
             activity = _clamp(activity * self.engine.profile.notable_attack_multiplier, 0.20, 0.88)
             if rng.random() <= activity:
@@ -144,8 +156,8 @@ class LiveMatchEngine9394:
                 attack, defend = (home, away) if rng.random() < home_possession else (away, home)
                 attack.possession_ticks += 1
                 self.engine._resolve_attack(attack, defend, minute, rng, events, referee=referee, venue=venue)
-                self._injury(attack, minute, rng, events, auto_sub=str(attack.sheet.team_id) != controlled)
-                self._injury(defend, minute, rng, events, auto_sub=str(defend.sheet.team_id) != controlled)
+                self._injury(attack, minute, rng, events, auto_sub=auto_controlled or str(attack.sheet.team_id) != controlled)
+                self._injury(defend, minute, rng, events, auto_sub=auto_controlled or str(defend.sheet.team_id) != controlled)
             state["minute"] = minute
             if minute == 45:
                 state["status"] = "halftime"
@@ -174,11 +186,14 @@ class LiveMatchEngine9394:
         side = home if str(home.sheet.team_id) == str(state["controlled_team_id"]) else away
         if side.substitutions >= LAWS_1993_94.max_used_substitutes:
             raise ValueError("ya has utilizado los dos cambios permitidos en 1993-94")
-        outgoing = next((p for p in side.on_pitch if str(p.id) == str(int(outgoing_id))), None)
+        outgoing = next((p for p in side.on_pitch if p.id not in side.sent_off and str(p.id) == str(int(outgoing_id))), None)
         incoming = next((p for p in side.bench if str(p.id) == str(int(incoming_id))), None)
+        if str(int(outgoing_id)) in {str(x) for x in side.sent_off}:
+            raise ValueError("un jugador expulsado ya no puede ser sustituido")
         if outgoing is None: raise ValueError("el jugador que sale no está en el campo")
         if incoming is None: raise ValueError("el jugador que entra no está en el banquillo")
         idx = side.on_pitch.index(outgoing); side.on_pitch[idx] = incoming; side.bench.remove(incoming)
+        side.forced_off.discard(outgoing.id)
         side.substitutions += 1
         event = MatchEvent9394(int(state.get("minute") or 0), "substitution", side.sheet.team_id, incoming.id, incoming.name,
                                f"Entra {incoming.name}; sale {outgoing.name}", outgoing.id, outgoing.name)
@@ -197,8 +212,14 @@ class LiveMatchEngine9394:
             "home": _stats(state["home"], home_poss), "away": _stats(state["away"], away_poss),
             "events": list(state.get("events") or []), "fixture": dict(state.get("fixture") or {}),
             "controlled_team_id": int(state["controlled_team_id"]),
-            "home_on_pitch_ids": [int(x) for x in state["home"].get("on_pitch_ids", []) if str(x).isdigit()],
-            "away_on_pitch_ids": [int(x) for x in state["away"].get("on_pitch_ids", []) if str(x).isdigit()],
+            # Sent-off and forced-injury footballers keep their historical slot
+            # in serialization, but neither continues participating in play.
+            "home_on_pitch_ids": [int(x) for x in state["home"].get("on_pitch_ids", []) if str(x).isdigit() and str(x) not in {str(v) for v in state["home"].get("sent_off", [])} and str(x) not in {str(v) for v in state["home"].get("forced_off", [])}],
+            "away_on_pitch_ids": [int(x) for x in state["away"].get("on_pitch_ids", []) if str(x).isdigit() and str(x) not in {str(v) for v in state["away"].get("sent_off", [])} and str(x) not in {str(v) for v in state["away"].get("forced_off", [])}],
+            "home_sent_off_ids": [int(x) for x in state["home"].get("sent_off", []) if str(x).isdigit()],
+            "away_sent_off_ids": [int(x) for x in state["away"].get("sent_off", []) if str(x).isdigit()],
+            "home_forced_off_ids": [int(x) for x in state["home"].get("forced_off", []) if str(x).isdigit()],
+            "away_forced_off_ids": [int(x) for x in state["away"].get("forced_off", []) if str(x).isdigit()],
             "home_bench_ids": [int(x) for x in state["home"].get("bench_ids", []) if str(x).isdigit()],
             "away_bench_ids": [int(x) for x in state["away"].get("bench_ids", []) if str(x).isdigit()],
             "home_fatigue": dict(state["home"].get("fatigue") or {}), "away_fatigue": dict(state["away"].get("fatigue") or {}),

@@ -19,6 +19,8 @@ import TrainingWorkspace from './components/TrainingWorkspace.vue'
 import HistoryWorkspace from './components/HistoryWorkspace.vue'
 import CalendarWorkspace from './components/CalendarWorkspace.vue'
 import CareerWorkspace from './components/CareerWorkspace.vue'
+import ChampionsWorkspace from './components/ChampionsWorkspace.vue'
+import SeasonEndOverlay from './components/SeasonEndOverlay.vue'
 import { football9394Api } from './api.js'
 
 const navigationGroups = [
@@ -41,6 +43,7 @@ const navigationGroups = [
     { id: 'economy', label: 'Economía' },
     { id: 'national', label: 'Selecciones' },
     { id: 'history', label: 'Historia' },
+    { id: 'champions', label: 'Campeones' },
   ] },
 ]
 const view = ref('home')
@@ -82,6 +85,7 @@ const selectedPlayer = ref(null)
 const playerTab = ref('profile')
 const selectedCompetition = ref('league:1')
 const notice = ref('')
+const seasonEndRecap = ref(null)
 const isAdvancing = ref(false)
 const finances = ref({cash:0,starting_budget:0,debt:0,transfer_spend:0,transfer_income:0,matchday_income:0})
 const selectedTarget = ref(null)
@@ -97,8 +101,9 @@ const marketQuery = ref('')
 const marketPosition = ref('')
 const marketFreeAgents = ref(false)
 const marketWatchedOnly = ref(false)
+const restoredMarketTargetId = ref(null)
 const marketFlow = ref({watchlist:[],negotiations:[],listings:[],incoming_offers:[]})
-const economy = ref({cash:0,debt:0,monthly_wages:0,annual_wages:0,monthly_commercial_income:0,monthly_operating_expense:0,monthly_debt_service:0,projected_monthly_net:0,safety_reserve:0,transfer_room:0,status:'—',top_salaries:[],recent_ledger:[],contract_data_note:''})
+const economy = ref({currency:{code:'ESP',name:'pesetas',label:'ptas.'},cash:0,debt:0,source_budget:0,transfer_budget_total:0,transfer_budget_remaining:0,wage_budget_annual:0,wage_room_annual:0,wage_budget_usage_pct:0,monthly_wages:0,annual_wages:0,monthly_commercial_income:0,monthly_membership_income:0,monthly_television_income:0,monthly_sponsorship_income:0,monthly_operating_expense:0,monthly_debt_service:0,monthly_debt_interest:0,monthly_debt_principal:0,projected_monthly_net:0,safety_reserve:0,transfer_room:0,status:'—',top_salaries:[],recent_ledger:[],contract_data_note:''})
 const nationalTeams = ref([])
 const selectedNationalTeam = ref(null)
 const nationalSquad = ref([])
@@ -110,6 +115,7 @@ const tournamentProgress = ref({})
 const recentWorldEvents = ref([])
 const aiTransfers = ref([])
 const loadingHistoricalData = ref(true)
+const matchActionBusy = ref(false)
 const dataError = ref('')
 const simulatedThroughMatchday = ref(7)
 const managerDashboard = ref({position:null,points:0,recent_form:[],form_label:'Sin partidos',morale_average:70,unavailable_count:0,board_expectation:{title:'—'},board_confidence:'A la espera',pending_decisions:[]})
@@ -120,6 +126,8 @@ const controlledTeam = ref({source_id:null,name:'Sin club',long_name:'Sin club',
 const controlledTeamId = computed(()=>Number(controlledTeam.value?.source_id||0))
 const selectedLeagueOption = computed(()=>careerOptions.value.find(row=>Number(row.source_id)===Number(selectedLeagueId.value))||null)
 const lineupDraftPlayers = computed(()=>lineupDraft.value.map(id=>squad.value.find(p=>Number(p.id)===Number(id))).filter(Boolean))
+const lineupDirty = computed(()=>{const saved=[...(selection.value?.starter_ids||[])].map(Number).sort((a,b)=>a-b);const draft=[...lineupDraft.value].map(Number).sort((a,b)=>a-b);return JSON.stringify(saved)!==JSON.stringify(draft)})
+const isMatchDay = computed(()=>Boolean(nextMatch.value?.date && gameDate.value && String(nextMatch.value.date)===String(gameDate.value)))
 const standings = ref([])
 const competitionStandings = ref([])
 const competitionProgress = ref(null)
@@ -131,7 +139,7 @@ const targets = ref([])
 const matches = ref([])
 const nextMatch = ref(null)
 const newsFeed = ref([])
-const historyState = ref({season_recaps:[],season_archive:[],honours:[],club_honours:[],board_history:[],ai_squad_audits:[]})
+const historyState = ref({season_recaps:[],season_archive:[],season_dossiers:[],honours:[],club_honours:[],board_history:[],ai_squad_audits:[]})
 const latestAiAudit = ref(null)
 const jobStatus = ref('active')
 const preseason = ref({active:false,label:'Temporada oficial',friendlies:[],pace:'event_driven'})
@@ -186,15 +194,28 @@ function eventLabel(row){return row?.stage || row?.progress?.stage || 'Temporada
 function trendLabel(value){const n=Number(value||0);return n>0?`▲ +${n}`:n<0?`▼ ${n}`:'● ESTABLE'}
 function boardClass(risk){return String(risk||'').includes('ALTO')?'risk-high':risk==='RIESGO'?'risk-danger':risk==='VIGILANCIA'?'risk-watch':'risk-safe'}
 function toSquadRow(player){
+ const compactStatus = player.status==='Retirado'?'RET.':Number(player.injury_days||0)>0?'LES.':player.league_suspension_active_for_next_match?'SANC.':player.status==='Disponible'?'DISP.':'NO DISP.'
  return {
   id:player.id,n:player.shirt_number??'—',name:player.display_name,pos:player.position,age:player.age??'—',overall:player.overall??'—',
-  form:player.form??'—',morale:player.morale??'—',status:String(player.status||'').startsWith('Lesionado')?'LES.':player.status==='Disponible'?'DISP.':player.status==='Retirado'?'RET.':'NO DISP.',nationality:player.nationality,
+  form:player.form??'—',morale:player.morale??'—',status:compactStatus,nationality:player.nationality,
   contractEnd:player.contract?.end??'—',salary:player.contract?.salary??0,
   profile:player,
  }
 }
 function standingsFromState(rows){
  return rows.map(r=>[r.team_name,r.played,r.wins,r.draws,r.losses,r.goals_for,r.goals_against,r.points,r.team_id])
+}
+function marketWorkspaceStorageKey(id=careerId.value){return id?`mister9394-market-workspace:${id}`:''}
+function persistMarketWorkspace(){
+ const key=marketWorkspaceStorageKey();if(!key)return
+ try{window.sessionStorage?.setItem(key,JSON.stringify({query:marketQuery.value,position:marketPosition.value,freeAgents:marketFreeAgents.value,watchedOnly:marketWatchedOnly.value,selectedTargetId:selectedTarget.value?.[5]??null}))}catch{}
+}
+function restoreMarketWorkspace(id){
+ const key=marketWorkspaceStorageKey(id);if(!key)return
+ try{
+  const raw=JSON.parse(window.sessionStorage?.getItem(key)||'null');if(!raw)return
+  marketQuery.value=String(raw.query||'');marketPosition.value=String(raw.position||'');marketFreeAgents.value=Boolean(raw.freeAgents);marketWatchedOnly.value=Boolean(raw.watchedOnly);restoredMarketTargetId.value=raw.selectedTargetId?Number(raw.selectedTargetId):null
+ }catch{}
 }
 function applyCareerState(state){
  if(state.career_id){careerId.value=state.career_id;window.localStorage?.setItem('mister9394-career-id',state.career_id)}
@@ -233,7 +254,7 @@ function applyCareerState(state){
  liveMatch.value=state.live_match||null
  lastMatchReport.value=state.last_match_report||lastMatchReport.value
  if(state.news_feed)newsFeed.value=state.news_feed
- if(state.season_recaps)historyState.value={...historyState.value,season_recaps:state.season_recaps}
+ if(state.season_recaps||state.season_dossiers)historyState.value={...historyState.value,season_recaps:state.season_recaps||historyState.value.season_recaps,season_dossiers:state.season_dossiers||historyState.value.season_dossiers}
  latestAiAudit.value=state.latest_ai_squad_audit||latestAiAudit.value
  jobStatus.value=state.job_status||'active'
  preseason.value=state.preseason||preseason.value
@@ -264,20 +285,23 @@ function calendarRowsForUi(rows,state){
  const teamId=Number(state.team?.source_id||controlledTeamId.value)
  const leagueName=state.team?.league?.name||'Liga'
  return (rows||[]).slice(-8).map(m=>{
-  const opponent=Number(m.home_team_id)===teamId?m.away_team:m.home_team
-  const venue=Number(m.home_team_id)===teamId?'Casa':'Fuera'
-  const status=m.played?`${m.home_goals}-${m.away_goals}`:'Pendiente'
+  const home=Number(m.home_team_id||0), away=Number(m.away_team_id||0)
+  const opponent=home===teamId?(m.away_team||'Rival por confirmar'):away===teamId?(m.home_team||'Rival por confirmar'):'Rival por confirmar'
+  const venue=home===teamId?'Casa':away===teamId?'Fuera':'Por confirmar'
+  const postponed=Boolean(m.postponed)||String(m.schedule_status||'').toLowerCase()==='postponed'
+  const status=m.played?`${m.home_goals}-${m.away_goals}`:postponed?'Aplazado':Number(m.availability_count||0)>0?`Pendiente · ${m.availability_count} baja${Number(m.availability_count)===1?'':'s'}`:'Pendiente'
   return [m.date||`Jornada ${m.matchday}`,opponent,venue,m.competition_name||leagueName,status,m.id]
  })
 }
 async function refreshCareerData(state){
  const [calendarRows,marketRows,competitionRows,newsRows,careerRows,projectRows,informationRows]=await Promise.all([
-  football9394Api.careerCalendar(state.career_id),football9394Api.careerMarket(state.career_id,{limit:10}),football9394Api.careerCompetitions(state.career_id),football9394Api.careerNews(state.career_id,{limit:80}),
+  football9394Api.careerCalendar(state.career_id),football9394Api.careerMarket(state.career_id,{query:marketQuery.value,position:marketPosition.value,freeAgents:marketFreeAgents.value,watched:marketWatchedOnly.value,limit:(marketQuery.value||marketPosition.value||marketFreeAgents.value||marketWatchedOnly.value)?30:10}),football9394Api.careerCompetitions(state.career_id),football9394Api.careerNews(state.career_id,{limit:80}),
   football9394Api.professionalCareer(state.career_id),football9394Api.boardProject(state.career_id),football9394Api.informationWorld(state.career_id,80),
  ])
  const recent=calendarRows.filter(m=>m.played).slice(-3);const upcoming=calendarRows.filter(m=>!m.played).slice(0,6)
  matches.value=calendarRowsForUi([...recent,...upcoming],state)
  targets.value=marketRows.map(p=>[p.display_name,p.position,p.team_name,p.overall??'—',p.estimated_transfer_value??0,p.id,p])
+ if(restoredMarketTargetId.value){const target=targets.value.find(row=>Number(row[5])===Number(restoredMarketTargetId.value));if(target)chooseTarget(target);restoredMarketTargetId.value=null}
  competitions.value=competitionRows;newsFeed.value=newsRows;professionalCareer.value=careerRows;boardProject.value=projectRows;informationWorld.value=informationRows
  if(!competitionRows.some(c=>`${c.kind}:${c.source_id}`===selectedCompetition.value)&&competitionRows.length)selectedCompetition.value=`${competitionRows[0].kind}:${competitionRows[0].source_id}`
  await loadSelectedCompetitionTable()
@@ -295,7 +319,7 @@ async function loadHistoricalCareer(){
   let state=null
   const savedId=window.localStorage?.getItem('mister9394-career-id')
   if(savedId){try{state=await football9394Api.career(savedId)}catch{window.localStorage?.removeItem('mister9394-career-id')}}
-  if(state){applyCareerState(state);await refreshCareerData(state);await loadHistory();showCareerSetup.value=false}
+  if(state){applyCareerState(state);restoreMarketWorkspace(state.career_id);await refreshCareerData(state);await loadHistory();showCareerSetup.value=false;reconcileRouteAfterCareerLoad()}
   else showCareerSetup.value=true
  }catch(error){
   dataError.value=error.message||String(error);showCareerSetup.value=true
@@ -313,6 +337,9 @@ async function startCareer(){
  finally{loadingHistoricalData.value=false}
 }
 function openCareerSetup(){
+ if(liveMatch.value && liveMatch.value.status!=='finished'){
+  view.value='match';flash('Termina o resuelve el partido antes de abrir otra carrera.');return
+ }
  const currentLeague=Number(controlledTeam.value?.league?.source_id||selectedLeagueId.value||careerOptions.value[0]?.source_id||0)
  selectedLeagueId.value=currentLeague||null
  const league=careerOptions.value.find(row=>Number(row.source_id)===Number(selectedLeagueId.value))
@@ -331,12 +358,31 @@ function toggleStarter(player){
  if(lineupDraft.value.length>=11){flash('El once ya tiene 11 futbolistas. Quita uno antes de añadir otro.');return}
  lineupDraft.value=[...lineupDraft.value,id]
 }
-async function saveSelection(){
- if(!careerId.value)return
+async function saveSelection({silent=false}={}){
+ if(!careerId.value)return false
  try{
   const result=await football9394Api.updateCareerSelection(careerId.value,{starterIds:lineupDraft.value})
-  applyCareerState(result.career);flash('Once y convocatoria guardados.')
- }catch(error){flash(`No se pudo guardar el once: ${error.message}`)}
+  applyCareerState(result.career);if(!silent)flash('Once y convocatoria guardados.');return true
+ }catch(error){flash(`No se pudo guardar el once: ${error.message}`);return false}
+}
+async function goToTacticsFromSquad(){
+ if(lineupDirty.value){const saved=await saveSelection({silent:true});if(!saved)return;flash('Once guardado. Ya puedes ajustar el plan.')}
+ view.value='tactics'
+}
+async function cancelPreviewAndNavigate(target='squad'){
+ if(!careerId.value||!liveMatch.value||Number(liveMatch.value.minute||0)!==0){view.value=target;return}
+ await withMatchAction(async()=>{
+  try{const result=await football9394Api.cancelLivePreview(careerId.value);applyCareerState(result.career);liveMatch.value=null;view.value=target;flash(target==='squad'?'Previa anulada. Puedes modificar el once.':'Previa anulada.')}catch(error){view.value='match';flash(`No se pudo volver a la preparación: ${error.message}`)}
+ })
+}
+async function navigateTo(target){
+ if(matchActionBusy.value && liveMatch.value){view.value='match';flash('Hay una acción de partido en curso.');return}
+ if(liveMatch.value && liveMatch.value.status!=='finished'){
+  const minute=Number(liveMatch.value.minute||0)
+  if(minute>0 && !['match','tactics'].includes(target)){view.value='match';flash('El partido está en juego. Usa Directo, Táctica o Cambios hasta el final.');return}
+  if(minute===0 && !['match','tactics'].includes(target)){await cancelPreviewAndNavigate(target);return}
+ }
+ view.value=target
 }
 async function appointCaptain(player){
  if(!careerId.value)return
@@ -401,7 +447,7 @@ async function autoSelectLineup(){
  try{const result=await football9394Api.updateCareerSelection(careerId.value,{autoSelect:true});applyCareerState(result.career);flash('Mejor once disponible seleccionado.')}catch(error){flash(`No se pudo seleccionar el once: ${error.message}`)}
 }
 function playerNameById(id){const own=squad.value.find(p=>Number(p.id)===Number(id));if(own)return own.name;const target=targets.value.find(p=>Number(p[5])===Number(id));return target?.[0]||`Jugador #${id}`}
-function openDecision(decision){if(decision?.action)view.value=decision.action}
+async function openDecision(decision){if(decision?.action)await navigateTo(decision.action)}
 function flash(message){notice.value=message;window.setTimeout(()=>{notice.value=''},2200)}
 async function openPlayer(row){
  selectedPlayer.value=profileFor(row);playerTab.value='profile'
@@ -427,7 +473,10 @@ async function advance(){
  try{
   const result=await football9394Api.advanceCareerUntilEvent(careerId.value,14)
   applyCareerState(result.career);await refreshCareerData(result.career)
-  if(result.world_events?.some(e=>e.kind==='season_rollover'))await loadHistory()
+  if(result.world_events?.some(e=>e.kind==='season_rollover')){
+   await loadHistory()
+   seasonEndRecap.value=historyState.value.season_recaps?.slice(-1)[0]||null
+  }
   if(result.career_over){view.value='career';flash('El consejo ha terminado tu etapa en el club.');return}
   if(result.requires_match&&result.next_match)flash(`DÍA DE PARTIDO · ${result.next_match.home_team} - ${result.next_match.away_team}`)
   else if(result.advanced_days>1)flash(`Continuado ${result.advanced_days} días · ${result.date}`)
@@ -458,53 +507,72 @@ async function saveTactics(){
  if(!careerId.value)return
  try{const result=await football9394Api.updateCareerTactics(careerId.value,currentTactics());applyCareerState(result.career);flash('Táctica guardada. Sus efectos se aplicarán al próximo minuto jugado.')}catch(error){flash(`No se pudo guardar la táctica: ${error.message}`)}
 }
+async function withMatchAction(task){
+ if(matchActionBusy.value)return null
+ matchActionBusy.value=true
+ try{return await task()}finally{matchActionBusy.value=false}
+}
 async function startLive(){
  if(!careerId.value||!nextMatch.value){flash('No hay partido disponible.');return}
- try{await football9394Api.updateCareerTactics(careerId.value,currentTactics());const result=await football9394Api.startLiveMatch(careerId.value);applyCareerState(result.career);liveMatch.value=result.match;view.value='match';flash('Partido iniciado. Tú diriges desde el primer minuto.')}catch(error){flash(`No se pudo iniciar: ${error.message}`)}
+ if(!isMatchDay.value){flash(`La previa se abre el día del partido (${formatDateShort(nextMatch.value.date)}). Mientras tanto puedes preparar XI y táctica.`);return}
+ if(lineupDirty.value){const saved=await saveSelection({silent:true});if(!saved){view.value='squad';return}}
+ if(!selection.value?.valid){view.value='squad';flash('El once debe ser legal antes de abrir la previa.');return}
+ await withMatchAction(async()=>{
+  try{await football9394Api.updateCareerTactics(careerId.value,currentTactics());const result=await football9394Api.startLiveMatch(careerId.value);applyCareerState(result.career);liveMatch.value=result.match;view.value='match';flash('Previa preparada. Revisa los dos onces y decide si jugar o ver el resultado.')}catch(error){flash(`No se pudo abrir la previa: ${error.message}`)}
+ })
+}
+async function commitFinishedLiveMatch(){
+ if(!careerId.value||!liveMatch.value||liveMatch.value.status!=='finished'||liveMatch.value.committed)return
+ const result=await football9394Api.finishLiveMatch(careerId.value)
+ lastMatchReport.value=result.match;applyCareerState(result.career);liveMatch.value=result.match;await refreshCareerData(result.career)
 }
 async function advanceLive(minutes=5){
  if(!careerId.value||!liveMatch.value)return
- try{const result=await football9394Api.advanceLiveMatch(careerId.value,minutes);applyCareerState(result.career);liveMatch.value=result.match}catch(error){flash(`Directo detenido: ${error.message}`)}
+ await withMatchAction(async()=>{
+  try{const result=await football9394Api.advanceLiveMatch(careerId.value,minutes);applyCareerState(result.career);liveMatch.value=result.match;if(result.match?.status==='finished')await commitFinishedLiveMatch()}catch(error){flash(`Directo detenido: ${error.message}`)}
+ })
 }
 async function advanceToChance(){
  if(!liveMatch.value||liveMatch.value.status==='finished')return
- const notable=new Set(['shot_off','save','goal','corner','yellow','red','second_yellow_red','injury','halftime','fulltime'])
- try{for(let i=0;i<20;i++){const before=(liveMatch.value.events||[]).length;const result=await football9394Api.advanceLiveMatch(careerId.value,1);applyCareerState(result.career);liveMatch.value=result.match;const fresh=(liveMatch.value.events||[]).slice(before);if(fresh.some(e=>notable.has(e.kind))||liveMatch.value.status!=='live')break}}catch(error){flash(`Directo detenido: ${error.message}`)}
+ const notable=new Set(['shot_off','save','goal','corner','yellow','red','second_yellow_red','injury','injury_forced_off','halftime','fulltime'])
+ await withMatchAction(async()=>{
+  try{for(let i=0;i<20;i++){const before=(liveMatch.value.events||[]).length;const result=await football9394Api.advanceLiveMatch(careerId.value,1);applyCareerState(result.career);liveMatch.value=result.match;const fresh=(liveMatch.value.events||[]).slice(before);if(fresh.some(e=>notable.has(e.kind))||liveMatch.value.status!=='live')break}if(liveMatch.value?.status==='finished')await commitFinishedLiveMatch()}catch(error){flash(`Directo detenido: ${error.message}`)}
+ })
 }
 async function applyLiveTactics(){
- try{const result=await football9394Api.updateLiveTactics(careerId.value,currentTactics());liveMatch.value=result.match||result;flash(`Ajuste aplicado en el ${liveMatch.value.minute}'`)}catch(error){flash(`No se pudo cambiar la táctica: ${error.message}`)}
+ if(!careerId.value||!liveMatch.value)return
+ await withMatchAction(async()=>{
+  try{const result=await football9394Api.updateLiveTactics(careerId.value,currentTactics());liveMatch.value=result.match||result;view.value='match';flash(`Ajuste aplicado en el ${liveMatch.value.minute}'`)}catch(error){flash(`No se pudo cambiar la táctica: ${error.message}`)}
+ })
 }
 async function makeLiveSubstitution(){
  if(!liveOutgoingId.value||!liveIncomingId.value){flash('Selecciona quién sale y quién entra.');return}
- try{const result=await football9394Api.liveSubstitution(careerId.value,Number(liveOutgoingId.value),Number(liveIncomingId.value));liveMatch.value=result.match||result;liveOutgoingId.value=null;liveIncomingId.value=null;flash('Cambio realizado.')}catch(error){flash(`Cambio no válido: ${error.message}`)}
+ await withMatchAction(async()=>{
+  try{const result=await football9394Api.liveSubstitution(careerId.value,Number(liveOutgoingId.value),Number(liveIncomingId.value));liveMatch.value=result.match||result;liveOutgoingId.value=null;liveIncomingId.value=null;flash('Cambio realizado.')}catch(error){flash(`Cambio no válido: ${error.message}`)}
+ })
 }
 async function closeLiveMatch(){
- try{const result=await football9394Api.finishLiveMatch(careerId.value);lastMatchReport.value=result.match;applyCareerState(result.career);await refreshCareerData(result.career);view.value='home';flash(`FINAL · ${result.match.home_team_name} ${result.match.home.goals}-${result.match.away.goals} ${result.match.away_team_name}`)}catch(error){flash(`No se pudo cerrar el partido: ${error.message}`)}
+ if(liveMatch.value?.committed){lastMatchReport.value=liveMatch.value;liveMatch.value=null;view.value='home';flash('Postpartido cerrado.');return}
+ await withMatchAction(async()=>{
+  try{const result=await football9394Api.finishLiveMatch(careerId.value);lastMatchReport.value=result.match;applyCareerState(result.career);await refreshCareerData(result.career);view.value='home';flash(`FINAL · ${result.match.home_team_name} ${result.match.home.goals}-${result.match.away.goals} ${result.match.away_team_name}`)}catch(error){flash(`No se pudo cerrar el partido: ${error.message}`)}
+ })
 }
-async function simulateControlledMatch(){
- if(!nextMatch.value||!careerId.value){flash('No hay próximo partido cargado.');return}
- try{
-  const tactics=currentTactics()
-  await football9394Api.updateCareerTactics(careerId.value,tactics)
-  const newState=await football9394Api.playNextCareerMatchday(careerId.value)
-  applyCareerState(newState)
-  const played=newState.played_match
-  const last=newState.last_controlled_result
-  await refreshCareerData(newState)
-  if(played?.fixture_type==='tournament') flash(`FINAL · ${played.competition_name} · ${played.home_goals}-${played.away_goals}`)
-  else flash(last?`FINAL · ${last.home_team} ${last.home_goals}-${last.away_goals} ${last.away_team}`:'Partido completado')
- }catch(error){flash(`No se pudo simular: ${error.message}`)}
+async function simulateFromPreview(){
+ if(!careerId.value||!liveMatch.value||Number(liveMatch.value.minute||0)!==0){flash('El resultado instantáneo sólo está disponible en la previa.');return}
+ await withMatchAction(async()=>{
+  try{const result=await football9394Api.simulateLiveMatch(careerId.value);applyCareerState(result.career);lastMatchReport.value=result.match;liveMatch.value=result.match;await refreshCareerData(result.career);view.value='match';flash(`FINAL · ${result.match.home_team_name} ${result.match.home.goals}-${result.match.away.goals} ${result.match.away_team_name}`)}catch(error){flash(`No se pudo simular: ${error.message}`)}
+ })
 }
-
 function chooseTarget(row){
  selectedTarget.value=row
  transferFee.value=Math.round(Number(row[4]||0)*0.9)
  transferSalary.value=Number(row[6]?.contract?.salary||row[6]?.market?.minimum_salary_hint||0)
  transferYears.value=3
+ persistMarketWorkspace()
 }
 async function searchMarket(){
  if(!careerId.value)return
- try{const rows=await football9394Api.careerMarket(careerId.value,{query:marketQuery.value,limit:30,position:marketPosition.value,freeAgents:marketFreeAgents.value,watched:marketWatchedOnly.value});targets.value=rows.map(p=>[p.display_name,p.position,p.team_name||'Libre',p.overall??'—',p.estimated_transfer_value??p.market?.market_value??0,p.id,p])}catch(error){flash(`Búsqueda fallida: ${error.message}`)}
+ try{const rows=await football9394Api.careerMarket(careerId.value,{query:marketQuery.value,limit:30,position:marketPosition.value,freeAgents:marketFreeAgents.value,watched:marketWatchedOnly.value});targets.value=rows.map(p=>[p.display_name,p.position,p.team_name||'Libre',p.overall??'—',p.estimated_transfer_value??p.market?.market_value??0,p.id,p]);persistMarketWorkspace()}catch(error){flash(`Búsqueda fallida: ${error.message}`)}
 }
 async function toggleWatch(target){
  try{const watched=!Boolean(target[6]?.watched);const result=await football9394Api.watchPlayer(careerId.value,target[5],watched);applyCareerState(result.career);target[6].watched=watched;flash(watched?'Añadido a seguimiento.':'Eliminado del seguimiento.')}catch(error){flash(`No se pudo actualizar seguimiento: ${error.message}`)}
@@ -536,7 +604,7 @@ async function withdrawNegotiation(row){
 }
 async function submitTransfer(){
  if(!selectedTarget.value||!careerId.value)return
- try{const result=await football9394Api.openNegotiation(careerId.value,{playerId:selectedTarget.value[5],feeOffer:Number(transferFee.value),salaryOffer:Number(transferSalary.value),contractYears:Number(transferYears.value),squadRole:transferSquadRole.value,signingBonus:Number(transferSigningBonus.value||0),releaseClause:transferReleaseClause.value?Number(transferReleaseClause.value):null,dealType:transferDealType.value,loanWageShare:Number(transferLoanWageShare.value||0)});applyCareerState(result.career);selectedTarget.value=null;flash(`Oferta enviada · respuesta prevista ${result.negotiation.response_date}`)}catch(error){flash(`Negociación fallida: ${error.message}`)}
+ try{const result=await football9394Api.openNegotiation(careerId.value,{playerId:selectedTarget.value[5],feeOffer:Number(transferFee.value),salaryOffer:Number(transferSalary.value),contractYears:Number(transferYears.value),squadRole:transferSquadRole.value,signingBonus:Number(transferSigningBonus.value||0),releaseClause:transferReleaseClause.value?Number(transferReleaseClause.value):null,dealType:transferDealType.value,loanWageShare:Number(transferLoanWageShare.value||0)});applyCareerState(result.career);selectedTarget.value=null;persistMarketWorkspace();flash(`Oferta enviada · respuesta prevista ${result.negotiation.response_date}`)}catch(error){flash(`Negociación fallida: ${error.message}`)}
 }
 async function counterNegotiation(row){
  try{const result=await football9394Api.counterNegotiation(careerId.value,row.id,{feeOffer:Number(row.counter_fee??row.fee_offer),salaryOffer:Number(row.counter_salary??row.salary_offer),contractYears:Number(row.contract_years||3),loanWageShare:row.deal_type==='loan'?Number(row.counter_wage_share??row.loan_wage_share??100):null});applyCareerState(result.career);flash(`Contraoferta enviada · respuesta ${result.negotiation.response_date}`)}catch(error){flash(`No se pudo responder: ${error.message}`)}
@@ -608,17 +676,47 @@ function handleShortcut(event){
  const key=String(event.key||'').toLowerCase()
  const routes={i:'home',p:'squad',t:'tactics',m:'market',f:'staff',g:'competitions',a:'calendar',n:'news',e:'economy',s:'national',h:'history',r:'career'}
  if(key==='c'||key===' '){event.preventDefault();advance()}
- else if(routes[key])view.value=routes[key]
+ else if(routes[key])navigateTo(routes[key])
 }
 const validViews=new Set(navigationGroups.flatMap(group=>group.items.map(item=>item.id)).concat(['match']))
 let syncingHistory=false
-function applyRouteFromLocation(){
+function replaceRoute(target){
+ syncingHistory=true;view.value=target;window.history.replaceState({view:target},'',`#${target}`);queueMicrotask(()=>{syncingHistory=false})
+}
+function reconcileRouteAfterCareerLoad(){
  const route=String(window.location.hash||'').replace(/^#/,'')
- if(route&&validViews.has(route)&&route!==view.value){syncingHistory=true;view.value=route;queueMicrotask(()=>{syncingHistory=false})}
+ if(liveMatch.value && liveMatch.value.status!=='finished'){
+  const minute=Number(liveMatch.value.minute||0)
+  if(minute>0 && !['match','tactics'].includes(route)){replaceRoute('match');flash('Partido recuperado tras recargar. Continúa desde el directo.');return}
+  if(minute===0 && !['match','tactics'].includes(route)){replaceRoute('match');flash('Previa recuperada tras recargar. Puedes revisar XI o táctica antes de empezar.');return}
+ }
+ if(route==='match' && !liveMatch.value){
+  if(lastMatchReport.value?.committed){liveMatch.value=lastMatchReport.value;replaceRoute('match');return}
+  replaceRoute('home');return
+ }
+ if(route && validViews.has(route))view.value=route
+}
+async function applyRouteFromLocation(){
+ const route=String(window.location.hash||'').replace(/^#/,'')
+ if(!route||!validViews.has(route)||route===view.value)return
+ if(matchActionBusy.value && liveMatch.value){replaceRoute('match');flash('Hay una acción de partido en curso.');return}
+ if(liveMatch.value && liveMatch.value.status!=='finished'){
+  const minute=Number(liveMatch.value.minute||0)
+  if(minute>0 && !['match','tactics'].includes(route)){replaceRoute('match');flash('El partido está en juego. Usa Directo, Táctica o Cambios hasta el final.');return}
+  if(minute===0 && !['match','tactics'].includes(route)){
+   syncingHistory=true
+   await cancelPreviewAndNavigate(route)
+   window.history.replaceState({view:route},'',`#${route}`)
+   queueMicrotask(()=>{syncingHistory=false})
+   return
+  }
+ }
+ syncingHistory=true;view.value=route;queueMicrotask(()=>{syncingHistory=false})
 }
 watch(selectedLeagueId,()=>{const league=selectedLeagueOption.value;selectedTeamId.value=league?.teams?.[0]?.source_id??null})
 watch(selectedCompetition,loadSelectedCompetitionTable)
 watch(careerId,()=>{if(careerId.value)loadSelectedCompetitionTable()})
+watch([marketQuery,marketPosition,marketFreeAgents,marketWatchedOnly],persistMarketWorkspace)
 watch(view,next=>{
  if(syncingHistory||!validViews.has(next))return
  const hash=`#${next}`
@@ -661,7 +759,7 @@ onBeforeUnmount(()=>{
       :club="controlledTeam"
       :season="careerSeason"
       :crest-url="historicalClubCrest(controlledTeamId)"
-      @navigate="view=$event"
+      @navigate="navigateTo"
       @new-career="openCareerSetup"
     />
     <div class="manager-main">
@@ -694,9 +792,13 @@ onBeforeUnmount(()=>{
       :current-board="currentBoard"
       :storylines="storylines"
       :rivalries="rivalries"
-      @navigate="view=$event"
+      :selection="selection"
+      :formation="formation"
+      :game-date="gameDate"
+      :lineup-dirty="lineupDirty"
+      @navigate="navigateTo"
       @start-live="startLive"
-      @simulate="simulateControlledMatch"
+      @continue="advance"
     />
 
     <SquadWorkspace
@@ -713,7 +815,7 @@ onBeforeUnmount(()=>{
       @toggle-listing="toggleTransferListing"
       @auto-select="autoSelectLineup"
       @save-selection="saveSelection"
-      @open-tactics="view='tactics'"
+      @open-tactics="goToTacticsFromSquad"
       @set-captain="appointCaptain"
       @respond-concern="respondDressingConcern"
       @discipline="disciplineSquadPlayer"
@@ -724,7 +826,7 @@ onBeforeUnmount(()=>{
       :staff="staffState"
       :reports="staffReports"
       @assign="assignStaffResponsibility"
-      @open-action="view=$event"
+      @open-action="navigateTo"
     />
 
     <TrainingWorkspace
@@ -734,6 +836,7 @@ onBeforeUnmount(()=>{
       @set-focus="setTrainingFocus"
       @set-recovery="setTrainingRecovery"
       @set-match-preparation="setMatchPreparation"
+      @open-staff="navigateTo('staff')"
     />
 
     <TacticsWorkspace
@@ -752,6 +855,13 @@ onBeforeUnmount(()=>{
       :briefing="matchBriefing"
       :players="lineupDraftPlayers"
       :live="Boolean(liveMatch)"
+      :live-status="liveMatch?.status || ''"
+      :live-minute="Number(liveMatch?.minute || 0)"
+      :next-match="nextMatch"
+      :game-date="gameDate"
+      :selection="selection"
+      :busy="matchActionBusy"
+      :controlled-team-id="controlledTeamId"
       @update:formation="formation=$event"
       @update:mentality="mentality=$event"
       @update:tempo="tempo=$event"
@@ -767,6 +877,8 @@ onBeforeUnmount(()=>{
       @set-opposition-instruction="setOppositionInstruction"
       @set-piece-taker="setSetPieceTaker"
       @apply-live="applyLiveTactics"
+      @open-squad="cancelPreviewAndNavigate('squad')"
+      @start-live="startLive"
     />
 
     <LiveMatchWorkspace
@@ -779,13 +891,18 @@ onBeforeUnmount(()=>{
       :outgoing-id="liveOutgoingId"
       :incoming-id="liveIncomingId"
       :league-name="controlledTeam.league?.name || ''"
+      :busy="matchActionBusy"
+      :dashboard="managerDashboard"
+      :next-match="nextMatch"
       @update:outgoing-id="liveOutgoingId=$event"
       @update:incoming-id="liveIncomingId=$event"
       @advance="advanceLive"
       @chance="advanceToChance"
+      @simulate="simulateFromPreview"
       @close="closeLiveMatch"
       @substitute="makeLiveSubstitution"
       @open-tactics="view='tactics'"
+      @edit-lineup="cancelPreviewAndNavigate('squad')"
       @back="view='home'"
     />
 
@@ -925,7 +1042,7 @@ onBeforeUnmount(()=>{
       :board-class="boardClass"
       :format-date="formatDateShort"
       @open-player="openPlayer"
-      @navigate="view=$event"
+      @navigate="navigateTo"
       @accept-job="acceptManagerJob"
       @board-request="requestBoardProject"
     />
@@ -951,17 +1068,34 @@ onBeforeUnmount(()=>{
       :manager-career="userManager"
     />
 
+    <ChampionsWorkspace
+      v-else-if="view==='champions'"
+      :honours="historyState.honours||[]"
+      :season-recaps="historyState.season_recaps||[]"
+      :crest-for="historicalClubCrest"
+    />
+
     <CalendarWorkspace
       v-else-if="view==='calendar'"
       :matches="matches"
       :preseason="preseason"
       :market-period="marketPeriod"
+      :calendar-state="managerDashboard.calendar_context || {}"
       :format-date="formatDateShort"
     />
   </main>
     </div>
   </div>
 
+  <SeasonEndOverlay
+    v-if="seasonEndRecap"
+    :recap="seasonEndRecap"
+    :crest-for="historicalClubCrest"
+    @close="seasonEndRecap=null"
+    @open-champions="view='champions';seasonEndRecap=null"
+    @open-history="view='history';seasonEndRecap=null"
+    @open-workspace="navigateTo($event);seasonEndRecap=null"
+  />
   <FootballPlayerProfileModal v-if="selectedPlayer" :player="selectedPlayer" :season="careerSeason" :tab="playerTab" @update:tab="playerTab=$event" @promise-role="promisePlayerRole" @scout-player="scoutMarketPlayer" @close="selectedPlayer=null" />
   <div v-if="notice" class="notice" role="status">{{notice}}</div>
   </template>

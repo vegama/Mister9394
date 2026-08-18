@@ -15,10 +15,13 @@ const props = defineProps({
   identity: { type: Object, default: () => ({}) },
   players: { type: Array, default: () => [] },
   live: { type: Boolean, default: false },
+  liveStatus: { type: String, default: '' }, liveMinute: { type: Number, default: 0 },
   plan: { type: Object, default: () => ({build_up:'balanced',final_third:'mixed',transition:'balanced',familiarity:{},individual_instructions:[],opposition_instructions:[],set_piece_takers:{}}) },
   briefing: { type: Object, default: null },
+  nextMatch: { type: Object, default: null }, gameDate: { type: String, default: '' },
+  selection: { type: Object, default: () => ({valid:false,starter_ids:[]}) }, busy: { type: Boolean, default: false }, controlledTeamId: { type: Number, default: 0 },
 })
-const emit = defineEmits(['update:formation','update:mentality','update:tempo','update:pressing','update:directness','update:defensiveLine','update:marking','update:width','update:offsideTrap','save','apply-live','save-phase','set-player-instruction','set-opposition-instruction','set-piece-taker'])
+const emit = defineEmits(['update:formation','update:mentality','update:tempo','update:pressing','update:directness','update:defensiveLine','update:marking','update:width','update:offsideTrap','save','apply-live','save-phase','set-player-instruction','set-opposition-instruction','set-piece-taker','open-squad','start-live'])
 
 const pct = value => { const n=Number(value||0); return `${n>0?'+':''}${Math.round(n*100)}%` }
 const fitRows = computed(() => props.players.map(p => ({
@@ -33,6 +36,10 @@ const averageFit = computed(() => {
 })
 const weakFits = computed(() => fitRows.value.filter(p=>p.fit>0 && p.fit<62).sort((a,b)=>a.fit-b.fit).slice(0,3))
 const fitTone = value => value==null?'neutral':value>=78?'good':value>=62?'watch':'risk'
+const isMatchDay = computed(() => Boolean(props.nextMatch?.date && props.gameDate && String(props.nextMatch.date)===String(props.gameDate)))
+const selectionReady = computed(() => Boolean(props.selection?.valid && (props.selection?.starter_ids || []).length===11))
+const atHalftime = computed(() => props.live && props.liveStatus==='halftime')
+const opponentName = computed(() => props.briefing?.opponent?.team_name || (Number(props.nextMatch?.home_team_id||0)===Number(props.controlledTeamId) ? props.nextMatch?.away_team : props.nextMatch?.home_team) || 'Próximo rival')
 const instructionFor = id => (props.plan?.individual_instructions || []).find(row=>Number(row.player_id)===Number(id)) || {duty:'support',freedom:'balanced',pressing:'normal'}
 function updateIndividual(player,key,value){
  const current=instructionFor(player.id)
@@ -47,6 +54,13 @@ function updateOpposition(player,key,value){
 
 <template>
   <section class="screen-grid tactics-screen redesigned-tactics">
+    <div v-if="!live" class="match-prep-flow" aria-label="Flujo de preparación de partido">
+      <button type="button" class="prep-step done" @click="emit('open-squad')"><small>1 · XI</small><strong>{{selectionReady?'Listo':'Revisar'}}</strong><span>{{selectionReady?'✓':'→'}}</span></button>
+      <div class="prep-step current"><small>2 · TÁCTICA</small><strong>{{formation}}</strong><span>Ahora</span></div>
+      <button type="button" class="prep-step" :class="{done:isMatchDay && selectionReady}" :disabled="!isMatchDay || !selectionReady || busy" @click="emit('start-live')"><small>3 · PREVIA</small><strong>{{isMatchDay?'Abrir partido':'Esperando día de partido'}}</strong><span>{{isMatchDay&&selectionReady?'→':'·'}}</span></button>
+      <div class="prep-opponent"><small>PRÓXIMO RIVAL</small><strong>{{opponentName}}</strong><span>{{isMatchDay?'Hoy':(nextMatch?.date || 'Sin fecha')}}</span></div>
+    </div>
+    <div v-else class="match-prep-flow live-plan-flow"><div class="prep-step current"><small>{{atHalftime?'DESCANSO':`PARTIDO · ${liveMinute}'`}}</small><strong>{{atHalftime?'Plan para la 2ª parte':'Ajuste táctico'}}</strong><span>{{formation}}</span></div><div class="prep-opponent"><small>EFECTO</small><strong>{{atHalftime?'Se aplicará al reanudar':'Se aplica al directo'}}</strong><span>Vuelve al banquillo al confirmar</span></div></div>
     <article class="football-panel tactics-board-panel">
       <header class="panel-feature-head compact-head"><div><small>MODELO DE JUEGO</small><h2>{{ identity.formation_label || 'Plan de partido' }}</h2><p>El once y la estructura se leen de un vistazo antes de tocar una orden.</p></div></header>
       <div class="formation-switcher"><button v-for="f in ['4-4-2','4-3-3','4-2-3-1','4-5-1','4-4-1-1','4-3-1-2','4-2-4','3-5-2','3-4-3','3-4-1-2','5-3-2','5-4-1','5-2-3']" :key="f" type="button" :class="{active:formation===f}" @click="emit('update:formation',f)">{{f}}</button></div>
@@ -101,6 +115,7 @@ function updateOpposition(player,key,value){
       <article v-if="briefing" class="opposition-layer">
         <header><span><small>PREPARACIÓN DEL RIVAL</small><strong>{{briefing.opponent?.team_name}}</strong></span><em>{{briefing.report?.assignee_name || 'Cuerpo técnico'}} · {{briefing.report?.quality_label || '—'}}</em></header>
         <p>{{briefing.recommendation}}</p>
+        <div v-if="(briefing.own_absences||[]).length" class="own-absence-strip"><small>TUS BAJAS</small><span v-for="row in briefing.own_absences" :key="row.player_id"><b>{{row.name}}</b><em>{{row.status}}</em></span></div>
         <div class="opposition-order-row" v-for="p in briefing.threats || []" :key="p.player_id">
           <span><b>{{p.name}}</b><small>{{p.position}} · {{p.identity}} · nivel {{p.level_range?.join('–')}}</small></span>
           <label><input type="checkbox" :checked="oppositionFor(p.player_id).tight_mark" @change="updateOpposition(p,'tight_mark',$event.target.checked)"> Marcaje estrecho</label>
@@ -113,11 +128,12 @@ function updateOpposition(player,key,value){
         <header><small>QUIÉN EJECUTA EL PLAN</small><strong>El sistema depende de los futbolistas</strong></header>
         <div class="tactical-player-fit-list"><span v-for="p in fitRows" :key="p.id" :class="fitTone(p.fit)"><b>{{p.name}}</b><small>{{p.pos}} · {{p.role}}</small><em>{{p.fit?`${p.fit}/100`:'sin evaluar'}}</em></span></div>
       </article>
-      <div class="tactics-footer"><p>La táctica modifica comportamientos y riesgos; un plan exigente sólo funciona si el once tiene perfiles compatibles para ejecutarlo.</p><div><button type="button" class="football-button primary" @click="emit('save')">Guardar táctica</button><button v-if="live" type="button" class="football-button" @click="emit('apply-live')">Aplicar en directo</button></div></div>
+      <div class="tactics-footer"><p>La táctica modifica comportamientos y riesgos; un plan exigente sólo funciona si el once tiene perfiles compatibles para ejecutarlo.</p><div><button v-if="!live" type="button" class="football-button" @click="emit('open-squad')">← Revisar XI</button><button v-if="!live" type="button" class="football-button" :disabled="busy" @click="emit('save')">Guardar táctica</button><button v-if="!live && isMatchDay" type="button" class="football-button primary" :disabled="busy || !selectionReady" @click="emit('start-live')">{{busy?'Preparando…':'Guardar e ir a la previa'}} →</button><button v-if="live" type="button" class="football-button primary" :disabled="busy" @click="emit('apply-live')">{{busy?'Aplicando…':atHalftime?'Aplicar para la 2ª parte →':'Aplicar y volver al partido →'}}</button></div></div>
     </article>
   </section>
 </template>
 
 <style scoped>
-.nf4-phase-plan,.individual-orders-layer,.set-piece-layer,.opposition-layer{margin-top:14px;padding:14px;border:1px solid var(--line,#d7dde6);border-radius:10px;background:var(--surface-soft,#f7f8fa)}.nf4-phase-plan header,.individual-orders-layer header,.set-piece-layer header,.opposition-layer header{display:flex;justify-content:space-between;gap:12px;margin-bottom:10px}.nf4-phase-plan header span,.individual-orders-layer header,.set-piece-layer header{display:grid}.nf4-phase-plan small,.individual-orders-layer small,.set-piece-layer small,.opposition-layer small{font-size:10px;color:var(--text-soft,#687386)}.phase-plan-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.phase-plan-grid label{display:grid;gap:5px}.phase-plan-grid select,.individual-order-row select,.opposition-order-row select{min-height:34px}.familiarity-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:10px}.familiarity-strip span{display:grid;padding:8px;background:var(--surface,#fff);border-radius:7px}.individual-order-row,.opposition-order-row{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:8px;align-items:center;padding:7px 0;border-top:1px solid var(--line,#d7dde6)}.individual-order-row>span,.opposition-order-row>span{display:grid}.opposition-layer p{color:var(--text-soft,#687386);font-size:11px}.opposition-order-row label{font-size:11px}.opposition-order-row{grid-template-columns:1.5fr .8fr .7fr .8fr}@media(max-width:1000px){.phase-plan-grid,.familiarity-strip{grid-template-columns:1fr 1fr}.individual-order-row,.opposition-order-row{grid-template-columns:1fr 1fr}}
+.nf4-phase-plan,.individual-orders-layer,.set-piece-layer,.opposition-layer{margin-top:14px;padding:14px;border:1px solid var(--line,#d7dde6);border-radius:10px;background:var(--surface-soft,#f7f8fa)}.nf4-phase-plan header,.individual-orders-layer header,.set-piece-layer header,.opposition-layer header{display:flex;justify-content:space-between;gap:12px;margin-bottom:10px}.nf4-phase-plan header span,.individual-orders-layer header,.set-piece-layer header{display:grid}.nf4-phase-plan small,.individual-orders-layer small,.set-piece-layer small,.opposition-layer small{font-size:11px;color:var(--text-soft,#687386)}.phase-plan-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.phase-plan-grid label{display:grid;gap:5px}.phase-plan-grid select,.individual-order-row select,.opposition-order-row select{min-height:34px}.familiarity-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:10px}.familiarity-strip span{display:grid;padding:8px;background:var(--surface,#fff);border-radius:7px}.individual-order-row,.opposition-order-row{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:8px;align-items:center;padding:7px 0;border-top:1px solid var(--line,#d7dde6)}.individual-order-row>span,.opposition-order-row>span{display:grid}.opposition-layer p{color:var(--text-soft,#687386);font-size:11px}.opposition-order-row label{font-size:11px}.opposition-order-row{grid-template-columns:1.5fr .8fr .7fr .8fr}.own-absence-strip{display:flex;gap:7px;flex-wrap:wrap;padding:8px 0 10px}.own-absence-strip>small{width:100%;font-weight:900}.own-absence-strip>span{display:grid;padding:7px 9px;border-radius:7px;background:var(--surface,#fff)}.own-absence-strip em{font-size:11px;font-style:normal;color:var(--text-soft,#687386)}@media(max-width:1000px){.phase-plan-grid,.familiarity-strip{grid-template-columns:1fr 1fr}.individual-order-row,.opposition-order-row{grid-template-columns:1fr 1fr}}
+.match-prep-flow{grid-column:1/-1;display:grid;grid-template-columns:repeat(3,minmax(130px,1fr)) minmax(190px,1.2fr);gap:8px}.prep-step,.prep-opponent{display:grid;grid-template-columns:1fr auto;gap:2px 8px;align-items:center;padding:10px 12px;border:1px solid var(--line,#d7dde6);border-radius:9px;background:var(--surface,#fff);text-align:left}.prep-step{cursor:pointer}.prep-step:disabled{cursor:not-allowed;opacity:.62}.prep-step small,.prep-opponent small{grid-column:1/-1;font-size:11px;font-weight:900;letter-spacing:.08em;color:var(--text-soft,#687386)}.prep-step strong,.prep-opponent strong{font-size:12px}.prep-step span,.prep-opponent span{font-size:11px;color:var(--text-soft,#687386)}.prep-step.current{border-width:2px}.prep-step.done>span{font-weight:900}.live-plan-flow{grid-template-columns:1fr 1fr}.tactics-footer>div{display:flex;gap:7px;flex-wrap:wrap;justify-content:flex-end}@media(max-width:1000px){.match-prep-flow{grid-template-columns:1fr 1fr}}
 </style>

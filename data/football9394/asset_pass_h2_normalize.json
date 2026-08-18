@@ -1,0 +1,16 @@
+{
+  "status": "complete",
+  "target_size": [
+    40,
+    55
+  ],
+  "format": "JPEG",
+  "mode": "RGB",
+  "converted": 0,
+  "skipped_existing": 385,
+  "unresolved": 0,
+  "invalid": 0,
+  "converted_rows": [],
+  "unresolved_files": [],
+  "invalid_files": []
+}

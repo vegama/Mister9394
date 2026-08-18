@@ -13,15 +13,24 @@ from datetime import date, datetime, timedelta, timezone
 from random import Random
 import json
 from pathlib import Path
+from time import perf_counter
 from typing import Any
 from uuid import uuid4
 
-from .career_market import estimated_transfer_value, initial_finances, matchday_income, negotiate_transfer
+from .career_market import estimated_transfer_value, matchday_income, negotiate_transfer
 from .career_economy import (
+    annual_wage_commitment,
     apply_monthly_club_finances,
     effective_contract,
     inferred_annual_salary,
     initial_club_finances,
+    grant_transfer_budget,
+    merge_finances_with_peseta_baseline,
+    receive_transfer_funds,
+    refresh_season_transfer_budget,
+    spend_transfer_funds,
+    transfer_spending_power,
+    wage_budget_headroom,
 )
 from .career_ai import renew_ai_contracts, run_ai_transfer_window, squad_audit, ensure_ai_squad_coverage
 from .career_international import generated_international_windows_9394, simulate_generated_friendlies
@@ -50,7 +59,7 @@ from .spain_runtime import _play_primera_segunda_tie
 from .spain_segunda_b_runtime import _play_promotion_group
 from .team_builder import build_snapshot_team_sheet, footballer_from_snapshot
 from .live_match import LiveMatchEngine9394
-from .career_performance import ensure_performance_state, record_managed_match, archive_managed_season
+from .career_performance import ensure_performance_state, record_managed_match, archive_managed_season, match_ratings_for_side
 from .career_market_flow import ensure_market_flow_state, market_flags, new_negotiation, resubmit_negotiation
 from .career_finance_view import economy_snapshot
 from .career_board import evaluate_board, apply_board_review
@@ -88,6 +97,7 @@ from .career_memory import (
 from .manager_market import ensure_manager_market_state, pressure_score, choose_replacement, register_manager_change
 from .career_storylines import ensure_storyline_state, refresh_storylines, storyline_snapshot
 from .career_records import ensure_record_state, update_after_controlled_match as update_career_records_after_match, reset_season_streaks, records_snapshot
+from .career_history import ensure_history_dossiers, build_season_dossier
 from .user_manager_career import ensure_user_manager_state, manager_profile_snapshot, update_reputation_after_match, close_current_tenure, open_new_tenure, set_job_offers, accept_offer as accept_user_manager_offer
 from .career_professional import (
     ensure_professional_state, professional_snapshot, update_country_reputation, adjust_club_relationship,
@@ -95,7 +105,7 @@ from .career_professional import (
 )
 from .board_project import ensure_board_project, update_board_project, submit_board_request, project_snapshot, register_sale_income
 from .information_world import ensure_information_state, register_information_event, process_information_day, information_snapshot, add_reaction
-from .economy_longitudinal import ensure_longitudinal_economy, monthly_revenue_mix, post as post_long_economy, season_prize_money, financial_health, longitudinal_snapshot, register_structural_event
+from .economy_longitudinal import ensure_longitudinal_economy, post as post_long_economy, season_prize_money, financial_health, longitudinal_snapshot, register_structural_event
 from .dressing_room import (ensure_dressing_room_state, update_after_match as update_dressing_room_after_match, dressing_room_snapshot, set_captain as set_dressing_room_captain, set_role_promise as set_dressing_room_role_promise, role_promise_api, close_role_promises_on_manager_exit, register_important_departure, register_important_injury, register_return_from_injury, reencounters_for_opponent, register_new_signing, register_contract_decision, respond_to_concern as respond_dressing_concern, register_discipline as register_dressing_discipline)
 from .club_staff import club_staff_snapshot, assign_responsibility as assign_staff_responsibility, ensure_club_staff_state, responsibility_effectiveness
 from .scouting import ensure_scouting_state, external_player_view, process_scouting_day, scouting_snapshot as build_scouting_snapshot, start_scouting, scouting_geography
@@ -116,8 +126,9 @@ from .tactical_plan import (
 from .staff_reports import build_staff_reports
 from .match_analysis import live_player_performance, bench_advice, postmatch_diagnosis
 from .squad_planning import squad_plan_snapshot as build_squad_plan_snapshot
+from .longitudinal_health import AI_CONTRACT_LOG_LIMIT, ensure_longitudinal_health_state, finalize_summer_transition
 
-CAREER_SCHEMA_9394 = 22
+CAREER_SCHEMA_9394 = 23
 RULES_POLICY_FROZEN_9394 = "frozen_1993_94"
 CAREER_START_DATE_9394 = date(1993, 10, 23)
 CAREER_PRESEASON_START_9394 = date(1993, 7, 1)
@@ -154,10 +165,12 @@ def career_selectable_leagues(universe: FootballUniverseSnapshot9394 | None = No
         ranked = sorted(players, key=lambda player: -int(player.get("overall") or player.get("category") or 0))
         core = ranked[:11]
         average = round(sum(int(player.get("overall") or player.get("category") or 60) for player in core) / max(1, len(core)), 1)
+        finance_preview = initial_club_finances(team, players=players)
         return {
             "source_id": tid, "name": team.get("name"), "long_name": team.get("long_name"),
             "initials": team.get("initials"), "squad_size": len(players), "average_top_11": average,
-            "members": team.get("members"), "budget": team.get("budget"), "debt": team.get("debt"),
+            "members": team.get("members"), "budget": finance_preview["transfer_budget_total"],
+            "source_budget": finance_preview["source_budget"], "currency": "ESP", "debt": team.get("debt"),
             "stadium_id": team.get("stadium_id"), "previous_position": team.get("league_position"),
             "top_players": [
                 {"id": int(player["source_id"]), "name": player.get("display_name"),
@@ -239,9 +252,17 @@ class _CareerUniverseView:
     make a quota-legal XI impossible, an AI club may risk one of its own
     injured players rather than violate competition rules or crash the world.
     """
-    def __init__(self, runtime: "ManagerCareerRuntime9394", *, include_injured: bool = False):
+    def __init__(self, runtime: "ManagerCareerRuntime9394", *, include_injured: bool = False, exclude_league_suspended: bool = False):
         self.runtime = runtime
-        self.players_by_team = runtime._career_players_by_team if include_injured else runtime._match_players_by_team
+        base = runtime._career_players_by_team if include_injured else runtime._match_players_by_team
+        if exclude_league_suspended:
+            dev = runtime.state.get("player_development") or {}
+            self.players_by_team = {
+                int(team_id): [row for row in rows if int((dev.get(str(int(row.get("source_id") or 0))) or {}).get("league_suspension_matches") or 0) <= 0]
+                for team_id, rows in base.items()
+            }
+        else:
+            self.players_by_team = base
 
     def team(self, team_id: int):
         return self.runtime._team_api(team_id)
@@ -286,7 +307,7 @@ class ManagerCareerRuntime9394:
         self.state.setdefault("contract_overrides", {})
         self.state.setdefault("transfer_history", [])
         team = self.universe.team(int(self.state["team_id"])) or {}
-        self.state.setdefault("finances", initial_finances(team))
+        self.state.setdefault("finances", initial_club_finances(team, players=list(self.universe.players_by_team.get(int(self.state["team_id"]), ()))))
         self.state.setdefault("economy_ledger", [])
         self.state.setdefault("age_policy", AGE_POLICY_FROZEN)
         # Product rule: the 1993-94 regulatory environment is permanent.
@@ -310,6 +331,7 @@ class ManagerCareerRuntime9394:
         self.state.setdefault("board_warning_count", 0)
         self.state.setdefault("job_status", "active")
         self.state.setdefault("season_recaps", [])
+        self.state.setdefault("season_dossiers", [])
         self.state.setdefault("club_strategy", {})
         self.state.setdefault("ai_squad_audits", [])
         self.state.setdefault("preseason_friendlies", [])
@@ -329,9 +351,11 @@ class ManagerCareerRuntime9394:
         ensure_storyline_state(self.state)
         ensure_record_state(self.state)
         ensure_user_manager_state(self.state)
+        ensure_history_dossiers(self.state)
         ensure_professional_state(self.state, team=team)
         ensure_information_state(self.state)
         ensure_longitudinal_economy(self.state)
+        ensure_longitudinal_health_state(self.state)
         ensure_dressing_room_state(self.state)
         ensure_tactical_memory_state(self.state)
         ensure_international_manager_state(self.state)
@@ -365,13 +389,17 @@ class ManagerCareerRuntime9394:
             self.state["league_id"] = int(league.get("source_id") or 1)
         club_finances = self.state.setdefault("club_finances", {})
         for club in self.universe.payload.get("teams", []):
-            tid = str(int(club["source_id"]))
-            baseline = initial_club_finances(club)
-            existing = club_finances.get(tid)
-            club_finances[tid] = {**baseline, **(existing or {})}
+            club_id = int(club["source_id"])
+            tid = str(club_id)
+            baseline = initial_club_finances(club, players=list(self.universe.players_by_team.get(club_id, ())))
+            club_finances[tid] = merge_finances_with_peseta_baseline(baseline, club_finances.get(tid))
         controlled_key = str(int(self.state["team_id"]))
-        # Migrate v1/v2 saves: the user's richer ledger remains authoritative.
-        club_finances[controlled_key] = {**club_finances.get(controlled_key, {}), **(self.state.get("finances") or {})}
+        # Migrate previous saves: the user's ledger/cash remains authoritative,
+        # while H1 adds the explicit peseta budget envelopes.
+        controlled_team = self.universe.team(int(self.state["team_id"])) or {}
+        controlled_baseline = initial_club_finances(controlled_team, players=list(self.universe.players_by_team.get(int(self.state["team_id"]), ())))
+        controlled_existing = {**club_finances.get(controlled_key, {}), **(self.state.get("finances") or {})}
+        club_finances[controlled_key] = merge_finances_with_peseta_baseline(controlled_baseline, controlled_existing)
         self.state["finances"] = club_finances[controlled_key]
 
     def _teams_for_league(self, league_id: int) -> list[dict[str, Any]]:
@@ -527,7 +555,7 @@ class ManagerCareerRuntime9394:
             "completed_matchday": 0, "results": [], "tactics": _default_tactics(),
             "player_development": initial_player_development(universe.payload.get("players", [])),
             "player_team_overrides": {}, "contract_overrides": {}, "transfer_history": [],
-            "finances": initial_finances(team), "economy_ledger": [],
+            "finances": initial_club_finances(team, players=list(universe.players_by_team.get(int(team_id), ()))), "economy_ledger": [],
             "age_policy": (AGE_POLICY_DYNAMIC if str(age_policy) == AGE_POLICY_DYNAMIC else AGE_POLICY_FROZEN),
             "rules_policy": RULES_POLICY_FROZEN_9394,
             "created_at": datetime.now(timezone.utc).isoformat(), "updated_at": datetime.now(timezone.utc).isoformat(),
@@ -682,6 +710,70 @@ class ManagerCareerRuntime9394:
         self._strength_cache[team_id] = value
         return value
 
+    def _league_yellow_cycle(self, team_id: int) -> int:
+        league_id=self._current_league_for_team(int(team_id))
+        league=self.universe.leagues_by_id.get(int(league_id)) if league_id is not None else None
+        return max(1,int((league or {}).get("yellow_card_cycle") or 5))
+
+    def _league_suspension_ids(self, team_id: int) -> set[int]:
+        dev=self.state.get("player_development") or {}
+        return {
+            int(row["source_id"]) for row in self._career_players_by_team.get(int(team_id),[])
+            if int((dev.get(str(int(row["source_id"]))) or {}).get("league_suspension_matches") or 0)>0
+        }
+
+    def _selection_fixture_kind(self) -> str:
+        fixture=self.pending_world_fixture() or self.next_scheduled_fixture()
+        return str((fixture or {}).get("fixture_type") or "league")
+
+    def _controlled_absences_for_fixture(self, fixture: dict[str, Any] | None = None) -> list[dict[str, Any]]:
+        """One canonical availability story for every pre-match surface.
+
+        Injury always wins over suspension as the immediate reason a footballer
+        cannot be selected.  League suspensions only apply to league fixtures;
+        cup/friendly screens must not make a player look globally unavailable.
+        """
+        controlled=int(self.state["team_id"]); fixture=fixture or self.next_scheduled_fixture()
+        is_league=str((fixture or {}).get("fixture_type") or "league")=="league"
+        rows=[]
+        for raw in self._career_players_by_team.get(controlled, []):
+            if raw.get("retired"): continue
+            pid=int(raw.get("source_id") or 0); dev=(self.state.get("player_development") or {}).get(str(pid)) or {}
+            injury_days=int(dev.get("injury_days") or 0); suspension=int(dev.get("league_suspension_matches") or 0)
+            if injury_days>0:
+                api=self._career_player_api(raw); medical=api.get("medical") or {}; current=medical.get("current_injury") or {}
+                name=str(current.get("name") or "Lesión")
+                rows.append({"player_id":pid,"name":api.get("display_name") or self._player_name(pid),"kind":"injury","status":f"{name} · {injury_days} d","detail":f"Baja médica estimada: {injury_days} días.","days":injury_days})
+            elif is_league and suspension>0:
+                reason=str(dev.get("league_suspension_reason") or "Sanción disciplinaria")
+                rows.append({"player_id":pid,"name":self._player_name(pid),"kind":"suspension","status":f"Sancionado (liga) · {suspension} partido"+("s" if suspension!=1 else ""),"detail":reason,"matches":suspension})
+        return rows
+
+    def calendar_context_snapshot(self, fixture: dict[str, Any] | None = None) -> dict[str, Any]:
+        """Describe calendar edge states without inventing an opponent or date."""
+        fixture=self.next_scheduled_fixture() if fixture is None else fixture
+        if not fixture:
+            completed=int(self.state.get("completed_matchday") or 0)
+            total=int(self._controlled_total_rounds())
+            if completed>=total and total>0:
+                return {"state":"season_complete","label":"Calendario completado","detail":"No quedan jornadas oficiales por disputar en esta temporada.","availability_count":0}
+            return {"state":"empty","label":"Sin partido programado","detail":"No hay fecha ni rival confirmados. El juego puede continuar hasta que aparezca el siguiente compromiso.","availability_count":0}
+        home=int(fixture.get("home_team_id") or 0); away=int(fixture.get("away_team_id") or 0); controlled=int(self.state["team_id"])
+        opponent=away if home==controlled else home if away==controlled else 0
+        absences=self._controlled_absences_for_fixture(fixture)
+        if bool(fixture.get("postponed")) or str(fixture.get("schedule_status") or "").lower()=="postponed":
+            return {"state":"postponed","label":"Partido aplazado","detail":"El encuentro no tiene una nueva fecha confirmada todavía.","fixture_id":fixture.get("id"),"availability_count":len(absences),"availability":absences}
+        if opponent<=0:
+            return {"state":"opponent_pending","label":"Rival por confirmar","detail":"La fecha existe, pero el rival aún no está determinado.","fixture_id":fixture.get("id"),"date":fixture.get("date"),"availability_count":len(absences),"availability":absences}
+        return {"state":"scheduled","label":"Próximo partido confirmado","detail":f"{self._team_name(opponent)} · {fixture.get('date') or 'fecha pendiente'}","fixture_id":fixture.get("id"),"date":fixture.get("date"),"opponent_id":opponent,"opponent_name":self._team_name(opponent),"availability_count":len(absences),"availability":absences}
+
+    def _eligible_match_rows(self, team_id: int, *, competition_kind: str | None = None, include_injured: bool = False) -> list[dict[str,Any]]:
+        rows=list((self._career_players_by_team if include_injured else self._match_players_by_team).get(int(team_id),[]))
+        if competition_kind=="league":
+            suspended=self._league_suspension_ids(int(team_id))
+            rows=[row for row in rows if int(row.get("source_id") or 0) not in suspended]
+        return rows
+
     def _auto_selection(self) -> dict[str, list[int]]:
         tactics = FootballTactics9394(**{**_default_tactics(), **(self.state.get("tactics") or {})})
         controlled=int(self.state["team_id"]);rule=self._domestic_foreign_rule(controlled)
@@ -689,7 +781,9 @@ class ManagerCareerRuntime9394:
             row,home_country_id=rule.home_country_id,continental=False,
             domestic_equivalent_country_ids=rule.domestic_equivalent_country_ids,
         )) if rule is not None else None
-        sheet = build_snapshot_team_sheet(self._career_universe, controlled, tactics=tactics,foreign_predicate=predicate,max_foreign_starters=(rule.max_starting if rule else None),max_foreign_squad=(rule.max_squad if rule else None))
+        kind=self._selection_fixture_kind()
+        universe_view=_CareerUniverseView(self,exclude_league_suspended=(kind=="league"))
+        sheet = build_snapshot_team_sheet(universe_view, controlled, tactics=tactics,foreign_predicate=predicate,max_foreign_starters=(rule.max_starting if rule else None),max_foreign_squad=(rule.max_squad if rule else None))
         return {"starter_ids": [int(p.id) for p in sheet.starters], "bench_ids": [int(p.id) for p in sheet.bench]}
 
     def _safe_auto_selection(self) -> dict[str, list[int]]:
@@ -702,7 +796,7 @@ class ManagerCareerRuntime9394:
         try:
             return self._auto_selection()
         except ValueError:
-            players=sorted(self._match_players_by_team.get(int(self.state["team_id"]), []), key=lambda p:(-int(p.get("overall") or p.get("category") or 0),int(p.get("source_id") or 0)))
+            players=sorted(self._eligible_match_rows(int(self.state["team_id"]),competition_kind=self._selection_fixture_kind()), key=lambda p:(-int(p.get("overall") or p.get("category") or 0),int(p.get("source_id") or 0)))
             chosen=players[:LAWS_1993_94.players_per_team]
             if chosen and not any(role_for_player(p).squad_slot=="GK" for p in chosen):
                 keeper=next((p for p in players if role_for_player(p).squad_slot=="GK"),None)
@@ -736,6 +830,7 @@ class ManagerCareerRuntime9394:
         ensure_professional_state(self.state, team=team)
         ensure_information_state(self.state)
         ensure_longitudinal_economy(self.state)
+        ensure_longitudinal_health_state(self.state)
         economy = self.economy_snapshot()
         staff = self.staff_snapshot()
         expectation = self.state.get("board_expectation") or self._board_expectation()
@@ -784,11 +879,13 @@ class ManagerCareerRuntime9394:
         bench_ids = [int(x) for x in raw.get("bench_ids") or []]
         available = {int(p["source_id"]): p for p in self._match_players_by_team.get(controlled, [])}
         owned = {int(p["source_id"]): p for p in self._career_players_by_team.get(controlled, [])}
+        suspended=self._league_suspension_ids(controlled) if self._selection_fixture_kind()=="league" else set()
         issues: list[str] = []; warnings: list[str] = []
         if len(starter_ids) != LAWS_1993_94.players_per_team: issues.append("El once debe tener exactamente 11 jugadores.")
         if len(starter_ids) != len(set(starter_ids)): issues.append("Hay jugadores repetidos en el once.")
         if any(pid not in owned for pid in starter_ids + bench_ids): issues.append("La convocatoria contiene un jugador que no pertenece al club.")
         if any(pid not in available for pid in starter_ids + bench_ids): issues.append("La convocatoria contiene un jugador lesionado o no disponible.")
+        if any(pid in suspended for pid in starter_ids + bench_ids): issues.append("La convocatoria contiene un jugador sancionado para el próximo partido de liga.")
         if len(bench_ids) > LAWS_1993_94.max_named_substitutes: issues.append(f"Sólo se pueden nombrar {LAWS_1993_94.max_named_substitutes} suplentes.")
         if len(set(starter_ids + bench_ids)) != len(starter_ids + bench_ids): issues.append("Un jugador no puede ser titular y suplente a la vez.")
         if starter_ids and not any(role_for_player(owned.get(pid, {})).squad_slot == "GK" for pid in starter_ids): issues.append("El once necesita portero.")
@@ -816,7 +913,7 @@ class ManagerCareerRuntime9394:
     def set_selection(self, starter_ids: list[int], bench_ids: list[int] | None = None) -> dict[str, Any]:
         starters = [int(x) for x in starter_ids]
         if bench_ids is None:
-            candidates = [int(p["source_id"]) for p in sorted(self._match_players_by_team.get(int(self.state["team_id"]), []), key=lambda p: -int(p.get("overall") or p.get("category") or 0)) if int(p["source_id"]) not in set(starters)]
+            candidates = [int(p["source_id"]) for p in sorted(self._eligible_match_rows(int(self.state["team_id"]),competition_kind=self._selection_fixture_kind()), key=lambda p: -int(p.get("overall") or p.get("category") or 0)) if int(p["source_id"]) not in set(starters)]
             bench = candidates[:LAWS_1993_94.max_named_substitutes]
         else:
             bench = [int(x) for x in bench_ids]
@@ -884,7 +981,7 @@ class ManagerCareerRuntime9394:
         self._update_board_project_state(board=board)
         request=submit_board_request(state=self.state,team_id=team_id,request_type=request_type,date_text=self.current_date.isoformat(),board_score=int(board.get("score") or 50),economy=economy)
         if request.get("status")=="accepted" and request_type=="extra_transfer_budget":
-            amount=int(request.get("amount") or 0); self.state["finances"]["cash"]=int(self.state["finances"].get("cash") or 0)+amount; self.state["club_finances"][str(team_id)]=self.state["finances"]
+            amount=int(request.get("amount") or 0); grant_transfer_budget(self.state["finances"],amount); self.state["club_finances"][str(team_id)]=self.state["finances"]
             self.state["economy_ledger"].append({"date":self.current_date.isoformat(),"kind":"board_injection","amount":amount})
             post_long_economy(self.state,team_id=team_id,season=str(self.state["season"]),category="board_injections",amount=amount)
         publish_news(self.state,key=f"board-request:{request['id']}",date=self.current_date.isoformat(),category="Club",importance=3 if request.get("status")=="accepted" else 2,headline=("El consejo respalda tu petición" if request.get("status")=="accepted" else "El consejo rechaza tu petición"),detail=str(request.get("reason") or ""),entity={"team_id":team_id})
@@ -1090,7 +1187,7 @@ class ManagerCareerRuntime9394:
         elif prep_focus=="attacking": recommendation="La preparación prioriza mecanismos ofensivos y último tercio."
         elif prep_focus=="defensive": recommendation="La preparación prioriza bloque, coberturas y control de pérdidas."
         elif prep_focus=="set_pieces": recommendation="El balón parado es el foco específico de la preparación."
-        return {"fixture":dict(fixture),"opponent":{"team_id":opponent,"team_name":self._team_name(opponent),"manager":self._coach_profile(opponent)},"report":report,"known_tactics":tactics,"threats":threats,"absences":absences[:8],"own_risk":own_risk[:6],"tactical_familiarity":tactical.get("familiarity"),"preparation_focus":prep_focus,"recommendation":recommendation}
+        return {"fixture":dict(fixture),"opponent":{"team_id":opponent,"team_name":self._team_name(opponent),"manager":self._coach_profile(opponent)},"report":report,"known_tactics":tactics,"threats":threats,"absences":absences[:8],"own_absences":self._controlled_absences_for_fixture(fixture)[:8],"own_risk":own_risk[:6],"tactical_familiarity":tactical.get("familiarity"),"preparation_focus":prep_focus,"recommendation":recommendation}
 
     def staff_reports_snapshot(self) -> dict[str, Any]:
         controlled=int(self.state["team_id"])
@@ -1118,10 +1215,13 @@ class ManagerCareerRuntime9394:
         created=[]
         for event in events:
             row=dict(event)
-            if row.get("kind")=="competition_completed" and not row.get("competition_name"):
+            if row.get("kind")=="competition_completed":
                 sid=int(row.get("source_id") or 0)
-                comp=next((c for c in self.universe.career_competitions() if int(c.get("source_id") or -1)==sid and c.get("kind")=="tournament"),None)
-                if comp: row["competition_name"]=comp.get("name")
+                preferred_kind=("tournament" if str(sid) in (self.state.get("daily_tournaments") or {}) else "league" if str(sid) in (self.state.get("special_competitions") or {}) else None)
+                comp=next((c for c in self.universe.career_competitions() if int(c.get("source_id") or -1)==sid and (preferred_kind is None or c.get("kind")==preferred_kind)),None)
+                if comp:
+                    row.setdefault("competition_name",comp.get("name"))
+                    row.setdefault("competition_kind",comp.get("kind"))
             published=ingest_news_events(self.state,[row],team_name=self._team_name,player_name=self._player_name)
             item=published[0] if published else None
             thread=register_information_event(self.state,row,headline=str((item or {}).get("headline") or ""),detail=str((item or {}).get("detail") or ""),news_id=(item or {}).get("id"))
@@ -1146,7 +1246,8 @@ class ManagerCareerRuntime9394:
         recent.reverse(); form_points = sum(3 if x == "V" else 1 if x == "E" else 0 for x in recent)
         form_label = "Sin partidos" if not recent else "Excelente" if form_points >= 11 else "Buena" if form_points >= 8 else "Irregular" if form_points >= 5 else "Mala"
         squad = self.squad(team_id); morale = round(sum(int(p.get("morale") or 70) for p in squad) / max(1, len(squad)))
-        unavailable = [p for p in squad if int(p.get("injury_days") or 0) > 0 or p.get("status") == "Retirado"]
+        next_is_league = self._selection_fixture_kind() == "league"
+        unavailable = [p for p in squad if int(p.get("injury_days") or 0) > 0 or p.get("status") == "Retirado" or (next_is_league and int(p.get("league_suspension_matches") or 0) > 0)]
         expectation = self.state.get("board_expectation") or self._board_expectation()
         board=self.board_snapshot(persist=False)
         confidence="A la espera" if not recent else board["label"]
@@ -1177,7 +1278,12 @@ class ManagerCareerRuntime9394:
         if career_offers: pending.append({"priority":"medium","kind":"career_offer","title":f"{len(career_offers)} propuesta{'s' if len(career_offers)!=1 else ''} de banquillo","detail":"Hay proyectos profesionales que requieren una decisión.","action":"career"})
         sale_pressure=((self.state.get("board_projects") or {}).get(str(team_id)) or {}).get("sale_pressure") or {}
         if sale_pressure.get("status")=="active": pending.append({"priority":"high","kind":"sale_pressure","title":"El consejo exige generar ingresos","detail":f"Quedan {int(sale_pressure.get('remaining') or 0):,} ptas. por cubrir antes del {sale_pressure.get('deadline')}.","action":"club"})
-        return {"position": own.get("position"), "team_count": len(table), "points": own.get("points", 0), "recent_form": recent, "form_label": form_label, "morale_average": morale, "unavailable_count": len(unavailable), "board_expectation": expectation, "board_confidence": confidence, "board":board, "pending_decisions": pending, "next_match": self.next_scheduled_fixture(), "preseason":self.preseason_snapshot(), "market_period":self.transfer_period_snapshot(), "club_status":self.club_status_snapshot()}
+        calendar_context=self.calendar_context_snapshot()
+        preseason=self.preseason_snapshot()
+        summer=dict(self.state.get("summer_briefing") or {})
+        if str(summer.get("season") or "")!=str(self.state.get("season") or "") or not preseason.get("active"):
+            summer={}
+        return {"position": own.get("position"), "team_count": len(table), "points": own.get("points", 0), "recent_form": recent, "form_label": form_label, "morale_average": morale, "unavailable_count": len(unavailable), "unavailable_players":calendar_context.get("availability") or [], "board_expectation": expectation, "board_confidence": confidence, "board":board, "pending_decisions": pending, "next_match": self.next_scheduled_fixture(), "calendar_context":calendar_context, "preseason":preseason, "market_period":self.transfer_period_snapshot(), "club_status":self.club_status_snapshot(), "summer_briefing":summer}
 
     def _coach_profile(self, team_id: int) -> dict[str, Any] | None:
         manager_id = (self.state.get("manager_assignments") or {}).get(str(int(team_id)))
@@ -1194,12 +1300,13 @@ class ManagerCareerRuntime9394:
 
     def _recent_points_for_team(self, team_id: int, league_id: int, *, limit: int = 5) -> int:
         rows = [r for r in self._league_result_rows(int(league_id)) if int(team_id) in (int(r.get("home_team_id") or 0), int(r.get("away_team_id") or 0))]
+        rules = self._league_rules(int(league_id))
         points = 0
         for row in rows[-max(1, int(limit)):]:
             home = int(row.get("home_team_id") or 0) == int(team_id)
             mine = int(row.get("home_goals") or 0) if home else int(row.get("away_goals") or 0)
             theirs = int(row.get("away_goals") or 0) if home else int(row.get("home_goals") or 0)
-            points += 3 if mine > theirs else 1 if mine == theirs else 0
+            points += int(rules.points_win) if mine > theirs else int(rules.points_draw) if mine == theirs else int(rules.points_loss)
         return points
 
     def _expected_position_for_team(self, team_id: int, league_id: int) -> int:
@@ -1472,7 +1579,7 @@ class ManagerCareerRuntime9394:
         self.state.setdefault("world_events",[]).append(manager_event); self.state["world_events"]=self.state["world_events"][-600:]
         self._switch_controlled_league(new_league)
         self.state["team_id"]=new_team
-        self.state["finances"]=self.state["club_finances"].setdefault(str(new_team),initial_club_finances(self.universe.team(new_team) or {}))
+        self.state["finances"]=self.state["club_finances"].setdefault(str(new_team),initial_club_finances(self.universe.team(new_team) or {},players=list(self.universe.players_by_team.get(new_team,()))))
         self.state["job_status"]="active"; self.state["board_warning_count"]=0; self.state["board_state"]={}; self.state["board_history"]=[]
         self.state["board_expectation"]={}; self.state["economy_ledger"]=[]; self.state["selection"]={}
         self.state["live_match"]=None; self.state["last_match_report"]=None; self.state["pending_world_match"]=None
@@ -1512,20 +1619,23 @@ class ManagerCareerRuntime9394:
             manager_name_lookup=self._manager_name, player_name_lookup=self._player_name,
         )
 
-    def _sheet(self, team_id: int, tactics: dict[str, Any] | None = None, *, foreign_rule=None) -> TeamSheet9394:
+    def _sheet(self, team_id: int, tactics: dict[str, Any] | None = None, *, foreign_rule=None, competition_kind: str | None = None) -> TeamSheet9394:
         controlled = int(team_id) == int(self.state["team_id"])
         tactical_payload = dict(tactics) if tactics is not None else None
         if controlled:
             tactical_payload = engine_tactics_payload(tactical_payload or {**_default_tactics(), **(self.state.get("tactics") or {})}, self.state)
         tactical = FootballTactics9394(**tactical_payload) if tactical_payload is not None else None
         coach_profile = None if controlled else self._coach_profile(int(team_id))
+        eligible_rows = self._eligible_match_rows(int(team_id), competition_kind=competition_kind)
+        universe_view = _CareerUniverseView(self, exclude_league_suspended=(competition_kind == "league"))
+        emergency_universe_view = _CareerUniverseView(self, include_injured=True, exclude_league_suspended=(competition_kind == "league"))
         if tactical is None and not controlled:
-            tactical = ai_tactics_for_squad(self._match_players_by_team.get(int(team_id), ()), coach_profile)
+            tactical = ai_tactics_for_squad(eligible_rows, coach_profile)
         if controlled and self.state.get("selection"):
             selected = self.selection_snapshot()
             if not selected["valid"]:
                 raise ValueError("El once del mánager no es válido: " + " ".join(selected["issues"]))
-            by_id = {int(row["source_id"]): row for row in self._match_players_by_team.get(int(team_id), [])}
+            by_id = {int(row["source_id"]): row for row in eligible_rows}
             formation=(tactical or FootballTactics9394(**{**_default_tactics(), **(self.state.get("tactics") or {})})).formation
             assigned=assign_players_to_formation([by_id[pid] for pid in selected["starter_ids"]],formation)
             assigned_by_id={int(r["player_id"]):str(r["slot"]) for r in assigned}
@@ -1549,7 +1659,7 @@ class ManagerCareerRuntime9394:
             domestic_equivalent_country_ids=rule.domestic_equivalent_country_ids,
         )) if rule is not None else None
         try:
-            sheet = build_snapshot_team_sheet(self._career_universe, team_id, tactics=tactical,foreign_predicate=predicate,max_foreign_starters=(rule.max_starting if rule else None),max_foreign_squad=(rule.max_squad if rule else None),allow_emergency_outfield_goalkeeper=True,coach_profile=coach_profile)
+            sheet = build_snapshot_team_sheet(universe_view, team_id, tactics=tactical,foreign_predicate=predicate,max_foreign_starters=(rule.max_starting if rule else None),max_foreign_squad=(rule.max_squad if rule else None),allow_emergency_outfield_goalkeeper=True,coach_profile=coach_profile)
             emergency_injury = False
         except ValueError as exc:
             # A senior squad can be numerically valid (>=18) while a temporary
@@ -1569,7 +1679,7 @@ class ManagerCareerRuntime9394:
             )
             if not recoverable or not injured:
                 raise
-            sheet = build_snapshot_team_sheet(self._all_career_universe, team_id, tactics=tactical,foreign_predicate=predicate,max_foreign_starters=(rule.max_starting if rule else None),max_foreign_squad=(rule.max_squad if rule else None),allow_emergency_outfield_goalkeeper=True,coach_profile=coach_profile)
+            sheet = build_snapshot_team_sheet(emergency_universe_view, team_id, tactics=tactical,foreign_predicate=predicate,max_foreign_starters=(rule.max_starting if rule else None),max_foreign_squad=(rule.max_squad if rule else None),allow_emergency_outfield_goalkeeper=True,coach_profile=coach_profile)
             emergency_injury = True
 
         starters=tuple(self._apply_development_to_footballer(p) for p in sheet.starters)
@@ -1588,7 +1698,7 @@ class ManagerCareerRuntime9394:
             )
         return replace(sheet, starters=starters, bench=bench)
 
-    def _apply_match_player_state(self, result, home_sheet: TeamSheet9394, away_sheet: TeamSheet9394, seed: int, *, competition: str = "Partido", record_performance: bool = True) -> None:
+    def _apply_match_player_state(self, result, home_sheet: TeamSheet9394, away_sheet: TeamSheet9394, seed: int, *, competition: str = "Partido", record_performance: bool = True, counts_for_league_stats: bool = False) -> None:
         dev = self.state["player_development"]
         events = tuple(result.events)
         for side, sheet, goals_for, goals_against in (
@@ -1609,7 +1719,53 @@ class ManagerCareerRuntime9394:
                 goal_ids=goal_ids, assist_ids=assist_ids, injury_ids=injury_ids, seed=seed + int(side) if side.isdigit() else seed,
                 coach_profile=development_coach, source_players=self._all_players_index(), game_date=self.current_date,
                 age_reference_date=(CAREER_START_DATE_9394 if uses_frozen_age(self.state) else self.current_date),
+                record_season_stats=counts_for_league_stats,
             )
+            if counts_for_league_stats:
+                # League-only 0-10 ratings are persisted for BOTH teams.  The
+                # controlled club keeps the detailed match log; every player
+                # in the playable league still accumulates comparable season
+                # ratings so league awards are not biased toward the user.
+                # A pending league ban is served by sitting out this fixture.
+                # Consume it BEFORE registering cards from this match so a new
+                # suspension cannot disappear on the same afternoon.
+                if side.isdigit():
+                    for roster_row in self._career_players_by_team.get(int(side), []):
+                        discipline_row = dev.setdefault(str(int(roster_row["source_id"])), {})
+                        pending_ban = int(discipline_row.get("league_suspension_matches") or 0)
+                        if pending_ban > 0:
+                            discipline_row["league_suspension_matches"] = max(0, pending_ban - 1)
+                            if pending_ban == 1:
+                                discipline_row["league_suspension_reason"] = None
+                rating_rows = match_ratings_for_side(result=result, sheet=sheet, side_team_id=side)
+                yellow_cycle = self._league_yellow_cycle(int(side)) if side.isdigit() else 5
+                new_suspensions: list[tuple[int, str]] = []
+                for player_id, facts in rating_rows.items():
+                    rating_row = dev.setdefault(str(player_id), {})
+                    rating_row["season_rating_total"] = round(float(rating_row.get("season_rating_total") or 0.0) + float(facts["rating"]), 2)
+                    rating_row["season_rating_count"] = int(rating_row.get("season_rating_count") or 0) + 1
+                    previous_yellows = int(rating_row.get("season_yellows") or 0)
+                    new_yellows = previous_yellows + int(facts["yellow"])
+                    rating_row["season_yellows"] = new_yellows
+                    rating_row["season_reds"] = int(rating_row.get("season_reds") or 0) + (1 if facts["red"] else 0)
+                    reason = None
+                    if facts["red"]:
+                        reason = "expulsión"
+                    elif int(facts["yellow"]) > 0 and previous_yellows // yellow_cycle < new_yellows // yellow_cycle:
+                        reason = f"ciclo de {yellow_cycle} amarillas"
+                    if reason:
+                        rating_row["league_suspension_matches"] = max(1, int(rating_row.get("league_suspension_matches") or 0))
+                        rating_row["league_suspension_reason"] = reason
+                        if side.isdigit() and int(side) == int(self.state.get("team_id") or 0):
+                            new_suspensions.append((int(player_id), reason))
+                for player_id, reason in new_suspensions:
+                    publish_news(
+                        self.state, key=f"suspension:{self.current_date.isoformat()}:{player_id}:{reason}",
+                        date=self.current_date.isoformat(), category="Plantilla", importance=3,
+                        headline=f"Sanción para {self._player_name(player_id)}",
+                        detail=f"Cumplirá un partido de sanción en liga por {reason} y no podrá entrar en la próxima convocatoria liguera.",
+                        entity={"player_id": player_id, "team_id": int(self.state["team_id"])},
+                    )
             if side.isdigit():
                 team_id = int(side)
                 update_squad_dynamics_after_match(
@@ -1638,7 +1794,7 @@ class ManagerCareerRuntime9394:
                     publish_news(self.state,key=f"injury:{self.current_date.isoformat()}:{pid}",date=self.current_date.isoformat(),category="Plantilla",importance=3,headline=f"Lesión de {self._player_name(pid)}",detail=detail,entity={"player_id":pid,"team_id":int(self.state["team_id"])})
                     register_important_injury(self.state,player_id=pid,days=days,players=self._career_players_by_team.get(int(self.state["team_id"]),()),date_text=self.current_date.isoformat())
         if record_performance:
-            record_managed_match(self.state, result=result, home_sheet=home_sheet, away_sheet=away_sheet, competition=competition, match_date=self.state.get("current_date"))
+            record_managed_match(self.state, result=result, home_sheet=home_sheet, away_sheet=away_sheet, competition=competition, match_date=self.state.get("current_date"), counts_for_league_stats=counts_for_league_stats)
 
     def _publish_controlled_result(
         self, *, competition: str, home_team_id: int, away_team_id: int, home_goals: int, away_goals: int,
@@ -1693,7 +1849,7 @@ class ManagerCareerRuntime9394:
         if not team:
             return 0
         income = matchday_income(team)
-        finances = self.state["club_finances"].setdefault(str(int(home_team_id)), initial_club_finances(team))
+        finances = self.state["club_finances"].setdefault(str(int(home_team_id)), initial_club_finances(team,players=self._career_players_by_team.get(int(home_team_id),[])))
         finances["cash"] = int(finances.get("cash") or 0) + income
         finances["matchday_income"] = int(finances.get("matchday_income") or 0) + income
         post_long_economy(self.state,team_id=int(home_team_id),season=str(self.state["season"]),category="gate_receipts",amount=income)
@@ -1722,11 +1878,11 @@ class ManagerCareerRuntime9394:
             home_id, away_id = int(fixture["home_team_id"]), int(fixture["away_team_id"])
             home_tactics = tactics if home_id == controlled else None
             away_tactics = tactics if away_id == controlled else None
-            home_sheet, away_sheet = self._sheet(home_id, home_tactics), self._sheet(away_id, away_tactics)
+            home_sheet, away_sheet = self._sheet(home_id, home_tactics, competition_kind="league"), self._sheet(away_id, away_tactics, competition_kind="league")
             match_seed = season_seed + int(self.state["seed"]) * 1000 + int(matchday) * 100 + int(fixture["id"])
             referee = referee_for_match(league_id, seed=match_seed)
             result = self.engine.simulate(home_sheet, away_sheet, seed=match_seed, referee=referee, venue=venue_for_team(self.universe, home_id))
-            self._apply_match_player_state(result, home_sheet, away_sheet, match_seed, competition=(self._team_api(controlled) or {}).get("league",{}).get("name") or "Liga")
+            self._apply_match_player_state(result, home_sheet, away_sheet, match_seed, competition=(self._team_api(controlled) or {}).get("league",{}).get("name") or "Liga", counts_for_league_stats=True)
             results.append(_league_match_payload(matchday, int(fixture["id"]), home_id, away_id, result.home.goals, result.away.goals, referee_id=result.referee_id, referee_name=result.referee_name, referee_source_confidence=result.referee_source_confidence))
             if controlled in (home_id,away_id): controlled_result=(home_id,away_id,int(result.home.goals),int(result.away.goals))
             self._post_matchday_income(home_id, competition=f"league:{league_id}", reference=int(matchday))
@@ -1827,12 +1983,37 @@ class ManagerCareerRuntime9394:
         return list(((self.state.get("world_leagues") or {}).get(str(source_id)) or {}).get("results") or [])
 
     def _honour(self, *, competition_kind: str, source_id: int, name: str, champion_team_id: int) -> dict[str, Any]:
-        team=self._team_api(int(champion_team_id)) or self.universe.team(int(champion_team_id)) or {}
+        team_id=int(champion_team_id)
+        team=self._team_api(team_id) or self.universe.team(team_id) or {}
+        dev=self.state.get("player_development") or {}
+        squad=[]
+        for player in self._career_players_by_team.get(team_id, []):
+            pid=int(player.get("source_id") or 0)
+            if pid<=0: continue
+            d=dev.get(str(pid)) or {}
+            squad.append({
+                "player_id":pid,
+                "name":player.get("display_name") or player.get("name") or str(pid),
+                "position":player.get("position") or player.get("broad_position") or "—",
+                "overall":int(d.get("overall") or player.get("overall") or player.get("category") or 60),
+                "shirt_number":player.get("shirt_number") or player.get("number"),
+            })
+        squad.sort(key=lambda row:(str(row.get("position") or ""),-int(row.get("overall") or 0),str(row.get("name") or "")))
+        coach=self._coach_profile(team_id) or {}
+        manager={
+            "id":coach.get("id") or coach.get("source_id"),
+            "name":coach.get("name") or coach.get("display_name") or "Entrenador",
+            "primary_tactic":coach.get("primary_tactic"),
+            "game_tendency":coach.get("game_tendency"),
+        }
         return {
             "season": str(self.state["season"]), "competition_kind": competition_kind,
             "source_id": int(source_id), "competition_name": name,
-            "team_id": int(champion_team_id), "team_name": team.get("name") or str(champion_team_id),
+            "team_id": team_id, "team_name": team.get("name") or str(team_id),
             "honour": "Campeón",
+            # Frozen at the moment the trophy is archived so future transfers or
+            # managerial changes never rewrite who actually lifted it.
+            "champion_manager":manager,"champion_squad":squad,
         }
 
     def _archive_honours(self, tables: dict[int, list[dict[str, Any]]]) -> list[dict[str, Any]]:
@@ -1999,9 +2180,66 @@ class ManagerCareerRuntime9394:
                 cwc[-1]=int(copa)
         return {"1":champions,"2":uefa,"90":list(dict.fromkeys(cwc))}
 
+    def _league_player_awards(self, *, league_id: int, table: list[dict[str, Any]]) -> dict[str, Any]:
+        """Build league-only player awards from the persisted 0-10 match ratings."""
+        team_ids={int(row.get("team_id") or 0) for row in table if int(row.get("team_id") or 0)}
+        candidates=[]
+        for team_id in team_ids:
+            for source in self._career_players_by_team.get(team_id, ()):
+                pid=int(source.get("source_id") or 0)
+                if not pid or source.get("retired"):
+                    continue
+                dev=(self.state.get("player_development") or {}).get(str(pid), {})
+                appearances=int(dev.get("season_appearances") or 0)
+                rating_count=int(dev.get("season_rating_count") or 0)
+                if appearances <= 0 and rating_count <= 0:
+                    continue
+                average=(round(float(dev.get("season_rating_total") or 0.0)/rating_count,2) if rating_count else None)
+                candidates.append({
+                    "player_id":pid,"name":str(source.get("display_name") or source.get("name") or pid),
+                    "team_id":team_id,"team_name":self._team_name(team_id),
+                    "position":str(source.get("broad_position") or ""),
+                    "appearances":appearances,"starts":int(dev.get("season_starts") or 0),
+                    "goals":int(dev.get("season_goals") or 0),"assists":int(dev.get("season_assists") or 0),
+                    "average_rating":average,"rating_count":rating_count,
+                })
+        max_played=max((int(row.get("played") or 0) for row in table),default=0)
+        minimum=max(5,min(10,max_played//4 if max_played else 5))
+        rated=[row for row in candidates if row["average_rating"] is not None and row["rating_count"]>=minimum]
+        best=max(rated,key=lambda row:(float(row["average_rating"]),row["goals"],row["assists"],row["appearances"]),default=None)
+        scorers=sorted(candidates,key=lambda row:(-row["goals"],-(float(row["average_rating"] or 0)),-row["assists"],-row["appearances"]))
+        assisters=sorted(candidates,key=lambda row:(-row["assists"],-(float(row["average_rating"] or 0)),-row["goals"],-row["appearances"]))
+        keepers=[row for row in rated if row["position"].upper() in {"POR","GK","PORTERO"}]
+        keeper=max(keepers,key=lambda row:(float(row["average_rating"]),row["appearances"]),default=None)
+
+        # XI of the season: 1-4-4-2 by broad historical positions.  We prefer
+        # a coherent football team over simply taking the eleven highest
+        # ratings, then fill any data gap with the best remaining rated player.
+        ranked_rated=sorted(
+            rated,
+            key=lambda row:(-float(row["average_rating"]),-row["appearances"],-row["goals"],-row["assists"],row["name"]),
+        )
+        quotas=(("POR",1),("DEF",4),("MED",4),("DEL",2))
+        team_of_season=[];used=set()
+        for broad,count in quotas:
+            pool=[row for row in ranked_rated if row["position"].upper()==broad and row["player_id"] not in used]
+            for row in pool[:count]:
+                team_of_season.append(row);used.add(row["player_id"])
+        for row in ranked_rated:
+            if len(team_of_season)>=11: break
+            if row["player_id"] in used: continue
+            team_of_season.append(row);used.add(row["player_id"])
+        return {
+            "league_id":int(league_id),"league_name":str((self.universe.leagues_by_id.get(int(league_id)) or {}).get("name") or f"Liga {league_id}"),
+            "minimum_rated_matches":minimum,"best_player":best,"top_scorer":scorers[0] if scorers else None,
+            "top_assister":assisters[0] if assisters and assisters[0]["assists"]>0 else None,"best_goalkeeper":keeper,
+            "team_of_season":team_of_season,
+        }
+
     def _build_season_recap(self, *, season: str, tables: dict[int,list[dict[str,Any]]], honours: list[dict[str,Any]], movements: list[dict[str,Any]], qualifiers: dict[str,list[int]]) -> dict[str,Any]:
         controlled=int(self.state["team_id"]);league_id=int(self.state["league_id"]);table=tables.get(league_id) or self.standings()
         row=next((r for r in table if int(r.get("team_id") or 0)==controlled),{})
+        league_awards=self._league_player_awards(league_id=league_id,table=table)
         squad=self.squad(controlled)
         ranked_scorers=sorted(squad,key=lambda p:(-int((p.get("season_stats") or {}).get("goals") or 0),-int((p.get("season_stats") or {}).get("assists") or 0),-float((p.get("season_stats") or {}).get("average_rating") or 0)))
         rated=[p for p in squad if (p.get("season_stats") or {}).get("average_rating") is not None]
@@ -2027,6 +2265,7 @@ class ManagerCareerRuntime9394:
             "league_name":(self.universe.leagues_by_id.get(league_id) or {}).get("name"),"position":row.get("position"),"points":row.get("points"),
             "played":row.get("played"),"wins":row.get("wins"),"draws":row.get("draws"),"losses":row.get("losses"),"goals_for":row.get("goals_for"),"goals_against":row.get("goals_against"),
             "titles":club_titles,"movement":movement,"qualified_for":qualified,"board":board,
+            "champions":honours,"league_awards":league_awards,
             "top_scorer":({"player_id":ranked_scorers[0]["id"],"name":ranked_scorers[0]["display_name"],"goals":ranked_scorers[0]["season_stats"]["goals"]} if ranked_scorers else None),
             "player_of_season":({"player_id":rated[0]["id"],"name":rated[0]["display_name"],"average_rating":rated[0]["season_stats"]["average_rating"]} if rated else None),
             "economy":self.economy_snapshot(),
@@ -2067,7 +2306,7 @@ class ManagerCareerRuntime9394:
                 if not tid: continue
                 prize=season_prize_money(position=int(row.get("position") or 0),team_count=team_count,club_score=float(club_status(self.state,tid).get("score") or 50),champion=int(row.get("position") or 0)==1)
                 if prize<=0: continue
-                finances=self.state["club_finances"].setdefault(str(tid),initial_club_finances(self.universe.team(tid) or {}))
+                finances=self.state["club_finances"].setdefault(str(tid),initial_club_finances(self.universe.team(tid) or {},players=self._career_players_by_team.get(tid,[])))
                 finances["cash"]=int(finances.get("cash") or 0)+prize
                 finances["prize_income"]=int(finances.get("prize_income") or 0)+prize
                 post_long_economy(self.state,team_id=tid,season=old_season,category="prize_money",amount=prize)
@@ -2080,9 +2319,11 @@ class ManagerCareerRuntime9394:
             "continental_qualifiers":qualifiers,"managed_club":recap,"club_status_changes":status_changes,
             "league_tables":{str(lid):table for lid,table in tables.items()},
         }
-        self.state["season_archive"].append(archive);self.state["season_recaps"].append(recap);self.state["season_recaps"]=self.state["season_recaps"][-20:]
+        dossier=build_season_dossier(self.state,season=old_season,closed_on=day.isoformat(),tables=tables,honours=honours,movements=movements,qualifiers=qualifiers,recap=recap)
+        self.state["season_archive"].append(archive);self.state["season_recaps"].append(recap);self.state["season_recaps"]=self.state["season_recaps"][-60:]
+        self.state["season_dossiers"].append(dossier);self.state["season_dossiers"]=self.state["season_dossiers"][-60:]
         for honour in honours:
-            publish_news(self.state,key=f"honour:{old_season}:{honour['competition_kind']}:{honour['source_id']}",date=day.isoformat(),category="Competiciones",importance=5,headline=f"{honour['team_name']} campeón de {honour['competition_name']}",detail=f"Palmarés de la temporada {old_season}.",entity={"team_id":honour["team_id"],"competition_id":honour["source_id"]})
+            publish_news(self.state,key=f"honour:{old_season}:{honour['competition_kind']}:{honour['source_id']}",date=day.isoformat(),category="Competiciones",importance=5,headline=f"{honour['team_name']} campeón de {honour['competition_name']}",detail=f"Palmarés de la temporada {old_season}.",entity={"team_id":honour["team_id"],"competition_id":honour["source_id"]},cause=f"competition-title:{old_season}:{honour['competition_kind']}:{honour['source_id']}:{honour['team_id']}")
         controlled=int(self.state["team_id"])
         for movement in movements:
             tid=int(movement.get("team_id") or 0); reason=str(movement.get("reason") or "")
@@ -2127,6 +2368,23 @@ class ManagerCareerRuntime9394:
             seed=int(self.state["seed"]) ^ ((old_start + 1) * 9394), players_by_team=self._career_players_by_team,
         )
         self._schedule_cache.clear(); self._rebuild_rosters()
+        # H1: every new season refreshes the transfer envelope in period pesetas
+        # from the current squad, without duplicating unspent budget every July.
+        for finance_team_id in self._active_club_ids():
+            finance_team = self.universe.team(finance_team_id) or {}
+            finance_state = self.state["club_finances"].setdefault(
+                str(finance_team_id),
+                initial_club_finances(finance_team,players=self._career_players_by_team.get(finance_team_id,[])),
+            )
+            finance_players=self._career_players_by_team.get(finance_team_id,[])
+            finance_commitment=annual_wage_commitment(
+                finance_players,development=self.state.get("player_development") or {},
+                contract_overrides=self.state.get("contract_overrides") or {},
+            )
+            refresh_season_transfer_budget(
+                finance_state, team=finance_team, players=finance_players,current_wage_commitment=finance_commitment
+            )
+        self.state["finances"] = self.state["club_finances"][str(int(self.state["team_id"]))]
         self.state["selection"] = self._safe_auto_selection(); self.state["board_expectation"] = self._board_expectation()
         self._ensure_world_leagues(); self._ensure_preseason_schedule(); ensure_special_competitions(self.state); ensure_tournament_state(self.state,self.universe)
         self.board_snapshot(persist=True,trigger="season_start")
@@ -2164,43 +2422,66 @@ class ManagerCareerRuntime9394:
         active_ids = self._active_club_ids()
         for team_id in active_ids:
             team = self.universe.team(team_id) or {}
-            finances = self.state["club_finances"].setdefault(str(team_id), initial_club_finances(team))
+            finances = self.state["club_finances"].setdefault(str(team_id), initial_club_finances(team,players=self._career_players_by_team.get(team_id,[])))
             stature=float(club_status(self.state, int(team_id)).get("score") or 50.0)
             posting = apply_monthly_club_finances(
                 team=team, finances=finances,
                 players=self._career_players_by_team.get(team_id, []),
                 development=self.state["player_development"], contract_overrides=self.state["contract_overrides"],
-                stature_score=stature,
+                stature_score=stature, month=day.month,
             )
-            mix=monthly_revenue_mix(team=team,club_score=stature,month=day.month); weight=max(1,sum(mix.values())); commercial=int(posting.get("commercial_income") or 0)
-            allocated={key:round(commercial*value/weight) for key,value in mix.items()}
-            drift=commercial-sum(allocated.values()); allocated["sponsorship"]=int(allocated.get("sponsorship") or 0)+drift
-            for category,amount in allocated.items(): post_long_economy(self.state,team_id=team_id,season=str(self.state["season"]),category=category,amount=int(amount))
+            for category,key in (("memberships","membership_income"),("television","television_income"),("sponsorship","sponsorship_income")):
+                post_long_economy(self.state,team_id=team_id,season=str(self.state["season"]),category=category,amount=int(posting.get(key) or 0))
             post_long_economy(self.state,team_id=team_id,season=str(self.state["season"]),category="wages",amount=int(posting.get("wage_expense") or 0))
             post_long_economy(self.state,team_id=team_id,season=str(self.state["season"]),category="operations",amount=int(posting.get("operating_expense") or 0))
-            post_long_economy(self.state,team_id=team_id,season=str(self.state["season"]),category="debt_service",amount=int(posting.get("debt_service") or 0))
+            post_long_economy(self.state,team_id=team_id,season=str(self.state["season"]),category="debt_interest",amount=int(posting.get("debt_interest") or 0))
+            post_long_economy(self.state,team_id=team_id,season=str(self.state["season"]),category="debt_principal",amount=int(posting.get("debt_principal") or 0))
             if int(finances.get("cash") or 0)<0:
                 draw=abs(int(finances.get("cash") or 0))+max(500_000,round((int(posting.get("wage_expense") or 0)+int(posting.get("operating_expense") or 0))*0.35))
                 finances["debt"]=int(finances.get("debt") or 0)+draw; finances["cash"]=int(finances.get("cash") or 0)+draw
+                finances["financing_draws"]=int(finances.get("financing_draws") or 0)+draw
+                post_long_economy(self.state,team_id=team_id,season=str(self.state["season"]),category="financing_draws",amount=draw)
                 event={"kind":"financial_restructuring","date":day.isoformat(),"team_id":team_id,"amount":draw,"debt":int(finances["debt"])}; events.append(event)
             if team_id == int(self.state["team_id"]):
                 self.state["finances"] = finances
                 self.state["economy_ledger"].append({"date": day.isoformat(), "kind": "monthly_operations", "amount":int(posting.get("net") or 0), **posting})
                 if events and events[-1].get("kind")=="financial_restructuring" and int(events[-1].get("team_id") or 0)==team_id:
                     self.state["economy_ledger"].append({"date":day.isoformat(),"kind":"debt_draw","amount":int(events[-1]["amount"])})
+        # Contract work is staggered across clubs.  A real football world does
+        # not renew 400+ squads on the same monthly tick, and doing so made long
+        # careers increasingly expensive/noisy.  Each AI club still receives
+        # three renewal pulses between January and June; unresolved fringe
+        # contracts are allowed to reach the summer market naturally.
+        # Clubs resolve their retention plan in two coherent checkpoints rather
+        # than dribbling hundreds of one-player renewals into every monthly tick.
+        # January sets the plan; June catches squads changed by the market.
+        renewal_ids=[tid for tid in active_ids if tid!=int(self.state["team_id"])] if day.month in (1,6) else []
         renewals = renew_ai_contracts(
             current_date=day, controlled_team_id=int(self.state["team_id"]),
             players_by_team=self._career_players_by_team, development=self.state["player_development"],
             contract_overrides=self.state["contract_overrides"], seed=int(self.state["seed"]),
-            max_renewals=max(1, len(active_ids)), eligible_team_ids=active_ids,
-        )
-        self.state["ai_contract_history"].extend(renewals); events.extend(renewals)
+            max_renewals=max(1, len(renewal_ids)*10) if renewal_ids else 0, eligible_team_ids=renewal_ids,
+            club_finances=self.state["club_finances"],
+        ) if renewal_ids else []
+        if renewals:
+            self.state["ai_contract_history"].extend(renewals)
+            self.state["ai_contract_history"]=self.state["ai_contract_history"][-AI_CONTRACT_LOG_LIMIT:]
+            # Detailed contract decisions remain queryable in their specialist
+            # ledger; the general world/news stream receives one intelligible
+            # cycle summary instead of thousands of low-value renewal events.
+            events.append({
+                "kind":"ai_contract_cycle","date":day.isoformat(),"count":len(renewals),
+                "clubs":len({int(row.get("team_id") or 0) for row in renewals}),
+            })
         activity=max((market_activity_budget(transfer_period_status(day,country_id=self._club_country_id(tid),season=str(self.state["season"]))) for tid in active_ids),default=0)
-        refresh_recruitment_plans(
-            self.state,current_date=day,team_ids=active_ids,players_by_team=self._career_players_by_team,
-            development=self.state["player_development"],contracts=self.state["contract_overrides"],club_finances=self.state["club_finances"],
-            coach_profile_getter=lambda tid:self._coach_profile(int(tid)),
-        )
+        plans=self.state.get("recruitment_plans") or {}
+        refresh_all_plans=activity>0 and (day.month==7 or len(plans)<max(1,len(active_ids)-1))
+        if refresh_all_plans:
+            refresh_recruitment_plans(
+                self.state,current_date=day,team_ids=active_ids,players_by_team=self._career_players_by_team,
+                development=self.state["player_development"],contracts=self.state["contract_overrides"],club_finances=self.state["club_finances"],
+                coach_profile_getter=lambda tid:self._coach_profile(int(tid)),
+            )
         first_budget=(activity+1)//2
         transfers = run_ai_transfer_window(
             current_date=day, controlled_team_id=int(self.state["team_id"]), eligible_team_ids=active_ids,
@@ -2208,34 +2489,22 @@ class ManagerCareerRuntime9394:
             seller_release_exempt_ids=set(self._market_container_ids()), development=self.state["player_development"],
             club_finances=self.state["club_finances"], player_team_overrides=self.state["player_team_overrides"],
             contract_overrides=self.state["contract_overrides"], seed=int(self.state["seed"]),
-            max_deals=first_budget,
+            max_deals=activity,
             signing_allowed=lambda buyer,player:self._signing_eligibility(int(buyer),player,day=day)[0],
             attraction_score=lambda buyer,seller,player:(float(club_status(self.state,int(buyer)).get("score") or 50)-float(club_status(self.state,int(seller)).get("score") or 50))/25.0,
             foreign_limit_getter=lambda tid:(self._domestic_foreign_rule(int(tid)).max_starting if self._domestic_foreign_rule(int(tid)) is not None else None),
             foreign_predicate=lambda tid,player:self._is_domestic_foreign(int(tid),player),
             coach_profile_getter=lambda tid: self._coach_profile(int(tid)),
+            buyer_plans=self.state.get("recruitment_plans") or {},
         )
-        follow_up=[]
-        if transfers and activity>first_budget:
-            # Recompute after the first deals.  A seller that has just lost a
-            # useful footballer can now become a buyer in the same market pulse.
-            follow_up=run_ai_transfer_window(
-                current_date=day,controlled_team_id=int(self.state["team_id"]),eligible_team_ids=active_ids,
-                players_by_team=self._career_players_by_team,seller_team_ids=active_ids+self._market_container_ids(),
-                seller_release_exempt_ids=set(self._market_container_ids()),development=self.state["player_development"],club_finances=self.state["club_finances"],
-                player_team_overrides=self.state["player_team_overrides"],contract_overrides=self.state["contract_overrides"],seed=int(self.state["seed"])^0x717,
-                max_deals=activity-first_budget,signing_allowed=lambda buyer,player:self._signing_eligibility(int(buyer),player,day=day)[0],
-                attraction_score=lambda buyer,seller,player:(float(club_status(self.state,int(buyer)).get("score") or 50)-float(club_status(self.state,int(seller)).get("score") or 50))/25.0,
-                foreign_limit_getter=lambda tid:(self._domestic_foreign_rule(int(tid)).max_starting if self._domestic_foreign_rule(int(tid)) is not None else None),
-                foreign_predicate=lambda tid,player:self._is_domestic_foreign(int(tid),player),
-                coach_profile_getter=lambda tid:self._coach_profile(int(tid)),
-            )
-            register_replacement_chain(self.state,day=day,first_deals=transfers,follow_up_deals=follow_up)
-        transfers.extend(follow_up)
+        if transfers and len(transfers)>first_budget:
+            register_replacement_chain(self.state,day=day,first_deals=transfers[:first_budget],follow_up_deals=transfers[first_budget:])
         self.state["ai_transfer_history"].extend(transfers); events.extend(transfers)
         if transfers:
             self._rebuild_rosters()
-            refresh_recruitment_plans(self.state,current_date=day,team_ids=active_ids,players_by_team=self._career_players_by_team,development=self.state["player_development"],contracts=self.state["contract_overrides"],club_finances=self.state["club_finances"],coach_profile_getter=lambda tid:self._coach_profile(int(tid)))
+            affected=sorted({int(tid) for deal in transfers for tid in (deal.get("from_team_id"),deal.get("to_team_id")) if int(tid or 0) in active_ids})
+            if affected:
+                refresh_recruitment_plans(self.state,current_date=day,team_ids=affected,players_by_team=self._career_players_by_team,development=self.state["player_development"],contracts=self.state["contract_overrides"],club_finances=self.state["club_finances"],coach_profile_getter=lambda tid:self._coach_profile(int(tid)))
         coverage=[]
         if day.month in (7,8):
             coverage=ensure_ai_squad_coverage(
@@ -2597,7 +2866,8 @@ class ManagerCareerRuntime9394:
         fixture=live.get("fixture") or {}
         home_rule=self._foreign_rule_for_fixture(fixture,home_id) if fixture.get("fixture_type")=="tournament" else None
         away_rule=self._foreign_rule_for_fixture(fixture,away_id) if fixture.get("fixture_type")=="tournament" else None
-        home=self._sheet(home_id,home_t,foreign_rule=home_rule);away=self._sheet(away_id,away_t,foreign_rule=away_rule)
+        kind=str(fixture.get("fixture_type") or "league")
+        home=self._sheet(home_id,home_t,foreign_rule=home_rule,competition_kind=kind);away=self._sheet(away_id,away_t,foreign_rule=away_rule,competition_kind=kind)
         return home,away
 
     def start_live_match(self) -> dict[str,Any]:
@@ -2606,16 +2876,22 @@ class ManagerCareerRuntime9394:
             return self.live_match_snapshot()
         fixture=self.pending_world_fixture() or self.next_scheduled_fixture()
         if fixture is None: raise ValueError("no hay próximo partido")
+        if bool(fixture.get("postponed")) or str(fixture.get("schedule_status") or "").lower()=="postponed":
+            raise ValueError("el partido está aplazado; espera a que el calendario confirme una nueva fecha")
+        controlled=int(self.state["team_id"]);home_id=int(fixture.get("home_team_id") or 0);away_id=int(fixture.get("away_team_id") or 0)
+        opponent_id=away_id if home_id==controlled else home_id if away_id==controlled else 0
+        if opponent_id<=0:
+            raise ValueError("el rival todavía no está confirmado")
         foreign_issues=self._validate_controlled_selection_for_fixture(fixture)
         if foreign_issues: raise ValueError(" ".join(foreign_issues))
         match_date=date.fromisoformat(str(fixture.get("date") or self.current_date.isoformat()))
         if self.current_date<match_date: raise ValueError("todavía no es día de partido")
-        controlled=int(self.state["team_id"]);home_id=int(fixture["home_team_id"]);away_id=int(fixture["away_team_id"])
         tactics=dict(self.state.get("tactics") or _default_tactics())
         home_rule=self._foreign_rule_for_fixture(fixture,home_id) if fixture.get("fixture_type")=="tournament" else None
         away_rule=self._foreign_rule_for_fixture(fixture,away_id) if fixture.get("fixture_type")=="tournament" else None
-        home_sheet=self._sheet(home_id,tactics if home_id==controlled else None,foreign_rule=home_rule)
-        away_sheet=self._sheet(away_id,tactics if away_id==controlled else None,foreign_rule=away_rule)
+        kind=str(fixture.get("fixture_type") or "league")
+        home_sheet=self._sheet(home_id,tactics if home_id==controlled else None,foreign_rule=home_rule,competition_kind=kind)
+        away_sheet=self._sheet(away_id,tactics if away_id==controlled else None,foreign_rule=away_rule,competition_kind=kind)
 
         # P5: the rival prepares against habits that have already been exposed
         # in prior matches. It does not read the user's last-second setup.
@@ -2668,18 +2944,51 @@ class ManagerCareerRuntime9394:
         self.state["updated_at"]=datetime.now(timezone.utc).isoformat()
         return self.live_match_snapshot()
 
+    def cancel_live_preview(self) -> dict[str, Any]:
+        """Discard an unstarted preview so the manager can revise XI/tactics.
+
+        Once the clock has moved, the match is part of the world state and may
+        no longer be cancelled.  This keeps the pre-match UX reversible without
+        allowing a played match to be rerolled.
+        """
+        live=self.state.get("live_match")
+        if not live: return self.snapshot()
+        if int(live.get("minute") or 0) != 0 or str(live.get("status") or "") not in {"preview", "live"}:
+            raise ValueError("el partido ya ha comenzado y no puede volver a la preparación")
+        self.state["live_match"] = None
+        self.state["updated_at"] = datetime.now(timezone.utc).isoformat()
+        return self.snapshot()
+
     def live_match_snapshot(self) -> dict[str,Any]|None:
         live=self.state.get("live_match")
         if not live: return None
         snap=self.live_engine.snapshot(live); home_sheet,away_sheet=self._live_match_sheets()
         player_map={int(p.id):p for p in (*home_sheet.starters,*home_sheet.bench,*away_sheet.starters,*away_sheet.bench) if str(p.id).isdigit()}
         controlled=int(self.state["team_id"]); own_home=int(snap["home_team_id"])==controlled
-        on_pitch=snap["home_on_pitch_ids"] if own_home else snap["away_on_pitch_ids"];bench=snap["home_bench_ids"] if own_home else snap["away_bench_ids"];fatigue=snap["home_fatigue"] if own_home else snap["away_fatigue"]
-        def player_row(pid:int)->dict[str,Any]:
+        on_pitch=snap["home_on_pitch_ids"] if own_home else snap["away_on_pitch_ids"]
+        bench=snap["home_bench_ids"] if own_home else snap["away_bench_ids"]
+        sent_off=snap["home_sent_off_ids"] if own_home else snap["away_sent_off_ids"]
+        forced_off=snap["home_forced_off_ids"] if own_home else snap["away_forced_off_ids"]
+        fatigue=snap["home_fatigue"] if own_home else snap["away_fatigue"]
+        opponent_on_pitch=snap["away_on_pitch_ids"] if own_home else snap["home_on_pitch_ids"]
+        opponent_bench=snap["away_bench_ids"] if own_home else snap["home_bench_ids"]
+        opponent_fatigue=snap["away_fatigue"] if own_home else snap["home_fatigue"]
+        def player_row(pid:int, fatigue_map:dict[str,Any])->dict[str,Any]:
             raw=self._player_source(int(pid)); api=self._career_player_api(raw) if raw else {"id":pid,"display_name":getattr(player_map.get(pid),"name",str(pid)),"position":getattr(player_map.get(pid),"position","")}
-            api["match_fatigue"]=round(float(fatigue.get(str(pid),0.0)),1);api["match_condition"]=max(0,round(100-float(fatigue.get(str(pid),0.0))))
+            api["match_fatigue"]=round(float(fatigue_map.get(str(pid),0.0)),1);api["match_condition"]=max(0,round(100-float(fatigue_map.get(str(pid),0.0))))
             return api
-        snap["controlled_on_pitch"]=[player_row(pid) for pid in on_pitch];snap["controlled_bench"]=[player_row(pid) for pid in bench]
+        snap["controlled_on_pitch"]=[player_row(pid,fatigue) for pid in on_pitch]
+        snap["controlled_bench"]=[player_row(pid,fatigue) for pid in bench]
+        snap["controlled_sent_off"]=[player_row(pid,fatigue) for pid in sent_off]
+        snap["controlled_forced_off"]=[player_row(pid,fatigue) for pid in forced_off]
+        snap["controlled_absences"]=self._controlled_absences_for_fixture(live.get("fixture") or {})
+        controlled_stats=snap["home"] if own_home else snap["away"]
+        snap["controlled_substitutions_used"]=int(controlled_stats.get("substitutions") or 0)
+        snap["controlled_substitutions_remaining"]=max(0,LAWS_1993_94.max_used_substitutes-snap["controlled_substitutions_used"])
+        # Once the official XI exists it is match information, not scouting omniscience.
+        # Expose both confirmed elevens for the dedicated pre-match presentation.
+        snap["opponent_on_pitch"]=[player_row(pid,opponent_fatigue) for pid in opponent_on_pitch]
+        snap["opponent_bench"]=[player_row(pid,opponent_fatigue) for pid in opponent_bench]
         opponent_id = int(snap["away_team_id"] if own_home else snap["home_team_id"])
         opponent_players = [row for row in self._career_players_by_team.get(opponent_id, ()) if not row.get("retired")]
         def opponent_level(row: dict[str, Any]) -> int:
@@ -2742,8 +3051,10 @@ class ManagerCareerRuntime9394:
         if not self.state.get("live_match"): raise ValueError("no hay partido en directo")
         live=self.state["live_match"];snap=self.live_engine.snapshot(live);controlled=int(self.state["team_id"]);own_home=int(snap["home_team_id"])==controlled
         on_pitch=list(snap["home_on_pitch_ids"] if own_home else snap["away_on_pitch_ids"])
-        if int(outgoing_id) in on_pitch:
-            candidate=[int(incoming_id) if int(pid)==int(outgoing_id) else int(pid) for pid in on_pitch]
+        forced_off=list(snap["home_forced_off_ids"] if own_home else snap["away_forced_off_ids"])
+        replaceable=on_pitch+forced_off
+        if int(outgoing_id) in replaceable:
+            candidate=[int(incoming_id) if int(pid)==int(outgoing_id) else int(pid) for pid in replaceable]
             raw=[self._player_source(pid) for pid in candidate if self._player_source(pid) is not None]
             rule=self._foreign_rule_for_fixture(live.get("fixture") or {})
             if rule is not None:
@@ -2754,6 +3065,22 @@ class ManagerCareerRuntime9394:
     def advance_live_match(self,minutes:int=5)->dict[str,Any]:
         if not self.state.get("live_match"): raise ValueError("no hay partido en directo")
         home,away=self._live_match_sheets();self.live_engine.advance(self.state["live_match"],home,away,minutes=int(minutes));self.state["updated_at"]=datetime.now(timezone.utc).isoformat();return self.live_match_snapshot()
+
+    def simulate_live_match(self)->dict[str,Any]:
+        """Resolve the minute-zero preview through the same live engine.
+
+        Instant Result must not be a second football model.  Both benches are
+        delegated to the AI while the match is simulated so the controlled
+        side receives the same fatigue/score-aware substitution behaviour as
+        the opponent and the historical two-substitute cap remains enforced.
+        """
+        live=self.state.get("live_match")
+        if not live: raise ValueError("no hay previa de partido preparada")
+        if int(live.get("minute") or 0)!=0: raise ValueError("Resultado sólo está disponible antes de comenzar el partido")
+        while str(live.get("status"))!="finished":
+            home,away=self._live_match_sheets()
+            self.live_engine.advance(live,home,away,minutes=45,auto_controlled=True)
+        return self.finish_live_match()
 
     def _commit_preseason_friendly(self,result,home_sheet:TeamSheet9394,away_sheet:TeamSheet9394,live:dict[str,Any])->dict[str,Any]:
         fixture=live["fixture"];fid=int(fixture["id"]);seed=season_start_year(self.state)*1_000_000+int(self.state["seed"])*1000+abs(fid)
@@ -2774,8 +3101,8 @@ class ManagerCareerRuntime9394:
             if int(fx["id"])==int(fixture["id"]):
                 r=result;hs,as_=home_sheet,away_sheet
             else:
-                hs,as_=self._sheet(h),self._sheet(a);r=self.engine.simulate(hs,as_,seed=seed,referee=referee_for_match(league_id,seed=seed),venue=venue_for_team(self.universe,h))
-            self._apply_match_player_state(r,hs,as_,seed,competition=(self._team_api(controlled) or {}).get("league",{}).get("name") or "Liga")
+                hs,as_=self._sheet(h,competition_kind="league"),self._sheet(a,competition_kind="league");r=self.engine.simulate(hs,as_,seed=seed,referee=referee_for_match(league_id,seed=seed),venue=venue_for_team(self.universe,h))
+            self._apply_match_player_state(r,hs,as_,seed,competition=(self._team_api(controlled) or {}).get("league",{}).get("name") or "Liga",counts_for_league_stats=True)
             results.append(_league_match_payload(matchday,int(fx["id"]),h,a,r.home.goals,r.away.goals,referee_id=r.referee_id,referee_name=r.referee_name,referee_source_confidence=r.referee_source_confidence));self._post_matchday_income(h,competition=f"league:{league_id}",reference=matchday)
         self.state["results"]=results;self.state["completed_matchday"]=matchday;self._rebuild_rosters()
         raw=next(row for row in results if int(row.get("fixture_id") or -1)==int(fixture["id"]));return raw
@@ -2866,11 +3193,18 @@ class ManagerCareerRuntime9394:
         world_events.extend(scout_events)
         if scout_events:
             self._ingest_news(scout_events)
+        summer_from_season=None;summer_started=None
         if tomorrow.month==7 and tomorrow.day==1:
+            summer_from_season=str(self.state.get("season") or "")
+            summer_started=perf_counter()
             rollover_events=self._rollover_season(tomorrow);world_events.extend(rollover_events)
             if rollover_events:
                 self.state["world_events"].extend(rollover_events);self.state["world_events"]=self.state["world_events"][-600:];self._ingest_news(rollover_events)
         world_events.extend(self._process_daily_world(tomorrow))
+        if summer_from_season is not None:
+            elapsed_ms=round((perf_counter()-(summer_started or perf_counter()))*1000)
+            transition=finalize_summer_transition(self,from_season=summer_from_season,date_text=tomorrow.isoformat(),transition_ms=elapsed_ms)
+            world_events.append({"kind":"longitudinal_health","date":tomorrow.isoformat(),"season":self.state.get("season"),"status":transition["health"]["status"],"save_megabytes":transition["health"]["save_megabytes"],"transition_ms":elapsed_ms})
         self._repair_selection_after_roster_departures(world_events)
         self.state["updated_at"]=datetime.now(timezone.utc).isoformat()
         pending=self.pending_world_fixture()
@@ -2992,9 +3326,14 @@ class ManagerCareerRuntime9394:
             }
         else:
             api["medical"] = medical_api(d)
+        api["league_suspension_matches"] = int(d.get("league_suspension_matches") or 0)
+        api["league_suspension_reason"] = d.get("league_suspension_reason")
+        api["league_suspension_active_for_next_match"] = bool(api["league_suspension_matches"] > 0 and self._selection_fixture_kind() == "league")
         if api["injury_days"] > 0:
             injury_name = str((api["medical"].get("current_injury") or {}).get("name") or "Lesión")
             api["status"] = f"{injury_name} · {api['injury_days']} d"
+        elif api["league_suspension_active_for_next_match"]:
+            api["status"] = f"Sancionado (liga) · {api['league_suspension_matches']} partido" + ("s" if api["league_suspension_matches"] != 1 else "")
         rating_count = int(d.get("season_rating_count") or 0)
         average_rating = round(float(d.get("season_rating_total") or 0.0) / rating_count, 2) if rating_count else None
         api["season_stats"] = {
@@ -3051,7 +3390,7 @@ class ManagerCareerRuntime9394:
             if watched and pid not in watched_ids:
                 continue
             rows.append(row)
-        cash=max(0, int((self.state.get("finances") or {}).get("cash") or 0))
+        cash=transfer_spending_power(self.state.get("finances") or {})
         def market_order(player: dict[str, Any]) -> tuple[int, int, int, int]:
             pid=int(player["source_id"])
             overall=int(self.state["player_development"].get(str(pid), {}).get("overall") or player.get("overall") or player.get("category") or 0)
@@ -3084,9 +3423,13 @@ class ManagerCareerRuntime9394:
         current_overall = int(self.state["player_development"].get(str(pid), {}).get("overall") or raw.get("overall") or raw.get("category") or 60)
         decision = negotiate_transfer(
             player=self._career_player_api(raw), current_overall=current_overall,
-            buyer_cash=int(self.state["finances"]["cash"]), fee_offer=int(fee_offer),
+            buyer_cash=transfer_spending_power(self.state["finances"]), fee_offer=int(fee_offer),
             salary_offer=int(salary_offer), contract_years=int(contract_years),
         )
+        wage_room=self._current_wage_headroom()
+        if decision.get("accepted") and int(salary_offer)>wage_room:
+            decision={**decision,"accepted":False,"reason":"presupuesto_salarial_insuficiente","wage_budget_headroom":wage_room}
+            decision.pop("fee",None)
         salary_minimum = round(inferred_annual_salary(raw, overall=current_overall) * 0.90 * attraction_modifier(self.state,from_team_id=seller,to_team_id=controlled) * (0.88 if dynamics_api(self.state,pid).get("wants_move") else 1.0))
         if decision.get("accepted") and int(salary_offer) < salary_minimum:
             decision = {
@@ -3098,12 +3441,10 @@ class ManagerCareerRuntime9394:
         if decision["accepted"]:
             self.state["player_team_overrides"][str(pid)] = controlled
             buyer_fin = self.state["club_finances"][str(controlled)]
-            buyer_fin["cash"] -= int(decision["fee"])
-            buyer_fin["transfer_spend"] = int(buyer_fin.get("transfer_spend") or 0) + int(decision["fee"])
+            spend_transfer_funds(buyer_fin,int(decision["fee"]),recorded_fee=int(decision["fee"]))
             if seller and str(seller) in self.state["club_finances"]:
                 seller_fin = self.state["club_finances"][str(seller)]
-                seller_fin["cash"] += int(decision["fee"])
-                seller_fin["transfer_income"] = int(seller_fin.get("transfer_income") or 0) + int(decision["fee"])
+                receive_transfer_funds(seller_fin,int(decision["fee"]))
             self.state["finances"] = buyer_fin
             current_year = int(str(self.state["current_date"])[:4])
             self.state["contract_overrides"][str(pid)] = {
@@ -3132,11 +3473,13 @@ class ManagerCareerRuntime9394:
     def _complete_user_transfer(self, *, player_id:int, seller:int, fee:int, salary:int, years:int, date_text:str, source:str, signing_bonus:int=0, release_clause:int|None=None, squad_role:str="rotation") -> dict[str,Any]:
         pid=int(player_id); controlled=int(self.state["team_id"]); buyer_fin=self.state["club_finances"][str(controlled)]
         total_cost=int(fee)+int(signing_bonus)
-        if total_cost>int(buyer_fin.get("cash") or 0): raise ValueError("ya no hay caja suficiente para completar el fichaje")
+        if total_cost>transfer_spending_power(buyer_fin): raise ValueError("ya no hay presupuesto de fichajes utilizable para completar la operación")
+        wage_room=self._current_wage_headroom()
+        if int(salary)>wage_room: raise ValueError("la ficha supera el margen salarial anual disponible")
         self.state["player_team_overrides"][str(pid)]=controlled
-        buyer_fin["cash"]-=total_cost; buyer_fin["transfer_spend"]=int(buyer_fin.get("transfer_spend") or 0)+int(fee)
+        spend_transfer_funds(buyer_fin,total_cost,recorded_fee=int(fee))
         if seller and str(seller) in self.state["club_finances"]:
-            seller_fin=self.state["club_finances"][str(seller)]; seller_fin["cash"]+=int(fee); seller_fin["transfer_income"]=int(seller_fin.get("transfer_income") or 0)+int(fee)
+            seller_fin=self.state["club_finances"][str(seller)]; receive_transfer_funds(seller_fin,int(fee))
         self.state["finances"]=buyer_fin
         year=self.current_date.year
         self.state["contract_overrides"][str(pid)]={"start":str(year),"end":str(year+int(years)),"end_year":year+int(years),"salary":int(salary),"salary_display":f"{int(salary):,} ptas.".replace(",","."),"loan":False,"career_inferred":True,"signed_by_user":True,"release_clause":int(release_clause) if release_clause is not None else None,"squad_role":str(squad_role)}
@@ -3171,7 +3514,7 @@ class ManagerCareerRuntime9394:
         if not seller: raise ValueError("un agente libre no puede llegar cedido")
         if self._current_team_id(pid)==controlled: raise ValueError("el jugador ya está en tu plantilla")
         buyer_fin=self.state["club_finances"][str(controlled)]
-        if int(loan_fee)>int(buyer_fin.get("cash") or 0): raise ValueError("no hay caja suficiente para completar la cesión")
+        if int(loan_fee)>transfer_spending_power(buyer_fin): raise ValueError("no hay presupuesto de fichajes utilizable para completar la cesión")
         raw=self._player_source(pid) or {}
         overall=int(self.state.get("player_development",{}).get(str(pid),{}).get("overall") or raw.get("overall") or raw.get("category") or 60)
         previous_override=(self.state.get("contract_overrides") or {}).get(str(pid))
@@ -3179,10 +3522,11 @@ class ManagerCareerRuntime9394:
         previous_team_override=(self.state.get("player_team_overrides") or {}).get(str(pid))
         end_year=self.current_date.year+1 if self.current_date.month>=7 else self.current_date.year
         ends_on=date(end_year,6,30)
-        buyer_fin["cash"]-=int(loan_fee); buyer_fin["transfer_spend"]=int(buyer_fin.get("transfer_spend") or 0)+int(loan_fee)
-        if str(seller) in self.state.get("club_finances",{}):
-            seller_fin=self.state["club_finances"][str(seller)]; seller_fin["cash"]+=int(loan_fee); seller_fin["transfer_income"]=int(seller_fin.get("transfer_income") or 0)+int(loan_fee)
         borrower_salary=round(int(current_contract.get("salary") or inferred_annual_salary(raw,overall=overall))*max(0,min(100,int(wage_share)))/100)
+        if borrower_salary>self._current_wage_headroom(): raise ValueError("la parte de ficha de la cesión supera el margen salarial anual disponible")
+        spend_transfer_funds(buyer_fin,int(loan_fee),recorded_fee=int(loan_fee))
+        if str(seller) in self.state.get("club_finances",{}):
+            seller_fin=self.state["club_finances"][str(seller)]; receive_transfer_funds(seller_fin,int(loan_fee))
         self.state["player_team_overrides"][str(pid)]=controlled
         self.state["contract_overrides"][str(pid)]={**current_contract,"salary":borrower_salary,"salary_display":f"{borrower_salary:,} ptas.".replace(",","."),"loan":True,"loan_parent_team_id":int(seller),"loan_end":ends_on.isoformat(),"squad_role":str(squad_role),"career_inferred":True}
         deal={"id":f"loan:{pid}:{date_text}:{controlled}","player_id":pid,"parent_team_id":int(seller),"borrower_team_id":controlled,"started_on":date_text,"ends_on":ends_on.isoformat(),"loan_fee":int(loan_fee),"wage_share":max(0,min(100,int(wage_share))),"squad_role":str(squad_role),"status":"active","previous_contract_override":previous_override,"previous_team_override":previous_team_override}
@@ -3274,14 +3618,21 @@ class ManagerCareerRuntime9394:
         squad_role=str(squad_role or "rotation")
         if squad_role not in {"star","starter","rotation","prospect","depth"}: raise ValueError("rol de plantilla no válido")
         if release_clause is not None and int(release_clause)<=0: raise ValueError("cláusula de rescisión no válida")
-        if int(fee_offer)+int(signing_bonus)>int(self.state.get("finances",{}).get("cash") or 0): raise ValueError("la oferta y la prima superan la caja disponible")
+        if int(fee_offer)+int(signing_bonus)>transfer_spending_power(self.state.get("finances",{})): raise ValueError("la oferta y la prima superan el presupuesto de fichajes utilizable")
         raw=self._player_source(pid) or {}
+        if deal_type=="loan":
+            overall_for_wage=int(self.state["player_development"].get(str(pid),{}).get("overall") or raw.get("overall") or raw.get("category") or 60)
+            current_contract=effective_contract(raw,overall=overall_for_wage,override=self.state.get("contract_overrides",{}).get(str(pid)))
+            annual_wage_cost=round(int(current_contract.get("salary") or inferred_annual_salary(raw,overall=overall_for_wage))*int(loan_wage_share)/100)
+        else:
+            annual_wage_cost=int(salary_offer)
+        if annual_wage_cost>self._current_wage_headroom(): raise ValueError("la oferta supera el margen salarial anual disponible")
         value=estimated_transfer_value(raw,overall=int(self.state["player_development"].get(str(pid),{}).get("overall") or raw.get("overall") or raw.get("category") or 60))
         slot=role_for_player(raw).squad_slot
         competitors=[]
         for tid in self._active_club_ids():
             if tid in {controlled,seller}: continue
-            fin=int((self.state.get("club_finances",{}).get(str(tid)) or {}).get("cash") or 0)
+            fin=transfer_spending_power((self.state.get("club_finances",{}).get(str(tid)) or {}))
             if fin < value * .75: continue
             audit=squad_audit(self._career_players_by_team.get(tid,[]),self.state["player_development"])
             shortage=max((int(n.get("shortage") or 0) for n in audit.get("needs") or [] if str(n.get("slot"))==slot),default=0)
@@ -3327,6 +3678,13 @@ class ManagerCareerRuntime9394:
         if loan_wage_share is not None:
             if not 0<=int(loan_wage_share)<=100: raise ValueError("el porcentaje de ficha de la cesión debe estar entre 0 y 100")
             row["loan_wage_share"]=int(loan_wage_share)
+        if str(row.get("deal_type") or "transfer")=="loan" and raw is not None:
+            overall=int(self.state.get("player_development",{}).get(str(int(row["player_id"])),{}).get("overall") or raw.get("overall") or raw.get("category") or 60)
+            current=effective_contract(raw,overall=overall,override=self.state.get("contract_overrides",{}).get(str(int(row["player_id"]))))
+            annual_cost=round(int(current.get("salary") or inferred_annual_salary(raw,overall=overall))*int(row.get("loan_wage_share") or 0)/100)
+        else:
+            annual_cost=int(salary_offer)
+        if annual_cost>self._current_wage_headroom(): raise ValueError("la oferta supera el margen salarial anual disponible")
         return resubmit_negotiation(row,fee_offer=int(fee_offer),salary_offer=int(salary_offer),contract_years=int(contract_years),current_date=self.current_date,seed=int(self.state["seed"]))
 
     def _process_user_negotiations(self, day:date) -> list[dict[str,Any]]:
@@ -3370,17 +3728,21 @@ class ManagerCareerRuntime9394:
             if seller==0:
                 fee_decision={"accepted":True,"fee":0,"counter_fee":0,"estimated_value":estimated_transfer_value(raw,overall=overall)}
             else:
-                fee_decision=negotiate_transfer(player=self._career_player_api(raw),current_overall=overall,buyer_cash=int(self.state["finances"].get("cash") or 0),fee_offer=fee_offer,salary_offer=salary_offer,contract_years=years)
+                fee_decision=negotiate_transfer(player=self._career_player_api(raw),current_overall=overall,buyer_cash=transfer_spending_power(self.state["finances"]),fee_offer=fee_offer,salary_offer=salary_offer,contract_years=years)
             # A concrete rival can close the deal if the user drags a contested
             # negotiation through multiple rounds with a clearly weaker package.
             if row.get("rival_interest") and seller and int(row.get("round") or 1)>=2 and row.get("rival_team_id"):
                 rival_tid=int(row["rival_team_id"]);rival_fee=int(row.get("rival_fee") or 0);rival_salary=int(row.get("rival_salary") or 0)
                 rival_fin=self.state.get("club_finances",{}).get(str(rival_tid)) or {}
                 rival_ok,_=self._signing_eligibility(rival_tid,raw,day=day)
-                if rival_ok and int(rival_fin.get("cash") or 0)>=rival_fee and (fee_offer<rival_fee or salary_offer<round(rival_salary*.95)):
-                    rival_fin["cash"]-=rival_fee;rival_fin["transfer_spend"]=int(rival_fin.get("transfer_spend") or 0)+rival_fee
+                rival_wage_room=wage_budget_headroom(
+                    rival_fin,players=self._career_players_by_team.get(rival_tid,[]),
+                    development=self.state.get("player_development") or {},contract_overrides=self.state.get("contract_overrides") or {},
+                )
+                if rival_ok and transfer_spending_power(rival_fin)>=rival_fee and rival_salary<=rival_wage_room and (fee_offer<rival_fee or salary_offer<round(rival_salary*.95)):
+                    spend_transfer_funds(rival_fin,rival_fee,recorded_fee=rival_fee)
                     if str(seller) in self.state.get("club_finances",{}):
-                        sf=self.state["club_finances"][str(seller)];sf["cash"]+=rival_fee;sf["transfer_income"]=int(sf.get("transfer_income") or 0)+rival_fee
+                        sf=self.state["club_finances"][str(seller)];receive_transfer_funds(sf,rival_fee)
                     self.state["player_team_overrides"][str(pid)]=rival_tid
                     self.state["contract_overrides"][str(pid)]={"start":str(day.year),"end":str(day.year+3),"end_year":day.year+3,"salary":rival_salary,"salary_display":f"{rival_salary:,} ptas.".replace(",","."),"loan":False,"career_inferred":True,"signed_by_ai":True}
                     row.update({"status":"lost_to_rival","completed_on":day.isoformat(),"reason":"competencia","winner_team_id":rival_tid});row.setdefault("history",[]).append({"date":day.isoformat(),"kind":"lost_to_rival","team_id":rival_tid,"fee":rival_fee,"salary":rival_salary})
@@ -3391,7 +3753,8 @@ class ManagerCareerRuntime9394:
                 rival_floor=round(int(fee_decision.get("estimated_value") or fee_offer)*1.02)
                 if fee_offer<rival_floor:
                     fee_decision={**fee_decision,"accepted":False,"reason":"competencia","counter_fee":rival_floor}
-            if fee_decision.get("accepted") and salary_offer>=salary_min:
+            wage_room=self._current_wage_headroom()
+            if fee_decision.get("accepted") and salary_offer>=salary_min and salary_offer<=wage_room:
                 transfer=self._complete_user_transfer(player_id=pid,seller=seller,fee=int(fee_decision.get("fee") or 0),salary=salary_offer,years=years,date_text=day.isoformat(),source="negotiation",signing_bonus=int(row.get("signing_bonus") or 0),release_clause=row.get("release_clause"),squad_role=str(row.get("squad_role") or "rotation"))
                 row.update({"status":"completed","completed_on":day.isoformat(),"fee":transfer["fee"],"salary":salary_offer}); row.setdefault("history",[]).append({"date":day.isoformat(),"kind":"accepted","fee":transfer["fee"],"salary":salary_offer})
                 events.append({"kind":"user_transfer_completed","date":day.isoformat(),"player_id":pid,"fee":transfer["fee"]})
@@ -3400,8 +3763,11 @@ class ManagerCareerRuntime9394:
                 if str(fee_decision.get("reason") or "") == "oferta_insuficiente":
                     counter_fee=max(fee_offer,round(counter_fee*negotiation_multiplier))
                 counter_salary=max(salary_min,int(row.get("salary_offer") or 0))
-                reason="salario_insuficiente" if fee_decision.get("accepted") and salary_offer<salary_min else str(fee_decision.get("reason") or "oferta_insuficiente")
-                row.update({"status":"countered","reason":reason,"counter_fee":counter_fee,"counter_salary":counter_salary})
+                if fee_decision.get("accepted") and salary_offer>wage_room:
+                    reason="presupuesto_salarial_insuficiente"
+                else:
+                    reason="salario_insuficiente" if fee_decision.get("accepted") and salary_offer<salary_min else str(fee_decision.get("reason") or "oferta_insuficiente")
+                row.update({"status":"countered","reason":reason,"counter_fee":counter_fee,"counter_salary":counter_salary,"wage_budget_headroom":wage_room})
                 row.setdefault("history",[]).append({"date":day.isoformat(),"kind":"counter","fee":counter_fee,"salary":counter_salary,"reason":reason})
                 events.append({"kind":"transfer_counteroffer","date":day.isoformat(),"player_id":pid,"counter_fee":counter_fee,"counter_salary":counter_salary,"reason":reason})
         return events
@@ -3441,13 +3807,13 @@ class ManagerCareerRuntime9394:
                 if tid==controlled: continue
                 eligible,_=self._signing_eligibility(tid,raw,day=day)
                 if not eligible: continue
-                fin=self.state["club_finances"].get(str(tid),{}); cash=int(fin.get("cash") or 0)
+                fin=self.state["club_finances"].get(str(tid),{}); cash=transfer_spending_power(fin)
                 if cash<value*.75: continue
                 squad=self._career_players_by_team.get(tid,[]); audit=squad_audit(squad,self.state["player_development"]); target_need=next((n for n in audit["needs"] if n["slot"]==target_slot),{"shortage":0})
                 need=int(target_need["shortage"])*3+max(0,20-len(squad))+float(club_status(self.state,tid).get("score") or 50)/100
                 candidates.append((need+rng.random(),tid,cash))
             if not candidates: continue
-            candidates.sort(reverse=True); buyer=candidates[0][1]; fee=round(value*(.82+rng.random()*.20)); fee=min(fee,int(self.state["club_finances"][str(buyer)].get("cash") or 0))
+            candidates.sort(reverse=True); buyer=candidates[0][1]; fee=round(value*(.82+rng.random()*.20)); fee=min(fee,transfer_spending_power(self.state["club_finances"][str(buyer)]))
             offer={"id":f"sale:{pid}:{day.isoformat()}:{buyer}","date":day.isoformat(),"expires_on":(day+timedelta(days=4)).isoformat(),"player_id":pid,"buyer_team_id":buyer,"buyer_team_name":(self._team_api(buyer) or {}).get("name"),"fee":fee,"status":"open"}
             offers.append(offer);events.append({"kind":"incoming_transfer_offer",**offer})
         for offer in offers:
@@ -3466,9 +3832,14 @@ class ManagerCareerRuntime9394:
         eligible,reason=self._signing_eligibility(buyer,self._player_source(pid))
         if not eligible: offer["status"]="withdrawn";raise ValueError(f"el comprador no puede inscribir al jugador: {reason}")
         buyer_fin=self.state["club_finances"][str(buyer)]
-        if int(buyer_fin.get("cash") or 0)<fee: offer["status"]="withdrawn";raise ValueError("el comprador ya no dispone de fondos")
-        seller_fin=self.state["club_finances"][str(controlled)]; buyer_fin["cash"]-=fee;buyer_fin["transfer_spend"]=int(buyer_fin.get("transfer_spend") or 0)+fee; seller_fin["cash"]+=fee;seller_fin["transfer_income"]=int(seller_fin.get("transfer_income") or 0)+fee
+        if transfer_spending_power(buyer_fin)<fee: offer["status"]="withdrawn";raise ValueError("el comprador ya no dispone de presupuesto de fichajes")
         raw=self._player_source(pid);overall=int(self.state["player_development"].get(str(pid),{}).get("overall") or raw.get("overall") or raw.get("category") or 60); salary=round(inferred_annual_salary(raw,overall=overall)*1.04); years=3
+        buyer_wage_room=wage_budget_headroom(
+            buyer_fin,players=self._career_players_by_team.get(buyer,[]),development=self.state.get("player_development") or {},
+            contract_overrides=self.state.get("contract_overrides") or {},
+        )
+        if salary>buyer_wage_room: offer["status"]="withdrawn";raise ValueError("el comprador ya no dispone de margen salarial")
+        seller_fin=self.state["club_finances"][str(controlled)]; spend_transfer_funds(buyer_fin,fee,recorded_fee=fee); receive_transfer_funds(seller_fin,fee)
         register_important_departure(self.state,player_id=pid,players_before=list(current_squad),date_text=self.current_date.isoformat())
         self.state["player_team_overrides"][str(pid)]=buyer; self.state["contract_overrides"][str(pid)]={"start":str(self.current_date.year),"end":str(self.current_date.year+years),"end_year":self.current_date.year+years,"salary":salary,"salary_display":f"{salary:,} ptas.".replace(",","."),"career_inferred":True,"signed_by_ai":True,"loan":False}
         offer["status"]="accepted"; self.state["transfer_listings"].pop(str(pid),None); record={"kind":"user_sale","date":self.current_date.isoformat(),"player_id":pid,"from_team_id":controlled,"to_team_id":buyer,"fee":fee,"accepted":True};self.state["transfer_history"].append(record);self.state["economy_ledger"].append({"date":self.current_date.isoformat(),"kind":"transfer_income","amount":fee,"player_id":pid})
@@ -3513,15 +3884,44 @@ class ManagerCareerRuntime9394:
 
     def market_snapshot(self) -> dict[str,Any]:
         ensure_market_flow_state(self.state);period=self.transfer_period_snapshot();rule=self._domestic_foreign_rule();squad=self._career_players_by_team.get(int(self.state["team_id"]),[])
-        return {"watchlist":list(self.state["watchlist"]),"negotiations":list(self.state["transfer_negotiations"].values()),"inquiries":list(self.state.get("market_inquiries") or [])[-30:],"loans":list(self.state.get("loan_deals") or [])[-40:],"listings":list(self.state["transfer_listings"].values()),"incoming_offers":list(self.state["incoming_transfer_offers"])[-30:],
+        scouting=self.scouting_snapshot(); squad_plan=self.squad_plan_snapshot()
+        negotiations=list(self.state["transfer_negotiations"].values()); inquiries=list(self.state.get("market_inquiries") or [])[-30:]
+        active_negotiations=[row for row in negotiations if row.get("status") in {"waiting","countered"}]
+        waiting=[row for row in active_negotiations if row.get("status")=="waiting"]
+        countered=[row for row in active_negotiations if row.get("status")=="countered"]
+        incoming_open=[row for row in self.state["incoming_transfer_offers"] if row.get("status")=="open"]
+        recruitment=self._responsibility_effect("recruitment_search")
+        negotiation=self._responsibility_effect("transfer_negotiation")
+        workflow={
+            "steps":[
+                {"key":"need","label":"Necesidad","count":len(squad_plan.get("priorities") or []),"state":"attention" if squad_plan.get("priorities") else "clear","owner":"Plantilla"},
+                {"key":"search","label":"Seguimiento","count":len(self.state["watchlist"]),"state":"active" if self.state["watchlist"] else "idle","owner":recruitment.get("assignee_name") or "Responsable de scouting"},
+                {"key":"scout","label":"Informes","count":len(scouting.get("active") or []),"state":"active" if scouting.get("active") else "idle","owner":recruitment.get("assignee_name") or "Responsable de scouting"},
+                {"key":"inquiry","label":"Consulta","count":len(inquiries),"state":"active" if inquiries else "idle","owner":negotiation.get("assignee_name") or "Responsable de mercado"},
+                {"key":"deal","label":"Negociación","count":len(active_negotiations),"state":"attention" if countered else "waiting" if waiting else "idle","owner":negotiation.get("assignee_name") or "Responsable de mercado"},
+            ],
+            "action_required":len(countered)+len(incoming_open),
+            "waiting_count":len(waiting)+len(scouting.get("active") or []),
+            "recruitment_owner":recruitment,
+            "negotiation_owner":negotiation,
+        }
+        return {"watchlist":list(self.state["watchlist"]),"negotiations":negotiations,"inquiries":inquiries,"loans":list(self.state.get("loan_deals") or [])[-40:],"listings":list(self.state["transfer_listings"].values()),"incoming_offers":list(self.state["incoming_transfer_offers"])[-30:],
             "period":period,"foreign_rule":rule.as_dict() if rule else None,"foreign_count":foreign_count(squad,rule) if rule else 0,"club_status":self.club_status_snapshot(),
             "recruitment_plan":dict((self.state.get("recruitment_plans") or {}).get(str(int(self.state["team_id"]))) or {}),"market_storylines":list(self.state.get("market_storylines") or [])[-30:],
-            "scouting":self.scouting_snapshot(),"squad_plan":self.squad_plan_snapshot(),
+            "scouting":scouting,"squad_plan":squad_plan,"workflow":workflow,
             "squad_size":len(squad),"minimum_squad_size":MINIMUM_SENIOR_SQUAD_SIZE_9394,"target_squad_size":TARGET_SENIOR_SQUAD_SIZE_9394}
+
+    def _current_wage_headroom(self, *, exclude_player_id: int | None = None) -> int:
+        controlled=int(self.state["team_id"])
+        return wage_budget_headroom(
+            self.state.get("finances") or {}, players=self._career_players_by_team.get(controlled,[]),
+            development=self.state.get("player_development") or {}, contract_overrides=self.state.get("contract_overrides") or {},
+            exclude_player_id=exclude_player_id,
+        )
 
     def economy_snapshot(self) -> dict[str,Any]:
         team_id=int(self.state["team_id"]); team=self.universe.team(team_id) or {}; players=self._career_players_by_team.get(team_id,[])
-        base=economy_snapshot(team=team,finances=self.state["finances"],players=players,development=self.state["player_development"],contract_overrides=self.state["contract_overrides"],ledger=self.state["economy_ledger"],stature_score=float(club_status(self.state,team_id).get("score") or 50.0))
+        base=economy_snapshot(team=team,finances=self.state["finances"],players=players,development=self.state["player_development"],contract_overrides=self.state["contract_overrides"],ledger=self.state["economy_ledger"],stature_score=float(club_status(self.state,team_id).get("score") or 50.0),accounting_month=self.current_date.month)
         health=financial_health(
             cash=int(base.get("cash") or 0),debt=int(base.get("debt") or 0),projected_monthly_net=int(base.get("projected_monthly_net") or 0),
             safety_reserve=int(base.get("safety_reserve") or 0),annual_wages=int(base.get("annual_wages") or 0),starting_budget=int((self.state.get("club_finances") or {}).get(str(team_id),{}).get("starting_budget") or team.get("budget") or 0),
@@ -3549,14 +3949,16 @@ class ManagerCareerRuntime9394:
         retention_multiplier=trust_multiplier*(1.08 if wants_move else 1.0)
         minimum=round(max(inferred_annual_salary(raw,overall=overall),int(current.get("salary") or 0))*.96*retention_multiplier)
         offered=minimum if salary_offer is None else int(salary_offer)
-        accepted=offered>=minimum
-        record={"kind":"user_renewal","date":self.state["current_date"],"player_id":pid,"years":int(years),"salary_offer":offered,"minimum_salary":minimum,"accepted":accepted,"relationship_trust":trust,"relationship_multiplier":round(trust_multiplier,3),"wants_move":wants_move}
+        wage_room=self._current_wage_headroom(exclude_player_id=pid)
+        accepted=offered>=minimum and offered<=wage_room
+        record={"kind":"user_renewal","date":self.state["current_date"],"player_id":pid,"years":int(years),"salary_offer":offered,"minimum_salary":minimum,"accepted":accepted,"relationship_trust":trust,"relationship_multiplier":round(trust_multiplier,3),"wants_move":wants_move,"wage_budget_headroom":wage_room}
         if accepted:
             year=self.current_date.year
             self.state["contract_overrides"][str(pid)]={**current,"start":str(year),"end":str(year+int(years)),"end_year":year+int(years),"salary":offered,"salary_display":f"{offered:,} ptas.".replace(",","."),"career_inferred":True,"renewed_by_user":True}
             adjust_player_manager_relationship(self.state,player_id=pid,date_text=self.current_date.isoformat(),delta=7,reason="renovación acordada")
         else:
             record["counter_salary"]=minimum
+            record["reason"]="presupuesto_salarial_insuficiente" if offered>wage_room else "salario_insuficiente"
             adjust_player_manager_relationship(self.state,player_id=pid,date_text=self.current_date.isoformat(),delta=-2,reason="oferta de renovación insuficiente")
         register_contract_decision(self.state, player_id=pid, accepted=accepted, date_text=self.current_date.isoformat())
         self.state["contract_history"].append(record)
@@ -3596,6 +3998,11 @@ class ManagerCareerRuntime9394:
             home_id,away_id=int(fixture["home_team_id"]),int(fixture["away_team_id"]);result=results_by_fixture.get(int(fixture["id"]))
             out.append({**fixture,"fixture_type":"league","competition_name":league_name,"home_team":(self._team_api(home_id) or {}).get("name",str(home_id)),"away_team":(self._team_api(away_id) or {}).get("name",str(away_id)),
                 "played":result is not None,"home_goals":result.get("home_goals") if result else None,"away_goals":result.get("away_goals") if result else None})
+        next_fixture=self.next_scheduled_fixture(); next_id=int((next_fixture or {}).get("id") or 0); availability=self._controlled_absences_for_fixture(next_fixture) if next_fixture else []
+        if next_id:
+            for row in out:
+                if int(row.get("id") or 0)==next_id and not row.get("played"):
+                    row["availability_count"]=len(availability); row["availability"]=availability
         out.sort(key=lambda row:(str(row.get("date") or "9999-12-31"),int(row.get("id") or 0)))
         return out
 
@@ -3629,12 +4036,12 @@ class ManagerCareerRuntime9394:
             "contract_history":list(self.state.get("contract_history") or [])[-50:],"international_history":list(self.state.get("international_history") or [])[-50:],"international_manager":international_manager_snapshot(self.state),"international_tournaments":list(self.state.get("international_tournaments") or [])[-6:],
             "world_progress":{key:{"completed_round":int(value.get("completed_round") or 0),"result_count":len(value.get("results") or [])} for key,value in (self.state.get("world_leagues") or {}).items()},
             "special_progress":special_competition_snapshot(self),"tournament_progress":tournament_snapshot(self),
-            "season_archive":list(self.state.get("season_archive") or []),"honours":list(self.state.get("honours") or []),
+            "season_archive":list(self.state.get("season_archive") or []),"season_dossiers":list(self.state.get("season_dossiers") or []),"honours":list(self.state.get("honours") or []),
             "club_honours":list((self.state.get("club_honours") or {}).get(str(team_id),[])),"continental_qualifiers":dict(self.state.get("continental_qualifiers") or {}),
             "season_transition_log":list(self.state.get("season_transition_log") or []),"recent_world_events":list(self.state.get("world_events") or [])[-30:],
             "board":self.board_snapshot(persist=False),"news_feed":self.news_snapshot(limit=30),"season_recaps":list(self.state.get("season_recaps") or []),
             "latest_ai_squad_audit":((self.state.get("ai_squad_audits") or [])[-1] if self.state.get("ai_squad_audits") else None),"job_status":self.state.get("job_status") or "active",
-            "preseason":self.preseason_snapshot(),"market_period":self.transfer_period_snapshot(),"club_status":self.club_status_snapshot(),
+            "preseason":self.preseason_snapshot(),"market_period":self.transfer_period_snapshot(),"club_status":self.club_status_snapshot(),"summer_briefing":dict(self.state.get("summer_briefing") or {}),"longitudinal_health":list(self.state.get("longitudinal_health") or [])[-10:],
             "market_flow":self.market_snapshot(),"live_match":self.live_match_snapshot(),"last_match_report":self.state.get("last_match_report"),
             "storylines":stories,
             "storyline_archive":[dict(row) for row in (self.state.get("storylines") or []) if row.get("status")=="resolved"][-40:],

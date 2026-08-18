@@ -1,0 +1,18 @@
+{
+  "generated_for": "V1.0-H2 economy depth asset micro-pass",
+  "date": "2026-08-18",
+  "policy": "best_effort_non_blocking_every_development_pass",
+  "attempted_source": "BDFutbol public player pages",
+  "normalized_local_raw": 385,
+  "normalized_new": 0,
+  "download_attempts": 12,
+  "downloaded": 0,
+  "failed": 12,
+  "failure_class": "temporary DNS/name resolution failure in execution environment",
+  "checkpoint_blocked": false,
+  "canonical_tool_added": "backend/tools/run_asset_pass.py",
+  "source_reports": [
+    "data/football9394/asset_pass_h2_normalize.json",
+    "data/football9394/asset_pass_h2_download.json"
+  ]
+}

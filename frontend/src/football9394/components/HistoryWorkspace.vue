@@ -1,11 +1,21 @@
 <script setup>
-defineProps({latestRecap:{type:Object,default:null},historyState:{type:Object,default:()=>({})},latestAiAudit:{type:Object,default:null},careerRecords:{type:Object,default:()=>({})},storylineArchive:{type:Array,default:()=>[]},managerCareer:{type:Object,default:()=>({reputation:50,tenures:[],current_tenure:{}})}})
+import { computed } from 'vue'
+const props=defineProps({latestRecap:{type:Object,default:null},historyState:{type:Object,default:()=>({})},latestAiAudit:{type:Object,default:null},careerRecords:{type:Object,default:()=>({})},storylineArchive:{type:Array,default:()=>[]},managerCareer:{type:Object,default:()=>({reputation:50,tenures:[],current_tenure:{}})}})
+const dossiers=computed(()=>[...(props.historyState.season_dossiers||[])].reverse())
+const timeline=computed(()=>dossiers.value.length?dossiers.value:[...(props.historyState.season_recaps||[])].reverse().map(recap=>({season:recap.season,managed_recap:recap,manager_segments:[]})))
+function dossierHeadline(row){return row.managed_recap?.headline||`${row.season}: temporada archivada`}
+function dossierMeta(row){
+ const segs=row.manager_segments||[]
+ if(segs.length)return segs.map(s=>`${s.team_name}${s.final_table_row?.position?` · ${s.final_table_row.position}º`:''}`).join(' → ')
+ const recap=row.managed_recap||{}
+ return `${recap.league_name||'Competición'} · ${recap.position??'—'}º`
+}
 </script>
 <template>
 <section class="screen-grid history-screen modern-r7">
   <article class="football-panel history-main"><header class="workspace-heading"><div><small>Archivo de carrera</small><h2>Historia</h2><p>Temporadas, títulos y protagonistas permanecen aunque el universo siga cambiando.</p></div></header>
     <div v-if="latestRecap" class="latest-recap modern-recap"><small>Última temporada cerrada</small><h3>{{latestRecap.headline}}</h3><div class="recap-grid"><span><small>Liga</small><b>{{latestRecap.position??'—'}}º · {{latestRecap.points??'—'}} pts</b></span><span><small>Balance</small><b>{{latestRecap.wins??0}}V {{latestRecap.draws??0}}E {{latestRecap.losses??0}}D</b></span><span><small>Europa siguiente</small><b>{{latestRecap.qualified_for?.join(', ')||'No'}}</b></span><span><small>Consejo</small><b>{{latestRecap.board?.label||'—'}} · {{latestRecap.board?.score??'—'}}</b></span></div><div class="recap-protagonists"><p v-if="latestRecap.top_scorer"><small>Máximo goleador</small><strong>{{latestRecap.top_scorer.name}}</strong><span>{{latestRecap.top_scorer.goals}} goles</span></p><p v-if="latestRecap.player_of_season"><small>Jugador de la temporada</small><strong>{{latestRecap.player_of_season.name}}</strong><span>{{latestRecap.player_of_season.average_rating}}</span></p></div></div>
-    <div class="season-timeline modern-timeline"><article v-for="recap in [...(historyState.season_recaps||[])].reverse()" :key="recap.season"><b>{{recap.season}}</b><div><strong>{{recap.headline}}</strong><span>{{recap.league_name}} · {{recap.position??'—'}}º</span><small v-if="recap.titles?.length">{{recap.titles.map(t=>t.competition_name).join(' · ')}}</small></div></article><div v-if="!historyState.season_recaps?.length" class="empty-football-state">Tu primera temporada todavía está en marcha.</div></div>
+    <div class="season-timeline modern-timeline"><article v-for="row in timeline" :key="row.season"><b>{{row.season}}</b><div><strong>{{dossierHeadline(row)}}</strong><span>{{dossierMeta(row)}}</span><small v-if="row.manager_segments?.length>1">{{row.manager_segments.length}} proyectos dirigidos en la misma temporada</small><small v-else-if="row.managed_recap?.titles?.length">{{row.managed_recap.titles.map(t=>t.competition_name).join(' · ')}}</small></div></article><div v-if="!timeline.length" class="empty-football-state">Tu primera temporada todavía está en marcha.</div></div>
     <section class="career-story-archive">
       <header><div><small>MEMORIA DE LA PARTIDA</small><h3>Historias que ya dejaron huella</h3></div></header>
       <article v-for="story in [...storylineArchive].reverse().slice(0,6)" :key="story.key">

@@ -87,7 +87,13 @@ def player_match_boxscore(result: Any, home_sheet: Any, away_sheet: Any) -> dict
         elif kind == "assist" and pid in rows[team_id]: rows[team_id][pid]["assists"] += 1
         elif kind == "foul" and pid in rows[team_id]: rows[team_id][pid]["fouls"] += 1
         elif kind == "yellow" and pid in rows[team_id]: rows[team_id][pid]["yellow_cards"] += 1
-        elif kind in {"red", "second_yellow_red"} and pid in rows[team_id]: rows[team_id][pid]["red_cards"] += 1
+        elif kind == "second_yellow_red" and pid in rows[team_id]:
+            # A dismissal for a second caution is still a second yellow for the
+            # season card cycle.  Treating it as only a red made the live event,
+            # player season line and suspension logic disagree.
+            rows[team_id][pid]["yellow_cards"] += 1
+            rows[team_id][pid]["red_cards"] += 1
+        elif kind == "red" and pid in rows[team_id]: rows[team_id][pid]["red_cards"] += 1
         elif kind == "offside" and pid in rows[team_id]: rows[team_id][pid]["offsides"] += 1
         elif kind == "injury" and pid in rows[team_id]: rows[team_id][pid]["injuries"] += 1
         elif kind == "second_ball" and pid in rows[team_id]:

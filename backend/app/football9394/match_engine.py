@@ -301,6 +301,7 @@ class _SideState:
     fatigue: dict[str, float]
     yellow_by_player: dict[str, int]
     sent_off: set[str]
+    forced_off: set[str]
     goals: int = 0
     shots: int = 0
     shots_on_target: int = 0
@@ -322,11 +323,12 @@ class _SideState:
             fatigue={p.id: 0.0 for p in (*sheet.starters, *sheet.bench)},
             yellow_by_player={},
             sent_off=set(),
+            forced_off=set(),
             match_form={p.id: 1.0 for p in (*sheet.starters, *sheet.bench)},
         )
 
     def available_players(self) -> list[Footballer9394]:
-        return [p for p in self.on_pitch if p.id not in self.sent_off]
+        return [p for p in self.on_pitch if p.id not in self.sent_off and p.id not in self.forced_off]
 
     def goalkeeper(self) -> Footballer9394:
         players = self.available_players()
@@ -375,8 +377,8 @@ class FootballMatchEngine9394:
             if minute in (58, 70, 78):
                 self._maybe_manager_adjustment(home, away, minute, events)
                 self._maybe_manager_adjustment(away, home, minute, events)
-                self._maybe_substitute(home, minute, rng, events)
-                self._maybe_substitute(away, minute, rng, events)
+                self._maybe_substitute(home, minute, rng, events, opponent=away)
+                self._maybe_substitute(away, minute, rng, events, opponent=home)
 
             # The normal 90-minute clock excludes first-half added time in this
             # coarse engine; it is kept as an event/detail until the live clock
@@ -557,11 +559,12 @@ class FootballMatchEngine9394:
             previous = int(attack.yellow_by_player.get(diver.id, 0))
             attack.yellow_by_player[diver.id] = previous + 1
             attack.yellows += 1
-            events.append(MatchEvent9394(minute, "yellow", attack.sheet.team_id, diver.id, diver.name, "Amonestado por simulación"))
             if previous >= 1:
                 attack.reds += 1
                 attack.sent_off.add(diver.id)
-                events.append(MatchEvent9394(minute, "red", attack.sheet.team_id, diver.id, diver.name, "Segunda amarilla por simulación"))
+                events.append(MatchEvent9394(minute, "second_yellow_red", attack.sheet.team_id, diver.id, diver.name, "Segunda amarilla por simulación"))
+            else:
+                events.append(MatchEvent9394(minute, "yellow", attack.sheet.team_id, diver.id, diver.name, "Amonestado por simulación"))
         foul_chance = _clamp(
             (0.235 + press + marking_contact + (58.0 - discipline) / 720.0 + (aggression - 65.0) / 1600.0 + divers * .0025)
             * self.profile.foul_multiplier,
@@ -859,24 +862,69 @@ class FootballMatchEngine9394:
             individual_press = {"low": .92, "normal": 1.0, "high": 1.10}.get(str((side.sheet.individual_instructions or {}).get(str(player.id), {}).get("pressing") or "normal"), 1.0)
             side.fatigue[player.id] = min(100.0, side.fatigue.get(player.id, 0.0) + 0.43 * tempo * press * marking * width * transition * individual_press * pitch_load * stamina_factor * work_factor)
 
-    def _maybe_substitute(self, side: _SideState, minute: int, rng: Random, events: list[MatchEvent9394]) -> None:
+    @staticmethod
+    def _position_family(player: Footballer9394) -> str:
+        pos = str(player.position or "").upper()
+        if pos in {"GK", "POR", "PORTERO"} or "PORT" in pos:
+            return "GK"
+        if any(token in pos for token in ("DF", "CB", "CENTRAL", "LIB", "LD", "LI", "SW")):
+            return "DEF"
+        if any(token in pos for token in ("MC", "MD", "MI", "MP", "MED", "AM", "DM")):
+            return "MID"
+        return "FWD"
+
+    def _replacement_context_score(self, replacement: Footballer9394, outgoing: Footballer9394, *, trailing: bool, leading: bool) -> float:
+        family_match = self._position_family(replacement) == self._position_family(outgoing)
+        score = float(replacement.overall) + (14.0 if family_match else -18.0)
+        if trailing:
+            score += (replacement.finishing + replacement.off_ball + replacement.creativity + replacement.dribbling) / 32.0
+            score -= (replacement.marking + replacement.tackling) / 90.0
+        elif leading:
+            score += (replacement.positioning + replacement.tackling + replacement.marking + replacement.stamina + replacement.work_rate) / 42.0
+        else:
+            score += (replacement.stamina + replacement.work_rate) / 55.0
+        return score
+
+    def _maybe_substitute(self, side: _SideState, minute: int, rng: Random, events: list[MatchEvent9394], *, opponent: _SideState | None = None) -> None:
         if side.substitutions >= self.laws.max_used_substitutes or not side.bench:
             return
         candidates = [p for p in side.available_players() if p.position.upper() not in {"GK", "POR", "PORTERO"}]
         if not candidates:
             return
-        tired = max(candidates, key=lambda p: side.fatigue.get(p.id, 0.0) - p.overall / 10.0)
+        score_delta = side.goals - opponent.goals if opponent is not None else 0
+        trailing = score_delta < 0
+        leading = score_delta > 0
+        tired = max(
+            candidates,
+            key=lambda p: side.fatigue.get(p.id, 0.0)
+            + (6.0 if trailing and self._position_family(p) in {"DEF", "MID"} else 0.0)
+            + (4.0 if leading and self._position_family(p) in {"FWD", "MID"} else 0.0)
+            - p.overall / 11.0,
+        )
         fatigue = side.fatigue.get(tired.id, 0.0)
         threshold = 25 if minute <= 60 else 31 if minute <= 72 else 35
         threshold += {"high": -5, "normal": 0, "low": 5}.get(side.sheet.rotation_frequency, 0)
-        if fatigue < threshold and rng.random() > 0.16:
+        if trailing and minute >= 58:
+            threshold -= 7
+        elif leading and minute >= 68:
+            threshold -= 3
+        elif score_delta == 0 and minute >= 72:
+            threshold -= 2
+        urgency = 0.34 if trailing and minute >= 70 else 0.24 if trailing else 0.19 if minute >= 76 else 0.12
+        if fatigue < threshold and rng.random() > urgency:
             return
-        replacement = max(side.bench, key=lambda p: self._replacement_fit(p, tired))
+        non_goalkeepers = [p for p in side.bench if self._position_family(p) != "GK"]
+        bench_pool = non_goalkeepers or list(side.bench)
+        replacement = max(
+            bench_pool,
+            key=lambda p: self._replacement_context_score(p, tired, trailing=trailing, leading=leading),
+        )
         idx = side.on_pitch.index(tired)
         side.on_pitch[idx] = replacement
         side.bench.remove(replacement)
         side.substitutions += 1
-        events.append(MatchEvent9394(minute, "substitution", side.sheet.team_id, replacement.id, replacement.name, f"Entra {replacement.name}; sale {tired.name}", tired.id, tired.name))
+        context = "buscar el partido" if trailing else "proteger la ventaja" if leading else "refrescar el equipo"
+        events.append(MatchEvent9394(minute, "substitution", side.sheet.team_id, replacement.id, replacement.name, f"Entra {replacement.name}; sale {tired.name} para {context}", tired.id, tired.name))
 
     def _replacement_fit(self, replacement: Footballer9394, outgoing: Footballer9394) -> float:
         same_position = replacement.position.upper() == outgoing.position.upper()
@@ -894,12 +942,20 @@ class FootballMatchEngine9394:
         weights = [1.0 + int(p.injury_proneness) * .55 + float(side.fatigue.get(p.id, 0.0)) / 150.0 for p in players]
         player = rng.choices(players, weights=weights, k=1)[0]
         events.append(MatchEvent9394(minute, "injury", side.sheet.team_id, player.id, player.name, "Problemas físicos"))
-        # An injury does not always force the player off; when it does, the
-        # historical two-substitute cap still applies.
-        if side.substitutions < self.laws.max_used_substitutes and side.bench and rng.random() < 0.58:
+        # An injury does not always force the player off.  When it does, the
+        # historical two-substitute cap still applies; if both changes have
+        # already been used the team must finish short-handed rather than keep
+        # an unavailable footballer participating in the engine.
+        forced_off = rng.random() < 0.58
+        if not forced_off:
+            return
+        if side.substitutions < self.laws.max_used_substitutes and side.bench:
             replacement = max(side.bench, key=lambda p: self._replacement_fit(p, player))
             idx = side.on_pitch.index(player)
             side.on_pitch[idx] = replacement
             side.bench.remove(replacement)
             side.substitutions += 1
             events.append(MatchEvent9394(minute, "injury_substitution", side.sheet.team_id, replacement.id, replacement.name, f"Entra {replacement.name}; sale lesionado {player.name}", player.id, player.name))
+        else:
+            side.forced_off.add(player.id)
+            events.append(MatchEvent9394(minute, "injury_forced_off", side.sheet.team_id, player.id, player.name, f"{player.name} no puede continuar y no quedan cambios"))

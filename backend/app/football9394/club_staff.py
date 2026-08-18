@@ -63,6 +63,8 @@ RESPONSIBILITIES: dict[str, dict[str, Any]] = {
         "skill": "tactical",
         "roles": ("assistant_manager",),
         "default": "manager",
+        "workspace": "squad",
+        "effect": "Afecta a la selección del once, la convocatoria y la coherencia del plan de partido.",
     },
     "first_team_training": {
         "label": "Entrenamiento del primer equipo",
@@ -71,6 +73,8 @@ RESPONSIBILITIES: dict[str, dict[str, Any]] = {
         "skill": "coaching",
         "roles": ("assistant_manager", "first_team_coach"),
         "default": "assistant_manager",
+        "workspace": "training",
+        "effect": "Afecta a la calidad útil de las sesiones, la carga acumulada y el desarrollo cotidiano.",
     },
     "match_preparation": {
         "label": "Preparación del próximo partido",
@@ -79,6 +83,8 @@ RESPONSIBILITIES: dict[str, dict[str, Any]] = {
         "skill": "tactical",
         "roles": ("assistant_manager", "first_team_coach"),
         "default": "assistant_manager",
+        "workspace": "training",
+        "effect": "Afecta a la preparación específica del rival y a cuánto se aprovecha el trabajo previo al partido.",
     },
     "opposition_reports": {
         "label": "Informes del rival",
@@ -87,6 +93,8 @@ RESPONSIBILITIES: dict[str, dict[str, Any]] = {
         "skill": "judging_player",
         "roles": ("chief_scout", "scout", "assistant_manager"),
         "default": "chief_scout",
+        "workspace": "tactics",
+        "effect": "Afecta a la fiabilidad y detalle con los que llegan amenazas, tendencias y bajas del rival.",
     },
     "recruitment_search": {
         "label": "Búsqueda de fichajes",
@@ -95,6 +103,8 @@ RESPONSIBILITIES: dict[str, dict[str, Any]] = {
         "skill": "market_knowledge",
         "roles": ("chief_scout", "scout", "sporting_director"),
         "default": "chief_scout",
+        "workspace": "market",
+        "effect": "Afecta a capacidad, plazo, frescura y precisión de los dossiers de jugadores externos.",
     },
     "transfer_negotiation": {
         "label": "Negociación de traspasos",
@@ -103,6 +113,8 @@ RESPONSIBILITIES: dict[str, dict[str, Any]] = {
         "skill": "negotiation",
         "roles": ("sporting_director",),
         "default": "sporting_director",
+        "workspace": "market",
+        "effect": "Afecta a la lectura de precios, los tiempos de respuesta y la fuerza negociadora del club.",
     },
     "contract_renewal": {
         "label": "Renovaciones de contrato",
@@ -111,6 +123,8 @@ RESPONSIBILITIES: dict[str, dict[str, Any]] = {
         "skill": "negotiation",
         "roles": ("sporting_director", "assistant_manager"),
         "default": "sporting_director",
+        "workspace": "squad",
+        "effect": "Afecta a la calidad de las conversaciones de renovación y al coste de retener la plantilla.",
     },
     "medical_assessment": {
         "label": "Valoración médica",
@@ -119,6 +133,8 @@ RESPONSIBILITIES: dict[str, dict[str, Any]] = {
         "skill": "physiotherapy",
         "roles": ("physio",),
         "default": "physio",
+        "workspace": "training",
+        "effect": "Afecta a la confianza de diagnósticos, riesgo, recuperación y recomendaciones de disponibilidad.",
     },
     "youth_development": {
         "label": "Seguimiento de jóvenes",
@@ -127,6 +143,8 @@ RESPONSIBILITIES: dict[str, dict[str, Any]] = {
         "skill": "youth",
         "roles": ("first_team_coach", "assistant_manager", "sporting_director"),
         "default": "first_team_coach",
+        "workspace": "squad",
+        "effect": "Afecta a la lectura de progresión, adaptación y necesidades futuras de los jóvenes.",
     },
 }
 
@@ -396,6 +414,10 @@ def club_staff_snapshot(
             "quality_label": _quality_label(effective),
             "workload": load,
             "workload_label": _load_label(load),
+            "mode": "direct" if assignee == "manager" else "delegated",
+            "mode_label": "Control directo" if assignee == "manager" else "Delegado",
+            "workspace": str(spec.get("workspace") or "home"),
+            "effect": str(spec.get("effect") or "Afecta a la calidad operativa de esta tarea."),
             "eligible_assignees": eligible,
         })
 

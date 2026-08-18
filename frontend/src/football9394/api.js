@@ -80,6 +80,8 @@ export const football9394Api={
   disciplinePlayer:(careerId,playerId,action)=>footballRequest(`/api/football9394/careers/${careerId}/players/${Number(playerId)}/discipline`,{method:'POST',body:JSON.stringify({action})}),
   liveMatch:(careerId)=>footballRequest(`/api/football9394/careers/${careerId}/live`),
   startLiveMatch:(careerId)=>footballRequest(`/api/football9394/careers/${careerId}/live/start`,{method:'POST'}),
+  cancelLivePreview:(careerId)=>footballRequest(`/api/football9394/careers/${careerId}/live/preview`,{method:'DELETE'}),
+  simulateLiveMatch:(careerId)=>footballRequest(`/api/football9394/careers/${careerId}/live/result`,{method:'POST'}),
   advanceLiveMatch:(careerId,minutes=5)=>footballRequest(`/api/football9394/careers/${careerId}/live/advance`,{method:'POST',body:JSON.stringify({minutes})}),
   updateLiveTactics:(careerId,tactics)=>footballRequest(`/api/football9394/careers/${careerId}/live/tactics`,{method:'PUT',body:JSON.stringify(tactics)}),
   liveSubstitution:(careerId,outgoingId,incomingId)=>footballRequest(`/api/football9394/careers/${careerId}/live/substitution`,{method:'POST',body:JSON.stringify({outgoing_id:outgoingId,incoming_id:incomingId})}),

@@ -12,6 +12,7 @@ from typing import Any, Callable
 def ensure_news_state(state: dict[str, Any]) -> None:
     state.setdefault("news_feed", [])
     state.setdefault("news_seen_keys", [])
+    state.setdefault("news_seen_causes", [])
     if "news_serial" not in state:
         serial=0
         for item in state.get("news_feed") or []:
@@ -35,20 +36,25 @@ def _key(event: dict[str, Any]) -> str:
 
 
 def publish(state: dict[str, Any], *, key: str, date: str, category: str, importance: int,
-            headline: str, detail: str = "", entity: dict[str, Any] | None = None) -> dict[str, Any] | None:
+            headline: str, detail: str = "", entity: dict[str, Any] | None = None, cause: str = "") -> dict[str, Any] | None:
     ensure_news_state(state)
     if key in set(state.get("news_seen_keys") or []):
+        return None
+    if cause and cause in set(state.get("news_seen_causes") or []):
         return None
     state["news_serial"] = int(state.get("news_serial") or 0) + 1
     item = {
         "id": f"news-{state['news_serial']}", "date": date, "category": category,
         "importance": int(max(1,min(5,importance))), "headline": headline, "detail": detail,
-        "entity": entity or {}, "source_key": key,
+        "entity": entity or {}, "source_key": key, "cause": cause or None,
     }
     state["news_feed"].append(item)
     state["news_feed"] = state["news_feed"][-800:]
     state["news_seen_keys"].append(key)
     state["news_seen_keys"] = state["news_seen_keys"][-1200:]
+    if cause:
+        state["news_seen_causes"].append(cause)
+        state["news_seen_causes"] = state["news_seen_causes"][-1200:]
     return item
 
 
@@ -72,8 +78,9 @@ def ingest_events(state: dict[str, Any], events: list[dict[str, Any]], *,
                 headline=f"{player_name(pid)} queda libre",detail=f"Finaliza su contrato con {team_name(a)}.",entity={"player_id":pid})
         elif kind=="competition_completed":
             champion=int(event.get("champion_team_id") or 0); name=str(event.get("competition_name") or f"Competición {event.get('source_id')}")
+            cause=f"competition-title:{state.get('season')}:{event.get('competition_kind') or 'competition'}:{event.get('source_id')}:{champion}"
             item=publish(state,key=key,date=date,category="Competiciones",importance=5,
-                headline=f"{team_name(champion)} conquista {name}",detail="El título queda registrado en el palmarés de esta partida.",entity={"team_id":champion,"competition_id":event.get("source_id")})
+                headline=f"{team_name(champion)} conquista {name}",detail="El título queda registrado en el palmarés de esta partida.",entity={"team_id":champion,"competition_id":event.get("source_id")},cause=cause)
         elif kind=="season_rollover":
             item=publish(state,key=key,date=date,category="Temporada",importance=5,
                 headline=f"Comienza la temporada {event.get('to_season')}",

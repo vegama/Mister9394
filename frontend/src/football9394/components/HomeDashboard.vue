@@ -7,8 +7,10 @@ const props = defineProps({
   preseason: { type: Object, default: () => ({}) }, marketPeriod: { type: Object, default: () => ({}) }, clubStatus: { type: Object, default: () => ({}) },
   tableWindow: { type: Array, default: () => [] }, standings: { type: Array, default: () => [] }, dashboard: { type: Object, default: () => ({}) }, latestNews: { type: Array, default: () => [] }, currentBoard: { type: Object, default: () => ({}) },
   storylines: { type: Array, default: () => [] }, rivalries: { type: Array, default: () => [] },
+  selection: { type: Object, default: () => ({starter_ids:[],valid:false,issues:[]}) },
+  formation: { type: String, default: '4-4-2' }, gameDate: { type: String, default: '' }, lineupDirty: { type: Boolean, default: false },
 })
-const emit = defineEmits(['navigate','start-live','simulate'])
+const emit = defineEmits(['navigate','start-live','continue'])
 const dateShort = value => { if(!value)return '—'; const p=String(value).split('-'); return p.length===3?`${p[2]}/${p[1]}/${p[0]}`:String(value) }
 const matchContext = row => { if(!row)return 'SIN PARTIDO'; if(row.fixture_type==='friendly')return 'PRETEMPORADA · AMISTOSO'; if(row.fixture_type==='tournament')return `${row.competition_name||'COPA'} · ${row.stage||''}`; return `LIGA · JORNADA ${row.matchday||'—'}` }
 const trendLabel = value => { const n=Number(value||0); return n>0?`▲ +${n}`:n<0?`▼ ${n}`:'● ESTABLE' }
@@ -24,8 +26,33 @@ const nextOpponent = computed(() => {
   return { id: home ? props.nextMatch.away_team_id : props.nextMatch.home_team_id, name: home ? props.nextMatch.away_team : props.nextMatch.home_team, venue: home ? 'En casa' : 'Fuera' }
 })
 const hasMatchDecision = computed(() => Boolean(props.nextMatch))
+const isMatchDay = computed(() => Boolean(props.nextMatch?.date && props.gameDate && String(props.nextMatch.date)===String(props.gameDate)))
+const selectionReady = computed(() => Boolean(!props.lineupDirty && props.selection?.valid && (props.selection?.starter_ids || []).length===11))
+const unavailableStarters = computed(() => {
+  const ids=new Set((props.selection?.starter_ids || []).map(Number))
+  return props.squad.filter(p=>ids.has(Number(p.id)) && p.status!=='DISP.')
+})
+const matchReadiness = computed(() => [
+  {label:'Once',value:props.lineupDirty?'Sin guardar':selectionReady.value?'Legal':'Revisar',ok:selectionReady.value,action:'squad'},
+  {label:'Sistema',value:props.formation || '—',ok:true,action:'tactics'},
+  {label:'Bajas en XI',value:String(unavailableStarters.value.length),ok:unavailableStarters.value.length===0,action:'squad'},
+  {label:'Partido',value:isMatchDay.value?'Hoy':dateShort(props.nextMatch?.date),ok:isMatchDay.value,action:isMatchDay.value?'match':'calendar'},
+])
+const primaryMatchAction = computed(() => {
+  if(!props.nextMatch)return {label:'Continuar',kind:'continue'}
+  if(!selectionReady.value)return {label:'Corregir once',kind:'navigate',target:'squad'}
+  if(isMatchDay.value)return {label:'Ir a la previa',kind:'start-live'}
+  return {label:'Preparar plan',kind:'navigate',target:'tactics'}
+})
+function runPrimaryMatchAction(){
+ const action=primaryMatchAction.value
+ if(action.kind==='continue')emit('continue')
+ else if(action.kind==='start-live')emit('start-live')
+ else emit('navigate',action.target)
+}
 const storyAction = story => story.kind==='transfer_saga'?'market':story.kind==='player_tension'?'squad':story.kind==='rivalry'?'tactics':'competitions'
 const storyLabel = story => ({table_pressure:'TEMPORADA',streak:'RACHA',player_tension:'VESTUARIO',transfer_saga:'MERCADO',rivalry:'RIVALIDAD',manager_change:'BANQUILLOS'}[story.kind]||'HISTORIA')
+const summerBriefing = computed(()=>props.dashboard?.summer_briefing?.season===props.season ? props.dashboard.summer_briefing : null)
 </script>
 
 <template>
@@ -38,12 +65,12 @@ const storyLabel = story => ({table_pressure:'TEMPORADA',streak:'RACHA',player_t
           <b class="home-versus">vs</b>
           <div class="home-club-lockup opponent"><img :src="crest(nextOpponent?.id)" alt="" @error="$event.currentTarget.style.display='none'"><span><small>{{nextOpponent?.venue}}</small><strong>{{nextOpponent?.name}}</strong></span></div>
         </div>
-        <div v-else class="home-empty-match"><strong>{{loading?'Cargando calendario histórico…':'No hay partido inmediato'}}</strong><span>Continúa para avanzar hasta el siguiente acontecimiento relevante.</span></div>
+        <div v-else class="home-empty-match"><strong>{{loading?'Cargando calendario histórico…':(dashboard.calendar_context?.label || 'No hay partido inmediato')}}</strong><span>{{dashboard.calendar_context?.detail || 'Continúa para avanzar hasta el siguiente acontecimiento relevante.'}}</span></div>
         <div class="home-matchday-actions">
-          <button type="button" class="football-button" @click="emit('navigate','tactics')">Preparar plan</button>
-          <button v-if="hasMatchDecision" type="button" class="football-button primary" @click="emit('start-live')">Jugar partido</button>
-          <button v-if="hasMatchDecision" type="button" class="football-button" @click="emit('simulate')">Resultado rápido</button>
-          <button type="button" class="football-button" @click="emit('navigate','squad')">Plantilla</button>
+          <button type="button" class="football-button primary" @click="runPrimaryMatchAction">{{primaryMatchAction.label}}</button>
+          <button v-if="hasMatchDecision" type="button" class="football-button" @click="emit('navigate','squad')">Plantilla</button>
+          <button v-if="hasMatchDecision" type="button" class="football-button" @click="emit('navigate','tactics')">Táctica</button>
+          <button v-if="hasMatchDecision && !isMatchDay" type="button" class="football-button" @click="emit('continue')">Continuar</button>
         </div>
       </div>
       <div class="home-season-score">
@@ -52,6 +79,19 @@ const storyLabel = story => ({table_pressure:'TEMPORADA',streak:'RACHA',player_t
         <span><small>MORAL</small><b>{{dashboard.morale_average ?? '—'}}</b><em>{{dashboard.unavailable_count||0}} baja{{Number(dashboard.unavailable_count||0)===1?'':'s'}}</em></span>
       </div>
     </article>
+
+    <section v-if="summerBriefing" class="home-summer-briefing" aria-label="Transición de temporada">
+      <header><span><small>NUEVA TEMPORADA · {{summerBriefing.season}}</small><strong>{{summerBriefing.headline}}</strong><em>{{summerBriefing.summary}}</em></span><b>{{summerBriefing.action_required||0}} pendientes</b></header>
+      <div>
+        <button v-for="item in summerBriefing.checklist" :key="item.key" type="button" :class="item.status" @click="emit('navigate',item.action)"><span><small>{{item.label}}</small><strong>{{item.detail}}</strong></span><b>{{item.status==='ready'||item.status==='done'?'✓':'→'}}</b></button>
+      </div>
+    </section>
+
+    <section v-if="nextMatch" class="home-readiness-strip" aria-label="Preparación del próximo partido">
+      <button v-for="item in matchReadiness" :key="item.label" type="button" :class="{ready:item.ok,attention:!item.ok}" @click="item.action==='match' ? emit('start-live') : emit('navigate',item.action)">
+        <small>{{item.label}}</small><strong>{{item.value}}</strong><span>{{item.ok?'✓':'→'}}</span>
+      </button>
+    </section>
 
     <section v-if="storylines.length" class="home-storyline-strip" aria-label="Historias abiertas de la carrera">
       <button v-for="story in storylines.slice(0,3)" :key="story.id" type="button" class="career-story-pulse" :class="{urgent:story.priority==='high'}" @click="emit('navigate',storyAction(story))">
@@ -74,7 +114,7 @@ const storyLabel = story => ({table_pressure:'TEMPORADA',streak:'RACHA',player_t
           <div class="home-star-trio">
             <button v-for="p in topPlayers" :key="p.id" type="button" class="home-star" @click="emit('navigate','squad')"><span class="home-star-photo"><img :src="photo(p.id)" alt="" @error="$event.currentTarget.style.display='none'"></span><span><small>{{p.pos}} · {{p.profile?.squad_dynamics?.role || 'Plantilla'}}</small><strong>{{p.name}}</strong><em>{{p.profile?.identity?.archetype || 'Perfil futbolístico'}} · {{p.overall}}</em></span></button>
           </div>
-          <div class="home-concerns" v-if="concerns.length"><small>ATENCIÓN EN PLANTILLA</small><span v-for="p in concerns" :key="p.id"><b>{{p.name}}</b><em v-if="p.status!=='DISP.'">{{p.status}}</em><em v-else-if="p.profile?.squad_dynamics?.wants_move">quiere salir</em><em v-else>satisfacción {{p.profile?.squad_dynamics?.satisfaction}}/100</em></span></div>
+          <div class="home-concerns" v-if="concerns.length"><small>ATENCIÓN EN PLANTILLA</small><span v-for="p in concerns" :key="p.id"><b>{{p.name}}</b><em v-if="p.status!=='DISP.'">{{p.profile?.status || p.status}}</em><em v-else-if="p.profile?.squad_dynamics?.wants_move">quiere salir</em><em v-else>satisfacción {{p.profile?.squad_dynamics?.satisfaction}}/100</em></span></div>
         </article>
 
         <article class="football-panel home-news-v2">
@@ -101,3 +141,8 @@ const storyLabel = story => ({table_pressure:'TEMPORADA',streak:'RACHA',player_t
     </div>
   </section>
 </template>
+
+<style scoped>
+.home-readiness-strip{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:-4px 0 12px}.home-readiness-strip button{display:grid;grid-template-columns:1fr auto;gap:2px 8px;text-align:left;padding:10px 12px;border:1px solid var(--line,#d7dde6);border-radius:9px;background:var(--surface,#fff);cursor:pointer}.home-readiness-strip button small{grid-column:1/-1;font-size:11px;font-weight:900;letter-spacing:.08em;color:var(--text-soft,#687386)}.home-readiness-strip button strong{font-size:13px}.home-readiness-strip button span{font-weight:900}.home-readiness-strip button.attention{border-color:color-mix(in srgb,var(--warning,#b26b00) 45%,var(--line,#d7dde6))}.home-readiness-strip button.ready span{color:var(--success,#237a45)}@media(max-width:900px){.home-readiness-strip{grid-template-columns:1fr 1fr}}
+.home-summer-briefing{display:grid;gap:10px;margin:0 0 12px;padding:13px 14px;border:1px solid #cbded1;border-radius:11px;background:#f4faf6}.home-summer-briefing>header{display:flex;justify-content:space-between;gap:16px;align-items:start}.home-summer-briefing>header span{display:grid;gap:2px}.home-summer-briefing>header small{font-size:11px;font-weight:900;letter-spacing:.08em;color:var(--f-action,#236b4f)}.home-summer-briefing>header strong{font-size:16px}.home-summer-briefing>header em{font-size:11px;font-style:normal;color:var(--text-soft,#687386)}.home-summer-briefing>header>b{white-space:nowrap;padding:5px 8px;border-radius:999px;background:#fff;font-size:11px}.home-summer-briefing>div{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px}.home-summer-briefing button{display:grid;grid-template-columns:1fr auto;gap:6px;align-items:center;padding:9px 10px;border:1px solid var(--line,#d7dde6);border-radius:8px;background:#fff;text-align:left;cursor:pointer}.home-summer-briefing button span{display:grid;gap:2px;min-width:0}.home-summer-briefing button small{font-size:11px;color:var(--text-soft,#687386);font-weight:850}.home-summer-briefing button strong{font-size:11px;line-height:1.3}.home-summer-briefing button.ready,.home-summer-briefing button.done{border-color:#bdd8c8}.home-summer-briefing button.attention{border-color:#e1be82;background:#fffaf0}@media(max-width:900px){.home-summer-briefing>div{grid-template-columns:1fr 1fr}}@media(max-width:650px){.home-summer-briefing>div{grid-template-columns:1fr}.home-summer-briefing>header{display:grid}}
+</style>

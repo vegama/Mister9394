@@ -388,7 +388,7 @@ ENGLAND_PREMIER_1993_94 = CompetitionRules9394(
     id="eng_premier_1993_94",
     name="Premier League",
     country="Inglaterra",
-    points_win=3,
+    points_win=2,
     points_draw=1,
     points_loss=0,
     teams=22,
@@ -401,6 +401,7 @@ ENGLAND_PREMIER_1993_94 = CompetitionRules9394(
     direct_relegation_places=(20, 21, 22),
     notes=(
         "Veintidós clubes y 42 partidos por equipo en 1993-94.",
+        "Míster 93/94 aplica su regla de puntuación congelada de dos puntos por victoria y uno por empate.",
         "Los tres últimos descienden de forma directa.",
     ),
 )
@@ -483,13 +484,13 @@ TURKEY_FIRST_DIVISION_1993_94 = CompetitionRules9394(
     id="tur_first_division_1993_94",
     name="1. Lig",
     country="Turquía",
-    points_win=3, points_draw=1, points_loss=0,
+    points_win=2, points_draw=1, points_loss=0,
     teams=16, rounds=30,
     tie_breakers=("overall_goal_difference", "overall_goals_scored"),
     direct_relegation_places=(14, 15, 16),
     notes=(
         "Dieciséis clubes y 30 jornadas.",
-        "Turquía ya otorgaba tres puntos por victoria en 1993-94; no se aplica el sistema de dos puntos de otras ligas europeas de la época.",
+        "Míster 93/94 aplica su regla de puntuación congelada de dos puntos por victoria y uno por empate.",
         "Los tres últimos descendían de la máxima categoría.",
     ),
 )
@@ -516,12 +517,12 @@ GREECE_ALPHA_ETHNIKI_1993_94 = CompetitionRules9394(
     id="gre_alpha_ethniki_1993_94",
     name="Alpha Ethniki",
     country="Grecia",
-    points_win=3, points_draw=1, points_loss=0,
+    points_win=2, points_draw=1, points_loss=0,
     teams=18, rounds=34,
     tie_breakers=("overall_wins", "overall_goals_scored", "overall_goal_difference"),
     direct_relegation_places=(16, 17, 18),
     notes=(
-        "Dieciocho clubes y 34 jornadas; tres puntos por victoria, sistema introducido en Grecia en 1992-93.",
+        "Dieciocho clubes y 34 jornadas; Míster 93/94 aplica dos puntos por victoria y uno por empate.",
         "Panachaiki, Apollon Kalamarias y Naousa ocuparon las tres plazas de descenso en 1993-94.",
         "El orden de los empates de la tabla histórica es compatible con priorizar victorias y después goles marcados antes de la diferencia general; se conserva como criterio histórico de reconstrucción.",
     ),

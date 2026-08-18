@@ -1,4 +1,5 @@
 from backend.app.football9394 import LAWS_1993_94, SPAIN_PRIMERA_1993_94, SPAIN_SEGUNDA_1993_94
+from backend.app.football9394 import rules as rules_module
 from backend.app.football9394.pyramid import compute_relegations, reserve_forced_drop_required, select_eligible_promotions
 
 
@@ -19,6 +20,15 @@ def test_spain_1993_94_uses_two_points_and_historical_promotion_places():
     assert SPAIN_SEGUNDA_1993_94.direct_promotion_places == (1, 2)
     assert SPAIN_SEGUNDA_1993_94.promotion_playoff_places == (3, 4)
 
+
+
+def test_all_runtime_leagues_use_mister_two_one_zero_scoring():
+    league_rules = [
+        value for value in vars(rules_module).values()
+        if isinstance(value, rules_module.CompetitionRules9394) and value.competition_type == "league"
+    ]
+    assert league_rules
+    assert all((rule.points_win, rule.points_draw, rule.points_loss) == (2, 1, 0) for rule in league_rules)
 
 def test_forced_reserve_drop_saves_one_sporting_relegation_place():
     # 20-team table.  Normally 17-20 would go down in this illustrative tier.

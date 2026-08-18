@@ -1,0 +1,1732 @@
+{
+  "generated_for": "UX/functionality closure asset pass",
+  "snapshot": {
+    "teams": 534,
+    "real_teams": 504,
+    "players": 12492
+  },
+  "coverage": {
+    "club_logos": {
+      "present": 480,
+      "missing": 24
+    },
+    "stadium_photos": {
+      "present_for_real_team_stadiums": 443,
+      "missing_team_stadium_assets": 61
+    },
+    "manager_photos": {
+      "managers": 426,
+      "present": 388,
+      "missing": 38
+    },
+    "player_photos_on_disk": 10195,
+    "bdfutbol_ready_for_download": 1308,
+    "bdfutbol_ready_but_runtime_photo_missing": 205
+  },
+  "missing_club_logos": [
+    {
+      "team_id": 9315005,
+      "name": "Spartak Vladikavkaz",
+      "league_id": 930015
+    },
+    {
+      "team_id": 9315006,
+      "name": "Uralmash",
+      "league_id": 930015
+    },
+    {
+      "team_id": 9315008,
+      "name": "KAMAZ",
+      "league_id": 930015
+    },
+    {
+      "team_id": 9315009,
+      "name": "Zhemchuzhina Sochi",
+      "league_id": 930015
+    },
+    {
+      "team_id": 9315010,
+      "name": "Dynamo Stavropol",
+      "league_id": 930015
+    },
+    {
+      "team_id": 9315011,
+      "name": "Lokomotiv Nizhny Novgorod",
+      "league_id": 930015
+    },
+    {
+      "team_id": 9315012,
+      "name": "Krylia Sovetov",
+      "league_id": 930015
+    },
+    {
+      "team_id": 9315013,
+      "name": "Luch Vladivostok",
+      "league_id": 930015
+    },
+    {
+      "team_id": 9315014,
+      "name": "Okean Nakhodka",
+      "league_id": 930015
+    },
+    {
+      "team_id": 9315015,
+      "name": "Rostselmash",
+      "league_id": 930015
+    },
+    {
+      "team_id": 9315016,
+      "name": "Asmaral Moskva",
+      "league_id": 930015
+    },
+    {
+      "team_id": 9347001,
+      "name": "AEK Athinon",
+      "league_id": 930047
+    },
+    {
+      "team_id": 9347005,
+      "name": "PAOK Thessalonikis",
+      "league_id": 930047
+    },
+    {
+      "team_id": 9347007,
+      "name": "OFI Irakliou",
+      "league_id": 930047
+    },
+    {
+      "team_id": 9347008,
+      "name": "Skoda Xanthi",
+      "league_id": 930047
+    },
+    {
+      "team_id": 9347010,
+      "name": "AE Larisa",
+      "league_id": 930047
+    },
+    {
+      "team_id": 9347011,
+      "name": "Levadiakos",
+      "league_id": 930047
+    },
+    {
+      "team_id": 9347012,
+      "name": "Athinaikos",
+      "league_id": 930047
+    },
+    {
+      "team_id": 9347013,
+      "name": "Apollon Athinas",
+      "league_id": 930047
+    },
+    {
+      "team_id": 9347014,
+      "name": "Edessaikos",
+      "league_id": 930047
+    },
+    {
+      "team_id": 9347015,
+      "name": "Doxa Dramas",
+      "league_id": 930047
+    },
+    {
+      "team_id": 9347016,
+      "name": "Panachaiki",
+      "league_id": 930047
+    },
+    {
+      "team_id": 9347017,
+      "name": "Apollon Kalamarias",
+      "league_id": 930047
+    },
+    {
+      "team_id": 9347018,
+      "name": "Naousa",
+      "league_id": 930047
+    }
+  ],
+  "missing_stadium_photos": [
+    {
+      "stadium_id": 932,
+      "team_id": 990,
+      "team": "Padova"
+    },
+    {
+      "stadium_id": 2137,
+      "team_id": 1475,
+      "team": "CS Universitatea Craiova"
+    },
+    {
+      "stadium_id": 361,
+      "team_id": 453,
+      "team": "Club Brugge KV"
+    },
+    {
+      "stadium_id": 2193,
+      "team_id": 9352001,
+      "team": "FC Seraing"
+    },
+    {
+      "stadium_id": 362,
+      "team_id": 454,
+      "team": "R Charleroi SC"
+    },
+    {
+      "stadium_id": 984,
+      "team_id": 1032,
+      "team": "Royal Antwerp FC"
+    },
+    {
+      "stadium_id": 852,
+      "team_id": 908,
+      "team": "KV Oostende"
+    },
+    {
+      "stadium_id": 2194,
+      "team_id": 9352002,
+      "team": "Beveren"
+    },
+    {
+      "stadium_id": 2195,
+      "team_id": 9352003,
+      "team": "Germinal Ekeren"
+    },
+    {
+      "stadium_id": 2196,
+      "team_id": 9352004,
+      "team": "Lommel"
+    },
+    {
+      "stadium_id": 361,
+      "team_id": 455,
+      "team": "Cercle Brugge KSV"
+    },
+    {
+      "stadium_id": 2197,
+      "team_id": 9352005,
+      "team": "RFC Liège"
+    },
+    {
+      "stadium_id": 1344,
+      "team_id": 851,
+      "team": "Lierse SK"
+    },
+    {
+      "stadium_id": 952,
+      "team_id": 456,
+      "team": "KAA Gent"
+    },
+    {
+      "stadium_id": 2198,
+      "team_id": 9352006,
+      "team": "Molenbeek"
+    },
+    {
+      "stadium_id": 374,
+      "team_id": 466,
+      "team": "KSV Waregem"
+    },
+    {
+      "stadium_id": 370,
+      "team_id": 462,
+      "team": "KRC Genk"
+    },
+    {
+      "stadium_id": 2199,
+      "team_id": 9357001,
+      "team": "Fenerbahçe"
+    },
+    {
+      "stadium_id": 2200,
+      "team_id": 9357002,
+      "team": "Trabzonspor"
+    },
+    {
+      "stadium_id": 2201,
+      "team_id": 9357003,
+      "team": "Samsunspor"
+    },
+    {
+      "stadium_id": 2202,
+      "team_id": 9357004,
+      "team": "Kocaelispor"
+    },
+    {
+      "stadium_id": 2203,
+      "team_id": 9357005,
+      "team": "Gençlerbirliği"
+    },
+    {
+      "stadium_id": 2204,
+      "team_id": 9357006,
+      "team": "Gaziantepspor"
+    },
+    {
+      "stadium_id": 2205,
+      "team_id": 9357007,
+      "team": "Bursaspor"
+    },
+    {
+      "stadium_id": 2206,
+      "team_id": 9357008,
+      "team": "Altay"
+    },
+    {
+      "stadium_id": 2207,
+      "team_id": 9357009,
+      "team": "Ankaragücü"
+    },
+    {
+      "stadium_id": 2208,
+      "team_id": 9357010,
+      "team": "Kayserispor"
+    },
+    {
+      "stadium_id": 2209,
+      "team_id": 9357011,
+      "team": "Zeytinburnuspor"
+    },
+    {
+      "stadium_id": 2210,
+      "team_id": 9357012,
+      "team": "Karabükspor"
+    },
+    {
+      "stadium_id": 2211,
+      "team_id": 9357013,
+      "team": "Karşıyaka"
+    },
+    {
+      "stadium_id": 2212,
+      "team_id": 9357014,
+      "team": "Sarıyer"
+    },
+    {
+      "stadium_id": 2177,
+      "team_id": 9315001,
+      "team": "Rotor Volgograd"
+    },
+    {
+      "stadium_id": 2178,
+      "team_id": 9315002,
+      "team": "Dynamo Moskva"
+    },
+    {
+      "stadium_id": 2179,
+      "team_id": 9315003,
+      "team": "Tekstilshchik Kamyshin"
+    },
+    {
+      "stadium_id": 2180,
+      "team_id": 9315004,
+      "team": "Lokomotiv Moskva"
+    },
+    {
+      "stadium_id": 2181,
+      "team_id": 9315005,
+      "team": "Spartak Vladikavkaz"
+    },
+    {
+      "stadium_id": 2182,
+      "team_id": 9315006,
+      "team": "Uralmash"
+    },
+    {
+      "stadium_id": 2184,
+      "team_id": 9315008,
+      "team": "KAMAZ"
+    },
+    {
+      "stadium_id": 2185,
+      "team_id": 9315009,
+      "team": "Zhemchuzhina Sochi"
+    },
+    {
+      "stadium_id": 2186,
+      "team_id": 9315010,
+      "team": "Dynamo Stavropol"
+    },
+    {
+      "stadium_id": 2187,
+      "team_id": 9315011,
+      "team": "Lokomotiv Nizhny Novgorod"
+    },
+    {
+      "stadium_id": 2188,
+      "team_id": 9315012,
+      "team": "Krylia Sovetov"
+    },
+    {
+      "stadium_id": 2189,
+      "team_id": 9315013,
+      "team": "Luch Vladivostok"
+    },
+    {
+      "stadium_id": 2190,
+      "team_id": 9315014,
+      "team": "Okean Nakhodka"
+    },
+    {
+      "stadium_id": 2191,
+      "team_id": 9315015,
+      "team": "Rostselmash"
+    },
+    {
+      "stadium_id": 2192,
+      "team_id": 9315016,
+      "team": "Asmaral Moskva"
+    },
+    {
+      "stadium_id": 2159,
+      "team_id": 9347001,
+      "team": "AEK Athinon"
+    },
+    {
+      "stadium_id": 2160,
+      "team_id": 9347002,
+      "team": "Panathinaikos"
+    },
+    {
+      "stadium_id": 2161,
+      "team_id": 9347003,
+      "team": "Olympiakos Pireas"
+    },
+    {
+      "stadium_id": 2162,
+      "team_id": 9347004,
+      "team": "Aris Thessalonikis"
+    },
+    {
+      "stadium_id": 2166,
+      "team_id": 9347008,
+      "team": "Skoda Xanthi"
+    },
+    {
+      "stadium_id": 2167,
+      "team_id": 9347009,
+      "team": "Panionios"
+    },
+    {
+      "stadium_id": 2168,
+      "team_id": 9347010,
+      "team": "AE Larisa"
+    },
+    {
+      "stadium_id": 2169,
+      "team_id": 9347011,
+      "team": "Levadiakos"
+    },
+    {
+      "stadium_id": 2170,
+      "team_id": 9347012,
+      "team": "Athinaikos"
+    },
+    {
+      "stadium_id": 2171,
+      "team_id": 9347013,
+      "team": "Apollon Athinas"
+    },
+    {
+      "stadium_id": 2172,
+      "team_id": 9347014,
+      "team": "Edessaikos"
+    },
+    {
+      "stadium_id": 2173,
+      "team_id": 9347015,
+      "team": "Doxa Dramas"
+    },
+    {
+      "stadium_id": 2174,
+      "team_id": 9347016,
+      "team": "Panachaiki"
+    },
+    {
+      "stadium_id": 2175,
+      "team_id": 9347017,
+      "team": "Apollon Kalamarias"
+    },
+    {
+      "stadium_id": 2176,
+      "team_id": 9347018,
+      "team": "Naousa"
+    }
+  ],
+  "missing_manager_photo_ids": [
+    591,
+    675,
+    801,
+    826,
+    1230,
+    1238,
+    1239,
+    1243,
+    1338,
+    1400,
+    1449,
+    1502,
+    1665,
+    1719,
+    1739,
+    1742,
+    1768,
+    1780,
+    2066,
+    2169,
+    2897,
+    2903,
+    2905,
+    2914,
+    2995,
+    3002,
+    3004,
+    3008,
+    3092,
+    3095,
+    3096,
+    3238,
+    3243,
+    3262,
+    3294,
+    3296,
+    3300,
+    3316
+  ],
+  "policy": [
+    "Do not treat Otros-País aggregate pools as real clubs requiring a crest.",
+    "Do not invent historical assets: download only when identity/source is verified.",
+    "Normalize runtime crests to 40x40 GIF and portraits/stadiums to the existing runtime contract."
+  ],
+  "priority_player_photo_queue": [
+    {
+      "source_id": 9497507,
+      "display_name": "Akhsar Iranovich Bekoev",
+      "team_name": "Asmaral Moskva",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1181057.html"
+    },
+    {
+      "source_id": 9496883,
+      "display_name": "Alan Chermenovich Kokoev",
+      "team_name": "Okean Nakhodka",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1159002.html"
+    },
+    {
+      "source_id": 9497490,
+      "display_name": "Aleksandr Alexandrovich Epurash",
+      "team_name": "Okean Nakhodka",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1181179.html"
+    },
+    {
+      "source_id": 9497452,
+      "display_name": "Aleksandr Ivanovich Kazentsov",
+      "team_name": "Zhemchuzhina Sochi",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1181214.html"
+    },
+    {
+      "source_id": 9497402,
+      "display_name": "Aleksandr Ivanovich Mozgovoy",
+      "team_name": "Spartak Vladikavkaz",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1181197.html"
+    },
+    {
+      "source_id": 9496861,
+      "display_name": "Aleksandr Mikhailovich Goncharenko",
+      "team_name": "Luch Vladivostok",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1181135.html"
+    },
+    {
+      "source_id": 9496902,
+      "display_name": "Aleksandr Nikolaevich Tikhonov",
+      "team_name": "Rostselmash",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1181187.html"
+    },
+    {
+      "source_id": 9496796,
+      "display_name": "Aleksandr Nikolayevich Gorbachev",
+      "team_name": "Dynamo Stavropol",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j591078.html"
+    },
+    {
+      "source_id": 9497444,
+      "display_name": "Aleksandr Sergeyevich Ignatyev",
+      "team_name": "Zhemchuzhina Sochi",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j591028.html"
+    },
+    {
+      "source_id": 9497461,
+      "display_name": "Aleksandr Vasilievich Ivanov",
+      "team_name": "Dynamo Stavropol",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1181065.html"
+    },
+    {
+      "source_id": 9497488,
+      "display_name": "Aleksandr Vladimirovich Kislyi",
+      "team_name": "Okean Nakhodka",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1181176.html"
+    },
+    {
+      "source_id": 9496822,
+      "display_name": "Aleksandr Yuryevich Shchukin",
+      "team_name": "Lokomotiv Nizhny Novgorod",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1181118.html"
+    },
+    {
+      "source_id": 9497376,
+      "display_name": "Aleksey Alexandrovich Filippov",
+      "team_name": "Dynamo Moskva",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1178257.html"
+    },
+    {
+      "source_id": 9497403,
+      "display_name": "Aleksey Viktorovich Ostaev",
+      "team_name": "Spartak Vladikavkaz",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1181196.html"
+    },
+    {
+      "source_id": 9497368,
+      "display_name": "Aleksey Yuryevich Perminov",
+      "team_name": "Rotor Volgograd",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1177846.html"
+    },
+    {
+      "source_id": 9496677,
+      "display_name": "Alexander Vladimirovich Smirnov",
+      "team_name": "Lokomotiv Moskva",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1159082.html"
+    },
+    {
+      "source_id": 9496881,
+      "display_name": "Alexey Valerievich Sobolev",
+      "team_name": "Okean Nakhodka",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1158989.html"
+    },
+    {
+      "source_id": 9497361,
+      "display_name": "Alexey Vyacheslavovich Sergeev",
+      "team_name": "Spartak Moskva",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j650543.html"
+    },
+    {
+      "source_id": 9497397,
+      "display_name": "Alier Devlokhovich Ashurmamadov",
+      "team_name": "Lokomotiv Moskva",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1181111.html"
+    },
+    {
+      "source_id": 9496859,
+      "display_name": "Anatoliy Petrovich Chekanov",
+      "team_name": "Luch Vladivostok",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1168865.html"
+    },
+    {
+      "source_id": 9496820,
+      "display_name": "Andrey Alekseevich Rumyantsev",
+      "team_name": "Lokomotiv Nizhny Novgorod",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1177849.html"
+    },
+    {
+      "source_id": 9496849,
+      "display_name": "Andrey Alexandrovich Viktorovich",
+      "team_name": "Luch Vladivostok",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1181129.html"
+    },
+    {
+      "source_id": 9497482,
+      "display_name": "Andrey Anatolyevich Netunaev",
+      "team_name": "Okean Nakhodka",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1181170.html"
+    },
+    {
+      "source_id": 9497483,
+      "display_name": "Andrey Anatolyevich Ryabov",
+      "team_name": "Okean Nakhodka",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1159003.html"
+    },
+    {
+      "source_id": 9496666,
+      "display_name": "Andrey Ivanovich Karpenko",
+      "team_name": "Tekstilshchik Kamyshin",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1180232.html"
+    },
+    {
+      "source_id": 9497512,
+      "display_name": "Andrey Nikolaevich Gubernskiy",
+      "team_name": "Asmaral Moskva",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1181053.html"
+    },
+    {
+      "source_id": 9497513,
+      "display_name": "Andrey Olegovich Lushnikov",
+      "team_name": "Asmaral Moskva",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1179578.html"
+    },
+    {
+      "source_id": 9496873,
+      "display_name": "Andrey Vasilievich Smirnov",
+      "team_name": "Okean Nakhodka",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1158995.html"
+    },
+    {
+      "source_id": 9497456,
+      "display_name": "Andrey Vasilievich Yarygin",
+      "team_name": "Dynamo Stavropol",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1181063.html"
+    },
+    {
+      "source_id": 9496782,
+      "display_name": "Andrey Viktorovich Pocheptsov",
+      "team_name": "Zhemchuzhina Sochi",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1180252.html"
+    },
+    {
+      "source_id": 9496919,
+      "display_name": "Andrey Vladimirovich Kovalenko",
+      "team_name": "Asmaral Moskva",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1181055.html"
+    },
+    {
+      "source_id": 9497466,
+      "display_name": "Andrey Vladimirovich Lysov",
+      "team_name": "Lokomotiv Nizhny Novgorod",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1181128.html"
+    },
+    {
+      "source_id": 9496808,
+      "display_name": "Arsen Borisovich Papikyan",
+      "team_name": "Dynamo Stavropol",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1179410.html"
+    },
+    {
+      "source_id": 9496879,
+      "display_name": "Bakhodyr Rabanovich Rakhmanov",
+      "team_name": "Okean Nakhodka",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1159000.html"
+    },
+    {
+      "source_id": 9497245,
+      "display_name": "Demirbay",
+      "team_name": "Beşiktaş",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1176193.html"
+    },
+    {
+      "source_id": 9497477,
+      "display_name": "Denis Vitalievich Koberskiy",
+      "team_name": "Luch Vladivostok",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1161239.html"
+    },
+    {
+      "source_id": 9496835,
+      "display_name": "Dinar Anvarovich Sharipov",
+      "team_name": "Krylia Sovetov",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1180177.html"
+    },
+    {
+      "source_id": 9496793,
+      "display_name": "Dmitriy Vadimovich Alekseev",
+      "team_name": "Zhemchuzhina Sochi",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1159183.html"
+    },
+    {
+      "source_id": 9496828,
+      "display_name": "Dmitriy Vasilievich Golubev",
+      "team_name": "Lokomotiv Nizhny Novgorod",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1180225.html"
+    },
+    {
+      "source_id": 9496887,
+      "display_name": "Eduard Vyacheslavovich Posylaev",
+      "team_name": "Rostselmash",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1162772.html"
+    },
+    {
+      "source_id": 9496737,
+      "display_name": "Evgeniy Gennadievich Davletshin",
+      "team_name": "Uralmash",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1181204.html"
+    },
+    {
+      "source_id": 9497479,
+      "display_name": "Evgeniy Leonidovich Kasyanenko",
+      "team_name": "Luch Vladivostok",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1181150.html"
+    },
+    {
+      "source_id": 9496791,
+      "display_name": "Evgeniy Nikolaevich Zhirov",
+      "team_name": "Zhemchuzhina Sochi",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1181212.html"
+    },
+    {
+      "source_id": 9497489,
+      "display_name": "Evgeniy Vladimirovich Golovchenko",
+      "team_name": "Okean Nakhodka",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1181177.html"
+    },
+    {
+      "source_id": 9496801,
+      "display_name": "Fedor Ivanovich Gagloev",
+      "team_name": "Dynamo Stavropol",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1178619.html"
+    },
+    {
+      "source_id": 9497515,
+      "display_name": "Gennadi Vladimirovich Strikalov",
+      "team_name": "Asmaral Moskva",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j591103.html"
+    },
+    {
+      "source_id": 9497421,
+      "display_name": "Igor Alexandrovich Arnautov",
+      "team_name": "Uralmash",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1179709.html"
+    },
+    {
+      "source_id": 9497415,
+      "display_name": "Igor Nikolaevich Tkachenko",
+      "team_name": "Uralmash",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1181203.html"
+    },
+    {
+      "source_id": 9497480,
+      "display_name": "Igor Viktorovich Perminov",
+      "team_name": "Luch Vladivostok",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1178278.html"
+    },
+    {
+      "source_id": 9497420,
+      "display_name": "Igor Vladimirovich Ignatov",
+      "team_name": "Uralmash",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1181208.html"
+    },
+    {
+      "source_id": 9497443,
+      "display_name": "Igor Yuryevich Tsaplyuk",
+      "team_name": "KAMAZ",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1181075.html"
+    },
+    {
+      "source_id": 9496725,
+      "display_name": "Ilya Alexandrovich Ratnichkin",
+      "team_name": "Uralmash",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1178227.html"
+    },
+    {
+      "source_id": 9496852,
+      "display_name": "Konstantin Vladilenovich Yemelyanov",
+      "team_name": "Luch Vladivostok",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j591993.html"
+    },
+    {
+      "source_id": 9497487,
+      "display_name": "Leonid Vladimirovich Kienko",
+      "team_name": "Okean Nakhodka",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1158999.html"
+    },
+    {
+      "source_id": 9497379,
+      "display_name": "Maksim Viktorovich Layushkin",
+      "team_name": "Dynamo Moskva",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j610553.html"
+    },
+    {
+      "source_id": 9497416,
+      "display_name": "Marat Finatovich Safin",
+      "team_name": "Uralmash",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1181205.html"
+    },
+    {
+      "source_id": 9497440,
+      "display_name": "Marsel Nakipovich Tukhvatullin",
+      "team_name": "KAMAZ",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1181068.html"
+    },
+    {
+      "source_id": 9497388,
+      "display_name": "Mikhail Alexandrovich Bukin",
+      "team_name": "Tekstilshchik Kamyshin",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1181199.html"
+    },
+    {
+      "source_id": 9496916,
+      "display_name": "Mikhail Anatolyevich Golikov",
+      "team_name": "Asmaral Moskva",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1178255.html"
+    },
+    {
+      "source_id": 9497390,
+      "display_name": "Mikhail Ivanovich Maryushkin",
+      "team_name": "Lokomotiv Moskva",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1181110.html"
+    },
+    {
+      "source_id": 9496904,
+      "display_name": "Nikolay Petrovich Krestobintsev",
+      "team_name": "Asmaral Moskva",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1181043.html"
+    },
+    {
+      "source_id": 9496876,
+      "display_name": "Oleg Ivanovich Kokarev",
+      "team_name": "Okean Nakhodka",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1158997.html"
+    },
+    {
+      "source_id": 9496734,
+      "display_name": "Oleg Ivanovich Samsonenko",
+      "team_name": "Uralmash",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1181202.html"
+    },
+    {
+      "source_id": 9496657,
+      "display_name": "Oleg Yuryevich Rozin",
+      "team_name": "Tekstilshchik Kamyshin",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1178629.html"
+    },
+    {
+      "source_id": 9497386,
+      "display_name": "Oleh Ivanovych Tereshchenko",
+      "team_name": "Tekstilshchik Kamyshin",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j590933.html"
+    },
+    {
+      "source_id": 9497438,
+      "display_name": "Pavel Anatolyevich Kurakin",
+      "team_name": "KAMAZ",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1179589.html"
+    },
+    {
+      "source_id": 9497475,
+      "display_name": "Pavel Borisovich Yumatov",
+      "team_name": "Krylia Sovetov",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1179608.html"
+    },
+    {
+      "source_id": 9496730,
+      "display_name": "Radik Ramilyevich Yamlikhanov",
+      "team_name": "Uralmash",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j590992.html"
+    },
+    {
+      "source_id": 9496896,
+      "display_name": "Ramil Kamilevich Valeev",
+      "team_name": "Rostselmash",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1162116.html"
+    },
+    {
+      "source_id": 9496672,
+      "display_name": "Ravil Rufailovich Sabitov",
+      "team_name": "Lokomotiv Moskva",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j69694.html"
+    },
+    {
+      "source_id": 9497481,
+      "display_name": "Roman Alexandrovich Melnik",
+      "team_name": "Luch Vladivostok",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1181160.html"
+    },
+    {
+      "source_id": 9497486,
+      "display_name": "Roman Mikhailovich Tikhonovetskiy",
+      "team_name": "Okean Nakhodka",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1181164.html"
+    },
+    {
+      "source_id": 9497468,
+      "display_name": "Roman Valentinovich Gapotiy",
+      "team_name": "Krylia Sovetov",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1179610.html"
+    },
+    {
+      "source_id": 9496698,
+      "display_name": "Ruslan Isidorovich Khubetsov",
+      "team_name": "Spartak Vladikavkaz",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1180229.html"
+    },
+    {
+      "source_id": 9497465,
+      "display_name": "Rustam Rezoevich Abdulov",
+      "team_name": "Lokomotiv Nizhny Novgorod",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1181120.html"
+    },
+    {
+      "source_id": 9496810,
+      "display_name": "Sergey Aleksandrovich Maslov",
+      "team_name": "Dynamo Stavropol",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j591227.html"
+    },
+    {
+      "source_id": 9496733,
+      "display_name": "Sergey Aleksandrovich Perednya",
+      "team_name": "Uralmash",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j591421.html"
+    },
+    {
+      "source_id": 9496817,
+      "display_name": "Sergey Anatolyevich Kuzmin",
+      "team_name": "Lokomotiv Nizhny Novgorod",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1181117.html"
+    },
+    {
+      "source_id": 9497514,
+      "display_name": "Sergey Borisovich Zhilkin",
+      "team_name": "Asmaral Moskva",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1181051.html"
+    },
+    {
+      "source_id": 9496739,
+      "display_name": "Sergey Ivanovich Alyapkin",
+      "team_name": "Uralmash",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1178875.html"
+    },
+    {
+      "source_id": 9496781,
+      "display_name": "Sergey Ivanovich Nozikov",
+      "team_name": "Zhemchuzhina Sochi",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1178822.html"
+    },
+    {
+      "source_id": 9497516,
+      "display_name": "Sergey Mikhailovich Zhdanov",
+      "team_name": "Asmaral Moskva",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1178631.html"
+    },
+    {
+      "source_id": 9496702,
+      "display_name": "Sergey Pavlovich Pimenov",
+      "team_name": "Spartak Vladikavkaz",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1179682.html"
+    },
+    {
+      "source_id": 9496884,
+      "display_name": "Sergey Semenovich Kozlov",
+      "team_name": "Okean Nakhodka",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1181167.html"
+    },
+    {
+      "source_id": 9496906,
+      "display_name": "Sergey Vasilievich Nikitin",
+      "team_name": "Asmaral Moskva",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1181045.html"
+    },
+    {
+      "source_id": 9497460,
+      "display_name": "Sergey Vasilievich Volobuev",
+      "team_name": "Dynamo Stavropol",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1179413.html"
+    },
+    {
+      "source_id": 9496620,
+      "display_name": "Sergey Vasilyevich Nechay",
+      "team_name": "Rotor Volgograd",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j591228.html"
+    },
+    {
+      "source_id": 9497504,
+      "display_name": "Sergey Viktorovich Medvedev",
+      "team_name": "Asmaral Moskva",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1181050.html"
+    },
+    {
+      "source_id": 9496899,
+      "display_name": "Sergey Vladimirovich Dementjev",
+      "team_name": "Rostselmash",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1162117.html"
+    },
+    {
+      "source_id": 9497485,
+      "display_name": "Sergey Vladimirovich Markin",
+      "team_name": "Okean Nakhodka",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1181172.html"
+    },
+    {
+      "source_id": 9496814,
+      "display_name": "Sergey Vyacheslavovich Ragulin",
+      "team_name": "Lokomotiv Nizhny Novgorod",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1178844.html"
+    },
+    {
+      "source_id": 9496868,
+      "display_name": "Sergey Yuryevich Bondarenko",
+      "team_name": "Okean Nakhodka",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1158987.html"
+    },
+    {
+      "source_id": 9496827,
+      "display_name": "Stanislav Alexandrovich Feoktistov",
+      "team_name": "Lokomotiv Nizhny Novgorod",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1178849.html"
+    },
+    {
+      "source_id": 9497484,
+      "display_name": "Tengiz Anatolyevich Gatikoev",
+      "team_name": "Okean Nakhodka",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1159004.html"
+    },
+    {
+      "source_id": 9496789,
+      "display_name": "Timur Gadzhievich Bogatyrev",
+      "team_name": "Zhemchuzhina Sochi",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1161237.html"
+    },
+    {
+      "source_id": 9497395,
+      "display_name": "Valentin Gennadievich Kiselev",
+      "team_name": "Lokomotiv Moskva",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1159096.html"
+    },
+    {
+      "source_id": 9496821,
+      "display_name": "Valerian Borisovich Saveljev",
+      "team_name": "Lokomotiv Nizhny Novgorod",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1180222.html"
+    },
+    {
+      "source_id": 9496865,
+      "display_name": "Valeriy Mikhailovich Lebedev",
+      "team_name": "Luch Vladivostok",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1181148.html"
+    },
+    {
+      "source_id": 9497384,
+      "display_name": "Valeriy Petrovich Zazdravnykh",
+      "team_name": "Tekstilshchik Kamyshin",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1180159.html"
+    },
+    {
+      "source_id": 9497381,
+      "display_name": "Valeriy Vladimirovich Kleymenov",
+      "team_name": "Tekstilshchik Kamyshin",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1178621.html"
+    },
+    {
+      "source_id": 9496834,
+      "display_name": "Valeriy Vladimirovich Tumaykin",
+      "team_name": "Krylia Sovetov",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1180175.html"
+    },
+    {
+      "source_id": 9496869,
+      "display_name": "Vasiliy Ivanovich Grytsan",
+      "team_name": "Okean Nakhodka",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1181169.html"
+    },
+    {
+      "source_id": 9497462,
+      "display_name": "Viktor Nikolaevich Kontsevenko",
+      "team_name": "Dynamo Stavropol",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1181064.html"
+    },
+    {
+      "source_id": 9496776,
+      "display_name": "Vitaliy Evgenievich Milenin",
+      "team_name": "KAMAZ",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1178635.html"
+    },
+    {
+      "source_id": 9497450,
+      "display_name": "Vladimir Nikolaevich Medvedev",
+      "team_name": "Zhemchuzhina Sochi",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1181211.html"
+    },
+    {
+      "source_id": 9497400,
+      "display_name": "Vladimir Viktorovich Konovalov",
+      "team_name": "Spartak Vladikavkaz",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1181195.html"
+    },
+    {
+      "source_id": 9497431,
+      "display_name": "Vladimir Viktorovich Semyonov",
+      "team_name": "CSKA Moskva",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j590978.html"
+    },
+    {
+      "source_id": 9497419,
+      "display_name": "Vladimir Viktorovich Titov",
+      "team_name": "Uralmash",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1181207.html"
+    },
+    {
+      "source_id": 9496829,
+      "display_name": "Vladimir Vladimirovich Kireev",
+      "team_name": "Lokomotiv Nizhny Novgorod",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1181119.html"
+    },
+    {
+      "source_id": 9497457,
+      "display_name": "Vladimir Yuryevich Kaloev",
+      "team_name": "Dynamo Stavropol",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1181066.html"
+    },
+    {
+      "source_id": 9496886,
+      "display_name": "Vyacheslav Borisovich Lugovkin",
+      "team_name": "Rostselmash",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1178263.html"
+    },
+    {
+      "source_id": 9497472,
+      "display_name": "Vyacheslav Viktorovich Fomin",
+      "team_name": "Krylia Sovetov",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1181102.html"
+    },
+    {
+      "source_id": 9497380,
+      "display_name": "Vyacheslav Vitalievich Demin",
+      "team_name": "Tekstilshchik Kamyshin",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1181069.html"
+    },
+    {
+      "source_id": 9497448,
+      "display_name": "Vyacheslav Vyacheslavovich Protsenko",
+      "team_name": "Zhemchuzhina Sochi",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1179719.html"
+    },
+    {
+      "source_id": 9497499,
+      "display_name": "Yuri Ivanovich Klyuchnikov",
+      "team_name": "Rostselmash",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j640134.html"
+    },
+    {
+      "source_id": 9496880,
+      "display_name": "Yuri Yuryevich Shpiryuk",
+      "team_name": "Okean Nakhodka",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1158992.html"
+    },
+    {
+      "source_id": 9496833,
+      "display_name": "Yuriy Alexandrovich Garin",
+      "team_name": "Krylia Sovetov",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1181109.html"
+    },
+    {
+      "source_id": 9497467,
+      "display_name": "Yuriy Gennadievich Zaranko",
+      "team_name": "Lokomotiv Nizhny Novgorod",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1181127.html"
+    },
+    {
+      "source_id": 9497366,
+      "display_name": "Yuriy Stepanovich Konovalov",
+      "team_name": "Rotor Volgograd",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1178625.html"
+    },
+    {
+      "source_id": 9497470,
+      "display_name": "Yuriy Viktorovich Semin",
+      "team_name": "Krylia Sovetov",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1181104.html"
+    },
+    {
+      "source_id": 9497437,
+      "display_name": "Yuriy Vladimirovich Kuznetsov",
+      "team_name": "KAMAZ",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1181071.html"
+    },
+    {
+      "source_id": 9496500,
+      "display_name": "Ali Mehmedi",
+      "team_name": "Altay",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1178389.html"
+    },
+    {
+      "source_id": 9496084,
+      "display_name": "Paulo Edson da Silva",
+      "team_name": "FC Seraing",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j69342.html"
+    },
+    {
+      "source_id": 9496210,
+      "display_name": "Bonide Isumgampala",
+      "team_name": "Lommel",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j69675.html"
+    },
+    {
+      "source_id": 9496206,
+      "display_name": "Bart Gijbels",
+      "team_name": "Lommel",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j69676.html"
+    },
+    {
+      "source_id": 9496215,
+      "display_name": "Bart Peeters",
+      "team_name": "Lommel",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j68582.html"
+    },
+    {
+      "source_id": 9496224,
+      "display_name": "Didier Albert",
+      "team_name": "Molenbeek",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j69687.html"
+    },
+    {
+      "source_id": 9496347,
+      "display_name": "Eddy Syx",
+      "team_name": "Waregem",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j69353.html"
+    },
+    {
+      "source_id": 9496271,
+      "display_name": "Jean-François Demonceau",
+      "team_name": "RFC Liège",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j69677.html"
+    },
+    {
+      "source_id": 9496138,
+      "display_name": "Johan Vandevelde",
+      "team_name": "Gent",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j69510.html"
+    },
+    {
+      "source_id": 9496126,
+      "display_name": "Kristoff de Roy",
+      "team_name": "Gent",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j69683.html"
+    },
+    {
+      "source_id": 9496174,
+      "display_name": "Marc Janssen",
+      "team_name": "KV Mechelen",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j68522.html"
+    },
+    {
+      "source_id": 9496041,
+      "display_name": "Nico De Coninck",
+      "team_name": "Cercle Brugge",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j69096.html"
+    },
+    {
+      "source_id": 9496236,
+      "display_name": "Olivier Malcorps",
+      "team_name": "Molenbeek",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j68919.html"
+    },
+    {
+      "source_id": 9496039,
+      "display_name": "Stefaan D'Hondt",
+      "team_name": "Cercle Brugge",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j69514.html"
+    },
+    {
+      "source_id": 9496135,
+      "display_name": "Stefan Van Laere",
+      "team_name": "Gent",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j69511.html"
+    },
+    {
+      "source_id": 9496031,
+      "display_name": "Stefan van Rumst",
+      "team_name": "Beveren",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j69668.html"
+    },
+    {
+      "source_id": 9496118,
+      "display_name": "Stijn Thijs",
+      "team_name": "Genk",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j69704.html"
+    },
+    {
+      "source_id": 9496226,
+      "display_name": "Thierry de Jaegher",
+      "team_name": "Molenbeek",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j69690.html"
+    },
+    {
+      "source_id": 9496317,
+      "display_name": "Tim Nuyens",
+      "team_name": "Standard Liège",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j69292.html"
+    },
+    {
+      "source_id": 9494049,
+      "display_name": "Mike Lapper",
+      "team_name": "Otros-Estados Unidos",
+      "bdfutbol_url": "https://www.bdfutbol.com/es/c/jugador.html?id=179933"
+    },
+    {
+      "source_id": 9496154,
+      "display_name": "Juha Jussila",
+      "team_name": "Germinal Ekeren",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j69669.html"
+    },
+    {
+      "source_id": 9496116,
+      "display_name": "Emmanuel Sarpong",
+      "team_name": "Genk",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j69697.html"
+    },
+    {
+      "source_id": 9496487,
+      "display_name": "Abdullah Kılıç",
+      "team_name": "Bursaspor",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1169821.html"
+    },
+    {
+      "source_id": 9497275,
+      "display_name": "Abdussamet Yiğit",
+      "team_name": "Gaziantepspor",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1179964.html"
+    },
+    {
+      "source_id": 9497341,
+      "display_name": "Ahmet Bora Orman Kocaman",
+      "team_name": "Karşıyaka",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1179839.html"
+    },
+    {
+      "source_id": 9497309,
+      "display_name": "Ahmet Öztürk",
+      "team_name": "Ankaragücü",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1179562.html"
+    },
+    {
+      "source_id": 9496449,
+      "display_name": "Ali Işık",
+      "team_name": "Gençlerbirliği",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j702727.html"
+    },
+    {
+      "source_id": 9497267,
+      "display_name": "Aykan Atik",
+      "team_name": "Gençlerbirliği",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1100343.html"
+    },
+    {
+      "source_id": 9497338,
+      "display_name": "Bahadır Tamsan",
+      "team_name": "Karşıyaka",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1176284.html"
+    },
+    {
+      "source_id": 9497307,
+      "display_name": "Beyzat Kaya",
+      "team_name": "Ankaragücü",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1178735.html"
+    },
+    {
+      "source_id": 9497299,
+      "display_name": "Birand Yaytaş",
+      "team_name": "Altay",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1173565.html"
+    },
+    {
+      "source_id": 9497332,
+      "display_name": "Burhan Baygın",
+      "team_name": "Karabükspor",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1179625.html"
+    },
+    {
+      "source_id": 9497278,
+      "display_name": "Burhanettin Turgut",
+      "team_name": "Gaziantepspor",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1179968.html"
+    },
+    {
+      "source_id": 9497304,
+      "display_name": "Bülent Üstüner",
+      "team_name": "Ankaragücü",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1176196.html"
+    },
+    {
+      "source_id": 9497327,
+      "display_name": "Candan Sayın",
+      "team_name": "Karabükspor",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1171757.html"
+    },
+    {
+      "source_id": 9497340,
+      "display_name": "Cenk Gürgenç",
+      "team_name": "Karşıyaka",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1176285.html"
+    },
+    {
+      "source_id": 9497288,
+      "display_name": "Cihan Bastık",
+      "team_name": "Bursaspor",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1172132.html"
+    },
+    {
+      "source_id": 9497286,
+      "display_name": "Engin Şentürk",
+      "team_name": "Bursaspor",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j707938.html"
+    },
+    {
+      "source_id": 9497329,
+      "display_name": "Ercan Kalkan",
+      "team_name": "Karabükspor",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1179623.html"
+    },
+    {
+      "source_id": 9497346,
+      "display_name": "Erdinç Aktaş",
+      "team_name": "Sarıyer",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1179947.html"
+    },
+    {
+      "source_id": 9496464,
+      "display_name": "Erol Bilir",
+      "team_name": "Gaziantepspor",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1179965.html"
+    },
+    {
+      "source_id": 9496546,
+      "display_name": "Erol Gündoğdu",
+      "team_name": "Zeytinburnuspor",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j702572.html"
+    },
+    {
+      "source_id": 9496483,
+      "display_name": "Ersel Uzğur",
+      "team_name": "Bursaspor",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1101401.html"
+    },
+    {
+      "source_id": 9497279,
+      "display_name": "Ersin Şenyurt",
+      "team_name": "Gaziantepspor",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1179969.html"
+    },
+    {
+      "source_id": 9497290,
+      "display_name": "Fatih Çayla",
+      "team_name": "Bursaspor",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1179587.html"
+    },
+    {
+      "source_id": 9496495,
+      "display_name": "Hakan Kayalar",
+      "team_name": "Altay",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1174837.html"
+    },
+    {
+      "source_id": 9497335,
+      "display_name": "Hüseyin Saraç",
+      "team_name": "Karabükspor",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1179813.html"
+    },
+    {
+      "source_id": 9496566,
+      "display_name": "Hüseyin Çoban",
+      "team_name": "Karabükspor",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1173817.html"
+    },
+    {
+      "source_id": 9497333,
+      "display_name": "Kerim Tasçı",
+      "team_name": "Karabükspor",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1179812.html"
+    },
+    {
+      "source_id": 9496562,
+      "display_name": "Levent Açıkgöz",
+      "team_name": "Karabükspor",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1101075.html"
+    },
+    {
+      "source_id": 9497238,
+      "display_name": "Mehmet Alarçin",
+      "team_name": "Trabzonspor",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1150051.html"
+    },
+    {
+      "source_id": 9497270,
+      "display_name": "Mehmet Güler",
+      "team_name": "Gençlerbirliği",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1179811.html"
+    },
+    {
+      "source_id": 9497310,
+      "display_name": "Mehmet Kalemci",
+      "team_name": "Kayserispor",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1178570.html"
+    },
+    {
+      "source_id": 9497325,
+      "display_name": "Mehmet Ünver",
+      "team_name": "Zeytinburnuspor",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1179953.html"
+    },
+    {
+      "source_id": 9497323,
+      "display_name": "Metin Aydemir",
+      "team_name": "Zeytinburnuspor",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1178720.html"
+    },
+    {
+      "source_id": 9497320,
+      "display_name": "Metin Tokoğlu",
+      "team_name": "Zeytinburnuspor",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1178715.html"
+    },
+    {
+      "source_id": 9497295,
+      "display_name": "Murat Duran",
+      "team_name": "Altay",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1179551.html"
+    },
+    {
+      "source_id": 9497266,
+      "display_name": "Murat Şenvardar",
+      "team_name": "Gençlerbirliği",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1172131.html"
+    },
+    {
+      "source_id": 9497277,
+      "display_name": "Mustafa Oğur",
+      "team_name": "Gaziantepspor",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1179963.html"
+    },
+    {
+      "source_id": 9496572,
+      "display_name": "Nejat Özyıldırım",
+      "team_name": "Karabükspor",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1179624.html"
+    },
+    {
+      "source_id": 9497297,
+      "display_name": "Orkan Şevket Yurtkoru",
+      "team_name": "Altay",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1179550.html"
+    },
+    {
+      "source_id": 9497344,
+      "display_name": "Ramazan Baybatmaz",
+      "team_name": "Sarıyer",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1179942.html"
+    },
+    {
+      "source_id": 9497291,
+      "display_name": "Ramazan Gürbüz",
+      "team_name": "Bursaspor",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1179577.html"
+    },
+    {
+      "source_id": 9496514,
+      "display_name": "Ramazan Konya",
+      "team_name": "Ankaragücü",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1178734.html"
+    },
+    {
+      "source_id": 9497234,
+      "display_name": "Sadettin Demirtaş",
+      "team_name": "Fenerbahçe",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1175420.html"
+    },
+    {
+      "source_id": 9497343,
+      "display_name": "Sami Başar",
+      "team_name": "Sarıyer",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1179944.html"
+    },
+    {
+      "source_id": 9497298,
+      "display_name": "Serdar Meriç",
+      "team_name": "Altay",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j700601.html"
+    },
+    {
+      "source_id": 9497282,
+      "display_name": "Serkan Arslan",
+      "team_name": "Bursaspor",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1178448.html"
+    },
+    {
+      "source_id": 9497303,
+      "display_name": "Soner Büyükergün",
+      "team_name": "Ankaragücü",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1179561.html"
+    },
+    {
+      "source_id": 9497243,
+      "display_name": "Süleyman Usta",
+      "team_name": "Trabzonspor",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j702775.html"
+    },
+    {
+      "source_id": 9497342,
+      "display_name": "Talat Alptekin",
+      "team_name": "Karşıyaka",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1179840.html"
+    },
+    {
+      "source_id": 9496518,
+      "display_name": "Tarık Üstün",
+      "team_name": "Ankaragücü",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1176194.html"
+    },
+    {
+      "source_id": 9497334,
+      "display_name": "Tolga Sarı",
+      "team_name": "Karabükspor",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1179815.html"
+    },
+    {
+      "source_id": 9497324,
+      "display_name": "Uğur Eren",
+      "team_name": "Zeytinburnuspor",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1179952.html"
+    },
+    {
+      "source_id": 9496504,
+      "display_name": "Varol Özhan",
+      "team_name": "Altay",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1174840.html"
+    },
+    {
+      "source_id": 9497235,
+      "display_name": "Volkan Alpacar",
+      "team_name": "Fenerbahçe",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1178733.html"
+    },
+    {
+      "source_id": 9497319,
+      "display_name": "Yasin Avcıoğlu",
+      "team_name": "Zeytinburnuspor",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1175328.html"
+    },
+    {
+      "source_id": 9497296,
+      "display_name": "Yasin Balcı",
+      "team_name": "Altay",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1179548.html"
+    },
+    {
+      "source_id": 9496452,
+      "display_name": "Yunus Kara",
+      "team_name": "Gençlerbirliği",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1179809.html"
+    },
+    {
+      "source_id": 9496543,
+      "display_name": "Yusuf Uzuner",
+      "team_name": "Zeytinburnuspor",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1179951.html"
+    },
+    {
+      "source_id": 9497284,
+      "display_name": "Zafer Baştan",
+      "team_name": "Bursaspor",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j707939.html"
+    },
+    {
+      "source_id": 9497289,
+      "display_name": "İlker Özdemir",
+      "team_name": "Bursaspor",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j1174842.html"
+    },
+    {
+      "source_id": 9497347,
+      "display_name": "Şenol Ulusavaş",
+      "team_name": "Sarıyer",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j55609.html"
+    },
+    {
+      "source_id": 9496214,
+      "display_name": "Nela Petrus N'Ganzadi Kimonekene",
+      "team_name": "Lommel",
+      "bdfutbol_url": "https://www.bdfutbol.com/en/j/j69494.html"
+    }
+  ]
+}

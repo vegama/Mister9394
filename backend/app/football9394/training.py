@@ -309,6 +309,13 @@ def training_snapshot(
         {"day_index": idx, "day": _DAY_LABELS[idx], "session": session, "label": SESSION_SPECS[session]["label"]}
         for idx, session in enumerate(root["weekly_plan"])
     ]
+    delegated = str(effectiveness.get("source") or "") == "delegated_staff"
+    responsibility_note = (
+        f"{effectiveness.get('assignee_name') or 'El responsable'} ejecuta el plan con calidad "
+        f"{effectiveness.get('quality_label') or 'operativa'}. Tus cambios aquí son instrucciones de trabajo y se aplican desde la siguiente sesión."
+        if delegated else
+        "Tú controlas directamente el entrenamiento. La carga de responsabilidades del mánager puede reducir la calidad efectiva si acumulas demasiadas tareas."
+    )
     return {
         "schema": TRAINING_SCHEMA_9394,
         "intensity": root["intensity"], "intensity_label": INTENSITY_SPECS[root["intensity"]]["label"],
@@ -322,6 +329,8 @@ def training_snapshot(
         "match_preparation_focus_label": MATCH_PREP_SPECS.get(str(root.get("match_preparation_focus") or "balanced"), "Equilibrada"),
         "match_preparation_options": [{"key": key, "label": label} for key, label in MATCH_PREP_SPECS.items()],
         "responsibility": dict(effectiveness),
+        "responsibility_mode": "delegated" if delegated else "direct",
+        "responsibility_note": responsibility_note,
         "players": player_rows,
         "high_risk_count": sum(1 for row in player_rows if int(row["risk"]) >= 52),
         "very_high_risk_count": sum(1 for row in player_rows if int(row["risk"]) >= 70),

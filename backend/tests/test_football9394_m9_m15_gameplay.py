@@ -99,6 +99,10 @@ def test_m12_rollover_creates_memorable_recap_honours_news_and_history():
     assert recap["season"] == "1993-94" and recap["league_name"] == "Primera División"
     assert recap["position"] is not None and recap["board"]["score"] is not None
     assert "economy" in recap and "headline" in recap
+    assert "league_awards" in recap
+    assert recap["champions"] and all(row.get("competition_name") and row.get("team_name") for row in recap["champions"])
+    assert all("champion_manager" in row and "champion_squad" in row for row in recap["champions"])
+    assert any(row.get("champion_squad") for row in recap["champions"])
     assert len(snap["honours"]) == 29
     assert any(item["category"] in {"Competiciones", "Temporada"} for item in snap["news_feed"])
 

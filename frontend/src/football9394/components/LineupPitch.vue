@@ -5,7 +5,11 @@ const props = defineProps({
   formation: { type: String, default: '4-4-2' },
   players: { type: Array, default: () => [] },
   compact: { type: Boolean, default: false },
+  interactive: { type: Boolean, default: false },
+  selectedPlayerId: { type: Number, default: 0 },
 })
+
+const emit = defineEmits(['select-player'])
 
 const layouts = {
   '4-4-2': [
@@ -91,6 +95,8 @@ const placedPlayers = computed(() => {
   })
 })
 
+const photo = player => player?.id ? `/historical9394/players/${Number(player.id)}.jpg` : null
+
 function shortName(player) {
   const name = String(player?.name || player?.display_name || 'Vacante').trim()
   const parts = name.split(/\s+/)
@@ -105,10 +111,19 @@ function shortName(player) {
       v-for="slot in placedPlayers"
       :key="slot.key"
       class="pitch-player"
-      :class="[`role-${slot.type.toLowerCase()}`, { empty: !slot.player }]"
+      :class="[`role-${slot.type.toLowerCase()}`, { empty: !slot.player, interactive: interactive && !!slot.player, selected: Number(selectedPlayerId) === Number(slot.player?.id || 0) }]"
       :style="{ left: `${slot.x}%`, top: `${slot.y}%` }"
+      :role="interactive && slot.player ? 'button' : undefined"
+      :tabindex="interactive && slot.player ? 0 : undefined"
+      :aria-label="interactive && slot.player ? `Seleccionar a ${slot.player.name || slot.player.display_name} para sustituir o quitar` : undefined"
+      @click="interactive && slot.player && emit('select-player', slot.player)"
+      @keydown.enter.prevent="interactive && slot.player && emit('select-player', slot.player)"
+      @keydown.space.prevent="interactive && slot.player && emit('select-player', slot.player)"
     >
-      <span class="pitch-player-dot">{{ slot.player?.n || slot.player?.shirt_number || '•' }}</span>
+      <span class="pitch-player-visual">
+        <img v-if="slot.player" :src="photo(slot.player)" alt="" @error="$event.currentTarget.style.display='none'">
+        <i>{{ slot.player?.n || slot.player?.shirt_number || '•' }}</i>
+      </span>
       <strong>{{ shortName(slot.player) }}</strong>
       <small v-if="!compact">{{ slot.player?.pos || slot.player?.position || slot.type }}<template v-if="slot.player?.overall"> · {{ slot.player.overall }}</template></small>
     </div>

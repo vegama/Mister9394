@@ -1,0 +1,62 @@
+{
+  "status": "complete_with_errors",
+  "processed": 12,
+  "downloaded": 0,
+  "already_in_game": 23,
+  "already_downloaded": 0,
+  "no_photo_available": 0,
+  "failed": 12,
+  "raw_dir": "data/football9394/bdfutbol_photos_raw",
+  "downloaded_rows": [],
+  "no_photo_available_ids": [],
+  "failed_rows": [
+    {
+      "bdfutbol_id": "1181057",
+      "error": "[Errno -3] Temporary failure in name resolution"
+    },
+    {
+      "bdfutbol_id": "1159002",
+      "error": "[Errno -3] Temporary failure in name resolution"
+    },
+    {
+      "bdfutbol_id": "1181179",
+      "error": "[Errno -3] Temporary failure in name resolution"
+    },
+    {
+      "bdfutbol_id": "1181214",
+      "error": "[Errno -3] Temporary failure in name resolution"
+    },
+    {
+      "bdfutbol_id": "1181197",
+      "error": "[Errno -3] Temporary failure in name resolution"
+    },
+    {
+      "bdfutbol_id": "1181135",
+      "error": "[Errno -3] Temporary failure in name resolution"
+    },
+    {
+      "bdfutbol_id": "1181187",
+      "error": "[Errno -3] Temporary failure in name resolution"
+    },
+    {
+      "bdfutbol_id": "591078",
+      "error": "[Errno -3] Temporary failure in name resolution"
+    },
+    {
+      "bdfutbol_id": "591028",
+      "error": "[Errno -3] Temporary failure in name resolution"
+    },
+    {
+      "bdfutbol_id": "1181065",
+      "error": "[Errno -3] Temporary failure in name resolution"
+    },
+    {
+      "bdfutbol_id": "1181176",
+      "error": "[Errno -3] Temporary failure in name resolution"
+    },
+    {
+      "bdfutbol_id": "1181118",
+      "error": "[Errno -3] Temporary failure in name resolution"
+    }
+  ]
+}

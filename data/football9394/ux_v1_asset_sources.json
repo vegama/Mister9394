@@ -1,0 +1,115 @@
+{
+  "generated_at": "2026-08-17T21:01:16.327167+00:00",
+  "assets": [
+    {
+      "team_id": 9347002,
+      "name": "Panathinaikos",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Panathinaikos_FC_logo.png",
+      "source_note": "Wikimedia Commons · public-domain text/logo",
+      "source_file": "data/football9394/asset_inbox/panathinaikos.png",
+      "game_file": "frontend/public/historical9394/clubs/9347002.gif"
+    },
+    {
+      "team_id": 9347003,
+      "name": "Olympiakos Pireas",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Olympiacos_F.C_Emblem.svg",
+      "source_note": "Wikimedia Commons · CC0",
+      "source_file": "data/football9394/asset_inbox/olympiakos.webp",
+      "game_file": "frontend/public/historical9394/clubs/9347003.gif"
+    },
+    {
+      "team_id": 9347004,
+      "name": "Aris Thessalonikis",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Aris_Salonique_(ancien_logo).svg",
+      "source_note": "Wikimedia Commons · public-domain text/logo; marked ancien logo",
+      "source_file": "data/football9394/asset_inbox/aris.webp",
+      "game_file": "frontend/public/historical9394/clubs/9347004.gif"
+    },
+    {
+      "asset_type": "club_logo",
+      "team_id": 9347009,
+      "team_name": "Panionios",
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Panionios_FC_logo.png",
+      "note": "Club crest; PD-textlogo on source page; normalized to runtime 40x40 GIF."
+    },
+    {
+      "asset_type": "club_logo",
+      "team_id": 9347006,
+      "team_name": "Iraklis Thessalonikis",
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Iraklis_Thessalonique_(ancien_logo).svg",
+      "note": "Source explicitly identifies it as ancien logo; PD-textlogo; normalized to runtime 40x40 GIF."
+    },
+    {
+      "asset_type": "stadium_photo",
+      "stadium_id": 2163,
+      "stadium_name": "Toumba Stadium",
+      "team_name": "PAOK Thessalonikis",
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Toumba-Stadium7.jpg",
+      "note": "Public domain; 2005 photograph by Salonica84. Normalized to runtime 100x75 JPEG."
+    },
+    {
+      "asset_type": "stadium_photo",
+      "stadium_id": 2164,
+      "stadium_name": "Kaftanzoglio Stadium",
+      "team_name": "Iraklis Thessalonikis",
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Kaftanzoglio_west_stand.jpg",
+      "note": "CC BY 3.0; 2011 photograph by Hansi667. Normalized to runtime 100x75 JPEG."
+    },
+    {
+      "asset_type": "stadium_photo",
+      "stadium_id": 2165,
+      "stadium_name": "Theodoros Vardinogiannis Stadium",
+      "team_name": "OFI Irakliou",
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Theodoros_Vardinogiannis_Stadium_2019.jpg",
+      "note": "CC BY-SA 4.0/GFDL; 2019 photograph by Ergotelis123; later-renovated view retained as verified stadium image, not claimed as 1993 photograph. Normalized to runtime 100x75 JPEG."
+    },
+    {
+      "asset_type": "manager_photo",
+      "person_id": 1213,
+      "person_name": "Thomas Doll",
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Thomas_Doll_2007.jpg",
+      "note": "Public-domain/CC BY-SA source page; portrait normalized to runtime 40x55 JPEG."
+    },
+    {
+      "asset_type": "manager_photo",
+      "person_id": 2942,
+      "person_name": "Carlos Alberto Torres",
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Carlos_Alberto_Torres.jpg",
+      "note": "Creative Commons Attribution 3.0 Brazil source page; portrait normalized to runtime 40x55 JPEG."
+    },
+    {
+      "asset_type": "player_photo",
+      "person_id": 9496957,
+      "person_name": "Oleg Protasov",
+      "team_name": "Olympiakos Pireas",
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Oleh_Protasov4.jpg",
+      "note": "CC BY-SA 3.0; 2011 portrait by Sergey Shorokh. Normalized to runtime 40x55 JPEG."
+    },
+    {
+      "asset_type": "player_photo",
+      "person_id": 9497531,
+      "person_name": "Fabian Estay",
+      "team_name": "Olympiakos Pireas",
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Fabi%C3%A1n_Estay.jpg",
+      "note": "CC BY 2.0; 2011 cropped portrait. Normalized to runtime 40x55 JPEG."
+    },
+    {
+      "asset_type": "player_photo",
+      "person_id": 9495350,
+      "person_name": "Ertuğrul Sağlam",
+      "team_name": "Samsunspor",
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Ertu%C4%9Frul_Sa%C4%9Flam_2023_(cropped).jpg",
+      "note": "CC BY 2.0; 2023 portrait by Kocaelispor Kulübü; identity asset, not represented as a 1993 photograph. Normalized to runtime 40x55 JPEG."
+    }
+  ]
+}
