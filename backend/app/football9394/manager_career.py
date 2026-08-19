@@ -153,10 +153,38 @@ CAREER_PRESEASON_START_9394 = date(1993, 7, 1)
 FIRST_LEAGUE_MATCH_DATE_9394 = date(1993, 9, 5)
 
 
+# Calendario liguero 1993-94, jornada a jornada.
+#
+# Antes eran 38 domingos consecutivos sin un solo hueco, lo que dejaba el
+# campeonato sin parón de selecciones: los internacionales se iban el miércoles
+# y volvían para jugar el domingo. Ahora el fin de semana siguiente a cada
+# ventana queda despejado, y las cuatro jornadas que eso cuesta se recuperan
+# entre semana, de modo que la temporada sigue cerrando el 22 de mayo.
+#
+# Las fechas cumplen tres condiciones que verifica
+# test_league_calendar_respects_international_breaks_and_european_dates:
+#   · ninguna jornada cae en los cuatro días posteriores a un parón;
+#   · ninguna jornada coincide con una eliminatoria europea o de copa;
+#   · las jornadas 1 a 8 conservan su fecha original, de forma que el inicio de
+#     carrera del 23 de octubre siga cayendo entre la 7 y la 8.
+LEAGUE_MATCHDAY_DATES_9394: tuple[date, ...] = (
+    date(1993,9,5), date(1993,9,12), date(1993,9,19), date(1993,9,26),
+    date(1993,10,3), date(1993,10,10), date(1993,10,17), date(1993,10,24),
+    date(1993,10,31), date(1993,11,7), date(1993,11,14), date(1993,11,28),
+    date(1993,12,5), date(1993,12,12), date(1993,12,15), date(1993,12,19),
+    date(1993,12,26), date(1994,1,2), date(1994,1,9), date(1994,1,12),
+    date(1994,1,16), date(1994,1,23), date(1994,2,6), date(1994,2,9),
+    date(1994,2,13), date(1994,2,20), date(1994,3,6), date(1994,3,9),
+    date(1994,3,13), date(1994,3,20), date(1994,4,3), date(1994,4,10),
+    date(1994,4,17), date(1994,4,24), date(1994,5,1), date(1994,5,8),
+    date(1994,5,15), date(1994,5,22),
+)
+
+
 def league_matchday_date_9394(matchday: int) -> date:
     if not 1 <= int(matchday) <= 38:
         raise ValueError("jornada fuera del calendario 1993-94")
-    return FIRST_LEAGUE_MATCH_DATE_9394 + timedelta(days=(int(matchday) - 1) * 7)
+    return LEAGUE_MATCHDAY_DATES_9394[int(matchday) - 1]
 
 
 

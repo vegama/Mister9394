@@ -18,12 +18,24 @@ from .snapshot_runtime import FootballUniverseSnapshot9394
 
 
 def generated_international_windows_9394(season_start_year: int = 1993) -> tuple[date, ...]:
+    """Fechas de parón de selecciones.
+
+    Se eligen entre los miércoles que el calendario deja realmente libres. Las
+    anteriores (16 de febrero y 20 de abril) caían **el mismo día** que una
+    eliminatoria europea, de modo que un internacional podía ser convocado y
+    tener partido continental a la vez. El 17 de noviembre se conserva porque es
+    una fecha real de clasificación para el Mundial.
+
+    El calendario de liga despeja el fin de semana siguiente a cada ventana
+    (véase ``league_matchday_date_9394``), que es lo que convierte esto en un
+    parón de verdad y no en un amistoso a mitad de semana.
+    """
     delta = int(season_start_year) - 1993
     return (
         date(1993 + delta,11,17),
-        date(1994 + delta,2,16),
+        date(1994 + delta,1,26),
+        date(1994 + delta,2,23),
         date(1994 + delta,3,23),
-        date(1994 + delta,4,20),
         date(1994 + delta,5,25),
     )
 
