@@ -94,7 +94,7 @@ const activeFlowStep = computed(() => flowSteps.value.find(step=>['attention','a
 
       <div v-if="(squadPlan.priorities||[]).length" class="market-plan-strip">
         <div class="market-plan-title"><span><small>PLANIFICACIÓN DE PLANTILLA</small><strong>Necesidades detectadas</strong></span><em>{{squadPlan.squad_size}} / {{squadPlan.target_squad_size}} jugadores objetivo</em></div>
-        <div class="market-plan-priorities"><button type="button" v-for="need in (squadPlan.priorities||[]).slice(0,4)" :key="need.slot" @click="emit('apply-plan',need)"><b>{{need.label}}</b><span>{{need.priority}} · {{need.action}}</span><small v-if="need.slot!=='DEPTH'">{{need.count}} efectivos · nivel {{need.average}}</small><small v-else>Faltan {{need.shortage}} para el mínimo</small><em>Buscar perfiles →</em></button></div>
+        <div class="market-plan-priorities"><button type="button" v-for="need in (squadPlan.priorities||[]).slice(0,4)" :key="need.slot" @click="emit('apply-plan',need)"><b>{{need.label}}</b><span>{{need.priority}} · {{need.action}}</span><small v-if="need.slot!=='DEPTH'">{{need.count}} efectivos<template v-if="need.average"> · nivel medio {{need.average}}</template></small><small v-else>Faltan {{need.shortage}} para el mínimo</small><em>Buscar perfiles →</em></button></div>
       </div>
 
       <article v-if="comparisonTargets.length>=2" class="market-comparison">
