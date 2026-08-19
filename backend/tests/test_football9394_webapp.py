@@ -99,7 +99,7 @@ def test_manager_career_api_persists_tactical_choices(monkeypatch, tmp_path):
         'directness':'mixed','defensive_line':'medium','width':'normal','offside_trap':False,'marking':'zonal'
     })
     assert updated.status_code == 200
-    assert updated.json()['tactics']['formation'] == '4-3-3'
+    assert updated.json()['career']['tactics']['formation'] == '4-3-3'
     assert client.get(f'/api/football9394/careers/{career_id}').json()['tactics']['pressing'] == 'high'
 
 

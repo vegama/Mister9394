@@ -1,5 +1,5 @@
 <script setup>
-import { computed } from 'vue'
+import { computed, ref } from 'vue'
 import LineupPitch from './LineupPitch.vue'
 import UiPageHeader from '../../components/ui/UiPageHeader.vue'
 import UiProcessTrail from '../../components/ui/UiProcessTrail.vue'
@@ -18,6 +18,7 @@ const props = defineProps({
   identity: { type: Object, default: () => ({}) },
   players: { type: Array, default: () => [] },
   benchPlayers: { type: Array, default: () => [] },
+  squad: { type: Array, default: () => [] },
   lineupDraft: { type: Array, default: () => [] },
   benchDraft: { type: Array, default: () => [] },
   live: { type: Boolean, default: false },
@@ -27,7 +28,7 @@ const props = defineProps({
   nextMatch: { type: Object, default: null }, gameDate: { type: String, default: '' },
   selection: { type: Object, default: () => ({valid:false,starter_ids:[]}) }, busy: { type: Boolean, default: false }, controlledTeamId: { type: Number, default: 0 },
 })
-const emit = defineEmits(['update:formation','update:mentality','update:tempo','update:pressing','update:directness','update:defensiveLine','update:marking','update:width','update:offsideTrap','save','apply-live','save-phase','set-player-instruction','set-opposition-instruction','set-piece-taker','replace-starter','replace-bench','open-squad','start-live'])
+const emit = defineEmits(['update:formation','update:mentality','update:tempo','update:pressing','update:directness','update:defensiveLine','update:marking','update:width','update:offsideTrap','save','apply-live','save-phase','set-player-instruction','set-opposition-instruction','set-piece-taker','replace-starter','replace-bench','open-squad','start-live','toggle-starter','toggle-bench','auto-select','save-selection'])
 
 const pct = value => { const n=Number(value||0); return `${n>0?'+':''}${Math.round(n*100)}%` }
 const fitRows = computed(() => props.players.map(p => ({
@@ -45,6 +46,18 @@ const fitTone = value => value==null?'neutral':value>=78?'good':value>=62?'watch
 const isMatchDay = computed(() => Boolean(props.nextMatch?.date && props.gameDate && String(props.nextMatch.date)===String(props.gameDate)))
 const selectionReady = computed(() => Boolean(props.lineupDraft.length===11 && props.benchDraft.length===5))
 const benchSlots = computed(() => Array.from({length:5},(_,index)=>props.benchPlayers[index] || null))
+const callUpQuery = ref('')
+const isStarterId = id => props.lineupDraft.includes(Number(id))
+const isBenchId = id => props.benchDraft.includes(Number(id))
+const restCandidates = computed(() => {
+  const needle = callUpQuery.value.trim().toLocaleLowerCase('es')
+  return [...props.squad]
+    .filter(p => !isStarterId(p.id) && !isBenchId(p.id))
+    .filter(p => !needle || String(p.name || p.display_name || '').toLocaleLowerCase('es').includes(needle))
+    .sort((a,b) => (a.status==='DISP.'?0:1)-(b.status==='DISP.'?0:1) || Number(b.overall||0)-Number(a.overall||0))
+})
+function callUpStarter(player){ emit('toggle-starter', player) }
+function callUpBench(player){ emit('toggle-bench', player) }
 const atHalftime = computed(() => props.live && props.liveStatus==='halftime')
 const opponentName = computed(() => props.briefing?.opponent?.team_name || (Number(props.nextMatch?.home_team_id||0)===Number(props.controlledTeamId) ? props.nextMatch?.away_team : props.nextMatch?.home_team) || 'Próximo rival')
 const prepSteps = computed(() => props.live ? [
@@ -92,6 +105,24 @@ function dropOnBench(event,target=null){
       <section class="tactics-bench-strip">
         <header><span><small>BANQUILLO DE PARTIDO</small><strong>Arrastra un suplente sobre el titular que quieras cambiar</strong></span><b :class="{complete:benchPlayers.length===5}">{{benchPlayers.length}}/5</b></header>
         <div><article v-for="(p,index) in benchSlots" :key="p?.id || `bench-empty-${index}`" :class="{empty:!p}" :draggable="Boolean(p)" @dragstart="p && dragBenchPlayer($event,p)" @dragover.prevent @drop="dropOnBench($event,p)"><template v-if="p"><img :src="`/historical9394/players/${Number(p.id)}.jpg`" alt="" @error="$event.currentTarget.style.display='none'"><span><strong>{{p.name || p.display_name}}</strong><small>#{{p.n || p.shirt_number || '—'}} · {{p.pos || p.position}} · {{p.overall || '—'}}</small></span></template><template v-else><span class="bench-empty-number">{{index+1}}</span><span><strong>Plaza libre</strong><small>Completa la convocatoria</small></span></template></article></div>
+      </section>
+      <section class="lineup-bench-picker tactics-callup-picker">
+        <header>
+          <span><small>RESTO DE PLANTILLA</small><strong>Convoca sin salir de tácticas</strong></span>
+          <div class="tactics-callup-actions">
+            <input v-model="callUpQuery" type="search" placeholder="Buscar jugador">
+            <button type="button" class="football-button" @click="emit('auto-select')">Mejor 11 + 5</button>
+            <button type="button" class="football-button" :disabled="!selectionReady" @click="emit('save-selection')">Guardar convocatoria</button>
+          </div>
+        </header>
+        <div class="lineup-bench-list">
+          <div v-for="p in restCandidates" :key="p.id" class="lineup-bench-player rest-player" :class="{disabled:p.status!=='DISP.'}" :draggable="p.status==='DISP.'" @dragstart="p.status==='DISP.' && dragBenchPlayer($event,p)">
+            <span class="lineup-bench-photo"><img :src="`/historical9394/players/${Number(p.id)}.jpg`" alt="" @error="$event.currentTarget.style.display='none'"></span>
+            <span class="lineup-bench-copy"><strong>{{p.name || p.display_name}}</strong><small>{{p.pos || p.position}} · {{p.overall || '—'}} · {{p.status}}</small></span>
+            <div><button type="button" :disabled="p.status!=='DISP.'" @click="callUpStarter(p)">XI</button><button type="button" :disabled="p.status!=='DISP.' || benchDraft.length>=5" @click="callUpBench(p)">Banquillo</button></div>
+          </div>
+          <p v-if="!restCandidates.length" class="tactics-callup-empty">{{ callUpQuery ? 'Sin jugadores para esa búsqueda.' : 'Toda la plantilla disponible ya está en la convocatoria.' }}</p>
+        </div>
       </section>
       <div class="tactical-score-strip"><span><small>Ataque</small><b>{{pct(identity.attack)}}</b></span><span><small>Posesión</small><b>{{pct(identity.possession)}}</b></span><span><small>Defensa</small><b>{{pct(identity.defence)}}</b></span><span><small>Riesgo</small><b>{{pct(identity.risk)}}</b></span></div>
       <div class="tactical-fit-panel d6-tactical-fit">
@@ -164,5 +195,6 @@ function dropOnBench(event,target=null){
 <style scoped>
 .nf4-phase-plan,.individual-orders-layer,.set-piece-layer,.opposition-layer{margin-top:14px;padding:14px;border:1px solid var(--line,#d7dde6);border-radius:10px;background:var(--surface-soft,#f7f8fa)}.nf4-phase-plan header,.individual-orders-layer header,.set-piece-layer header,.opposition-layer header{display:flex;justify-content:space-between;gap:12px;margin-bottom:10px}.nf4-phase-plan header span,.individual-orders-layer header,.set-piece-layer header{display:grid}.nf4-phase-plan small,.individual-orders-layer small,.set-piece-layer small,.opposition-layer small{font-size:11px;color:var(--text-soft,#687386)}.phase-plan-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.phase-plan-grid label{display:grid;gap:5px}.phase-plan-grid select,.individual-order-row select,.opposition-order-row select{min-height:34px}.familiarity-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:10px}.familiarity-strip span{display:grid;padding:8px;background:var(--surface,#fff);border-radius:7px}.individual-order-row,.opposition-order-row{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:8px;align-items:center;padding:7px 0;border-top:1px solid var(--line,#d7dde6)}.individual-order-row>span,.opposition-order-row>span{display:grid}.opposition-layer p{color:var(--text-soft,#687386);font-size:11px}.opposition-order-row label{font-size:11px}.opposition-order-row{grid-template-columns:1.5fr .8fr .7fr .8fr}.own-absence-strip{display:flex;gap:7px;flex-wrap:wrap;padding:8px 0 10px}.own-absence-strip>small{width:100%;font-weight:900}.own-absence-strip>span{display:grid;padding:7px 9px;border-radius:7px;background:var(--surface,#fff)}.own-absence-strip em{font-size:11px;font-style:normal;color:var(--text-soft,#687386)}@media(max-width:1000px){.phase-plan-grid,.familiarity-strip{grid-template-columns:1fr 1fr}.individual-order-row,.opposition-order-row{grid-template-columns:1fr 1fr}}
 .match-prep-flow{grid-column:1/-1;display:grid;grid-template-columns:repeat(3,minmax(130px,1fr)) minmax(190px,1.2fr);gap:8px}.prep-step,.prep-opponent{display:grid;grid-template-columns:1fr auto;gap:2px 8px;align-items:center;padding:10px 12px;border:1px solid var(--line,#d7dde6);border-radius:9px;background:var(--surface,#fff);text-align:left}.prep-step{cursor:pointer}.prep-step:disabled{cursor:not-allowed;opacity:.62}.prep-step small,.prep-opponent small{grid-column:1/-1;font-size:11px;font-weight:900;letter-spacing:.08em;color:var(--text-soft,#687386)}.prep-step strong,.prep-opponent strong{font-size:12px}.prep-step span,.prep-opponent span{font-size:11px;color:var(--text-soft,#687386)}.prep-step.current{border-width:2px}.prep-step.done>span{font-weight:900}.live-plan-flow{grid-template-columns:1fr 1fr}.tactics-footer>div{display:flex;gap:7px;flex-wrap:wrap;justify-content:flex-end}@media(max-width:1000px){.match-prep-flow{grid-template-columns:1fr 1fr}}
+.tactics-callup-picker{margin-top:10px}.tactics-callup-actions{display:flex;align-items:center;gap:6px;flex-wrap:wrap;justify-content:flex-end}.tactics-callup-actions input{min-height:30px;min-width:140px;padding:0 9px;border:1px solid var(--f-line);border-radius:7px;background:var(--f-panel2);color:inherit;font-size:11px}.tactics-callup-actions .football-button{min-height:30px;padding:0 10px;font-size:11px}.tactics-callup-empty{margin:0;padding:14px;color:var(--f-muted);font-size:11px;text-align:center}
 .tactics-bench-strip{border-top:1px solid var(--f-line);background:var(--f-panel2)}.tactics-bench-strip>header{display:flex;align-items:end;justify-content:space-between;gap:12px;padding:10px 14px;border-bottom:1px solid var(--f-line)}.tactics-bench-strip>header span{display:grid;gap:2px}.tactics-bench-strip>header small{font-size:11px;font-weight:900;letter-spacing:.08em;color:var(--f-muted)}.tactics-bench-strip>header strong{font-size:11px}.tactics-bench-strip>header b{padding:4px 7px;border-radius:999px;background:#3b2e13;color:#e2bd61;font-size:11px}.tactics-bench-strip>header b.complete{background:#163a2c;color:#6ad698}.tactics-bench-strip>div{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:7px;padding:9px}.tactics-bench-strip article{display:grid;grid-template-columns:36px minmax(0,1fr);gap:7px;align-items:center;min-height:52px;padding:5px;border:1px solid var(--f-line);border-radius:9px;background:var(--f-panel);cursor:grab}.tactics-bench-strip article img{width:34px;height:42px;object-fit:cover;object-position:50% 14%;border-radius:7px;background:#172432}.tactics-bench-strip article span{display:grid;gap:1px;min-width:0}.tactics-bench-strip article strong,.tactics-bench-strip article small{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.tactics-bench-strip article strong{font-size:11px}.tactics-bench-strip article small{font-size:11px;color:var(--f-muted)}.tactics-bench-strip article.empty{cursor:default;border-style:dashed;opacity:.78}.bench-empty-number{display:grid!important;place-items:center;width:34px;height:34px;border:1px dashed var(--f-line-strong);border-radius:50%;color:var(--f-muted);font-weight:900}@media(max-width:900px){.tactics-bench-strip>div{grid-template-columns:repeat(2,minmax(0,1fr))}}
 </style>

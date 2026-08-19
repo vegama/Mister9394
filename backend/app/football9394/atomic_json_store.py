@@ -1,9 +1,12 @@
 from __future__ import annotations
 
+import itertools
 import json
 import logging
 import os
 import shutil
+import threading
+import time
 
 try:
     import orjson
@@ -15,6 +18,59 @@ from typing import Any, Callable
 
 LOGGER = logging.getLogger("mister9394.save")
 Validator = Callable[[dict[str, Any]], None]
+
+# Windows can transiently deny os.replace() (WinError 5/32) when antivirus or
+# an indexer briefly opens the just-written file between close() and the
+# rename; the same rename would simply succeed on retry a few ms later. POSIX
+# rename() has no such window, so this only ever loops there.
+_REPLACE_RETRY_DELAYS = (0.05, 0.1, 0.2, 0.4, 0.8)
+
+
+def _replace_with_retry(src: Path, dst: Path) -> None:
+    for delay in _REPLACE_RETRY_DELAYS:
+        try:
+            os.replace(src, dst)
+            return
+        except PermissionError:
+            time.sleep(delay)
+    os.replace(src, dst)
+
+
+# Two concurrent requests can save the same career (e.g. two panels each
+# refreshing and persisting state on page load) from different threads.
+# A shared "<name>.tmp" path meant one writer's os.replace() could consume
+# the other's tmp file out from under it, turning a harmless double-save
+# into a FileNotFoundError. Each write gets its own tmp path instead; the
+# final os.replace() onto the real path is still atomic and last-write-wins,
+# which is fine since both writers are persisting the same in-process state.
+_tmp_suffix_counter = itertools.count()
+
+
+def _unique_tmp_path(path: Path) -> Path:
+    token = f"{os.getpid()}-{threading.get_ident()}-{next(_tmp_suffix_counter)}"
+    return path.with_suffix(path.suffix + f".{token}.tmp")
+
+
+# Unique tmp names stop writers from stepping on each other's tmp file, but
+# atomic_json_save is a multi-step protocol (write primary, rotate backup to
+# .prev, publish new backup) built assuming a single writer per path. Two
+# concurrent saves to the *same* career file can still race a later step -
+# e.g. both see the backup exists and both try to rename it to .prev, so the
+# second one finds it already gone. A per-path lock serializes writers to the
+# same destination while leaving unrelated saves (different careers/files)
+# free to run in parallel.
+_path_locks: dict[str, threading.Lock] = {}
+_path_locks_guard = threading.Lock()
+
+
+def _lock_for(path: Path) -> threading.Lock:
+    key = str(path)
+    with _path_locks_guard:
+        lock = _path_locks.get(key)
+        if lock is None:
+            lock = threading.Lock()
+            _path_locks[key] = lock
+        return lock
 
 
 class SaveRecoveryError(ValueError):
@@ -68,11 +124,11 @@ def _publish_backup(backup: Path, encoded: bytes) -> None:
         # atomically instead of reading and rewriting another multi-megabyte
         # copy on every action. If publishing the new backup fails afterwards,
         # recovery still has this known-good ``.prev`` rung.
-        os.replace(backup, previous)
+        _replace_with_retry(backup, previous)
         _fsync_directory(backup.parent)
-    backup_tmp = backup.with_suffix(backup.suffix + ".tmp")
+    backup_tmp = _unique_tmp_path(backup)
     _write_bytes_fsynced(backup_tmp, encoded)
-    os.replace(backup_tmp, backup)
+    _replace_with_retry(backup_tmp, backup)
     _fsync_directory(backup.parent)
 
 
@@ -93,14 +149,15 @@ def atomic_json_save(path: Path, payload: dict[str, Any], *, validator: Validato
         )
     else:
         encoded = (json.dumps(payload, ensure_ascii=False, separators=(",", ":")) + "\n").encode("utf-8")
-    tmp = path.with_suffix(path.suffix + ".tmp")
-    _write_bytes_fsynced(tmp, encoded)
-    os.replace(tmp, path)
-    _fsync_directory(path.parent)
+    with _lock_for(path):
+        tmp = _unique_tmp_path(path)
+        _write_bytes_fsynced(tmp, encoded)
+        _replace_with_retry(tmp, path)
+        _fsync_directory(path.parent)
 
-    # Once the primary has been committed, publish a byte-identical known-good
-    # backup. The prior backup is retained as .prev for a second recovery rung.
-    _publish_backup(backup, encoded)
+        # Once the primary has been committed, publish a byte-identical known-good
+        # backup. The prior backup is retained as .prev for a second recovery rung.
+        _publish_backup(backup, encoded)
     return path
 
 
@@ -121,10 +178,11 @@ def atomic_json_checkpoint(path: Path, payload: dict[str, Any], *, validator: Va
         )
     else:
         encoded = (json.dumps(payload, ensure_ascii=False, separators=(",", ":")) + "\n").encode("utf-8")
-    tmp = path.with_suffix(path.suffix + ".tmp")
-    _write_bytes_fsynced(tmp, encoded)
-    os.replace(tmp, path)
-    _fsync_directory(path.parent)
+    with _lock_for(path):
+        tmp = _unique_tmp_path(path)
+        _write_bytes_fsynced(tmp, encoded)
+        _replace_with_retry(tmp, path)
+        _fsync_directory(path.parent)
     return path
 
 

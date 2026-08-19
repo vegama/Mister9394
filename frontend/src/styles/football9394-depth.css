@@ -10,8 +10,7 @@
 
 /* Player · identity first, data second */
 .football9394-player-modal.player-profile-v2{width:min(1320px,97vw);height:min(900px,94vh);border-radius:24px;border-color:#cfd9d4}
-.player-profile-v2>.modal-head{position:relative;display:flex;align-items:stretch;padding:0;border:0;background:#0f1c18;color:#fff}
-.player-profile-v2>.modal-head>div:first-child{display:flex;flex:1;min-width:0}
+.player-profile-v2>.modal-head{position:relative;display:flex;flex-direction:column;align-items:stretch;padding:0;border:0;background:#0f1c18;color:#fff}
 .player-profile-v2>.modal-head>.modal-close{position:absolute;right:16px;top:16px;z-index:4;border:1px solid #ffffff2e;background:#ffffff12;color:#fff;backdrop-filter:blur(8px)}
 .player-profile-v2>.modal-head>.modal-close:hover{background:#ffffff22}
 .player-hero-v2{position:relative;display:grid;grid-template-columns:110px minmax(0,1fr) 155px 132px;gap:22px;align-items:end;width:100%;min-height:194px;padding:30px 72px 22px 28px;background:radial-gradient(circle at 82% 0%,rgba(73,161,110,.23),transparent 34%),linear-gradient(125deg,#0d1714 0%,#162a23 52%,#1f4a36 100%);overflow:hidden}

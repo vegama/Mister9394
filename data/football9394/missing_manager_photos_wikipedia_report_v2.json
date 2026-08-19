@@ -1,0 +1,3949 @@
+{
+  "total": 245,
+  "downloaded": 23,
+  "unresolved": 222,
+  "rows": [
+    {
+      "source_id": 24,
+      "name": "Nando Yosu",
+      "clubs": [
+        "Granada CF"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Racing de Santander",
+        "Nando Yosu",
+        "1962 Inter-Cities Fairs Cup final",
+        "List of Granada CF seasons",
+        "José Ángel Rojo",
+        "CDE Racing Féminas",
+        "Gustavo Benítez (footballer, born 1953)",
+        "Granada CF"
+      ]
+    },
+    {
+      "source_id": 32,
+      "name": "Araquistain",
+      "clubs": [
+        "SD Eibar"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Maximiliano Richeze",
+        "José Araquistáin",
+        "Araquistáin",
+        "Luis Araquistáin",
+        "José María Araquistain",
+        "Roberto Richeze"
+      ],
+      "reason": "club_not_confirmed"
+    },
+    {
+      "source_id": 36,
+      "name": "José Enrique Díaz",
+      "clubs": [
+        "Levante UD"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Levante UD",
+        "Jose Diaz",
+        "Adolfo Aldana",
+        "Tupambaé",
+        "José Enrique Díaz",
+        "José Díaz (Uruguayan politician)",
+        "Levante UD",
+        "Joaquín Caparrós"
+      ]
+    },
+    {
+      "source_id": 43,
+      "name": "González Camacho",
+      "clubs": [
+        "San Roque"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Andorra la Vella",
+        "Lepe",
+        "La Antilla",
+        "Pradera",
+        "Football at the 1935 Central American and Caribbean Games – Men's team squads",
+        "Huelva (Senate constituency)",
+        "Lepe"
+      ]
+    },
+    {
+      "source_id": 47,
+      "name": "Brian Hortorn",
+      "clubs": [
+        "Manchester City FC"
+      ],
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 61,
+      "name": "D'Alessandro",
+      "clubs": [
+        "Atlético Madrid"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "List of films based on Marvel Comics publications",
+        "Andrés D'Alessandro",
+        "CinemaScore",
+        "List of biggest box-office bombs",
+        "Jorge D'Alessandro",
+        "List of films impacted by the COVID-19 pandemic"
+      ],
+      "reason": "club_not_confirmed"
+    },
+    {
+      "source_id": 66,
+      "name": "Óscar Cavallero",
+      "clubs": [
+        "Banfield"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Pablo Cavallero"
+      ]
+    },
+    {
+      "source_id": 69,
+      "name": "Hugo Hernández",
+      "clubs": [
+        "Monterrey"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Zamora CF",
+        "Sergio Rodríguez (footballer, born August 1985)",
+        "Víctor Hugo Hernández",
+        "Hugo Hernández",
+        "Héctor Hugo Hernández Rodríguez",
+        "Héctor Hernández",
+        "C.F. Monterrey",
+        "2010–11 C.D. Guadalajara season"
+      ]
+    },
+    {
+      "source_id": 87,
+      "name": "Bernd Krauss",
+      "clubs": [
+        "Borussia Mönchengladbach"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Bernd Krauss",
+        "Bernd Krauß",
+        "1995 DFB-Supercup",
+        "Rowing at the 1980 Summer Olympics – Men's eight",
+        "1999–2000 Borussia Dortmund season",
+        "Bernd Frieberg",
+        "Borussia Mönchengladbach",
+        "Bernd Krauss"
+      ]
+    },
+    {
+      "source_id": 97,
+      "name": "Ian Branfoot",
+      "clubs": [
+        "Southampton FC"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Ian Branfoot",
+        "List of people from Gateshead",
+        "1993–94 Southampton F.C. season",
+        "List of Reading F.C. managers",
+        "1991–92 Southampton F.C. season",
+        "1992 Full Members' Cup final",
+        "Ian Branfoot",
+        "History of Southampton F.C."
+      ]
+    },
+    {
+      "source_id": 98,
+      "name": "Patrice Bergues",
+      "clubs": [
+        "RC Lens"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "RC Lens",
+        "Patrice Bergues",
+        "US Nœux-les-Mines",
+        "RC Lens",
+        "Patrice Bergues"
+      ]
+    },
+    {
+      "source_id": 99,
+      "name": "Marc Bourrier",
+      "clubs": [
+        "Olympique Marseille"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Raymond Domenech",
+        "SC Sète",
+        "List of Olympique de Marseille managers and presidents",
+        "AC Avignonnais",
+        "Marc Bourrier",
+        "1992 Toulon Tournament squads",
+        "List of Olympique de Marseille managers and presidents",
+        "Marc Bourrier"
+      ]
+    },
+    {
+      "source_id": 135,
+      "name": "Valdinoci",
+      "clubs": [
+        "Atalanta"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "1949 Grand Prix motorcycle racing season",
+        "Alessio Figalli",
+        "Galleanisti",
+        "San Nicolò all'Arena, Verona",
+        "Eleonora Di Nezza",
+        "Carlo Valdinoci",
+        "Atalanta BC",
+        "Como 1907"
+      ]
+    },
+    {
+      "source_id": 139,
+      "name": "Ferguson",
+      "clubs": [
+        "Manchester United FC"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Alex Ferguson",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Alex_Ferguson_2012.jpg/250px-Alex_Ferguson_2012.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "pass": "name_only"
+    },
+    {
+      "source_id": 144,
+      "name": "Eriksson",
+      "clubs": [
+        "UC Sampdoria"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Gustav Vasa",
+        "Sven-Göran Eriksson",
+        "Leif Erikson",
+        "Magnus Eriksson",
+        "Jonas Eriksson (referee)",
+        "Åsa Eriksson (politician)"
+      ],
+      "reason": "club_not_confirmed"
+    },
+    {
+      "source_id": 156,
+      "name": "Hendriks",
+      "clubs": [
+        "FC Zwolle"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Maurits Hendriks",
+        "Liam Hendriks",
+        "Kaj Hendriks",
+        "2019 Oakland Athletics season",
+        "2020 Oakland Athletics season",
+        "2021 Chicago White Sox season"
+      ],
+      "reason": "club_not_confirmed"
+    },
+    {
+      "source_id": 158,
+      "name": "Howard Kendall",
+      "clubs": [
+        "Everton FC"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Howard Kendall",
+        "1964 FA Cup final",
+        "1984 Football League Cup final",
+        "1970 FA Charity Shield",
+        "Stoke City F.C. Player of the Year",
+        "1983–84 Everton F.C. season",
+        "Howard Kendall",
+        "History of Everton F.C."
+      ]
+    },
+    {
+      "source_id": 171,
+      "name": "Queiroz",
+      "clubs": [
+        "Sporting Lisboa"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Eça de Queiroz",
+        "Carlos Queiroz",
+        "Rachel de Queiroz",
+        "Tita (footballer, born 1958)",
+        "Isaquias Queiroz",
+        "Gio Garbelini"
+      ],
+      "reason": "club_not_confirmed"
+    },
+    {
+      "source_id": 174,
+      "name": "Raul Águas",
+      "clubs": [
+        "Vitoria Setúbal FC"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "G.D. Chaves",
+        "1989–90 Primeira Divisão",
+        "1990–91 Primeira Divisão",
+        "1994–95 Primeira Divisão",
+        "Águas",
+        "Raul Águas",
+        "1989–90 Primeira Divisão",
+        "1990–91 Primeira Divisão"
+      ]
+    },
+    {
+      "source_id": 179,
+      "name": "João Alves",
+      "clubs": [
+        "CF Estrela Amadora"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Jô",
+        "João Alves (footballer, born 1980)",
+        "João Alves (footballer, born 1952)",
+        "Daniel Faria",
+        "João Alves Filho",
+        "João Alves",
+        "1989–90 Primeira Divisão",
+        "1990–91 Primeira Divisão"
+      ]
+    },
+    {
+      "source_id": 186,
+      "name": "George Graham",
+      "clubs": [
+        "Arsenal FC"
+      ],
+      "status": "matched",
+      "wikipedia_title": "George Graham",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/George_Graham_%281970%29.png/250px-George_Graham_%281970%29.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "pass": "name_only"
+    },
+    {
+      "source_id": 200,
+      "name": "John Lyall",
+      "clubs": [
+        "Ipswich Town FC"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "John Lyall",
+        "1981 Football League Cup final",
+        "Ipswich Town F.C. Hall of Fame",
+        "1984–85 West Ham United F.C. season",
+        "1983–84 West Ham United F.C. season",
+        "1981–82 West Ham United F.C. season",
+        "Ipswich Town F.C.",
+        "Ipswich Town F.C. Hall of Fame"
+      ]
+    },
+    {
+      "source_id": 206,
+      "name": "Juan Ahuntchain",
+      "clubs": [
+        "Defensor Sporting"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Uruguay national football team",
+        "Defensor Sporting",
+        "Liga AUF Uruguaya",
+        "1997 Copa América squads",
+        "1991 Copa Pelé squads",
+        "Uruguay national football team records and statistics",
+        "Defensor Sporting",
+        "Liga AUF Uruguaya"
+      ]
+    },
+    {
+      "source_id": 230,
+      "name": "Moré",
+      "clubs": [
+        "Real Valladolid"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Benny Moré",
+        "Mooré",
+        "Saint-Moré",
+        "International Latin Music Hall of Fame",
+        "Itene language",
+        "Pepe Moré",
+        "Real Valladolid",
+        "Xavier Moré"
+      ]
+    },
+    {
+      "source_id": 242,
+      "name": "Hector Salva",
+      "clubs": [
+        "Nacional de Montevideo"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Belie Belcan",
+        "Héctor Salvá",
+        "Peru at the 2019 Parapan American Games",
+        "1957 Copa Aldao",
+        "Pan American Para-Badminton Championships",
+        "Charles Noakes",
+        "Club Nacional de Football",
+        "Héctor Salvá"
+      ]
+    },
+    {
+      "source_id": 279,
+      "name": "Gonzalo Hurtado",
+      "clubs": [
+        "CD Toledo"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "CD Toledo",
+        "Supreme Tribunal of Justice of Bolivia",
+        "Gonzalo Hurtado",
+        "List of UD Almería managers",
+        "Manolo Cano",
+        "Bowling at the 2023 Central American and Caribbean Games",
+        "CD Toledo",
+        "Gonzalo Hurtado"
+      ]
+    },
+    {
+      "source_id": 359,
+      "name": "Tommy McLean",
+      "clubs": [
+        "Motherwell FC"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Fir Park",
+        "Tommy McLean",
+        "1928 FA Cup final",
+        "1991 Scottish Cup final",
+        "1979 Scottish Cup final",
+        "1981 Scottish Cup final",
+        "Motherwell F.C.",
+        "Fir Park"
+      ]
+    },
+    {
+      "source_id": 361,
+      "name": "Willie Miller",
+      "clubs": [
+        "Aberdeen FC"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "William Miller",
+        "Willie Miller",
+        "Willie Miller (basketball)",
+        "Willie Miller (American football)",
+        "Willie Miller (urbanist)",
+        "2007 PBA Fiesta Conference finals"
+      ],
+      "reason": "club_not_confirmed"
+    },
+    {
+      "source_id": 518,
+      "name": "Bagnoli",
+      "clubs": [
+        "FC Internazionale"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Bagnoli Irpino",
+        "Bagnoli di Sopra",
+        "Osvaldo Bagnoli",
+        "Bagnoli Airfield",
+        "Al Bagnoli",
+        "List of Penn Quakers football seasons"
+      ],
+      "reason": "club_not_confirmed"
+    },
+    {
+      "source_id": 520,
+      "name": "Iñaki Sáez",
+      "clubs": [
+        "UD Las Palmas"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "UEFA Euro 2004 Group A",
+        "Iñaki Sáez",
+        "Royal Castile and León Football Federation",
+        "1973 Copa del Generalísimo final",
+        "1969 Copa del Generalísimo final",
+        "1967 Copa del Generalísimo final",
+        "UD Las Palmas",
+        "Iñaki Sáez"
+      ]
+    },
+    {
+      "source_id": 522,
+      "name": "Sigfried Held",
+      "clubs": [
+        "SG Dynamo Dresden"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Sigfried Held",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Siggi_Held.jpg/250px-Siggi_Held.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "pass": "name_only"
+    },
+    {
+      "source_id": 542,
+      "name": "Francisco Ríos",
+      "clubs": [
+        "Leones Negros"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Estadio Nueva España",
+        "Deportivo Español",
+        "Leones de Yucatán",
+        "Francisco Ríos",
+        "1980 Tournament of the Americas squads",
+        "2ndo Chance",
+        "Estadio Carlos Vega Villalba",
+        "Ligas Distritales del Peru"
+      ]
+    },
+    {
+      "source_id": 564,
+      "name": "Antônio Lopes",
+      "clubs": [
+        "Santos"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Antônio Lopes",
+        "1998 Copa Interamericana",
+        "1998 Copa Libertadores finals",
+        "Rodriguinho (footballer, born 1980)",
+        "Júnior Lopes",
+        "Flávio Lopes",
+        "Antônio Lopes",
+        "2005 Copa Libertadores finals"
+      ]
+    },
+    {
+      "source_id": 567,
+      "name": "Carlos Alberto Silva",
+      "clubs": [
+        "Cruzeiro"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Carlos Silva Valente",
+        "Carlos Alberto Silva",
+        "Carlos Silva",
+        "1991 Supertaça Cândido de Oliveira",
+        "Carlos Marta",
+        "Carlos Silva (Colombian footballer)",
+        "Copa Master de Supercopa",
+        "Carlos Alberto Silva"
+      ]
+    },
+    {
+      "source_id": 591,
+      "name": "Rildo Menezes",
+      "clubs": [
+        "Los Angeles Salsa"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Octavio Zambrano",
+        "Los Angeles Salsa",
+        "Ian Feuer",
+        "List of Cleveland Force (1978–1988) players",
+        "Sports in Orange County, California",
+        "Octavio Zambrano",
+        "Los Angeles Salsa",
+        "Ian Feuer"
+      ]
+    },
+    {
+      "source_id": 615,
+      "name": "Renzo Ulivieri",
+      "clubs": [
+        "Vicenza"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Bologna FC 1909",
+        "Ternana Calcio",
+        "Renzo Ulivieri",
+        "Luca Cecconi",
+        "Vincenzo Montefusco",
+        "2001 Coppa Italia final",
+        "LR Vicenza",
+        "2000–01 Serie A"
+      ]
+    },
+    {
+      "source_id": 620,
+      "name": "Ottmar Hitzfeld",
+      "clubs": [
+        "BV 09 Borussia Dortmund"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Ottmar Hitzfeld",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Otmar_Hitzfeld_in_Bulgaria_%28cropped%29.jpg/250px-Otmar_Hitzfeld_in_Bulgaria_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "pass": "name_only"
+    },
+    {
+      "source_id": 652,
+      "name": "Sánchez Duque",
+      "clubs": [
+        "Getafe CF"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Luis Sánchez",
+        "CD Leganés",
+        "Juan Sánchez",
+        "Luis Sánchez Duque",
+        "Juan Ruiz de Colmenero",
+        "Juan Sánchez Duque de Estrada",
+        "Getafe CF",
+        "Luis Sánchez Duque"
+      ]
+    },
+    {
+      "source_id": 670,
+      "name": "Thomas Christiansen",
+      "clubs": [
+        "APOEL Nicosia FC"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Thomas Christiansen",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Thomas_Christiansen_England_v_Panama_27_June_26-163.jpg/250px-Thomas_Christiansen_England_v_Panama_27_June_26-163.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "pass": "name_only"
+    },
+    {
+      "source_id": 691,
+      "name": "Fernando Areán",
+      "clubs": [
+        "Belgrano"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "San Lorenzo de Almagro",
+        "Talleres de Córdoba",
+        "San Lorenzo de Almagro",
+        "Talleres de Córdoba"
+      ]
+    },
+    {
+      "source_id": 695,
+      "name": "Quique Hernández",
+      "clubs": [
+        "Hércules CF"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Quique Hernández",
+        "Enrique Hernández",
+        "Ángel Royo",
+        "2008–09 Aris Thessaloniki F.C. season",
+        "Quique (given name)",
+        "2006–07 Aris Thessaloniki F.C. season",
+        "Gustavo Siviero",
+        "Quique Hernández"
+      ]
+    },
+    {
+      "source_id": 697,
+      "name": "Edinho Nazareth",
+      "clubs": [
+        "Fluminense"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Edinho (footballer, born 1955)",
+        "Edinho (footballer, born 1955)"
+      ]
+    },
+    {
+      "source_id": 707,
+      "name": "Claudio Ranieri",
+      "clubs": [
+        "AC Fiorentina"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Claudio Ranieri",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Ranieri2023_%28cropped%29.png/250px-Ranieri2023_%28cropped%29.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "pass": "name_only"
+    },
+    {
+      "source_id": 717,
+      "name": "Alex Miller",
+      "clubs": [
+        "Hibernian FC"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Alex Miller",
+        "Alex Miller (writer)",
+        "Alex Miller (politician)",
+        "1979 Scottish Cup final",
+        "Alex Miller (cyclist)",
+        "Alex Miller (American football coach)",
+        "Hibernian F.C.",
+        "Alex Miller"
+      ]
+    },
+    {
+      "source_id": 723,
+      "name": "Bernardino Pedroto",
+      "clubs": [
+        "Vitória Guimarães SC"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Atlético Sport Aviação",
+        "Girabola",
+        "Bernardino Pedroto",
+        "1976 Taça de Portugal final",
+        "2010 Angola Super Cup",
+        "2009 Angola Super Cup",
+        "Vitória S.C.",
+        "1995–96 Primeira Divisão"
+      ]
+    },
+    {
+      "source_id": 743,
+      "name": "Muñoz",
+      "clubs": [
+        "Girona FC"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Luis Muñoz Marín International Airport",
+        "Luis Muñoz Marín",
+        "Anthony Muñoz",
+        "Miguel Muñoz",
+        "Daniel Muñoz de la Nava",
+        "UFC Fight Night: Muñoz vs. Mousasi"
+      ],
+      "reason": "club_not_confirmed"
+    },
+    {
+      "source_id": 744,
+      "name": "Corbacho\r\nJosu Uribe",
+      "clubs": [
+        "UD Melilla"
+      ],
+      "status": "bad_source_name"
+    },
+    {
+      "source_id": 762,
+      "name": "Manuel Lapuente",
+      "clubs": [
+        "Cruz Azul"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "1991 CONCACAF Gold Cup",
+        "Manuel Lapuente",
+        "Enrique Alfaro (footballer)",
+        "Football at the 1967 Pan American Games",
+        "1991 Copa Interamericana",
+        "Lapuente (surname)",
+        "Rubén Omar Romano",
+        "Manuel Lapuente"
+      ]
+    },
+    {
+      "source_id": 768,
+      "name": "Jean-Luc",
+      "clubs": [
+        "Toulouse FC"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Jean-Luc Godard",
+        "Jean-Luc Dehaene",
+        "Jean-Luc Ponty",
+        "Prix Jean-Luc Lagardère",
+        "Jean-Luc Picard",
+        "Jean-Luc Mélenchon",
+        "Toulouse FC",
+        "Jean-Luc Sassus"
+      ]
+    },
+    {
+      "source_id": 783,
+      "name": "Toni",
+      "clubs": [
+        "SL Benfica"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Toni Morrison",
+        "Toni Kukoč",
+        "Toni Collette",
+        "Toni Braxton",
+        "Luca Toni",
+        "Toni Kroos"
+      ],
+      "reason": "club_not_confirmed"
+    },
+    {
+      "source_id": 794,
+      "name": "Irulegui",
+      "clubs": [
+        "Deportivo Alavés"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Real Sociedad",
+        "List of Deportivo de A Coruña managers",
+        "José Antonio Irulegui",
+        "Alberto Ormaetxea",
+        "Hand of Irulegi",
+        "Irulegi (disambiguation)",
+        "Deportivo de A Coruña",
+        "Deportivo Alavés"
+      ]
+    },
+    {
+      "source_id": 801,
+      "name": "Jörg Berger",
+      "clubs": [
+        "FC Schalke 04"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Jörg Berger",
+        "2008–09 Bundesliga",
+        "2004 DFB-Pokal final",
+        "2009–10 in German football",
+        "Giorgios Nemtsoudis",
+        "Deniz Mendi",
+        "2004–05 Bundesliga",
+        "Jörg Berger"
+      ]
+    },
+    {
+      "source_id": 804,
+      "name": "Galilea",
+      "clubs": [
+        "CD Logroñés B"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "697 Galilea",
+        "Galilea Montijo",
+        "USS Montauk (LSV-6)",
+        "KCOH",
+        "Galilea, La Rioja",
+        "Einar Galilea"
+      ],
+      "reason": "club_not_confirmed"
+    },
+    {
+      "source_id": 807,
+      "name": "Carlos Simón",
+      "clubs": [
+        "Villarreal CF"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Villarreal CF",
+        "Iñaki Aizpurúa",
+        "Carlos Simon",
+        "1985–1989 Bolivian National Congress",
+        "Endless Road, 7058",
+        "Carlos Simon (gynaecologist)",
+        "Villarreal CF"
+      ]
+    },
+    {
+      "source_id": 811,
+      "name": "Crispi",
+      "clubs": [
+        "Elche CF"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Francesco Crispi",
+        "1895 Italian general election",
+        "Michelangelo Crispi",
+        "Third Crispi government",
+        "Fourth Crispi government",
+        "Crispi (footballer)",
+        "Football at the 1968 Summer Olympics – Men's team squads"
+      ]
+    },
+    {
+      "source_id": 826,
+      "name": "Ciriaco",
+      "clubs": [
+        "CD Castellón"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Ciriaco De Mita",
+        "Cyriacus of Ancona",
+        "1899 San Ciriaco hurricane",
+        "Ciriaco Sforza",
+        "Ciríaco",
+        "Ciriaco Cano"
+      ],
+      "reason": "club_not_confirmed"
+    },
+    {
+      "source_id": 842,
+      "name": "Hidehiko Shimizu",
+      "clubs": [
+        "Yokohama Marinos"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Asian Cup Winners' Cup",
+        "Hidehiko Shimizu",
+        "List of Yokohama F. Marinos managers",
+        "Hidehiko",
+        "1983 Emperor's Cup final",
+        "1992 Emperor's Cup final",
+        "Asian Cup Winners' Cup",
+        "Hidehiko Shimizu"
+      ]
+    },
+    {
+      "source_id": 866,
+      "name": "Barreiro",
+      "clubs": [
+        "Celta Turista"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Boa Vista, Cape Verde",
+        "Barreiro, Portugal",
+        "G.D. Fabril",
+        "Novo Barreiro",
+        "Porto Barreiro",
+        "José Barreiro (footballer)"
+      ],
+      "reason": "club_not_confirmed"
+    },
+    {
+      "source_id": 867,
+      "name": "Cardo",
+      "clubs": [
+        "Xerez CD"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Cardo",
+        "Cardo-Torgia",
+        "Manolo Cardo",
+        "Seen It All (Jeezy song)",
+        "Cardo (music producer)",
+        "Michael Cardo",
+        "Recreativo de Huelva",
+        "Cádiz CF"
+      ]
+    },
+    {
+      "source_id": 870,
+      "name": "Carlinhos Violino",
+      "clubs": [
+        "Guarani de Campinas"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Campeonato Carioca"
+      ]
+    },
+    {
+      "source_id": 898,
+      "name": "Bonds",
+      "clubs": [
+        "West Ham Utd. FC"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Barry Bonds",
+        "Chemical bond",
+        "Covalent bond",
+        "Hydrogen bond",
+        "Bond (finance)",
+        "Chemical compound",
+        "West Ham United F.C.",
+        "Millwall F.C."
+      ]
+    },
+    {
+      "source_id": 902,
+      "name": "Francisco Avilán",
+      "clubs": [
+        "Tigres UANL"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "C.F. Monterrey",
+        "Primera División de México Apertura 2008",
+        "Cachirules",
+        "Jaguares F.C.",
+        "Francisco Avilán",
+        "Juan González (footballer, born 1945)",
+        "C.F. Monterrey",
+        "Primera División de México Apertura 2008"
+      ]
+    },
+    {
+      "source_id": 917,
+      "name": "Pruijn",
+      "clubs": [
+        "NEC Nijmegen"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Exosome complex",
+        "Wilfred Mugeyi",
+        "Exosome component 7",
+        "Exosome component 4",
+        "Exosome component 5",
+        "Jan Pruijn",
+        "NEC Nijmegen",
+        "Jan Pruijn"
+      ]
+    },
+    {
+      "source_id": 932,
+      "name": "Arsenio",
+      "clubs": [
+        "RC Deportivo"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Arsenio Iglesias",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/ArsenioIglesias.jpg/250px-ArsenioIglesias.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "pass": "name_only"
+    },
+    {
+      "source_id": 937,
+      "name": "Duque",
+      "clubs": [
+        "CD Leganés"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Fernando Álvarez de Toledo, 3rd Duke of Alba",
+        "Ángel de Saavedra, 3rd Duke of Rivas",
+        "Duque de Caxias Futebol Clube",
+        "Francisco Duque III",
+        "Mariana Duque Mariño",
+        "Iván Duque"
+      ],
+      "reason": "club_not_confirmed"
+    },
+    {
+      "source_id": 941,
+      "name": "Castro Santos",
+      "clubs": [
+        "SD Compostela"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Fernando Castro",
+        "EFDA Nations Cup",
+        "Fernando Castro Santos",
+        "1992 Masters of Formula 3",
+        "Diogo Castro Santos",
+        "1992 German Formula Three Championship",
+        "SD Compostela",
+        "1996–97 La Liga"
+      ]
+    },
+    {
+      "source_id": 955,
+      "name": "Antonio Gómez",
+      "clubs": [
+        "Pontevedra CF"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Antonio Gómez (footballer, born 1973)",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Antonio_G%C3%B3mez_P%C3%A9rez_%282010%29.jpg/250px-Antonio_G%C3%B3mez_P%C3%A9rez_%282010%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "pass": "name_only"
+    },
+    {
+      "source_id": 957,
+      "name": "Creixell",
+      "clubs": [
+        "UE Sant Andreu"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Tarragonès",
+        "Viñita Formation",
+        "Torredembarra",
+        "Manuel Ausensi",
+        "Creixell",
+        "Punta de Choros Metamorphic Complex"
+      ]
+    },
+    {
+      "source_id": 964,
+      "name": "Miguel Sánchez",
+      "clubs": [
+        "Real Burgos"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Miguel Sanchez",
+        "Luis Miguel Sánchez Cerro",
+        "Miguel Sánchez (priest)",
+        "Manuel Ponce Brousset",
+        "Alejandro Sánchez (footballer, born 1986)",
+        "Miguel Sánchez-Migallón"
+      ],
+      "reason": "club_not_confirmed"
+    },
+    {
+      "source_id": 971,
+      "name": "Joaquín Salmerón",
+      "clubs": [
+        "San Sebastián de los Reyes"
+      ],
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 1005,
+      "name": "Alain de Martigny",
+      "clubs": [
+        "Angers SCO"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Gabon national football team",
+        "En Avant Guingamp",
+        "Racing Club de France Football",
+        "Stade Brestois 29",
+        "Angers SCO",
+        "Alain de Martigny",
+        "Angers SCO",
+        "Alain de Martigny"
+      ]
+    },
+    {
+      "source_id": 1012,
+      "name": "Hernán Torres",
+      "clubs": [
+        "América de Cali"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Real Cartagena",
+        "Hernán Torres",
+        "List of Deportivo Cali managers",
+        "2022 Superliga Colombiana",
+        "2023 LigaPro Serie A",
+        "Agustín Robles",
+        "Liga DIMAYOR",
+        "Hernán Torres"
+      ]
+    },
+    {
+      "source_id": 1020,
+      "name": "Joël Muller",
+      "clubs": [
+        "FC Metz"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "FC Metz",
+        "Francis Gillot",
+        "Joël Müller",
+        "Yvon Pouliquen",
+        "1999 Coupe de la Ligue final",
+        "1996 Coupe de la Ligue final",
+        "FC Metz",
+        "Joël Müller"
+      ]
+    },
+    {
+      "source_id": 1033,
+      "name": "Marinos Ouzounidis",
+      "clubs": [
+        "Panathinaikos AO"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Marinos Ouzounidis",
+        "Gol Gohar Sirjan F.C.",
+        "1995–96 Panathinaikos F.C. season",
+        "1994–95 Panathinaikos F.C. season",
+        "2021 Cupa României final",
+        "2021 Supercupa României",
+        "Panathinaikos F.C.",
+        "Xanthi F.C."
+      ]
+    },
+    {
+      "source_id": 1037,
+      "name": "Paul Sturrock",
+      "clubs": [
+        "St. Johnstone FC"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Paul Sturrock",
+        "2003–04 Plymouth Argyle F.C. season",
+        "John Blackley",
+        "1980 Scottish League Cup final",
+        "1979 Scottish League Cup final (December)",
+        "1981 Scottish Cup final",
+        "Paul Sturrock",
+        "St Johnstone F.C."
+      ]
+    },
+    {
+      "source_id": 1043,
+      "name": "Luis Rodríguez Vaz",
+      "clubs": [
+        "CD Lugo"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Deportivo de A Coruña",
+        "CD Lugo",
+        "1981–82 Segunda División",
+        "List of Deportivo de A Coruña managers",
+        "Luis Rodríguez Vaz",
+        "1998–99 CD Ourense season",
+        "CD Lugo",
+        "Luis Rodríguez Vaz"
+      ]
+    },
+    {
+      "source_id": 1093,
+      "name": "Claudinei Olveira",
+      "clubs": [
+        "Avaí"
+      ],
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 1103,
+      "name": "Willi Entenmann",
+      "clubs": [
+        "1. FC Nürnberg"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "1. FC Nürnberg",
+        "Benningen am Neckar",
+        "1986 DFB-Pokal final",
+        "Willi Entenmann",
+        "List of 1. FC Nürnberg managers",
+        "Entenmann",
+        "1. FC Nürnberg",
+        "1986 DFB-Pokal final"
+      ]
+    },
+    {
+      "source_id": 1123,
+      "name": "Sandreani",
+      "clubs": [
+        "Padova"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "1995–96 Serie A",
+        "Giancarlo Camolese",
+        "2000–01 Serie B",
+        "Mauro Sandreani",
+        "Alessandro Sandreani",
+        "Sandreani",
+        "1995–96 Serie A",
+        "1994–95 Serie A"
+      ]
+    },
+    {
+      "source_id": 1125,
+      "name": "Nicolini",
+      "clubs": [
+        "US Palermo"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Giuseppe Nicolini (composer)",
+        "Enrico Nicolini",
+        "Emanuele Nicolini",
+        "Giuseppe Placido Nicolini",
+        "Michelle Nicolini",
+        "Giusi Nicolini",
+        "US Cremonese",
+        "Stefano Colantuono"
+      ]
+    },
+    {
+      "source_id": 1159,
+      "name": "Sergio Silva",
+      "clubs": [
+        "Montevideo Wanderers"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Sergio Silva (Uruguayan footballer)",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Sergio_Silva_M%C3%A9xico_70.png/250px-Sergio_Silva_M%C3%A9xico_70.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "pass": "name_only"
+    },
+    {
+      "source_id": 1165,
+      "name": "Pedreño",
+      "clubs": [
+        "FC Cartagena"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "List of Celtic deities",
+        "Bandua",
+        "Reo (deity)",
+        "Óscar Plano",
+        "Ángel Fernández-Santos",
+        "Arentius and Arentia",
+        "David Vidal",
+        "Asier Garitano"
+      ]
+    },
+    {
+      "source_id": 1172,
+      "name": "Paulo Silas",
+      "clubs": [
+        "Criciúma"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Paulo Silas",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Paulo_Silas.jpg/250px-Paulo_Silas.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "pass": "name_only"
+    },
+    {
+      "source_id": 1180,
+      "name": "Ademar Braga",
+      "clubs": [
+        "Vasco da Gama"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Ademar",
+        "Jalal Talebi",
+        "Ademar Braga (football manager)",
+        "Ademar Braga (footballer)",
+        "Ademar Braga",
+        "List of Guangzhou City F.C. managers",
+        "Ademar Braga (football manager)"
+      ]
+    },
+    {
+      "source_id": 1184,
+      "name": "José Víctor",
+      "clubs": [
+        "Real Murcia CF"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Víctor Burgos",
+        "José Martínez (footballer, born 1991)",
+        "José Víctor Crowley",
+        "José Víctor Sánchez Trujillo",
+        "José Víctor Zavala",
+        "José Víctor Alonzo",
+        "1982–83 Segunda División",
+        "Hércules CF"
+      ]
+    },
+    {
+      "source_id": 1230,
+      "name": "Stepanović",
+      "clubs": [
+        "TSV Bayer 04 Leverkusen"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Stepa Stepanović",
+        "Dragoslav Stepanović",
+        "Stepanović",
+        "Katarina Stepanović",
+        "Srem Offensive",
+        "Aleksa Stepanović"
+      ],
+      "reason": "club_not_confirmed"
+    },
+    {
+      "source_id": 1240,
+      "name": "Braam",
+      "clubs": [
+        "TOP Oss"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Bram Fischer",
+        "Abraham Erasmus van Wyk",
+        "Bromoacetylalprenololmenthane",
+        "PASSOP",
+        "Braam Steyn",
+        "Braam Reyneke",
+        "TOP Oss",
+        "Lustre (file system)"
+      ]
+    },
+    {
+      "source_id": 1242,
+      "name": "René Notten",
+      "clubs": [
+        "FC Emmen"
+      ],
+      "status": "matched",
+      "wikipedia_title": "René Notten",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Ren%C3%A9_Notten_%281974%29.jpg/250px-Ren%C3%A9_Notten_%281974%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "pass": "name_only"
+    },
+    {
+      "source_id": 1243,
+      "name": "Kistemaker",
+      "clubs": [
+        "SC Telstar"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "De Graafschap",
+        "Johannes Bogerman",
+        "Simon J. Kistemaker",
+        "Book burning at Ephesus",
+        "Simon Kistemaker (football manager)",
+        "Simon Kistemaker"
+      ],
+      "reason": "club_not_confirmed"
+    },
+    {
+      "source_id": 1246,
+      "name": "Wilkinson",
+      "clubs": [
+        "Leeds United AFC"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Tom Wilkinson",
+        "James Wilkinson",
+        "Jonny Wilkinson",
+        "Howard Wilkinson",
+        "Bud Wilkinson",
+        "Jonathan Wilkinson",
+        "Yorkshire Ammers F.C.",
+        "List of Leeds United F.C. seasons"
+      ]
+    },
+    {
+      "source_id": 1331,
+      "name": "Manuel José",
+      "clubs": [
+        "Boavista FC"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Manuel Blanco Encalada",
+        "Manuel Fernandes (footballer, born 1951)",
+        "Argentina at the 1964 Summer Olympics",
+        "Manuel José",
+        "Manuel Clemente",
+        "Manuel Barbosa",
+        "Boavista F.C.",
+        "Manuel José Vieira"
+      ]
+    },
+    {
+      "source_id": 1338,
+      "name": "Gilbert Gress",
+      "clubs": [
+        "RC Strasbourg"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Gilbert Gress",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Gilbert_Gress.jpg/250px-Gilbert_Gress.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "pass": "name_only"
+    },
+    {
+      "source_id": 1353,
+      "name": "Simo Valakari",
+      "clubs": [
+        "SJK Seinäjoki"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Simo Valakari",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Simo_Valakari_1.jpg/250px-Simo_Valakari_1.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "pass": "name_only"
+    },
+    {
+      "source_id": 1367,
+      "name": "Takaji Mori",
+      "clubs": [
+        "Urawa Reds"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Takaji Mori",
+        "1968 in Japanese football",
+        "Takaji",
+        "Japan 15–0 Philippines",
+        "Football at the 1964 Summer Olympics – Group D",
+        "Football at the 1968 Summer Olympics – Group B",
+        "Urawa Red Diamonds",
+        "Kenzo Yokoyama"
+      ]
+    },
+    {
+      "source_id": 1371,
+      "name": "Stuart Baxter",
+      "clubs": [
+        "Sanfrecce Hiroshima"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Stuart Baxter",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Stuart_Baxter.jpg/250px-Stuart_Baxter.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "pass": "name_only"
+    },
+    {
+      "source_id": 1378,
+      "name": "Ryuzo Hiraki",
+      "clubs": [
+        "Nagoya Grampus"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Ryuzo Hiraki",
+        "1960 in Japanese football",
+        "Hiraki",
+        "Ryūzō",
+        "1953 Emperor's Cup final",
+        "1931 in Japanese football",
+        "Nagoya Grampus",
+        "1993 J.League"
+      ]
+    },
+    {
+      "source_id": 1392,
+      "name": "Yoshikazu Nagai",
+      "clubs": [
+        "JEF United Ichihara"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "1971 in Japanese football",
+        "Yoshikazu Nagai",
+        "1977 in Japanese football",
+        "1987 Afro-Asian Club Championship",
+        "1976 Emperor's Cup final",
+        "1952 in Japanese football",
+        "JEF United Chiba",
+        "Yuji Sakakura"
+      ]
+    },
+    {
+      "source_id": 1400,
+      "name": "Hideyuki Hanyu",
+      "clubs": [
+        "Verdy Kawasaki"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Tokyo Verdy Beleza",
+        "Tokyo Verdy Beleza"
+      ]
+    },
+    {
+      "source_id": 1431,
+      "name": "Magnús Gylfason",
+      "clubs": [
+        "Valur Reykjavík"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Knattspyrnufélag Reykjavíkur",
+        "Knattspyrnufélagið Víkingur",
+        "2015 Úrvalsdeild",
+        "2015 Valur season",
+        "ÍBV (men's football)",
+        "Valur (men's football)",
+        "Knattspyrnufélagið Víkingur",
+        "Sigursteinn Gíslason"
+      ]
+    },
+    {
+      "source_id": 1449,
+      "name": "Besnik Hasi",
+      "clubs": [
+        "KP Legia Warszawa"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Besnik Hasi",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Besnik_Hasi_2016_%28cropped%29.jpg/250px-Besnik_Hasi_2016_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "pass": "name_only"
+    },
+    {
+      "source_id": 1464,
+      "name": "Ramiro Solís",
+      "clubs": [
+        "R. Sporting B"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Real Oviedo",
+        "List of Sporting de Gijón managers",
+        "1995–96 Sporting de Gijón season"
+      ]
+    },
+    {
+      "source_id": 1466,
+      "name": "Jim Duffy",
+      "clubs": [
+        "Dundee FC"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Jim Duffy (journalist)",
+        "James Duffy",
+        "List of Rugrats episodes",
+        "List of Aaahh!!! Real Monsters episodes",
+        "Jim Duffy (footballer)",
+        "Jim Duffy (animator)",
+        "Dundee F.C.",
+        "Jim Duffy (footballer)"
+      ]
+    },
+    {
+      "source_id": 1467,
+      "name": "Mike Walker",
+      "clubs": [
+        "Norwich City FC"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Mike Walker (Welsh footballer)",
+        "U.S. National Badminton Championships",
+        "Mike Walker (Canadian football)",
+        "Mike Walker (canoeist)",
+        "Mickey Walker (footballer)",
+        "Robert M. Walker",
+        "Norwich City F.C.",
+        "Mike Walker (Welsh footballer)"
+      ]
+    },
+    {
+      "source_id": 1469,
+      "name": "Daniel Jeandupeux",
+      "clubs": [
+        "SM Caen"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Daniel Jeandupeux",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Daniel_Jeandupeux_%28cropped%29.jpg/250px-Daniel_Jeandupeux_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "pass": "name_only"
+    },
+    {
+      "source_id": 1484,
+      "name": "Neumann",
+      "clubs": [
+        "SBV Vitesse"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "John von Neumann",
+        "Von Neumann algebra",
+        "John Neumann",
+        "Von Neumann universe",
+        "Von Neumann architecture",
+        "Saints Neumann Goretti High School",
+        "SBV Vitesse",
+        "Phillip Cocu"
+      ]
+    },
+    {
+      "source_id": 1578,
+      "name": "Juan Carlos Rodríguez",
+      "clubs": [
+        "Valencia B"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Juan Carlos (footballer, born 1965)",
+        "Juan Carlos Rodríguez Ibarra",
+        "Juan Belencoso",
+        "Juan Carlos Rodríguez (boxer)",
+        "Tercer Cielo",
+        "Juan Carlos Rodríguez",
+        "Autovía EX-A2",
+        "Francisco Morales Lomas"
+      ]
+    },
+    {
+      "source_id": 1641,
+      "name": "Dave Dir",
+      "clubs": [
+        "Colorado Foxes"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "List of Major League Soccer head coaches",
+        "1997 Major League Soccer season",
+        "FC Dallas",
+        "Dave Dir",
+        "List of U.S. Open Cup winning head coaches",
+        "2000 Dallas Burn season",
+        "FC Dallas",
+        "Dave Dir"
+      ]
+    },
+    {
+      "source_id": 1650,
+      "name": "Pedro Kozak",
+      "clubs": [
+        "Toronto Blizzard"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Serbian White Eagles FC",
+        "Deaths in May 2020",
+        "Pedro Kozak",
+        "1982 National Soccer League (Canada) season",
+        "Nacional Latino",
+        "Pedro Kozak",
+        "Nacional Latino"
+      ]
+    },
+    {
+      "source_id": 1665,
+      "name": "Griever",
+      "clubs": [
+        "SC Heracles"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "FC Emmen",
+        "Griever",
+        "Azing Griever",
+        "The Maze Runner",
+        "Griever: An American Monkey King in China",
+        "The Trickster of Liberty",
+        "Heracles Almelo",
+        "Azing Griever"
+      ]
+    },
+    {
+      "source_id": 1709,
+      "name": "Joan Carrillo",
+      "clubs": [
+        "HNK Hajduk Split"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Kozármisleny SE",
+        "Joan Carrillo",
+        "2016–17 Croatian First Football League",
+        "2015 Magyar Kupa final",
+        "2017–18 Wisła Kraków season",
+        "2022–23 Segunda División",
+        "List of HNK Hajduk Split managers",
+        "Joan Carrillo"
+      ]
+    },
+    {
+      "source_id": 1711,
+      "name": "Cilinho",
+      "clubs": [
+        "Portuguesa"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "List of São Paulo FC managers",
+        "Cilinho",
+        "Otacílio",
+        "1988 São Paulo FC season",
+        "List of Sport Club do Recife managers",
+        "1992 Santos FC season",
+        "Cilinho",
+        "1989 São Paulo FC season"
+      ]
+    },
+    {
+      "source_id": 1712,
+      "name": "Nelsinho Rosa",
+      "clubs": [
+        "Bragantino"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "1992 King Fahd Cup final",
+        "Nelsinho Rosa",
+        "1982–83 Al Ain FC season",
+        "List of Al Ain FC seasons",
+        "1992 AFC Asian Cup final",
+        "List of CR Vasco da Gama managers",
+        "Fluminense FC",
+        "Brazil national under-20 football team"
+      ]
+    },
+    {
+      "source_id": 1719,
+      "name": "Svatopluk Habanec",
+      "clubs": [
+        "FC Boby Brno"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Svatopluk Habanec",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Svatopluk_Habanec_2013.JPG/250px-Svatopluk_Habanec_2013.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "pass": "name_only"
+    },
+    {
+      "source_id": 1739,
+      "name": "Ricardo Moreno",
+      "clubs": [
+        "Barakaldo CF"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Ricardo Moreno",
+        "Ricardo Moreno Cañas",
+        "Beltrán Cortés",
+        "Carlos Echandi",
+        "Pentagón",
+        "Ricardo Moreno Bastida"
+      ]
+    },
+    {
+      "source_id": 1742,
+      "name": "Fabri",
+      "clubs": [
+        "Mérida AD"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Martinus Fabri",
+        "Fabri Fibra",
+        "Thomas Fabri",
+        "Fabri",
+        "Ratna Fabri",
+        "Fabri González",
+        "1540s",
+        "List of Spanish football transfers summer 2011"
+      ]
+    },
+    {
+      "source_id": 1768,
+      "name": "Aníbal Ruiz Leites",
+      "clubs": [
+        "Veracruz"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Aníbal Ruiz",
+        "Aníbal Ruiz"
+      ]
+    },
+    {
+      "source_id": 1771,
+      "name": "Pedro García",
+      "clubs": [
+        "Santos Laguna"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Santiago de los Caballeros",
+        "Pedro García Aguado",
+        "Pedro García (footballer, born 1974)",
+        "Pedro García (footballer, born 1946)",
+        "Pedro García Figueroa",
+        "Shooting at the 1984 Summer Olympics – Men's 25 metre rapid fire pistol",
+        "Santiago de los Caballeros",
+        "Santos Laguna"
+      ]
+    },
+    {
+      "source_id": 1773,
+      "name": "Manuel Lapuente",
+      "clubs": [
+        "Club Necaxa"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "1991 CONCACAF Gold Cup",
+        "Manuel Lapuente",
+        "Enrique Alfaro (footballer)",
+        "Football at the 1967 Pan American Games",
+        "1991 Copa Interamericana",
+        "Lapuente (surname)",
+        "Club Necaxa",
+        "Manuel Lapuente"
+      ]
+    },
+    {
+      "source_id": 1780,
+      "name": "Antonio Carbajal",
+      "clubs": [
+        "Atlético Morelia"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Antonio Carbajal",
+        "Football in Mexico",
+        "Carbajal",
+        "Francisco Quintero",
+        "1950 FIFA World Cup Group 1",
+        "1962 FIFA World Cup Group 3",
+        "Antonio Carbajal",
+        "Club León"
+      ]
+    },
+    {
+      "source_id": 1813,
+      "name": "Maroso",
+      "clubs": [
+        "Venezia FC"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Grande Torino",
+        "List of Empire ships (H)",
+        "Virgilio Maroso",
+        "Soegiono",
+        "Sintuwu Maroso Square",
+        "1947–48 AC Torino season"
+      ],
+      "reason": "club_not_confirmed"
+    },
+    {
+      "source_id": 1824,
+      "name": "Jaume Bauzà",
+      "clubs": [
+        "RCD Mallorca"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "FK Smederevo 1924",
+        "UD Arenal",
+        "Jaume Bauzà",
+        "Jaume",
+        "2024–2025 anti-tourism protests in Spain",
+        "Jaume Bauzà"
+      ]
+    },
+    {
+      "source_id": 1827,
+      "name": "Pérez García",
+      "clubs": [
+        "Real Valladolid B"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Héctor P. García",
+        "Matías Pérez García",
+        "Hoyasemys",
+        "Paula Andrea Pérez",
+        "Ángel Pérez García",
+        "Clotilde Pérez García"
+      ],
+      "reason": "club_not_confirmed"
+    },
+    {
+      "source_id": 1829,
+      "name": "Moreno",
+      "clubs": [
+        "Sevilla B"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Alberto Moreno",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Alberto_Moreno_2017.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+      "pass": "name_plus_club"
+    },
+    {
+      "source_id": 1831,
+      "name": "Chato Gónzalez",
+      "clubs": [
+        "CP Cacereño"
+      ],
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 1839,
+      "name": "Tomé",
+      "clubs": [
+        "Cultural Leonesa"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "São Tomé",
+        "São Tomé and Príncipe national football team",
+        "São Tomé (island)",
+        "São Tomé and Príncipe",
+        "Cuisine of São Tomé and Príncipe",
+        "COVID-19 pandemic in São Tomé and Príncipe"
+      ],
+      "reason": "club_not_confirmed"
+    },
+    {
+      "source_id": 1842,
+      "name": "José Muñiz",
+      "clubs": [
+        "UP Langreo"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Nebrija University",
+        "La Primavera Biosphere Reserve",
+        "2021 UCI Track Cycling World Championships – Men's points race",
+        "2021 UCI Track Cycling World Championships – Men's madison",
+        "2021 UCI Track Cycling World Championships – Men's elimination",
+        "2022 UCI Track Cycling World Championships – Men's points race"
+      ]
+    },
+    {
+      "source_id": 1845,
+      "name": "Utxu",
+      "clubs": [
+        "SD Lemona"
+      ],
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 1851,
+      "name": "Etxarri",
+      "clubs": [
+        "Real Sociedad B"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Arbizu",
+        "Echarri",
+        "Etxarri-Aranatz",
+        "Etcharry",
+        "Luis Arconada",
+        "Joseba Llorente",
+        "Luis Arconada",
+        "Sergio Rodríguez (footballer, born 1978)"
+      ]
+    },
+    {
+      "source_id": 1855,
+      "name": "Cor Pot",
+      "clubs": [
+        "Excelsior"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Pot",
+        "Excelsior Rotterdam",
+        "Maik Wagefeld",
+        "Cor Pot",
+        "2013 Campeonato Potiguar",
+        "Cor (given name)",
+        "Excelsior Rotterdam",
+        "NAC Breda"
+      ]
+    },
+    {
+      "source_id": 1856,
+      "name": "Villanova",
+      "clubs": [
+        "RC Recreativo"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Villanova University",
+        "Villanova, Pennsylvania",
+        "Villanova Wildcats men's basketball",
+        "Villanova Wildcats",
+        "Villanova Wildcats football",
+        "Big East Conference"
+      ],
+      "reason": "club_not_confirmed"
+    },
+    {
+      "source_id": 1857,
+      "name": "Jesús Tartilán",
+      "clubs": [
+        "SD Ponferradina"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "CD Numancia",
+        "SD Ponferradina",
+        "Atlético Madrileño",
+        "Jesús Tartilán",
+        "Requejo (surname)",
+        "2006–07 SD Ponferradina season",
+        "SD Ponferradina",
+        "Jesús Tartilán"
+      ]
+    },
+    {
+      "source_id": 1924,
+      "name": "Kevin Doherty",
+      "clubs": [
+        "Shelbourne FC"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Kevin Doherty (judoka)",
+        "Kevin Doherty",
+        "Kevin Doherty (politician)",
+        "Kevin Doherty (filmmaker)",
+        "Kevin Doherty (footballer)",
+        "Kevin Doherty (American football)",
+        "Shelbourne F.C.",
+        "Drogheda United F.C."
+      ]
+    },
+    {
+      "source_id": 1951,
+      "name": "Fortes",
+      "clubs": [
+        "SC Farense"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Paco Fortes",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Halve_finale_Uefa-cup_PSV_tegen_Barcelona_3-0%2C_elftal_Barcelona%2C_Bestanddeelnr_929-6484.jpg/250px-Halve_finale_Uefa-cup_PSV_tegen_Barcelona_3-0%2C_elftal_Barcelona%2C_Bestanddeelnr_929-6484.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "pass": "name_plus_club"
+    },
+    {
+      "source_id": 1970,
+      "name": "Alexandre Gama",
+      "clubs": [
+        "Náutico"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Alexandre Gama",
+        "2015 Kor Royal Cup",
+        "2016 Kor Royal Cup",
+        "Alexandre Gama (entrepreneur)",
+        "List of Thai League 1 managers",
+        "2018 Thailand Champions Cup",
+        "Fluminense FC"
+      ]
+    },
+    {
+      "source_id": 2009,
+      "name": "Sergije Krešić",
+      "clubs": [
+        "Real Betis"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Sergije Krešić",
+        "Draženko Prskalo",
+        "Julio García (footballer, born 1965)",
+        "1986–87 NK Hajduk Split season",
+        "1997–98 Real Valladolid season",
+        "List of Segunda División winning managers",
+        "Tomás Olías",
+        "Sergije Krešić"
+      ]
+    },
+    {
+      "source_id": 2010,
+      "name": "Sierra",
+      "clubs": [
+        "Atlético Madrid B"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Sierra Leone",
+        "Sierra Nevada",
+        "Sierra Entertainment",
+        "Freetown",
+        "Ansel Adams",
+        "Chevrolet Silverado",
+        "Atlético Madrid Femenino",
+        "Fernando Zambrano"
+      ]
+    },
+    {
+      "source_id": 2088,
+      "name": "Mussula",
+      "clubs": [
+        "Atlético Mineiro"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Mus (card game)",
+        "Maryland Route 542",
+        "List of Clube Atlético Mineiro players",
+        "List of Clube Atlético Mineiro managers",
+        "1993 Copa de Oro Finals",
+        "Mussula",
+        "History of Clube Atlético Mineiro",
+        "List of Clube Atlético Mineiro players"
+      ]
+    },
+    {
+      "source_id": 2092,
+      "name": "Fito Nieves",
+      "clubs": [
+        "Vitória"
+      ],
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 2093,
+      "name": "Vinícius Eutrópio",
+      "clubs": [
+        "Figueirense"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Figueirense FC",
+        "2010–11 Liga de Honra",
+        "Fábio Magrão",
+        "Vinícius Eutrópio",
+        "2019 Campeonato Brasileiro Série B",
+        "2021 Campeonato Brasileiro Série C",
+        "Figueirense FC",
+        "Vinícius Eutrópio"
+      ]
+    },
+    {
+      "source_id": 2122,
+      "name": "Caturla",
+      "clubs": [
+        "CF Talavera"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Alejandro García Caturla",
+        "Amadeo Roldán Theatre",
+        "Teté Caturla",
+        "Manu Torres",
+        "Antonio Vidal (footballer)",
+        "Caturla",
+        "Eduardo Caturla"
+      ]
+    },
+    {
+      "source_id": 2200,
+      "name": "David Vidal",
+      "clubs": [
+        "Rayo Vallecano"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Albacete Balompié",
+        "Cádiz CF",
+        "David Vidal",
+        "Mario Simón",
+        "Carlos Ríos",
+        "David Vidal (baseball)",
+        "Rayo Vallecano",
+        "Antonio Calderón"
+      ]
+    },
+    {
+      "source_id": 2238,
+      "name": "Materazzi",
+      "clubs": [
+        "AS Bari"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Ferrari F40",
+        "Marco Materazzi",
+        "2006 FIFA World Cup final",
+        "Giuseppe Materazzi",
+        "Riccardo Materazzi",
+        "Nicola Materazzi"
+      ],
+      "reason": "club_not_confirmed"
+    },
+    {
+      "source_id": 2373,
+      "name": "Joe Royle",
+      "clubs": [
+        "Oldham Athletic FC"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Oldham Athletic A.F.C.",
+        "Joe Royle",
+        "List of Everton F.C. managers",
+        "Willie Donachie",
+        "John Hurst (footballer)",
+        "List of Oldham Athletic A.F.C. managers",
+        "Oldham Athletic A.F.C.",
+        "Joe Royle"
+      ]
+    },
+    {
+      "source_id": 2388,
+      "name": "David Thomas Bassett",
+      "clubs": [
+        "Sheffield United  FC"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Dave Bassett",
+        "Dave Bassett"
+      ]
+    },
+    {
+      "source_id": 2404,
+      "name": "Wim Koevermans",
+      "clubs": [
+        "FC Groningen"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Wim",
+        "Wim Koevermans",
+        "Daniel de Oliveira (footballer)",
+        "2012 Nehru Cup final",
+        "2012 Nehru Cup group stage",
+        "List of India national football team managers",
+        "NEC Nijmegen",
+        "Fortuna Sittard"
+      ]
+    },
+    {
+      "source_id": 2406,
+      "name": "Versleijen",
+      "clubs": [
+        "De Graafschap"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "VVV-Venlo",
+        "Wilfred Mugeyi",
+        "Jan Versleijen",
+        "Eelco Schattorie",
+        "1998 J.League Cup final",
+        "Jan van Raalte",
+        "De Graafschap",
+        "Go Ahead Eagles"
+      ]
+    },
+    {
+      "source_id": 2409,
+      "name": "José Antonio Novo\r\nJuan Fidalgo\r\nJuan Fidalgo",
+      "clubs": [
+        "Real Oviedo B"
+      ],
+      "status": "bad_source_name"
+    },
+    {
+      "source_id": 2410,
+      "name": "Los Arcos",
+      "clubs": [
+        "CA Osasuna B"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Los Arcos",
+        "Los Arcos Mall",
+        "Estadio Municipal Los Arcos",
+        "Vilalba dels Arcs",
+        "Los Arcos, Texas",
+        "Los Arcos (Puerto Vallarta)"
+      ],
+      "reason": "club_not_confirmed"
+    },
+    {
+      "source_id": 2424,
+      "name": "Waldo Ramos",
+      "clubs": [
+        "UE Figueres"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "CE Europa",
+        "Kung Fu Kids",
+        "Wowie de Guzman",
+        "Deaths in July 2024",
+        "Waldo Ramos",
+        "Waldo Ramos"
+      ]
+    },
+    {
+      "source_id": 2442,
+      "name": "Néstor Craviotto",
+      "clubs": [
+        "Deportivo Pereira"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "San Martín de San Juan",
+        "Néstor Craviotto",
+        "1994 Supercopa Libertadores finals",
+        "Craviotto",
+        "Dayron Pérez",
+        "1993 Artemio Franchi Cup",
+        "Deportivo Pereira",
+        "Real Cartagena"
+      ]
+    },
+    {
+      "source_id": 2488,
+      "name": "Martelotte",
+      "clubs": [
+        "Santa Cruz"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Santa Cruz Futebol Clube",
+        "Marcelo Martelotte",
+        "Neco (footballer, born 1964)",
+        "2016 Campeonato Brasileiro Série B",
+        "2017 Campeonato Brasileiro Série B",
+        "2021 Campeonato Brasileiro Série C",
+        "Santa Cruz Futebol Clube",
+        "Roberto Fernandes"
+      ]
+    },
+    {
+      "source_id": 2490,
+      "name": "Givanildo Oliveira",
+      "clubs": [
+        "América Mineiro"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Santa Cruz Futebol Clube",
+        "Givanildo Oliveira",
+        "2016 Campeonato Brasileiro Série B",
+        "2017 Campeonato Brasileiro Série B",
+        "List of Sport Club do Recife managers",
+        "2018 Campeonato Paraense finals",
+        "Givanildo Oliveira",
+        "2016 Campeonato Brasileiro Série A"
+      ]
+    },
+    {
+      "source_id": 2692,
+      "name": "Hannes Bongartz",
+      "clubs": [
+        "SG Wattenscheid 09"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Bonn",
+        "Sportfreunde Siegen",
+        "Hans Bongartz",
+        "List of 1. FC Kaiserslautern players",
+        "List of Bundesliga managers",
+        "1986–87 1. FC Kaiserslautern season",
+        "Hans Bongartz"
+      ]
+    },
+    {
+      "source_id": 2726,
+      "name": "Lalo",
+      "clubs": [
+        "CF Palencia"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Édouard Lalo",
+        "Lalo Schifrin",
+        "Lalo language",
+        "Once a Thief and Other Themes",
+        "Mangdi language",
+        "Xuzhang language",
+        "Rubén Baraja",
+        "2024–25 SD Huesca season"
+      ]
+    },
+    {
+      "source_id": 2733,
+      "name": "Ken Fogarty",
+      "clubs": [
+        "Tampa Bay Rowdies"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Minnesota Strikers",
+        "1999 Major League Soccer season",
+        "Ken Fogarty",
+        "1976 American Soccer League",
+        "1993 American Professional Soccer League",
+        "Soccer Bowl '80",
+        "Minnesota Strikers",
+        "Tampa Bay Rowdies (1975–1993)"
+      ]
+    },
+    {
+      "source_id": 2776,
+      "name": "Angelo Orazi ",
+      "clubs": [
+        "Ascoli Calcio"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "List of Palermo FC managers",
+        "Angelo Orazi",
+        "Orazi",
+        "1978–79 US Catanzaro season",
+        "1979–80 US Catanzaro season",
+        "1980–81 US Catanzaro season",
+        "SSD Savoia 1908 FC",
+        "Angelo Orazi"
+      ]
+    },
+    {
+      "source_id": 2804,
+      "name": "Fontana",
+      "clubs": [
+        "Hellas Verona"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Fontana, California",
+        "Trevi Fountain",
+        "Fontana Records",
+        "Tom Fontana",
+        "Fontana dei Quattro Fiumi",
+        "William Collins, Sons",
+        "Hellas Verona FC",
+        "AC Trento 1921"
+      ]
+    },
+    {
+      "source_id": 2841,
+      "name": "Ivan Golac",
+      "clubs": [
+        "Dundee Utd FC"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Ivan Golac",
+        "List of Dundee United F.C. managers",
+        "1993–94 Dundee United F.C. season",
+        "Henrik Jørgensen (footballer)",
+        "1994 Scottish Cup final",
+        "1983–84 Southampton F.C. season",
+        "Dundee United F.C.",
+        "Ivan Golac"
+      ]
+    },
+    {
+      "source_id": 2867,
+      "name": "Hernán Lisi",
+      "clubs": [
+        "Once Caldas"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Academia Deportiva Cantolao",
+        "2011 Torneo Descentralizado",
+        "2017 APF División de Honor",
+        "2018 Categoría Primera A season",
+        "2021 Liga 1 (Peru)",
+        "Hernán Lisi",
+        "Once Caldas",
+        "Deportivo Pereira"
+      ]
+    },
+    {
+      "source_id": 2879,
+      "name": "Patrik Werner",
+      "clubs": [
+        "Degerfors IF"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Degerfors IF",
+        "2009 Division 1 (Swedish football)",
+        "2010 Superettan",
+        "Patrik Werner",
+        "Hampus Zackrisson",
+        "2015 Superettan",
+        "Degerfors IF",
+        "2009 Division 1 (Swedish football)"
+      ]
+    },
+    {
+      "source_id": 2897,
+      "name": "Paco Loidi",
+      "clubs": [
+        "CD Izarra"
+      ],
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 2905,
+      "name": "Cheché Hernández",
+      "clubs": [
+        "Deportes Quindío"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Clive Trotman",
+        "Álvaro Solano",
+        "Cheche Hernández",
+        "List of Atlético Junior managers",
+        "2022 LigaPro Serie A",
+        "2022 Liga DIMAYOR",
+        "Deportivo Cali",
+        "Cheche Hernández"
+      ]
+    },
+    {
+      "source_id": 2924,
+      "name": "Vítor Oliveira",
+      "clubs": [
+        "Gil Vicente FC"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "2003–04 Primeira Liga",
+        "Vítor Oliveira (footballer, born 1953)",
+        "1998 Supertaça Cândido de Oliveira",
+        "1982 Supertaça Cândido de Oliveira",
+        "Vitinha (footballer, born March 2000)",
+        "Vítor Oliveira",
+        "Gil Vicente F.C.",
+        "António Folha"
+      ]
+    },
+    {
+      "source_id": 2928,
+      "name": "Franco Scoglio",
+      "clubs": [
+        "Genoa"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "ACR Messina",
+        "Stadio San Filippo",
+        "Franco Scoglio",
+        "José Perdomo",
+        "Genoa CFC",
+        "Scoglio",
+        "Franco Scoglio",
+        "1989–90 Serie A"
+      ]
+    },
+    {
+      "source_id": 2936,
+      "name": "Palomo",
+      "clubs": [
+        "Almería CF"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Eduardo Palomo",
+        "Colombia at the 1976 Summer Olympics",
+        "Ana Belén Palomo",
+        "Víctor Palomo",
+        "Neon Indian",
+        "Sergio Escudero (footballer, born 1989)",
+        "Spain at the 2004 Summer Olympics",
+        "Antoni Lima"
+      ]
+    },
+    {
+      "source_id": 2947,
+      "name": "Masakatsu Miyamoto",
+      "clubs": [
+        "Kashima Antlers"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Miyamoto (surname)",
+        "Masakatsu Miyamoto",
+        "Masakatsu",
+        "1964 in Japanese football",
+        "1993 Emperor's Cup final",
+        "1938 in Japanese football",
+        "Takashi Sekizuka",
+        "Masakatsu Miyamoto"
+      ]
+    },
+    {
+      "source_id": 2948,
+      "name": "Víctor Púa",
+      "clubs": [
+        "River Plate"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Víctor Púa",
+        "2002 FIFA World Cup Group A",
+        "Football at the 1983 Pan American Games",
+        "1999 Copa América Group C",
+        "Say Yay!",
+        "1997 FIFA Confederations Cup Group B",
+        "Rosario Central",
+        "Víctor Púa"
+      ]
+    },
+    {
+      "source_id": 2965,
+      "name": "Roberto Silva",
+      "clubs": [
+        "Toluca"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Pedro Botelho (footballer, born 1989)",
+        "Roberto Silva Renard",
+        "Roberto Silva (Peruvian footballer)",
+        "Erik (footballer, born 1995)",
+        "Roberto Silva (athlete)",
+        "Roberto Silva",
+        "List of foreign Liga MX players",
+        "1994–95 Toluca FC season"
+      ]
+    },
+    {
+      "source_id": 2970,
+      "name": "José López",
+      "clubs": [
+        "Racing de Ferrol"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "José López Portillo",
+        "Juan José López",
+        "José López-Maeso",
+        "José López Ramírez",
+        "José López Domínguez",
+        "Pablo López (baseball)"
+      ],
+      "reason": "club_not_confirmed"
+    },
+    {
+      "source_id": 2992,
+      "name": "Guy David",
+      "clubs": [
+        "Le Havre AC"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Guy Innes-Ker, 10th Duke of Roxburghe",
+        "The Loneliest Guy",
+        "Benoît David",
+        "Guy David (football)",
+        "Guy David (mathematician)",
+        "Guy David",
+        "Stade Malherbe Caen",
+        "Le Havre AC"
+      ]
+    },
+    {
+      "source_id": 2994,
+      "name": "Fuertes",
+      "clubs": [
+        "CD Mensajero"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Louis Agassiz Fuertes",
+        "Esteban Fuertes",
+        "Fuertes Observatory",
+        "Palmas (music)",
+        "Juanfran (footballer, born 1988)",
+        "Gloria Fuertes"
+      ],
+      "reason": "club_not_confirmed"
+    },
+    {
+      "source_id": 2999,
+      "name": "Voltaire García",
+      "clubs": [
+        "CA Malagueño"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "C.A. Bella Vista",
+        "Juventud de Las Piedras",
+        "List of foreign La Liga players",
+        "UP Diliman University Student Council",
+        "Juan Ramón Tejera",
+        "Ariel Longo"
+      ]
+    },
+    {
+      "source_id": 3003,
+      "name": "Vítor Urbano",
+      "clubs": [
+        "FC Paços de Ferreira"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "S.C. Beira-Mar",
+        "G.D. Chaves",
+        "1993–94 Primeira Divisão",
+        "1995–96 Primeira Divisão",
+        "Rogério Gonçalves",
+        "1991 Taça de Portugal final",
+        "S.C. Beira-Mar",
+        "1990–91 Primeira Divisão"
+      ]
+    },
+    {
+      "source_id": 3005,
+      "name": "Junior",
+      "clubs": [
+        "Flamengo"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Vinícius Júnior",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Vin%C3%ADcius_J%C3%BAnior_Brazil_V_Morocco_13_June_2026-207_%28cropped%29.jpg/250px-Vin%C3%ADcius_J%C3%BAnior_Brazil_V_Morocco_13_June_2026-207_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "pass": "name_only"
+    },
+    {
+      "source_id": 3008,
+      "name": "Gílson Nunes",
+      "clubs": [
+        "Sport Recife"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Clube Náutico Capibaribe",
+        "Goiás Esporte Clube",
+        "Football at the 1983 Pan American Games",
+        "Gílson Nunes",
+        "List of Sport Club do Recife managers",
+        "1964 Campeonato Carioca",
+        "Esporte Clube Bahia",
+        "Clube Náutico Capibaribe"
+      ]
+    },
+    {
+      "source_id": 3009,
+      "name": "Oliveira",
+      "clubs": [
+        "SC Braga"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Bebeto",
+        "Manoel de Oliveira",
+        "Supertaça Cândido de Oliveira",
+        "Charles Oliveira",
+        "UFC Fight Night: Holloway vs. Oliveira",
+        "UFC Fight Night: Lee vs. Oliveira",
+        "S.C. Braga",
+        "João Tomás"
+      ]
+    },
+    {
+      "source_id": 3011,
+      "name": "Ramón Moya",
+      "clubs": [
+        "CE L'Hospitalet"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "CE L'Hospitalet",
+        "RCD Espanyol",
+        "Castellnou de Seana",
+        "Ramón Moya",
+        "33rd Goya Awards",
+        "Andorran Athletics Championships",
+        "CE L'Hospitalet",
+        "Ramón Moya"
+      ]
+    },
+    {
+      "source_id": 3021,
+      "name": "Plaza",
+      "clubs": [
+        "Real Jaén CF"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Cádiz",
+        "Plazas de soberanía",
+        "Town square",
+        "Plaza Hotel",
+        "Aubrey Plaza",
+        "8 January Brasília attacks",
+        "Iván Zarandona",
+        "1960–61 Segunda División"
+      ]
+    },
+    {
+      "source_id": 3027,
+      "name": "Ortuondo",
+      "clubs": [
+        "CF Extremadura"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Josu Ortuondo Larrea",
+        "Astigarraga",
+        "1999 European Parliament election in Spain",
+        "Linares CF",
+        "Ibon Areso",
+        "Josu Ortuondo",
+        "CD Badajoz",
+        "CF Extremadura"
+      ]
+    },
+    {
+      "source_id": 3032,
+      "name": "Gustavo Onaindia",
+      "clubs": [
+        "Unión Magdalena"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "National Premier Soccer League",
+        "CSD Suchitepéquez",
+        "Club Deportivo Universitario",
+        "List of foreign Liga MX players",
+        "2018–19 Liga Panameña de Fútbol",
+        "Carlos Silva (Colombian footballer)",
+        "Carlos Silva (Colombian footballer)"
+      ]
+    },
+    {
+      "source_id": 3045,
+      "name": "Lalo",
+      "clubs": [
+        "CP Ejido"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Édouard Lalo",
+        "Lalo Schifrin",
+        "Lalo language",
+        "Once a Thief and Other Themes",
+        "Mangdi language",
+        "Xuzhang language"
+      ]
+    },
+    {
+      "source_id": 3053,
+      "name": "Gregorio Pçerez",
+      "clubs": [
+        "Deportes Tolima"
+      ],
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 3057,
+      "name": "Giorgio Rumignani",
+      "clubs": [
+        "Pescara"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Delfino Pescara 1936",
+        "Calcio Foggia 1920",
+        "List of Palermo FC managers",
+        "1998–99 Serie B",
+        "Ivan Aiardi",
+        "Giorgio Rumignani",
+        "Delfino Pescara 1936",
+        "AC Monza"
+      ]
+    },
+    {
+      "source_id": 3058,
+      "name": "Jorge Vivaldo",
+      "clubs": [
+        "Atlético Huila"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Club Atlético Villa San Carlos",
+        "Sud América",
+        "Jorge Vivaldo",
+        "Vivaldo",
+        "1998–99 Primera B Nacional",
+        "2017 Categoría Primera A season",
+        "Atlético Huila",
+        "Jorge Vivaldo"
+      ]
+    },
+    {
+      "source_id": 3059,
+      "name": "Ziarreta",
+      "clubs": [
+        "Sestao SC"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "SD Eibar",
+        "2009 Basque regional election",
+        "Eusko Alkartasuna",
+        "Blas Ziarreta",
+        "List of Burgos CF managers"
+      ]
+    },
+    {
+      "source_id": 3067,
+      "name": "Bayona",
+      "clubs": [
+        "CD Tudelano"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "The Orphanage (2007 film)",
+        "J. A. Bayona",
+        "Bayonne Statute",
+        "The Impossible (2012 film)",
+        "Battle of Bayona Islands (1590)",
+        "Jurassic World: Fallen Kingdom",
+        "1982–83 Copa del Rey"
+      ]
+    },
+    {
+      "source_id": 3080,
+      "name": "ten Cate",
+      "clubs": [
+        "ADO Den Haag"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "2004 Men's Hockey Champions Trophy",
+        "2006 Men's Hockey World Cup",
+        "Henk ten Cate",
+        "Caesar ten Cate",
+        "2007 Men's EuroHockey Nations Championship",
+        "2005 Men's EuroHockey Nations Championship"
+      ],
+      "reason": "club_not_confirmed"
+    },
+    {
+      "source_id": 3091,
+      "name": "Procópio Cardoso",
+      "clubs": [
+        "Esporte Bahía"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Copa Master de CONMEBOL",
+        "Procópio Cardoso",
+        "Procopio (disambiguation)",
+        "List of Clube Atlético Mineiro managers",
+        "1992 Copa CONMEBOL finals",
+        "1995 Copa CONMEBOL finals",
+        "Fluminense FC",
+        "Club Athletico Paranaense"
+      ]
+    },
+    {
+      "source_id": 3093,
+      "name": "Pachequinho",
+      "clubs": [
+        "Coritiba"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Coritiba Foot Ball Club",
+        "2015 Campeonato Brasileiro Série A",
+        "2016 Campeonato Brasileiro Série A",
+        "Pachequinho",
+        "2017 Campeonato Brasileiro Série A",
+        "2020 Campeonato Brasileiro Série A",
+        "Coritiba Foot Ball Club",
+        "2015 Campeonato Brasileiro Série A"
+      ]
+    },
+    {
+      "source_id": 3111,
+      "name": "Carlos de los Cobos",
+      "clubs": [
+        "Querétaro"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Carlos de los Cobos",
+        "Álex Erazo",
+        "Primera División de Fútbol Profesional Clausura 2006",
+        "1985 Ciudad de México Cup Tournament",
+        "1985 Azteca 2000 Tournament",
+        "2019 CONCACAF Gold Cup Group C",
+        "Carlos de los Cobos",
+        "Mexico national football team results"
+      ]
+    },
+    {
+      "source_id": 3112,
+      "name": "John Gorman",
+      "clubs": [
+        "Swindon Town FC"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "John Gorman (entertainer)",
+        "John Gorman (footballer)",
+        "John Gorman (politician)",
+        "John Gorman",
+        "John Gorman (radio executive)",
+        "John Gorman (director)",
+        "Swindon Town F.C.",
+        "John Gorman (footballer)"
+      ]
+    },
+    {
+      "source_id": 3169,
+      "name": "Carlos Linaris",
+      "clubs": [
+        "Rampla Juniors"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "C.S. Cartaginés",
+        "Club Atlético River Plate (Montevideo)",
+        "Greek Uruguayans",
+        "List of Panathinaikos F.C. players",
+        "Carlos Linaris",
+        "1993 Copa Interamericana",
+        "Club Atlético River Plate (Montevideo)",
+        "Carlos Linaris"
+      ]
+    },
+    {
+      "source_id": 3172,
+      "name": "Juan Mozo",
+      "clubs": [
+        "Liverpool"
+      ],
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 3173,
+      "name": "Wálter Roque",
+      "clubs": [
+        "Club Atlético Cerro"
+      ],
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 3174,
+      "name": "Víctor Luzardo",
+      "clubs": [
+        "Racing de Montevideo"
+      ],
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 3206,
+      "name": "Tommy Burns",
+      "clubs": [
+        "Kilmarnock FC"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Tommy Burns (Canadian boxer)",
+        "Thomas Burns",
+        "Tommy Burns (footballer)",
+        "Tommy Burns (Australian boxer)",
+        "Tommy Burns (Canadian football)",
+        "Tommy Burns (diver)",
+        "Kilmarnock F.C.",
+        "Tommy Burns (footballer)"
+      ]
+    },
+    {
+      "source_id": 3220,
+      "name": "Enrique Martín",
+      "clubs": [
+        "CA Osasuna"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Quique Martín",
+        "Segunda División Manager of the Month",
+        "Enrique Martín (footballer, born 1956)",
+        "2016 Segunda División play-offs",
+        "Enrique Martín (footballer, born 1950)",
+        "Enrique Martín (disambiguation)",
+        "CA Osasuna",
+        "Pedro María Zabalza"
+      ]
+    },
+    {
+      "source_id": 3223,
+      "name": "Boronat",
+      "clubs": [
+        "CD Badajoz"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "José Camarón Bonanat",
+        "Llacuna station",
+        "Olimpia Boronat",
+        "2014 IIHF World Championship Division II",
+        "2018 IIHF World Championship Division II",
+        "Orlando Gutiérrez-Boronat",
+        "CD Badajoz",
+        "Hennadiy Perepadenko"
+      ]
+    },
+    {
+      "source_id": 3224,
+      "name": "Robi",
+      "clubs": [
+        "Palamós CF"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Rabi Ghosh",
+        "Robi (company)",
+        "Meta Robi",
+        "Robi Domingo",
+        "Draco Rosa",
+        "F.C. Haifa"
+      ]
+    },
+    {
+      "source_id": 3226,
+      "name": "Marchioro",
+      "clubs": [
+        "AC Reggiana"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Rondò Veneziano",
+        "Maria Della Costa",
+        "Giuseppe Marchioro",
+        "Alessandra Marchioro",
+        "Marchioro",
+        "1966 Coppa Italia final",
+        "AC Reggiana 1919",
+        "1993–94 Serie A"
+      ]
+    },
+    {
+      "source_id": 3228,
+      "name": "Marchesi",
+      "clubs": [
+        "US Lecce"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Marquess",
+        "Mathilde Marchesi",
+        "Antinori",
+        "Rino Marchesi",
+        "Gerald Marchesi",
+        "Nomsa Marchesi"
+      ],
+      "reason": "club_not_confirmed"
+    },
+    {
+      "source_id": 3229,
+      "name": "Teixidó",
+      "clubs": [
+        "CD Ourense"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Enrique Gimeno",
+        "Nuria Quevedo",
+        "Water polo at the 2019 World Aquatics Championships – Women's tournament",
+        "Teixidó",
+        "Free (political party)",
+        "Ares Teixidó",
+        "Luis Rodríguez Vaz"
+      ]
+    },
+    {
+      "source_id": 3231,
+      "name": "José Antonio Tejedor",
+      "clubs": [
+        "Real Ávila"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Real Ávila CF",
+        "1965–66 Segunda División",
+        "Deaths in June 2025",
+        "José Antonio Tejedor",
+        "Real Ávila CF",
+        "José Antonio Tejedor"
+      ]
+    },
+    {
+      "source_id": 3232,
+      "name": "Raúl González",
+      "clubs": [
+        "Avilés Industrial"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Raúl González",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/25th_Laureus_World_Sports_Awards_-_Ra%C3%BAl_-_240422_132916-2_%28cropped%29.jpg/250px-25th_Laureus_World_Sports_Awards_-_Ra%C3%BAl_-_240422_132916-2_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "pass": "name_only"
+    },
+    {
+      "source_id": 3233,
+      "name": "Félix",
+      "clubs": [
+        "Arosa SC"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Nadar",
+        "Ramón Arellano Félix",
+        "Tijuana Cartel",
+        "Miguel Ángel Félix Gallardo",
+        "João Félix",
+        "Félix Tshisekedi"
+      ],
+      "reason": "club_not_confirmed"
+    },
+    {
+      "source_id": 3234,
+      "name": "Manolo Chico",
+      "clubs": [
+        "Atlético Tomelloso"
+      ],
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 3237,
+      "name": "Mintegui",
+      "clubs": [
+        "Bermeo Club"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Euskaltel–Euskadi",
+        "Alpine skiing at the 2019 Winter Universiade – Men's super-G",
+        "Alpine skiing at the 2019 Winter Universiade – Men's combined",
+        "FIS Alpine World Ski Championships 2025 – Men's super-G",
+        "2025 Euskaltel–Euskadi season",
+        "Spain at the 2025 Winter World University Games"
+      ]
+    },
+    {
+      "source_id": 3239,
+      "name": "Vicente",
+      "clubs": [
+        "RS Gimnástica T."
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Vicente Fox",
+        "São Vicente, Cape Verde",
+        "Gil Vicente F.C.",
+        "Vicente Fernández",
+        "Vicente del Bosque",
+        "Vicente Calderón Stadium"
+      ],
+      "reason": "club_not_confirmed"
+    },
+    {
+      "source_id": 3240,
+      "name": "Urquiaga",
+      "clubs": [
+        "CD Basconia"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Santiago Urkiaga",
+        "1988 UEFA Cup final",
+        "1983 Supercopa de España",
+        "Anthony Crolla",
+        "Joaquín Urquiaga",
+        "Por todo lo alto",
+        "Santiago Urkiaga",
+        "Athletic Bilbao B"
+      ]
+    },
+    {
+      "source_id": 3241,
+      "name": "Iranzo",
+      "clubs": [
+        "Endesa Andorra"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Duke of Seville",
+        "Enma Iranzo Martín",
+        "Antonio Iranzo",
+        "Álex Millán",
+        "Rubén Iranzo",
+        "Raquel Tamarit"
+      ],
+      "reason": "club_not_confirmed"
+    },
+    {
+      "source_id": 3242,
+      "name": "Tardío",
+      "clubs": [
+        "Utebo FC"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Peru women's national football team",
+        "César Rosales",
+        "Félix Castillo",
+        "Roberto Rojas (Peruvian footballer)",
+        "Blas Tardío de Guzmán",
+        "Virginia Blanco Tardío"
+      ]
+    },
+    {
+      "source_id": 3243,
+      "name": "Segurola",
+      "clubs": [
+        "CD Touring"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "José Ballivián",
+        "Vélez Sársfield (barrio)",
+        "La Voluntad del muerto",
+        "Andrés de Segurola",
+        "The Cardboard Lover",
+        "José María Segurola",
+        "Enrico Caruso",
+        "La fanciulla del West"
+      ]
+    },
+    {
+      "source_id": 3245,
+      "name": "Bonachera",
+      "clubs": [
+        "UDA Gramenet"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Fantastic Four: World's Greatest Heroes",
+        "List of UE Lleida managers",
+        "BBC New Comedy Award",
+        "Paco Bonachera",
+        "2025 Austin FC II season",
+        "Carmen Gil Martinez",
+        "Paco Bonachera"
+      ]
+    },
+    {
+      "source_id": 3246,
+      "name": "Neme",
+      "clubs": [
+        "Yeclano CF"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Mintiu Gherlii",
+        "Aneme Wake language",
+        "Neme language",
+        "Binahari language",
+        "Francis Némé Baïssari",
+        "Rodolfo Neme",
+        "Nemesio Martín"
+      ]
+    },
+    {
+      "source_id": 3247,
+      "name": "Manolo Jiménez",
+      "clubs": [
+        "Benidorm CD"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Manolo Jiménez (footballer, born 1964)",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/ManoloJimenez.jpg/250px-ManoloJimenez.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "pass": "name_only"
+    },
+    {
+      "source_id": 3248,
+      "name": "Xavi Agustí",
+      "clubs": [
+        "FC Andorra"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "FC Andorra",
+        "FC Andorra"
+      ]
+    },
+    {
+      "source_id": 3249,
+      "name": "Eduard Teixeiro",
+      "clubs": [
+        "AEC Manlleu"
+      ],
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 3250,
+      "name": "Manolo",
+      "clubs": [
+        "CE Premià"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Manolo Sanchís",
+        "Manolo Jiménez (footballer, born 1964)",
+        "Manolo Herrero (footballer, born 1970)",
+        "Manolo Díaz",
+        "Manolo Villanova",
+        "Manolo Sanchez (valet)"
+      ],
+      "reason": "club_not_confirmed"
+    },
+    {
+      "source_id": 3251,
+      "name": "Agujitas",
+      "clubs": [
+        "UE Rubí"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Bahía Drake",
+        "Bahía Drake Airport",
+        "Beatriz Zamora"
+      ]
+    },
+    {
+      "source_id": 3252,
+      "name": "Churruca",
+      "clubs": [
+        "PD Santa Eulalia"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Cosme Damián Churruca",
+        "USS Eugene A. Greene",
+        "Churruca-class destroyer (1927)",
+        "Spanish destroyer Lepanto",
+        "Churruca, Argentina",
+        "Churruca-class destroyer (1972)"
+      ]
+    },
+    {
+      "source_id": 3255,
+      "name": "Calvo Marini",
+      "clubs": [
+        "CD Cieza"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "José Manuel Barla"
+      ]
+    },
+    {
+      "source_id": 3256,
+      "name": "Toni Bauzá",
+      "clubs": [
+        "CE Manacor"
+      ],
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 3258,
+      "name": "Pacuco Rosales",
+      "clubs": [
+        "CD Maspalomas"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "UD Las Palmas",
+        "Javier Vidales",
+        "UD Las Palmas"
+      ]
+    },
+    {
+      "source_id": 3259,
+      "name": "Burgueña",
+      "clubs": [
+        "CD Estepona"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "List of transfers of Segunda División – 2005–06 season",
+        "Pablo Sierra (footballer)",
+        "1985–86 Segunda División B",
+        "Pedro Braojos",
+        "Fernando Peralta",
+        "Raúl Procopio",
+        "Raúl Procopio"
+      ]
+    },
+    {
+      "source_id": 3260,
+      "name": "Santiago Martín",
+      "clubs": [
+        "UD Realejos"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Pabellón Insular Santiago Martín",
+        "Santiago Silva (footballer, born 1980)",
+        "CB Canarias",
+        "2017 FIBA Intercontinental Cup",
+        "Santiago Pérez (footballer)",
+        "Santiago Martín Prado"
+      ]
+    },
+    {
+      "source_id": 3261,
+      "name": "Oviedo",
+      "clubs": [
+        "Marmol Macael CD"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Asturias",
+        "Real Oviedo",
+        "Oviedo, Florida",
+        "Oviedo",
+        "University of Oviedo",
+        "Archdiocese of Oviedo"
+      ],
+      "reason": "club_not_confirmed"
+    },
+    {
+      "source_id": 3263,
+      "name": "Mário Reis",
+      "clubs": [
+        "SC Salgueiros"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Mário Reis (singer)",
+        "André Filho",
+        "1997 Supertaça Cândido de Oliveira",
+        "Estudantes",
+        "Mário Reis (footballer)",
+        "Mário Reis",
+        "1992–93 Primeira Divisão",
+        "1994–95 Primeira Divisão"
+      ]
+    },
+    {
+      "source_id": 3293,
+      "name": "Marian Bondrea",
+      "clubs": [
+        "CS Universitatea Craiova"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "List of FC Dinamo București managers",
+        "FC Caracal (2004)",
+        "Foresta Fălticeni",
+        "Marian Bondrea",
+        "1994 Cupa României final",
+        "1993 Cupa României final",
+        "FC U Craiova 1948",
+        "Silviu Lung"
+      ]
+    },
+    {
+      "source_id": 3294,
+      "name": "Carlos Fren",
+      "clubs": [
+        "Deportivo Mandiyú"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Argentinos Juniors",
+        "Ricardo Bochini",
+        "1980 World Champions' Gold Cup squads",
+        "1978 Argentine Primera División",
+        "Carlos Fren",
+        "Kimberley Atlético Club",
+        "Diego Maradona",
+        "Carlos Fren"
+      ]
+    },
+    {
+      "source_id": 3297,
+      "name": "Fernando Areán",
+      "clubs": [
+        "Deportivo Español"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "San Lorenzo de Almagro",
+        "Talleres de Córdoba"
+      ]
+    },
+    {
+      "source_id": 3298,
+      "name": "Gildásio",
+      "clubs": [
+        "Remo"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Osgood–Schlatter disease",
+        "Baiano",
+        "Gil Baiano",
+        "Messias Pereira Donato",
+        "List of Brazil international footballers (6–19 caps)"
+      ]
+    },
+    {
+      "source_id": 3300,
+      "name": "Jorge Gómez",
+      "clubs": [
+        "Toros Hidalgo"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Piedra Roja (festival)",
+        "Gonzalo de Alvarado",
+        "Jorge Gómez (footballer)",
+        "Jorge Gómez (cyclist)",
+        "Jorge Gómez Baillo",
+        "Jorge Gómez",
+        "1997 Copa América squads"
+      ]
+    },
+    {
+      "source_id": 3302,
+      "name": "Silipo",
+      "clubs": [
+        "Cosenza Calcio"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Tony Silipo",
+        "Joe Silipo",
+        "Carlo Silipo",
+        "1996 Ontario New Democratic Party leadership election",
+        "Silipo",
+        "Andrea Silipo",
+        "US Catanzaro 1929",
+        "2019–20 SSD Palermo season"
+      ]
+    },
+    {
+      "source_id": 3304,
+      "name": "Nedo Sonetti",
+      "clubs": [
+        "AC Monza"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Cagliari Calcio",
+        "Nedo Sonetti",
+        "2008–09 Serie B",
+        "Giampaolo Pozzo",
+        "1987 Coppa Italia final",
+        "List of Atalanta BC managers",
+        "Atalanta BC",
+        "AC Monza"
+      ]
+    },
+    {
+      "source_id": 3305,
+      "name": "Perotti",
+      "clubs": [
+        "Fidelis Andria"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Niccolò Perotti",
+        "Diego Perotti",
+        "Perotti",
+        "Giovanni Agostino Perotti",
+        "Pedro Perotti",
+        "Omar Perotti"
+      ],
+      "reason": "club_not_confirmed"
+    },
+    {
+      "source_id": 3306,
+      "name": "Pierluigi Frosio",
+      "clubs": [
+        "US Ravenna"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Pierluigi Frosio",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/1975-76_AC_Perugia_-_Pierluigi_Frosio.jpg/250px-1975-76_AC_Perugia_-_Pierluigi_Frosio.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "pass": "name_only"
+    },
+    {
+      "source_id": 3307,
+      "name": "Giuseppe Papadopulo",
+      "clubs": [
+        "Acireale"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "SSD Città di Acireale 1946",
+        "Giuseppe Papadopulo",
+        "ASD Licata Calcio",
+        "List of SS Lazio managers",
+        "2010–11 Serie B",
+        "Franco Lerda",
+        "SSD Città di Acireale 1946",
+        "Giuseppe Papadopulo"
+      ]
+    },
+    {
+      "source_id": 3308,
+      "name": "Jansen",
+      "clubs": [
+        "RBC Roosendaal"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Famke Janssen",
+        "Floor Jansen",
+        "Larry Jansen",
+        "Kenley Jansen",
+        "Meiji Restoration",
+        "Roeliff Jansen Kill"
+      ],
+      "reason": "club_not_confirmed"
+    },
+    {
+      "source_id": 3309,
+      "name": "van Doorneveld",
+      "clubs": [
+        "HFC Haarlem"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "AZ Alkmaar",
+        "De Graafschap",
+        "Fortuna Sittard",
+        "HFC Haarlem",
+        "Ruud Hesp",
+        "Jan de Jonge",
+        "Fortuna Sittard",
+        "HFC Haarlem"
+      ]
+    },
+    {
+      "source_id": 3312,
+      "name": "Nienhuis",
+      "clubs": [
+        "SC Veendam"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Doug Nienhuis",
+        "Arthur W. Nienhuis",
+        "Kraig Nienhuis",
+        "Leonard Nienhuis",
+        "Bert Nienhuis",
+        "Henk Nienhuis",
+        "SC Veendam",
+        "De Langeleegte"
+      ]
+    },
+    {
+      "source_id": 3313,
+      "name": "Shu Kamo",
+      "clubs": [
+        "Yokohama Flügels"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Umbro Cup",
+        "Shu Kamo",
+        "Gert Engels",
+        "List of J.League managers",
+        "1995 King Fahd Cup Group B",
+        "1993 Emperor's Cup final",
+        "Shu Kamo",
+        "Gert Engels"
+      ]
+    },
+    {
+      "source_id": 3314,
+      "name": "Francesco Oddo",
+      "clubs": [
+        "Modena FC"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Delfino Pescara 1936",
+        "History of US Salernitana 1919",
+        "1996–97 Serie A",
+        "Francesco Oddo",
+        "Franco Colomba",
+        "Ettore Gandini",
+        "AC Reggiana 1919",
+        "1998–99 Serie A"
+      ]
+    },
+    {
+      "source_id": 3315,
+      "name": "Julio César Antúnez",
+      "clubs": [
+        "Bella Vista"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Liverpool F.C. (Montevideo)",
+        "El Tanque Sisley",
+        "Julio César Antúnez",
+        "1982 Liga Deportiva Universitaria de Quito season",
+        "2019 Campeonato Uruguayo Primera División",
+        "Antúnez (name)",
+        "Club Atlético River Plate (Montevideo)",
+        "2011–12 Campeonato Uruguayo Primera División"
+      ]
+    },
+    {
+      "source_id": 3316,
+      "name": "Saúl Rivero",
+      "clubs": [
+        "Progreso"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "Saúl Rivero",
+        "Mario Mayén Meza",
+        "List of C.D. Luis Ángel Firpo managers",
+        "List of Primera División de El Salvador coaches (1926–1998)",
+        "1976 Copa Interamericana",
+        "1986 Wollongong City FC season",
+        "Liga AUF Uruguaya",
+        "Saúl Rivero"
+      ]
+    },
+    {
+      "source_id": 3317,
+      "name": "Osvaldo Giménez",
+      "clubs": [
+        "Huracán Buceo"
+      ],
+      "status": "no_confident_match",
+      "candidates": [
+        "MercadoLibre",
+        "2006 Chinese Super League",
+        "Jin Zhiyang",
+        "Li Gang (footballer)",
+        "Wu Jingui",
+        "Osvaldo Giménez"
+      ]
+    }
+  ]
+}

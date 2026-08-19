@@ -1,0 +1,132 @@
+{
+  "ok": 185,
+  "mismatches": [
+    {
+      "source_id": 72,
+      "name": "Juan José Pizzuti",
+      "title": "Juan José Pizzuti",
+      "manifest_year": 1972,
+      "wikidata_year": 1927
+    },
+    {
+      "source_id": 215,
+      "name": "Miguel Angel Russo",
+      "title": "Miguel Ángel Russo",
+      "manifest_year": 1971,
+      "wikidata_year": 1956
+    },
+    {
+      "source_id": 572,
+      "name": "Hélio dos Anjos",
+      "title": "Hélio dos Anjos",
+      "manifest_year": 1946,
+      "wikidata_year": 1958
+    },
+    {
+      "source_id": 611,
+      "name": "Francis",
+      "title": "Trevor Francis",
+      "manifest_year": 1951,
+      "wikidata_year": 1954
+    },
+    {
+      "source_id": 699,
+      "name": "Miguel Ángel Russo",
+      "title": "Miguel Ángel Russo",
+      "manifest_year": 1971,
+      "wikidata_year": 1956
+    },
+    {
+      "source_id": 904,
+      "name": "van Gaal",
+      "title": "Louis van Gaal",
+      "manifest_year": 1963,
+      "wikidata_year": 1951
+    },
+    {
+      "source_id": 1105,
+      "name": "Jan Reker",
+      "title": "Jan Reker",
+      "manifest_year": 1972,
+      "wikidata_year": 1948
+    },
+    {
+      "source_id": 2493,
+      "name": "Klaus Toppmöller",
+      "title": "Dino Toppmöller",
+      "manifest_year": 1951,
+      "wikidata_year": 1980
+    },
+    {
+      "source_id": 3023,
+      "name": "Blanco",
+      "title": "Kepa Blanco",
+      "manifest_year": 1952,
+      "wikidata_year": 1984
+    },
+    {
+      "source_id": 3092,
+      "name": "Marcelo Cabo",
+      "title": "Marcelo Cabo",
+      "manifest_year": 1966,
+      "wikidata_year": 1948
+    },
+    {
+      "source_id": 3296,
+      "name": "Luis Manuel Blanco",
+      "title": "Luis Manuel Blanco",
+      "manifest_year": 1953,
+      "wikidata_year": 1959
+    },
+    {
+      "source_id": 955,
+      "name": "Antonio Gómez",
+      "title": "Antonio Gómez (footballer, born 1973)",
+      "manifest_year": 1957,
+      "wikidata_year": 1973
+    },
+    {
+      "source_id": 1829,
+      "name": "Moreno",
+      "title": "Alberto Moreno",
+      "manifest_year": 1953,
+      "wikidata_year": 1992
+    },
+    {
+      "source_id": 3005,
+      "name": "Junior",
+      "title": "Vinícius Júnior",
+      "manifest_year": 1954,
+      "wikidata_year": 2000
+    },
+    {
+      "source_id": 3232,
+      "name": "Raúl González",
+      "title": "Raúl González",
+      "manifest_year": 1952,
+      "wikidata_year": 1977
+    },
+    {
+      "source_id": 3247,
+      "name": "Manolo Jiménez",
+      "title": "Manolo Jiménez (footballer, born 1964)",
+      "manifest_year": 1960,
+      "wikidata_year": 1964
+    },
+    {
+      "source_id": 3306,
+      "name": "Pierluigi Frosio",
+      "title": "Pierluigi Frosio",
+      "manifest_year": 1942,
+      "wikidata_year": 1948
+    }
+  ],
+  "unverifiable": [
+    {
+      "source_id": 1159,
+      "title": "Sergio Silva (Uruguayan footballer)",
+      "manifest_year": 1943,
+      "wikidata_year": null
+    }
+  ]
+}

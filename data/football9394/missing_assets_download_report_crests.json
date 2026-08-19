@@ -1,0 +1,564 @@
+{
+  "generated_at": "2026-08-19T12:24:55.567698+00:00",
+  "manifest": "data\\football9394\\missing_assets_1993_94.json",
+  "network_policy": "best_effort_resumable",
+  "processed": 54,
+  "downloaded": 0,
+  "generated": 30,
+  "skipped_existing": 0,
+  "failed": 24,
+  "rows": [
+    {
+      "asset_type": "club_crest",
+      "source_id": 9400003,
+      "name": "Otros-Países Bajos",
+      "destination": "frontend\\public\\historical9394\\clubs\\9400003.gif",
+      "status": "generated",
+      "source": "game_synthetic_crest"
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9400013,
+      "name": "Otros-Arabia Saudí",
+      "destination": "frontend\\public\\historical9394\\clubs\\9400013.gif",
+      "status": "generated",
+      "source": "game_synthetic_crest"
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9400014,
+      "name": "Otros-Argelia",
+      "destination": "frontend\\public\\historical9394\\clubs\\9400014.gif",
+      "status": "generated",
+      "source": "game_synthetic_crest"
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9400015,
+      "name": "Otros-Australia",
+      "destination": "frontend\\public\\historical9394\\clubs\\9400015.gif",
+      "status": "generated",
+      "source": "game_synthetic_crest"
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9400017,
+      "name": "Otros-Bélgica",
+      "destination": "frontend\\public\\historical9394\\clubs\\9400017.gif",
+      "status": "generated",
+      "source": "game_synthetic_crest"
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9400019,
+      "name": "Otros-Bolivia",
+      "destination": "frontend\\public\\historical9394\\clubs\\9400019.gif",
+      "status": "generated",
+      "source": "game_synthetic_crest"
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9400021,
+      "name": "Otros-Bulgaria",
+      "destination": "frontend\\public\\historical9394\\clubs\\9400021.gif",
+      "status": "generated",
+      "source": "game_synthetic_crest"
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9400023,
+      "name": "Otros-Chile",
+      "destination": "frontend\\public\\historical9394\\clubs\\9400023.gif",
+      "status": "generated",
+      "source": "game_synthetic_crest"
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9400026,
+      "name": "Otros-Colombia",
+      "destination": "frontend\\public\\historical9394\\clubs\\9400026.gif",
+      "status": "generated",
+      "source": "game_synthetic_crest"
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9400028,
+      "name": "Otros-Corea del Sur",
+      "destination": "frontend\\public\\historical9394\\clubs\\9400028.gif",
+      "status": "generated",
+      "source": "game_synthetic_crest"
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9400036,
+      "name": "Otros-Eslovaquia",
+      "destination": "frontend\\public\\historical9394\\clubs\\9400036.gif",
+      "status": "generated",
+      "source": "game_synthetic_crest"
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9400038,
+      "name": "Otros-Estados Unidos",
+      "destination": "frontend\\public\\historical9394\\clubs\\9400038.gif",
+      "status": "generated",
+      "source": "game_synthetic_crest"
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9400040,
+      "name": "Otros-Rusia",
+      "destination": "frontend\\public\\historical9394\\clubs\\9400040.gif",
+      "status": "generated",
+      "source": "game_synthetic_crest"
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9400041,
+      "name": "Otros-Finlandia",
+      "destination": "frontend\\public\\historical9394\\clubs\\9400041.gif",
+      "status": "generated",
+      "source": "game_synthetic_crest"
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9400042,
+      "name": "Otros-Ghana",
+      "destination": "frontend\\public\\historical9394\\clubs\\9400042.gif",
+      "status": "generated",
+      "source": "game_synthetic_crest"
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9400044,
+      "name": "Otros-Irlanda del Norte",
+      "destination": "frontend\\public\\historical9394\\clubs\\9400044.gif",
+      "status": "generated",
+      "source": "game_synthetic_crest"
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9400046,
+      "name": "Otros-Irlanda",
+      "destination": "frontend\\public\\historical9394\\clubs\\9400046.gif",
+      "status": "generated",
+      "source": "game_synthetic_crest"
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9400047,
+      "name": "Otros-Grecia",
+      "destination": "frontend\\public\\historical9394\\clubs\\9400047.gif",
+      "status": "generated",
+      "source": "game_synthetic_crest"
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9400056,
+      "name": "Otros-Marruecos",
+      "destination": "frontend\\public\\historical9394\\clubs\\9400056.gif",
+      "status": "generated",
+      "source": "game_synthetic_crest"
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9400059,
+      "name": "Otros-Nigeria",
+      "destination": "frontend\\public\\historical9394\\clubs\\9400059.gif",
+      "status": "generated",
+      "source": "game_synthetic_crest"
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9400060,
+      "name": "Otros-Noruega",
+      "destination": "frontend\\public\\historical9394\\clubs\\9400060.gif",
+      "status": "generated",
+      "source": "game_synthetic_crest"
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9400063,
+      "name": "Otros-Argentina",
+      "destination": "frontend\\public\\historical9394\\clubs\\9400063.gif",
+      "status": "generated",
+      "source": "game_synthetic_crest"
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9400066,
+      "name": "Otros-Camerún",
+      "destination": "frontend\\public\\historical9394\\clubs\\9400066.gif",
+      "status": "generated",
+      "source": "game_synthetic_crest"
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9400068,
+      "name": "Otros-Paraguay",
+      "destination": "frontend\\public\\historical9394\\clubs\\9400068.gif",
+      "status": "generated",
+      "source": "game_synthetic_crest"
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9400072,
+      "name": "Otros-Rumanía",
+      "destination": "frontend\\public\\historical9394\\clubs\\9400072.gif",
+      "status": "generated",
+      "source": "game_synthetic_crest"
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9400075,
+      "name": "Otros-Yugoslavia",
+      "destination": "frontend\\public\\historical9394\\clubs\\9400075.gif",
+      "status": "generated",
+      "source": "game_synthetic_crest"
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9400079,
+      "name": "Otros-Suecia",
+      "destination": "frontend\\public\\historical9394\\clubs\\9400079.gif",
+      "status": "generated",
+      "source": "game_synthetic_crest"
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9400080,
+      "name": "Otros-Suiza",
+      "destination": "frontend\\public\\historical9394\\clubs\\9400080.gif",
+      "status": "generated",
+      "source": "game_synthetic_crest"
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9400084,
+      "name": "Otros-Turquía",
+      "destination": "frontend\\public\\historical9394\\clubs\\9400084.gif",
+      "status": "generated",
+      "source": "game_synthetic_crest"
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9400093,
+      "name": "Otros-Hungría",
+      "destination": "frontend\\public\\historical9394\\clubs\\9400093.gif",
+      "status": "generated",
+      "source": "game_synthetic_crest"
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9315005,
+      "name": "Spartak Vladikavkaz",
+      "destination": "frontend\\public\\historical9394\\clubs\\9315005.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9315006,
+      "name": "Uralmash",
+      "destination": "frontend\\public\\historical9394\\clubs\\9315006.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9315008,
+      "name": "KAMAZ",
+      "destination": "frontend\\public\\historical9394\\clubs\\9315008.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9315009,
+      "name": "Zhemchuzhina Sochi",
+      "destination": "frontend\\public\\historical9394\\clubs\\9315009.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9315010,
+      "name": "Dynamo Stavropol",
+      "destination": "frontend\\public\\historical9394\\clubs\\9315010.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9315011,
+      "name": "Lokomotiv Nizhny Novgorod",
+      "destination": "frontend\\public\\historical9394\\clubs\\9315011.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9315012,
+      "name": "Krylia Sovetov",
+      "destination": "frontend\\public\\historical9394\\clubs\\9315012.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9315013,
+      "name": "Luch Vladivostok",
+      "destination": "frontend\\public\\historical9394\\clubs\\9315013.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9315014,
+      "name": "Okean Nakhodka",
+      "destination": "frontend\\public\\historical9394\\clubs\\9315014.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9315015,
+      "name": "Rostselmash",
+      "destination": "frontend\\public\\historical9394\\clubs\\9315015.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9315016,
+      "name": "Asmaral Moskva",
+      "destination": "frontend\\public\\historical9394\\clubs\\9315016.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9347001,
+      "name": "AEK Athinon",
+      "destination": "frontend\\public\\historical9394\\clubs\\9347001.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9347005,
+      "name": "PAOK Thessalonikis",
+      "destination": "frontend\\public\\historical9394\\clubs\\9347005.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9347007,
+      "name": "OFI Irakliou",
+      "destination": "frontend\\public\\historical9394\\clubs\\9347007.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9347008,
+      "name": "Skoda Xanthi",
+      "destination": "frontend\\public\\historical9394\\clubs\\9347008.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9347010,
+      "name": "AE Larisa",
+      "destination": "frontend\\public\\historical9394\\clubs\\9347010.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9347011,
+      "name": "Levadiakos",
+      "destination": "frontend\\public\\historical9394\\clubs\\9347011.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9347012,
+      "name": "Athinaikos",
+      "destination": "frontend\\public\\historical9394\\clubs\\9347012.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9347013,
+      "name": "Apollon Athinas",
+      "destination": "frontend\\public\\historical9394\\clubs\\9347013.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9347014,
+      "name": "Edessaikos",
+      "destination": "frontend\\public\\historical9394\\clubs\\9347014.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9347015,
+      "name": "Doxa Dramas",
+      "destination": "frontend\\public\\historical9394\\clubs\\9347015.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9347016,
+      "name": "Panachaiki",
+      "destination": "frontend\\public\\historical9394\\clubs\\9347016.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9347017,
+      "name": "Apollon Kalamarias",
+      "destination": "frontend\\public\\historical9394\\clubs\\9347017.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9347018,
+      "name": "Naousa",
+      "destination": "frontend\\public\\historical9394\\clubs\\9347018.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    }
+  ]
+}

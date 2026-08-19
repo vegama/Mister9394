@@ -80,7 +80,7 @@ const fitReasons = computed(() => tacticalFit.value.reasons || [])
 const bodySummary = computed(() => [p.value.age!=null?`${p.value.age} años`:null,p.value.height_cm?`${Math.round(p.value.height_cm)} cm`:null,p.value.weight_kg?`${Math.round(p.value.weight_kg)} kg`:null,p.value.preferred_foot?`Pie ${String(p.value.preferred_foot).toLowerCase()}`:null].filter(Boolean).join(' · '))
 const pitchStyle = profile => {
   const slot=String(profile?.squad_slot||'').toUpperCase()
-  const map={GK:[50,88],RB:[84,69],LB:[16,69],CB:[50,68],DM:[50,55],CM:[50,45],RM:[84,43],LM:[16,43],AM:[50,31],RW:[82,20],LW:[18,20],ST:[50,13]}
+  const map={GK:[50,89],RB:[84,76],LB:[16,76],CB:[50,75],DM:[50,58],CM:[50,45],RM:[84,43],LM:[16,43],AM:[50,31],RW:[82,20],LW:[18,20],ST:[50,13]}
   const [left,top]=map[slot]||[50,45]
   let dx=0
   if(slot==='CB') dx=(Number(profile.source_id||0)%3-1)*18

@@ -208,6 +208,11 @@ function standingsFromState(rows){
  return rows.map(r=>[r.team_name,r.played,r.wins,r.draws,r.losses,r.goals_for,r.goals_against,r.points,r.team_id])
 }
 function applyCareerState(state){
+ // Compact endpoints (live/start, live/advance, live/substitution…) deliberately
+ // omit the career snapshot to keep the match loop light — see the v115
+ // performance contract. Those responses are still valid, so treat a missing
+ // state as "nothing to refresh" instead of throwing and aborting the caller.
+ if(!state)return
  if(state.career_id)setCareerId(state.career_id)
  if(state.game_date)gameDate.value=state.game_date
  if(state.season)careerSeason.value=state.season
@@ -485,6 +490,11 @@ async function applyPlanNeed(need){
 async function autoSelectLineup(){
  if(!careerId.value)return
  try{const result=await football9394Api.updateCareerSelection(careerId.value,{autoSelect:true});applyCareerState(result.career);flash('Mejor convocatoria disponible seleccionada: 11 + 5.')}catch(error){flash(`No se pudo seleccionar el once: ${error.message}`)}
+}
+async function autoSelectForCurrentTactics(){
+ if(!careerId.value)return
+ try{const tacticsResult=await football9394Api.updateCareerTactics(careerId.value,currentTactics());applyCareerState(tacticsResult.career)}catch(error){flash(`No se pudo guardar la táctica: ${error.message}`);return}
+ await autoSelectLineup()
 }
 function playerNameById(id){const own=squad.value.find(p=>Number(p.id)===Number(id));if(own)return own.name;const target=targets.value.find(p=>Number(p[5])===Number(id));return target?.[0]||`Jugador #${id}`}
 async function openDecision(decision){
@@ -883,6 +893,7 @@ onMounted(loadHistoricalCareer)
       :briefing="matchBriefing"
       :players="lineupDraftPlayers"
       :bench-players="benchDraftPlayers"
+      :squad="squad"
       :lineup-draft="lineupDraft"
       :bench-draft="benchDraft"
       :live="Boolean(liveMatch)"
@@ -909,6 +920,10 @@ onMounted(loadHistoricalCareer)
       @set-piece-taker="setSetPieceTaker"
       @replace-starter="replaceStarterFromDrag"
       @replace-bench="replaceBenchFromDrag"
+      @toggle-starter="toggleStarter"
+      @toggle-bench="toggleBench"
+      @auto-select="autoSelectForCurrentTactics"
+      @save-selection="saveSelection"
       @apply-live="applyLiveTactics"
       @open-squad="cancelPreviewAndNavigate('squad')"
       @start-live="startLive"

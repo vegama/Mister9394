@@ -1,0 +1,4886 @@
+{
+  "total": 425,
+  "skipped_existing": 0,
+  "matched": 180,
+  "downloaded": 180,
+  "unresolved": 245,
+  "rows": [
+    {
+      "source_id": 7,
+      "name": "Jupp Heynckes",
+      "clubs": [
+        "Athletic Club"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Jupp Heynckes",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Jupp_Heynckes_2013-01-04_%28cropped%29.jpg/250px-Jupp_Heynckes_2013-01-04_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 9,
+      "name": "Juande Ramos",
+      "clubs": [
+        "CD Alcoyano"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Juande Ramos",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Juande_Ramos-ua.jpeg/250px-Juande_Ramos-ua.jpeg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 17,
+      "name": "Camacho",
+      "clubs": [
+        "RCD Espanyol"
+      ],
+      "status": "matched",
+      "wikipedia_title": "José Antonio Camacho",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Jose_Antonio_Camacho.jpg/250px-Jose_Antonio_Camacho.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 18,
+      "name": "Koldo Aguirre",
+      "clubs": [
+        "Bilbao Athletic"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Koldo Aguirre",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Aguirre_%28Athletic%29.jpg/250px-Aguirre_%28Athletic%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 24,
+      "name": "Nando Yosu",
+      "clubs": [
+        "Granada CF"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Nando Yosu\" Granada CF football manager",
+      "candidates": [
+        "Gustavo Benítez (footballer, born 1953)",
+        "Lucas Alcaraz",
+        "Nando Yosu"
+      ]
+    },
+    {
+      "source_id": 29,
+      "name": "Otto Rehhagel",
+      "clubs": [
+        "SV Werder Bremen",
+        "Casino Salzburg"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Otto Rehhagel",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Otto_Rehhagel_01-2.jpg/250px-Otto_Rehhagel_01-2.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 32,
+      "name": "Araquistain",
+      "clubs": [
+        "SD Eibar"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Araquistain\" SD Eibar football manager",
+      "candidates": [
+        "SD Eibar",
+        "Basque derby",
+        "José María Araquistain"
+      ]
+    },
+    {
+      "source_id": 36,
+      "name": "José Enrique Díaz",
+      "clubs": [
+        "Levante UD"
+      ],
+      "status": "no_confident_match",
+      "query": "\"José Enrique Díaz\" Levante UD football manager",
+      "candidates": [
+        "Levante UD",
+        "Joaquín Caparrós",
+        "José Enrique Díaz"
+      ]
+    },
+    {
+      "source_id": 40,
+      "name": "Artur Jorge",
+      "clubs": [
+        "PSG"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Artur Jorge (footballer, born 1946)",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Artur_Jorge_-_Schiphol.jpg/250px-Artur_Jorge_-_Schiphol.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 43,
+      "name": "González Camacho",
+      "clubs": [
+        "San Roque"
+      ],
+      "status": "no_search_results",
+      "query": "\"González Camacho\" San Roque football manager"
+    },
+    {
+      "source_id": 44,
+      "name": "Keegan",
+      "clubs": [
+        "Newcastle United FC"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Kevin Keegan",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Kevin_keegan_panini_card_%28cropped%29.jpg/250px-Kevin_keegan_panini_card_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 47,
+      "name": "Brian Hortorn",
+      "clubs": [
+        "Manchester City FC"
+      ],
+      "status": "no_search_results",
+      "query": "\"Brian Hortorn\" Manchester City FC football manager"
+    },
+    {
+      "source_id": 61,
+      "name": "D'Alessandro",
+      "clubs": [
+        "Atlético Madrid"
+      ],
+      "status": "no_confident_match",
+      "query": "\"D'Alessandro\" Atlético Madrid football manager",
+      "candidates": [
+        "List of Atlético Madrid managers",
+        "Jorge D'Alessandro",
+        "2016 Club Atlético River Plate season"
+      ]
+    },
+    {
+      "source_id": 66,
+      "name": "Óscar Cavallero",
+      "clubs": [
+        "Banfield"
+      ],
+      "status": "no_search_results",
+      "query": "\"Óscar Cavallero\" Banfield football manager"
+    },
+    {
+      "source_id": 69,
+      "name": "Hugo Hernández",
+      "clubs": [
+        "Monterrey"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Hugo Hernández\" Monterrey football manager",
+      "candidates": [
+        "C.F. Monterrey",
+        "2011–12 C.D. Guadalajara season",
+        "2012–13 Puebla F.C. season"
+      ]
+    },
+    {
+      "source_id": 72,
+      "name": "Juan José Pizzuti",
+      "clubs": [
+        "Racing Club"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Juan José Pizzuti",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Pizzutti_1961.jpeg/250px-Pizzutti_1961.jpeg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 74,
+      "name": "Luis Zubeldia",
+      "clubs": [
+        "Independiente Medellín"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Luis Zubeldía",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Luis_Zubeldia_final_primera_etapa_%28cropped%29.jpg/250px-Luis_Zubeldia_final_primera_etapa_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 82,
+      "name": "Souness",
+      "clubs": [
+        "Liverpool FC"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Graeme Souness",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Souness_%28retouched%29.jpg/250px-Souness_%28retouched%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 87,
+      "name": "Bernd Krauss",
+      "clubs": [
+        "Borussia Mönchengladbach"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Bernd Krauss\" Borussia Mönchengladbach football manager",
+      "candidates": [
+        "Bernd Krauss",
+        "1995 DFB-Pokal final",
+        "1995 DFB-Supercup"
+      ]
+    },
+    {
+      "source_id": 97,
+      "name": "Ian Branfoot",
+      "clubs": [
+        "Southampton FC"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Ian Branfoot\" Southampton FC football manager",
+      "candidates": [
+        "Ian Branfoot",
+        "1993–94 Southampton F.C. season",
+        "1992 Full Members' Cup final"
+      ]
+    },
+    {
+      "source_id": 98,
+      "name": "Patrice Bergues",
+      "clubs": [
+        "RC Lens"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Patrice Bergues\" RC Lens football manager",
+      "candidates": [
+        "RC Lens",
+        "Patrice Bergues"
+      ]
+    },
+    {
+      "source_id": 99,
+      "name": "Marc Bourrier",
+      "clubs": [
+        "Olympique Marseille"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Marc Bourrier\" Olympique Marseille football manager",
+      "candidates": [
+        "List of Olympique de Marseille managers and presidents",
+        "Marc Bourrier",
+        "Deaths in August 2024"
+      ]
+    },
+    {
+      "source_id": 127,
+      "name": "Atkinson",
+      "clubs": [
+        "Aston Villa FC"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Ron Atkinson",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Atkinson%2C_Ron.jpg/250px-Atkinson%2C_Ron.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 135,
+      "name": "Valdinoci",
+      "clubs": [
+        "Atalanta"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Valdinoci\" Atalanta football manager",
+      "candidates": [
+        "Atalanta BC",
+        "Como 1907",
+        "List of Atalanta BC managers"
+      ]
+    },
+    {
+      "source_id": 136,
+      "name": "Carlo Mazzone",
+      "clubs": [
+        "AS Roma"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Carlo Mazzone",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Serie_C_1967-68_-_Carlo_Mazzone.jpg/250px-Serie_C_1967-68_-_Carlo_Mazzone.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 139,
+      "name": "Ferguson",
+      "clubs": [
+        "Manchester United FC"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Ferguson\" Manchester United FC football manager",
+      "candidates": [
+        "Manchester United F.C.",
+        "1989–90 Manchester United F.C. season",
+        "1986–87 Manchester United F.C. season"
+      ]
+    },
+    {
+      "source_id": 143,
+      "name": "Adriano Fedele",
+      "clubs": [
+        "Udinese"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Adriano Fedele",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Adriano_Fedele_-_Inter_FC_1974-75.jpg/250px-Adriano_Fedele_-_Inter_FC_1974-75.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 144,
+      "name": "Eriksson",
+      "clubs": [
+        "UC Sampdoria"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Eriksson\" UC Sampdoria football manager",
+      "candidates": [
+        "1994 Supercoppa Italiana",
+        "1986 Coppa Italia final",
+        "1994 Coppa Italia final"
+      ]
+    },
+    {
+      "source_id": 150,
+      "name": "Trapattoni",
+      "clubs": [
+        "Juventus FC"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Giovanni Trapattoni",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/FIFA_WC-qualification_2014_-_Austria_vs_Ireland_2013-09-10_-_Giovanni_Trapattoni_03_%28cropped%29.JPG/250px-FIFA_WC-qualification_2014_-_Austria_vs_Ireland_2013-09-10_-_Giovanni_Trapattoni_03_%28cropped%29.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 156,
+      "name": "Hendriks",
+      "clubs": [
+        "FC Zwolle"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Hendriks\" FC Zwolle football manager",
+      "candidates": [
+        "PEC Zwolle",
+        "List of PEC Zwolle seasons",
+        "2014–15 Jong Ajax season"
+      ]
+    },
+    {
+      "source_id": 158,
+      "name": "Howard Kendall",
+      "clubs": [
+        "Everton FC"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Howard Kendall\" Everton FC football manager",
+      "candidates": [
+        "Howard Kendall",
+        "List of Everton F.C. managers",
+        "1970 FA Charity Shield"
+      ]
+    },
+    {
+      "source_id": 168,
+      "name": "Ronald Spelbos",
+      "clubs": [
+        "NAC Breda"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Ronald Spelbos",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Ajax_tegen_AZ_%2767_3-2%2C_Ajax_kampioen_Kieft_in_duel_met_Spelbos%2C_Bestanddeelnr_932-1616.jpg/250px-Ajax_tegen_AZ_%2767_3-2%2C_Ajax_kampioen_Kieft_in_duel_met_Spelbos%2C_Bestanddeelnr_932-1616.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 169,
+      "name": "Francis",
+      "clubs": [
+        "Sheffield Wednesday FC"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Trevor Francis",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Nottingham_Forest_FC_%28Amsterdam%2C_1980%29_-_Trevor_Francis.jpg/250px-Nottingham_Forest_FC_%28Amsterdam%2C_1980%29_-_Trevor_Francis.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 171,
+      "name": "Queiroz",
+      "clubs": [
+        "Sporting Lisboa"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Queiroz\" Sporting Lisboa football manager",
+      "candidates": [
+        "Sporting CP",
+        "Technical University of Lisbon",
+        "José Peseiro"
+      ]
+    },
+    {
+      "source_id": 174,
+      "name": "Raul Águas",
+      "clubs": [
+        "Vitoria Setúbal FC"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Raul Águas\" Vitoria Setúbal FC football manager",
+      "candidates": [
+        "1990–91 Primeira Divisão",
+        "Raul Águas",
+        "1970–71 S.L. Benfica season"
+      ]
+    },
+    {
+      "source_id": 179,
+      "name": "João Alves",
+      "clubs": [
+        "CF Estrela Amadora"
+      ],
+      "status": "no_confident_match",
+      "query": "\"João Alves\" CF Estrela Amadora football manager",
+      "candidates": [
+        "1990–91 Primeira Divisão",
+        "João Alves (footballer, born 1952)",
+        "1990 Taça de Portugal final"
+      ]
+    },
+    {
+      "source_id": 185,
+      "name": "Franz Beckenbauer",
+      "clubs": [
+        "FC Bayern München"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Franz Beckenbauer",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Franz_Beckenbauer_%281975%29.jpg/250px-Franz_Beckenbauer_%281975%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 186,
+      "name": "George Graham",
+      "clubs": [
+        "Arsenal FC"
+      ],
+      "status": "no_confident_match",
+      "query": "\"George Graham\" Arsenal FC football manager",
+      "candidates": [
+        "1973–74 Arsenal F.C. season",
+        "1967–68 Arsenal F.C. season",
+        "1966–67 Arsenal F.C. season"
+      ]
+    },
+    {
+      "source_id": 192,
+      "name": "Ardiles",
+      "clubs": [
+        "Tottenham Hotspur FC"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Osvaldo Ardiles",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Osvaldo_Ardiles_%281981%29.jpg/250px-Osvaldo_Ardiles_%281981%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 193,
+      "name": "Radomir Antić",
+      "clubs": [
+        "Real Oviedo"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Radomir Antić",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Radomir_Anti%C4%87.jpg/250px-Radomir_Anti%C4%87.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 200,
+      "name": "John Lyall",
+      "clubs": [
+        "Ipswich Town FC"
+      ],
+      "status": "no_confident_match",
+      "query": "\"John Lyall\" Ipswich Town FC football manager",
+      "candidates": [
+        "Ipswich Town F.C.",
+        "Ipswich Town F.C. Hall of Fame",
+        "1994–95 Ipswich Town F.C. season"
+      ]
+    },
+    {
+      "source_id": 206,
+      "name": "Juan Ahuntchain",
+      "clubs": [
+        "Defensor Sporting"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Juan Ahuntchain\" Defensor Sporting football manager",
+      "candidates": [
+        "Liga AUF Uruguaya"
+      ]
+    },
+    {
+      "source_id": 215,
+      "name": "Miguel Angel Russo",
+      "clubs": [
+        "Lanús"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Miguel Ángel Russo",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Miguel_russo_joven_estudiantes.jpg/250px-Miguel_russo_joven_estudiantes.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 216,
+      "name": "Carlos Bianchi",
+      "clubs": [
+        "Vélez Sarsfield"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Carlos Bianchi",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Bianchi_velez.jpg/250px-Bianchi_velez.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 230,
+      "name": "Moré",
+      "clubs": [
+        "Real Valladolid"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Moré\" Real Valladolid football manager",
+      "candidates": [
+        "Real Valladolid",
+        "Pepe Moré",
+        "2002–03 Real Valladolid season"
+      ]
+    },
+    {
+      "source_id": 234,
+      "name": "John Toshack",
+      "clubs": [
+        "Real Sociedad"
+      ],
+      "status": "matched",
+      "wikipedia_title": "John Toshack",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/John_Toshack_managing_Tractor_Sazi_%28cropped%29.jpg/250px-John_Toshack_managing_Tractor_Sazi_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 242,
+      "name": "Hector Salva",
+      "clubs": [
+        "Nacional de Montevideo"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Hector Salva\" Nacional de Montevideo football manager",
+      "candidates": [
+        "Club Nacional de Football",
+        "Héctor Salvá",
+        "1957 Copa Aldao"
+      ]
+    },
+    {
+      "source_id": 279,
+      "name": "Gonzalo Hurtado",
+      "clubs": [
+        "CD Toledo"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Gonzalo Hurtado\" CD Toledo football manager",
+      "candidates": [
+        "CD Toledo",
+        "Gonzalo Hurtado"
+      ]
+    },
+    {
+      "source_id": 285,
+      "name": "Héctor Veira",
+      "clubs": [
+        "San Lorenzo"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Héctor Veira",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Bambino_veira_banfield.jpg/250px-Bambino_veira_banfield.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 320,
+      "name": "Wim Rijsbergen",
+      "clubs": [
+        "FC Volendam"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Wim Rijsbergen",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Wim_Rijsbergen_1978c.jpg/250px-Wim_Rijsbergen_1978c.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 352,
+      "name": "Dalglish",
+      "clubs": [
+        "Blackburn Rovers FC"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Kenny Dalglish",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Kenny_Dalglish_2009_Singapore.jpg/250px-Kenny_Dalglish_2009_Singapore.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 359,
+      "name": "Tommy McLean",
+      "clubs": [
+        "Motherwell FC"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Tommy McLean\" Motherwell FC football manager",
+      "candidates": [
+        "Fir Park",
+        "Tommy McLean",
+        "1996–97 Scottish Premier Division"
+      ]
+    },
+    {
+      "source_id": 361,
+      "name": "Willie Miller",
+      "clubs": [
+        "Aberdeen FC"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Willie Miller\" Aberdeen FC football manager",
+      "candidates": [
+        "Aberdeen F.C.",
+        "Jimmy Bonthrone",
+        "1978 Scottish Cup final"
+      ]
+    },
+    {
+      "source_id": 369,
+      "name": "Levir Culpi",
+      "clubs": [
+        "Paraná"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Levir Culpi",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Levir_Culpi%2C_t%C3%A9cnico_do_Santos_%2835440684520%29_%28cropped%29.jpg/250px-Levir_Culpi%2C_t%C3%A9cnico_do_Santos_%2835440684520%29_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 403,
+      "name": "Silvester Takac",
+      "clubs": [
+        "FC Sochaux-Montbéliard"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Silvester Takač",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/8/82/Silvester_Takac_fodbaler.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+    },
+    {
+      "source_id": 516,
+      "name": "Friedel Rausch",
+      "clubs": [
+        "1. FC Kaiserslautern"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Friedel Rausch",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Friedel_Rausch_%281979%29.jpg/250px-Friedel_Rausch_%281979%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 518,
+      "name": "Bagnoli",
+      "clubs": [
+        "FC Internazionale"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Bagnoli\" FC Internazionale football manager",
+      "candidates": [
+        "Roberto Tricella",
+        "List of Inter Milan managers",
+        "1984–85 Hellas Verona season"
+      ]
+    },
+    {
+      "source_id": 520,
+      "name": "Iñaki Sáez",
+      "clubs": [
+        "UD Las Palmas"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Iñaki Sáez\" UD Las Palmas football manager",
+      "candidates": [
+        "UD Las Palmas",
+        "Iñaki Sáez"
+      ]
+    },
+    {
+      "source_id": 522,
+      "name": "Sigfried Held",
+      "clubs": [
+        "SG Dynamo Dresden"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Sigfried Held\" SG Dynamo Dresden football manager",
+      "candidates": [
+        "Dynamo Dresden",
+        "Olaf Marschall",
+        "1993–94 Dynamo Dresden season"
+      ]
+    },
+    {
+      "source_id": 542,
+      "name": "Francisco Ríos",
+      "clubs": [
+        "Leones Negros"
+      ],
+      "status": "no_search_results",
+      "query": "\"Francisco Ríos\" Leones Negros football manager"
+    },
+    {
+      "source_id": 560,
+      "name": "Johan Cruyff",
+      "clubs": [
+        "FC Barcelona"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Johan Cruyff",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Johan_Cruijff_%281974%29.jpg/250px-Johan_Cruijff_%281974%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 564,
+      "name": "Antônio Lopes",
+      "clubs": [
+        "Santos"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Antônio Lopes\" Santos football manager",
+      "candidates": [
+        "Antônio Lopes",
+        "2005 Copa Libertadores finals",
+        "Júnior Lopes"
+      ]
+    },
+    {
+      "source_id": 567,
+      "name": "Carlos Alberto Silva",
+      "clubs": [
+        "Cruzeiro"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Carlos Alberto Silva\" Cruzeiro football manager",
+      "candidates": [
+        "Carlos Alberto Silva",
+        "1988 Supercopa Libertadores finals",
+        "1993 Recopa Sudamericana"
+      ]
+    },
+    {
+      "source_id": 572,
+      "name": "Hélio dos Anjos",
+      "clubs": [
+        "Goiás"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Hélio dos Anjos",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Premia%C3%A7%C3%A3o_S%C3%A9rie_A2_2023_-_52815858672_-_H%C3%A9lio_dos_Anjos.jpg/250px-Premia%C3%A7%C3%A3o_S%C3%A9rie_A2_2023_-_52815858672_-_H%C3%A9lio_dos_Anjos.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 591,
+      "name": "Rildo Menezes",
+      "clubs": [
+        "Los Angeles Salsa"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Rildo Menezes\" Los Angeles Salsa football manager",
+      "candidates": [
+        "Octavio Zambrano",
+        "Los Angeles Salsa",
+        "Sports in Orange County, California"
+      ]
+    },
+    {
+      "source_id": 611,
+      "name": "Francis",
+      "clubs": [
+        "Queens Park Rangers FC"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Trevor Francis",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Nottingham_Forest_FC_%28Amsterdam%2C_1980%29_-_Trevor_Francis.jpg/250px-Nottingham_Forest_FC_%28Amsterdam%2C_1980%29_-_Trevor_Francis.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 615,
+      "name": "Renzo Ulivieri",
+      "clubs": [
+        "Vicenza"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Renzo Ulivieri\" Vicenza football manager",
+      "candidates": [
+        "2000–01 Serie A",
+        "Renzo Ulivieri",
+        "Vincenzo Montefusco"
+      ]
+    },
+    {
+      "source_id": 620,
+      "name": "Ottmar Hitzfeld",
+      "clubs": [
+        "BV 09 Borussia Dortmund"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Ottmar Hitzfeld\" BV 09 Borussia Dortmund football manager",
+      "candidates": [
+        "Borussia Dortmund",
+        "Bundesliga records and statistics"
+      ]
+    },
+    {
+      "source_id": 627,
+      "name": "Arsène Wenger",
+      "clubs": [
+        "AS Monaco"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Arsène Wenger",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/25th_Laureus_World_Sports_Awards_-_Red_Carpet_-_Ars%C3%A8ne_Wenger_-_240422_192850_%28cropped%29.jpg/250px-25th_Laureus_World_Sports_Awards_-_Red_Carpet_-_Ars%C3%A8ne_Wenger_-_240422_192850_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 630,
+      "name": "Han Berger",
+      "clubs": [
+        "Sparta Rotterdam"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Han Berger",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Han_Berger_%281983%29.jpg/250px-Han_Berger_%281983%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 639,
+      "name": "Aad de Mos",
+      "clubs": [
+        "PSV Eindhoven"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Aad de Mos",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Aad-de-mos.jpg/250px-Aad-de-mos.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 652,
+      "name": "Sánchez Duque",
+      "clubs": [
+        "Getafe CF"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Sánchez Duque\" Getafe CF football manager",
+      "candidates": [
+        "Getafe CF",
+        "Luis Sánchez Duque",
+        "History of CD Leganés"
+      ]
+    },
+    {
+      "source_id": 653,
+      "name": "Víctor Fernández",
+      "clubs": [
+        "Real Zaragoza"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Víctor Fernández",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/0/06/Victor_Fernandez.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+    },
+    {
+      "source_id": 657,
+      "name": "Marcelino",
+      "clubs": [
+        "Cádiz CF"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Marcelino Pérez",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/MarcelinoPerez.jpg/250px-MarcelinoPerez.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 670,
+      "name": "Thomas Christiansen",
+      "clubs": [
+        "APOEL Nicosia FC"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Thomas Christiansen\" APOEL Nicosia FC football manager",
+      "candidates": [
+        "APOEL FC",
+        "2016–17 Cypriot Cup",
+        "2016–17 APOEL FC season"
+      ]
+    },
+    {
+      "source_id": 673,
+      "name": "Neil Warnock",
+      "clubs": [
+        "Cardiff City FC"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Neil Warnock",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Neil_Warnock.jpg/250px-Neil_Warnock.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 675,
+      "name": "Liam Brady",
+      "clubs": [
+        "Celtic FC"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Liam Brady",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Liam_Brady_2021_RT%C3%89_Sport.png/250px-Liam_Brady_2021_RT%C3%89_Sport.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 691,
+      "name": "Fernando Areán",
+      "clubs": [
+        "Belgrano"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Fernando Areán\" Belgrano football manager",
+      "candidates": [
+        "San Lorenzo de Almagro",
+        "Talleres de Córdoba"
+      ]
+    },
+    {
+      "source_id": 692,
+      "name": "Miguel Ángel López",
+      "clubs": [
+        "Club América"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Miguel Ángel López (footballer)",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Zurdo_lopez_elgrafico_1968.jpg/250px-Zurdo_lopez_elgrafico_1968.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 695,
+      "name": "Quique Hernández",
+      "clubs": [
+        "Hércules CF"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Quique Hernández\" Hércules CF football manager",
+      "candidates": [
+        "Gustavo Siviero",
+        "Quique Hernández",
+        "Álvaro Mas"
+      ]
+    },
+    {
+      "source_id": 696,
+      "name": "Winfried Schäfer",
+      "clubs": [
+        "Karlsruher SC"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Winfried Schäfer",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Winfried_Sch%C3%A4fer%2C_Tractor-Esteghlal_20190215-02.jpg/250px-Winfried_Sch%C3%A4fer%2C_Tractor-Esteghlal_20190215-02.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 697,
+      "name": "Edinho Nazareth",
+      "clubs": [
+        "Fluminense"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Edinho Nazareth\" Fluminense football manager",
+      "candidates": [
+        "Edinho (footballer, born 1955)"
+      ]
+    },
+    {
+      "source_id": 699,
+      "name": "Miguel Ángel Russo",
+      "clubs": [
+        "Millonarios"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Miguel Ángel Russo",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Miguel_russo_joven_estudiantes.jpg/250px-Miguel_russo_joven_estudiantes.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 707,
+      "name": "Claudio Ranieri",
+      "clubs": [
+        "AC Fiorentina"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Claudio Ranieri\" AC Fiorentina football manager",
+      "candidates": [
+        "1996 Supercoppa Italiana",
+        "1996–97 AC Fiorentina season",
+        "1996 Coppa Italia final"
+      ]
+    },
+    {
+      "source_id": 708,
+      "name": "Glenn Hoddle",
+      "clubs": [
+        "Chelsea FC"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Glenn Hoddle",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Glenn_Hoddle_2014_%28cropped%29.jpg/250px-Glenn_Hoddle_2014_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 717,
+      "name": "Alex Miller",
+      "clubs": [
+        "Hibernian FC"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Alex Miller\" Hibernian FC football manager",
+      "candidates": [
+        "Hibernian F.C.",
+        "Peter Cormack",
+        "Alex Miller"
+      ]
+    },
+    {
+      "source_id": 718,
+      "name": "Matías Almeyda",
+      "clubs": [
+        "Guadalajara"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Matías Almeyda",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Am%C3%A9rica_vs_Guadalajara_7.jpg/250px-Am%C3%A9rica_vs_Guadalajara_7.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 723,
+      "name": "Bernardino Pedroto",
+      "clubs": [
+        "Vitória Guimarães SC"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Bernardino Pedroto\" Vitória Guimarães SC football manager",
+      "candidates": [
+        "Vitória S.C.",
+        "1996–97 Primeira Divisão",
+        "Bernardino Pedroto"
+      ]
+    },
+    {
+      "source_id": 743,
+      "name": "Muñoz",
+      "clubs": [
+        "Girona FC"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Muñoz\" Girona FC football manager",
+      "candidates": [
+        "Paco Flores",
+        "Míchel (footballer, born 1975)",
+        "Raúl Longhi"
+      ]
+    },
+    {
+      "source_id": 744,
+      "name": "Corbacho\r\nJosu Uribe",
+      "clubs": [
+        "UD Melilla"
+      ],
+      "status": "no_search_results",
+      "query": "\"Corbacho\r\nJosu Uribe\" UD Melilla football manager"
+    },
+    {
+      "source_id": 756,
+      "name": "Jacques Santini",
+      "clubs": [
+        "AS Saint-Etienne"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Jacques Santini",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Jacques_Santini_en_1974.jpg/250px-Jacques_Santini_en_1974.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 758,
+      "name": "Zdeněk Zeman",
+      "clubs": [
+        "FC Lugano"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Zdeněk Zeman",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Zdenek_Zeman_%28cropped%29.JPG/250px-Zdenek_Zeman_%28cropped%29.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 762,
+      "name": "Manuel Lapuente",
+      "clubs": [
+        "Cruz Azul"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Manuel Lapuente\" Cruz Azul football manager",
+      "candidates": [
+        "Manuel Lapuente",
+        "Mario Carrillo",
+        "Primera División de México Verano 2002"
+      ]
+    },
+    {
+      "source_id": 768,
+      "name": "Jean-Luc",
+      "clubs": [
+        "Toulouse FC"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Jean-Luc\" Toulouse FC football manager",
+      "candidates": [
+        "Toulouse FC",
+        "Jean-Luc Ruty",
+        "1992–93 Paris Saint-Germain FC season"
+      ]
+    },
+    {
+      "source_id": 783,
+      "name": "Toni",
+      "clubs": [
+        "SL Benfica"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Toni\" SL Benfica football manager",
+      "candidates": [
+        "Jorge Jesus",
+        "1993–94 S.L. Benfica season",
+        "António Oliveira (footballer, born 1982)"
+      ]
+    },
+    {
+      "source_id": 787,
+      "name": "Jean-Claude Suaudeau",
+      "clubs": [
+        "FC Nantes"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Jean-Claude Suaudeau",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Jean-Claude_Suaudeau.jpg/250px-Jean-Claude_Suaudeau.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 790,
+      "name": "Paulo Fonseca",
+      "clubs": [
+        "FC Shakhtar Donetsk"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Paulo Fonseca",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/PauloFonsecaLilleOSC.png/250px-PauloFonsecaLilleOSC.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 791,
+      "name": "Schrijvers",
+      "clubs": [
+        "AZ Alkmaar"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Piet Schrijvers",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Piet_Schrijvers_1974c.jpg/250px-Piet_Schrijvers_1974c.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 794,
+      "name": "Irulegui",
+      "clubs": [
+        "Deportivo Alavés"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Irulegui\" Deportivo Alavés football manager",
+      "candidates": [
+        "Deportivo Alavés",
+        "José Antonio Irulegui",
+        "Mario Luna"
+      ]
+    },
+    {
+      "source_id": 796,
+      "name": "Bobby Robson",
+      "clubs": [
+        "FC Porto"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Bobby Robson",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Anefo_934-2658%2C_Bobby_Robson%2C_Netherlands%2C_14-06-1988.jpg/250px-Anefo_934-2658%2C_Bobby_Robson%2C_Netherlands%2C_14-06-1988.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 801,
+      "name": "Jörg Berger",
+      "clubs": [
+        "FC Schalke 04"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Jörg Berger\" FC Schalke 04 football manager",
+      "candidates": [
+        "Jörg Berger",
+        "List of FC Schalke 04 managers",
+        "1996–97 FC Schalke 04 season"
+      ]
+    },
+    {
+      "source_id": 804,
+      "name": "Galilea",
+      "clubs": [
+        "CD Logroñés B"
+      ],
+      "status": "no_search_results",
+      "query": "\"Galilea\" CD Logroñés B football manager"
+    },
+    {
+      "source_id": 807,
+      "name": "Carlos Simón",
+      "clubs": [
+        "Villarreal CF"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Carlos Simón\" Villarreal CF football manager",
+      "candidates": [
+        "Villarreal CF"
+      ]
+    },
+    {
+      "source_id": 810,
+      "name": "Mané",
+      "clubs": [
+        "UE Lleida"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Mané (football manager)",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Vitoria_-_Estadio_de_Mendizorroza_6.jpg/250px-Vitoria_-_Estadio_de_Mendizorroza_6.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 811,
+      "name": "Crispi",
+      "clubs": [
+        "Elche CF"
+      ],
+      "status": "no_search_results",
+      "query": "\"Crispi\" Elche CF football manager"
+    },
+    {
+      "source_id": 819,
+      "name": "Menotti",
+      "clubs": [
+        "Boca Juniors"
+      ],
+      "status": "matched",
+      "wikipedia_title": "César Luis Menotti",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/C%C3%A9sar_Luis_Menotti_in_Recoleta.jpg/250px-C%C3%A9sar_Luis_Menotti_in_Recoleta.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 826,
+      "name": "Ciriaco",
+      "clubs": [
+        "CD Castellón"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Ciriaco\" CD Castellón football manager",
+      "candidates": [
+        "List of Real Madrid CF records and statistics",
+        "Ciriaco Cano",
+        "1973–74 FC Barcelona season"
+      ]
+    },
+    {
+      "source_id": 830,
+      "name": "Vanderlei Luxemburgo",
+      "clubs": [
+        "Palmeiras"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Vanderlei Luxemburgo",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/27_07_2019_Campeonato_Brasileiro_Jogo_do_Palmeiras_x_Vasco_da_Gama_%2848392264671%29_-_Vanderlei_Luxemburgo.jpg/250px-27_07_2019_Campeonato_Brasileiro_Jogo_do_Palmeiras_x_Vasco_da_Gama_%2848392264671%29_-_Vanderlei_Luxemburgo.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 838,
+      "name": "Volker Finke",
+      "clubs": [
+        "SC Freiburg"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Volker Finke",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Volker_Finke2013.jpg/250px-Volker_Finke2013.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 842,
+      "name": "Hidehiko Shimizu",
+      "clubs": [
+        "Yokohama Marinos"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Hidehiko Shimizu\" Yokohama Marinos football manager",
+      "candidates": [
+        "Hidehiko Shimizu",
+        "1992 Yokohama Marinos season",
+        "1992 Emperor's Cup final"
+      ]
+    },
+    {
+      "source_id": 852,
+      "name": "Vágner Mancini",
+      "clubs": [
+        "Chapecoense"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Vagner Mancini",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Vagner_Mancini_2025.png/250px-Vagner_Mancini_2025.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 864,
+      "name": "Adílson Batista",
+      "clubs": [
+        "Ceará SC"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Adilson Batista",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Adilson_Batista_2023.png/250px-Adilson_Batista_2023.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 866,
+      "name": "Barreiro",
+      "clubs": [
+        "Celta Turista"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Barreiro\" Celta Turista football manager",
+      "candidates": [
+        "Ramón Carnero"
+      ]
+    },
+    {
+      "source_id": 867,
+      "name": "Cardo",
+      "clubs": [
+        "Xerez CD"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Cardo\" Xerez CD football manager",
+      "candidates": [
+        "Recreativo de Huelva",
+        "Cádiz CF",
+        "Manolo Cardo"
+      ]
+    },
+    {
+      "source_id": 870,
+      "name": "Carlinhos Violino",
+      "clubs": [
+        "Guarani de Campinas"
+      ],
+      "status": "no_search_results",
+      "query": "\"Carlinhos Violino\" Guarani de Campinas football manager"
+    },
+    {
+      "source_id": 874,
+      "name": "Thorsten Fink",
+      "clubs": [
+        "FK Austria Wien"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Thorsten Fink",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/20160714_EL_Austria_vs_Kukesi_1622.jpg/250px-20160714_EL_Austria_vs_Kukesi_1622.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 875,
+      "name": "Neal",
+      "clubs": [
+        "Coventry City FC"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Phil Neal",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Phil_Neal_in_2012.jpg/250px-Phil_Neal_in_2012.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 898,
+      "name": "Bonds",
+      "clubs": [
+        "West Ham Utd. FC"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Bonds\" West Ham Utd. FC football manager",
+      "candidates": [
+        "West Ham United F.C.",
+        "Millwall F.C.",
+        "History of West Ham United F.C."
+      ]
+    },
+    {
+      "source_id": 902,
+      "name": "Francisco Avilán",
+      "clubs": [
+        "Tigres UANL"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Francisco Avilán\" Tigres UANL football manager",
+      "candidates": [
+        "C.F. Monterrey",
+        "Saltillo Soccer F.C.",
+        "Francisco Avilán"
+      ]
+    },
+    {
+      "source_id": 904,
+      "name": "van Gaal",
+      "clubs": [
+        "AFC Ajax Amsterdam"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Louis van Gaal",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Louis_van_Gaal_2014.jpg/250px-Louis_van_Gaal_2014.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 911,
+      "name": "Frans Körver",
+      "clubs": [
+        "VVV Venlo"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Frans Körver",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Frans_K%C3%B6rver_%281965%29.jpg/250px-Frans_K%C3%B6rver_%281965%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 917,
+      "name": "Pruijn",
+      "clubs": [
+        "NEC Nijmegen"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Pruijn\" NEC Nijmegen football manager",
+      "candidates": [
+        "NEC Nijmegen",
+        "Jan Pruijn",
+        "Frans Janssen"
+      ]
+    },
+    {
+      "source_id": 932,
+      "name": "Arsenio",
+      "clubs": [
+        "RC Deportivo"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Arsenio\" RC Deportivo football manager",
+      "candidates": [
+        "Deportivo de A Coruña",
+        "Fernando Vázquez",
+        "Luis Urquiri"
+      ]
+    },
+    {
+      "source_id": 937,
+      "name": "Duque",
+      "clubs": [
+        "CD Leganés"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Duque\" CD Leganés football manager",
+      "candidates": [
+        "CD Leganés",
+        "Luis Ángel Duque",
+        "Luis Sánchez Duque"
+      ]
+    },
+    {
+      "source_id": 941,
+      "name": "Castro Santos",
+      "clubs": [
+        "SD Compostela"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Castro Santos\" SD Compostela football manager",
+      "candidates": [
+        "Fernando Castro Santos",
+        "1995–96 SD Compostela season",
+        "1994–95 SD Compostela season"
+      ]
+    },
+    {
+      "source_id": 953,
+      "name": "García Remón",
+      "clubs": [
+        "Real Sporting"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Mariano García Remón",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Garcia_Remon.jpg/250px-Garcia_Remon.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 955,
+      "name": "Antonio Gómez",
+      "clubs": [
+        "Pontevedra CF"
+      ],
+      "status": "no_search_results",
+      "query": "\"Antonio Gómez\" Pontevedra CF football manager"
+    },
+    {
+      "source_id": 957,
+      "name": "Creixell",
+      "clubs": [
+        "UE Sant Andreu"
+      ],
+      "status": "no_search_results",
+      "query": "\"Creixell\" UE Sant Andreu football manager"
+    },
+    {
+      "source_id": 964,
+      "name": "Miguel Sánchez",
+      "clubs": [
+        "Real Burgos"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Miguel Sánchez\" Real Burgos football manager",
+      "candidates": [
+        "1933",
+        "José Luis Manzanedo"
+      ]
+    },
+    {
+      "source_id": 971,
+      "name": "Joaquín Salmerón",
+      "clubs": [
+        "San Sebastián de los Reyes"
+      ],
+      "status": "no_search_results",
+      "query": "\"Joaquín Salmerón\" San Sebastián de los Reyes football manager"
+    },
+    {
+      "source_id": 972,
+      "name": "Carlos Aimar",
+      "clubs": [
+        "CD Logroñés"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Carlos Aimar",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/5/56/Cai_aimar.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+    },
+    {
+      "source_id": 975,
+      "name": "Irureta",
+      "clubs": [
+        "Racing Santander"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Javier Irureta",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Javier_Irureta_1973.jpg/250px-Javier_Irureta_1973.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 978,
+      "name": "Rolland Courbis",
+      "clubs": [
+        "FC Girondins"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Rolland Courbis",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Rolland_Courbis_001.jpg/250px-Rolland_Courbis_001.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 989,
+      "name": "Benno Möhlmann",
+      "clubs": [
+        "Hamburger SV"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Benno Möhlmann",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Benno_M%C3%B6hlmann_2012_2.jpg/250px-Benno_M%C3%B6hlmann_2012_2.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 994,
+      "name": "Fritz Korbach",
+      "clubs": [
+        "SC Cambuur"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Fritz Korbach",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Ajax_tegen_PEC_Zwolle_4-2%2C_trainer_PEC_Fritz_Korbach_%28kop%29%2C_Bestanddeelnr_929-8834.jpg/250px-Ajax_tegen_PEC_Zwolle_4-2%2C_trainer_PEC_Fritz_Korbach_%28kop%29%2C_Bestanddeelnr_929-8834.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 995,
+      "name": "Henk ten Cate",
+      "clubs": [
+        "Go Ahead Eagles"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Henk ten Cate",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Henk_ten_Cate_in_Tabriz.jpg/250px-Henk_ten_Cate_in_Tabriz.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 998,
+      "name": "Morten Olsen",
+      "clubs": [
+        "1. FC Köln"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Morten Olsen",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Morten_Olsen_2012_%28cropped%29.jpg/250px-Morten_Olsen_2012_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 1000,
+      "name": "Lotina",
+      "clubs": [
+        "CD Numancia"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Miguel Ángel Lotina",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Miguel_%C3%81ngel_Lotina.jpg/250px-Miguel_%C3%81ngel_Lotina.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 1003,
+      "name": "John Lambie",
+      "clubs": [
+        "Partick Thistle FC"
+      ],
+      "status": "matched",
+      "wikipedia_title": "John Lambie (footballer, born 1941)",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/7/7a/John_lambie.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+    },
+    {
+      "source_id": 1004,
+      "name": "Marcello Lippi",
+      "clubs": [
+        "SSC Napoli"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Marcello Lippi",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Marcello_Lippi_at_China-Iran_press_conference_20190123.jpg/250px-Marcello_Lippi_at_China-Iran_press_conference_20190123.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 1005,
+      "name": "Alain de Martigny",
+      "clubs": [
+        "Angers SCO"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Alain de Martigny\" Angers SCO football manager",
+      "candidates": [
+        "Angers SCO",
+        "Alain de Martigny"
+      ]
+    },
+    {
+      "source_id": 1006,
+      "name": "Kent Nielsen",
+      "clubs": [
+        "Odense BK"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Kent Nielsen",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Kent_Nielsen_20110831.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+    },
+    {
+      "source_id": 1009,
+      "name": "Alfredo Tena",
+      "clubs": [
+        "Puebla"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Alfredo Tena",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Alfredo_Tena.jpg/250px-Alfredo_Tena.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 1012,
+      "name": "Hernán Torres",
+      "clubs": [
+        "América de Cali"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Hernán Torres\" América de Cali football manager",
+      "candidates": [
+        "Hernán Torres",
+        "List of América de Cali managers",
+        "Alberto Suárez (football manager)"
+      ]
+    },
+    {
+      "source_id": 1013,
+      "name": "Leo van Veen",
+      "clubs": [
+        "FC Utrecht"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Leo van Veen",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Leo_van_Veen_heeft_gescoord%2C_Bestanddeelnr_930-4449.jpg/250px-Leo_van_Veen_heeft_gescoord%2C_Bestanddeelnr_930-4449.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 1020,
+      "name": "Joël Muller",
+      "clubs": [
+        "FC Metz"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Joël Muller\" FC Metz football manager",
+      "candidates": [
+        "Joël Müller",
+        "Yvon Pouliquen",
+        "1996 Coupe de la Ligue final"
+      ]
+    },
+    {
+      "source_id": 1033,
+      "name": "Marinos Ouzounidis",
+      "clubs": [
+        "Panathinaikos AO"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Marinos Ouzounidis\" Panathinaikos AO football manager",
+      "candidates": [
+        "Panathinaikos F.C.",
+        "Greek football PSAP awards",
+        "2013–14 Ergotelis F.C. season"
+      ]
+    },
+    {
+      "source_id": 1035,
+      "name": "Huub Stevens",
+      "clubs": [
+        "Roda JC"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Huub Stevens",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Huub_stevens.jpg/250px-Huub_stevens.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 1037,
+      "name": "Paul Sturrock",
+      "clubs": [
+        "St. Johnstone FC"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Paul Sturrock\" St. Johnstone FC football manager",
+      "candidates": [
+        "Paul Sturrock",
+        "St Johnstone F.C.",
+        "George O'Boyle"
+      ]
+    },
+    {
+      "source_id": 1038,
+      "name": "Jimmy Nicholl",
+      "clubs": [
+        "Raith Rovers FC"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Jimmy Nicholl",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/1/16/Jimmy_Nicholl%2C_Dudesleeper.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+    },
+    {
+      "source_id": 1043,
+      "name": "Luis Rodríguez Vaz",
+      "clubs": [
+        "CD Lugo"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Luis Rodríguez Vaz\" CD Lugo football manager",
+      "candidates": [
+        "CD Lugo",
+        "Luis Rodríguez Vaz"
+      ]
+    },
+    {
+      "source_id": 1061,
+      "name": "Eugenio Bersellini",
+      "clubs": [
+        "Pisa Calcio"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Eugenio Bersellini",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Eugenio_Bersellini_1973.jpg/250px-Eugenio_Bersellini_1973.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 1093,
+      "name": "Claudinei Olveira",
+      "clubs": [
+        "Avaí"
+      ],
+      "status": "no_search_results",
+      "query": "\"Claudinei Olveira\" Avaí football manager"
+    },
+    {
+      "source_id": 1103,
+      "name": "Willi Entenmann",
+      "clubs": [
+        "1. FC Nürnberg"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Willi Entenmann\" 1. FC Nürnberg football manager",
+      "candidates": [
+        "1. FC Nürnberg",
+        "1986 DFB-Pokal final",
+        "Willi Entenmann"
+      ]
+    },
+    {
+      "source_id": 1105,
+      "name": "Jan Reker",
+      "clubs": [
+        "Willem II"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Jan Reker",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/e/e5/Jan_Reker.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+    },
+    {
+      "source_id": 1109,
+      "name": "Bert Jacobs",
+      "clubs": [
+        "RKC Waalwijk"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Bert Jacobs",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Trainer_Bert_Jacobs_van_Sparta%2C_Bestanddeelnr_932-7603.jpg/250px-Trainer_Bert_Jacobs_van_Sparta%2C_Bestanddeelnr_932-7603.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 1122,
+      "name": "Bruno Giorgi",
+      "clubs": [
+        "Cagliari"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Bruno Giorgi (footballer)",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/5/57/Bruno_Giorgi.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+    },
+    {
+      "source_id": 1123,
+      "name": "Sandreani",
+      "clubs": [
+        "Padova"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Sandreani\" Padova football manager",
+      "candidates": [
+        "Giancarlo Camolese",
+        "Mauro Sandreani",
+        "1994–95 Calcio Padova season"
+      ]
+    },
+    {
+      "source_id": 1125,
+      "name": "Nicolini",
+      "clubs": [
+        "US Palermo"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Nicolini\" US Palermo football manager",
+      "candidates": [
+        "Stefano Colantuono",
+        "Enrico Nicolini",
+        "1979–80 US Catanzaro season"
+      ]
+    },
+    {
+      "source_id": 1149,
+      "name": "Gregorio Pérez",
+      "clubs": [
+        "Peñarol"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Gregorio Pérez",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/GregorioPerez2011.jpg/250px-GregorioPerez2011.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 1159,
+      "name": "Sergio Silva",
+      "clubs": [
+        "Montevideo Wanderers"
+      ],
+      "status": "no_search_results",
+      "query": "\"Sergio Silva\" Montevideo Wanderers football manager"
+    },
+    {
+      "source_id": 1165,
+      "name": "Pedreño",
+      "clubs": [
+        "FC Cartagena"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Pedreño\" FC Cartagena football manager",
+      "candidates": [
+        "David Vidal",
+        "Asier Garitano"
+      ]
+    },
+    {
+      "source_id": 1172,
+      "name": "Paulo Silas",
+      "clubs": [
+        "Criciúma"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Paulo Silas\" Criciúma football manager",
+      "candidates": [
+        "List of foreign J.League players",
+        "List of CR Flamengo records and statistics"
+      ]
+    },
+    {
+      "source_id": 1180,
+      "name": "Ademar Braga",
+      "clubs": [
+        "Vasco da Gama"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Ademar Braga\" Vasco da Gama football manager",
+      "candidates": [
+        "Ademar Braga (football manager)"
+      ]
+    },
+    {
+      "source_id": 1184,
+      "name": "José Víctor",
+      "clubs": [
+        "Real Murcia CF"
+      ],
+      "status": "no_confident_match",
+      "query": "\"José Víctor\" Real Murcia CF football manager",
+      "candidates": [
+        "1982–83 Segunda División",
+        "List of Segunda División winning managers",
+        "José Víctor Rodríguez"
+      ]
+    },
+    {
+      "source_id": 1190,
+      "name": "René Meulensteen",
+      "clubs": [
+        "Maccabi Haifa"
+      ],
+      "status": "matched",
+      "wikipedia_title": "René Meulensteen",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Meulensteen%2C_Ren%C3%A9.jpg/250px-Meulensteen%2C_Ren%C3%A9.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 1199,
+      "name": "Jorge Solari",
+      "clubs": [
+        "Newell's Old Boys"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Jorge Solari",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/4/46/Jorge_Raul_Solari.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+    },
+    {
+      "source_id": 1211,
+      "name": "Alexander Zorniger",
+      "clubs": [
+        "Brøndby IF"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Alexander Zorniger",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Alex_zorniger.jpg/250px-Alex_zorniger.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 1213,
+      "name": "Thomas Doll",
+      "clubs": [
+        "Ferencvárosi TC"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Thomas Doll",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Tomas_Doll_%E2%80%93_Tag_der_Legenden_2016_01.jpg/250px-Tomas_Doll_%E2%80%93_Tag_der_Legenden_2016_01.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 1230,
+      "name": "Stepanović",
+      "clubs": [
+        "TSV Bayer 04 Leverkusen"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Stepanović\" TSV Bayer 04 Leverkusen football manager",
+      "candidates": [
+        "Bayer 04 Leverkusen",
+        "1995–96 Eintracht Frankfurt season",
+        "List of DFB-Pokal winning managers"
+      ]
+    },
+    {
+      "source_id": 1238,
+      "name": "Koster",
+      "clubs": [
+        "Helmond Sport"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Adrie Koster",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Adrie_Koster.jpg/250px-Adrie_Koster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 1239,
+      "name": "Popovics",
+      "clubs": [
+        "FC Eindhoven"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Sándor Popovics (footballer)",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Sandor_Popovics_%281963%29.jpg/250px-Sandor_Popovics_%281963%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 1240,
+      "name": "Braam",
+      "clubs": [
+        "TOP Oss"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Braam\" TOP Oss football manager",
+      "candidates": [
+        "TOP Oss"
+      ]
+    },
+    {
+      "source_id": 1242,
+      "name": "René Notten",
+      "clubs": [
+        "FC Emmen"
+      ],
+      "status": "error",
+      "error": "Client error '429 Your bot is making too many requests. Please reduce your request rate or contact bot-traffic@wikimedia.org (f263c81)' for url 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Ren%C3%A9_Notten_%281974%29.jpg/250px-Ren%C3%A9_Notten_%281974%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429"
+    },
+    {
+      "source_id": 1243,
+      "name": "Kistemaker",
+      "clubs": [
+        "SC Telstar"
+      ],
+      "status": "error",
+      "error": "Client error '429 Your bot is making too many requests. Please reduce your request rate or contact bot-traffic@wikimedia.org (f263c81)' for url 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Simon_Kistemaker_%281984%29.jpg/250px-Simon_Kistemaker_%281984%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429"
+    },
+    {
+      "source_id": 1246,
+      "name": "Wilkinson",
+      "clubs": [
+        "Leeds United AFC"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Wilkinson\" Leeds United AFC football manager",
+      "candidates": [
+        "List of Leeds United F.C. managers",
+        "Leeds United F.C.",
+        "Charlie Wilkinson (footballer)"
+      ]
+    },
+    {
+      "source_id": 1256,
+      "name": "Nikolaos Anastopoulos",
+      "clubs": [
+        "OFI Crete FC"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Nikos Anastopoulos",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Nikos_Anastopoulos_%281987%29.jpg/250px-Nikos_Anastopoulos_%281987%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 1331,
+      "name": "Manuel José",
+      "clubs": [
+        "Boavista FC"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Manuel José\" Boavista FC football manager",
+      "candidates": [
+        "Pedro Barny",
+        "1992 Taça de Portugal final",
+        "1992 Supertaça Cândido de Oliveira"
+      ]
+    },
+    {
+      "source_id": 1338,
+      "name": "Gilbert Gress",
+      "clubs": [
+        "RC Strasbourg"
+      ],
+      "status": "error",
+      "error": "Client error '429 Your bot is making too many requests. Please reduce your request rate or contact bot-traffic@wikimedia.org (f263c81)' for url 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Gilbert_Gress.jpg/250px-Gilbert_Gress.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429"
+    },
+    {
+      "source_id": 1353,
+      "name": "Simo Valakari",
+      "clubs": [
+        "SJK Seinäjoki"
+      ],
+      "status": "error",
+      "error": "Client error '429 Your bot is making too many requests. Please reduce your request rate or contact bot-traffic@wikimedia.org (f263c81)' for url 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Simo_Valakari_1.jpg/250px-Simo_Valakari_1.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429"
+    },
+    {
+      "source_id": 1367,
+      "name": "Takaji Mori",
+      "clubs": [
+        "Urawa Reds"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Takaji Mori\" Urawa Reds football manager",
+      "candidates": [
+        "Kenzo Yokoyama",
+        "Takaji Mori",
+        "Hiroshi Ochiai"
+      ]
+    },
+    {
+      "source_id": 1371,
+      "name": "Stuart Baxter",
+      "clubs": [
+        "Sanfrecce Hiroshima"
+      ],
+      "status": "error",
+      "error": "Client error '429 Your bot is making too many requests. Please reduce your request rate or contact bot-traffic@wikimedia.org (f263c81)' for url 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Stuart_Baxter.jpg/250px-Stuart_Baxter.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429"
+    },
+    {
+      "source_id": 1378,
+      "name": "Ryuzo Hiraki",
+      "clubs": [
+        "Nagoya Grampus"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Ryuzo Hiraki\" Nagoya Grampus football manager",
+      "candidates": [
+        "Nagoya Grampus",
+        "Ryuzo Hiraki",
+        "1992 Nagoya Grampus Eight season"
+      ]
+    },
+    {
+      "source_id": 1380,
+      "name": "Emerson Leão",
+      "clubs": [
+        "Shimizu S-Pulse"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Émerson Leão",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/%C3%89merson_Le%C3%A3o.jpg/250px-%C3%89merson_Le%C3%A3o.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 1381,
+      "name": "Kunishige Kamamoto",
+      "clubs": [
+        "Gamba Osaka"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Kunishige Kamamoto",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Kunishige_Kamamoto_IMG_3322_20140110.JPG/250px-Kunishige_Kamamoto_IMG_3322_20140110.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 1392,
+      "name": "Yoshikazu Nagai",
+      "clubs": [
+        "JEF United Ichihara"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Yoshikazu Nagai\" JEF United Ichihara football manager",
+      "candidates": [
+        "Yoshikazu Nagai",
+        "1992 JEF United Ichihara season",
+        "1987 Afro-Asian Club Championship"
+      ]
+    },
+    {
+      "source_id": 1400,
+      "name": "Hideyuki Hanyu",
+      "clubs": [
+        "Verdy Kawasaki"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Hideyuki Hanyu\" Verdy Kawasaki football manager",
+      "candidates": [
+        "Tokyo Verdy Beleza"
+      ]
+    },
+    {
+      "source_id": 1431,
+      "name": "Magnús Gylfason",
+      "clubs": [
+        "Valur Reykjavík"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Magnús Gylfason\" Valur Reykjavík football manager",
+      "candidates": [
+        "2015 Úrvalsdeild",
+        "2015 Valur season",
+        "Valur (men's football)"
+      ]
+    },
+    {
+      "source_id": 1449,
+      "name": "Besnik Hasi",
+      "clubs": [
+        "KP Legia Warszawa"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Besnik Hasi\" KP Legia Warszawa football manager",
+      "candidates": [
+        "Legia Warsaw"
+      ]
+    },
+    {
+      "source_id": 1464,
+      "name": "Ramiro Solís",
+      "clubs": [
+        "R. Sporting B"
+      ],
+      "status": "no_search_results",
+      "query": "\"Ramiro Solís\" R. Sporting B football manager"
+    },
+    {
+      "source_id": 1466,
+      "name": "Jim Duffy",
+      "clubs": [
+        "Dundee FC"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Jim Duffy\" Dundee FC football manager",
+      "candidates": [
+        "Dundee F.C.",
+        "Jim Duffy (footballer)",
+        "List of Dundee F.C. managers"
+      ]
+    },
+    {
+      "source_id": 1467,
+      "name": "Mike Walker",
+      "clubs": [
+        "Norwich City FC"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Mike Walker\" Norwich City FC football manager",
+      "candidates": [
+        "Mike Walker (Welsh footballer)",
+        "Steve Foley (footballer, born 1953)",
+        "Norwich City F.C. Hall of Fame"
+      ]
+    },
+    {
+      "source_id": 1469,
+      "name": "Daniel Jeandupeux",
+      "clubs": [
+        "SM Caen"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Daniel Jeandupeux\" SM Caen football manager",
+      "candidates": [
+        "Stade Malherbe Caen"
+      ]
+    },
+    {
+      "source_id": 1484,
+      "name": "Neumann",
+      "clubs": [
+        "SBV Vitesse"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Neumann\" SBV Vitesse football manager",
+      "candidates": [
+        "SBV Vitesse",
+        "Herbert Neumann",
+        "Erwin van de Looi"
+      ]
+    },
+    {
+      "source_id": 1494,
+      "name": "Txetxu Rojo",
+      "clubs": [
+        "RC Celta"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Txetxu Rojo",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Elftalfoto_Athletic_de_Bilbao_%28archief%29%2C_Bestanddeelnr_929-1073_%28rojo_I%29.jpg/250px-Elftalfoto_Athletic_de_Bilbao_%28archief%29%2C_Bestanddeelnr_929-1073_%28rojo_I%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 1497,
+      "name": "Del Bosque",
+      "clubs": [
+        "Real Madrid CF"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Vicente del Bosque",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Vicente_del_Bosque_Euro_2012_final.jpg/250px-Vicente_del_Bosque_Euro_2012_final.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 1502,
+      "name": "Van der Pluijm",
+      "clubs": [
+        "FC Den Bosch"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Hans van der Pluijm",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Ans_Galiart_and_Hans_van_der_Pluijm_1971_%28cropped%29.jpg/250px-Ans_Galiart_and_Hans_van_der_Pluijm_1971_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 1515,
+      "name": "Foppe de Haan",
+      "clubs": [
+        "SC Heerenveen"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Foppe de Haan",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/75._Foppe_de_Haan.png/250px-75._Foppe_de_Haan.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 1518,
+      "name": "Daniel Passarella",
+      "clubs": [
+        "River Plate"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Daniel Passarella",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Passarella_copa_mundo.jpg/250px-Passarella_copa_mundo.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 1522,
+      "name": "Ricardo La Volpe",
+      "clubs": [
+        "Club Atlante"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Ricardo La Volpe",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/RicardoLavolpe.jpg/250px-RicardoLavolpe.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 1551,
+      "name": "Walter Smith",
+      "clubs": [
+        "Rangers FC"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Walter Smith",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Walter_Smith_%28cropped%29.jpg/250px-Walter_Smith_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 1578,
+      "name": "Juan Carlos Rodríguez",
+      "clubs": [
+        "Valencia B"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Juan Carlos Rodríguez\" Valencia B football manager",
+      "candidates": [
+        "October 2011 in sports",
+        "1994–95 Valencia CF season",
+        "Apertura 2025 Liga MX final phase"
+      ]
+    },
+    {
+      "source_id": 1641,
+      "name": "Dave Dir",
+      "clubs": [
+        "Colorado Foxes"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Dave Dir\" Colorado Foxes football manager",
+      "candidates": [
+        "List of MLS Cup broadcasters"
+      ]
+    },
+    {
+      "source_id": 1643,
+      "name": "Eddie Firmani",
+      "clubs": [
+        "Montréal Impact"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Eddie Firmani",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Eddie_Firmani%2C_MISL_1984-85_media_guide_page_019.tif/lossless-page1-250px-Eddie_Firmani%2C_MISL_1984-85_media_guide_page_019.tif.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 1644,
+      "name": "Bob Lenarduzzi",
+      "clubs": [
+        "Vancouver 86ers"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Bob Lenarduzzi",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Bob-lenarduzzi-2009-04-08.jpg/250px-Bob-lenarduzzi-2009-04-08.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 1650,
+      "name": "Pedro Kozak",
+      "clubs": [
+        "Toronto Blizzard"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Pedro Kozak\" Toronto Blizzard football manager",
+      "candidates": [
+        "Pedro Kozak"
+      ]
+    },
+    {
+      "source_id": 1665,
+      "name": "Griever",
+      "clubs": [
+        "SC Heracles"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Griever\" SC Heracles football manager",
+      "candidates": [
+        "Azing Griever",
+        "Jan de Jonge",
+        "Jan van Raalte"
+      ]
+    },
+    {
+      "source_id": 1666,
+      "name": "Mondonico",
+      "clubs": [
+        "Torino FC"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Emiliano Mondonico",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Mondonico_Emiliano.jpg/250px-Mondonico_Emiliano.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 1695,
+      "name": "Gustavo Costas",
+      "clubs": [
+        "Independiente Santa Fe"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Gustavo Costas",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Gustavo_Costas_2012.png/250px-Gustavo_Costas_2012.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 1709,
+      "name": "Joan Carrillo",
+      "clubs": [
+        "HNK Hajduk Split"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Joan Carrillo\" HNK Hajduk Split football manager",
+      "candidates": [
+        "List of HNK Hajduk Split managers",
+        "Joan Carrillo",
+        "Marko Lozo"
+      ]
+    },
+    {
+      "source_id": 1711,
+      "name": "Cilinho",
+      "clubs": [
+        "Portuguesa"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Cilinho\" Portuguesa football manager",
+      "candidates": [
+        "Cilinho",
+        "1988 São Paulo FC season",
+        "1992 Santos FC season"
+      ]
+    },
+    {
+      "source_id": 1712,
+      "name": "Nelsinho Rosa",
+      "clubs": [
+        "Bragantino"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Nelsinho Rosa\" Bragantino football manager",
+      "candidates": [
+        "Fluminense FC",
+        "List of Brazilian football champions",
+        "List of Campeonato Brasileiro Série A winning managers"
+      ]
+    },
+    {
+      "source_id": 1719,
+      "name": "Svatopluk Habanec",
+      "clubs": [
+        "FC Boby Brno"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Svatopluk Habanec\" FC Boby Brno football manager",
+      "candidates": [
+        "FC Zbrojovka Brno"
+      ]
+    },
+    {
+      "source_id": 1739,
+      "name": "Ricardo Moreno",
+      "clubs": [
+        "Barakaldo CF"
+      ],
+      "status": "no_search_results",
+      "query": "\"Ricardo Moreno\" Barakaldo CF football manager"
+    },
+    {
+      "source_id": 1742,
+      "name": "Fabri",
+      "clubs": [
+        "Mérida AD"
+      ],
+      "status": "no_search_results",
+      "query": "\"Fabri\" Mérida AD football manager"
+    },
+    {
+      "source_id": 1768,
+      "name": "Aníbal Ruiz Leites",
+      "clubs": [
+        "Veracruz"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Aníbal Ruiz Leites\" Veracruz football manager",
+      "candidates": [
+        "Aníbal Ruiz"
+      ]
+    },
+    {
+      "source_id": 1770,
+      "name": "Marcelo Bielsa",
+      "clubs": [
+        "Atlas"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Marcelo Bielsa",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Marcelo_Bielsa_2018_%28cropped%29.jpg/250px-Marcelo_Bielsa_2018_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 1771,
+      "name": "Pedro García",
+      "clubs": [
+        "Santos Laguna"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Pedro García\" Santos Laguna football manager",
+      "candidates": [
+        "Santos Laguna",
+        "Pedro García (footballer, born 1946)",
+        "1994–95 Santos Laguna season"
+      ]
+    },
+    {
+      "source_id": 1773,
+      "name": "Manuel Lapuente",
+      "clubs": [
+        "Club Necaxa"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Manuel Lapuente\" Club Necaxa football manager",
+      "candidates": [
+        "Club Necaxa",
+        "Manuel Lapuente",
+        "Primera División de México Verano 2002"
+      ]
+    },
+    {
+      "source_id": 1780,
+      "name": "Antonio Carbajal",
+      "clubs": [
+        "Atlético Morelia"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Antonio Carbajal\" Atlético Morelia football manager",
+      "candidates": [
+        "Antonio Carbajal",
+        "Querétaro F.C.",
+        "1994–95 Club Atlético Morelia season"
+      ]
+    },
+    {
+      "source_id": 1785,
+      "name": "van Zoghel",
+      "clubs": [
+        "Dordrecht '90"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Nico van Zoghel",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Portret_van_Go_Ahead_keeper_Nico_van_Zoghel%2C_Bestanddeelnr_919-7383.jpg/250px-Portret_van_Go_Ahead_keeper_Nico_van_Zoghel%2C_Bestanddeelnr_919-7383.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 1813,
+      "name": "Maroso",
+      "clubs": [
+        "Venezia FC"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Maroso\" Venezia FC football manager",
+      "candidates": [
+        "Grande Torino",
+        "1945–46 AC Torino season",
+        "1946–47 AC Torino season"
+      ]
+    },
+    {
+      "source_id": 1824,
+      "name": "Jaume Bauzà",
+      "clubs": [
+        "RCD Mallorca"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Jaume Bauzà\" RCD Mallorca football manager",
+      "candidates": [
+        "Jaume Bauzà"
+      ]
+    },
+    {
+      "source_id": 1827,
+      "name": "Pérez García",
+      "clubs": [
+        "Real Valladolid B"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Pérez García\" Real Valladolid B football manager",
+      "candidates": [
+        "Aloisio (footballer, born 1979)",
+        "Deaths in November 2024"
+      ]
+    },
+    {
+      "source_id": 1829,
+      "name": "Moreno",
+      "clubs": [
+        "Sevilla B"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Moreno\" Sevilla B football manager",
+      "candidates": [
+        "Sevilla Atlético",
+        "Abel Gómez",
+        "José Ángel Moreno"
+      ]
+    },
+    {
+      "source_id": 1831,
+      "name": "Chato Gónzalez",
+      "clubs": [
+        "CP Cacereño"
+      ],
+      "status": "no_search_results",
+      "query": "\"Chato Gónzalez\" CP Cacereño football manager"
+    },
+    {
+      "source_id": 1834,
+      "name": "Víctor Espárrago",
+      "clubs": [
+        "Albacete Balompié"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Víctor Espárrago",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/V%C3%ADctor_Esp%C3%A1rrago_%281972%29.png/250px-V%C3%ADctor_Esp%C3%A1rrago_%281972%29.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 1839,
+      "name": "Tomé",
+      "clubs": [
+        "Cultural Leonesa"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Tomé\" Cultural Leonesa football manager",
+      "candidates": [
+        "Iban Salvador",
+        "Juan Pablo Vojvoda",
+        "Miguel Álvarez Tomé"
+      ]
+    },
+    {
+      "source_id": 1842,
+      "name": "José Muñiz",
+      "clubs": [
+        "UP Langreo"
+      ],
+      "status": "no_search_results",
+      "query": "\"José Muñiz\" UP Langreo football manager"
+    },
+    {
+      "source_id": 1845,
+      "name": "Utxu",
+      "clubs": [
+        "SD Lemona"
+      ],
+      "status": "no_search_results",
+      "query": "\"Utxu\" SD Lemona football manager"
+    },
+    {
+      "source_id": 1851,
+      "name": "Etxarri",
+      "clubs": [
+        "Real Sociedad B"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Etxarri\" Real Sociedad B football manager",
+      "candidates": [
+        "Joseba Llorente",
+        "Mikel Llorente",
+        "Akilino Etxarri"
+      ]
+    },
+    {
+      "source_id": 1855,
+      "name": "Cor Pot",
+      "clubs": [
+        "Excelsior"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Cor Pot\" Excelsior football manager",
+      "candidates": [
+        "Excelsior Rotterdam",
+        "Cor Pot",
+        "Joeri de Kamps"
+      ]
+    },
+    {
+      "source_id": 1856,
+      "name": "Villanova",
+      "clubs": [
+        "RC Recreativo"
+      ],
+      "status": "no_search_results",
+      "query": "\"Villanova\" RC Recreativo football manager"
+    },
+    {
+      "source_id": 1857,
+      "name": "Jesús Tartilán",
+      "clubs": [
+        "SD Ponferradina"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Jesús Tartilán\" SD Ponferradina football manager",
+      "candidates": [
+        "Jesús Tartilán"
+      ]
+    },
+    {
+      "source_id": 1865,
+      "name": "Guy Roux",
+      "clubs": [
+        "AJ Auxerre"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Guy Roux",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Guy_Roux%2C_mai_2014%2C_Rennes%2C_France-2_%28cropped%29.jpg/250px-Guy_Roux%2C_mai_2014%2C_Rennes%2C_France-2_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 1924,
+      "name": "Kevin Doherty",
+      "clubs": [
+        "Shelbourne FC"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Kevin Doherty\" Shelbourne FC football manager",
+      "candidates": [
+        "Shelbourne F.C.",
+        "Drogheda United F.C.",
+        "Kevin Doherty (footballer)"
+      ]
+    },
+    {
+      "source_id": 1937,
+      "name": "José Romão",
+      "clubs": [
+        "CF Os Belenenses"
+      ],
+      "status": "matched",
+      "wikipedia_title": "José Romão",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Raja_de_Casablanca_vs_Al_Taliya%2C_Arabian_Champions_League%2C_October_29_2008-01.jpg/250px-Raja_de_Casablanca_vs_Al_Taliya%2C_Arabian_Champions_League%2C_October_29_2008-01.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 1949,
+      "name": "Ernesto Paulo",
+      "clubs": [
+        "CF União Madeira"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Ernesto Paulo",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Ernesto_Paulo.jpg/250px-Ernesto_Paulo.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 1951,
+      "name": "Fortes",
+      "clubs": [
+        "SC Farense"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Fortes\" SC Farense football manager",
+      "candidates": [
+        "S.C. Farense",
+        "Carlos Alhinho",
+        "Fanã"
+      ]
+    },
+    {
+      "source_id": 1970,
+      "name": "Alexandre Gama",
+      "clubs": [
+        "Náutico"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Alexandre Gama\" Náutico football manager",
+      "candidates": [
+        "Fluminense FC"
+      ]
+    },
+    {
+      "source_id": 2009,
+      "name": "Sergije Krešić",
+      "clubs": [
+        "Real Betis"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Sergije Krešić\" Real Betis football manager",
+      "candidates": [
+        "Sergije Krešić",
+        "Julio García (footballer, born 1965)",
+        "List of Segunda División winning managers"
+      ]
+    },
+    {
+      "source_id": 2010,
+      "name": "Sierra",
+      "clubs": [
+        "Atlético Madrid B"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Sierra\" Atlético Madrid B football manager",
+      "candidates": [
+        "Atlético Madrid",
+        "Nano (footballer, born 1982)",
+        "Fernando Zambrano"
+      ]
+    },
+    {
+      "source_id": 2066,
+      "name": "Enzo Trossero",
+      "clubs": [
+        "Huracán"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Enzo Trossero",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/2/22/Trossero_colon.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+    },
+    {
+      "source_id": 2076,
+      "name": "Carlos Griguol",
+      "clubs": [
+        "Ferro Carril Oeste"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Carlos Timoteo Griguol",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Carlos_Timoteo_Griguol.JPG/250px-Carlos_Timoteo_Griguol.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 2079,
+      "name": "Roberto Perfumo",
+      "clubs": [
+        "Gimnasia y Esgrima (La Plata)"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Roberto Perfumo",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Perfumo_1969.jpeg/250px-Perfumo_1969.jpeg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 2088,
+      "name": "Mussula",
+      "clubs": [
+        "Atlético Mineiro"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Mussula\" Atlético Mineiro football manager",
+      "candidates": [
+        "List of Clube Atlético Mineiro managers",
+        "1993 Copa de Oro Finals",
+        "Mussula"
+      ]
+    },
+    {
+      "source_id": 2092,
+      "name": "Fito Nieves",
+      "clubs": [
+        "Vitória"
+      ],
+      "status": "no_search_results",
+      "query": "\"Fito Nieves\" Vitória football manager"
+    },
+    {
+      "source_id": 2093,
+      "name": "Vinícius Eutrópio",
+      "clubs": [
+        "Figueirense"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Vinícius Eutrópio\" Figueirense football manager",
+      "candidates": [
+        "Vinícius Eutrópio",
+        "2019 Campeonato Brasileiro Série B",
+        "Márcio Coelho"
+      ]
+    },
+    {
+      "source_id": 2098,
+      "name": "Reinaldo Rueda",
+      "clubs": [
+        "Atlético Nacional"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Reinaldo Rueda",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Argentina_-_Colombia_2022_%2879%29.jpg/250px-Argentina_-_Colombia_2022_%2879%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 2122,
+      "name": "Caturla",
+      "clubs": [
+        "CF Talavera"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Caturla\" CF Talavera football manager",
+      "candidates": [
+        "Eduardo Caturla"
+      ]
+    },
+    {
+      "source_id": 2165,
+      "name": "Alberto Gamero",
+      "clubs": [
+        "Atlético Junior"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Alberto Gamero",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Bobpati%C3%B1ogameroenSKBO.png/250px-Bobpati%C3%B1ogameroenSKBO.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 2169,
+      "name": "Harold Rivera",
+      "clubs": [
+        "Atlético Bucaramanga"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Harold Rivera",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Harold_Rivera_2014.png/250px-Harold_Rivera_2014.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 2192,
+      "name": "Scala",
+      "clubs": [
+        "Parma AC"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Nevio Scala",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Nevio_Scala_2002.tif/lossy-page1-250px-Nevio_Scala_2002.tif.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 2200,
+      "name": "David Vidal",
+      "clubs": [
+        "Rayo Vallecano"
+      ],
+      "status": "no_confident_match",
+      "query": "\"David Vidal\" Rayo Vallecano football manager",
+      "candidates": [
+        "Antonio Calderón",
+        "David Vidal",
+        "José Manuel Barla"
+      ]
+    },
+    {
+      "source_id": 2201,
+      "name": "Sebastião Barroso",
+      "clubs": [
+        "Club León"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Sebastião Lazaroni",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Sebasti%C3%A3o_Lazaroni_2011_1.jpg/250px-Sebasti%C3%A3o_Lazaroni_2011_1.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 2238,
+      "name": "Materazzi",
+      "clubs": [
+        "AS Bari"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Materazzi\" AS Bari football manager",
+      "candidates": [
+        "SSC Bari",
+        "Giuseppe Materazzi",
+        "Rolando Maran"
+      ]
+    },
+    {
+      "source_id": 2264,
+      "name": "Dekker",
+      "clubs": [
+        "Fortuna Sittard"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Chris Dekker",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Chris_Dekker.jpg/250px-Chris_Dekker.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 2339,
+      "name": "van Hanegem",
+      "clubs": [
+        "Feyenoord"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Willem van Hanegem",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/VanHanegem.jpg/250px-VanHanegem.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 2373,
+      "name": "Joe Royle",
+      "clubs": [
+        "Oldham Athletic FC"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Joe Royle\" Oldham Athletic FC football manager",
+      "candidates": [
+        "Oldham Athletic A.F.C.",
+        "Joe Royle",
+        "Willie Donachie"
+      ]
+    },
+    {
+      "source_id": 2386,
+      "name": "Luiz Felipe Scolari",
+      "clubs": [
+        "Grêmio"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Luiz Felipe Scolari",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Felip%C3%A3o_cropped.jpg/250px-Felip%C3%A3o_cropped.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 2388,
+      "name": "David Thomas Bassett",
+      "clubs": [
+        "Sheffield United  FC"
+      ],
+      "status": "no_confident_match",
+      "query": "\"David Thomas Bassett\" Sheffield United  FC football manager",
+      "candidates": [
+        "Dave Bassett"
+      ]
+    },
+    {
+      "source_id": 2401,
+      "name": "Jorge Valdano",
+      "clubs": [
+        "CD Tenerife"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Jorge Valdano",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Jorge_Valdano_Cropped.jpg/250px-Jorge_Valdano_Cropped.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 2404,
+      "name": "Wim Koevermans",
+      "clubs": [
+        "FC Groningen"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Wim Koevermans\" FC Groningen football manager",
+      "candidates": [
+        "NEC Nijmegen",
+        "Fortuna Sittard",
+        "Wim Koevermans"
+      ]
+    },
+    {
+      "source_id": 2406,
+      "name": "Versleijen",
+      "clubs": [
+        "De Graafschap"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Versleijen\" De Graafschap football manager",
+      "candidates": [
+        "De Graafschap",
+        "Jan de Jonge",
+        "Jan Versleijen"
+      ]
+    },
+    {
+      "source_id": 2409,
+      "name": "José Antonio Novo\r\nJuan Fidalgo\r\nJuan Fidalgo",
+      "clubs": [
+        "Real Oviedo B"
+      ],
+      "status": "no_search_results",
+      "query": "\"José Antonio Novo\r\nJuan Fidalgo\r\nJuan Fidalgo\" Real Oviedo B football manager"
+    },
+    {
+      "source_id": 2410,
+      "name": "Los Arcos",
+      "clubs": [
+        "CA Osasuna B"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Los Arcos\" CA Osasuna B football manager",
+      "candidates": [
+        "CA Osasuna"
+      ]
+    },
+    {
+      "source_id": 2416,
+      "name": "Costas",
+      "clubs": [
+        "FC Barcelona B"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Quique Costas",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Feyenoord_tegen_Barcelona_0-0%2C_Europacup_nr_5_scheidsrechter_Gl%C3%B6ckner%2C_nr_6%2C_Bestanddeelnr_927-5357.jpg/250px-Feyenoord_tegen_Barcelona_0-0%2C_Europacup_nr_5_scheidsrechter_Gl%C3%B6ckner%2C_nr_6%2C_Bestanddeelnr_927-5357.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 2424,
+      "name": "Waldo Ramos",
+      "clubs": [
+        "UE Figueres"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Waldo Ramos\" UE Figueres football manager",
+      "candidates": [
+        "Waldo Ramos"
+      ]
+    },
+    {
+      "source_id": 2432,
+      "name": "Thomas Rongen",
+      "clubs": [
+        "Fort Lauderdale"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Thomas Rongen",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Thomas_Rongen_photo_by_Djuradj_Vujcic.jpg/250px-Thomas_Rongen_photo_by_Djuradj_Vujcic.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 2442,
+      "name": "Néstor Craviotto",
+      "clubs": [
+        "Deportivo Pereira"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Néstor Craviotto\" Deportivo Pereira football manager",
+      "candidates": [
+        "Néstor Craviotto",
+        "Alexis Márquez (footballer)",
+        "Dayron Pérez"
+      ]
+    },
+    {
+      "source_id": 2456,
+      "name": "Capello",
+      "clubs": [
+        "AC Milan"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Fabio Capello",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/25th_Laureus_World_Sports_Awards_-_Red_Carpet_-_Fabio_Capello_-_240422_181452_%28cropped%29.jpg/250px-25th_Laureus_World_Sports_Awards_-_Red_Carpet_-_Fabio_Capello_-_240422_181452_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 2465,
+      "name": "Alexandre Gallo",
+      "clubs": [
+        "Ponte Preta"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Alexandre Gallo",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Alexandre_Gallo_2021.png/250px-Alexandre_Gallo_2021.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 2488,
+      "name": "Martelotte",
+      "clubs": [
+        "Santa Cruz"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Martelotte\" Santa Cruz football manager",
+      "candidates": [
+        "Marcelo Martelotte",
+        "2017 Campeonato Brasileiro Série B",
+        "2021 Campeonato Brasileiro Série C"
+      ]
+    },
+    {
+      "source_id": 2490,
+      "name": "Givanildo Oliveira",
+      "clubs": [
+        "América Mineiro"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Givanildo Oliveira\" América Mineiro football manager",
+      "candidates": [
+        "Givanildo Oliveira",
+        "2017 Campeonato Brasileiro Série B",
+        "2019 Campeonato Mineiro"
+      ]
+    },
+    {
+      "source_id": 2493,
+      "name": "Klaus Toppmöller",
+      "clubs": [
+        "Eintracht Frankfurt"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Dino Toppmöller",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Dino_Toppm%C3%B6ller_%28cropped%29.jpg/250px-Dino_Toppm%C3%B6ller_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 2519,
+      "name": "Ewald Lienen",
+      "clubs": [
+        "MSV Duisburg"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Ewald Lienen",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Spieler_%E2%80%93_Tag_der_Legenden_2016_19.jpg/250px-Spieler_%E2%80%93_Tag_der_Legenden_2016_19.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 2561,
+      "name": "Ildo Maneiro",
+      "clubs": [
+        "Danubio"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Ildo Maneiro",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Ildo_Maneiro.jpg/250px-Ildo_Maneiro.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 2621,
+      "name": "Miroslav Karhan",
+      "clubs": [
+        "FC Spartak Trnava"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Miroslav Karhan",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Miroslav_Karhan.jpg/250px-Miroslav_Karhan.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 2692,
+      "name": "Hannes Bongartz",
+      "clubs": [
+        "SG Wattenscheid 09"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Hannes Bongartz\" SG Wattenscheid 09 football manager",
+      "candidates": [
+        "Hans Bongartz"
+      ]
+    },
+    {
+      "source_id": 2726,
+      "name": "Lalo",
+      "clubs": [
+        "CF Palencia"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Lalo\" CF Palencia football manager",
+      "candidates": [
+        "Rubén Baraja"
+      ]
+    },
+    {
+      "source_id": 2727,
+      "name": "Luis Aragonés",
+      "clubs": [
+        "Sevilla FC"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Luis Aragonés",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Luis_Aragones_2011.jpg/250px-Luis_Aragones_2011.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 2730,
+      "name": "Kinnear",
+      "clubs": [
+        "Wimbledon FC"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Joe Kinnear",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Joe_Kinnear_Hull_City_v._Newcastle_United_1.png/250px-Joe_Kinnear_Hull_City_v._Newcastle_United_1.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 2733,
+      "name": "Ken Fogarty",
+      "clubs": [
+        "Tampa Bay Rowdies"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Ken Fogarty\" Tampa Bay Rowdies football manager",
+      "candidates": [
+        "Minnesota Strikers",
+        "Rodney Marsh",
+        "Ken Fogarty"
+      ]
+    },
+    {
+      "source_id": 2739,
+      "name": "Guerini",
+      "clubs": [
+        "US Ancona"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Vincenzo Guerini (footballer)",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Vincenzo_Guerini_2024_%28headshot%29.jpg/250px-Vincenzo_Guerini_2024_%28headshot%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 2756,
+      "name": "Roberto Falcão",
+      "clubs": [
+        "Internacional"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Paulo Roberto Falcão",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Paulo_Roberto_Falc%C3%A3o%2C_Roma_1983-84.jpg/250px-Paulo_Roberto_Falc%C3%A3o%2C_Roma_1983-84.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 2765,
+      "name": "Lillo",
+      "clubs": [
+        "UD Salamanca"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Juan Manuel Lillo",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Juan_Manuel_Lillo_Di%C3%A9z.jpg/250px-Juan_Manuel_Lillo_Di%C3%A9z.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 2776,
+      "name": "Angelo Orazi ",
+      "clubs": [
+        "Ascoli Calcio"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Angelo Orazi \" Ascoli Calcio football manager",
+      "candidates": [
+        "Angelo Orazi",
+        "1978–79 US Catanzaro season",
+        "1980–81 US Catanzaro season"
+      ]
+    },
+    {
+      "source_id": 2777,
+      "name": "Cagni",
+      "clubs": [
+        "Piacenza"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Luigi Cagni",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Associazione_Calcio_Brescia_1971-72.jpg/250px-Associazione_Calcio_Brescia_1971-72.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 2793,
+      "name": "Edward Iordanescu",
+      "clubs": [
+        "CSKA Sofía"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Edward Iordănescu",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Edward_Iordanescu_%28cropped%29.jpg/250px-Edward_Iordanescu_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 2804,
+      "name": "Fontana",
+      "clubs": [
+        "Hellas Verona"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Fontana\" Hellas Verona football manager",
+      "candidates": [
+        "Hellas Verona FC",
+        "Nils Liedholm",
+        "Maurizio Sarri"
+      ]
+    },
+    {
+      "source_id": 2841,
+      "name": "Ivan Golac",
+      "clubs": [
+        "Dundee Utd FC"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Ivan Golac\" Dundee Utd FC football manager",
+      "candidates": [
+        "Dundee United F.C.",
+        "Ivan Golac",
+        "List of Dundee United F.C. managers"
+      ]
+    },
+    {
+      "source_id": 2844,
+      "name": "Jean Tigana",
+      "clubs": [
+        "Olympique Lyonnais"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Jean Tigana",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Jean_Tigana_cropped.jpg/250px-Jean_Tigana_cropped.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 2860,
+      "name": "Rafa Benítez",
+      "clubs": [
+        "Real Madrid B"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Rafael Benítez",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Shahter-Reak_M_2015_%282%29.jpg/250px-Shahter-Reak_M_2015_%282%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 2861,
+      "name": "Mario Alberto Yepes",
+      "clubs": [
+        "Deportivo Cali"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Mario Yepes",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Yepes_at_skbo.jpg/250px-Yepes_at_skbo.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 2867,
+      "name": "Hernán Lisi",
+      "clubs": [
+        "Once Caldas"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Hernán Lisi\" Once Caldas football manager",
+      "candidates": [
+        "Once Caldas",
+        "2018 Categoría Primera A season",
+        "Hernán Lisi"
+      ]
+    },
+    {
+      "source_id": 2879,
+      "name": "Patrik Werner",
+      "clubs": [
+        "Degerfors IF"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Patrik Werner\" Degerfors IF football manager",
+      "candidates": [
+        "Degerfors IF",
+        "Patrik Werner",
+        "Hampus Zackrisson"
+      ]
+    },
+    {
+      "source_id": 2886,
+      "name": "Ismael Rescalvo",
+      "clubs": [
+        "Envigado FC"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Ismael Rescalvo",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Ismael_Rescalvo.jpg/250px-Ismael_Rescalvo.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 2897,
+      "name": "Paco Loidi",
+      "clubs": [
+        "CD Izarra"
+      ],
+      "status": "no_search_results",
+      "query": "\"Paco Loidi\" CD Izarra football manager"
+    },
+    {
+      "source_id": 2903,
+      "name": "Fernando Velasco",
+      "clubs": [
+        "Cúcuta Deportivo"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Fernando Velasco (football manager)",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/FernandoVelasco.jpg/250px-FernandoVelasco.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 2905,
+      "name": "Cheché Hernández",
+      "clubs": [
+        "Deportes Quindío"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Cheché Hernández\" Deportes Quindío football manager",
+      "candidates": [
+        "Deportivo Cali",
+        "Cheche Hernández",
+        "2022 Liga DIMAYOR"
+      ]
+    },
+    {
+      "source_id": 2910,
+      "name": "Rob Baan",
+      "clubs": [
+        "FC Twente"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Rob Baan",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/9_-_Rob_Baan.jpg/250px-9_-_Rob_Baan.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 2914,
+      "name": "Bernd Stange",
+      "clubs": [
+        "VfB Leipzig"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Bernd Stange",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Bernd_Stange%2C_2012_%28cropped%29.jpg/250px-Bernd_Stange%2C_2012_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 2924,
+      "name": "Vítor Oliveira",
+      "clubs": [
+        "Gil Vicente FC"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Vítor Oliveira\" Gil Vicente FC football manager",
+      "candidates": [
+        "Gil Vicente F.C.",
+        "Paulo Alves (footballer, born 1969)",
+        "Vítor Oliveira (footballer, born 1953)"
+      ]
+    },
+    {
+      "source_id": 2927,
+      "name": "Dino Zoff",
+      "clubs": [
+        "SS Lazio"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Dino Zoff",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Dino_Zoff_%281974%29.jpg/250px-Dino_Zoff_%281974%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 2928,
+      "name": "Franco Scoglio",
+      "clubs": [
+        "Genoa"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Franco Scoglio\" Genoa football manager",
+      "candidates": [
+        "Franco Scoglio",
+        "Andrea Sussi",
+        "Genoa CFC"
+      ]
+    },
+    {
+      "source_id": 2929,
+      "name": "Arne Erlandsen",
+      "clubs": [
+        "Lillestrøm SK"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Arne Erlandsen",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Arne_erlandsen.jpg/250px-Arne_erlandsen.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 2936,
+      "name": "Palomo",
+      "clubs": [
+        "Almería CF"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Palomo\" Almería CF football manager",
+      "candidates": [
+        "Juan Muñoz (footballer, born 1995)"
+      ]
+    },
+    {
+      "source_id": 2942,
+      "name": "Carlos Alberto Torres",
+      "clubs": [
+        "Botafogo"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Carlos Alberto Torres",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Carlos_alberto_cosmos.jpg/250px-Carlos_alberto_cosmos.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 2947,
+      "name": "Masakatsu Miyamoto",
+      "clubs": [
+        "Kashima Antlers"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Masakatsu Miyamoto\" Kashima Antlers football manager",
+      "candidates": [
+        "Takashi Sekizuka",
+        "Masakatsu Miyamoto",
+        "1993 Emperor's Cup final"
+      ]
+    },
+    {
+      "source_id": 2948,
+      "name": "Víctor Púa",
+      "clubs": [
+        "River Plate"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Víctor Púa\" River Plate football manager",
+      "candidates": [
+        "Víctor Púa",
+        "Club Atlético River Plate (Montevideo)",
+        "Jorge da Silva"
+      ]
+    },
+    {
+      "source_id": 2949,
+      "name": "Arconada",
+      "clubs": [
+        "Real Unión"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Gonzalo Arconada",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Gonzalo_Arconada.jpg/250px-Gonzalo_Arconada.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 2965,
+      "name": "Roberto Silva",
+      "clubs": [
+        "Toluca"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Roberto Silva\" Toluca football manager",
+      "candidates": [
+        "1994–95 Toluca FC season",
+        "List of Toluca FC managers"
+      ]
+    },
+    {
+      "source_id": 2970,
+      "name": "José López",
+      "clubs": [
+        "Racing de Ferrol"
+      ],
+      "status": "no_confident_match",
+      "query": "\"José López\" Racing de Ferrol football manager",
+      "candidates": [
+        "Unai Emery",
+        "2020–21 RCD Mallorca season",
+        "José Manuel Corral (footballer)"
+      ]
+    },
+    {
+      "source_id": 2978,
+      "name": "Luis Costa",
+      "clubs": [
+        "Córdoba CF"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Luis Costa (Spanish footballer)",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Luis_Costa_Juan_%281987%29.png/250px-Luis_Costa_Juan_%281987%29.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 2983,
+      "name": "Christoph Paul Daum",
+      "clubs": [
+        "VfB Stuttgart"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Christoph Daum",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/2016-02-01_Christoph_Daum.jpg/250px-2016-02-01_Christoph_Daum.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 2992,
+      "name": "Guy David",
+      "clubs": [
+        "Le Havre AC"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Guy David\" Le Havre AC football manager",
+      "candidates": [
+        "Stade Malherbe Caen",
+        "Le Havre AC",
+        "Guy David (football)"
+      ]
+    },
+    {
+      "source_id": 2993,
+      "name": "Pierre Mankowski",
+      "clubs": [
+        "Lille OSC"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Pierre Mankowski",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/%D0%9E%D1%82%D0%BA%D1%80%D1%8B%D1%82%D1%8B%D0%B5_%D1%82%D1%80%D0%B5%D0%BD%D0%B8%D1%80%D0%BE%D0%B2%D0%BA%D0%B8_%D0%BC%D0%BE%D0%BB%D0%BE%D0%B4%D0%B5%D0%B6%D0%BD%D1%8B%D1%85_%D1%81%D0%B1%D0%BE%D1%80%D0%BD%D1%8B%D1%85_%D0%A4%D1%80%D0%B0%D0%BD%D1%86%D0%B8%D0%B8_%D0%B8_%D0%A3%D0%BA%D1%80%D0%B0%D0%B8%D0%BD%D1%8B._1_%D1%81%D0%B5%D0%BD%D1%82%D1%8F%D0%B1%D1%80%D1%8F_2016_%D0%B3%D0%BE%D0%B4%D0%B0_%E2%80%94_706302.jpg/250px-%D0%9E%D1%82%D0%BA%D1%80%D1%8B%D1%82%D1%8B%D0%B5_%D1%82%D1%80%D0%B5%D0%BD%D0%B8%D1%80%D0%BE%D0%B2%D0%BA%D0%B8_%D0%BC%D0%BE%D0%BB%D0%BE%D0%B4%D0%B5%D0%B6%D0%BD%D1%8B%D1%85_%D1%81%D0%B1%D0%BE%D1%80%D0%BD%D1%8B%D1%85_%D0%A4%D1%80%D0%B0%D0%BD%D1%86%D0%B8%D0%B8_%D0%B8_%D0%A3%D0%BA%D1%80%D0%B0%D0%B8%D0%BD%D1%8B._1_%D1%81%D0%B5%D0%BD%D1%82%D1%8F%D0%B1%D1%80%D1%8F_2016_%D0%B3%D0%BE%D0%B4%D0%B0_%E2%80%94_706302.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 2994,
+      "name": "Fuertes",
+      "clubs": [
+        "CD Mensajero"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Fuertes\" CD Mensajero football manager",
+      "candidates": [
+        "2021 in association football",
+        "José Ramón Fuertes"
+      ]
+    },
+    {
+      "source_id": 2995,
+      "name": "Vicente Cantatore",
+      "clubs": [
+        "Rosario Central"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Vicente Cantatore",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Vicente_Cantatore.png/250px-Vicente_Cantatore.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 2999,
+      "name": "Voltaire García",
+      "clubs": [
+        "CA Malagueño"
+      ],
+      "status": "no_search_results",
+      "query": "\"Voltaire García\" CA Malagueño football manager"
+    },
+    {
+      "source_id": 3001,
+      "name": "Mora",
+      "clubs": [
+        "Gimnàstic de Tarragona"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Pere Valentí Mora",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/PedroMora1974%2C_Bestanddeelnr_927-5357.jpg/250px-PedroMora1974%2C_Bestanddeelnr_927-5357.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 3002,
+      "name": "Paulo Autuori",
+      "clubs": [
+        "CS Marítimo"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Paulo Autuori",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Paulo_Autuori_2011.jpg/250px-Paulo_Autuori_2011.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 3003,
+      "name": "Vítor Urbano",
+      "clubs": [
+        "FC Paços de Ferreira"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Vítor Urbano\" FC Paços de Ferreira football manager",
+      "candidates": [
+        "S.C. Beira-Mar",
+        "1993–94 Primeira Divisão",
+        "1994–95 Primeira Divisão"
+      ]
+    },
+    {
+      "source_id": 3004,
+      "name": "Fernando Santos",
+      "clubs": [
+        "GD Estoril-Praia"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Fernando Santos (footballer, born 1954)",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Fernando_Santos_20240116_1.jpg/250px-Fernando_Santos_20240116_1.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 3005,
+      "name": "Junior",
+      "clubs": [
+        "Flamengo"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Junior\" Flamengo football manager",
+      "candidates": [
+        "Carlinhos (footballer, born 1937)",
+        "Tim (footballer)",
+        "Ney Franco"
+      ]
+    },
+    {
+      "source_id": 3008,
+      "name": "Gílson Nunes",
+      "clubs": [
+        "Sport Recife"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Gílson Nunes\" Sport Recife football manager",
+      "candidates": [
+        "Goiás Esporte Clube",
+        "Gílson Nunes",
+        "List of Sport Club do Recife managers"
+      ]
+    },
+    {
+      "source_id": 3009,
+      "name": "Oliveira",
+      "clubs": [
+        "SC Braga"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Oliveira\" SC Braga football manager",
+      "candidates": [
+        "António Caldas",
+        "Vítor Oliveira (footballer, born 1953)",
+        "António Oliveira (footballer, born 1982)"
+      ]
+    },
+    {
+      "source_id": 3011,
+      "name": "Ramón Moya",
+      "clubs": [
+        "CE L'Hospitalet"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Ramón Moya\" CE L'Hospitalet football manager",
+      "candidates": [
+        "Ramón Moya"
+      ]
+    },
+    {
+      "source_id": 3016,
+      "name": "Sandy Clark",
+      "clubs": [
+        "Hearts FC"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Sandy Clark",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Sandy_Clark_2018.jpg/250px-Sandy_Clark_2018.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 3020,
+      "name": "Guus Hiddink",
+      "clubs": [
+        "Valencia CF"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Guus Hiddink",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Guus_Hiddink_2012.jpg/250px-Guus_Hiddink_2012.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 3021,
+      "name": "Plaza",
+      "clubs": [
+        "Real Jaén CF"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Plaza\" Real Jaén CF football manager",
+      "candidates": [
+        "Lleida CF",
+        "José Manuel Barla",
+        "Tolo Plaza"
+      ]
+    },
+    {
+      "source_id": 3023,
+      "name": "Blanco",
+      "clubs": [
+        "Atlético Marbella"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Kepa Blanco",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Kepa.png/250px-Kepa.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 3027,
+      "name": "Ortuondo",
+      "clubs": [
+        "CF Extremadura"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Ortuondo\" CF Extremadura football manager",
+      "candidates": [
+        "CF Extremadura",
+        "Josu Ortuondo"
+      ]
+    },
+    {
+      "source_id": 3032,
+      "name": "Gustavo Onaindia",
+      "clubs": [
+        "Unión Magdalena"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Gustavo Onaindia\" Unión Magdalena football manager",
+      "candidates": [
+        "Carlos Silva (Colombian footballer)"
+      ]
+    },
+    {
+      "source_id": 3033,
+      "name": "Gérard Gili",
+      "clubs": [
+        "Montpellier HSC"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Gérard Gili",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/G%C3%A9rard_Gili_%28cropped%29.jpg/250px-G%C3%A9rard_Gili_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 3045,
+      "name": "Lalo",
+      "clubs": [
+        "CP Ejido"
+      ],
+      "status": "no_search_results",
+      "query": "\"Lalo\" CP Ejido football manager"
+    },
+    {
+      "source_id": 3050,
+      "name": "Brindisi",
+      "clubs": [
+        "Independiente"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Miguel Ángel Brindisi",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Brindisi_argentina.jpg/250px-Brindisi_argentina.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 3053,
+      "name": "Gregorio Pçerez",
+      "clubs": [
+        "Deportes Tolima"
+      ],
+      "status": "no_search_results",
+      "query": "\"Gregorio Pçerez\" Deportes Tolima football manager"
+    },
+    {
+      "source_id": 3057,
+      "name": "Giorgio Rumignani",
+      "clubs": [
+        "Pescara"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Giorgio Rumignani\" Pescara football manager",
+      "candidates": [
+        "Delfino Pescara 1936",
+        "1998–99 Serie B",
+        "Giorgio Rumignani"
+      ]
+    },
+    {
+      "source_id": 3058,
+      "name": "Jorge Vivaldo",
+      "clubs": [
+        "Atlético Huila"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Jorge Vivaldo\" Atlético Huila football manager",
+      "candidates": [
+        "Atlético Huila",
+        "Jorge Vivaldo",
+        "2017 Categoría Primera A season"
+      ]
+    },
+    {
+      "source_id": 3059,
+      "name": "Ziarreta",
+      "clubs": [
+        "Sestao SC"
+      ],
+      "status": "no_search_results",
+      "query": "\"Ziarreta\" Sestao SC football manager"
+    },
+    {
+      "source_id": 3063,
+      "name": "Ricardo Ferretti",
+      "clubs": [
+        "Pumas UNAM"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Ricardo Ferretti",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Ricardo_Ferretti2016_%28cropped%29.jpg/250px-Ricardo_Ferretti2016_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 3067,
+      "name": "Bayona",
+      "clubs": [
+        "CD Tudelano"
+      ],
+      "status": "no_search_results",
+      "query": "\"Bayona\" CD Tudelano football manager"
+    },
+    {
+      "source_id": 3068,
+      "name": "Miguel Angel Russo",
+      "clubs": [
+        "Estudiantes de la Plata"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Miguel Ángel Russo",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Miguel_russo_joven_estudiantes.jpg/250px-Miguel_russo_joven_estudiantes.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 3080,
+      "name": "ten Cate",
+      "clubs": [
+        "ADO Den Haag"
+      ],
+      "status": "no_confident_match",
+      "query": "\"ten Cate\" ADO Den Haag football manager",
+      "candidates": [
+        "2008–09 Eredivisie",
+        "2009–10 Eredivisie",
+        "2007 KNVB Cup final"
+      ]
+    },
+    {
+      "source_id": 3091,
+      "name": "Procópio Cardoso",
+      "clubs": [
+        "Esporte Bahía"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Procópio Cardoso\" Esporte Bahía football manager",
+      "candidates": [
+        "2003 Campeonato Brasileiro Série A",
+        "Procópio Cardoso",
+        "Carlos Amadeu"
+      ]
+    },
+    {
+      "source_id": 3092,
+      "name": "Marcelo Cabo",
+      "clubs": [
+        "Atlético Goianiense"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Marcelo Cabo",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Marcelo_Cabo.jpg/250px-Marcelo_Cabo.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 3093,
+      "name": "Pachequinho",
+      "clubs": [
+        "Coritiba"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Pachequinho\" Coritiba football manager",
+      "candidates": [
+        "Coritiba Foot Ball Club",
+        "2015 Campeonato Brasileiro Série A",
+        "Pachequinho"
+      ]
+    },
+    {
+      "source_id": 3094,
+      "name": "Telê Santana",
+      "clubs": [
+        "São Paulo"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Telê Santana",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Tel%C3%A9%2C_T%C3%A9cnico_de_Futebol.tif/lossy-page1-250px-Tel%C3%A9%2C_T%C3%A9cnico_de_Futebol.tif.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 3095,
+      "name": "Mário Sérgio",
+      "clubs": [
+        "Corinthians"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Mário Sérgio (footballer, born 1950)",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/a/af/M%C3%A1rio_S%C3%A9rgio_Pontes_de_Paiva.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+    },
+    {
+      "source_id": 3096,
+      "name": "Paulo Autuori",
+      "clubs": [
+        "At. Paranaense"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Paulo Autuori",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Paulo_Autuori_2011.jpg/250px-Paulo_Autuori_2011.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 3111,
+      "name": "Carlos de los Cobos",
+      "clubs": [
+        "Querétaro"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Carlos de los Cobos\" Querétaro football manager",
+      "candidates": [
+        "Carlos de los Cobos",
+        "Tomás Boy",
+        "1986 FIFA World Cup knockout stage"
+      ]
+    },
+    {
+      "source_id": 3112,
+      "name": "John Gorman",
+      "clubs": [
+        "Swindon Town FC"
+      ],
+      "status": "no_confident_match",
+      "query": "\"John Gorman\" Swindon Town FC football manager",
+      "candidates": [
+        "John Gorman (footballer)",
+        "Jim Barron (footballer, born 1943)",
+        "1993–94 Swindon Town F.C. season"
+      ]
+    },
+    {
+      "source_id": 3152,
+      "name": "Osvaldo Sosa",
+      "clubs": [
+        "Argentinos Juniors"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Osvaldo Sosa",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Osvaldo_Chiche_Sosa.png/250px-Osvaldo_Chiche_Sosa.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 3166,
+      "name": "Lucescu",
+      "clubs": [
+        "Brescia"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Mircea Lucescu",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Mircea_Lucescu_2009.jpg/250px-Mircea_Lucescu_2009.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 3168,
+      "name": "Bolchi",
+      "clubs": [
+        "AC Cesena"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Bruno Bolchi",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/1961%E2%80%9362_Inter_Milan%27s_Balleri%2C_Morbello%2C_Hitchens%2C_Bicchierai%2C_Corso%2C_Dellagiovanna_and_Bolchi.jpg/250px-1961%E2%80%9362_Inter_Milan%27s_Balleri%2C_Morbello%2C_Hitchens%2C_Bicchierai%2C_Corso%2C_Dellagiovanna_and_Bolchi.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 3169,
+      "name": "Carlos Linaris",
+      "clubs": [
+        "Rampla Juniors"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Carlos Linaris\" Rampla Juniors football manager",
+      "candidates": [
+        "Club Atlético River Plate (Montevideo)",
+        "Carlos Linaris"
+      ]
+    },
+    {
+      "source_id": 3172,
+      "name": "Juan Mozo",
+      "clubs": [
+        "Liverpool"
+      ],
+      "status": "no_search_results",
+      "query": "\"Juan Mozo\" Liverpool football manager"
+    },
+    {
+      "source_id": 3173,
+      "name": "Wálter Roque",
+      "clubs": [
+        "Club Atlético Cerro"
+      ],
+      "status": "no_search_results",
+      "query": "\"Wálter Roque\" Club Atlético Cerro football manager"
+    },
+    {
+      "source_id": 3174,
+      "name": "Víctor Luzardo",
+      "clubs": [
+        "Racing de Montevideo"
+      ],
+      "status": "no_search_results",
+      "query": "\"Víctor Luzardo\" Racing de Montevideo football manager"
+    },
+    {
+      "source_id": 3206,
+      "name": "Tommy Burns",
+      "clubs": [
+        "Kilmarnock FC"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Tommy Burns\" Kilmarnock FC football manager",
+      "candidates": [
+        "Kilmarnock F.C.",
+        "Tommy Burns (footballer)",
+        "1995–96 Scottish Premier Division"
+      ]
+    },
+    {
+      "source_id": 3220,
+      "name": "Enrique Martín",
+      "clubs": [
+        "CA Osasuna"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Enrique Martín\" CA Osasuna football manager",
+      "candidates": [
+        "Pedro María Zabalza",
+        "Enrique Martín (footballer, born 1956)",
+        "2018–19 Segunda División"
+      ]
+    },
+    {
+      "source_id": 3223,
+      "name": "Boronat",
+      "clubs": [
+        "CD Badajoz"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Boronat\" CD Badajoz football manager",
+      "candidates": [
+        "Hennadiy Perepadenko",
+        "Alfonso Subero"
+      ]
+    },
+    {
+      "source_id": 3224,
+      "name": "Robi",
+      "clubs": [
+        "Palamós CF"
+      ],
+      "status": "no_search_results",
+      "query": "\"Robi\" Palamós CF football manager"
+    },
+    {
+      "source_id": 3225,
+      "name": "Zeman",
+      "clubs": [
+        "Foggia"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Zdeněk Zeman",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Zdenek_Zeman_%28cropped%29.JPG/250px-Zdenek_Zeman_%28cropped%29.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 3226,
+      "name": "Marchioro",
+      "clubs": [
+        "AC Reggiana"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Marchioro\" AC Reggiana football manager",
+      "candidates": [
+        "AC Reggiana 1919",
+        "Giuseppe Marchioro",
+        "1996–97 Bologna FC 1909 season"
+      ]
+    },
+    {
+      "source_id": 3227,
+      "name": "Simoni",
+      "clubs": [
+        "US Cremonese"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Luigi Simoni",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/1960s_AC_Torino_-_Luigi_Simoni.jpg/250px-1960s_AC_Torino_-_Luigi_Simoni.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 3228,
+      "name": "Marchesi",
+      "clubs": [
+        "US Lecce"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Marchesi\" US Lecce football manager",
+      "candidates": [
+        "Rudolph Valentino",
+        "US Lecce",
+        "2021–22 Juventus FC Under-23 season"
+      ]
+    },
+    {
+      "source_id": 3229,
+      "name": "Teixidó",
+      "clubs": [
+        "CD Ourense"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Teixidó\" CD Ourense football manager",
+      "candidates": [
+        "Luis Rodríguez Vaz"
+      ]
+    },
+    {
+      "source_id": 3230,
+      "name": "Toni Grande",
+      "clubs": [
+        "Real Madrid C"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Toni Grande",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Team_Korea_Russia_WorldCup_20-1_%28cropped%29.jpg/250px-Team_Korea_Russia_WorldCup_20-1_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 3231,
+      "name": "José Antonio Tejedor",
+      "clubs": [
+        "Real Ávila"
+      ],
+      "status": "no_confident_match",
+      "query": "\"José Antonio Tejedor\" Real Ávila football manager",
+      "candidates": [
+        "Real Ávila CF",
+        "José Antonio Tejedor"
+      ]
+    },
+    {
+      "source_id": 3232,
+      "name": "Raúl González",
+      "clubs": [
+        "Avilés Industrial"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Raúl González\" Avilés Industrial football manager",
+      "candidates": [
+        "Raúl González (football manager, born 1952)"
+      ]
+    },
+    {
+      "source_id": 3233,
+      "name": "Félix",
+      "clubs": [
+        "Arosa SC"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Félix\" Arosa SC football manager",
+      "candidates": [
+        "Félix Carnero"
+      ]
+    },
+    {
+      "source_id": 3234,
+      "name": "Manolo Chico",
+      "clubs": [
+        "Atlético Tomelloso"
+      ],
+      "status": "no_search_results",
+      "query": "\"Manolo Chico\" Atlético Tomelloso football manager"
+    },
+    {
+      "source_id": 3237,
+      "name": "Mintegui",
+      "clubs": [
+        "Bermeo Club"
+      ],
+      "status": "no_search_results",
+      "query": "\"Mintegui\" Bermeo Club football manager"
+    },
+    {
+      "source_id": 3238,
+      "name": "Perico Alonso",
+      "clubs": [
+        "SD Beasain"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Periko Alonso",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Periko_Alonso.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+    },
+    {
+      "source_id": 3239,
+      "name": "Vicente",
+      "clubs": [
+        "RS Gimnástica T."
+      ],
+      "status": "no_confident_match",
+      "query": "\"Vicente\" RS Gimnástica T. football manager",
+      "candidates": [
+        "List of Real Madrid CF seasons",
+        "1922–23 Real Madrid CF season",
+        "2024 in association football"
+      ]
+    },
+    {
+      "source_id": 3240,
+      "name": "Urquiaga",
+      "clubs": [
+        "CD Basconia"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Urquiaga\" CD Basconia football manager",
+      "candidates": [
+        "Santiago Urkiaga",
+        "Athletic Bilbao B"
+      ]
+    },
+    {
+      "source_id": 3241,
+      "name": "Iranzo",
+      "clubs": [
+        "Endesa Andorra"
+      ],
+      "status": "no_search_results",
+      "query": "\"Iranzo\" Endesa Andorra football manager"
+    },
+    {
+      "source_id": 3242,
+      "name": "Tardío",
+      "clubs": [
+        "Utebo FC"
+      ],
+      "status": "no_search_results",
+      "query": "\"Tardío\" Utebo FC football manager"
+    },
+    {
+      "source_id": 3243,
+      "name": "Segurola",
+      "clubs": [
+        "CD Touring"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Segurola\" CD Touring football manager",
+      "candidates": [
+        "Real Sociedad C"
+      ]
+    },
+    {
+      "source_id": 3245,
+      "name": "Bonachera",
+      "clubs": [
+        "UDA Gramenet"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Bonachera\" UDA Gramenet football manager",
+      "candidates": [
+        "Paco Bonachera"
+      ]
+    },
+    {
+      "source_id": 3246,
+      "name": "Neme",
+      "clubs": [
+        "Yeclano CF"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Neme\" Yeclano CF football manager",
+      "candidates": [
+        "Nemesio Martín"
+      ]
+    },
+    {
+      "source_id": 3247,
+      "name": "Manolo Jiménez",
+      "clubs": [
+        "Benidorm CD"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Manolo Jiménez\" Benidorm CD football manager",
+      "candidates": [
+        "Manolo Jiménez (footballer, born 1960)"
+      ]
+    },
+    {
+      "source_id": 3248,
+      "name": "Xavi Agustí",
+      "clubs": [
+        "FC Andorra"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Xavi Agustí\" FC Andorra football manager",
+      "candidates": [
+        "FC Andorra"
+      ]
+    },
+    {
+      "source_id": 3249,
+      "name": "Eduard Teixeiro",
+      "clubs": [
+        "AEC Manlleu"
+      ],
+      "status": "no_search_results",
+      "query": "\"Eduard Teixeiro\" AEC Manlleu football manager"
+    },
+    {
+      "source_id": 3250,
+      "name": "Manolo",
+      "clubs": [
+        "CE Premià"
+      ],
+      "status": "no_search_results",
+      "query": "\"Manolo\" CE Premià football manager"
+    },
+    {
+      "source_id": 3251,
+      "name": "Agujitas",
+      "clubs": [
+        "UE Rubí"
+      ],
+      "status": "no_search_results",
+      "query": "\"Agujitas\" UE Rubí football manager"
+    },
+    {
+      "source_id": 3252,
+      "name": "Churruca",
+      "clubs": [
+        "PD Santa Eulalia"
+      ],
+      "status": "no_search_results",
+      "query": "\"Churruca\" PD Santa Eulalia football manager"
+    },
+    {
+      "source_id": 3255,
+      "name": "Calvo Marini",
+      "clubs": [
+        "CD Cieza"
+      ],
+      "status": "no_search_results",
+      "query": "\"Calvo Marini\" CD Cieza football manager"
+    },
+    {
+      "source_id": 3256,
+      "name": "Toni Bauzá",
+      "clubs": [
+        "CE Manacor"
+      ],
+      "status": "no_search_results",
+      "query": "\"Toni Bauzá\" CE Manacor football manager"
+    },
+    {
+      "source_id": 3257,
+      "name": "Chaparro",
+      "clubs": [
+        "Ecija Balompié"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Paco Chaparro",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Chaparro_betis.JPG/250px-Chaparro_betis.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 3258,
+      "name": "Pacuco Rosales",
+      "clubs": [
+        "CD Maspalomas"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Pacuco Rosales\" CD Maspalomas football manager",
+      "candidates": [
+        "UD Las Palmas"
+      ]
+    },
+    {
+      "source_id": 3259,
+      "name": "Burgueña",
+      "clubs": [
+        "CD Estepona"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Burgueña\" CD Estepona football manager",
+      "candidates": [
+        "Raúl Procopio"
+      ]
+    },
+    {
+      "source_id": 3260,
+      "name": "Santiago Martín",
+      "clubs": [
+        "UD Realejos"
+      ],
+      "status": "no_search_results",
+      "query": "\"Santiago Martín\" UD Realejos football manager"
+    },
+    {
+      "source_id": 3261,
+      "name": "Oviedo",
+      "clubs": [
+        "Marmol Macael CD"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Oviedo\" Marmol Macael CD football manager",
+      "candidates": [
+        "Floro Garrido",
+        "Antonio Oviedo"
+      ]
+    },
+    {
+      "source_id": 3262,
+      "name": "Abel Braga",
+      "clubs": [
+        "FC Famalicão"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Abel Braga",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/ABEL_BRAGA_%2851839163546%29_%28cropped%29.png/250px-ABEL_BRAGA_%2851839163546%29_%28cropped%29.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 3263,
+      "name": "Mário Reis",
+      "clubs": [
+        "SC Salgueiros"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Mário Reis\" SC Salgueiros football manager",
+      "candidates": [
+        "1996–97 Primeira Divisão",
+        "2001–02 Primeira Liga",
+        "Mário Reis (footballer)"
+      ]
+    },
+    {
+      "source_id": 3264,
+      "name": "Filipović",
+      "clubs": [
+        "Beira-Mar"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Zoran Filipović",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Zoran4.jpg/250px-Zoran4.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 3284,
+      "name": "Sarramagna",
+      "clubs": [
+        "FC Martigues"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Christian Sarramagna",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Christian_Sarramagna_en_1971.jpg/250px-Christian_Sarramagna_en_1971.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 3285,
+      "name": "Luis Fernández",
+      "clubs": [
+        "AS Cannes"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Luis Fernandez",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Luis_Fernandez.jpg/250px-Luis_Fernandez.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 3286,
+      "name": "Sef Vergoossen",
+      "clubs": [
+        "MVV Maastricht"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Sef Vergoossen",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Sef_Vergoossen.jpg/250px-Sef_Vergoossen.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 3293,
+      "name": "Marian Bondrea",
+      "clubs": [
+        "CS Universitatea Craiova"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Marian Bondrea\" CS Universitatea Craiova football manager",
+      "candidates": [
+        "Silviu Lung",
+        "Ovidiu Stîngă",
+        "Marian Bondrea"
+      ]
+    },
+    {
+      "source_id": 3294,
+      "name": "Carlos Fren",
+      "clubs": [
+        "Deportivo Mandiyú"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Carlos Fren\" Deportivo Mandiyú football manager",
+      "candidates": [
+        "Diego Maradona",
+        "Carlos Fren"
+      ]
+    },
+    {
+      "source_id": 3295,
+      "name": "Victorio Cocco",
+      "clubs": [
+        "Gimnasia y Tiro"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Victorio Cocco",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/en/thumb/f/f9/CoccoVictorio.jpg/250px-CoccoVictorio.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 3296,
+      "name": "Luis Manuel Blanco",
+      "clubs": [
+        "Platense"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Luis Manuel Blanco",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Director-Tecnico-Entrenador-Luis-Manuel-Blanco.jpg/250px-Director-Tecnico-Entrenador-Luis-Manuel-Blanco.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 3297,
+      "name": "Fernando Areán",
+      "clubs": [
+        "Deportivo Español"
+      ],
+      "status": "no_search_results",
+      "query": "\"Fernando Areán\" Deportivo Español football manager"
+    },
+    {
+      "source_id": 3298,
+      "name": "Gildásio",
+      "clubs": [
+        "Remo"
+      ],
+      "status": "no_search_results",
+      "query": "\"Gildásio\" Remo football manager"
+    },
+    {
+      "source_id": 3299,
+      "name": "Manuel Vucetich",
+      "clubs": [
+        "Tecos U.A.G."
+      ],
+      "status": "matched",
+      "wikipedia_title": "Víctor Manuel Vucetich",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/V%C3%ADctor_Manuel_Vucetich.jpg/250px-V%C3%ADctor_Manuel_Vucetich.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 3300,
+      "name": "Jorge Gómez",
+      "clubs": [
+        "Toros Hidalgo"
+      ],
+      "status": "no_search_results",
+      "query": "\"Jorge Gómez\" Toros Hidalgo football manager"
+    },
+    {
+      "source_id": 3301,
+      "name": "Rubén \"Ratón\" Ayala",
+      "clubs": [
+        "Correcaminos UAT"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Rubén Ayala",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/WK_voetbal_1974_Argentijnen_in_trainingskamp%2C_Ayala_%28kop%29%2C_Bestanddeelnr_927-2805.jpg/250px-WK_voetbal_1974_Argentijnen_in_trainingskamp%2C_Ayala_%28kop%29%2C_Bestanddeelnr_927-2805.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    {
+      "source_id": 3302,
+      "name": "Silipo",
+      "clubs": [
+        "Cosenza Calcio"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Silipo\" Cosenza Calcio football manager",
+      "candidates": [
+        "US Catanzaro 1929",
+        "2022–23 Palermo FC season",
+        "2025–26 Ascoli Calcio 1898 FC season"
+      ]
+    },
+    {
+      "source_id": 3303,
+      "name": "Fascetti",
+      "clubs": [
+        "AS Lucchese"
+      ],
+      "status": "matched",
+      "wikipedia_title": "Eugenio Fascetti",
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/1/1d/Eugenio_Fascetti_1963.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+    },
+    {
+      "source_id": 3304,
+      "name": "Nedo Sonetti",
+      "clubs": [
+        "AC Monza"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Nedo Sonetti\" AC Monza football manager",
+      "candidates": [
+        "AC Monza",
+        "Nedo Sonetti",
+        "Marco Giampaolo"
+      ]
+    },
+    {
+      "source_id": 3305,
+      "name": "Perotti",
+      "clubs": [
+        "Fidelis Andria"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Perotti\" Fidelis Andria football manager",
+      "candidates": [
+        "2016–17 US Lecce season",
+        "2018–19 SPAL season"
+      ]
+    },
+    {
+      "source_id": 3306,
+      "name": "Pierluigi Frosio",
+      "clubs": [
+        "US Ravenna"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Pierluigi Frosio\" US Ravenna football manager",
+      "candidates": [
+        "AC Monza",
+        "Deaths in February 2022"
+      ]
+    },
+    {
+      "source_id": 3307,
+      "name": "Giuseppe Papadopulo",
+      "clubs": [
+        "Acireale"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Giuseppe Papadopulo\" Acireale football manager",
+      "candidates": [
+        "SSD Città di Acireale 1946",
+        "Giuseppe Papadopulo",
+        "History of Palermo FC"
+      ]
+    },
+    {
+      "source_id": 3308,
+      "name": "Jansen",
+      "clubs": [
+        "RBC Roosendaal"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Jansen\" RBC Roosendaal football manager",
+      "candidates": [
+        "Theo Laseroms",
+        "Regi Blinker",
+        "List of Dutch football transfers summer 2008"
+      ]
+    },
+    {
+      "source_id": 3309,
+      "name": "van Doorneveld",
+      "clubs": [
+        "HFC Haarlem"
+      ],
+      "status": "no_confident_match",
+      "query": "\"van Doorneveld\" HFC Haarlem football manager",
+      "candidates": [
+        "Fortuna Sittard"
+      ]
+    },
+    {
+      "source_id": 3312,
+      "name": "Nienhuis",
+      "clubs": [
+        "SC Veendam"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Nienhuis\" SC Veendam football manager",
+      "candidates": [
+        "Niek Loohuis",
+        "Chris Arlman",
+        "Henk Nienhuis"
+      ]
+    },
+    {
+      "source_id": 3313,
+      "name": "Shu Kamo",
+      "clubs": [
+        "Yokohama Flügels"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Shu Kamo\" Yokohama Flügels football manager",
+      "candidates": [
+        "Shu Kamo",
+        "Bunji Kimura",
+        "1993 Emperor's Cup final"
+      ]
+    },
+    {
+      "source_id": 3314,
+      "name": "Francesco Oddo",
+      "clubs": [
+        "Modena FC"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Francesco Oddo\" Modena FC football manager",
+      "candidates": [
+        "AC Reggiana 1919",
+        "Francesco Oddo",
+        "Franco Colomba"
+      ]
+    },
+    {
+      "source_id": 3315,
+      "name": "Julio César Antúnez",
+      "clubs": [
+        "Bella Vista"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Julio César Antúnez\" Bella Vista football manager",
+      "candidates": [
+        "Club Atlético River Plate (Montevideo)",
+        "2011–12 Campeonato Uruguayo Primera División",
+        "Julio César Antúnez"
+      ]
+    },
+    {
+      "source_id": 3316,
+      "name": "Saúl Rivero",
+      "clubs": [
+        "Progreso"
+      ],
+      "status": "no_confident_match",
+      "query": "\"Saúl Rivero\" Progreso football manager",
+      "candidates": [
+        "Liga AUF Uruguaya",
+        "Saúl Rivero",
+        "Deaths in July 2022"
+      ]
+    },
+    {
+      "source_id": 3317,
+      "name": "Osvaldo Giménez",
+      "clubs": [
+        "Huracán Buceo"
+      ],
+      "status": "no_search_results",
+      "query": "\"Osvaldo Giménez\" Huracán Buceo football manager"
+    }
+  ]
+}

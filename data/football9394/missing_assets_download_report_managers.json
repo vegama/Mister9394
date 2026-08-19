@@ -1,0 +1,5537 @@
+{
+  "generated_at": "2026-08-19T12:48:27.857756+00:00",
+  "manifest": "data\\football9394\\missing_assets_1993_94.json",
+  "network_policy": "best_effort_resumable",
+  "processed": 425,
+  "downloaded": 0,
+  "generated": 0,
+  "skipped_existing": 0,
+  "failed": 425,
+  "rows": [
+    {
+      "asset_type": "manager",
+      "source_id": 7,
+      "name": "Jupp Heynckes",
+      "destination": "frontend\\public\\historical9394\\managers\\7.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 9,
+      "name": "Juande Ramos",
+      "destination": "frontend\\public\\historical9394\\managers\\9.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 17,
+      "name": "Camacho",
+      "destination": "frontend\\public\\historical9394\\managers\\17.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 18,
+      "name": "Koldo Aguirre",
+      "destination": "frontend\\public\\historical9394\\managers\\18.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 24,
+      "name": "Nando Yosu",
+      "destination": "frontend\\public\\historical9394\\managers\\24.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 29,
+      "name": "Otto Rehhagel",
+      "destination": "frontend\\public\\historical9394\\managers\\29.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 32,
+      "name": "Araquistain",
+      "destination": "frontend\\public\\historical9394\\managers\\32.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 36,
+      "name": "José Enrique Díaz",
+      "destination": "frontend\\public\\historical9394\\managers\\36.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 40,
+      "name": "Artur Jorge",
+      "destination": "frontend\\public\\historical9394\\managers\\40.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 43,
+      "name": "González Camacho",
+      "destination": "frontend\\public\\historical9394\\managers\\43.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 44,
+      "name": "Keegan",
+      "destination": "frontend\\public\\historical9394\\managers\\44.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 47,
+      "name": "Brian Hortorn",
+      "destination": "frontend\\public\\historical9394\\managers\\47.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 61,
+      "name": "D'Alessandro",
+      "destination": "frontend\\public\\historical9394\\managers\\61.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 66,
+      "name": "Óscar Cavallero",
+      "destination": "frontend\\public\\historical9394\\managers\\66.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 69,
+      "name": "Hugo Hernández",
+      "destination": "frontend\\public\\historical9394\\managers\\69.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 72,
+      "name": "Juan José Pizzuti",
+      "destination": "frontend\\public\\historical9394\\managers\\72.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 74,
+      "name": "Luis Zubeldia",
+      "destination": "frontend\\public\\historical9394\\managers\\74.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 82,
+      "name": "Souness",
+      "destination": "frontend\\public\\historical9394\\managers\\82.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "low_confidence"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 87,
+      "name": "Bernd Krauss",
+      "destination": "frontend\\public\\historical9394\\managers\\87.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 97,
+      "name": "Ian Branfoot",
+      "destination": "frontend\\public\\historical9394\\managers\\97.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 98,
+      "name": "Patrice Bergues",
+      "destination": "frontend\\public\\historical9394\\managers\\98.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 99,
+      "name": "Marc Bourrier",
+      "destination": "frontend\\public\\historical9394\\managers\\99.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 127,
+      "name": "Atkinson",
+      "destination": "frontend\\public\\historical9394\\managers\\127.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "low_confidence"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 135,
+      "name": "Valdinoci",
+      "destination": "frontend\\public\\historical9394\\managers\\135.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 136,
+      "name": "Carlo Mazzone",
+      "destination": "frontend\\public\\historical9394\\managers\\136.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 139,
+      "name": "Ferguson",
+      "destination": "frontend\\public\\historical9394\\managers\\139.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "low_confidence"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 143,
+      "name": "Adriano Fedele",
+      "destination": "frontend\\public\\historical9394\\managers\\143.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 144,
+      "name": "Eriksson",
+      "destination": "frontend\\public\\historical9394\\managers\\144.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 150,
+      "name": "Trapattoni",
+      "destination": "frontend\\public\\historical9394\\managers\\150.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 156,
+      "name": "Hendriks",
+      "destination": "frontend\\public\\historical9394\\managers\\156.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 158,
+      "name": "Howard Kendall",
+      "destination": "frontend\\public\\historical9394\\managers\\158.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 168,
+      "name": "Ronald Spelbos",
+      "destination": "frontend\\public\\historical9394\\managers\\168.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 169,
+      "name": "Francis",
+      "destination": "frontend\\public\\historical9394\\managers\\169.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "low_confidence"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 171,
+      "name": "Queiroz",
+      "destination": "frontend\\public\\historical9394\\managers\\171.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 174,
+      "name": "Raul Águas",
+      "destination": "frontend\\public\\historical9394\\managers\\174.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 179,
+      "name": "João Alves",
+      "destination": "frontend\\public\\historical9394\\managers\\179.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 185,
+      "name": "Franz Beckenbauer",
+      "destination": "frontend\\public\\historical9394\\managers\\185.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 186,
+      "name": "George Graham",
+      "destination": "frontend\\public\\historical9394\\managers\\186.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "low_confidence"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 192,
+      "name": "Ardiles",
+      "destination": "frontend\\public\\historical9394\\managers\\192.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 193,
+      "name": "Radomir Antić",
+      "destination": "frontend\\public\\historical9394\\managers\\193.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 200,
+      "name": "John Lyall",
+      "destination": "frontend\\public\\historical9394\\managers\\200.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 206,
+      "name": "Juan Ahuntchain",
+      "destination": "frontend\\public\\historical9394\\managers\\206.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 215,
+      "name": "Miguel Angel Russo",
+      "destination": "frontend\\public\\historical9394\\managers\\215.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 216,
+      "name": "Carlos Bianchi",
+      "destination": "frontend\\public\\historical9394\\managers\\216.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 230,
+      "name": "Moré",
+      "destination": "frontend\\public\\historical9394\\managers\\230.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 234,
+      "name": "John Toshack",
+      "destination": "frontend\\public\\historical9394\\managers\\234.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 242,
+      "name": "Hector Salva",
+      "destination": "frontend\\public\\historical9394\\managers\\242.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 279,
+      "name": "Gonzalo Hurtado",
+      "destination": "frontend\\public\\historical9394\\managers\\279.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 285,
+      "name": "Héctor Veira",
+      "destination": "frontend\\public\\historical9394\\managers\\285.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 320,
+      "name": "Wim Rijsbergen",
+      "destination": "frontend\\public\\historical9394\\managers\\320.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 352,
+      "name": "Dalglish",
+      "destination": "frontend\\public\\historical9394\\managers\\352.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 359,
+      "name": "Tommy McLean",
+      "destination": "frontend\\public\\historical9394\\managers\\359.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "low_confidence"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 361,
+      "name": "Willie Miller",
+      "destination": "frontend\\public\\historical9394\\managers\\361.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "low_confidence"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 369,
+      "name": "Levir Culpi",
+      "destination": "frontend\\public\\historical9394\\managers\\369.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 403,
+      "name": "Silvester Takac",
+      "destination": "frontend\\public\\historical9394\\managers\\403.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 516,
+      "name": "Friedel Rausch",
+      "destination": "frontend\\public\\historical9394\\managers\\516.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 518,
+      "name": "Bagnoli",
+      "destination": "frontend\\public\\historical9394\\managers\\518.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 520,
+      "name": "Iñaki Sáez",
+      "destination": "frontend\\public\\historical9394\\managers\\520.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 522,
+      "name": "Sigfried Held",
+      "destination": "frontend\\public\\historical9394\\managers\\522.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 542,
+      "name": "Francisco Ríos",
+      "destination": "frontend\\public\\historical9394\\managers\\542.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "low_confidence"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 560,
+      "name": "Johan Cruyff",
+      "destination": "frontend\\public\\historical9394\\managers\\560.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 564,
+      "name": "Antônio Lopes",
+      "destination": "frontend\\public\\historical9394\\managers\\564.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "low_confidence"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 567,
+      "name": "Carlos Alberto Silva",
+      "destination": "frontend\\public\\historical9394\\managers\\567.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 572,
+      "name": "Hélio dos Anjos",
+      "destination": "frontend\\public\\historical9394\\managers\\572.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 591,
+      "name": "Rildo Menezes",
+      "destination": "frontend\\public\\historical9394\\managers\\591.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 611,
+      "name": "Francis",
+      "destination": "frontend\\public\\historical9394\\managers\\611.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "low_confidence"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 615,
+      "name": "Renzo Ulivieri",
+      "destination": "frontend\\public\\historical9394\\managers\\615.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 620,
+      "name": "Ottmar Hitzfeld",
+      "destination": "frontend\\public\\historical9394\\managers\\620.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 627,
+      "name": "Arsène Wenger",
+      "destination": "frontend\\public\\historical9394\\managers\\627.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "low_confidence"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 630,
+      "name": "Han Berger",
+      "destination": "frontend\\public\\historical9394\\managers\\630.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 639,
+      "name": "Aad de Mos",
+      "destination": "frontend\\public\\historical9394\\managers\\639.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 652,
+      "name": "Sánchez Duque",
+      "destination": "frontend\\public\\historical9394\\managers\\652.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 653,
+      "name": "Víctor Fernández",
+      "destination": "frontend\\public\\historical9394\\managers\\653.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 657,
+      "name": "Marcelino",
+      "destination": "frontend\\public\\historical9394\\managers\\657.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 670,
+      "name": "Thomas Christiansen",
+      "destination": "frontend\\public\\historical9394\\managers\\670.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 673,
+      "name": "Neil Warnock",
+      "destination": "frontend\\public\\historical9394\\managers\\673.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 675,
+      "name": "Liam Brady",
+      "destination": "frontend\\public\\historical9394\\managers\\675.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 691,
+      "name": "Fernando Areán",
+      "destination": "frontend\\public\\historical9394\\managers\\691.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 692,
+      "name": "Miguel Ángel López",
+      "destination": "frontend\\public\\historical9394\\managers\\692.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "low_confidence"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 695,
+      "name": "Quique Hernández",
+      "destination": "frontend\\public\\historical9394\\managers\\695.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 696,
+      "name": "Winfried Schäfer",
+      "destination": "frontend\\public\\historical9394\\managers\\696.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 697,
+      "name": "Edinho Nazareth",
+      "destination": "frontend\\public\\historical9394\\managers\\697.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 699,
+      "name": "Miguel Ángel Russo",
+      "destination": "frontend\\public\\historical9394\\managers\\699.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 707,
+      "name": "Claudio Ranieri",
+      "destination": "frontend\\public\\historical9394\\managers\\707.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 708,
+      "name": "Glenn Hoddle",
+      "destination": "frontend\\public\\historical9394\\managers\\708.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 717,
+      "name": "Alex Miller",
+      "destination": "frontend\\public\\historical9394\\managers\\717.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "low_confidence"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 718,
+      "name": "Matías Almeyda",
+      "destination": "frontend\\public\\historical9394\\managers\\718.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 723,
+      "name": "Bernardino Pedroto",
+      "destination": "frontend\\public\\historical9394\\managers\\723.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 743,
+      "name": "Muñoz",
+      "destination": "frontend\\public\\historical9394\\managers\\743.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 744,
+      "name": "Corbacho\r\nJosu Uribe",
+      "destination": "frontend\\public\\historical9394\\managers\\744.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 756,
+      "name": "Jacques Santini",
+      "destination": "frontend\\public\\historical9394\\managers\\756.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 758,
+      "name": "Zdeněk Zeman",
+      "destination": "frontend\\public\\historical9394\\managers\\758.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 762,
+      "name": "Manuel Lapuente",
+      "destination": "frontend\\public\\historical9394\\managers\\762.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 768,
+      "name": "Jean-Luc",
+      "destination": "frontend\\public\\historical9394\\managers\\768.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 783,
+      "name": "Toni",
+      "destination": "frontend\\public\\historical9394\\managers\\783.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 787,
+      "name": "Jean-Claude Suaudeau",
+      "destination": "frontend\\public\\historical9394\\managers\\787.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 790,
+      "name": "Paulo Fonseca",
+      "destination": "frontend\\public\\historical9394\\managers\\790.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 791,
+      "name": "Schrijvers",
+      "destination": "frontend\\public\\historical9394\\managers\\791.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 794,
+      "name": "Irulegui",
+      "destination": "frontend\\public\\historical9394\\managers\\794.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 796,
+      "name": "Bobby Robson",
+      "destination": "frontend\\public\\historical9394\\managers\\796.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "low_confidence"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 801,
+      "name": "Jörg Berger",
+      "destination": "frontend\\public\\historical9394\\managers\\801.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 804,
+      "name": "Galilea",
+      "destination": "frontend\\public\\historical9394\\managers\\804.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 807,
+      "name": "Carlos Simón",
+      "destination": "frontend\\public\\historical9394\\managers\\807.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 810,
+      "name": "Mané",
+      "destination": "frontend\\public\\historical9394\\managers\\810.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 811,
+      "name": "Crispi",
+      "destination": "frontend\\public\\historical9394\\managers\\811.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 819,
+      "name": "Menotti",
+      "destination": "frontend\\public\\historical9394\\managers\\819.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 826,
+      "name": "Ciriaco",
+      "destination": "frontend\\public\\historical9394\\managers\\826.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 830,
+      "name": "Vanderlei Luxemburgo",
+      "destination": "frontend\\public\\historical9394\\managers\\830.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 838,
+      "name": "Volker Finke",
+      "destination": "frontend\\public\\historical9394\\managers\\838.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 842,
+      "name": "Hidehiko Shimizu",
+      "destination": "frontend\\public\\historical9394\\managers\\842.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 852,
+      "name": "Vágner Mancini",
+      "destination": "frontend\\public\\historical9394\\managers\\852.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 864,
+      "name": "Adílson Batista",
+      "destination": "frontend\\public\\historical9394\\managers\\864.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 866,
+      "name": "Barreiro",
+      "destination": "frontend\\public\\historical9394\\managers\\866.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 867,
+      "name": "Cardo",
+      "destination": "frontend\\public\\historical9394\\managers\\867.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 870,
+      "name": "Carlinhos Violino",
+      "destination": "frontend\\public\\historical9394\\managers\\870.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 874,
+      "name": "Thorsten Fink",
+      "destination": "frontend\\public\\historical9394\\managers\\874.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 875,
+      "name": "Neal",
+      "destination": "frontend\\public\\historical9394\\managers\\875.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 898,
+      "name": "Bonds",
+      "destination": "frontend\\public\\historical9394\\managers\\898.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 902,
+      "name": "Francisco Avilán",
+      "destination": "frontend\\public\\historical9394\\managers\\902.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 904,
+      "name": "van Gaal",
+      "destination": "frontend\\public\\historical9394\\managers\\904.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 911,
+      "name": "Frans Körver",
+      "destination": "frontend\\public\\historical9394\\managers\\911.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 917,
+      "name": "Pruijn",
+      "destination": "frontend\\public\\historical9394\\managers\\917.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 932,
+      "name": "Arsenio",
+      "destination": "frontend\\public\\historical9394\\managers\\932.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 937,
+      "name": "Duque",
+      "destination": "frontend\\public\\historical9394\\managers\\937.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 941,
+      "name": "Castro Santos",
+      "destination": "frontend\\public\\historical9394\\managers\\941.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 953,
+      "name": "García Remón",
+      "destination": "frontend\\public\\historical9394\\managers\\953.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 955,
+      "name": "Antonio Gómez",
+      "destination": "frontend\\public\\historical9394\\managers\\955.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 957,
+      "name": "Creixell",
+      "destination": "frontend\\public\\historical9394\\managers\\957.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 964,
+      "name": "Miguel Sánchez",
+      "destination": "frontend\\public\\historical9394\\managers\\964.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 971,
+      "name": "Joaquín Salmerón",
+      "destination": "frontend\\public\\historical9394\\managers\\971.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 972,
+      "name": "Carlos Aimar",
+      "destination": "frontend\\public\\historical9394\\managers\\972.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 975,
+      "name": "Irureta",
+      "destination": "frontend\\public\\historical9394\\managers\\975.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 978,
+      "name": "Rolland Courbis",
+      "destination": "frontend\\public\\historical9394\\managers\\978.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 989,
+      "name": "Benno Möhlmann",
+      "destination": "frontend\\public\\historical9394\\managers\\989.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 994,
+      "name": "Fritz Korbach",
+      "destination": "frontend\\public\\historical9394\\managers\\994.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 995,
+      "name": "Henk ten Cate",
+      "destination": "frontend\\public\\historical9394\\managers\\995.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 998,
+      "name": "Morten Olsen",
+      "destination": "frontend\\public\\historical9394\\managers\\998.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 1000,
+      "name": "Lotina",
+      "destination": "frontend\\public\\historical9394\\managers\\1000.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 1003,
+      "name": "John Lambie",
+      "destination": "frontend\\public\\historical9394\\managers\\1003.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 1004,
+      "name": "Marcello Lippi",
+      "destination": "frontend\\public\\historical9394\\managers\\1004.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 1005,
+      "name": "Alain de Martigny",
+      "destination": "frontend\\public\\historical9394\\managers\\1005.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 1006,
+      "name": "Kent Nielsen",
+      "destination": "frontend\\public\\historical9394\\managers\\1006.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 1009,
+      "name": "Alfredo Tena",
+      "destination": "frontend\\public\\historical9394\\managers\\1009.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 1012,
+      "name": "Hernán Torres",
+      "destination": "frontend\\public\\historical9394\\managers\\1012.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 1013,
+      "name": "Leo van Veen",
+      "destination": "frontend\\public\\historical9394\\managers\\1013.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 1020,
+      "name": "Joël Muller",
+      "destination": "frontend\\public\\historical9394\\managers\\1020.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "low_confidence"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 1033,
+      "name": "Marinos Ouzounidis",
+      "destination": "frontend\\public\\historical9394\\managers\\1033.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 1035,
+      "name": "Huub Stevens",
+      "destination": "frontend\\public\\historical9394\\managers\\1035.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 1037,
+      "name": "Paul Sturrock",
+      "destination": "frontend\\public\\historical9394\\managers\\1037.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 1038,
+      "name": "Jimmy Nicholl",
+      "destination": "frontend\\public\\historical9394\\managers\\1038.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 1043,
+      "name": "Luis Rodríguez Vaz",
+      "destination": "frontend\\public\\historical9394\\managers\\1043.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 1061,
+      "name": "Eugenio Bersellini",
+      "destination": "frontend\\public\\historical9394\\managers\\1061.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 1093,
+      "name": "Claudinei Olveira",
+      "destination": "frontend\\public\\historical9394\\managers\\1093.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 1103,
+      "name": "Willi Entenmann",
+      "destination": "frontend\\public\\historical9394\\managers\\1103.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 1105,
+      "name": "Jan Reker",
+      "destination": "frontend\\public\\historical9394\\managers\\1105.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 1109,
+      "name": "Bert Jacobs",
+      "destination": "frontend\\public\\historical9394\\managers\\1109.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 1122,
+      "name": "Bruno Giorgi",
+      "destination": "frontend\\public\\historical9394\\managers\\1122.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 1123,
+      "name": "Sandreani",
+      "destination": "frontend\\public\\historical9394\\managers\\1123.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 1125,
+      "name": "Nicolini",
+      "destination": "frontend\\public\\historical9394\\managers\\1125.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 1149,
+      "name": "Gregorio Pérez",
+      "destination": "frontend\\public\\historical9394\\managers\\1149.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 1159,
+      "name": "Sergio Silva",
+      "destination": "frontend\\public\\historical9394\\managers\\1159.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 1165,
+      "name": "Pedreño",
+      "destination": "frontend\\public\\historical9394\\managers\\1165.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 1172,
+      "name": "Paulo Silas",
+      "destination": "frontend\\public\\historical9394\\managers\\1172.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 1180,
+      "name": "Ademar Braga",
+      "destination": "frontend\\public\\historical9394\\managers\\1180.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 1184,
+      "name": "José Víctor",
+      "destination": "frontend\\public\\historical9394\\managers\\1184.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 1190,
+      "name": "René Meulensteen",
+      "destination": "frontend\\public\\historical9394\\managers\\1190.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 1199,
+      "name": "Jorge Solari",
+      "destination": "frontend\\public\\historical9394\\managers\\1199.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 1211,
+      "name": "Alexander Zorniger",
+      "destination": "frontend\\public\\historical9394\\managers\\1211.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 1213,
+      "name": "Thomas Doll",
+      "destination": "frontend\\public\\historical9394\\managers\\1213.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 1230,
+      "name": "Stepanović",
+      "destination": "frontend\\public\\historical9394\\managers\\1230.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 1238,
+      "name": "Koster",
+      "destination": "frontend\\public\\historical9394\\managers\\1238.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 1239,
+      "name": "Popovics",
+      "destination": "frontend\\public\\historical9394\\managers\\1239.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 1240,
+      "name": "Braam",
+      "destination": "frontend\\public\\historical9394\\managers\\1240.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 1242,
+      "name": "René Notten",
+      "destination": "frontend\\public\\historical9394\\managers\\1242.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 1243,
+      "name": "Kistemaker",
+      "destination": "frontend\\public\\historical9394\\managers\\1243.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 1246,
+      "name": "Wilkinson",
+      "destination": "frontend\\public\\historical9394\\managers\\1246.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 1256,
+      "name": "Nikolaos Anastopoulos",
+      "destination": "frontend\\public\\historical9394\\managers\\1256.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 1331,
+      "name": "Manuel José",
+      "destination": "frontend\\public\\historical9394\\managers\\1331.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 1338,
+      "name": "Gilbert Gress",
+      "destination": "frontend\\public\\historical9394\\managers\\1338.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 1353,
+      "name": "Simo Valakari",
+      "destination": "frontend\\public\\historical9394\\managers\\1353.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 1367,
+      "name": "Takaji Mori",
+      "destination": "frontend\\public\\historical9394\\managers\\1367.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 1371,
+      "name": "Stuart Baxter",
+      "destination": "frontend\\public\\historical9394\\managers\\1371.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 1378,
+      "name": "Ryuzo Hiraki",
+      "destination": "frontend\\public\\historical9394\\managers\\1378.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 1380,
+      "name": "Emerson Leão",
+      "destination": "frontend\\public\\historical9394\\managers\\1380.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 1381,
+      "name": "Kunishige Kamamoto",
+      "destination": "frontend\\public\\historical9394\\managers\\1381.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 1392,
+      "name": "Yoshikazu Nagai",
+      "destination": "frontend\\public\\historical9394\\managers\\1392.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 1400,
+      "name": "Hideyuki Hanyu",
+      "destination": "frontend\\public\\historical9394\\managers\\1400.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 1431,
+      "name": "Magnús Gylfason",
+      "destination": "frontend\\public\\historical9394\\managers\\1431.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 1449,
+      "name": "Besnik Hasi",
+      "destination": "frontend\\public\\historical9394\\managers\\1449.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 1464,
+      "name": "Ramiro Solís",
+      "destination": "frontend\\public\\historical9394\\managers\\1464.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 1466,
+      "name": "Jim Duffy",
+      "destination": "frontend\\public\\historical9394\\managers\\1466.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 1467,
+      "name": "Mike Walker",
+      "destination": "frontend\\public\\historical9394\\managers\\1467.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "low_confidence"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 1469,
+      "name": "Daniel Jeandupeux",
+      "destination": "frontend\\public\\historical9394\\managers\\1469.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 1484,
+      "name": "Neumann",
+      "destination": "frontend\\public\\historical9394\\managers\\1484.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 1494,
+      "name": "Txetxu Rojo",
+      "destination": "frontend\\public\\historical9394\\managers\\1494.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 1497,
+      "name": "Del Bosque",
+      "destination": "frontend\\public\\historical9394\\managers\\1497.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 1502,
+      "name": "Van der Pluijm",
+      "destination": "frontend\\public\\historical9394\\managers\\1502.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 1515,
+      "name": "Foppe de Haan",
+      "destination": "frontend\\public\\historical9394\\managers\\1515.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 1518,
+      "name": "Daniel Passarella",
+      "destination": "frontend\\public\\historical9394\\managers\\1518.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 1522,
+      "name": "Ricardo La Volpe",
+      "destination": "frontend\\public\\historical9394\\managers\\1522.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 1551,
+      "name": "Walter Smith",
+      "destination": "frontend\\public\\historical9394\\managers\\1551.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "low_confidence"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 1578,
+      "name": "Juan Carlos Rodríguez",
+      "destination": "frontend\\public\\historical9394\\managers\\1578.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 1641,
+      "name": "Dave Dir",
+      "destination": "frontend\\public\\historical9394\\managers\\1641.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "low_confidence"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 1643,
+      "name": "Eddie Firmani",
+      "destination": "frontend\\public\\historical9394\\managers\\1643.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 1644,
+      "name": "Bob Lenarduzzi",
+      "destination": "frontend\\public\\historical9394\\managers\\1644.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 1650,
+      "name": "Pedro Kozak",
+      "destination": "frontend\\public\\historical9394\\managers\\1650.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 1665,
+      "name": "Griever",
+      "destination": "frontend\\public\\historical9394\\managers\\1665.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 1666,
+      "name": "Mondonico",
+      "destination": "frontend\\public\\historical9394\\managers\\1666.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 1695,
+      "name": "Gustavo Costas",
+      "destination": "frontend\\public\\historical9394\\managers\\1695.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 1709,
+      "name": "Joan Carrillo",
+      "destination": "frontend\\public\\historical9394\\managers\\1709.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 1711,
+      "name": "Cilinho",
+      "destination": "frontend\\public\\historical9394\\managers\\1711.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 1712,
+      "name": "Nelsinho Rosa",
+      "destination": "frontend\\public\\historical9394\\managers\\1712.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 1719,
+      "name": "Svatopluk Habanec",
+      "destination": "frontend\\public\\historical9394\\managers\\1719.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 1739,
+      "name": "Ricardo Moreno",
+      "destination": "frontend\\public\\historical9394\\managers\\1739.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 1742,
+      "name": "Fabri",
+      "destination": "frontend\\public\\historical9394\\managers\\1742.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 1768,
+      "name": "Aníbal Ruiz Leites",
+      "destination": "frontend\\public\\historical9394\\managers\\1768.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 1770,
+      "name": "Marcelo Bielsa",
+      "destination": "frontend\\public\\historical9394\\managers\\1770.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 1771,
+      "name": "Pedro García",
+      "destination": "frontend\\public\\historical9394\\managers\\1771.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "low_confidence"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 1773,
+      "name": "Manuel Lapuente",
+      "destination": "frontend\\public\\historical9394\\managers\\1773.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 1780,
+      "name": "Antonio Carbajal",
+      "destination": "frontend\\public\\historical9394\\managers\\1780.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 1785,
+      "name": "van Zoghel",
+      "destination": "frontend\\public\\historical9394\\managers\\1785.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 1813,
+      "name": "Maroso",
+      "destination": "frontend\\public\\historical9394\\managers\\1813.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 1824,
+      "name": "Jaume Bauzà",
+      "destination": "frontend\\public\\historical9394\\managers\\1824.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 1827,
+      "name": "Pérez García",
+      "destination": "frontend\\public\\historical9394\\managers\\1827.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 1829,
+      "name": "Moreno",
+      "destination": "frontend\\public\\historical9394\\managers\\1829.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 1831,
+      "name": "Chato Gónzalez",
+      "destination": "frontend\\public\\historical9394\\managers\\1831.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 1834,
+      "name": "Víctor Espárrago",
+      "destination": "frontend\\public\\historical9394\\managers\\1834.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 1839,
+      "name": "Tomé",
+      "destination": "frontend\\public\\historical9394\\managers\\1839.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 1842,
+      "name": "José Muñiz",
+      "destination": "frontend\\public\\historical9394\\managers\\1842.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 1845,
+      "name": "Utxu",
+      "destination": "frontend\\public\\historical9394\\managers\\1845.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 1851,
+      "name": "Etxarri",
+      "destination": "frontend\\public\\historical9394\\managers\\1851.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 1855,
+      "name": "Cor Pot",
+      "destination": "frontend\\public\\historical9394\\managers\\1855.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "low_confidence"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 1856,
+      "name": "Villanova",
+      "destination": "frontend\\public\\historical9394\\managers\\1856.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 1857,
+      "name": "Jesús Tartilán",
+      "destination": "frontend\\public\\historical9394\\managers\\1857.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 1865,
+      "name": "Guy Roux",
+      "destination": "frontend\\public\\historical9394\\managers\\1865.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 1924,
+      "name": "Kevin Doherty",
+      "destination": "frontend\\public\\historical9394\\managers\\1924.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 1937,
+      "name": "José Romão",
+      "destination": "frontend\\public\\historical9394\\managers\\1937.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 1949,
+      "name": "Ernesto Paulo",
+      "destination": "frontend\\public\\historical9394\\managers\\1949.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 1951,
+      "name": "Fortes",
+      "destination": "frontend\\public\\historical9394\\managers\\1951.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 1970,
+      "name": "Alexandre Gama",
+      "destination": "frontend\\public\\historical9394\\managers\\1970.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 2009,
+      "name": "Sergije Krešić",
+      "destination": "frontend\\public\\historical9394\\managers\\2009.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 2010,
+      "name": "Sierra",
+      "destination": "frontend\\public\\historical9394\\managers\\2010.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 2066,
+      "name": "Enzo Trossero",
+      "destination": "frontend\\public\\historical9394\\managers\\2066.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 2076,
+      "name": "Carlos Griguol",
+      "destination": "frontend\\public\\historical9394\\managers\\2076.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 2079,
+      "name": "Roberto Perfumo",
+      "destination": "frontend\\public\\historical9394\\managers\\2079.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 2088,
+      "name": "Mussula",
+      "destination": "frontend\\public\\historical9394\\managers\\2088.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 2092,
+      "name": "Fito Nieves",
+      "destination": "frontend\\public\\historical9394\\managers\\2092.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 2093,
+      "name": "Vinícius Eutrópio",
+      "destination": "frontend\\public\\historical9394\\managers\\2093.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 2098,
+      "name": "Reinaldo Rueda",
+      "destination": "frontend\\public\\historical9394\\managers\\2098.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 2122,
+      "name": "Caturla",
+      "destination": "frontend\\public\\historical9394\\managers\\2122.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 2165,
+      "name": "Alberto Gamero",
+      "destination": "frontend\\public\\historical9394\\managers\\2165.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 2169,
+      "name": "Harold Rivera",
+      "destination": "frontend\\public\\historical9394\\managers\\2169.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 2192,
+      "name": "Scala",
+      "destination": "frontend\\public\\historical9394\\managers\\2192.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 2200,
+      "name": "David Vidal",
+      "destination": "frontend\\public\\historical9394\\managers\\2200.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 2201,
+      "name": "Sebastião Barroso",
+      "destination": "frontend\\public\\historical9394\\managers\\2201.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 2238,
+      "name": "Materazzi",
+      "destination": "frontend\\public\\historical9394\\managers\\2238.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 2264,
+      "name": "Dekker",
+      "destination": "frontend\\public\\historical9394\\managers\\2264.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 2339,
+      "name": "van Hanegem",
+      "destination": "frontend\\public\\historical9394\\managers\\2339.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 2373,
+      "name": "Joe Royle",
+      "destination": "frontend\\public\\historical9394\\managers\\2373.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 2386,
+      "name": "Luiz Felipe Scolari",
+      "destination": "frontend\\public\\historical9394\\managers\\2386.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 2388,
+      "name": "David Thomas Bassett",
+      "destination": "frontend\\public\\historical9394\\managers\\2388.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "low_confidence"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 2401,
+      "name": "Jorge Valdano",
+      "destination": "frontend\\public\\historical9394\\managers\\2401.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 2404,
+      "name": "Wim Koevermans",
+      "destination": "frontend\\public\\historical9394\\managers\\2404.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 2406,
+      "name": "Versleijen",
+      "destination": "frontend\\public\\historical9394\\managers\\2406.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 2409,
+      "name": "José Antonio Novo\r\nJuan Fidalgo\r\nJuan Fidalgo",
+      "destination": "frontend\\public\\historical9394\\managers\\2409.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 2410,
+      "name": "Los Arcos",
+      "destination": "frontend\\public\\historical9394\\managers\\2410.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 2416,
+      "name": "Costas",
+      "destination": "frontend\\public\\historical9394\\managers\\2416.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 2424,
+      "name": "Waldo Ramos",
+      "destination": "frontend\\public\\historical9394\\managers\\2424.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 2432,
+      "name": "Thomas Rongen",
+      "destination": "frontend\\public\\historical9394\\managers\\2432.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 2442,
+      "name": "Néstor Craviotto",
+      "destination": "frontend\\public\\historical9394\\managers\\2442.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 2456,
+      "name": "Capello",
+      "destination": "frontend\\public\\historical9394\\managers\\2456.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "low_confidence"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 2465,
+      "name": "Alexandre Gallo",
+      "destination": "frontend\\public\\historical9394\\managers\\2465.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 2488,
+      "name": "Martelotte",
+      "destination": "frontend\\public\\historical9394\\managers\\2488.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 2490,
+      "name": "Givanildo Oliveira",
+      "destination": "frontend\\public\\historical9394\\managers\\2490.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 2493,
+      "name": "Klaus Toppmöller",
+      "destination": "frontend\\public\\historical9394\\managers\\2493.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 2519,
+      "name": "Ewald Lienen",
+      "destination": "frontend\\public\\historical9394\\managers\\2519.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 2561,
+      "name": "Ildo Maneiro",
+      "destination": "frontend\\public\\historical9394\\managers\\2561.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 2621,
+      "name": "Miroslav Karhan",
+      "destination": "frontend\\public\\historical9394\\managers\\2621.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 2692,
+      "name": "Hannes Bongartz",
+      "destination": "frontend\\public\\historical9394\\managers\\2692.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 2726,
+      "name": "Lalo",
+      "destination": "frontend\\public\\historical9394\\managers\\2726.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 2727,
+      "name": "Luis Aragonés",
+      "destination": "frontend\\public\\historical9394\\managers\\2727.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 2730,
+      "name": "Kinnear",
+      "destination": "frontend\\public\\historical9394\\managers\\2730.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 2733,
+      "name": "Ken Fogarty",
+      "destination": "frontend\\public\\historical9394\\managers\\2733.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 2739,
+      "name": "Guerini",
+      "destination": "frontend\\public\\historical9394\\managers\\2739.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 2756,
+      "name": "Roberto Falcão",
+      "destination": "frontend\\public\\historical9394\\managers\\2756.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 2765,
+      "name": "Lillo",
+      "destination": "frontend\\public\\historical9394\\managers\\2765.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 2776,
+      "name": "Angelo Orazi ",
+      "destination": "frontend\\public\\historical9394\\managers\\2776.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 2777,
+      "name": "Cagni",
+      "destination": "frontend\\public\\historical9394\\managers\\2777.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 2793,
+      "name": "Edward Iordanescu",
+      "destination": "frontend\\public\\historical9394\\managers\\2793.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 2804,
+      "name": "Fontana",
+      "destination": "frontend\\public\\historical9394\\managers\\2804.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 2841,
+      "name": "Ivan Golac",
+      "destination": "frontend\\public\\historical9394\\managers\\2841.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 2844,
+      "name": "Jean Tigana",
+      "destination": "frontend\\public\\historical9394\\managers\\2844.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 2860,
+      "name": "Rafa Benítez",
+      "destination": "frontend\\public\\historical9394\\managers\\2860.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 2861,
+      "name": "Mario Alberto Yepes",
+      "destination": "frontend\\public\\historical9394\\managers\\2861.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 2867,
+      "name": "Hernán Lisi",
+      "destination": "frontend\\public\\historical9394\\managers\\2867.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 2879,
+      "name": "Patrik Werner",
+      "destination": "frontend\\public\\historical9394\\managers\\2879.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 2886,
+      "name": "Ismael Rescalvo",
+      "destination": "frontend\\public\\historical9394\\managers\\2886.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 2897,
+      "name": "Paco Loidi",
+      "destination": "frontend\\public\\historical9394\\managers\\2897.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 2903,
+      "name": "Fernando Velasco",
+      "destination": "frontend\\public\\historical9394\\managers\\2903.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 2905,
+      "name": "Cheché Hernández",
+      "destination": "frontend\\public\\historical9394\\managers\\2905.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 2910,
+      "name": "Rob Baan",
+      "destination": "frontend\\public\\historical9394\\managers\\2910.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 2914,
+      "name": "Bernd Stange",
+      "destination": "frontend\\public\\historical9394\\managers\\2914.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 2924,
+      "name": "Vítor Oliveira",
+      "destination": "frontend\\public\\historical9394\\managers\\2924.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 2927,
+      "name": "Dino Zoff",
+      "destination": "frontend\\public\\historical9394\\managers\\2927.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 2928,
+      "name": "Franco Scoglio",
+      "destination": "frontend\\public\\historical9394\\managers\\2928.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 2929,
+      "name": "Arne Erlandsen",
+      "destination": "frontend\\public\\historical9394\\managers\\2929.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 2936,
+      "name": "Palomo",
+      "destination": "frontend\\public\\historical9394\\managers\\2936.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 2942,
+      "name": "Carlos Alberto Torres",
+      "destination": "frontend\\public\\historical9394\\managers\\2942.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 2947,
+      "name": "Masakatsu Miyamoto",
+      "destination": "frontend\\public\\historical9394\\managers\\2947.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 2948,
+      "name": "Víctor Púa",
+      "destination": "frontend\\public\\historical9394\\managers\\2948.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 2949,
+      "name": "Arconada",
+      "destination": "frontend\\public\\historical9394\\managers\\2949.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 2965,
+      "name": "Roberto Silva",
+      "destination": "frontend\\public\\historical9394\\managers\\2965.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "low_confidence"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 2970,
+      "name": "José López",
+      "destination": "frontend\\public\\historical9394\\managers\\2970.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 2978,
+      "name": "Luis Costa",
+      "destination": "frontend\\public\\historical9394\\managers\\2978.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 2983,
+      "name": "Christoph Paul Daum",
+      "destination": "frontend\\public\\historical9394\\managers\\2983.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 2992,
+      "name": "Guy David",
+      "destination": "frontend\\public\\historical9394\\managers\\2992.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "low_confidence"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 2993,
+      "name": "Pierre Mankowski",
+      "destination": "frontend\\public\\historical9394\\managers\\2993.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 2994,
+      "name": "Fuertes",
+      "destination": "frontend\\public\\historical9394\\managers\\2994.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 2995,
+      "name": "Vicente Cantatore",
+      "destination": "frontend\\public\\historical9394\\managers\\2995.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 2999,
+      "name": "Voltaire García",
+      "destination": "frontend\\public\\historical9394\\managers\\2999.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 3001,
+      "name": "Mora",
+      "destination": "frontend\\public\\historical9394\\managers\\3001.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 3002,
+      "name": "Paulo Autuori",
+      "destination": "frontend\\public\\historical9394\\managers\\3002.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 3003,
+      "name": "Vítor Urbano",
+      "destination": "frontend\\public\\historical9394\\managers\\3003.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 3004,
+      "name": "Fernando Santos",
+      "destination": "frontend\\public\\historical9394\\managers\\3004.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 3005,
+      "name": "Junior",
+      "destination": "frontend\\public\\historical9394\\managers\\3005.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 3008,
+      "name": "Gílson Nunes",
+      "destination": "frontend\\public\\historical9394\\managers\\3008.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 3009,
+      "name": "Oliveira",
+      "destination": "frontend\\public\\historical9394\\managers\\3009.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 3011,
+      "name": "Ramón Moya",
+      "destination": "frontend\\public\\historical9394\\managers\\3011.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 3016,
+      "name": "Sandy Clark",
+      "destination": "frontend\\public\\historical9394\\managers\\3016.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "low_confidence"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 3020,
+      "name": "Guus Hiddink",
+      "destination": "frontend\\public\\historical9394\\managers\\3020.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 3021,
+      "name": "Plaza",
+      "destination": "frontend\\public\\historical9394\\managers\\3021.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 3023,
+      "name": "Blanco",
+      "destination": "frontend\\public\\historical9394\\managers\\3023.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 3027,
+      "name": "Ortuondo",
+      "destination": "frontend\\public\\historical9394\\managers\\3027.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 3032,
+      "name": "Gustavo Onaindia",
+      "destination": "frontend\\public\\historical9394\\managers\\3032.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 3033,
+      "name": "Gérard Gili",
+      "destination": "frontend\\public\\historical9394\\managers\\3033.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 3045,
+      "name": "Lalo",
+      "destination": "frontend\\public\\historical9394\\managers\\3045.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 3050,
+      "name": "Brindisi",
+      "destination": "frontend\\public\\historical9394\\managers\\3050.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 3053,
+      "name": "Gregorio Pçerez",
+      "destination": "frontend\\public\\historical9394\\managers\\3053.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 3057,
+      "name": "Giorgio Rumignani",
+      "destination": "frontend\\public\\historical9394\\managers\\3057.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 3058,
+      "name": "Jorge Vivaldo",
+      "destination": "frontend\\public\\historical9394\\managers\\3058.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 3059,
+      "name": "Ziarreta",
+      "destination": "frontend\\public\\historical9394\\managers\\3059.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 3063,
+      "name": "Ricardo Ferretti",
+      "destination": "frontend\\public\\historical9394\\managers\\3063.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 3067,
+      "name": "Bayona",
+      "destination": "frontend\\public\\historical9394\\managers\\3067.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 3068,
+      "name": "Miguel Angel Russo",
+      "destination": "frontend\\public\\historical9394\\managers\\3068.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 3080,
+      "name": "ten Cate",
+      "destination": "frontend\\public\\historical9394\\managers\\3080.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 3091,
+      "name": "Procópio Cardoso",
+      "destination": "frontend\\public\\historical9394\\managers\\3091.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 3092,
+      "name": "Marcelo Cabo",
+      "destination": "frontend\\public\\historical9394\\managers\\3092.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 3093,
+      "name": "Pachequinho",
+      "destination": "frontend\\public\\historical9394\\managers\\3093.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 3094,
+      "name": "Telê Santana",
+      "destination": "frontend\\public\\historical9394\\managers\\3094.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 3095,
+      "name": "Mário Sérgio",
+      "destination": "frontend\\public\\historical9394\\managers\\3095.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 3096,
+      "name": "Paulo Autuori",
+      "destination": "frontend\\public\\historical9394\\managers\\3096.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 3111,
+      "name": "Carlos de los Cobos",
+      "destination": "frontend\\public\\historical9394\\managers\\3111.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 3112,
+      "name": "John Gorman",
+      "destination": "frontend\\public\\historical9394\\managers\\3112.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 3152,
+      "name": "Osvaldo Sosa",
+      "destination": "frontend\\public\\historical9394\\managers\\3152.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 3166,
+      "name": "Lucescu",
+      "destination": "frontend\\public\\historical9394\\managers\\3166.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 3168,
+      "name": "Bolchi",
+      "destination": "frontend\\public\\historical9394\\managers\\3168.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 3169,
+      "name": "Carlos Linaris",
+      "destination": "frontend\\public\\historical9394\\managers\\3169.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 3172,
+      "name": "Juan Mozo",
+      "destination": "frontend\\public\\historical9394\\managers\\3172.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 3173,
+      "name": "Wálter Roque",
+      "destination": "frontend\\public\\historical9394\\managers\\3173.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 3174,
+      "name": "Víctor Luzardo",
+      "destination": "frontend\\public\\historical9394\\managers\\3174.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 3206,
+      "name": "Tommy Burns",
+      "destination": "frontend\\public\\historical9394\\managers\\3206.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "low_confidence"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 3220,
+      "name": "Enrique Martín",
+      "destination": "frontend\\public\\historical9394\\managers\\3220.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 3223,
+      "name": "Boronat",
+      "destination": "frontend\\public\\historical9394\\managers\\3223.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 3224,
+      "name": "Robi",
+      "destination": "frontend\\public\\historical9394\\managers\\3224.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 3225,
+      "name": "Zeman",
+      "destination": "frontend\\public\\historical9394\\managers\\3225.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 3226,
+      "name": "Marchioro",
+      "destination": "frontend\\public\\historical9394\\managers\\3226.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 3227,
+      "name": "Simoni",
+      "destination": "frontend\\public\\historical9394\\managers\\3227.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 3228,
+      "name": "Marchesi",
+      "destination": "frontend\\public\\historical9394\\managers\\3228.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 3229,
+      "name": "Teixidó",
+      "destination": "frontend\\public\\historical9394\\managers\\3229.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 3230,
+      "name": "Toni Grande",
+      "destination": "frontend\\public\\historical9394\\managers\\3230.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 3231,
+      "name": "José Antonio Tejedor",
+      "destination": "frontend\\public\\historical9394\\managers\\3231.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 3232,
+      "name": "Raúl González",
+      "destination": "frontend\\public\\historical9394\\managers\\3232.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 3233,
+      "name": "Félix",
+      "destination": "frontend\\public\\historical9394\\managers\\3233.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 3234,
+      "name": "Manolo Chico",
+      "destination": "frontend\\public\\historical9394\\managers\\3234.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 3237,
+      "name": "Mintegui",
+      "destination": "frontend\\public\\historical9394\\managers\\3237.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 3238,
+      "name": "Perico Alonso",
+      "destination": "frontend\\public\\historical9394\\managers\\3238.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 3239,
+      "name": "Vicente",
+      "destination": "frontend\\public\\historical9394\\managers\\3239.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 3240,
+      "name": "Urquiaga",
+      "destination": "frontend\\public\\historical9394\\managers\\3240.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 3241,
+      "name": "Iranzo",
+      "destination": "frontend\\public\\historical9394\\managers\\3241.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 3242,
+      "name": "Tardío",
+      "destination": "frontend\\public\\historical9394\\managers\\3242.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 3243,
+      "name": "Segurola",
+      "destination": "frontend\\public\\historical9394\\managers\\3243.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 3245,
+      "name": "Bonachera",
+      "destination": "frontend\\public\\historical9394\\managers\\3245.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 3246,
+      "name": "Neme",
+      "destination": "frontend\\public\\historical9394\\managers\\3246.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 3247,
+      "name": "Manolo Jiménez",
+      "destination": "frontend\\public\\historical9394\\managers\\3247.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 3248,
+      "name": "Xavi Agustí",
+      "destination": "frontend\\public\\historical9394\\managers\\3248.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 3249,
+      "name": "Eduard Teixeiro",
+      "destination": "frontend\\public\\historical9394\\managers\\3249.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 3250,
+      "name": "Manolo",
+      "destination": "frontend\\public\\historical9394\\managers\\3250.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 3251,
+      "name": "Agujitas",
+      "destination": "frontend\\public\\historical9394\\managers\\3251.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 3252,
+      "name": "Churruca",
+      "destination": "frontend\\public\\historical9394\\managers\\3252.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 3255,
+      "name": "Calvo Marini",
+      "destination": "frontend\\public\\historical9394\\managers\\3255.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 3256,
+      "name": "Toni Bauzá",
+      "destination": "frontend\\public\\historical9394\\managers\\3256.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 3257,
+      "name": "Chaparro",
+      "destination": "frontend\\public\\historical9394\\managers\\3257.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 3258,
+      "name": "Pacuco Rosales",
+      "destination": "frontend\\public\\historical9394\\managers\\3258.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 3259,
+      "name": "Burgueña",
+      "destination": "frontend\\public\\historical9394\\managers\\3259.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 3260,
+      "name": "Santiago Martín",
+      "destination": "frontend\\public\\historical9394\\managers\\3260.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 3261,
+      "name": "Oviedo",
+      "destination": "frontend\\public\\historical9394\\managers\\3261.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 3262,
+      "name": "Abel Braga",
+      "destination": "frontend\\public\\historical9394\\managers\\3262.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 3263,
+      "name": "Mário Reis",
+      "destination": "frontend\\public\\historical9394\\managers\\3263.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 3264,
+      "name": "Filipović",
+      "destination": "frontend\\public\\historical9394\\managers\\3264.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 3284,
+      "name": "Sarramagna",
+      "destination": "frontend\\public\\historical9394\\managers\\3284.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 3285,
+      "name": "Luis Fernández",
+      "destination": "frontend\\public\\historical9394\\managers\\3285.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 3286,
+      "name": "Sef Vergoossen",
+      "destination": "frontend\\public\\historical9394\\managers\\3286.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 3293,
+      "name": "Marian Bondrea",
+      "destination": "frontend\\public\\historical9394\\managers\\3293.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 3294,
+      "name": "Carlos Fren",
+      "destination": "frontend\\public\\historical9394\\managers\\3294.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 3295,
+      "name": "Victorio Cocco",
+      "destination": "frontend\\public\\historical9394\\managers\\3295.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 3296,
+      "name": "Luis Manuel Blanco",
+      "destination": "frontend\\public\\historical9394\\managers\\3296.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 3297,
+      "name": "Fernando Areán",
+      "destination": "frontend\\public\\historical9394\\managers\\3297.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 3298,
+      "name": "Gildásio",
+      "destination": "frontend\\public\\historical9394\\managers\\3298.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 3299,
+      "name": "Manuel Vucetich",
+      "destination": "frontend\\public\\historical9394\\managers\\3299.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 3300,
+      "name": "Jorge Gómez",
+      "destination": "frontend\\public\\historical9394\\managers\\3300.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 3301,
+      "name": "Rubén \"Ratón\" Ayala",
+      "destination": "frontend\\public\\historical9394\\managers\\3301.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 3302,
+      "name": "Silipo",
+      "destination": "frontend\\public\\historical9394\\managers\\3302.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 3303,
+      "name": "Fascetti",
+      "destination": "frontend\\public\\historical9394\\managers\\3303.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 3304,
+      "name": "Nedo Sonetti",
+      "destination": "frontend\\public\\historical9394\\managers\\3304.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 3305,
+      "name": "Perotti",
+      "destination": "frontend\\public\\historical9394\\managers\\3305.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 3306,
+      "name": "Pierluigi Frosio",
+      "destination": "frontend\\public\\historical9394\\managers\\3306.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 3307,
+      "name": "Giuseppe Papadopulo",
+      "destination": "frontend\\public\\historical9394\\managers\\3307.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 3308,
+      "name": "Jansen",
+      "destination": "frontend\\public\\historical9394\\managers\\3308.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 3309,
+      "name": "van Doorneveld",
+      "destination": "frontend\\public\\historical9394\\managers\\3309.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 3312,
+      "name": "Nienhuis",
+      "destination": "frontend\\public\\historical9394\\managers\\3312.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 3313,
+      "name": "Shu Kamo",
+      "destination": "frontend\\public\\historical9394\\managers\\3313.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 3314,
+      "name": "Francesco Oddo",
+      "destination": "frontend\\public\\historical9394\\managers\\3314.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 3315,
+      "name": "Julio César Antúnez",
+      "destination": "frontend\\public\\historical9394\\managers\\3315.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 3316,
+      "name": "Saúl Rivero",
+      "destination": "frontend\\public\\historical9394\\managers\\3316.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "manager",
+      "source_id": 3317,
+      "name": "Osvaldo Giménez",
+      "destination": "frontend\\public\\historical9394\\managers\\3317.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    }
+  ]
+}

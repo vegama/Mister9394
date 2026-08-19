@@ -1,0 +1,2327 @@
+{
+  "total": 229,
+  "downloaded": 5,
+  "rows": [
+    {
+      "source_id": 24,
+      "name": "Nando Yosu",
+      "clubs": [
+        "Granada CF"
+      ],
+      "country": "España",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 32,
+      "name": "Araquistain",
+      "clubs": [
+        "SD Eibar"
+      ],
+      "country": "España",
+      "status": "no_confident_match",
+      "candidates": [
+        "es:José Araquistáin",
+        "en:José Araquistáin"
+      ]
+    },
+    {
+      "source_id": 36,
+      "name": "José Enrique Díaz",
+      "clubs": [
+        "Levante UD"
+      ],
+      "country": "España",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 43,
+      "name": "González Camacho",
+      "clubs": [
+        "San Roque"
+      ],
+      "country": "España",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 47,
+      "name": "Brian Hortorn",
+      "clubs": [
+        "Manchester City FC"
+      ],
+      "country": "Inglaterra",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 61,
+      "name": "D'Alessandro",
+      "clubs": [
+        "Atlético Madrid"
+      ],
+      "country": "Argentina",
+      "status": "no_confident_match",
+      "candidates": [
+        "es:Andrés D'Alessandro",
+        "en:Andrés D'Alessandro"
+      ]
+    },
+    {
+      "source_id": 66,
+      "name": "Óscar Cavallero",
+      "clubs": [
+        "Banfield"
+      ],
+      "country": "Argentina",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 69,
+      "name": "Hugo Hernández",
+      "clubs": [
+        "Monterrey"
+      ],
+      "country": "México",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 87,
+      "name": "Bernd Krauss",
+      "clubs": [
+        "Borussia Mönchengladbach"
+      ],
+      "country": "Alemania",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 97,
+      "name": "Ian Branfoot",
+      "clubs": [
+        "Southampton FC"
+      ],
+      "country": "Inglaterra",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 98,
+      "name": "Patrice Bergues",
+      "clubs": [
+        "RC Lens"
+      ],
+      "country": "Francia",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 99,
+      "name": "Marc Bourrier",
+      "clubs": [
+        "Olympique Marseille"
+      ],
+      "country": "Francia",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 135,
+      "name": "Valdinoci",
+      "clubs": [
+        "Atalanta"
+      ],
+      "country": "Italia",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 144,
+      "name": "Eriksson",
+      "clubs": [
+        "UC Sampdoria"
+      ],
+      "country": "Suecia",
+      "status": "no_confident_match",
+      "candidates": [
+        "en:Sven-Göran Eriksson",
+        "en:Jonas Eriksson (referee)"
+      ]
+    },
+    {
+      "source_id": 156,
+      "name": "Hendriks",
+      "clubs": [
+        "FC Zwolle"
+      ],
+      "country": "Holanda",
+      "status": "no_confident_match",
+      "candidates": [
+        "nl:Maurits Hendriks",
+        "nl:Ramon Hendriks",
+        "en:Maurits Hendriks"
+      ]
+    },
+    {
+      "source_id": 158,
+      "name": "Howard Kendall",
+      "clubs": [
+        "Everton FC"
+      ],
+      "country": "Inglaterra",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 171,
+      "name": "Queiroz",
+      "clubs": [
+        "Sporting Lisboa"
+      ],
+      "country": "Mozambique",
+      "status": "no_confident_match",
+      "candidates": [
+        "en:Carlos Queiroz"
+      ]
+    },
+    {
+      "source_id": 174,
+      "name": "Raul Águas",
+      "clubs": [
+        "Vitoria Setúbal FC"
+      ],
+      "country": "Angola",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 179,
+      "name": "João Alves",
+      "clubs": [
+        "CF Estrela Amadora"
+      ],
+      "country": "Portugal",
+      "status": "no_confident_match",
+      "candidates": [
+        "pt:João Saldanha"
+      ]
+    },
+    {
+      "source_id": 200,
+      "name": "John Lyall",
+      "clubs": [
+        "Ipswich Town FC"
+      ],
+      "country": "Inglaterra",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 206,
+      "name": "Juan Ahuntchain",
+      "clubs": [
+        "Defensor Sporting"
+      ],
+      "country": "Uruguay",
+      "status": "no_confident_match",
+      "candidates": [
+        "es:Juan Antonio Tchakidjian"
+      ]
+    },
+    {
+      "source_id": 230,
+      "name": "Moré",
+      "clubs": [
+        "Real Valladolid"
+      ],
+      "country": "España",
+      "status": "no_confident_match",
+      "candidates": [
+        "es:Léster Moré"
+      ]
+    },
+    {
+      "source_id": 242,
+      "name": "Hector Salva",
+      "clubs": [
+        "Nacional de Montevideo"
+      ],
+      "country": "Uruguay",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 279,
+      "name": "Gonzalo Hurtado",
+      "clubs": [
+        "CD Toledo"
+      ],
+      "country": "España",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 359,
+      "name": "Tommy McLean",
+      "clubs": [
+        "Motherwell FC"
+      ],
+      "country": "Escocia",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 361,
+      "name": "Willie Miller",
+      "clubs": [
+        "Aberdeen FC"
+      ],
+      "country": "Escocia",
+      "status": "no_confident_match",
+      "candidates": [
+        "en:Willie Miller (basketball)"
+      ]
+    },
+    {
+      "source_id": 518,
+      "name": "Bagnoli",
+      "clubs": [
+        "FC Internazionale"
+      ],
+      "country": "Italia",
+      "status": "no_confident_match",
+      "candidates": [
+        "it:Osvaldo Bagnoli",
+        "en:Osvaldo Bagnoli"
+      ]
+    },
+    {
+      "source_id": 520,
+      "name": "Iñaki Sáez",
+      "clubs": [
+        "UD Las Palmas"
+      ],
+      "country": "España",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 542,
+      "name": "Francisco Ríos",
+      "clubs": [
+        "Leones Negros"
+      ],
+      "country": "México",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 564,
+      "name": "Antônio Lopes",
+      "clubs": [
+        "Santos"
+      ],
+      "country": "Brasil",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 691,
+      "name": "Fernando Areán",
+      "clubs": [
+        "Belgrano"
+      ],
+      "country": "Argentina",
+      "status": "no_confident_match",
+      "candidates": [
+        "es:Fernando José Areán"
+      ]
+    },
+    {
+      "source_id": 695,
+      "name": "Quique Hernández",
+      "clubs": [
+        "Hércules CF"
+      ],
+      "country": "España",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 697,
+      "name": "Edinho Nazareth",
+      "clubs": [
+        "Fluminense"
+      ],
+      "country": "Brasil",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 717,
+      "name": "Alex Miller",
+      "clubs": [
+        "Hibernian FC"
+      ],
+      "country": "Escocia",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 723,
+      "name": "Bernardino Pedroto",
+      "clubs": [
+        "Vitória Guimarães SC"
+      ],
+      "country": "Portugal",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 743,
+      "name": "Muñoz",
+      "clubs": [
+        "Girona FC"
+      ],
+      "country": "España",
+      "status": "no_confident_match",
+      "candidates": [
+        "es:Miguel Ángel Sánchez Muñoz",
+        "en:Miguel Muñoz"
+      ]
+    },
+    {
+      "source_id": 744,
+      "name": "Corbacho\r\nJosu Uribe",
+      "clubs": [
+        "UD Melilla"
+      ],
+      "country": "España",
+      "status": "bad_source_name"
+    },
+    {
+      "source_id": 768,
+      "name": "Jean-Luc",
+      "clubs": [
+        "Toulouse FC"
+      ],
+      "country": "Francia",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 783,
+      "name": "Toni",
+      "clubs": [
+        "SL Benfica"
+      ],
+      "country": "Portugal",
+      "status": "no_confident_match",
+      "candidates": [
+        "pt:Luca Toni",
+        "pt:Toni Kroos",
+        "en:Luca Toni",
+        "en:Toni Kroos"
+      ]
+    },
+    {
+      "source_id": 794,
+      "name": "Irulegui",
+      "clubs": [
+        "Deportivo Alavés"
+      ],
+      "country": "España",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 801,
+      "name": "Jörg Berger",
+      "clubs": [
+        "FC Schalke 04"
+      ],
+      "country": "Polonia",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 804,
+      "name": "Galilea",
+      "clubs": [
+        "CD Logroñés B"
+      ],
+      "country": "España",
+      "status": "no_confident_match",
+      "candidates": [
+        "en:Einar Galilea"
+      ]
+    },
+    {
+      "source_id": 807,
+      "name": "Carlos Simón",
+      "clubs": [
+        "Villarreal CF"
+      ],
+      "country": "España",
+      "status": "no_confident_match",
+      "candidates": [
+        "es:Carlos Simon"
+      ]
+    },
+    {
+      "source_id": 811,
+      "name": "Crispi",
+      "clubs": [
+        "Elche CF"
+      ],
+      "country": null,
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 826,
+      "name": "Ciriaco",
+      "clubs": [
+        "CD Castellón"
+      ],
+      "country": "España",
+      "status": "no_confident_match",
+      "candidates": [
+        "en:Ciriaco Sforza"
+      ]
+    },
+    {
+      "source_id": 842,
+      "name": "Hidehiko Shimizu",
+      "clubs": [
+        "Yokohama Marinos"
+      ],
+      "country": "Japón",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 866,
+      "name": "Barreiro",
+      "clubs": [
+        "Celta Turista"
+      ],
+      "country": "España",
+      "status": "no_confident_match",
+      "candidates": [
+        "es:Campo municipal de Barreiro",
+        "en:José Barreiro (footballer)"
+      ]
+    },
+    {
+      "source_id": 867,
+      "name": "Cardo",
+      "clubs": [
+        "Xerez CD"
+      ],
+      "country": "España",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 870,
+      "name": "Carlinhos Violino",
+      "clubs": [
+        "Guarani de Campinas"
+      ],
+      "country": "Brasil",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 898,
+      "name": "Bonds",
+      "clubs": [
+        "West Ham Utd. FC"
+      ],
+      "country": "Inglaterra",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 902,
+      "name": "Francisco Avilán",
+      "clubs": [
+        "Tigres UANL"
+      ],
+      "country": "México",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 917,
+      "name": "Pruijn",
+      "clubs": [
+        "NEC Nijmegen"
+      ],
+      "country": "Holanda",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 937,
+      "name": "Duque",
+      "clubs": [
+        "CD Leganés"
+      ],
+      "country": "España",
+      "status": "no_confident_match",
+      "candidates": [
+        "es:Luis Sánchez Duque",
+        "en:Duque de Caxias Futebol Clube"
+      ]
+    },
+    {
+      "source_id": 941,
+      "name": "Castro Santos",
+      "clubs": [
+        "SD Compostela"
+      ],
+      "country": "España",
+      "status": "no_confident_match",
+      "candidates": [
+        "es:Diego Castro"
+      ]
+    },
+    {
+      "source_id": 955,
+      "name": "Antonio Gómez",
+      "clubs": [
+        "Pontevedra CF"
+      ],
+      "country": "España",
+      "status": "no_confident_match",
+      "candidates": [
+        "en:Antonio Gómez (footballer, born 1973)"
+      ]
+    },
+    {
+      "source_id": 957,
+      "name": "Creixell",
+      "clubs": [
+        "UE Sant Andreu"
+      ],
+      "country": "España",
+      "status": "no_confident_match",
+      "candidates": [
+        "es:Jaume Creixell"
+      ]
+    },
+    {
+      "source_id": 964,
+      "name": "Miguel Sánchez",
+      "clubs": [
+        "Real Burgos"
+      ],
+      "country": "España",
+      "status": "no_confident_match",
+      "candidates": [
+        "en:Alejandro Sánchez (footballer, born 1986)"
+      ]
+    },
+    {
+      "source_id": 971,
+      "name": "Joaquín Salmerón",
+      "clubs": [
+        "San Sebastián de los Reyes"
+      ],
+      "country": "España",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 1005,
+      "name": "Alain de Martigny",
+      "clubs": [
+        "Angers SCO"
+      ],
+      "country": "Francia",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 1012,
+      "name": "Hernán Torres",
+      "clubs": [
+        "América de Cali"
+      ],
+      "country": "Colombia",
+      "status": "no_confident_match",
+      "candidates": [
+        "es:Hernán Torres Oliveros"
+      ]
+    },
+    {
+      "source_id": 1020,
+      "name": "Joël Muller",
+      "clubs": [
+        "FC Metz"
+      ],
+      "country": "Francia",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 1033,
+      "name": "Marinos Ouzounidis",
+      "clubs": [
+        "Panathinaikos AO"
+      ],
+      "country": "Grecia",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 1037,
+      "name": "Paul Sturrock",
+      "clubs": [
+        "St. Johnstone FC"
+      ],
+      "country": "Escocia",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 1043,
+      "name": "Luis Rodríguez Vaz",
+      "clubs": [
+        "CD Lugo"
+      ],
+      "country": "España",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 1093,
+      "name": "Claudinei Olveira",
+      "clubs": [
+        "Avaí"
+      ],
+      "country": "Brasil",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 1103,
+      "name": "Willi Entenmann",
+      "clubs": [
+        "1. FC Nürnberg"
+      ],
+      "country": "Alemania",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 1123,
+      "name": "Sandreani",
+      "clubs": [
+        "Padova"
+      ],
+      "country": "Italia",
+      "status": "no_confident_match",
+      "candidates": [
+        "it:Mauro Sandreani"
+      ]
+    },
+    {
+      "source_id": 1125,
+      "name": "Nicolini",
+      "clubs": [
+        "US Palermo"
+      ],
+      "country": "Italia",
+      "status": "no_confident_match",
+      "candidates": [
+        "it:Enrico Nicolini"
+      ]
+    },
+    {
+      "source_id": 1165,
+      "name": "Pedreño",
+      "clubs": [
+        "FC Cartagena"
+      ],
+      "country": "España",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 1180,
+      "name": "Ademar Braga",
+      "clubs": [
+        "Vasco da Gama"
+      ],
+      "country": "Brasil",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 1184,
+      "name": "José Víctor",
+      "clubs": [
+        "Real Murcia CF"
+      ],
+      "country": "España",
+      "status": "no_confident_match",
+      "candidates": [
+        "en:José López (Chilean footballer)"
+      ]
+    },
+    {
+      "source_id": 1230,
+      "name": "Stepanović",
+      "clubs": [
+        "TSV Bayer 04 Leverkusen"
+      ],
+      "country": "Serbia",
+      "status": "no_confident_match",
+      "candidates": [
+        "en:Dragoslav Stepanović"
+      ]
+    },
+    {
+      "source_id": 1240,
+      "name": "Braam",
+      "clubs": [
+        "TOP Oss"
+      ],
+      "country": "Holanda",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 1246,
+      "name": "Wilkinson",
+      "clubs": [
+        "Leeds United AFC"
+      ],
+      "country": "Inglaterra",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 1331,
+      "name": "Manuel José",
+      "clubs": [
+        "Boavista FC"
+      ],
+      "country": "Portugal",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 1367,
+      "name": "Takaji Mori",
+      "clubs": [
+        "Urawa Reds"
+      ],
+      "country": "Japón",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 1378,
+      "name": "Ryuzo Hiraki",
+      "clubs": [
+        "Nagoya Grampus"
+      ],
+      "country": "Japón",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 1392,
+      "name": "Yoshikazu Nagai",
+      "clubs": [
+        "JEF United Ichihara"
+      ],
+      "country": "Japón",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 1400,
+      "name": "Hideyuki Hanyu",
+      "clubs": [
+        "Verdy Kawasaki"
+      ],
+      "country": "Japón",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 1431,
+      "name": "Magnús Gylfason",
+      "clubs": [
+        "Valur Reykjavík"
+      ],
+      "country": "Islandia",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 1464,
+      "name": "Ramiro Solís",
+      "clubs": [
+        "R. Sporting B"
+      ],
+      "country": "España",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 1466,
+      "name": "Jim Duffy",
+      "clubs": [
+        "Dundee FC"
+      ],
+      "country": "Escocia",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 1467,
+      "name": "Mike Walker",
+      "clubs": [
+        "Norwich City FC"
+      ],
+      "country": "Gales",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 1484,
+      "name": "Neumann",
+      "clubs": [
+        "SBV Vitesse"
+      ],
+      "country": "Alemania",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 1578,
+      "name": "Juan Carlos Rodríguez",
+      "clubs": [
+        "Valencia B"
+      ],
+      "country": "España",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 1641,
+      "name": "Dave Dir",
+      "clubs": [
+        "Colorado Foxes"
+      ],
+      "country": "E.E.U.U.",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 1650,
+      "name": "Pedro Kozak",
+      "clubs": [
+        "Toronto Blizzard"
+      ],
+      "country": "E.E.U.U.",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 1665,
+      "name": "Griever",
+      "clubs": [
+        "SC Heracles"
+      ],
+      "country": "Holanda",
+      "status": "no_confident_match",
+      "candidates": [
+        "nl:Azing Griever"
+      ]
+    },
+    {
+      "source_id": 1709,
+      "name": "Joan Carrillo",
+      "clubs": [
+        "HNK Hajduk Split"
+      ],
+      "country": "España",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 1711,
+      "name": "Cilinho",
+      "clubs": [
+        "Portuguesa"
+      ],
+      "country": "Brasil",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 1712,
+      "name": "Nelsinho Rosa",
+      "clubs": [
+        "Bragantino"
+      ],
+      "country": "Brasil",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 1739,
+      "name": "Ricardo Moreno",
+      "clubs": [
+        "Barakaldo CF"
+      ],
+      "country": "España",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 1742,
+      "name": "Fabri",
+      "clubs": [
+        "Mérida AD"
+      ],
+      "country": "España",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 1768,
+      "name": "Aníbal Ruiz Leites",
+      "clubs": [
+        "Veracruz"
+      ],
+      "country": "Uruguay",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 1771,
+      "name": "Pedro García",
+      "clubs": [
+        "Santos Laguna"
+      ],
+      "country": "Chile",
+      "status": "no_confident_match",
+      "candidates": [
+        "es:Pedro García Aguado"
+      ]
+    },
+    {
+      "source_id": 1813,
+      "name": "Maroso",
+      "clubs": [
+        "Venezia FC"
+      ],
+      "country": "Italia",
+      "status": "no_confident_match",
+      "candidates": [
+        "it:Virgilio Maroso",
+        "it:Pietro Maroso",
+        "en:Virgilio Maroso"
+      ]
+    },
+    {
+      "source_id": 1824,
+      "name": "Jaume Bauzà",
+      "clubs": [
+        "RCD Mallorca"
+      ],
+      "country": "España",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 1827,
+      "name": "Pérez García",
+      "clubs": [
+        "Real Valladolid B"
+      ],
+      "country": "España",
+      "status": "no_confident_match",
+      "candidates": [
+        "es:Matías Pérez García",
+        "en:Matías Pérez García",
+        "en:Ángel Pérez García"
+      ]
+    },
+    {
+      "source_id": 1829,
+      "name": "Moreno",
+      "clubs": [
+        "Sevilla B"
+      ],
+      "country": "España",
+      "status": "no_confident_match",
+      "candidates": [
+        "es:Abel Gómez Moreno",
+        "es:Alberto Moreno",
+        "en:Alberto Moreno"
+      ]
+    },
+    {
+      "source_id": 1831,
+      "name": "Chato Gónzalez",
+      "clubs": [
+        "CP Cacereño"
+      ],
+      "country": "España",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 1839,
+      "name": "Tomé",
+      "clubs": [
+        "Cultural Leonesa"
+      ],
+      "country": "España",
+      "status": "no_confident_match",
+      "candidates": [
+        "en:São Tomé and Príncipe national football team"
+      ]
+    },
+    {
+      "source_id": 1842,
+      "name": "José Muñiz",
+      "clubs": [
+        "UP Langreo"
+      ],
+      "country": "España",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 1845,
+      "name": "Utxu",
+      "clubs": [
+        "SD Lemona"
+      ],
+      "country": "España",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 1851,
+      "name": "Etxarri",
+      "clubs": [
+        "Real Sociedad B"
+      ],
+      "country": "España",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 1856,
+      "name": "Villanova",
+      "clubs": [
+        "RC Recreativo"
+      ],
+      "country": "España",
+      "status": "no_confident_match",
+      "candidates": [
+        "es:Villanova Wildcats",
+        "en:Villanova Wildcats",
+        "en:Villanova Wildcats football"
+      ]
+    },
+    {
+      "source_id": 1857,
+      "name": "Jesús Tartilán",
+      "clubs": [
+        "SD Ponferradina"
+      ],
+      "country": "España",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 1924,
+      "name": "Kevin Doherty",
+      "clubs": [
+        "Shelbourne FC"
+      ],
+      "country": "República Irlanda",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 1970,
+      "name": "Alexandre Gama",
+      "clubs": [
+        "Náutico"
+      ],
+      "country": "Brasil",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 2009,
+      "name": "Sergije Krešić",
+      "clubs": [
+        "Real Betis"
+      ],
+      "country": "Croacia",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 2010,
+      "name": "Sierra",
+      "clubs": [
+        "Atlético Madrid B"
+      ],
+      "country": "España",
+      "status": "no_confident_match",
+      "candidates": [
+        "es:Yolanda Sierra"
+      ]
+    },
+    {
+      "source_id": 2088,
+      "name": "Mussula",
+      "clubs": [
+        "Atlético Mineiro"
+      ],
+      "country": "Brasil",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 2092,
+      "name": "Fito Nieves",
+      "clubs": [
+        "Vitória"
+      ],
+      "country": "Brasil",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 2093,
+      "name": "Vinícius Eutrópio",
+      "clubs": [
+        "Figueirense"
+      ],
+      "country": "Brasil",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 2122,
+      "name": "Caturla",
+      "clubs": [
+        "CF Talavera"
+      ],
+      "country": "España",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 2200,
+      "name": "David Vidal",
+      "clubs": [
+        "Rayo Vallecano"
+      ],
+      "country": "España",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 2238,
+      "name": "Materazzi",
+      "clubs": [
+        "AS Bari"
+      ],
+      "country": "Italia",
+      "status": "no_confident_match",
+      "candidates": [
+        "it:Giuseppe Materazzi",
+        "it:Marco Materazzi",
+        "en:Marco Materazzi"
+      ]
+    },
+    {
+      "source_id": 2373,
+      "name": "Joe Royle",
+      "clubs": [
+        "Oldham Athletic FC"
+      ],
+      "country": "Inglaterra",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 2388,
+      "name": "David Thomas Bassett",
+      "clubs": [
+        "Sheffield United  FC"
+      ],
+      "country": "Inglaterra",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 2404,
+      "name": "Wim Koevermans",
+      "clubs": [
+        "FC Groningen"
+      ],
+      "country": "Holanda",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 2406,
+      "name": "Versleijen",
+      "clubs": [
+        "De Graafschap"
+      ],
+      "country": "Holanda",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 2409,
+      "name": "José Antonio Novo\r\nJuan Fidalgo\r\nJuan Fidalgo",
+      "clubs": [
+        "Real Oviedo B"
+      ],
+      "country": "España",
+      "status": "bad_source_name"
+    },
+    {
+      "source_id": 2410,
+      "name": "Los Arcos",
+      "clubs": [
+        "CA Osasuna B"
+      ],
+      "country": "España",
+      "status": "no_confident_match",
+      "candidates": [
+        "en:Estadio Municipal Los Arcos"
+      ]
+    },
+    {
+      "source_id": 2424,
+      "name": "Waldo Ramos",
+      "clubs": [
+        "UE Figueres"
+      ],
+      "country": "España",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 2442,
+      "name": "Néstor Craviotto",
+      "clubs": [
+        "Deportivo Pereira"
+      ],
+      "country": "Argentina",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 2488,
+      "name": "Martelotte",
+      "clubs": [
+        "Santa Cruz"
+      ],
+      "country": "Brasil",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 2493,
+      "name": "Klaus Toppmöller",
+      "clubs": [
+        "Eintracht Frankfurt"
+      ],
+      "country": "Alemania",
+      "status": "no_confident_match",
+      "candidates": [
+        "de:Dino Toppmöller",
+        "en:Dino Toppmöller"
+      ]
+    },
+    {
+      "source_id": 2692,
+      "name": "Hannes Bongartz",
+      "clubs": [
+        "SG Wattenscheid 09"
+      ],
+      "country": "Alemania",
+      "status": "no_confident_match",
+      "candidates": [
+        "de:Hans Bongartz"
+      ]
+    },
+    {
+      "source_id": 2726,
+      "name": "Lalo",
+      "clubs": [
+        "CF Palencia"
+      ],
+      "country": "España",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 2733,
+      "name": "Ken Fogarty",
+      "clubs": [
+        "Tampa Bay Rowdies"
+      ],
+      "country": "Inglaterra",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 2804,
+      "name": "Fontana",
+      "clubs": [
+        "Hellas Verona"
+      ],
+      "country": "Italia",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 2841,
+      "name": "Ivan Golac",
+      "clubs": [
+        "Dundee Utd FC"
+      ],
+      "country": "Croacia",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 2867,
+      "name": "Hernán Lisi",
+      "clubs": [
+        "Once Caldas"
+      ],
+      "country": "Argentina",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 2879,
+      "name": "Patrik Werner",
+      "clubs": [
+        "Degerfors IF"
+      ],
+      "country": "Suecia",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 2897,
+      "name": "Paco Loidi",
+      "clubs": [
+        "CD Izarra"
+      ],
+      "country": "España",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 2905,
+      "name": "Cheché Hernández",
+      "clubs": [
+        "Deportes Quindío"
+      ],
+      "country": "Colombia",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 2924,
+      "name": "Vítor Oliveira",
+      "clubs": [
+        "Gil Vicente FC"
+      ],
+      "country": "Portugal",
+      "status": "no_confident_match",
+      "candidates": [
+        "pt:Vítor Oliveira"
+      ]
+    },
+    {
+      "source_id": 2936,
+      "name": "Palomo",
+      "clubs": [
+        "Almería CF"
+      ],
+      "country": "España",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 2947,
+      "name": "Masakatsu Miyamoto",
+      "clubs": [
+        "Kashima Antlers"
+      ],
+      "country": "Japón",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 2948,
+      "name": "Víctor Púa",
+      "clubs": [
+        "River Plate"
+      ],
+      "country": "Uruguay",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 2965,
+      "name": "Roberto Silva",
+      "clubs": [
+        "Toluca"
+      ],
+      "country": "México",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 2970,
+      "name": "José López",
+      "clubs": [
+        "Racing de Ferrol"
+      ],
+      "country": "España",
+      "status": "no_confident_match",
+      "candidates": [
+        "en:Juan José López"
+      ]
+    },
+    {
+      "source_id": 2992,
+      "name": "Guy David",
+      "clubs": [
+        "Le Havre AC"
+      ],
+      "country": "Francia",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 2994,
+      "name": "Fuertes",
+      "clubs": [
+        "CD Mensajero"
+      ],
+      "country": "España",
+      "status": "no_confident_match",
+      "candidates": [
+        "en:Esteban Fuertes"
+      ]
+    },
+    {
+      "source_id": 2999,
+      "name": "Voltaire García",
+      "clubs": [
+        "CA Malagueño"
+      ],
+      "country": "Uruguay",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 3003,
+      "name": "Vítor Urbano",
+      "clubs": [
+        "FC Paços de Ferreira"
+      ],
+      "country": "Portugal",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 3008,
+      "name": "Gílson Nunes",
+      "clubs": [
+        "Sport Recife"
+      ],
+      "country": "Brasil",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 3009,
+      "name": "Oliveira",
+      "clubs": [
+        "SC Braga"
+      ],
+      "country": "Portugal",
+      "status": "no_confident_match",
+      "candidates": [
+        "pt:Estádio Raulino de Oliveira"
+      ]
+    },
+    {
+      "source_id": 3011,
+      "name": "Ramón Moya",
+      "clubs": [
+        "CE L'Hospitalet"
+      ],
+      "country": "España",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 3021,
+      "name": "Plaza",
+      "clubs": [
+        "Real Jaén CF"
+      ],
+      "country": "España",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 3023,
+      "name": "Blanco",
+      "clubs": [
+        "Atlético Marbella"
+      ],
+      "country": "España",
+      "status": "no_confident_match",
+      "candidates": [
+        "en:Cuauhtémoc Blanco"
+      ]
+    },
+    {
+      "source_id": 3027,
+      "name": "Ortuondo",
+      "clubs": [
+        "CF Extremadura"
+      ],
+      "country": "España",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 3032,
+      "name": "Gustavo Onaindia",
+      "clubs": [
+        "Unión Magdalena"
+      ],
+      "country": "Argentina",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 3045,
+      "name": "Lalo",
+      "clubs": [
+        "CP Ejido"
+      ],
+      "country": "España",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 3053,
+      "name": "Gregorio Pçerez",
+      "clubs": [
+        "Deportes Tolima"
+      ],
+      "country": "Uruguay",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 3057,
+      "name": "Giorgio Rumignani",
+      "clubs": [
+        "Pescara"
+      ],
+      "country": "Italia",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 3058,
+      "name": "Jorge Vivaldo",
+      "clubs": [
+        "Atlético Huila"
+      ],
+      "country": "Argentina",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 3059,
+      "name": "Ziarreta",
+      "clubs": [
+        "Sestao SC"
+      ],
+      "country": "España",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 3067,
+      "name": "Bayona",
+      "clubs": [
+        "CD Tudelano"
+      ],
+      "country": "España",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 3080,
+      "name": "ten Cate",
+      "clubs": [
+        "ADO Den Haag"
+      ],
+      "country": "Holanda",
+      "status": "no_confident_match",
+      "candidates": [
+        "nl:Henk ten Cate",
+        "nl:Cees ten Cate",
+        "en:Henk ten Cate",
+        "en:Caesar ten Cate"
+      ]
+    },
+    {
+      "source_id": 3091,
+      "name": "Procópio Cardoso",
+      "clubs": [
+        "Esporte Bahía"
+      ],
+      "country": "Brasil",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 3093,
+      "name": "Pachequinho",
+      "clubs": [
+        "Coritiba"
+      ],
+      "country": "Brasil",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 3111,
+      "name": "Carlos de los Cobos",
+      "clubs": [
+        "Querétaro"
+      ],
+      "country": "México",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 3112,
+      "name": "John Gorman",
+      "clubs": [
+        "Swindon Town FC"
+      ],
+      "country": "Escocia",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 3169,
+      "name": "Carlos Linaris",
+      "clubs": [
+        "Rampla Juniors"
+      ],
+      "country": "Uruguay",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 3172,
+      "name": "Juan Mozo",
+      "clubs": [
+        "Liverpool"
+      ],
+      "country": "Uruguay",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 3173,
+      "name": "Wálter Roque",
+      "clubs": [
+        "Club Atlético Cerro"
+      ],
+      "country": "Uruguay",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 3174,
+      "name": "Víctor Luzardo",
+      "clubs": [
+        "Racing de Montevideo"
+      ],
+      "country": "Uruguay",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 3206,
+      "name": "Tommy Burns",
+      "clubs": [
+        "Kilmarnock FC"
+      ],
+      "country": "Escocia",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 3220,
+      "name": "Enrique Martín",
+      "clubs": [
+        "CA Osasuna"
+      ],
+      "country": "España",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 3223,
+      "name": "Boronat",
+      "clubs": [
+        "CD Badajoz"
+      ],
+      "country": "España",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 3224,
+      "name": "Robi",
+      "clubs": [
+        "Palamós CF"
+      ],
+      "country": "España",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 3226,
+      "name": "Marchioro",
+      "clubs": [
+        "AC Reggiana"
+      ],
+      "country": "Italia",
+      "status": "no_confident_match",
+      "candidates": [
+        "it:Giuseppe Marchioro"
+      ]
+    },
+    {
+      "source_id": 3228,
+      "name": "Marchesi",
+      "clubs": [
+        "US Lecce"
+      ],
+      "country": "Italia",
+      "status": "no_confident_match",
+      "candidates": [
+        "it:Rino Marchesi",
+        "en:Rino Marchesi"
+      ]
+    },
+    {
+      "source_id": 3229,
+      "name": "Teixidó",
+      "clubs": [
+        "CD Ourense"
+      ],
+      "country": "España",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 3231,
+      "name": "José Antonio Tejedor",
+      "clubs": [
+        "Real Ávila"
+      ],
+      "country": "España",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 3232,
+      "name": "Raúl González",
+      "clubs": [
+        "Avilés Industrial"
+      ],
+      "country": "España",
+      "status": "no_confident_match",
+      "candidates": [
+        "es:Raúl González Blanco",
+        "es:Raúl González Gutiérrez",
+        "en:Raúl González"
+      ]
+    },
+    {
+      "source_id": 3233,
+      "name": "Félix",
+      "clubs": [
+        "Arosa SC"
+      ],
+      "country": "España",
+      "status": "no_confident_match",
+      "candidates": [
+        "en:João Félix"
+      ]
+    },
+    {
+      "source_id": 3234,
+      "name": "Manolo Chico",
+      "clubs": [
+        "Atlético Tomelloso"
+      ],
+      "country": "España",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 3237,
+      "name": "Mintegui",
+      "clubs": [
+        "Bermeo Club"
+      ],
+      "country": "España",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 3239,
+      "name": "Vicente",
+      "clubs": [
+        "RS Gimnástica T."
+      ],
+      "country": "España",
+      "status": "no_confident_match",
+      "candidates": [
+        "en:Vicente del Bosque"
+      ]
+    },
+    {
+      "source_id": 3240,
+      "name": "Urquiaga",
+      "clubs": [
+        "CD Basconia"
+      ],
+      "country": "España",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 3241,
+      "name": "Iranzo",
+      "clubs": [
+        "Endesa Andorra"
+      ],
+      "country": "España",
+      "status": "no_confident_match",
+      "candidates": [
+        "en:Rubén Iranzo"
+      ]
+    },
+    {
+      "source_id": 3242,
+      "name": "Tardío",
+      "clubs": [
+        "Utebo FC"
+      ],
+      "country": "España",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 3243,
+      "name": "Segurola",
+      "clubs": [
+        "CD Touring"
+      ],
+      "country": "España",
+      "status": "no_confident_match",
+      "candidates": [
+        "es:Santiago Segurola"
+      ]
+    },
+    {
+      "source_id": 3245,
+      "name": "Bonachera",
+      "clubs": [
+        "UDA Gramenet"
+      ],
+      "country": "España",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 3246,
+      "name": "Neme",
+      "clubs": [
+        "Yeclano CF"
+      ],
+      "country": "España",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 3247,
+      "name": "Manolo Jiménez",
+      "clubs": [
+        "Benidorm CD"
+      ],
+      "country": "España",
+      "status": "no_confident_match",
+      "candidates": [
+        "es:Manolo Jiménez Jiménez",
+        "en:Manolo Jiménez (footballer, born 1964)",
+        "en:Manolo Jiménez (footballer, born 1976)"
+      ]
+    },
+    {
+      "source_id": 3248,
+      "name": "Xavi Agustí",
+      "clubs": [
+        "FC Andorra"
+      ],
+      "country": "España",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 3249,
+      "name": "Eduard Teixeiro",
+      "clubs": [
+        "AEC Manlleu"
+      ],
+      "country": "España",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 3250,
+      "name": "Manolo",
+      "clubs": [
+        "CE Premià"
+      ],
+      "country": "España",
+      "status": "no_confident_match",
+      "candidates": [
+        "en:Manolo Sanchís",
+        "en:Manolo Jiménez (footballer, born 1964)",
+        "en:Manolo Herrero (footballer, born 1970)"
+      ]
+    },
+    {
+      "source_id": 3251,
+      "name": "Agujitas",
+      "clubs": [
+        "UE Rubí"
+      ],
+      "country": "España",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 3252,
+      "name": "Churruca",
+      "clubs": [
+        "PD Santa Eulalia"
+      ],
+      "country": "España",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 3255,
+      "name": "Calvo Marini",
+      "clubs": [
+        "CD Cieza"
+      ],
+      "country": "Argentina",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 3256,
+      "name": "Toni Bauzá",
+      "clubs": [
+        "CE Manacor"
+      ],
+      "country": "España",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 3258,
+      "name": "Pacuco Rosales",
+      "clubs": [
+        "CD Maspalomas"
+      ],
+      "country": "España",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 3259,
+      "name": "Burgueña",
+      "clubs": [
+        "CD Estepona"
+      ],
+      "country": "España",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 3260,
+      "name": "Santiago Martín",
+      "clubs": [
+        "UD Realejos"
+      ],
+      "country": "España",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 3261,
+      "name": "Oviedo",
+      "clubs": [
+        "Marmol Macael CD"
+      ],
+      "country": "España",
+      "status": "no_confident_match",
+      "candidates": [
+        "en:Real Oviedo"
+      ]
+    },
+    {
+      "source_id": 3263,
+      "name": "Mário Reis",
+      "clubs": [
+        "SC Salgueiros"
+      ],
+      "country": "Portugal",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 3293,
+      "name": "Marian Bondrea",
+      "clubs": [
+        "CS Universitatea Craiova"
+      ],
+      "country": "Rumanía",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 3294,
+      "name": "Carlos Fren",
+      "clubs": [
+        "Deportivo Mandiyú"
+      ],
+      "country": "Argentina",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 3297,
+      "name": "Fernando Areán",
+      "clubs": [
+        "Deportivo Español"
+      ],
+      "country": "Argentina",
+      "status": "no_confident_match",
+      "candidates": [
+        "es:Fernando José Areán"
+      ]
+    },
+    {
+      "source_id": 3298,
+      "name": "Gildásio",
+      "clubs": [
+        "Remo"
+      ],
+      "country": "Brasil",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 3300,
+      "name": "Jorge Gómez",
+      "clubs": [
+        "Toros Hidalgo"
+      ],
+      "country": "México",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 3302,
+      "name": "Silipo",
+      "clubs": [
+        "Cosenza Calcio"
+      ],
+      "country": "Italia",
+      "status": "matched",
+      "wikipedia_title": "Fausto Silipo",
+      "lang": "it",
+      "wikidata_year": 1949
+    },
+    {
+      "source_id": 3304,
+      "name": "Nedo Sonetti",
+      "clubs": [
+        "AC Monza"
+      ],
+      "country": "Italia",
+      "status": "matched",
+      "wikipedia_title": "Nedo Sonetti",
+      "lang": "it",
+      "wikidata_year": 1941
+    },
+    {
+      "source_id": 3305,
+      "name": "Perotti",
+      "clubs": [
+        "Fidelis Andria"
+      ],
+      "country": "Italia",
+      "status": "no_confident_match",
+      "candidates": [
+        "it:Attilio Perotti",
+        "it:Diego Perotti",
+        "en:Diego Perotti"
+      ]
+    },
+    {
+      "source_id": 3307,
+      "name": "Giuseppe Papadopulo",
+      "clubs": [
+        "Acireale"
+      ],
+      "country": "Italia",
+      "status": "matched",
+      "wikipedia_title": "Giuseppe Papadopulo",
+      "lang": "it",
+      "wikidata_year": 1948
+    },
+    {
+      "source_id": 3308,
+      "name": "Jansen",
+      "clubs": [
+        "RBC Roosendaal"
+      ],
+      "country": "Holanda",
+      "status": "no_confident_match",
+      "candidates": [
+        "nl:Wim Jansen (voetballer)",
+        "nl:Renate Jansen",
+        "en:Larry Jansen"
+      ]
+    },
+    {
+      "source_id": 3309,
+      "name": "van Doorneveld",
+      "clubs": [
+        "HFC Haarlem"
+      ],
+      "country": "Holanda",
+      "status": "matched",
+      "wikipedia_title": "Hans van Doorneveld",
+      "lang": "nl",
+      "wikidata_year": 1940
+    },
+    {
+      "source_id": 3312,
+      "name": "Nienhuis",
+      "clubs": [
+        "SC Veendam"
+      ],
+      "country": "Holanda",
+      "status": "matched",
+      "wikipedia_title": "Henk Nienhuis",
+      "lang": "nl",
+      "wikidata_year": 1941
+    },
+    {
+      "source_id": 3313,
+      "name": "Shu Kamo",
+      "clubs": [
+        "Yokohama Flügels"
+      ],
+      "country": "Japón",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 3314,
+      "name": "Francesco Oddo",
+      "clubs": [
+        "Modena FC"
+      ],
+      "country": null,
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 3315,
+      "name": "Julio César Antúnez",
+      "clubs": [
+        "Bella Vista"
+      ],
+      "country": "Uruguay",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 3316,
+      "name": "Saúl Rivero",
+      "clubs": [
+        "Progreso"
+      ],
+      "country": "Uruguay",
+      "status": "no_confident_match",
+      "candidates": []
+    },
+    {
+      "source_id": 3317,
+      "name": "Osvaldo Giménez",
+      "clubs": [
+        "Huracán Buceo"
+      ],
+      "country": "Uruguay",
+      "status": "no_confident_match",
+      "candidates": []
+    }
+  ]
+}

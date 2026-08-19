@@ -67,7 +67,7 @@ def update_manager_tactics(career_id: str, payload: CareerTacticsPayload, compac
     (_career_store().save_hot_overlay(career.state) if compact else _career_store().save(career.state))
     if compact:
         return {"tactics": dict(career.state.get("tactics") or {}), "tactical_identity": career.tactical_identity_snapshot()}
-    return career.snapshot()
+    return {"career": career.snapshot()}
 
 @router.put("/api/football9394/careers/{career_id}/selection")
 def update_manager_selection(career_id: str, payload: CareerSelectionPayload, compact: bool = False) -> dict:
