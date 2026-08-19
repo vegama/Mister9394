@@ -4864,10 +4864,10 @@
           "shirt_number": 5,
           "position_code": "DF",
           "position_name": "defender",
-          "resolved_source_id": 9494181,
-          "resolution": "added_world_cup_1994",
-          "game_team_id": 9400059,
-          "game_team_name": "Otros-Nigeria"
+          "resolved_source_id": 9496364,
+          "resolution": "reconciled_existing_club_player",
+          "game_team_id": 9357001,
+          "game_team_name": "Fenerbahçe"
         },
         {
           "external_player_id": "P-91949",
@@ -6294,10 +6294,10 @@
           "shirt_number": 16,
           "position_code": "FW",
           "position_name": "forward",
-          "resolved_source_id": 9494201,
-          "resolution": "added_world_cup_1994",
-          "game_team_id": 9400060,
-          "game_team_name": "Otros-Noruega"
+          "resolved_source_id": 9496480,
+          "resolution": "reconciled_existing_club_player",
+          "game_team_id": 9357007,
+          "game_team_name": "Bursaspor"
         },
         {
           "external_player_id": "P-59890",

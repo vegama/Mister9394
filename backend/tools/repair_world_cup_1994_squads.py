@@ -1,30 +1,30 @@
 from __future__ import annotations
 
-"""Repara convocatorias de USA 1994 que referencian jugadores inexistentes.
+"""Repara convocatorias de USA 1994 que apuntan a jugadores inexistentes.
 
 ``world_cup_1994_squads.json`` guarda los 22 de cada selección con su
 ``resolved_source_id``. Si uno solo de esos identificadores no existe en el
 universo, ``world_cup_1994_player_ids`` devuelve la lista vacía por seguridad y
-la selección entera pasa a contar como 0/22. El efecto no es cosmético: el
-Mundial no se puede simular y **la carrera revienta con un 500 al llegar a junio
-de 1994**, sin haber hecho nada raro.
+la selección entera cuenta como 0/22. El efecto no es cosmético: el Mundial no
+se puede simular y **la carrera revienta con un 500 al llegar a junio de 1994**.
 
-El caso encontrado: Nigeria y Noruega arrastraban cada una un identificador
-huérfano —Uche Okechukwu y Göran Sørloth— perdidos en algún punto del pipeline
-de creación. Sus vecinos de identificador existían todos, así que eran dos
-huecos en una secuencia por lo demás contigua. Mientras tanto la interfaz
-mostraba «22/22» para ambas, porque ese contador mira el fichero de
-convocatorias y no el universo.
+El caso encontrado: Nigeria y Noruega apuntaban cada una a un identificador
+huérfano. Resultó que **los dos futbolistas ya existían en el universo**, con su
+club real de la temporada:
 
-La herramienta reconstruye a los jugadores que faltan:
+- Uche Okechukwu jugaba en el Fenerbahçe;
+- Gøran Sørloth jugaba en el Bursaspor.
 
-- la **identidad** (nombre, fecha de nacimiento, dorsal, demarcación, país y
-  club contenedor) sale del propio fichero de convocatorias, que es fuente
-  citable — Fjelstul World Cup Database, igual que sus compañeros;
-- los **atributos** no se inventan ni se clonan de un compañero concreto: se
-  derivan de la mediana de sus compañeros de selección en la misma demarcación
-  y quedan etiquetados como inferidos, para que nunca se confundan con dato
-  histórico.
+Ambos habían entrado con el pase de la liga turca, con la misma fecha de
+nacimiento y demarcación que declara la convocatoria. Lo que faltaba no era
+gente: era la reconciliación entre la convocatoria del Mundial y la ficha que ya
+estaba en la base.
+
+Por eso esta herramienta **reconcilia y no crea**. Busca al futbolista por
+nombre, fecha de nacimiento y país, y reapunta la convocatoria a su ficha real.
+Crear un jugador nuevo habría duplicado a una persona que ya existía y la habría
+dejado colgada de un contenedor ``Otros-`` en vez de en su club, que es
+justamente lo que la política de identidad del proyecto prohíbe.
 
 Uso:
 
@@ -34,8 +34,8 @@ Uso:
 
 import argparse
 import json
+import unicodedata
 from pathlib import Path
-from statistics import median
 from typing import Any
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -44,11 +44,15 @@ SNAPSHOT = DATA / "historical_snapshot.json"
 SQUADS = DATA / "world_cup_1994_squads.json"
 
 BROAD_BY_POSITION = {"GK": "POR", "DF": "DEF", "MF": "MED", "FW": "DEL"}
-ATTRIBUTE_SOURCE = "inferred_from_world_cup_cohort_repair"
 
 
 def load(path: Path) -> dict[str, Any]:
     return json.loads(path.read_text(encoding="utf-8"))
+
+
+def fold(text: Any) -> str:
+    raw = unicodedata.normalize("NFKD", str(text or ""))
+    return "".join(c for c in raw if not unicodedata.combining(c)).casefold().strip()
 
 
 def find_dangling(snapshot: dict[str, Any], squads: dict[str, Any]) -> list[dict[str, Any]]:
@@ -64,94 +68,39 @@ def find_dangling(snapshot: dict[str, Any], squads: dict[str, Any]) -> list[dict
     return missing
 
 
-def cohort(snapshot: dict[str, Any], country_id: int, broad: str) -> list[dict[str, Any]]:
-    """Compañeros de selección en la misma demarcación."""
-    rows = [
-        row for row in snapshot.get("players", [])
-        if int(row.get("international_country_id") or 0) == country_id
-        and row.get("broad_position") == broad
-    ]
-    return rows or [
-        row for row in snapshot.get("players", [])
-        if int(row.get("international_country_id") or 0) == country_id
-    ]
+def match_existing(snapshot: dict[str, Any], entry: dict[str, Any]) -> dict[str, Any] | None:
+    """Busca en el universo al futbolista que la convocatoria ya describe.
 
-
-def median_int(values: list[Any], fallback: int) -> int:
-    numbers = [int(v) for v in values if isinstance(v, (int, float))]
-    return int(round(median(numbers))) if numbers else fallback
-
-
-def build_player(entry: dict[str, Any], snapshot: dict[str, Any]) -> dict[str, Any]:
+    El criterio es deliberadamente estricto —apellido, fecha de nacimiento y
+    demarcación— porque reapuntar una convocatoria a la persona equivocada sería
+    peor que dejarla rota: saldría a jugar un Mundial con la ficha de otro.
+    """
     player = entry["player"]
-    team = entry["team"]
-    country_id = int(team["country_id"])
-    position_code = str(player.get("position_code") or "MF").upper()
-    broad = BROAD_BY_POSITION.get(position_code, "MED")
-    peers = cohort(snapshot, country_id, broad)
-    if not peers:
-        raise ValueError(f"sin cohorte para reconstruir a {player.get('display_name')}")
+    country_id = int(entry["team"]["country_id"])
+    birth = str(player.get("birth_date") or "")[:10]
+    family = fold(player.get("family_name"))
+    display = fold(player.get("display_name"))
+    broad = BROAD_BY_POSITION.get(str(player.get("position_code") or "").upper())
+    if not birth or not family:
+        return None
 
-    template = max(peers, key=lambda row: int(row.get("overall") or 0))
-    overall = median_int([row.get("overall") for row in peers], 70)
-
-    attributes: dict[str, int] = {}
-    for key in (template.get("attributes") or {}):
-        attributes[key] = median_int([(row.get("attributes") or {}).get(key) for row in peers],
-                                     overall)
-
-    role_ratings = dict(template.get("role_ratings") or {})
-    birth_date = str(player.get("birth_date") or "")
-    shirt = player.get("shirt_number")
-
-    built = {key: template.get(key) for key in template}
-    built.update({
-        "source_id": entry["source_id"],
-        "team_id": int(player.get("game_team_id") or template.get("team_id") or 0),
-        "display_name": player.get("display_name"),
-        "first_name": player.get("given_name"),
-        "surname1": player.get("family_name"),
-        "surname2": None,
-        "birth_date": f"{birth_date}T00:00:00" if birth_date else None,
-        "birth_country_id": country_id,
-        "international_country_id": country_id,
-        "shirt_number": shirt,
-        "favorite_shirt_number": shirt,
-        "broad_position": broad,
-        "overall": overall,
-        "category": overall,
-        "attributes": attributes,
-        "role_ratings": role_ratings,
-        "historical_squad_1994": True,
-        "world_cup_1994": {
-            "team_code": team.get("team_code"),
-            "country_id": country_id,
-            "group": team.get("group"),
-            "shirt_number": shirt,
-            "position": position_code,
-            "external_player_id": player.get("external_player_id"),
-        },
-        "identity_source": "Fjelstul World Cup Database",
-        "attribute_source": ATTRIBUTE_SOURCE,
-        "historical_club_1994": player.get("game_team_name"),
-        "external_origin": "world_cup_1994",
-        "repair_note": (
-            "Reconstruido: la convocatoria de USA 1994 lo citaba pero no existía en el "
-            "universo, lo que dejaba la selección en 0/22 y hacía fallar el Mundial. "
-            "Identidad tomada de la convocatoria; atributos inferidos de la mediana de "
-            "sus compañeros de selección en la misma demarcación."
-        ),
-    })
-    # Campos que no deben heredarse del compañero usado como plantilla.
-    for key in ("height_cm", "weight_kg", "previous_team_id", "academy_team_id",
-                "profile_review_0_23", "profile_review_required"):
-        built.pop(key, None)
-    return built
+    for row in snapshot.get("players", []):
+        if str(row.get("birth_date") or "")[:10] != birth:
+            continue
+        if int(row.get("birth_country_id") or 0) != country_id:
+            continue
+        names = {fold(row.get("surname1")), fold(row.get("display_name"))}
+        if not (family in names or display in {fold(row.get("display_name"))}):
+            continue
+        if broad and row.get("broad_position") and row["broad_position"] != broad:
+            continue
+        return row
+    return None
 
 
 def main() -> int:
     parser = argparse.ArgumentParser(description="Repara convocatorias USA 1994 con referencias huérfanas")
-    parser.add_argument("--apply", action="store_true", help="Escribe los jugadores reconstruidos.")
+    parser.add_argument("--apply", action="store_true", help="Reapunta las convocatorias a la ficha real.")
     parser.add_argument("--check", action="store_true", help="Sólo informa (por defecto).")
     args = parser.parse_args()
 
@@ -163,24 +112,53 @@ def main() -> int:
         print("OK: ninguna convocatoria de USA 1994 cita jugadores inexistentes.")
         return 0
 
-    print(f"Referencias huérfanas encontradas: {len(missing)}")
+    teams_by_id = {int(row["source_id"]): row.get("name") for row in snapshot.get("teams", [])}
+    resolved: list[tuple[dict[str, Any], dict[str, Any]]] = []
+    unresolved: list[dict[str, Any]] = []
     for entry in missing:
-        player = entry["player"]
-        print(f"  · {entry['source_id']} {player.get('display_name')} "
-              f"({entry['team'].get('name')}, {player.get('position_code')})")
+        found = match_existing(snapshot, entry)
+        (resolved.append((entry, found)) if found is not None else unresolved.append(entry))
+
+    print(f"Referencias huérfanas: {len(missing)}")
+    for entry, found in resolved:
+        club = teams_by_id.get(int(found.get("team_id") or 0)) or "sin club"
+        print(f"  · {entry['player'].get('display_name')} ({entry['team'].get('name')}) "
+              f"-> ya existe como {found['source_id']} en {club}")
+    for entry in unresolved:
+        print(f"  · {entry['player'].get('display_name')} ({entry['team'].get('name')}) "
+              f"-> SIN correspondencia en el universo; requiere alta verificada a mano")
 
     if not args.apply:
-        print("\nSin cambios. Ejecuta con --apply para reconstruirlos.")
+        print("\nSin cambios. Ejecuta con --apply para reapuntar las convocatorias.")
+        return 1
+    if unresolved:
+        print("\nNo se aplica nada: hay huérfanos sin correspondencia y crear jugadores "
+              "automáticamente duplicaría personas. Resuélvelos antes.")
         return 1
 
-    built = [build_player(entry, snapshot) for entry in missing]
-    snapshot["players"].extend(built)
-    snapshot["players"].sort(key=lambda row: int(row["source_id"]))
+    for entry, found in resolved:
+        player = entry["player"]
+        team = entry["team"]
+        player["resolved_source_id"] = int(found["source_id"])
+        player["resolution"] = "reconciled_existing_club_player"
+        player["game_team_id"] = int(found.get("team_id") or 0)
+        player["game_team_name"] = teams_by_id.get(int(found.get("team_id") or 0))
+        # La ficha del futbolista debe llevar la marca del Mundial igual que el
+        # resto de convocados; sin ella jugaría USA 94 sin que su ficha lo diga.
+        found["historical_squad_1994"] = True
+        found["world_cup_1994"] = {
+            "team_code": team.get("team_code"),
+            "country_id": int(team["country_id"]),
+            "group": team.get("group"),
+            "shirt_number": player.get("shirt_number"),
+            "position": str(player.get("position_code") or "").upper(),
+            "external_player_id": player.get("external_player_id"),
+        }
+    SQUADS.write_text(json.dumps(squads, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     SNAPSHOT.write_text(json.dumps(snapshot, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
-    print(f"\nReconstruidos {len(built)} jugadores en {SNAPSHOT.relative_to(ROOT)}:")
-    for row in built:
-        print(f"  · {row['source_id']} {row['display_name']} · {row['broad_position']} · media {row['overall']}")
+    print(f"\nReapuntadas {len(resolved)} convocatorias en {SQUADS.relative_to(ROOT)} "
+          f"y marcadas sus fichas en {SNAPSHOT.relative_to(ROOT)}.")
     return 0
 
 
