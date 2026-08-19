@@ -340,6 +340,50 @@ Lo que hay que resolver antes de tocar nada:
   usuario, y encajan con `scouting.py` —descubrir a un chaval del Rosenborg antes
   que nadie—.
 
+### La premisa: mundo sin edad, con los futbolistas de los 90 para siempre
+
+Lo que se quiere jugar es la generación de mediados y finales de los noventa
+**sin que nadie se retire**. La edad queda congelada; lo que cambia es el nivel,
+por rendimiento, lesiones y minutos. Esto no es un capricho suelto: es lo que
+justifica traer plantillas reales en vez de generarlas, y condiciona todo el
+diseño de la progresión.
+
+**El problema de quitar la edad** es que en un manager la edad es el motor de
+todo: hace crecer al joven, declinar al veterano y retirarse al viejo, y así deja
+sitio al siguiente. Si se quita y no se pone nada, todo el mundo converge hacia
+arriba, nadie libera su puesto y a las cinco temporadas la liga es un museo de
+ancianos intocables. Encima choca de frente con querer el talento repartido: si
+Zubizarreta sigue siendo Zubizarreta para siempre, el portero joven no juega
+nunca.
+
+**Lo que sustituye a la edad:**
+
+1. **El nivel se mueve en los dos sentidos.** Nadie se retira, pero quien juega
+   mal, se lesiona o no tiene minutos **baja**. Es lo que mantiene la rotación
+   sin necesidad de que nadie desaparezca.
+2. **Cada futbolista tiene techo propio, y es el que tuvo de verdad.** Anelka
+   puede llegar a ser el Anelka de 1999, no más. Skammelsrud llega hasta donde
+   llegó. Así la generación de los noventa emerge sola con las temporadas sin
+   que nadie se invente una estrella.
+3. **Los jóvenes suben más rápido.** Ya está la pieza: `progression_mean` es un
+   campo documentado de la fuente (0..9) que `coaching.py` usa como
+   `factor += (progression - 4) * 0.018`. A los menores de 20 se les dio
+   valoración de cantera y progresión alta al crearlos.
+
+Con eso, un mundo que arranca en el 93-94 va soltando por sí solo a los grandes
+de la segunda mitad de la década, que es exactamente lo que se busca, sin
+inventar a nadie y sin que los de la primera mitad se esfumen.
+
+**Lo que queda por decidir:**
+
+- Si el techo histórico se saca de algún dato o se estima. Hoy no está en
+  ninguna parte.
+- Cuánto puede caer un veterano: sin suelo acabaría en 40 y sería otra forma de
+  desaparecer.
+- De dónde salen las caras nuevas si nadie se retira. La cantera queda
+  descartada como fuente de gente inventada; la alternativa honesta es ir
+  incorporando por temporadas a futbolistas reales que aún no están fichados.
+
 ### Otros cabos sueltos
 
 - Un club que en Europa cayó en primera ronda tendrá plantilla de 14: hay que
