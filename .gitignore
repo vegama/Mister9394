@@ -8,3 +8,6 @@ build/
 dist/
 *.log
 backend/app/football9394/careers/*.json
+
+# Copias de seguridad locales del universo antes de una pasada destructiva.
+.backup_pool/

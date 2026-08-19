@@ -50,7 +50,12 @@ CATALOG = DATA / "historical_source_catalog.json"
 REFERENCE_DAY = date(1994, 1, 1)
 MINIMUM_AGE = 16
 YOUTH_AGE = 20
-FIRST_SOURCE_ID = 9498000
+# Por encima de cualquier identificador ya usado —el mayor ajeno a este lote es
+# 9498014 y los contenedores llegan al 9400213—. Arrancar en 9498000 pisaba cinco
+# fichas reales: el jugador nuevo se colaba con el identificador de un turco o un
+# belga ya existente y las referencias de los ficheros de staging acababan
+# apuntando a la persona equivocada.
+FIRST_SOURCE_ID = 9500000
 
 # Nombre en Wikipedia -> nombre del país en el catálogo del juego, con la
 # entidad que existía en 1993-94.
@@ -97,6 +102,10 @@ LEAGUE_TIER_BASELINE = {
 DEFAULT_BASELINE = 65          # liga no modelada (nacional africana, asiática…)
 YOUTH_BASELINE = 58            # valoración de cantera
 POSITION_CODE = {"POR": "GK", "DEF": "DF", "MED": "MF", "DEL": "FW"}
+# Partículas demasiado comunes para servir de prueba de identidad: dos personas
+# distintas nacidas el mismo día podrían compartirlas sin ser la misma.
+NAME_PARTICLES = {"van", "der", "den", "dos", "das", "del", "dei", "bin", "ben",
+                  "abd", "abu", "ould", "mac", "mck", "sen", "jun", "santa"}
 
 
 def fold(text: Any) -> str:
@@ -114,19 +123,39 @@ def load_country_ids() -> dict[str, int]:
     return {fold(row["name"]): int(row["source_id"]) for row in catalog["countries"]}
 
 
-def load_existing(snapshot: dict[str, Any]) -> tuple[set[tuple[str, str]], dict[str, list[dict]]]:
-    """Índices de reconciliación: por (apellido, fecha) y por fecha suelta."""
-    by_name_dob: set[tuple[str, str]] = set()
-    by_dob: dict[str, list[dict]] = {}
+def index_by_birth_date(snapshot: dict[str, Any]) -> dict[str, list[dict[str, Any]]]:
+    index: dict[str, list[dict[str, Any]]] = {}
     for row in snapshot["players"]:
         birth = str(row.get("birth_date") or "")[:10]
-        if not birth:
-            continue
-        by_dob.setdefault(birth, []).append(row)
-        for field in ("display_name", "surname1"):
-            if row.get(field):
-                by_name_dob.add((fold(row[field]), birth))
-    return by_name_dob, by_dob
+        if birth:
+            index.setdefault(birth, []).append(row)
+    return index
+
+
+def find_existing(candidate, by_birth: dict[str, list[dict[str, Any]]]) -> dict[str, Any] | None:
+    """Busca a esta persona en la base antes de plantearse crearla.
+
+    Comparar el nombre completo tal cual no basta y por poco cuesta un
+    duplicado: la base guarda a Kalusha Bwalya simplemente como «Bwalya», con
+    su club y su fecha correctos, mientras la convocatoria lo nombra entero. Se
+    compara por fecha de nacimiento —que es el dato fuerte— y luego se exige que
+    compartan alguna palabra del nombre, de modo que «Bwalya» y «Kalusha
+    Bwalya» se reconozcan sin emparejar a dos desconocidos que nacieron el
+    mismo día.
+    """
+    same_day = by_birth.get(candidate.birth_date) or []
+    if not same_day:
+        return None
+    words = {w for w in fold(candidate.name).split() if len(w) >= 3} - NAME_PARTICLES
+    for row in same_day:
+        for field in ("surname1", "display_name", "first_name"):
+            value = fold(row.get(field))
+            if not value:
+                continue
+            existing = {w for w in value.split() if len(w) >= 3} - NAME_PARTICLES
+            if existing & words:
+                return row
+    return None
 
 
 def club_anchor(club: str | None, snapshot: dict[str, Any], position: str) -> int | None:
@@ -187,11 +216,27 @@ def split_name(full: str) -> tuple[str, str]:
 def build(pages: list[str], nations: set[str] | None, *, start_id: int) -> dict[str, Any]:
     snapshot = json.loads(SNAPSHOT.read_text(encoding="utf-8"))
     countries = load_country_ids()
-    seen_name_dob, _ = load_existing(snapshot)
+    by_birth = index_by_birth_date(snapshot)
+
+    # Un identificador repetido no da error en ninguna parte: simplemente hace
+    # que dos personas distintas compartan ficha y que las referencias antiguas
+    # apunten a la equivocada. Más vale no llegar a generarlo.
+    ocupados = [int(p["source_id"]) for p in snapshot.get("players", [])]
+    ocupados += [int(t["source_id"]) for t in snapshot.get("teams", [])]
+    techo = max(ocupados)
+    if start_id <= techo:
+        raise SystemExit(
+            f"--start-id {start_id} pisa identificadores ya usados (el mayor es {techo}); "
+            f"arranca en {techo + 1} o más"
+        )
 
     rows: list[dict[str, Any]] = []
     stats = {"leidos": 0, "ya_existen": 0, "sin_fecha": 0, "muy_jovenes": 0,
-             "pais_desconocido": 0, "duplicado_en_lote": 0, "nuevos": 0}
+             "pais_desconocido": 0, "duplicado_en_lote": 0, "nuevos": 0,
+             "nacionalidad_a_asignar": 0}
+    # Ya están en la base pero sin nacionalidad internacional: no hay que
+    # crearlos, hay que reconocerles la selección que ya defendían.
+    nationality_fixes: list[dict[str, Any]] = []
     lote: set[tuple[str, str]] = set()
     next_id = start_id
 
@@ -230,8 +275,19 @@ def build(pages: list[str], nations: set[str] | None, *, start_id: int) -> dict[
                         stats["muy_jovenes"] += 1
                         continue
                     key = (fold(player.name), player.birth_date)
-                    if key in seen_name_dob:
+                    existing = find_existing(player, by_birth)
+                    if existing is not None:
                         stats["ya_existen"] += 1
+                        if not existing.get("international_country_id"):
+                            stats["nacionalidad_a_asignar"] += 1
+                            nationality_fixes.append({
+                                "source_id": int(existing["source_id"]),
+                                "display_name": existing.get("display_name"),
+                                "birth_date": str(existing.get("birth_date") or "")[:10],
+                                "international_country_id": country_id,
+                                "country_name": country_name,
+                                "evidence": f"convocado por {country_name} en {player.source}",
+                            })
                         continue
                     if key in lote:
                         stats["duplicado_en_lote"] += 1
@@ -274,6 +330,7 @@ def build(pages: list[str], nations: set[str] | None, *, start_id: int) -> dict[
             "nunca presentado como dato histórico."
         ),
         "stats": stats,
+        "nationality_fixes": nationality_fixes,
         "players": rows,
     }
 

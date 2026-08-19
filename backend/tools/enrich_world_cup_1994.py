@@ -503,6 +503,20 @@ def apply_verified_source_corrections(snapshot: dict[str, Any]) -> list[dict[str
     return applied
 
 
+# Campos que este importador rellena con un valor por defecto pero que las
+# tandas de perfiles afinan después: la foto que ya se bajó y normalizó, y la
+# puerta de identidad concreta por la que pasó cada ficha. Rehacer el registro no
+# puede devolverlos a su valor genérico —se perdería el trabajo y volveríamos a
+# descargar retratos ya guardados—, así que si el registro anterior traía algo
+# más específico, ese valor manda.
+CARRIED_OVER = {
+    "bdfutbol_id": "",
+    "bdfutbol_url": "",
+    "photo_status": "pending",
+    "duplicate_check": "created_after_global_existing_player_comparison",
+}
+
+
 def write_creation_registry(snapshot: dict[str, Any], *, json_path: Path = DEFAULT_CREATION_REGISTRY_JSON, csv_path: Path = DEFAULT_CREATION_REGISTRY_CSV) -> list[dict[str, Any]]:
     teams = {int(t.get("source_id") or 0): t for t in snapshot.get("teams", [])}
     rows: list[dict[str, Any]] = []
@@ -546,10 +560,42 @@ def write_creation_registry(snapshot: dict[str, Any], *, json_path: Path = DEFAU
             "photo_filename": f"{int(p['source_id'])}.jpg",
             "photo_status": "pending",
         })
+    # El registro es compartido: las tandas de perfiles turcos, belgas y rusos
+    # también escriben en él, y sus fichas no llevan ``external_origin``. Si aquí
+    # se reescribiera la lista entera con lo que este importador conoce, esas
+    # 1.685 filas desaparecerían aunque el futbolista siga vivo en el universo,
+    # y con ellas el rastro de qué foto y qué fuente tiene cada uno. Esta
+    # herramienta manda sobre sus dos orígenes y respeta el resto.
+    owned = {"world_cup_1994", "national_pool_1993_94"}
+    alive = {int(p["source_id"]): p for p in snapshot.get("players", [])}
+    fresh = {int(r["source_id"]): r for r in rows}
+    if json_path.exists():
+        previous = json.loads(json_path.read_text(encoding="utf-8")).get("players", [])
+        for row in previous:
+            source_id = int(row["source_id"])
+            if source_id in fresh:
+                # La foto es trabajo de otra tubería y de otra fuente. Rehacer el
+                # registro no puede devolver a "pendiente" un retrato que ya está
+                # descargado y normalizado: se perdería el rastro y volveríamos a
+                # bajarlo.
+                current = fresh[source_id]
+                for key, default in CARRIED_OVER.items():
+                    if row.get(key) and current.get(key) in (None, "", default):
+                        current[key] = row[key]
+                continue
+            player = alive.get(source_id)
+            if player is None or player.get("external_origin") in owned:
+                continue  # se ha ido del universo, o era nuestro y ya no es un alta
+            rows.append(row)
     rows.sort(key=lambda r: int(r["source_id"]))
     payload = {"schema_version": 1, "purpose": "stable registry for historical-player photo acquisition and provenance", "players": rows}
     json_path.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    fields = list(rows[0].keys()) if rows else ["source_id", "display_name"]
+    # Las filas conservadas de otras tandas no traen exactamente las mismas
+    # columnas, así que la cabecera es la unión de todas y no la de la primera.
+    fields: list[str] = []
+    for row in rows:
+        fields.extend(key for key in row if key not in fields)
+    fields = fields or ["source_id", "display_name"]
     with csv_path.open("w", encoding="utf-8-sig", newline="") as fh:
         writer = csv.DictWriter(fh, fieldnames=fields)
         writer.writeheader()
