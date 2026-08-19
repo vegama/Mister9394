@@ -42,6 +42,28 @@ Comprobar:
 4. truncar intencionadamente el primario después de haber generado backup y verificar recuperación del backup;
 5. confirmar que saves/backups/logs están fuera del repo.
 
+## Gate del bucle jugable
+
+El gate que juega partidos de verdad sobre el bundle compilado:
+
+```bash
+PYTHONPATH=. python backend/tools/rc_playable_loop_gate.py
+```
+
+Recorre el bucle central como una persona: crea carrera, avanza al día de partido,
+abre la previa, dirige el primer partido minuto a minuto hasta el descanso, reanuda,
+llega al final, cierra el acta y repite tres jornadas más resolviéndolas por resultado.
+
+**Por qué existe.** Los demás gates cubren la periferia — shell, rutas, reflow, feedback,
+errores — y ninguno llegaba a jugar. Un fallo que dejó el juego sin bucle central
+convivió con 58/58 en verde: el frontend leía el snapshot de carrera en las respuestas
+compactas de `live/start` y `live/advance`, que por contrato de rendimiento no lo
+incluyen. La excepción quedaba atrapada en un `catch` y se degradaba a un aviso, de modo
+que **no había ningún error de consola ni de página que detectar**. Sólo jugar lo revela.
+
+Al cambiar el bucle de partido, verificar que este gate sigue teniendo dientes:
+introducir el fallo a propósito debe ponerlo en rojo.
+
 ## Pirámide de QA hacia RC
 
 - Smoke por pasada: versión, import, API, save/load, build.
@@ -58,6 +80,7 @@ Un timeout del entorno no se registra como fallo funcional: los bloques largos d
 Bundle disponible en `deploy_dist` y ejecutado realmente en Chromium contra FastAPI mediante el modo policy-safe.
 
 ```bash
+PYTHONPATH=. python backend/tools/rc_playable_loop_gate.py
 PYTHONPATH=. python backend/tools/rc_production_browser_gate.py --policy-safe
 PYTHONPATH=. python backend/tools/rc_persona_playtest.py
 PYTHONPATH=. python backend/tools/rc_launcher_http_smoke.py

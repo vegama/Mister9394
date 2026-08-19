@@ -1,0 +1,43 @@
+{
+  "kind": "playable-loop",
+  "status": "pass",
+  "live_matches": 1,
+  "simulated_matches": 3,
+  "checks": {
+    "career_starts": true,
+    "live_match_1_matchday_reached": true,
+    "live_match_1_preview_opens": true,
+    "live_match_1_kickoff": true,
+    "live_match_1_minute_advances": true,
+    "live_match_1_reaches_halftime": true,
+    "live_match_1_reaches_final": true,
+    "live_match_1_report_closes": true,
+    "sim_match_1_matchday_reached": true,
+    "sim_match_1_preview_opens": true,
+    "sim_match_1_reaches_final": true,
+    "sim_match_1_report_closes": true,
+    "sim_match_2_matchday_reached": true,
+    "sim_match_2_preview_opens": true,
+    "sim_match_2_reaches_final": true,
+    "sim_match_2_report_closes": true,
+    "sim_match_3_matchday_reached": true,
+    "sim_match_3_preview_opens": true,
+    "sim_match_3_reaches_final": true,
+    "sim_match_3_report_closes": true,
+    "loop_survives": true,
+    "no_page_errors": true,
+    "no_console_errors": true
+  },
+  "observations": {
+    "live_match_1_minutes": [
+      1,
+      16,
+      31,
+      45
+    ],
+    "live_match_1_final_state": "FINAL",
+    "page_errors": [],
+    "console_errors": []
+  },
+  "passed": true
+}
