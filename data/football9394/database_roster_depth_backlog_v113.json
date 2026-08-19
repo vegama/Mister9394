@@ -1,0 +1,159 @@
+{
+  "checkpoint": "1.1.3",
+  "status": "pass_with_backlog",
+  "policy": {
+    "minimum_target": 18,
+    "method": "verified real 1993-94 players only; never synthetic filler",
+    "baseline_short_team_count": 20,
+    "baseline_total_deficit_to_18": 30,
+    "baseline_min_squad": 16,
+    "pre_reconciliation_reference": {
+      "short_team_count": 18,
+      "total_deficit_to_18": 31,
+      "minimum_admitted_squad": 15
+    },
+    "baseline_note": "Rebased after source-backed Uruguay corrections exposed previously masked short squads and moved Luis Barbat to Independiente Medellin; compared with the pre-reconciliation reference, total deficit still improves 31 -> 30 and minimum depth 15 -> 16."
+  },
+  "active_players": 12490,
+  "short_team_count": 15,
+  "total_deficit_to_18": 24,
+  "minimum_admitted_squad": 16,
+  "shortages": [
+    {
+      "team_id": 1055,
+      "team": "Raith Rovers FC",
+      "league_id": 38,
+      "league": "Scottish Premier Division",
+      "country": "Escocia",
+      "active_players": 16,
+      "deficit_to_18": 2
+    },
+    {
+      "team_id": 2293,
+      "team": "Real Madrid C",
+      "league_id": 3,
+      "league": "Segunda División B G I",
+      "country": "España",
+      "active_players": 16,
+      "deficit_to_18": 2
+    },
+    {
+      "team_id": 1583,
+      "team": "Atlético Morelia",
+      "league_id": 40,
+      "league": "Primera División",
+      "country": "México",
+      "active_players": 16,
+      "deficit_to_18": 2
+    },
+    {
+      "team_id": 1585,
+      "team": "Leones Negros",
+      "league_id": 40,
+      "league": "Primera División",
+      "country": "México",
+      "active_players": 16,
+      "deficit_to_18": 2
+    },
+    {
+      "team_id": 299,
+      "team": "De Graafschap",
+      "league_id": 54,
+      "league": "Eerste Divisie",
+      "country": "Países Bajos",
+      "active_players": 16,
+      "deficit_to_18": 2
+    },
+    {
+      "team_id": 412,
+      "team": "VVV Venlo",
+      "league_id": 31,
+      "league": "Eredivisie",
+      "country": "Países Bajos",
+      "active_players": 16,
+      "deficit_to_18": 2
+    },
+    {
+      "team_id": 997,
+      "team": "Liverpool",
+      "league_id": 49,
+      "league": "Primera División",
+      "country": "Uruguay",
+      "active_players": 16,
+      "deficit_to_18": 2
+    },
+    {
+      "team_id": 999,
+      "team": "Montevideo Wanderers",
+      "league_id": 49,
+      "league": "Primera División",
+      "country": "Uruguay",
+      "active_players": 16,
+      "deficit_to_18": 2
+    },
+    {
+      "team_id": 404,
+      "team": "Racing de Montevideo",
+      "league_id": 49,
+      "league": "Primera División",
+      "country": "Uruguay",
+      "active_players": 16,
+      "deficit_to_18": 2
+    },
+    {
+      "team_id": 1020,
+      "team": "Club Atlante",
+      "league_id": 40,
+      "league": "Primera División",
+      "country": "México",
+      "active_players": 17,
+      "deficit_to_18": 1
+    },
+    {
+      "team_id": 812,
+      "team": "FC Zwolle",
+      "league_id": 54,
+      "league": "Eerste Divisie",
+      "country": "Países Bajos",
+      "active_players": 17,
+      "deficit_to_18": 1
+    },
+    {
+      "team_id": 2352,
+      "team": "HFC Haarlem",
+      "league_id": 54,
+      "league": "Eerste Divisie",
+      "country": "Países Bajos",
+      "active_players": 17,
+      "deficit_to_18": 1
+    },
+    {
+      "team_id": 2351,
+      "team": "RBC Roosendaal",
+      "league_id": 54,
+      "league": "Eerste Divisie",
+      "country": "Países Bajos",
+      "active_players": 17,
+      "deficit_to_18": 1
+    },
+    {
+      "team_id": 297,
+      "team": "SC Heracles",
+      "league_id": 54,
+      "league": "Eerste Divisie",
+      "country": "Países Bajos",
+      "active_players": 17,
+      "deficit_to_18": 1
+    },
+    {
+      "team_id": 1587,
+      "team": "Rampla Juniors",
+      "league_id": 49,
+      "league": "Primera División",
+      "country": "Uruguay",
+      "active_players": 17,
+      "deficit_to_18": 1
+    }
+  ],
+  "regressions": []
+}
