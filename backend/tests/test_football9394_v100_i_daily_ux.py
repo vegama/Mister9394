@@ -1,11 +1,19 @@
 from __future__ import annotations
 
 from backend.app.football9394.manager_career import ManagerCareerRuntime9394
+from pathlib import Path
+
 from backend.app.football9394.product_meta import product_version
+
+ROOT = Path(__file__).resolve().parents[2]
 
 
 def test_v100_i_is_canonical_version():
-    assert product_version() == "1.0.0-i"
+    # La version avanza cada release, asi que fijar aqui una concreta convertia
+    # cada publicacion en un fallo. Lo que debe sostenerse es el contrato del
+    # repositorio: la unica fuente de version es el fichero VERSION.
+    expected = (ROOT / "VERSION").read_text(encoding="utf-8").strip()
+    assert product_version() == expected
 
 
 def _career(seed: int = 21001) -> ManagerCareerRuntime9394:

@@ -6,7 +6,7 @@ from backend.app.football9394.career_quality_gate import long_horizon_invariant_
 from backend.app.football9394.era_policy import enforce_frozen_rules_policy, regulatory_integrity_report
 from backend.app.football9394.international_manager import generate_national_job_offers, accept_national_job, international_manager_snapshot, set_national_selection, record_international_player_match
 from backend.app.football9394.international_tournaments import simulate_world_championship_24
-from backend.app.football9394.manager_career import ManagerCareerRuntime9394
+from backend.app.football9394.manager_career import CAREER_SCHEMA_9394, ManagerCareerRuntime9394
 from backend.app.football9394.market_ecosystem import agent_pressure_for_player, player_market_preferences, recruitment_plan, register_replacement_chain
 from backend.app.football9394.match_signatures import player_match_boxscore
 
@@ -89,7 +89,10 @@ def test_v016_save_migrates_to_p10_schema_without_losing_frozen_contract():
     legacy.pop("international_manager",None)
     legacy.pop("international_player_stats",None)
     restored=ManagerCareerRuntime9394(legacy)
-    assert restored.state["schema"]==17
+    # El esquema sube con cada cambio de guardado; lo que este test protege es
+    # que una partida antigua migre sin perder el contrato congelado, no un
+    # numero concreto.
+    assert restored.state["schema"]==CAREER_SCHEMA_9394 and restored.state["schema"]>=17
     assert restored.state["rules_policy"]=="frozen_1993_94"
     assert "international_manager" in restored.state and "international_player_stats" in restored.state
 
