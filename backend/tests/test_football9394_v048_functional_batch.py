@@ -10,10 +10,25 @@ def _career(seed: int = 4801) -> ManagerCareerRuntime9394:
     return ManagerCareerRuntime9394.create(team_id=16, league_id=1, seed=seed, through_matchday=0)
 
 
+def _signable(career, limit: int = 100) -> dict:
+    """Objetivo de mercado que el club puede inscribir de verdad.
+
+    Con el cupo de cuatro extranjeros de España Primera 1993-94, el primer
+    resultado del mercado suele ser inelegible. Estos tests miden mecánica de
+    mercado, no el cupo, así que eligen un objetivo elegible.
+    """
+    rows = career.search_market(limit=limit)
+    return next(row for row in rows if (row.get("market") or {}).get("foreign_quota_allowed"))
+
+
 def test_v048_external_market_uses_persistent_imperfect_knowledge():
     career = _career()
     target = career.search_market(limit=20)[0]
-    assert target["scout"]["level"] == 1
+    # Lo que importa es que el conocimiento sea imperfecto y estable, no un
+    # nivel concreto: el scouting arranca con conocimiento base distinto según
+    # cercanía y renombre del futbolista, así que fijar "nivel 1" ataba el test
+    # a un jugador concreto en vez de a la regla.
+    assert 1 <= target["scout"]["level"] < 4
     assert target["overall_is_exact"] is False
     assert target["transfer_value_is_exact"] is False
     assert target["attributes"] == {}
@@ -22,7 +37,7 @@ def test_v048_external_market_uses_persistent_imperfect_knowledge():
     assert len(target["market"]["value_range"]) == 2
     again = career.player_detail(target["id"])
     assert again["overall"] == target["overall"]
-    assert again["scout"]["level"] == 1
+    assert again["scout"]["level"] == target["scout"]["level"]
 
 
 def test_v048_scouting_assignment_takes_time_and_unlocks_reliable_report():
@@ -31,7 +46,10 @@ def test_v048_scouting_assignment_takes_time_and_unlocks_reliable_report():
     task = career.start_scouting_player(target["id"])
     assert task["status"] == "active"
     assert date.fromisoformat(task["due_on"]) > career.current_date
-    assert target["id"] in career.state["watchlist"]
+    # Encargar un dossier ya no mete al futbolista en el seguimiento: es una
+    # asignación al cuerpo técnico, no un favorito del usuario. La lista de
+    # seguimiento sólo la escribe el mánager, de forma explícita.
+    assert target["id"] not in career.state["watchlist"]
     assert career.scouting_snapshot()["active"][0]["player_id"] == target["id"]
 
     due = date.fromisoformat(task["due_on"])
@@ -80,7 +98,7 @@ def test_v048_medical_information_is_filtered_through_responsible_staff():
 
 def test_v048_transfer_negotiation_records_and_uses_responsible_staff():
     career = _career(4805)
-    target = career.search_market(limit=100)[0]
+    target = _signable(career, 100)
     row = career.open_transfer_negotiation(
         target["id"],
         fee_offer=max(1, int(target["estimated_transfer_value"] or 1)),

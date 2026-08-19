@@ -23,7 +23,10 @@ def test_source_roles_are_exposed_as_specialist_positions_not_only_broad_groups(
 def test_spain_source_foreign_rule_is_enforced_on_matchday_selection():
     career=ManagerCareerRuntime9394.create(team_id=16,league_id=1,seed=2002,through_matchday=0)
     rule=career._domestic_foreign_rule()
-    assert rule is not None and rule.max_starting==3 and rule.max_squad==6
+    # España Primera 1993-94: cuatro extranjeros inscribibles y tres
+    # simultáneos en el campo (acuerdo RFEF/LFP de 1991). El valor antiguo (6)
+    # venía del MDB genérico, antes de datar la regla con su fuente.
+    assert rule is not None and rule.max_starting==3 and rule.max_squad==4
     domestic={'nationality_id':11}
     foreign={'nationality_id':1}
     issues=validate_matchday_foreigners([domestic]*7+[foreign]*4,[],ForeignPlayerRule9394('league',1,'Primera',11,3,6))

@@ -107,7 +107,11 @@ def test_m7_watchlist_and_multiday_negotiation_flow_progresses_on_calendar():
     career=ManagerCareerRuntime9394.create(team_id=16,seed=7171,through_matchday=7);_reach_matchday(career);career.play_next_matchday()
     market=career.search_market(limit=100)
     cash=career.state["finances"]["cash"]
-    target=next(p for p in sorted(market,key=lambda p:p["estimated_transfer_value"]) if p["estimated_transfer_value"] <= cash*.7)
+    # Asequible y además inscribible: el cupo de cuatro extranjeros de España
+    # Primera 1993-94 deja fuera a buena parte del mercado.
+    target=next(p for p in sorted(market,key=lambda p:p["estimated_transfer_value"])
+                if p["estimated_transfer_value"] <= cash*.7
+                and (p.get("market") or {}).get("foreign_quota_allowed"))
     career.toggle_watchlist(target["id"],True)
     assert career.search_market(limit=100,watched=True)[0]["watched"] is True
     fee=min(cash,round(target["estimated_transfer_value"]*1.25));salary=max(target["market"]["minimum_salary_hint"],target["contract"]["salary"])
@@ -156,8 +160,17 @@ def test_m4_m8_api_live_player_and_economy_contract(monkeypatch, tmp_path):
     assert started.status_code==200 and started.json()['match']['minute']==0
     halftime=client.post(f'/api/football9394/careers/{cid}/live/advance',json={'minutes':45})
     assert halftime.status_code==200 and halftime.json()['match']['status']=='halftime'
-    live=halftime.json()['match']; outgoing=next(p for p in live['controlled_on_pitch'] if p['position'] not in {'POR','GK'})['id'];incoming=live['controlled_bench'][0]['id']
-    changed=client.post(f'/api/football9394/careers/{cid}/live/substitution',json={'outgoing_id':outgoing,'incoming_id':incoming})
+    live=halftime.json()['match']; outgoing=next(p for p in live['controlled_on_pitch'] if p['position'] not in {'POR','GK'})['id']
+    # Con el cupo de tres extranjeros en el campo, no todo suplente entra: hay
+    # que buscar un cambio legal en lugar de asumir que vale el primero del
+    # banquillo. Que exista al menos uno es parte de lo que se comprueba.
+    changed=None
+    for candidate in live['controlled_bench']:
+        attempt=client.post(f'/api/football9394/careers/{cid}/live/substitution',
+                            json={'outgoing_id':outgoing,'incoming_id':candidate['id']})
+        if attempt.status_code==200:
+            changed=attempt; break
+    assert changed is not None, 'ningún suplente producía un once legal'
     assert changed.status_code==200
     detail=client.get(f'/api/football9394/careers/{cid}/players/{outgoing}')
     assert detail.status_code==200 and 'season_stats' in detail.json()
@@ -189,7 +202,11 @@ def test_m7_api_opens_persistent_multiday_negotiation(monkeypatch, tmp_path):
     monkeypatch.setattr(webapp, 'CAREER_SAVE_ROOT', tmp_path)
     client=TestClient(webapp.app)
     state=client.post('/api/football9394/careers',json={'team_id':16,'league_id':1,'seed':9191,'through_matchday':0}).json();cid=state['career_id']
-    market=client.get(f'/api/football9394/careers/{cid}/market?limit=100').json();target=min(market,key=lambda p:p['estimated_transfer_value'])
+    market=client.get(f'/api/football9394/careers/{cid}/market?limit=100').json()
+    # El cupo de extranjeros de España Primera 1993-94 (cuatro) puede dejar
+    # fuera al más barato: este test mide la negociación, no la regla.
+    signable=[p for p in market if (p.get('market') or {}).get('foreign_quota_allowed')]
+    target=min(signable,key=lambda p:p['estimated_transfer_value'])
     watch=client.post(f"/api/football9394/careers/{cid}/watchlist/{target['id']}",json={'watched':True})
     assert watch.status_code==200 and target['id'] in watch.json()['career']['market_flow']['watchlist']
     offer=client.post(f'/api/football9394/careers/{cid}/negotiations',json={'player_id':target['id'],'fee_offer':target['estimated_transfer_value'],'salary_offer':target['market']['minimum_salary_hint'],'contract_years':3})

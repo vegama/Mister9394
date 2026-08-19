@@ -15,7 +15,14 @@ def _career(seed: int = 14001) -> ManagerCareerRuntime9394:
 
 
 def _external_target(career: ManagerCareerRuntime9394) -> dict:
-    return next(row for row in career.search_market(limit=80) if career._current_team_id(int(row["id"])) != int(career.state["team_id"]))
+    # Además de ser de otro club, el objetivo debe caber en el cupo de
+    # extranjeros: si no, la negociación se rechaza por regla y el test dejaría
+    # de medir lo que pretende.
+    return next(
+        row for row in career.search_market(limit=80)
+        if career._current_team_id(int(row["id"])) != int(career.state["team_id"])
+        and (row.get("market") or {}).get("foreign_quota_allowed")
+    )
 
 
 def _different_assignee(career: ManagerCareerRuntime9394, key: str) -> dict:

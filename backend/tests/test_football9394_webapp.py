@@ -119,9 +119,12 @@ def test_career_transfer_changes_squad_and_cash(monkeypatch, tmp_path):
     monkeypatch.setattr(webapp, 'CAREER_SAVE_ROOT', tmp_path)
     created = client.post('/api/football9394/careers', json={'team_id':16,'seed':303,'through_matchday':0}).json()
     cid = created['career_id']
-    market = client.get(f'/api/football9394/careers/{cid}/market?limit=1').json()
+    market = client.get(f'/api/football9394/careers/{cid}/market?limit=60').json()
     assert market
-    target = market[0]
+    # El club es español y el cupo de extranjeros de Primera 1993-94 es de
+    # cuatro: hay que elegir a alguien inscribible o el traspaso se rechaza por
+    # regla y este test dejaría de medir el traspaso en sí.
+    target = next(row for row in market if (row.get('market') or {}).get('foreign_quota_allowed'))
     cash = created['finances']['cash']
     fee = min(cash, int(target['estimated_transfer_value']))
     result = client.post(f"/api/football9394/careers/{cid}/transfers/{target['id']}", json={
@@ -166,7 +169,13 @@ def test_career_exposes_world_economy_and_real_contract_renewal_decision(monkeyp
     world=client.get(f'/api/football9394/careers/{cid}/world')
     assert world.status_code==200
     assert set(world.json()['special_progress'])=={'47','111','120'}
-    assert set(world.json()['tournament_progress'])=={'1','2','3','90'}
+    # Las competiciones europeas históricas deben seguir ahí; el conjunto ya no
+    # se fija de forma exacta porque el mundo incorpora además las copas
+    # nacionales de los demás países, y un igual estricto convertía cada
+    # competición nueva en un fallo.
+    progress=world.json()['tournament_progress']
+    assert {'1','2','3','90'} <= set(progress)
+    assert all({'source_id','name','stage','completed'} <= set(row) for row in progress.values())
 
 
 def test_new_career_options_expose_real_league_and_team_selection(monkeypatch, tmp_path):

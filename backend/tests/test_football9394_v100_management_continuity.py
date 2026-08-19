@@ -42,7 +42,8 @@ def test_v100_market_workflow_exposes_owner_waiting_and_required_decisions():
     assert initial["workflow"]["recruitment_owner"]["assignee_name"]
     assert initial["workflow"]["negotiation_owner"]["assignee_name"]
 
-    target = career.search_market(limit=1)[0]
+    target = next(row for row in career.search_market(limit=60)
+                  if (row.get("market") or {}).get("foreign_quota_allowed"))
     player_id = int(target["id"])
     career.toggle_watchlist(player_id, True)
     career.start_scouting_player(player_id)

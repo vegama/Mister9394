@@ -4251,6 +4251,27 @@ class ManagerCareerRuntime9394(CareerHistoryRuntimeMixin, CareerMarketRuntimeMix
                 "score": portfolio.get("fit_score"), "confidence": portfolio.get("confidence"),
                 "reasons": list(portfolio.get("reasons") or []), "observer": portfolio.get("observer"),
             }
+        # Si el fichaje es imposible —cupo de extranjeros lleno, mercado
+        # cerrado, restricción del club— hay que decirlo aquí y no dejar que el
+        # usuario lo descubra con un error al abrir la negociación.
+        controlled = int(self.state["team_id"])
+        allowed, reason = self._signing_eligibility(controlled, row)
+        # El cupo se separa del resto de motivos porque no se resuelve
+        # esperando: mientras el mercado cerrado se abre solo con el calendario,
+        # una plaza de extranjero exige vender o no fichar a ese futbolista.
+        rule = self._domestic_foreign_rule(controlled)
+        if rule is None:
+            quota_ok, quota_reason = True, "sin tope de plantilla en la fuente"
+        else:
+            quota_ok, quota_reason = can_register_foreign_signing(
+                self._career_players_by_team.get(controlled, []), row, rule,
+            )
+        result.setdefault("market", {}).update({
+            "signing_allowed": bool(allowed),
+            "signing_reason": reason,
+            "foreign_quota_allowed": bool(quota_ok),
+            "foreign_quota_reason": quota_reason,
+        })
         return result
 
     def player_detail(self, player_id:int) -> dict[str,Any]:

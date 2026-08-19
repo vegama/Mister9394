@@ -8,9 +8,17 @@ def _career(seed: int = 5001) -> ManagerCareerRuntime9394:
 
 
 def _external_target(career: ManagerCareerRuntime9394) -> dict:
+    """Primer objetivo de mercado que además se puede fichar de verdad.
+
+    España Primera 1993-94 sólo permitía cuatro extranjeros inscritos, así que
+    el primer resultado del mercado puede ser perfectamente alguien a quien el
+    club no puede inscribir. Estos tests miden la mecánica de negociación, no
+    el cupo de extranjeros: eligen un objetivo elegible para no confundir una
+    regla aplicada correctamente con un fallo.
+    """
     rows = career.search_market(limit=60)
     assert rows
-    return rows[0]
+    return next(row for row in rows if (row.get("market") or {}).get("foreign_quota_allowed"))
 
 
 def test_nf3_individual_recovery_and_match_preparation_are_persistent():
