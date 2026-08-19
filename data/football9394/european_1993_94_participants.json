@@ -1,0 +1,1353 @@
+{
+  "source": "Wikipedia, páginas de las tres competiciones europeas 1993-94",
+  "read_per_page": {
+    "1993–94 UEFA Champions League": 42,
+    "1993–94 UEFA Cup": 64,
+    "1993–94 European Cup Winners' Cup": 43
+  },
+  "participants": 149,
+  "missing_from_game": 61,
+  "teams": [
+    {
+      "wikipedia": "AC Milan",
+      "name": "Milan",
+      "country": "ITA",
+      "competitions": [
+        "UEFA Champions League"
+      ],
+      "in_game_as": "AC Milan"
+    },
+    {
+      "wikipedia": "AC Omonia",
+      "name": "Omonia",
+      "country": "CYP",
+      "competitions": [
+        "UEFA Champions League"
+      ],
+      "in_game_as": null
+    },
+    {
+      "wikipedia": "AC Sparta Prague",
+      "name": "Sparta Prague",
+      "country": "TCH",
+      "competitions": [
+        "UEFA Champions League"
+      ],
+      "in_game_as": "Sparta Rotterdam"
+    },
+    {
+      "wikipedia": "ACF Gloria Bistrița",
+      "name": "Gloria Bistrița",
+      "country": "Romania",
+      "competitions": [
+        "UEFA Cup"
+      ],
+      "in_game_as": null
+    },
+    {
+      "wikipedia": "AEK Athens F.C.",
+      "name": "AEK Athens",
+      "country": "GRE",
+      "competitions": [
+        "UEFA Champions League"
+      ],
+      "in_game_as": "AEK Athinon"
+    },
+    {
+      "wikipedia": "AFC Ajax",
+      "name": "Ajax",
+      "country": "NED",
+      "competitions": [
+        "European Cup Winners' Cup"
+      ],
+      "in_game_as": "AFC Ajax Amsterdam"
+    },
+    {
+      "wikipedia": "AIK Fotboll",
+      "name": "AIK",
+      "country": "SWE",
+      "competitions": [
+        "UEFA Champions League"
+      ],
+      "in_game_as": null
+    },
+    {
+      "wikipedia": "AJ Auxerre",
+      "name": "Auxerre",
+      "country": "France",
+      "competitions": [
+        "UEFA Cup"
+      ],
+      "in_game_as": "AJ Auxerre"
+    },
+    {
+      "wikipedia": "APOEL FC",
+      "name": "APOEL",
+      "country": "CYP",
+      "competitions": [
+        "European Cup Winners' Cup"
+      ],
+      "in_game_as": "APOEL Nicosia FC"
+    },
+    {
+      "wikipedia": "AS Monaco FC",
+      "name": "Monaco",
+      "country": "FRA",
+      "competitions": [
+        "UEFA Champions League"
+      ],
+      "in_game_as": "AS Monaco"
+    },
+    {
+      "wikipedia": "AaB Fodbold",
+      "name": "AaB",
+      "country": "Denmark",
+      "competitions": [
+        "UEFA Cup"
+      ],
+      "in_game_as": null
+    },
+    {
+      "wikipedia": "Aberdeen F.C.",
+      "name": "Aberdeen",
+      "country": "SCO",
+      "competitions": [
+        "European Cup Winners' Cup"
+      ],
+      "in_game_as": "Aberdeen FC"
+    },
+    {
+      "wikipedia": "Apollon Limassol FC",
+      "name": "Apollon",
+      "country": "Cyprus",
+      "competitions": [
+        "UEFA Cup"
+      ],
+      "in_game_as": "Apollon Athinas"
+    },
+    {
+      "wikipedia": "Arsenal F.C.",
+      "name": "Arsenal",
+      "country": "ENG",
+      "competitions": [
+        "European Cup Winners' Cup"
+      ],
+      "in_game_as": "Arsenal FC"
+    },
+    {
+      "wikipedia": "Aston Villa F.C.",
+      "name": "Aston Villa",
+      "country": "England",
+      "competitions": [
+        "UEFA Cup"
+      ],
+      "in_game_as": "Aston Villa FC"
+    },
+    {
+      "wikipedia": "Atlético Madrid",
+      "name": "Atlético Madrid",
+      "country": "Spain",
+      "competitions": [
+        "UEFA Cup"
+      ],
+      "in_game_as": "Real Madrid CF"
+    },
+    {
+      "wikipedia": "B68 Toftir",
+      "name": "B68",
+      "country": "FRO",
+      "competitions": [
+        "UEFA Champions League"
+      ],
+      "in_game_as": null
+    },
+    {
+      "wikipedia": "BSC Young Boys",
+      "name": "Young Boys",
+      "country": "Switzerland",
+      "competitions": [
+        "UEFA Cup"
+      ],
+      "in_game_as": "Newell's Old Boys"
+    },
+    {
+      "wikipedia": "Bangor F.C.",
+      "name": "Bangor",
+      "country": "NIR",
+      "competitions": [
+        "European Cup Winners' Cup"
+      ],
+      "in_game_as": null
+    },
+    {
+      "wikipedia": "Bayer 04 Leverkusen",
+      "name": "Bayer Leverkusen",
+      "country": "GER",
+      "competitions": [
+        "European Cup Winners' Cup"
+      ],
+      "in_game_as": "TSV Bayer 04 Leverkusen"
+    },
+    {
+      "wikipedia": "Beitar Jerusalem F.C.",
+      "name": "Beitar Jerusalem",
+      "country": "ISR",
+      "competitions": [
+        "UEFA Champions League"
+      ],
+      "in_game_as": null
+    },
+    {
+      "wikipedia": "Beşiktaş J.K.",
+      "name": "Beşiktaş",
+      "country": "TUR",
+      "competitions": [
+        "European Cup Winners' Cup"
+      ],
+      "in_game_as": "Beşiktaş"
+    },
+    {
+      "wikipedia": "Boavista F.C.",
+      "name": "Boavista",
+      "country": "Portugal",
+      "competitions": [
+        "UEFA Cup"
+      ],
+      "in_game_as": "Boavista FC"
+    },
+    {
+      "wikipedia": "Bohemian F.C.",
+      "name": "Bohemians",
+      "country": "Republic of Ireland",
+      "competitions": [
+        "UEFA Cup"
+      ],
+      "in_game_as": null
+    },
+    {
+      "wikipedia": "Borussia Dortmund",
+      "name": "Borussia Dortmund",
+      "country": "Germany",
+      "competitions": [
+        "UEFA Cup"
+      ],
+      "in_game_as": "BV 09 Borussia Dortmund"
+    },
+    {
+      "wikipedia": "Botev Plovdiv",
+      "name": "Botev Plovdiv",
+      "country": "Bulgaria",
+      "competitions": [
+        "UEFA Cup"
+      ],
+      "in_game_as": null
+    },
+    {
+      "wikipedia": "Brøndby IF",
+      "name": "Brøndby",
+      "country": "Denmark",
+      "competitions": [
+        "UEFA Cup"
+      ],
+      "in_game_as": "Brøndby IF"
+    },
+    {
+      "wikipedia": "Budapest Honvéd FC",
+      "name": "Kispest Honvéd",
+      "country": "HUN",
+      "competitions": [
+        "UEFA Champions League"
+      ],
+      "in_game_as": null
+    },
+    {
+      "wikipedia": "C.S. Marítimo",
+      "name": "Marítimo",
+      "country": "Portugal",
+      "competitions": [
+        "UEFA Cup"
+      ],
+      "in_game_as": "CS Marítimo"
+    },
+    {
+      "wikipedia": "CD Tenerife",
+      "name": "Tenerife",
+      "country": "Spain",
+      "competitions": [
+        "UEFA Cup"
+      ],
+      "in_game_as": "CD Tenerife"
+    },
+    {
+      "wikipedia": "Cagliari Calcio",
+      "name": "Cagliari",
+      "country": "Italy",
+      "competitions": [
+        "UEFA Cup"
+      ],
+      "in_game_as": "Cagliari"
+    },
+    {
+      "wikipedia": "Cardiff City F.C.",
+      "name": "Cardiff City",
+      "country": "WAL",
+      "competitions": [
+        "European Cup Winners' Cup"
+      ],
+      "in_game_as": "Manchester City FC"
+    },
+    {
+      "wikipedia": "Celtic F.C.",
+      "name": "Celtic",
+      "country": "Scotland",
+      "competitions": [
+        "UEFA Cup"
+      ],
+      "in_game_as": "Celtic FC"
+    },
+    {
+      "wikipedia": "Cork City F.C.",
+      "name": "Cork City",
+      "country": "IRL",
+      "competitions": [
+        "UEFA Champions League"
+      ],
+      "in_game_as": "Manchester City FC"
+    },
+    {
+      "wikipedia": "Crusaders F.C.",
+      "name": "Crusaders",
+      "country": "Northern Ireland",
+      "competitions": [
+        "UEFA Cup"
+      ],
+      "in_game_as": null
+    },
+    {
+      "wikipedia": "Cwmbrân Town A.F.C.",
+      "name": "Cwmbrân Town",
+      "country": "WAL",
+      "competitions": [
+        "UEFA Champions League"
+      ],
+      "in_game_as": "Ipswich Town FC"
+    },
+    {
+      "wikipedia": "Degerfors IF",
+      "name": "Degerfors",
+      "country": "SWE",
+      "competitions": [
+        "European Cup Winners' Cup"
+      ],
+      "in_game_as": "Degerfors IF"
+    },
+    {
+      "wikipedia": "Deportivo de La Coruña",
+      "name": "Deportivo La Coruña",
+      "country": "Spain",
+      "competitions": [
+        "UEFA Cup"
+      ],
+      "in_game_as": "RC Deportivo"
+    },
+    {
+      "wikipedia": "Dundee United F.C.",
+      "name": "Dundee United",
+      "country": "Scotland",
+      "competitions": [
+        "UEFA Cup"
+      ],
+      "in_game_as": "Manchester United FC"
+    },
+    {
+      "wikipedia": "Eintracht Frankfurt",
+      "name": "Eintracht Frankfurt",
+      "country": "Germany",
+      "competitions": [
+        "UEFA Cup"
+      ],
+      "in_game_as": "Eintracht Frankfurt"
+    },
+    {
+      "wikipedia": "F.C. Copenhagen",
+      "name": "Copenhagen",
+      "country": "DEN",
+      "competitions": [
+        "UEFA Champions League"
+      ],
+      "in_game_as": null
+    },
+    {
+      "wikipedia": "F91 Dudelange",
+      "name": "F91 Dudelange",
+      "country": "LUX",
+      "competitions": [
+        "European Cup Winners' Cup"
+      ],
+      "in_game_as": null
+    },
+    {
+      "wikipedia": "FC Aarau",
+      "name": "Aarau",
+      "country": "SUI",
+      "competitions": [
+        "UEFA Champions League"
+      ],
+      "in_game_as": null
+    },
+    {
+      "wikipedia": "FC Admira Wacker Mödling",
+      "name": "Admira/Wacker",
+      "country": "Austria",
+      "competitions": [
+        "UEFA Cup"
+      ],
+      "in_game_as": null
+    },
+    {
+      "wikipedia": "FC Avenir Beggen",
+      "name": "Avenir Beggen",
+      "country": "LUX",
+      "competitions": [
+        "UEFA Champions League"
+      ],
+      "in_game_as": null
+    },
+    {
+      "wikipedia": "FC Balzers",
+      "name": "Balzers",
+      "country": "LIE",
+      "competitions": [
+        "European Cup Winners' Cup"
+      ],
+      "in_game_as": null
+    },
+    {
+      "wikipedia": "FC Barcelona",
+      "name": "Barcelona",
+      "country": "ESP",
+      "competitions": [
+        "UEFA Champions League"
+      ],
+      "in_game_as": "FC Barcelona"
+    },
+    {
+      "wikipedia": "FC Bayern Munich",
+      "name": "Bayern Munich",
+      "country": "Germany",
+      "competitions": [
+        "UEFA Cup"
+      ],
+      "in_game_as": "FC Bayern München"
+    },
+    {
+      "wikipedia": "FC DAC 1904 Dunajská Streda",
+      "name": "DAC Dunajská",
+      "country": "Slovakia",
+      "competitions": [
+        "UEFA Cup"
+      ],
+      "in_game_as": null
+    },
+    {
+      "wikipedia": "FC Dinamo București",
+      "name": "Dinamo București",
+      "country": "Romania",
+      "competitions": [
+        "UEFA Cup"
+      ],
+      "in_game_as": null
+    },
+    {
+      "wikipedia": "FC Dinamo Minsk",
+      "name": "Dinamo Minsk",
+      "country": "BLR",
+      "competitions": [
+        "UEFA Champions League"
+      ],
+      "in_game_as": null
+    },
+    {
+      "wikipedia": "FC Dinamo Tbilisi",
+      "name": "Dinamo Tbilisi",
+      "country": "GEO",
+      "competitions": [
+        "UEFA Champions League"
+      ],
+      "in_game_as": null
+    },
+    {
+      "wikipedia": "FC Dnipro",
+      "name": "Dnipro Dnipropetrovsk",
+      "country": "Ukraine",
+      "competitions": [
+        "UEFA Cup"
+      ],
+      "in_game_as": null
+    },
+    {
+      "wikipedia": "FC Dynamo Kyiv",
+      "name": "Dynamo Kyiv",
+      "country": "UKR",
+      "competitions": [
+        "UEFA Champions League"
+      ],
+      "in_game_as": "SG Dynamo Dresden"
+    },
+    {
+      "wikipedia": "FC Dynamo Moscow",
+      "name": "Dynamo Moscow",
+      "country": "Russia",
+      "competitions": [
+        "UEFA Cup"
+      ],
+      "in_game_as": "SG Dynamo Dresden"
+    },
+    {
+      "wikipedia": "FC Girondins de Bordeaux",
+      "name": "Bordeaux",
+      "country": "France",
+      "competitions": [
+        "UEFA Cup"
+      ],
+      "in_game_as": "FC Girondins"
+    },
+    {
+      "wikipedia": "FC Karpaty Lviv",
+      "name": "Karpaty Lviv",
+      "country": "UKR",
+      "competitions": [
+        "European Cup Winners' Cup"
+      ],
+      "in_game_as": null
+    },
+    {
+      "wikipedia": "FC Kuusysi",
+      "name": "Kuusysi Lahti",
+      "country": "Finland",
+      "competitions": [
+        "UEFA Cup"
+      ],
+      "in_game_as": null
+    },
+    {
+      "wikipedia": "FC Lokomotiv Moscow",
+      "name": "Lokomotiv Moscow",
+      "country": "Russia",
+      "competitions": [
+        "UEFA Cup"
+      ],
+      "in_game_as": "Lokomotiv Moskva"
+    },
+    {
+      "wikipedia": "FC Lugano",
+      "name": "Lugano",
+      "country": "SUI",
+      "competitions": [
+        "European Cup Winners' Cup"
+      ],
+      "in_game_as": "FC Lugano"
+    },
+    {
+      "wikipedia": "FC Nantes",
+      "name": "Nantes",
+      "country": "France",
+      "competitions": [
+        "UEFA Cup"
+      ],
+      "in_game_as": "FC Nantes"
+    },
+    {
+      "wikipedia": "FC Neman Grodno",
+      "name": "Neman Grodno",
+      "country": "BLR",
+      "competitions": [
+        "European Cup Winners' Cup"
+      ],
+      "in_game_as": null
+    },
+    {
+      "wikipedia": "FC Nikol Tallinn",
+      "name": "Nikol Tallinn",
+      "country": "EST",
+      "competitions": [
+        "European Cup Winners' Cup"
+      ],
+      "in_game_as": null
+    },
+    {
+      "wikipedia": "FC Norma Tallinn",
+      "name": "Norma Tallinn",
+      "country": "EST",
+      "competitions": [
+        "UEFA Champions League"
+      ],
+      "in_game_as": null
+    },
+    {
+      "wikipedia": "FC Porto",
+      "name": "Porto",
+      "country": "POR",
+      "competitions": [
+        "UEFA Champions League"
+      ],
+      "in_game_as": "FC Porto"
+    },
+    {
+      "wikipedia": "FC Rapid București",
+      "name": "Rapid București",
+      "country": "Romania",
+      "competitions": [
+        "UEFA Cup"
+      ],
+      "in_game_as": null
+    },
+    {
+      "wikipedia": "FC Red Bull Salzburg",
+      "name": "Austria Salzburg",
+      "country": "Austria",
+      "competitions": [
+        "UEFA Cup"
+      ],
+      "in_game_as": "Casino Salzburg"
+    },
+    {
+      "wikipedia": "FC Spartak Moscow",
+      "name": "Spartak Moscow",
+      "country": "RUS",
+      "competitions": [
+        "UEFA Champions League"
+      ],
+      "in_game_as": "Spartak Moskva"
+    },
+    {
+      "wikipedia": "FC Spartak Vladikavkaz",
+      "name": "Spartak Vladikavkaz",
+      "country": "Russia",
+      "competitions": [
+        "UEFA Cup"
+      ],
+      "in_game_as": "Spartak Moskva"
+    },
+    {
+      "wikipedia": "FC Tirol Innsbruck",
+      "name": "Tirol Innsbruck",
+      "country": "AUT",
+      "competitions": [
+        "European Cup Winners' Cup"
+      ],
+      "in_game_as": null
+    },
+    {
+      "wikipedia": "FC Torpedo Moscow",
+      "name": "Torpedo Moscow",
+      "country": "RUS",
+      "competitions": [
+        "European Cup Winners' Cup"
+      ],
+      "in_game_as": "Torpedo Moskva"
+    },
+    {
+      "wikipedia": "FC Twente",
+      "name": "Twente",
+      "country": "Netherlands",
+      "competitions": [
+        "UEFA Cup"
+      ],
+      "in_game_as": "FC Twente"
+    },
+    {
+      "wikipedia": "FC Universitatea Craiova",
+      "name": "Universitatea Craiova",
+      "country": "ROU",
+      "competitions": [
+        "European Cup Winners' Cup"
+      ],
+      "in_game_as": "CS Universitatea Craiova"
+    },
+    {
+      "wikipedia": "FC VSS Košice",
+      "name": "Košice",
+      "country": "SVK",
+      "competitions": [
+        "European Cup Winners' Cup"
+      ],
+      "in_game_as": null
+    },
+    {
+      "wikipedia": "FC Zbrojovka Brno",
+      "name": "Boby Brno",
+      "country": "CZE",
+      "competitions": [
+        "European Cup Winners' Cup"
+      ],
+      "in_game_as": "FC Boby Brno"
+    },
+    {
+      "wikipedia": "FC Zimbru Chișinău",
+      "name": "Zimbru Chișinău",
+      "country": "MDA",
+      "competitions": [
+        "UEFA Champions League"
+      ],
+      "in_game_as": null
+    },
+    {
+      "wikipedia": "FCSB",
+      "name": "Steaua București",
+      "country": "ROU",
+      "competitions": [
+        "UEFA Champions League"
+      ],
+      "in_game_as": null
+    },
+    {
+      "wikipedia": "FK Austria Wien",
+      "name": "Austria Wien",
+      "country": "AUT",
+      "competitions": [
+        "UEFA Champions League"
+      ],
+      "in_game_as": "FK Austria Wien"
+    },
+    {
+      "wikipedia": "FK Ekranas",
+      "name": "Ekranas",
+      "country": "LTU",
+      "competitions": [
+        "UEFA Champions League"
+      ],
+      "in_game_as": null
+    },
+    {
+      "wikipedia": "FK Partizani Tirana",
+      "name": "Partizani",
+      "country": "ALB",
+      "competitions": [
+        "UEFA Champions League"
+      ],
+      "in_game_as": null
+    },
+    {
+      "wikipedia": "FK Žalgiris",
+      "name": "Žalgiris Vilnius",
+      "country": "LTU",
+      "competitions": [
+        "European Cup Winners' Cup"
+      ],
+      "in_game_as": null
+    },
+    {
+      "wikipedia": "Ferencvárosi TC",
+      "name": "Ferencváros",
+      "country": "HUN",
+      "competitions": [
+        "European Cup Winners' Cup"
+      ],
+      "in_game_as": "Ferencvárosi TC"
+    },
+    {
+      "wikipedia": "Feyenoord",
+      "name": "Feyenoord",
+      "country": "NED",
+      "competitions": [
+        "UEFA Champions League"
+      ],
+      "in_game_as": "Feyenoord"
+    },
+    {
+      "wikipedia": "Floriana F.C.",
+      "name": "Floriana",
+      "country": "MLT",
+      "competitions": [
+        "UEFA Champions League"
+      ],
+      "in_game_as": null
+    },
+    {
+      "wikipedia": "GKS Katowice",
+      "name": "GKS Katowice",
+      "country": "POL",
+      "competitions": [
+        "European Cup Winners' Cup"
+      ],
+      "in_game_as": null
+    },
+    {
+      "wikipedia": "GNK Dinamo Zagreb",
+      "name": "Croatia Zagreb",
+      "country": "CRO",
+      "competitions": [
+        "UEFA Champions League"
+      ],
+      "in_game_as": null
+    },
+    {
+      "wikipedia": "Galatasaray S.K. (football)",
+      "name": "Galatasaray",
+      "country": "TUR",
+      "competitions": [
+        "UEFA Champions League"
+      ],
+      "in_game_as": "Galatasaray"
+    },
+    {
+      "wikipedia": "HNK Hajduk Split",
+      "name": "Hajduk Split",
+      "country": "CRO",
+      "competitions": [
+        "European Cup Winners' Cup"
+      ],
+      "in_game_as": "HNK Hajduk Split"
+    },
+    {
+      "wikipedia": "Havnar Bóltfelag",
+      "name": "HB Tórshavn",
+      "country": "FRO",
+      "competitions": [
+        "European Cup Winners' Cup"
+      ],
+      "in_game_as": null
+    },
+    {
+      "wikipedia": "Heart of Midlothian F.C.",
+      "name": "Heart of Midlothian",
+      "country": "Scotland",
+      "competitions": [
+        "UEFA Cup"
+      ],
+      "in_game_as": "Hearts FC"
+    },
+    {
+      "wikipedia": "Helsingin Jalkapalloklubi",
+      "name": "HJK",
+      "country": "FIN",
+      "competitions": [
+        "UEFA Champions League"
+      ],
+      "in_game_as": null
+    },
+    {
+      "wikipedia": "IFK Norrköping",
+      "name": "Norrköping",
+      "country": "Sweden",
+      "competitions": [
+        "UEFA Cup"
+      ],
+      "in_game_as": null
+    },
+    {
+      "wikipedia": "Inter Milan",
+      "name": "Inter Milan",
+      "country": "Italy",
+      "competitions": [
+        "UEFA Cup"
+      ],
+      "in_game_as": "AC Milan"
+    },
+    {
+      "wikipedia": "Juventus",
+      "name": "Juventus",
+      "country": "Italy",
+      "competitions": [
+        "UEFA Cup"
+      ],
+      "in_game_as": "Juventus FC"
+    },
+    {
+      "wikipedia": "K.S.V. Waregem",
+      "name": "Waregem",
+      "country": "Belgium",
+      "competitions": [
+        "UEFA Cup"
+      ],
+      "in_game_as": "KSV Waregem"
+    },
+    {
+      "wikipedia": "K.V. Mechelen",
+      "name": "Mechelen",
+      "country": "Belgium",
+      "competitions": [
+        "UEFA Cup"
+      ],
+      "in_game_as": "KV Mechelen"
+    },
+    {
+      "wikipedia": "KF Albpetrol Patos",
+      "name": "Albpetrol Patos",
+      "country": "ALB",
+      "competitions": [
+        "European Cup Winners' Cup"
+      ],
+      "in_game_as": null
+    },
+    {
+      "wikipedia": "Karlsruher SC",
+      "name": "Karlsruhe",
+      "country": "Germany",
+      "competitions": [
+        "UEFA Cup"
+      ],
+      "in_game_as": "Karlsruher SC"
+    },
+    {
+      "wikipedia": "Knattspyrnufélag Reykjavíkur",
+      "name": "KR",
+      "country": "Iceland",
+      "competitions": [
+        "UEFA Cup"
+      ],
+      "in_game_as": null
+    },
+    {
+      "wikipedia": "Kocaelispor",
+      "name": "Kocaelispor",
+      "country": "Turkey",
+      "competitions": [
+        "UEFA Cup"
+      ],
+      "in_game_as": "Kocaelispor"
+    },
+    {
+      "wikipedia": "Kongsvinger IL Toppfotball",
+      "name": "Kongsvinger",
+      "country": "Norway",
+      "competitions": [
+        "UEFA Cup"
+      ],
+      "in_game_as": null
+    },
+    {
+      "wikipedia": "Lech Poznań",
+      "name": "Lech Poznań",
+      "country": "POL",
+      "competitions": [
+        "UEFA Champions League"
+      ],
+      "in_game_as": null
+    },
+    {
+      "wikipedia": "Lillestrøm SK",
+      "name": "Lillestrøm",
+      "country": "NOR",
+      "competitions": [
+        "European Cup Winners' Cup"
+      ],
+      "in_game_as": "Lillestrøm SK"
+    },
+    {
+      "wikipedia": "Linfield F.C.",
+      "name": "Linfield",
+      "country": "NIR",
+      "competitions": [
+        "UEFA Champions League"
+      ],
+      "in_game_as": null
+    },
+    {
+      "wikipedia": "MTK Budapest FC",
+      "name": "MTK Hungária",
+      "country": "Hungary",
+      "competitions": [
+        "UEFA Cup"
+      ],
+      "in_game_as": null
+    },
+    {
+      "wikipedia": "Maccabi Haifa F.C.",
+      "name": "Maccabi Haifa",
+      "country": "ISR",
+      "competitions": [
+        "European Cup Winners' Cup"
+      ],
+      "in_game_as": "Maccabi Haifa"
+    },
+    {
+      "wikipedia": "Manchester United F.C.",
+      "name": "Manchester United",
+      "country": "ENG",
+      "competitions": [
+        "UEFA Champions League"
+      ],
+      "in_game_as": "Manchester United FC"
+    },
+    {
+      "wikipedia": "Myllykosken Pallo −47",
+      "name": "MyPa",
+      "country": "FIN",
+      "competitions": [
+        "European Cup Winners' Cup"
+      ],
+      "in_game_as": null
+    },
+    {
+      "wikipedia": "NK Celje",
+      "name": "Publikum Celje",
+      "country": "SVN",
+      "competitions": [
+        "European Cup Winners' Cup"
+      ],
+      "in_game_as": null
+    },
+    {
+      "wikipedia": "NK Maribor",
+      "name": "Maribor",
+      "country": "Slovenia",
+      "competitions": [
+        "UEFA Cup"
+      ],
+      "in_game_as": null
+    },
+    {
+      "wikipedia": "NK Olimpija Ljubljana (1945–2005)",
+      "name": "Olimpija Ljubljana",
+      "country": "SVN",
+      "competitions": [
+        "UEFA Champions League"
+      ],
+      "in_game_as": null
+    },
+    {
+      "wikipedia": "Norwich City F.C.",
+      "name": "Norwich City",
+      "country": "England",
+      "competitions": [
+        "UEFA Cup"
+      ],
+      "in_game_as": "Manchester City FC"
+    },
+    {
+      "wikipedia": "OFI Crete F.C.",
+      "name": "OFI",
+      "country": "Greece",
+      "competitions": [
+        "UEFA Cup"
+      ],
+      "in_game_as": "OFI Crete FC"
+    },
+    {
+      "wikipedia": "Odense Boldklub",
+      "name": "Odense BK",
+      "country": "DEN",
+      "competitions": [
+        "European Cup Winners' Cup"
+      ],
+      "in_game_as": "Odense BK"
+    },
+    {
+      "wikipedia": "Olympiacos F.C.",
+      "name": "Olympiacos",
+      "country": "Greece",
+      "competitions": [
+        "UEFA Cup"
+      ],
+      "in_game_as": "Olympiakos Pireas"
+    },
+    {
+      "wikipedia": "PFC CSKA Sofia",
+      "name": "CSKA Sofia",
+      "country": "BUL",
+      "competitions": [
+        "European Cup Winners' Cup"
+      ],
+      "in_game_as": "CSKA Sofía"
+    },
+    {
+      "wikipedia": "PFC Levski Sofia",
+      "name": "Levski Sofia",
+      "country": "BUL",
+      "competitions": [
+        "UEFA Champions League"
+      ],
+      "in_game_as": "CSKA Sofía"
+    },
+    {
+      "wikipedia": "PFC Lokomotiv Plovdiv",
+      "name": "Lokomotiv Plovdiv",
+      "country": "Bulgaria",
+      "competitions": [
+        "UEFA Cup"
+      ],
+      "in_game_as": "Lokomotiv Moskva"
+    },
+    {
+      "wikipedia": "PSV Eindhoven",
+      "name": "PSV Eindhoven",
+      "country": "Netherlands",
+      "competitions": [
+        "UEFA Cup"
+      ],
+      "in_game_as": "PSV Eindhoven"
+    },
+    {
+      "wikipedia": "Panathinaikos F.C.",
+      "name": "Panathinaikos",
+      "country": "GRE",
+      "competitions": [
+        "European Cup Winners' Cup"
+      ],
+      "in_game_as": "Panathinaikos AO"
+    },
+    {
+      "wikipedia": "Paris Saint-Germain F.C.",
+      "name": "Paris Saint Germain",
+      "country": "FRA",
+      "competitions": [
+        "European Cup Winners' Cup"
+      ],
+      "in_game_as": "AS Saint-Etienne"
+    },
+    {
+      "wikipedia": "Parma Calcio 1913",
+      "name": "Parma",
+      "country": "ITA",
+      "competitions": [
+        "European Cup Winners' Cup"
+      ],
+      "in_game_as": "Parma AC"
+    },
+    {
+      "wikipedia": "R.S.C. Anderlecht",
+      "name": "Anderlecht",
+      "country": "BEL",
+      "competitions": [
+        "UEFA Champions League"
+      ],
+      "in_game_as": "RSC Anderlecht"
+    },
+    {
+      "wikipedia": "RAF Jelgava",
+      "name": "RAF Jelgava",
+      "country": "LVA",
+      "competitions": [
+        "European Cup Winners' Cup"
+      ],
+      "in_game_as": null
+    },
+    {
+      "wikipedia": "Rangers F.C.",
+      "name": "Rangers",
+      "country": "SCO",
+      "competitions": [
+        "UEFA Champions League"
+      ],
+      "in_game_as": "Queens Park Rangers FC"
+    },
+    {
+      "wikipedia": "Real Madrid C.F.",
+      "name": "Real Madrid",
+      "country": "ESP",
+      "competitions": [
+        "European Cup Winners' Cup"
+      ],
+      "in_game_as": "Real Madrid CF"
+    },
+    {
+      "wikipedia": "Rosenborg BK",
+      "name": "Rosenborg",
+      "country": "NOR",
+      "competitions": [
+        "UEFA Champions League"
+      ],
+      "in_game_as": null
+    },
+    {
+      "wikipedia": "Royal Antwerp F.C.",
+      "name": "Antwerp",
+      "country": "Belgium",
+      "competitions": [
+        "UEFA Cup"
+      ],
+      "in_game_as": "Royal Antwerp FC"
+    },
+    {
+      "wikipedia": "S.L. Benfica",
+      "name": "Benfica",
+      "country": "POR",
+      "competitions": [
+        "European Cup Winners' Cup"
+      ],
+      "in_game_as": "SL Benfica"
+    },
+    {
+      "wikipedia": "SBV Vitesse",
+      "name": "Vitesse",
+      "country": "Netherlands",
+      "competitions": [
+        "UEFA Cup"
+      ],
+      "in_game_as": "SBV Vitesse"
+    },
+    {
+      "wikipedia": "SK Slavia Prague",
+      "name": "Slavia Prague",
+      "country": "Czech Republic",
+      "competitions": [
+        "UEFA Cup"
+      ],
+      "in_game_as": null
+    },
+    {
+      "wikipedia": "SS Lazio",
+      "name": "Lazio",
+      "country": "Italy",
+      "competitions": [
+        "UEFA Cup"
+      ],
+      "in_game_as": "SS Lazio"
+    },
+    {
+      "wikipedia": "SV Werder Bremen",
+      "name": "Werder Bremen",
+      "country": "GER",
+      "competitions": [
+        "UEFA Champions League"
+      ],
+      "in_game_as": "SV Werder Bremen"
+    },
+    {
+      "wikipedia": "Servette FC",
+      "name": "Servette FC",
+      "country": "Switzerland",
+      "competitions": [
+        "UEFA Cup"
+      ],
+      "in_game_as": null
+    },
+    {
+      "wikipedia": "Shelbourne F.C.",
+      "name": "Shelbourne",
+      "country": "IRL",
+      "competitions": [
+        "European Cup Winners' Cup"
+      ],
+      "in_game_as": "Shelbourne FC"
+    },
+    {
+      "wikipedia": "Skonto FC",
+      "name": "Skonto",
+      "country": "LVA",
+      "competitions": [
+        "UEFA Champions League"
+      ],
+      "in_game_as": null
+    },
+    {
+      "wikipedia": "Sliema Wanderers F.C.",
+      "name": "Sliema Wanderers",
+      "country": "MLT",
+      "competitions": [
+        "European Cup Winners' Cup"
+      ],
+      "in_game_as": "Montevideo Wanderers"
+    },
+    {
+      "wikipedia": "Sporting CP",
+      "name": "Sporting CP",
+      "country": "Portugal",
+      "competitions": [
+        "UEFA Cup"
+      ],
+      "in_game_as": "Sporting Lisboa"
+    },
+    {
+      "wikipedia": "Standard Liège",
+      "name": "Standard Liège",
+      "country": "BEL",
+      "competitions": [
+        "European Cup Winners' Cup"
+      ],
+      "in_game_as": "R Standard Liège"
+    },
+    {
+      "wikipedia": "Torino F.C.",
+      "name": "Torino",
+      "country": "ITA",
+      "competitions": [
+        "European Cup Winners' Cup"
+      ],
+      "in_game_as": "Torino FC"
+    },
+    {
+      "wikipedia": "Trabzonspor",
+      "name": "Trabzonspor",
+      "country": "Turkey",
+      "competitions": [
+        "UEFA Cup"
+      ],
+      "in_game_as": "Trabzonspor"
+    },
+    {
+      "wikipedia": "Union Luxembourg",
+      "name": "Union Luxembourg",
+      "country": "Luxembourg",
+      "competitions": [
+        "UEFA Cup"
+      ],
+      "in_game_as": "Real Unión"
+    },
+    {
+      "wikipedia": "Valencia CF",
+      "name": "Valencia",
+      "country": "Spain",
+      "competitions": [
+        "UEFA Cup"
+      ],
+      "in_game_as": "Valencia CF"
+    },
+    {
+      "wikipedia": "Valletta F.C.",
+      "name": "Valletta",
+      "country": "Malta",
+      "competitions": [
+        "UEFA Cup"
+      ],
+      "in_game_as": null
+    },
+    {
+      "wikipedia": "Valur (men's football)",
+      "name": "Valur",
+      "country": "ISL",
+      "competitions": [
+        "European Cup Winners' Cup"
+      ],
+      "in_game_as": "Valur Reykjavík"
+    },
+    {
+      "wikipedia": "Vác FC",
+      "name": "Vác",
+      "country": "Hungary",
+      "competitions": [
+        "UEFA Cup"
+      ],
+      "in_game_as": null
+    },
+    {
+      "wikipedia": "Íþróttabandalag Akraness",
+      "name": "ÍA",
+      "country": "ISL",
+      "competitions": [
+        "UEFA Champions League"
+      ],
+      "in_game_as": null
+    },
+    {
+      "wikipedia": "Östers IF",
+      "name": "Öster",
+      "country": "Sweden",
+      "competitions": [
+        "UEFA Cup"
+      ],
+      "in_game_as": null
+    },
+    {
+      "wikipedia": "ŠK Slovan Bratislava",
+      "name": "Slovan Bratislava",
+      "country": "Slovakia",
+      "competitions": [
+        "UEFA Cup"
+      ],
+      "in_game_as": null
+    }
+  ]
+}

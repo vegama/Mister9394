@@ -1,0 +1,831 @@
+{
+  "source": "BDFutbol, cuadros de las tres competiciones europeas 1993-94",
+  "squad_url": "https://www.bdfutbol.com/es/t/t1993-94{club_id}.html",
+  "per_competition": {
+    "Copa de Europa": 42,
+    "Recopa": 43,
+    "Copa de la UEFA": 32
+  },
+  "clubs": 117,
+  "teams": [
+    {
+      "bdfutbol_id": "10042",
+      "name": "AEK",
+      "competitions": [
+        "Copa de Europa"
+      ]
+    },
+    {
+      "bdfutbol_id": "10225",
+      "name": "AIK Solna",
+      "competitions": [
+        "Copa de Europa"
+      ]
+    },
+    {
+      "bdfutbol_id": "10105",
+      "name": "APOEL",
+      "competitions": [
+        "Recopa"
+      ]
+    },
+    {
+      "bdfutbol_id": "11047",
+      "name": "Aarau",
+      "competitions": [
+        "Copa de Europa"
+      ]
+    },
+    {
+      "bdfutbol_id": "10119",
+      "name": "Aberdeen",
+      "competitions": [
+        "Recopa"
+      ]
+    },
+    {
+      "bdfutbol_id": "6001",
+      "name": "Ajax",
+      "competitions": [
+        "Recopa"
+      ]
+    },
+    {
+      "bdfutbol_id": "10015",
+      "name": "Anderlecht",
+      "competitions": [
+        "Copa de Europa"
+      ]
+    },
+    {
+      "bdfutbol_id": "10117",
+      "name": "Apollon Limassol",
+      "competitions": [
+        "Copa de la UEFA"
+      ]
+    },
+    {
+      "bdfutbol_id": "2016",
+      "name": "Arsenal",
+      "competitions": [
+        "Recopa"
+      ]
+    },
+    {
+      "bdfutbol_id": "2012",
+      "name": "Aston Villa",
+      "competitions": [
+        "Copa de la UEFA"
+      ]
+    },
+    {
+      "bdfutbol_id": "7",
+      "name": "Atlético de Madrid",
+      "competitions": [
+        "Copa de la UEFA"
+      ]
+    },
+    {
+      "bdfutbol_id": "10018",
+      "name": "Austria Wien",
+      "competitions": [
+        "Copa de Europa"
+      ]
+    },
+    {
+      "bdfutbol_id": "10859",
+      "name": "Avenir",
+      "competitions": [
+        "Copa de Europa"
+      ]
+    },
+    {
+      "bdfutbol_id": "10840",
+      "name": "B68",
+      "competitions": [
+        "Copa de Europa"
+      ]
+    },
+    {
+      "bdfutbol_id": "11547",
+      "name": "Balzers",
+      "competitions": [
+        "Recopa"
+      ]
+    },
+    {
+      "bdfutbol_id": "11261",
+      "name": "Bangor",
+      "competitions": [
+        "Recopa"
+      ]
+    },
+    {
+      "bdfutbol_id": "1",
+      "name": "Barcelona",
+      "competitions": [
+        "Copa de Europa"
+      ]
+    },
+    {
+      "bdfutbol_id": "1014",
+      "name": "Bayer Leverkusen",
+      "competitions": [
+        "Recopa"
+      ]
+    },
+    {
+      "bdfutbol_id": "1016",
+      "name": "Bayern München",
+      "competitions": [
+        "Copa de la UEFA"
+      ]
+    },
+    {
+      "bdfutbol_id": "10662",
+      "name": "Beitar Jerusalem",
+      "competitions": [
+        "Copa de Europa"
+      ]
+    },
+    {
+      "bdfutbol_id": "5007",
+      "name": "Benfica",
+      "competitions": [
+        "Recopa"
+      ]
+    },
+    {
+      "bdfutbol_id": "10031",
+      "name": "Beşiktaş",
+      "competitions": [
+        "Recopa"
+      ]
+    },
+    {
+      "bdfutbol_id": "5003",
+      "name": "Boavista",
+      "competitions": [
+        "Copa de la UEFA"
+      ]
+    },
+    {
+      "bdfutbol_id": "10168",
+      "name": "Boby Brno",
+      "competitions": [
+        "Recopa"
+      ]
+    },
+    {
+      "bdfutbol_id": "1003",
+      "name": "Borussia Dortmund",
+      "competitions": [
+        "Copa de la UEFA"
+      ]
+    },
+    {
+      "bdfutbol_id": "10191",
+      "name": "Brøndby",
+      "competitions": [
+        "Copa de la UEFA"
+      ]
+    },
+    {
+      "bdfutbol_id": "10061",
+      "name": "CSKA Sofia",
+      "competitions": [
+        "Recopa"
+      ]
+    },
+    {
+      "bdfutbol_id": "3031",
+      "name": "Cagliari",
+      "competitions": [
+        "Copa de la UEFA"
+      ]
+    },
+    {
+      "bdfutbol_id": "2040",
+      "name": "Cardiff",
+      "competitions": [
+        "Recopa"
+      ]
+    },
+    {
+      "bdfutbol_id": "10056",
+      "name": "Casino Salzburg",
+      "competitions": [
+        "Copa de la UEFA"
+      ]
+    },
+    {
+      "bdfutbol_id": "10618",
+      "name": "Celje",
+      "competitions": [
+        "Recopa"
+      ]
+    },
+    {
+      "bdfutbol_id": "10022",
+      "name": "Celtic",
+      "competitions": [
+        "Copa de la UEFA"
+      ]
+    },
+    {
+      "bdfutbol_id": "10675",
+      "name": "Cork City",
+      "competitions": [
+        "Copa de Europa"
+      ]
+    },
+    {
+      "bdfutbol_id": "10054",
+      "name": "Croatia Zagreb",
+      "competitions": [
+        "Copa de Europa"
+      ]
+    },
+    {
+      "bdfutbol_id": "10584",
+      "name": "Cwmbran Town",
+      "competitions": [
+        "Copa de Europa"
+      ]
+    },
+    {
+      "bdfutbol_id": "11554",
+      "name": "Degerfors",
+      "competitions": [
+        "Recopa"
+      ]
+    },
+    {
+      "bdfutbol_id": "13",
+      "name": "Deportivo de La Coruña",
+      "competitions": [
+        "Copa de la UEFA"
+      ]
+    },
+    {
+      "bdfutbol_id": "10086",
+      "name": "Dinamo Minsk",
+      "competitions": [
+        "Copa de Europa"
+      ]
+    },
+    {
+      "bdfutbol_id": "10237",
+      "name": "Dinamo Tbilisi",
+      "competitions": [
+        "Copa de Europa"
+      ]
+    },
+    {
+      "bdfutbol_id": "10110",
+      "name": "Dnipro",
+      "competitions": [
+        "Copa de la UEFA"
+      ]
+    },
+    {
+      "bdfutbol_id": "10547",
+      "name": "Dudelange",
+      "competitions": [
+        "Recopa"
+      ]
+    },
+    {
+      "bdfutbol_id": "10019",
+      "name": "Dynamo Kyiv",
+      "competitions": [
+        "Copa de Europa"
+      ]
+    },
+    {
+      "bdfutbol_id": "1010",
+      "name": "Eintracht Frankfurt",
+      "competitions": [
+        "Copa de la UEFA"
+      ]
+    },
+    {
+      "bdfutbol_id": "10552",
+      "name": "Ekranas",
+      "competitions": [
+        "Copa de Europa"
+      ]
+    },
+    {
+      "bdfutbol_id": "10037",
+      "name": "Ferencváros",
+      "competitions": [
+        "Recopa"
+      ]
+    },
+    {
+      "bdfutbol_id": "6004",
+      "name": "Feyenoord",
+      "competitions": [
+        "Copa de Europa"
+      ]
+    },
+    {
+      "bdfutbol_id": "10762",
+      "name": "Floriana",
+      "competitions": [
+        "Copa de Europa"
+      ]
+    },
+    {
+      "bdfutbol_id": "10020",
+      "name": "Galatasaray",
+      "competitions": [
+        "Copa de Europa"
+      ]
+    },
+    {
+      "bdfutbol_id": "4012",
+      "name": "Girondins de Bordeaux",
+      "competitions": [
+        "Copa de la UEFA"
+      ]
+    },
+    {
+      "bdfutbol_id": "10542",
+      "name": "HB",
+      "competitions": [
+        "Recopa"
+      ]
+    },
+    {
+      "bdfutbol_id": "10029",
+      "name": "Hajduk Split",
+      "competitions": [
+        "Recopa"
+      ]
+    },
+    {
+      "bdfutbol_id": "10205",
+      "name": "Helsinki",
+      "competitions": [
+        "Copa de Europa"
+      ]
+    },
+    {
+      "bdfutbol_id": "3008",
+      "name": "Inter",
+      "competitions": [
+        "Copa de la UEFA"
+      ]
+    },
+    {
+      "bdfutbol_id": "3004",
+      "name": "Juventus",
+      "competitions": [
+        "Copa de la UEFA"
+      ]
+    },
+    {
+      "bdfutbol_id": "11101",
+      "name": "KV Mechelen",
+      "competitions": [
+        "Copa de la UEFA"
+      ]
+    },
+    {
+      "bdfutbol_id": "1026",
+      "name": "Karlsruher",
+      "competitions": [
+        "Copa de la UEFA"
+      ]
+    },
+    {
+      "bdfutbol_id": "10246",
+      "name": "Karpaty",
+      "competitions": [
+        "Recopa"
+      ]
+    },
+    {
+      "bdfutbol_id": "10329",
+      "name": "Katowice",
+      "competitions": [
+        "Recopa"
+      ]
+    },
+    {
+      "bdfutbol_id": "10121",
+      "name": "Kispest Honvéd",
+      "competitions": [
+        "Copa de Europa"
+      ]
+    },
+    {
+      "bdfutbol_id": "11100",
+      "name": "Kongsvinger",
+      "competitions": [
+        "Copa de la UEFA"
+      ]
+    },
+    {
+      "bdfutbol_id": "10261",
+      "name": "Košice",
+      "competitions": [
+        "Recopa"
+      ]
+    },
+    {
+      "bdfutbol_id": "11251",
+      "name": "Kuusysi",
+      "competitions": [
+        "Copa de la UEFA"
+      ]
+    },
+    {
+      "bdfutbol_id": "10148",
+      "name": "København",
+      "competitions": [
+        "Copa de Europa"
+      ]
+    },
+    {
+      "bdfutbol_id": "3018",
+      "name": "Lazio",
+      "competitions": [
+        "Copa de la UEFA"
+      ]
+    },
+    {
+      "bdfutbol_id": "10108",
+      "name": "Lech Poznań",
+      "competitions": [
+        "Copa de Europa"
+      ]
+    },
+    {
+      "bdfutbol_id": "10034",
+      "name": "Levski Sofia",
+      "competitions": [
+        "Copa de Europa"
+      ]
+    },
+    {
+      "bdfutbol_id": "10301",
+      "name": "Lillestrøm",
+      "competitions": [
+        "Recopa"
+      ]
+    },
+    {
+      "bdfutbol_id": "10556",
+      "name": "Linfield",
+      "competitions": [
+        "Copa de Europa"
+      ]
+    },
+    {
+      "bdfutbol_id": "10293",
+      "name": "Lugano",
+      "competitions": [
+        "Recopa"
+      ]
+    },
+    {
+      "bdfutbol_id": "10079",
+      "name": "MTK Budapest",
+      "competitions": [
+        "Copa de la UEFA"
+      ]
+    },
+    {
+      "bdfutbol_id": "10434",
+      "name": "MYPA",
+      "competitions": [
+        "Recopa"
+      ]
+    },
+    {
+      "bdfutbol_id": "10184",
+      "name": "Maccabi Haifa",
+      "competitions": [
+        "Recopa"
+      ]
+    },
+    {
+      "bdfutbol_id": "2019",
+      "name": "Manchester United",
+      "competitions": [
+        "Copa de Europa"
+      ]
+    },
+    {
+      "bdfutbol_id": "10129",
+      "name": "Maribor",
+      "competitions": [
+        "Copa de la UEFA"
+      ]
+    },
+    {
+      "bdfutbol_id": "3015",
+      "name": "Milan",
+      "competitions": [
+        "Copa de Europa"
+      ]
+    },
+    {
+      "bdfutbol_id": "4018",
+      "name": "Monaco",
+      "competitions": [
+        "Copa de Europa"
+      ]
+    },
+    {
+      "bdfutbol_id": "10739",
+      "name": "Neman",
+      "competitions": [
+        "Recopa"
+      ]
+    },
+    {
+      "bdfutbol_id": "11565",
+      "name": "Nikol Tallin",
+      "competitions": [
+        "Recopa"
+      ]
+    },
+    {
+      "bdfutbol_id": "11098",
+      "name": "Norma Tallinn",
+      "competitions": [
+        "Copa de Europa"
+      ]
+    },
+    {
+      "bdfutbol_id": "2022",
+      "name": "Norwich",
+      "competitions": [
+        "Copa de la UEFA"
+      ]
+    },
+    {
+      "bdfutbol_id": "10403",
+      "name": "OFI",
+      "competitions": [
+        "Copa de la UEFA"
+      ]
+    },
+    {
+      "bdfutbol_id": "10050",
+      "name": "Odense",
+      "competitions": [
+        "Recopa"
+      ]
+    },
+    {
+      "bdfutbol_id": "10187",
+      "name": "Olimpija Ljubljana",
+      "competitions": [
+        "Copa de Europa"
+      ]
+    },
+    {
+      "bdfutbol_id": "10026",
+      "name": "Olympiacos",
+      "competitions": [
+        "Copa de la UEFA"
+      ]
+    },
+    {
+      "bdfutbol_id": "10273",
+      "name": "Omonia",
+      "competitions": [
+        "Copa de Europa"
+      ]
+    },
+    {
+      "bdfutbol_id": "4002",
+      "name": "PSG",
+      "competitions": [
+        "Recopa"
+      ]
+    },
+    {
+      "bdfutbol_id": "10027",
+      "name": "Panathinaikos",
+      "competitions": [
+        "Recopa"
+      ]
+    },
+    {
+      "bdfutbol_id": "3013",
+      "name": "Parma",
+      "competitions": [
+        "Recopa"
+      ]
+    },
+    {
+      "bdfutbol_id": "10707",
+      "name": "Partizani",
+      "competitions": [
+        "Copa de Europa"
+      ]
+    },
+    {
+      "bdfutbol_id": "11555",
+      "name": "Patosi",
+      "competitions": [
+        "Recopa"
+      ]
+    },
+    {
+      "bdfutbol_id": "5002",
+      "name": "Porto",
+      "competitions": [
+        "Copa de Europa"
+      ]
+    },
+    {
+      "bdfutbol_id": "11055",
+      "name": "RAF Jelgava",
+      "competitions": [
+        "Recopa"
+      ]
+    },
+    {
+      "bdfutbol_id": "10016",
+      "name": "Rangers",
+      "competitions": [
+        "Copa de Europa"
+      ]
+    },
+    {
+      "bdfutbol_id": "2",
+      "name": "Real Madrid",
+      "competitions": [
+        "Recopa"
+      ]
+    },
+    {
+      "bdfutbol_id": "10038",
+      "name": "Rosenborg",
+      "competitions": [
+        "Copa de Europa"
+      ]
+    },
+    {
+      "bdfutbol_id": "10010",
+      "name": "Royal Antwerp",
+      "competitions": [
+        "Copa de la UEFA"
+      ]
+    },
+    {
+      "bdfutbol_id": "10052",
+      "name": "Servette",
+      "competitions": [
+        "Copa de la UEFA"
+      ]
+    },
+    {
+      "bdfutbol_id": "10264",
+      "name": "Shelbourne",
+      "competitions": [
+        "Recopa"
+      ]
+    },
+    {
+      "bdfutbol_id": "10376",
+      "name": "Skonto",
+      "competitions": [
+        "Copa de Europa"
+      ]
+    },
+    {
+      "bdfutbol_id": "10395",
+      "name": "Sliema Wanderers",
+      "competitions": [
+        "Recopa"
+      ]
+    },
+    {
+      "bdfutbol_id": "10044",
+      "name": "Sparta Praha",
+      "competitions": [
+        "Copa de Europa"
+      ]
+    },
+    {
+      "bdfutbol_id": "10023",
+      "name": "Spartak Moskva",
+      "competitions": [
+        "Copa de Europa"
+      ]
+    },
+    {
+      "bdfutbol_id": "5001",
+      "name": "Sporting de Portugal",
+      "competitions": [
+        "Copa de la UEFA"
+      ]
+    },
+    {
+      "bdfutbol_id": "10012",
+      "name": "Standard Liège",
+      "competitions": [
+        "Recopa"
+      ]
+    },
+    {
+      "bdfutbol_id": "10024",
+      "name": "Steaua București",
+      "competitions": [
+        "Copa de Europa"
+      ]
+    },
+    {
+      "bdfutbol_id": "35",
+      "name": "Tenerife",
+      "competitions": [
+        "Copa de la UEFA"
+      ]
+    },
+    {
+      "bdfutbol_id": "10298",
+      "name": "Tirol Innsbruck",
+      "competitions": [
+        "Recopa"
+      ]
+    },
+    {
+      "bdfutbol_id": "3019",
+      "name": "Torino",
+      "competitions": [
+        "Recopa"
+      ]
+    },
+    {
+      "bdfutbol_id": "10068",
+      "name": "Torpedo Moskva",
+      "competitions": [
+        "Recopa"
+      ]
+    },
+    {
+      "bdfutbol_id": "10047",
+      "name": "Trabzonspor",
+      "competitions": [
+        "Copa de la UEFA"
+      ]
+    },
+    {
+      "bdfutbol_id": "11020",
+      "name": "Universitatea Craiova FC",
+      "competitions": [
+        "Recopa"
+      ]
+    },
+    {
+      "bdfutbol_id": "36",
+      "name": "Valencia",
+      "competitions": [
+        "Copa de la UEFA"
+      ]
+    },
+    {
+      "bdfutbol_id": "10657",
+      "name": "Valur",
+      "competitions": [
+        "Recopa"
+      ]
+    },
+    {
+      "bdfutbol_id": "1009",
+      "name": "Werder Bremen",
+      "competitions": [
+        "Copa de Europa"
+      ]
+    },
+    {
+      "bdfutbol_id": "10175",
+      "name": "Zimbru",
+      "competitions": [
+        "Copa de Europa"
+      ]
+    },
+    {
+      "bdfutbol_id": "10347",
+      "name": "ÍA",
+      "competitions": [
+        "Copa de Europa"
+      ]
+    },
+    {
+      "bdfutbol_id": "10028",
+      "name": "Žalgiris",
+      "competitions": [
+        "Recopa"
+      ]
+    }
+  ]
+}
