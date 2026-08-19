@@ -40,8 +40,13 @@ def _attr(player: dict[str, Any], key: str, default: int = 60) -> int:
         return default
 
 
-def _formation_fit(players: list[dict[str, Any]], formation: str) -> tuple[float, list[dict[str, Any]]]:
-    assigned = assign_players_to_formation(players, formation)
+def _formation_fit(
+    players: list[dict[str, Any]],
+    formation: str,
+    *,
+    penalty_cache: dict[tuple[int, str], int] | None = None,
+) -> tuple[float, list[dict[str, Any]]]:
+    assigned = assign_players_to_formation(players, formation, penalty_cache=penalty_cache)
     if len(assigned) < 11:
         return -9999.0, assigned
     score = sum(_overall(row["player"]) - float(row["penalty"]) * 1.8 for row in assigned)
@@ -49,12 +54,28 @@ def _formation_fit(players: list[dict[str, Any]], formation: str) -> tuple[float
     return score, assigned
 
 
-def _plan_fit(players: list[dict[str, Any]], tactics: FootballTactics9394) -> float:
-    score, assigned = _formation_fit(players, tactics.formation)
+def _plan_fit(
+    players: list[dict[str, Any]],
+    tactics: FootballTactics9394,
+    *,
+    penalty_cache: dict[tuple[int, str], int] | None = None,
+    tactical_cache: dict[tuple[int, str, str, str, str], float] | None = None,
+) -> float:
+    score, assigned = _formation_fit(players, tactics.formation, penalty_cache=penalty_cache)
     if score < 0:
         return score
-    xi = [row["player"] for row in assigned]
-    compatibility = sum(float(tactical_fit(player, tactics)["score"]) for player in xi) / 11.0
+    total = 0.0
+    for row in assigned:
+        player = row["player"]
+        pid = int(player.get("source_id") or player.get("id") or 0)
+        key = (pid, str(tactics.pressing), str(tactics.directness), str(tactics.width), str(tactics.defensive_line))
+        cached = tactical_cache.get(key) if tactical_cache is not None else None
+        if cached is None:
+            cached = float(tactical_fit(player, tactics)["score"])
+            if tactical_cache is not None:
+                tactical_cache[key] = cached
+        total += cached
+    compatibility = total / 11.0
     return score + (compatibility - 60.0) * 1.35
 
 
@@ -84,13 +105,15 @@ def ai_tactics_for_squad(players: Iterable[dict[str, Any]], manager: dict[str, A
         adherence -= 1.0
 
     candidates: list[tuple[float, FootballTactics9394]] = []
+    penalty_cache: dict[tuple[int, str], int] = {}
+    tactical_cache: dict[tuple[int, str, str, str, str], float] = {}
     for rank, formation in enumerate(formations):
         plan = replace(source_plan, formation=formation)
         if formation in {"4-3-3", "3-4-3"}:
             plan = replace(plan, width="wide")
         elif formation in {"4-3-1-2", "3-4-1-2"}:
             plan = replace(plan, width="narrow")
-        score = _plan_fit(squad, plan)
+        score = _plan_fit(squad, plan, penalty_cache=penalty_cache, tactical_cache=tactical_cache)
         if formation == source_plan.formation:
             score += adherence
         elif rank <= 2:

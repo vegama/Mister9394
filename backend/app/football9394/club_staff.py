@@ -441,6 +441,7 @@ def responsibility_effectiveness(
     strength: float,
     responsibility_key: str,
     game_date: date | None = None,
+    staff_snapshot: dict[str, Any] | None = None,
 ) -> dict[str, Any]:
     """Return the explicit operational quality for one delegated duty.
 
@@ -451,7 +452,7 @@ def responsibility_effectiveness(
     key = str(responsibility_key)
     if key not in RESPONSIBILITIES:
         raise KeyError(f"responsabilidad desconocida: {key}")
-    snap = club_staff_snapshot(state, team=team, strength=strength, game_date=game_date)
+    snap = staff_snapshot or club_staff_snapshot(state, team=team, strength=strength, game_date=game_date)
     row = next(item for item in snap["responsibilities"] if item["key"] == key)
     if row["assignee"] == "manager":
         # The user's own work is competent but not magically specialist. Heavy

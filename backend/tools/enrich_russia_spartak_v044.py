@@ -11,6 +11,7 @@ ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT/'backend'))
 from tools.deepen_historical_profiles_and_metadata_v031 import ROLE_TO_BROAD, ROLE_TO_LABEL, comparable, role_ratings  # noqa:E402
 from tools.review_created_player_profiles import materialise_attributes  # noqa:E402
+from app.football9394.player_names import preserve_full_name_and_shorten  # noqa:E402
 
 DATA=ROOT/'data'/'football9394'
 SNAP=DATA/'historical_snapshot.json'; REG=DATA/'created_players_registry.json'; QUEUE=DATA/'bdfutbol_photo_queue.json'
@@ -171,6 +172,7 @@ def main()->None:
         if old_dob and old_dob!=patch['dob']:
             conflicts.append({'source_id':sid,'player':patch['name'],'field':'birth_date','prior':old_dob,'resolved':patch['dob'],'decision':'individual profile + independent corroboration wins','source_urls':[bdf_url(patch),'https://www.transfermarkt.com/ramiz-mamedov/profil/spieler/67117'] if sid==9495357 else [bdf_url(patch)]})
         first,surname=split_name(patch['name']); player['display_name']=patch['name'];player['first_name']=first;player['surname1']=surname;player['birth_date']=patch['dob']+'T00:00:00'
+        preserve_full_name_and_shorten(player)
         # Historical-state separation: never back-project a modern successor state into birth_country_id.
         player.pop('birth_country_id',None); player['historical_birth_state']=patch['state'];player['birth_territory_country_id']=patch['territory'];player['historical_birth_place_text']=patch['place']
         player['historical_birth_place_source_url']=bdf_url(patch); player['historical_birth_place_source_label']='BDFutbol place + sovereign-state-at-birth normalization v0.44'

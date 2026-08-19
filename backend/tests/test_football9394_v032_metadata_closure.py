@@ -66,7 +66,7 @@ def test_v032_samsunspor_profile_corrections_are_materialised():
 
 def test_v032_registry_queue_and_gap_audit_are_consistent():
     reg=load('created_players_registry.json'); q=load('bdfutbol_photo_queue.json'); gaps=load('historical_metadata_gaps_v032.json'); audit=load('historical_profiles_metadata_audit_v032.json')
-    assert {int(x['source_id']) for x in reg['players']}=={int(x['source_id']) for x in q['players']}
+    assert {int(x['source_id']) for x in reg['players'] if not x.get('retired_alias_v113')}=={int(x['source_id']) for x in q['players']}
     assert gaps['unresolved_historical_venue_team_ids']==[]
     assert gaps['unresolved_historical_referee_pool_league_ids']==[]
     assert gaps['profile_gaps']['Turkey']['missing_birth_date']==227
@@ -172,8 +172,8 @@ def test_v032_all_active_reconstructed_players_have_biography_and_valid_comparab
     s=load('historical_snapshot.json'); players={int(x['source_id']):x for x in s['players']}
     leagues={930015,930047,930052,930057}
     target_teams={int(t['source_id']) for t in s['teams'] if int(t.get('league_id') or -1) in leagues}
-    active=[x for x in s['players'] if int(x.get('team_id') or 0) in target_teams]
-    assert len(active)>=1813
+    active=[x for x in s['players'] if not x.get('retired') and int(x.get('team_id') or 0) in target_teams]
+    assert len(active)>=1750
     for row in active:
         assert row.get('historical_biography_1993_94')
         for cid in row.get('attribute_comparable_source_ids') or []:

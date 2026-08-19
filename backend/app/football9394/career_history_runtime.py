@@ -31,6 +31,7 @@ from .career_international import generated_international_windows_9394, simulate
 from .calendar_cycle import generated_round_dates, season_label, season_start_year
 from .career_special_world import ensure_special_competitions, process_special_competitions, special_competition_snapshot
 from .career_tournaments import ensure_tournament_state, play_pending_tournament_match, commit_pending_tournament_result, process_daily_tournaments, tournament_snapshot
+from .domestic_cups import DOMESTIC_CUPS_9394, CWC_BASELINE_REPRESENTATIVE_BY_COUNTRY_9394, CWC_BASELINE_DEFENDING_CHAMPION_9394
 from .international_manager import (ensure_international_manager_state, ensure_international_player_stats, record_international_player_match, generate_national_job_offers, accept_national_job as accept_national_job_state, resign_national_job as resign_national_job_state, set_national_selection as set_national_selection_state, update_international_reputation, international_manager_snapshot)
 from .international_tournaments import is_world_championship_summer, simulate_world_championship_24
 from .league_engine import LeagueSeason9394
@@ -209,7 +210,11 @@ class CareerHistoryRuntimeMixin:
         for key,tournament in (self.state.get("daily_tournaments") or {}).items():
             champion=tournament.get("champion_team_id")
             if champion:
-                honours.append(self._honour(competition_kind="tournament",source_id=int(key),name=str(tournament.get("name") or f"Torneo {key}"),champion_team_id=int(champion)))
+                honour=self._honour(competition_kind="tournament",source_id=int(key),name=str(tournament.get("name") or f"Torneo {key}"),champion_team_id=int(champion))
+                runner=int(tournament.get("runner_up_team_id") or 0)
+                if runner:
+                    honour["runner_up_team_id"]=runner;honour["runner_up_team_name"]=self._team_name(runner)
+                honours.append(honour)
         for row in honours:
             self.state["honours"].append(row)
             self.state["club_honours"].setdefault(str(row["team_id"]),[]).append(row)
@@ -341,23 +346,76 @@ class CareerHistoryRuntimeMixin:
         return ([{"team_id":x,"from_league_id":54,"to_league_id":31,"reason":"promotion"} for x in promoted]+[{"team_id":x,"from_league_id":31,"to_league_id":54,"reason":"relegation"} for x in relegated])
 
     def _continental_qualifiers(self, tables: dict[int,list[dict[str,Any]]]) -> dict[str,list[int]]:
+        """Build next season's European fields with 1993-94 competition priority.
+
+        Priority is title-holder CWC -> domestic league champion (European Cup)
+        -> domestic cup representative (CWC) -> league UEFA places.  This keeps
+        one club out of two European tournaments and makes a cup runner-up
+        inherit the Recopa place when the cup winner is already in the European
+        Cup, which is the important double-winner case.
+        """
         european=(14,31,13,4,5,32,1,38)
-        champions=[]; uefa=[]
+        tournaments=self.state.get("daily_tournaments") or {}
+        defending_raw=(tournaments.get("90") or {}).get("champion_team_id")
+        defending=int(defending_raw) if defending_raw else None
+
+        champions: list[int]=[]
+        # The CWC title holder has priority over a simultaneous league title.
         for lid in european:
             table=tables.get(lid) or []
-            if table:
-                champions.append(int(table[0]["team_id"])); uefa.extend(int(row["team_id"]) for row in table[1:3])
-        if len(champions)!=8 or len(uefa)!=16:
-            raise ValueError("no se pudieron reconstruir las plazas europeas para la nueva temporada")
-        cwc=[int(x) for x in self.universe.payload.get("tournament_participants",{}).get("90",())]
-        copa=((self.state.get("daily_tournaments") or {}).get("3") or {}).get("champion_team_id")
-        if copa:
-            spanish=[tid for tid in cwc if ((self.universe.team(int(tid)) or {}).get("league") or {}).get("country") == "España"]
-            if spanish:
-                cwc=[int(copa) if tid==spanish[0] else tid for tid in cwc]
-            elif int(copa) not in cwc:
-                cwc[-1]=int(copa)
-        return {"1":champions,"2":uefa,"90":list(dict.fromkeys(cwc))}
+            chosen=next((int(row["team_id"]) for row in table if int(row["team_id"])!=defending),None)
+            if chosen is not None: champions.append(chosen)
+        if len(champions)!=8:
+            raise ValueError("no se pudieron reconstruir las ocho plazas de Copa de Europa")
+
+        reserved=set(champions)
+        if defending is not None: reserved.add(defending)
+        cup_reps: list[int]=[]
+        for spec in DOMESTIC_CUPS_9394:
+            cup=tournaments.get(str(spec.source_id)) or {}
+            champion=int(cup.get("champion_team_id") or 0) or None
+            runner=int(cup.get("runner_up_team_id") or 0) or None
+            baseline=CWC_BASELINE_REPRESENTATIVE_BY_COUNTRY_9394.get(spec.country_id)
+            representative=next((tid for tid in (champion,runner,baseline) if tid is not None and int(tid) not in reserved),None)
+            if representative is None:
+                continue
+            representative=int(representative);cup_reps.append(representative);reserved.add(representative)
+
+        # UEFA is lower priority: if a second/third placed club has already won
+        # a cup place, the next league finisher inherits the UEFA berth.
+        uefa: list[int]=[]
+        for lid in european:
+            table=tables.get(lid) or []
+            for row in table:
+                tid=int(row["team_id"])
+                if tid in reserved or tid in uefa: continue
+                uefa.append(tid)
+                if sum(1 for x in uefa if any(int(r["team_id"])==x for r in table))>=2:
+                    break
+        if len(uefa)!=16:
+            raise ValueError("no se pudieron reconstruir las dieciséis plazas de Copa de la UEFA")
+
+        baseline=[int(x) for x in self.universe.payload.get("tournament_participants",{}).get("90",())]
+        replaced=set(CWC_BASELINE_REPRESENTATIVE_BY_COUNTRY_9394.values())|{CWC_BASELINE_DEFENDING_CHAMPION_9394}
+        cwc=[]
+        if defending is not None:
+            cwc.append(defending)
+        cwc.extend(cup_reps)
+        for tid in baseline:
+            if tid in replaced or tid in cwc or tid in champions or tid in uefa:
+                continue
+            cwc.append(tid)
+            if len(cwc)>=32: break
+        # In a pathological overlap with one of the historical filler clubs, use
+        # remaining baseline entrants before giving up a slot.
+        if len(cwc)<32:
+            for tid in baseline:
+                if tid not in cwc and tid not in champions and tid not in uefa:
+                    cwc.append(tid)
+                    if len(cwc)>=32: break
+        if len(cwc)!=32 or len(set(cwc))!=32:
+            raise ValueError(f"Recopa: se esperaban 32 clasificados únicos y hay {len(set(cwc))}")
+        return {"1":champions,"2":uefa,"90":cwc}
 
     def _league_player_awards(self, *, league_id: int, table: list[dict[str, Any]]) -> dict[str, Any]:
         """Build league-only player awards from the persisted 0-10 match ratings."""

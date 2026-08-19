@@ -28,25 +28,28 @@ def manager_market_flow(career_id: str) -> dict:
     return _load_manager_career(career_id).market_snapshot()
 
 @router.post("/api/football9394/careers/{career_id}/watchlist/{player_id}")
-def manager_watchlist(career_id: str, player_id: int, payload: WatchlistPayload) -> dict:
+def manager_watchlist(career_id: str, player_id: int, payload: WatchlistPayload, compact: bool = False) -> dict:
     career=_load_manager_career(career_id)
     try: result=career.toggle_watchlist(player_id,payload.watched)
     except KeyError as exc: raise HTTPException(status_code=404,detail=str(exc)) from exc
-    _career_store().save(career.state);return {"result":result,"career":career.snapshot()}
+    (_career_store().save_boundary_overlay(career.state) if compact else _career_store().save(career.state));return {"result":result} if compact else {"result":result,"career":career.snapshot()}
 
 @router.post("/api/football9394/careers/{career_id}/market-inquiry/{player_id}")
-def manager_market_inquiry(career_id: str, player_id: int) -> dict:
+def manager_market_inquiry(career_id: str, player_id: int, compact: bool = False) -> dict:
     career=_load_manager_career(career_id)
     try: inquiry=career.inquire_player_availability(player_id)
     except KeyError as exc: raise HTTPException(status_code=404,detail=str(exc)) from exc
     except ValueError as exc: raise HTTPException(status_code=409,detail=str(exc)) from exc
-    _career_store().save(career.state);return {"inquiry":inquiry,"career":career.snapshot()}
+    (_career_store().save_boundary_overlay(career.state) if compact else _career_store().save(career.state));return {"inquiry":inquiry} if compact else {"inquiry":inquiry,"career":career.snapshot()}
 
 @router.post("/api/football9394/careers/{career_id}/incoming-offers/{offer_id}/accept")
-def manager_accept_incoming_offer(career_id: str, offer_id: str) -> dict:
+def manager_accept_incoming_offer(career_id: str, offer_id: str, compact: bool = False) -> dict:
     career=_load_manager_career(career_id)
     try: transfer=career.accept_incoming_transfer_offer(offer_id)
     except KeyError as exc: raise HTTPException(status_code=404,detail=str(exc)) from exc
     except ValueError as exc: raise HTTPException(status_code=409,detail=str(exc)) from exc
-    _career_store().save(career.state);return {"transfer":transfer,"career":career.snapshot()}
+    _career_store().save(career.state)
+    if compact:
+        return {"transfer":transfer,"squad":career.squad_ui_snapshot(),"market_flow":career.market_snapshot(),"finances":dict(career.state.get("finances") or {}),"economy":career.economy_snapshot()}
+    return {"transfer":transfer,"career":career.snapshot()}
 

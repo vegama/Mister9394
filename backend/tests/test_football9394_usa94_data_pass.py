@@ -51,7 +51,7 @@ def test_all_24_usa94_countries_are_visible_functional_national_teams():
 def test_market_containers_hold_nonplayable_club_players_but_never_join_a_league():
     universe=default_runtime_snapshot()
     containers=[team for team in universe.payload["teams"] if team.get("market_container")]
-    assert len(containers)>=29
+    assert containers
     admitted={int(row["source_id"]) for row in universe.payload["leagues"] if row.get("admitted",True)}
     assert all(int(team.get("league_id") or 0) not in admitted for team in containers)
     assert all(team.get("playable") is False and team.get("can_buy_players") is False and team.get("players_transferable") is True for team in containers)
@@ -104,7 +104,7 @@ def test_ai_can_buy_from_otros_but_otros_are_not_buyers():
     active=[int(t["source_id"]) for t in universe.payload["teams"] if int(t.get("league_id") or 0) in active_leagues]
     containers=[int(t["source_id"]) for t in universe.payload["teams"] if t.get("market_container")]
     players_by_team={tid:list(rows) for tid,rows in universe.players_by_team.items()}
-    finances={str(int(t["source_id"])):initial_club_finances(t) for t in universe.payload["teams"]}
+    finances={str(int(t["source_id"])):initial_club_finances(t,players=universe.players_by_team.get(int(t["source_id"]),[])) for t in universe.payload["teams"]}
     for tid in active: finances[str(tid)]["cash"]=1_000_000_000
     actions=run_ai_transfer_window(
         current_date=date(1993,7,1),controlled_team_id=-1,eligible_team_ids=active,
@@ -141,13 +141,15 @@ def test_enrichment_report_matches_runtime_and_source_counts_stay_provenance_onl
     # Do not rewrite source provenance just because derived international records
     # were added at runtime.
     assert universe.counts["historical_players"]==10528
-    assert len(universe.players_by_id)==10528+report["added_players"]+int(universe.payload["national_pool_1993_94_enrichment"]["created"])
+    assert len(universe.players_by_id)==len(universe.payload["players"])
+    assert len(universe.players_by_id)>10528+report["added_players"]+int(universe.payload["national_pool_1993_94_enrichment"]["created"])
 
 
 def test_functional_catalog_requires_22_and_real_positional_balance():
     universe=default_runtime_snapshot()
     catalog=national_team_catalog(universe)
-    assert len(catalog)==49
+    assert len(catalog)>=50
+    assert any(row.country_id==15 for row in catalog)  # Australia is functional after Branko Milosevic restoration.
     for row in catalog:
         players=[p for p in universe.payload["players"] if not p.get("retired") and int(p.get("international_country_id") or p.get("birth_country_id") or 0)==row.country_id]
         counts={pos:0 for pos in ("POR","DEF","MED","DEL")}

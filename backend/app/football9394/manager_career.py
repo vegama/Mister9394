@@ -8,16 +8,19 @@ ageing is calendar-driven, injuries recover day by day, transfers alter actual s
 club's source-scale cash balance moves with matches and deals.
 """
 
+from collections import OrderedDict
 from dataclasses import asdict, dataclass, replace
 from datetime import date, datetime, timedelta, timezone
 from random import Random
+from math import log10
 import json
 from pathlib import Path
+from threading import RLock
 from time import perf_counter
-from typing import Any
+from typing import Any, ClassVar
 from uuid import uuid4
 
-from .atomic_json_store import atomic_json_save, recover_json_load
+from .atomic_json_store import atomic_json_checkpoint, atomic_json_save, recover_json_load
 
 from .career_market import estimated_transfer_value, matchday_income, negotiate_transfer
 from .career_economy import (
@@ -39,6 +42,7 @@ from .career_international import generated_international_windows_9394, simulate
 from .calendar_cycle import generated_round_dates, season_label, season_start_year
 from .career_special_world import ensure_special_competitions, process_special_competitions, special_competition_snapshot
 from .career_tournaments import ensure_tournament_state, play_pending_tournament_match, commit_pending_tournament_result, process_daily_tournaments, tournament_snapshot
+from .domestic_cups import domestic_cup_spec
 from .international_manager import (ensure_international_manager_state, ensure_international_player_stats, record_international_player_match, generate_national_job_offers, accept_national_job as accept_national_job_state, resign_national_job as resign_national_job_state, set_national_selection as set_national_selection_state, update_international_reputation, international_manager_snapshot)
 from .international_tournaments import is_world_championship_summer, simulate_world_championship_24
 from .league_engine import LeagueSeason9394
@@ -114,12 +118,17 @@ from .information_world import ensure_information_state, register_information_ev
 from .economy_longitudinal import ensure_longitudinal_economy, post as post_long_economy, season_prize_money, financial_health, longitudinal_snapshot, register_structural_event
 from .dressing_room import (ensure_dressing_room_state, update_after_match as update_dressing_room_after_match, dressing_room_snapshot, set_captain as set_dressing_room_captain, set_role_promise as set_dressing_room_role_promise, role_promise_api, close_role_promises_on_manager_exit, register_important_departure, register_important_injury, register_return_from_injury, reencounters_for_opponent, register_new_signing, register_contract_decision, respond_to_concern as respond_dressing_concern, register_discipline as register_dressing_discipline)
 from .club_staff import club_staff_snapshot, assign_responsibility as assign_staff_responsibility, ensure_club_staff_state, responsibility_effectiveness
-from .scouting import ensure_scouting_state, external_player_view, process_scouting_day, scouting_snapshot as build_scouting_snapshot, start_scouting, scouting_geography
+from .scouting import (
+    ensure_scouting_state, external_player_view, process_scouting_day, scouting_snapshot as build_scouting_snapshot,
+    start_scouting, scouting_geography, set_network_profile, effective_knowledge, register_network_discovery,
+    upsert_portfolio_candidate,
+)
 from .training import (
     ensure_training_state, process_training_day, training_snapshot as build_training_snapshot,
     set_training_plan as update_training_plan_state, set_individual_focus as set_training_focus_state,
     set_individual_recovery as set_training_recovery_state,
-    set_match_preparation_focus as set_training_match_prep_state, session_for_date,
+    set_match_preparation_focus as set_training_match_prep_state, set_training_mode as set_training_mode_state,
+    apply_auto_training_plan, session_for_date,
 )
 from .tactical_plan import (
     ensure_tactical_plan_state, set_tactical_plan as update_tactical_plan_state,
@@ -227,6 +236,16 @@ class ManagerCareerStore9394:
     root: Path
     backup_root: Path
 
+    # The desktop app repeatedly loads the same multi-megabyte career save for
+    # every HTTP action. Keep only the two most recent validated states in
+    # process and invalidate them by file signature. This preserves the atomic
+    # on-disk save/recovery contract while eliminating JSON parsing on the hot
+    # request path. The cache is shared by store instances because routes create
+    # a lightweight store object per request.
+    _STATE_CACHE: ClassVar[OrderedDict[str, tuple[tuple[int, ...], dict[str, Any]]]] = OrderedDict()
+    _STATE_CACHE_LOCK: ClassVar[RLock] = RLock()
+    _STATE_CACHE_LIMIT: ClassVar[int] = 2
+
     def __init__(self, root: str | Path, backup_root: str | Path | None = None):
         self.root = Path(root)
         self.backup_root = Path(backup_root) if backup_root is not None else self.root.parent / "backups"
@@ -245,14 +264,229 @@ class ManagerCareerStore9394:
         if not str(payload.get("career_id") or "").strip():
             raise ValueError("save de carrera sin career_id")
 
+    @staticmethod
+    def _path_key(path: Path) -> str:
+        return str(path.resolve(strict=False))
+
+    @staticmethod
+    def _signature(path: Path) -> tuple[int, int]:
+        stat = path.stat()
+        return int(stat.st_mtime_ns), int(stat.st_size)
+
+    @staticmethod
+    def _hot_overlay_path(path: Path) -> Path:
+        return path.with_suffix(".hot.json")
+
+    @classmethod
+    def _cache_signature(cls, path: Path) -> tuple[int, ...]:
+        base = cls._signature(path)
+        overlay = cls._hot_overlay_path(path)
+        try:
+            live = cls._signature(overlay)
+        except FileNotFoundError:
+            live = (0, 0)
+        return (*base, *live)
+
+    @staticmethod
+    def _validate_hot_overlay(payload: dict[str, Any]) -> None:
+        if int(payload.get("schema") or 0) != 1:
+            raise ValueError("overlay de estado incompatible")
+        if not str(payload.get("career_id") or "").strip():
+            raise ValueError("overlay de estado sin career_id")
+        base = payload.get("base_signature")
+        if not isinstance(base, list) or len(base) != 2:
+            raise ValueError("overlay de estado sin firma base")
+        if not isinstance(payload.get("state"), dict):
+            raise ValueError("overlay de estado sin estado")
+
+    @classmethod
+    def _remember_state(cls, path: Path, state: dict[str, Any]) -> None:
+        key = cls._path_key(path)
+        try:
+            signature = cls._cache_signature(path)
+        except OSError:
+            return
+        with cls._STATE_CACHE_LOCK:
+            cls._STATE_CACHE[key] = (signature, state)
+            cls._STATE_CACHE.move_to_end(key)
+            while len(cls._STATE_CACHE) > cls._STATE_CACHE_LIMIT:
+                cls._STATE_CACHE.popitem(last=False)
+
+    @classmethod
+    def clear_memory_cache(cls) -> None:
+        with cls._STATE_CACHE_LOCK:
+            cls._STATE_CACHE.clear()
+
+    def _discard_hot_overlay(self, path: Path) -> None:
+        overlay = self._hot_overlay_path(path)
+        backup = overlay.with_suffix(overlay.suffix + ".bak")
+        candidates = (
+            overlay, overlay.with_suffix(overlay.suffix + ".tmp"),
+            backup, backup.with_suffix(backup.suffix + ".prev"),
+            backup.with_suffix(backup.suffix + ".tmp"),
+        )
+        for candidate in candidates:
+            try:
+                candidate.unlink()
+            except FileNotFoundError:
+                pass
+        # Recovery quarantines a damaged JSON as ``*.corrupt-<timestamp>``.
+        # Hot overlays are derivative, so once the canonical save commits there
+        # is no value in retaining those quarantined fragments indefinitely.
+        for stem in (overlay.name, backup.name, backup.with_suffix(backup.suffix + ".prev").name):
+            for candidate in overlay.parent.glob(f"{stem}.corrupt-*"):
+                try:
+                    candidate.unlink()
+                except FileNotFoundError:
+                    pass
+
     def save(self, state: dict[str, Any]) -> Path:
         state["schema"] = CAREER_SCHEMA_9394
         path = self.path_for(str(state.get("career_id") or ""))
-        return atomic_json_save(path, state, validator=self._validate, backup_root=self.backup_root)
+        result = atomic_json_save(path, state, validator=self._validate, backup_root=self.backup_root)
+        # A complete save already contains the latest match state. Removing the
+        # derivative overlay only after the primary+backup commit means a crash
+        # can never leave us with neither representation.
+        self._discard_hot_overlay(path)
+        self._remember_state(path, state)
+        return result
+
+    def _hot_overlay_payload(self, state: dict[str, Any], path: Path) -> dict[str, Any]:
+        state["schema"] = CAREER_SCHEMA_9394
+        self._validate(state)
+        base_signature = self._signature(path)
+        return {
+            "schema": 1,
+            "career_id": str(state["career_id"]),
+            "base_signature": [int(base_signature[0]), int(base_signature[1])],
+            "state": {
+                # Match preparation / live match.
+                "live_match": state.get("live_match"),
+                "selection": state.get("selection"),
+                "tactics": state.get("tactics"),
+                "tactical_plan": state.get("tactical_plan"),
+                "match_plan_staff": state.get("match_plan_staff"),
+                "training": state.get("training"),
+                # Small market-workflow state edited interactively by the UI.
+                # Completed transfers, contracts and finances are intentionally
+                # NOT part of this overlay and still require a canonical save.
+                "watchlist": state.get("watchlist"),
+                "transfer_negotiations": state.get("transfer_negotiations"),
+                "transfer_listings": state.get("transfer_listings"),
+                "market_inquiries": state.get("market_inquiries"),
+                "manager_player_relationships": state.get("manager_player_relationships"),
+                "information_threads": state.get("information_threads"),
+                "information_seen_keys": state.get("information_seen_keys"),
+                "media_reputation": state.get("media_reputation"),
+                "updated_at": state.get("updated_at"),
+            },
+        }
+
+    def save_hot_overlay(self, state: dict[str, Any]) -> Path:
+        """Durably checkpoint the small, frequently edited match-prep slice.
+
+        Selection/tactics and the in-match runtime are persisted without
+        rewriting the multi-megabyte career body. The overlay is tied to the
+        exact canonical save it derives from and is folded into the next full
+        save, so restart safety is preserved without stale state rollback.
+        """
+        path = self.path_for(str(state.get("career_id") or ""))
+        overlay_path = self._hot_overlay_path(path)
+        payload = self._hot_overlay_payload(state, path)
+        atomic_json_checkpoint(overlay_path, payload, validator=self._validate_hot_overlay)
+        self._remember_state(path, state)
+        return overlay_path
+
+    def save_boundary_overlay(self, state: dict[str, Any]) -> Path:
+        """Publish a redundant small checkpoint for an important hot boundary.
+
+        Starting a match must survive both process loss and corruption, but it
+        does not justify serialising the full multi-megabyte career twice.  The
+        overlay therefore gets its own independent latest + previous recovery
+        ladder. Later high-frequency ticks replace only the tiny primary overlay;
+        the boundary backup remains a known-good restart point until the next
+        canonical full save consolidates and removes the whole ladder.
+        """
+        path = self.path_for(str(state.get("career_id") or ""))
+        overlay_path = self._hot_overlay_path(path)
+        payload = self._hot_overlay_payload(state, path)
+        atomic_json_save(overlay_path, payload, validator=self._validate_hot_overlay)
+        self._remember_state(path, state)
+        return overlay_path
+
+    def save_live_overlay(self, state: dict[str, Any]) -> Path:
+        # Compatibility/readability wrapper for live routes. Match ticks and
+        # pre-match edits intentionally share the same compact checkpoint.
+        return self.save_hot_overlay(state)
+
+    def _apply_hot_overlay(self, path: Path, state: dict[str, Any], base_signature: tuple[int, int]) -> None:
+        overlay_path = self._hot_overlay_path(path)
+        overlay_backup = overlay_path.with_suffix(overlay_path.suffix + ".bak")
+        overlay_previous = overlay_backup.with_suffix(overlay_backup.suffix + ".prev")
+        if not any(candidate.exists() for candidate in (overlay_path, overlay_backup, overlay_previous)):
+            return
+        try:
+            payload = recover_json_load(overlay_path, validator=self._validate_hot_overlay)
+            if str(payload.get("career_id")) != str(state.get("career_id")):
+                raise ValueError("overlay de otra carrera")
+            expected = tuple(int(x) for x in payload.get("base_signature") or ())
+            if expected != tuple(base_signature):
+                # The canonical save moved on. A stale overlay must never roll
+                # back a newer mutation; it is safe to discard now.
+                self._discard_hot_overlay(path)
+                return
+            for key, value in (payload.get("state") or {}).items():
+                state[key] = value
+        except Exception:
+            # The full save remains canonical and has its own two-rung backup
+            # ladder. A damaged derivative checkpoint is therefore ignored.
+            self._discard_hot_overlay(path)
 
     def load(self, career_id: str) -> dict[str, Any]:
         path = self.path_for(career_id)
-        return recover_json_load(path, validator=self._validate, backup_root=self.backup_root)
+        key = self._path_key(path)
+        try:
+            signature = self._cache_signature(path)
+        except FileNotFoundError:
+            signature = None
+        if signature is not None:
+            with self._STATE_CACHE_LOCK:
+                cached = self._STATE_CACHE.get(key)
+                if cached is not None and cached[0] == signature:
+                    self._STATE_CACHE.move_to_end(key)
+                    return cached[1]
+        state = recover_json_load(path, validator=self._validate, backup_root=self.backup_root)
+        try:
+            base_signature = self._signature(path)
+        except FileNotFoundError:
+            base_signature = (0, 0)
+        self._apply_hot_overlay(path, state, base_signature)
+        self._remember_state(path, state)
+        return state
+
+
+class _TeamPlayersView:
+    """Lazy ``players_by_team`` adapter used by match-sheet construction.
+
+    League suspension filtering used to materialise a copy of *every* club's
+    roster for every home/away team sheet. A single league round therefore
+    filtered the whole world dozens of times. The builder only asks for one
+    team, so filter that team on demand.
+    """
+    def __init__(self, base: dict[int, list[dict[str, Any]]], development: dict[str, dict[str, Any]], *, exclude_league_suspended: bool = False):
+        self.base = base
+        self.development = development
+        self.exclude_league_suspended = bool(exclude_league_suspended)
+
+    def get(self, team_id: int, default=()):
+        rows = self.base.get(int(team_id), default)
+        if not self.exclude_league_suspended:
+            return rows
+        dev = self.development
+        return [
+            row for row in rows
+            if int((dev.get(str(int(row.get("source_id") or 0))) or {}).get("league_suspension_matches") or 0) <= 0
+        ]
 
 
 class _CareerUniverseView:
@@ -266,14 +500,10 @@ class _CareerUniverseView:
     def __init__(self, runtime: "ManagerCareerRuntime9394", *, include_injured: bool = False, exclude_league_suspended: bool = False):
         self.runtime = runtime
         base = runtime._career_players_by_team if include_injured else runtime._match_players_by_team
-        if exclude_league_suspended:
-            dev = runtime.state.get("player_development") or {}
-            self.players_by_team = {
-                int(team_id): [row for row in rows if int((dev.get(str(int(row.get("source_id") or 0))) or {}).get("league_suspension_matches") or 0) <= 0]
-                for team_id, rows in base.items()
-            }
-        else:
-            self.players_by_team = base
+        self.players_by_team = _TeamPlayersView(
+            base, runtime.state.get("player_development") or {},
+            exclude_league_suspended=exclude_league_suspended,
+        )
 
     def team(self, team_id: int):
         return self.runtime._team_api(team_id)
@@ -294,9 +524,18 @@ class ManagerCareerRuntime9394(CareerHistoryRuntimeMixin, CareerMarketRuntimeMix
         self._strength_cache: dict[int, float] = {}
         self._team_league_cache: dict[int, int] = {}
         self._foreign_rule_cache: dict[tuple[int, int], Any] = {}
-        self._rebuild_rosters()
+        self._league_rules_cache: dict[int, Any] = {}
+        self._league_round_dates_cache: dict[tuple[Any, ...], tuple[date, ...]] = {}
+        self._staff_core_cache: dict[str, Any] | None = None
+        self._responsibility_effect_cache: dict[str, dict[str, Any]] = {}
+        self._live_sheets_cache: tuple[int, TeamSheet9394, TeamSheet9394] | None = None
+        # Player dynamics are persisted in the save. Recomputing the hierarchy
+        # of every club on every HTTP request is pure work unless an old save
+        # has never seeded that layer.
+        self._rebuild_rosters(sync_dynamics=not bool(self.state.get("player_dynamics")))
         current_team = self._team_api(int(self.state["team_id"])) or self.universe.team(int(self.state["team_id"])) or {"source_id": int(self.state["team_id"])}
         ensure_club_staff_state(self.state, team=current_team, strength=self._team_strength(int(self.state["team_id"])), game_date=self.current_date)
+        self._refresh_scouting_network_profile()
         self._ensure_manager_layer()
         initialise_club_status(state=self.state,active_team_ids=self._active_club_ids(),team_getter=lambda tid:self._team_api(tid),strength_getter=self._team_strength)
         self._ensure_nf9_nf12_layers()
@@ -318,7 +557,8 @@ class ManagerCareerRuntime9394(CareerHistoryRuntimeMixin, CareerMarketRuntimeMix
         self.state.setdefault("contract_overrides", {})
         self.state.setdefault("transfer_history", [])
         team = self.universe.team(int(self.state["team_id"])) or {}
-        self.state.setdefault("finances", initial_club_finances(team, players=list(self.universe.players_by_team.get(int(self.state["team_id"]), ()))))
+        if "finances" not in self.state:
+            self.state["finances"] = initial_club_finances(team, players=list(self.universe.players_by_team.get(int(self.state["team_id"]), ())))
         self.state.setdefault("economy_ledger", [])
         self.state.setdefault("age_policy", AGE_POLICY_FROZEN)
         # Product rule: the 1993-94 regulatory environment is permanent.
@@ -354,6 +594,7 @@ class ManagerCareerRuntime9394(CareerHistoryRuntimeMixin, CareerMarketRuntimeMix
         ensure_scouting_state(self.state)
         ensure_training_state(self.state)
         ensure_tactical_plan_state(self.state)
+        self.state.setdefault("match_plan_staff", {"mode":"auto","fixture_key":None,"manual_override":False,"generated_on":None,"summary":None,"confidence":0})
         ensure_market_ecosystem_state(self.state)
         ensure_squad_dynamics_state(self.state)
         ensure_long_career_state(self.state)
@@ -400,18 +641,46 @@ class ManagerCareerRuntime9394(CareerHistoryRuntimeMixin, CareerMarketRuntimeMix
             league = source_team.get("league") or {}
             self.state["league_id"] = int(league.get("source_id") or 1)
         club_finances = self.state.setdefault("club_finances", {})
-        for club in self.universe.payload.get("teams", []):
-            club_id = int(club["source_id"])
-            tid = str(club_id)
-            baseline = initial_club_finances(club, players=list(self.universe.players_by_team.get(club_id, ())))
-            club_finances[tid] = merge_finances_with_peseta_baseline(baseline, club_finances.get(tid))
+        clubs = self.universe.payload.get("teams", [])
+        # The peseta migration is expensive because it derives wage/value
+        # baselines from every squad. Once a save already contains a complete
+        # migrated finance row for every club, do not recompute it on every
+        # request. This turns runtime reconstruction into indexing work instead
+        # of a hidden 500-club economy pass.
+        def finance_row_complete(club_id: int) -> bool:
+            row = club_finances.get(str(int(club_id)))
+            return bool(
+                isinstance(row, dict)
+                and row.get("economy_model")
+                and row.get("currency_code") == "ESP"
+                and "transfer_budget_remaining" in row
+            )
+
+        missing_finance_clubs = [club for club in clubs if not finance_row_complete(int(club["source_id"]))]
+        finance_rows_complete = not missing_finance_clubs
+        if missing_finance_clubs:
+            # A partially migrated save used to recompute the wage/value baseline
+            # for all ~535 clubs because a single missing row made the global
+            # completeness check false. Migrate only the rows that actually need
+            # it; completed career finances stay canonical and untouched.
+            for club in missing_finance_clubs:
+                club_id = int(club["source_id"])
+                tid = str(club_id)
+                baseline = initial_club_finances(club, players=list(self.universe.players_by_team.get(club_id, ())))
+                club_finances[tid] = merge_finances_with_peseta_baseline(baseline, club_finances.get(tid))
+            finance_rows_complete = True
         controlled_key = str(int(self.state["team_id"]))
         # Migrate previous saves: the user's ledger/cash remains authoritative,
-        # while H1 adds the explicit peseta budget envelopes.
-        controlled_team = self.universe.team(int(self.state["team_id"])) or {}
-        controlled_baseline = initial_club_finances(controlled_team, players=list(self.universe.players_by_team.get(int(self.state["team_id"]), ())))
-        controlled_existing = {**club_finances.get(controlled_key, {}), **(self.state.get("finances") or {})}
-        club_finances[controlled_key] = merge_finances_with_peseta_baseline(controlled_baseline, controlled_existing)
+        # while H1 adds the explicit peseta budget envelopes. On an already
+        # migrated save the stored row is canonical and needs no new baseline.
+        if finance_rows_complete and controlled_key in club_finances:
+            controlled_existing = {**club_finances[controlled_key], **(self.state.get("finances") or {})}
+            club_finances[controlled_key] = controlled_existing
+        else:
+            controlled_team = self.universe.team(int(self.state["team_id"])) or {}
+            controlled_baseline = initial_club_finances(controlled_team, players=list(self.universe.players_by_team.get(int(self.state["team_id"]), ())))
+            controlled_existing = {**club_finances.get(controlled_key, {}), **(self.state.get("finances") or {})}
+            club_finances[controlled_key] = merge_finances_with_peseta_baseline(controlled_baseline, controlled_existing)
         self.state["finances"] = club_finances[controlled_key]
 
     def _teams_for_league(self, league_id: int) -> list[dict[str, Any]]:
@@ -454,7 +723,45 @@ class ManagerCareerRuntime9394(CareerHistoryRuntimeMixin, CareerMarketRuntimeMix
         } if league else None)}
 
     def _league_rules(self, source_id: int | None = None):
-        return default_registry_9394().resolve_source("league", int(source_id if source_id is not None else self.state["league_id"]))
+        resolved_id = int(source_id if source_id is not None else self.state["league_id"])
+        cached = self._league_rules_cache.get(resolved_id)
+        if cached is not None:
+            return cached
+        rules = default_registry_9394().resolve_source("league", resolved_id)
+        self._league_rules_cache[resolved_id] = rules
+        return rules
+
+    def _league_round_dates(self, source_id: int | None = None) -> tuple[date, ...]:
+        """Return round dates without constructing every fixture pairing.
+
+        Daily world progression only needs to know whether a round is due.
+        Building/validating the full round-robin for every background league on
+        a July day was pure work; pairings are now generated lazily only when a
+        round actually has to be simulated.
+        """
+        source_id = int(source_id if source_id is not None else self.state["league_id"])
+        current_teams = self._teams_for_league(source_id)
+        team_ids = tuple(str(int(team["source_id"])) for team in current_teams)
+        if len(team_ids) < 2:
+            return ()
+        cache_key = (str(self.state.get("season")), source_id, team_ids)
+        cached = self._league_round_dates_cache.get(cache_key)
+        if cached is not None:
+            return cached
+        rules = self._league_rules(source_id)
+        matches_per_team_per_cycle = len(team_ids) - 1
+        calendar_rounds_per_cycle = matches_per_team_per_cycle + (1 if len(team_ids) % 2 else 0)
+        cycles = max(1, int(rules.rounds or matches_per_team_per_cycle * 2) // matches_per_team_per_cycle)
+        total_calendar_rounds = calendar_rounds_per_cycle * cycles
+        if source_id == 1 and season_start_year(self.state) == 1993:
+            original = {int(team["source_id"]) for team in self.universe.teams(league_id=1)}
+            if {int(team_id) for team_id in team_ids} == original:
+                dates = tuple(league_matchday_date_9394(round_number) for round_number in range(1, total_calendar_rounds + 1))
+                self._league_round_dates_cache[cache_key] = dates
+                return dates
+        dates = generated_round_dates(self.state, total_calendar_rounds)
+        self._league_round_dates_cache[cache_key] = dates
+        return dates
 
     def _league_schedule(self, source_id: int | None = None) -> list[dict[str, Any]]:
         source_id = int(source_id if source_id is not None else self.state["league_id"])
@@ -604,7 +911,11 @@ class ManagerCareerRuntime9394(CareerHistoryRuntimeMixin, CareerMarketRuntimeMix
         return list(self.universe.payload.get("players", [])) + all_generated_players(self.state)
 
     def _all_players_index(self) -> dict[int, dict[str, Any]]:
-        return {int(row["source_id"]): row for row in self._all_player_rows()}
+        cached = getattr(self, "_all_players_index_cache", None)
+        if cached is None:
+            cached = {int(row["source_id"]): row for row in self._all_player_rows()}
+            self._all_players_index_cache = cached
+        return cached
 
     def _current_team_id(self, player_id: int) -> int:
         override = self.state.get("player_team_overrides", {}).get(str(int(player_id)))
@@ -615,30 +926,46 @@ class ManagerCareerRuntime9394(CareerHistoryRuntimeMixin, CareerMarketRuntimeMix
             raise KeyError(f"jugador {player_id} no existe")
         return int(row.get("team_id") or 0)
 
-    def _rebuild_rosters(self) -> None:
+    def _rebuild_rosters(self, *, sync_dynamics: bool = True, dynamics_team_ids: set[int] | None = None) -> None:
+        self._scouting_squad_plan_cache=None
+        self._baseline_scouting_cache={}
         all_by_team: dict[int, list[dict[str, Any]]] = {}
         match_by_team: dict[int, list[dict[str, Any]]] = {}
         dev = self.state.get("player_development") or {}
-        for base in self._all_player_rows():
+        overrides = self.state.get("player_team_overrides") or {}
+        generated = {int(row["source_id"]): row for row in all_generated_players(self.state)}
+        players_index: dict[int, dict[str, Any]] = {}
+        # Avoid a player-source lookup for every one of the ~12k footballers.
+        # Team overrides are already keyed by player id, so the common path is
+        # a pair of dictionary reads.
+        for base in list(self.universe.payload.get("players", [])) + list(generated.values()):
+            if base.get("retired"):
+                continue
             pid = int(base["source_id"])
-            team_id = self._current_team_id(pid)
+            players_index[pid] = base
+            team_id = int(overrides.get(str(pid), base.get("team_id") or 0))
             row = dict(base)
             row["team_id"] = team_id
             d = dev.get(str(pid), {})
             if d.get("overall") is not None:
                 row["overall"] = int(d["overall"])
             all_by_team.setdefault(team_id, []).append(row)
-            if int(d.get("injury_days") or 0) <= 0 and not row.get("retired") and not bool(d.get("retired")):
+            if int(d.get("injury_days") or 0) <= 0 and not bool(d.get("retired")):
                 match_by_team.setdefault(team_id, []).append(row)
         self._career_players_by_team = all_by_team
         self._match_players_by_team = match_by_team
-        for team_id, rows in all_by_team.items():
-            if int(team_id) != 0:
-                sync_team_dynamics(self.state, players=rows, development=dev, game_date=self.current_date)
+        self._all_players_index_cache = players_index
+        if sync_dynamics:
+            allowed = None if dynamics_team_ids is None else {int(team_id) for team_id in dynamics_team_ids}
+            for team_id, rows in all_by_team.items():
+                if int(team_id) != 0 and (allowed is None or int(team_id) in allowed):
+                    sync_team_dynamics(self.state, players=rows, development=dev, game_date=self.current_date)
         self._career_universe = _CareerUniverseView(self)
         self._all_career_universe = _CareerUniverseView(self, include_injured=True)
         if hasattr(self, "_strength_cache"):
             self._strength_cache.clear()
+        if hasattr(self, "_live_sheets_cache"):
+            self._live_sheets_cache = None
 
     def _apply_development_to_footballer(self, player: Footballer9394) -> Footballer9394:
         d = self.state.get("player_development", {}).get(str(player.id))
@@ -885,6 +1212,14 @@ class ManagerCareerRuntime9394(CareerHistoryRuntimeMixin, CareerMarketRuntimeMix
     def information_world_snapshot(self, *, limit: int = 80) -> dict[str, Any]:
         return information_snapshot(self.state, limit=limit)
 
+    def dressing_room_api_snapshot(self) -> dict[str, Any]:
+        team_id = int(self.state["team_id"])
+        return dressing_room_snapshot(
+            self.state,
+            players=self._career_players_by_team.get(team_id, ()),
+            game_date=self.current_date,
+        )
+
     def selection_snapshot(self) -> dict[str, Any]:
         controlled = int(self.state["team_id"]); raw = self.state.get("selection") or {}
         starter_ids = [int(x) for x in raw.get("starter_ids") or []]
@@ -921,6 +1256,26 @@ class ManagerCareerRuntime9394(CareerHistoryRuntimeMixin, CareerMarketRuntimeMix
         return {"starter_ids": starter_ids, "bench_ids": bench_ids, "starters": starters_api, "bench": [api(pid) for pid in bench_ids], "valid": not issues, "issues": issues,
             "formation":formation,"foreign_rule":rule.as_dict() if rule else None,"foreign_issues":foreign_issues,"warnings":warnings,
             "role_coverage":squad_role_audit(list(owned.values()))}
+
+    def selection_ui_snapshot(self) -> dict[str, Any]:
+        """Compact selection contract for the Vue shell.
+
+        The full selection snapshot intentionally contains complete player
+        dossiers for backend/gameplay callers. The browser already owns the
+        controlled squad, so duplicating those dossiers here only increases
+        JSON parsing and Vue reactivity work.
+        """
+        full = self.selection_snapshot()
+        return {
+            key: value
+            for key, value in full.items()
+            if key not in {"starters", "bench", "role_coverage"}
+        }
+
+    def tactical_identity_snapshot(self) -> dict[str, Any]:
+        return tactical_identity_9394(
+            FootballTactics9394(**{**_default_tactics(), **(self.state.get("tactics") or {})})
+        )
 
     def set_selection(self, starter_ids: list[int], bench_ids: list[int] | None = None) -> dict[str, Any]:
         starters = [int(x) for x in starter_ids]
@@ -1061,12 +1416,18 @@ class ManagerCareerRuntime9394(CareerHistoryRuntimeMixin, CareerMarketRuntimeMix
                     "workspace": "training",
                 })
         elif key == "contract_renewal":
-            for player in self.squad(int(self.state["team_id"])):
-                end_year = int((player.get("contract") or {}).get("end_year") or 9999)
+            team_id = int(self.state["team_id"])
+            development = self.state.get("player_development") or {}
+            overrides = self.state.get("contract_overrides") or {}
+            for player in self._career_players_by_team.get(team_id, ()):
+                pid = int(player.get("source_id") or 0)
+                overall = int((development.get(str(pid)) or {}).get("overall") or player.get("overall") or player.get("category") or 60)
+                contract = effective_contract(player, overall=overall, override=overrides.get(str(pid)))
+                end_year = int(contract.get("end_year") or 9999)
                 if end_year > self.current_date.year + 1:
                     continue
                 rows.append({
-                    "id": f"contract:{player.get('id')}",
+                    "id": f"contract:{pid}",
                     "kind": "contract",
                     "title": f"Contrato de {player.get('display_name') or player.get('name')}",
                     "status": f"Termina en {end_year}",
@@ -1075,12 +1436,28 @@ class ManagerCareerRuntime9394(CareerHistoryRuntimeMixin, CareerMarketRuntimeMix
                 })
         return rows[:12]
 
+    def _staff_core_snapshot(self) -> dict[str, Any]:
+        if self._staff_core_cache is None:
+            team_id = int(self.state["team_id"])
+            team = self._team_api(team_id) or self.universe.team(team_id) or {"source_id": team_id, "name": self._team_name(team_id)}
+            self._staff_core_cache = club_staff_snapshot(
+                self.state, team=team, strength=self._team_strength(team_id), game_date=self.current_date,
+            )
+        return self._staff_core_cache
+
+    def _invalidate_staff_cache(self) -> None:
+        self._staff_core_cache = None
+        self._responsibility_effect_cache.clear()
+
     def staff_snapshot(self) -> dict[str, Any]:
-        team_id = int(self.state["team_id"])
-        team = self._team_api(team_id) or self.universe.team(team_id) or {"source_id": team_id, "name": self._team_name(team_id)}
-        snapshot = club_staff_snapshot(
-            self.state, team=team, strength=self._team_strength(team_id), game_date=self.current_date,
-        )
+        base = self._staff_core_snapshot()
+        # Active processes are request-local and can change after a transfer,
+        # injury or training decision. Copy only the rows we annotate, while
+        # reusing the expensive staff/responsibility calculation.
+        snapshot = {**base,
+            "members": [dict(row) for row in (base.get("members") or [])],
+            "responsibilities": [dict(row) for row in (base.get("responsibilities") or [])],
+        }
         handoffs = list(self.state.get("staff_handoffs") or [])
         for row in snapshot.get("responsibilities") or []:
             active = self._active_work_for_responsibility(str(row.get("key") or ""))
@@ -1101,6 +1478,7 @@ class ManagerCareerRuntime9394(CareerHistoryRuntimeMixin, CareerMarketRuntimeMix
             self.state, team=team, strength=self._team_strength(team_id),
             responsibility_key=responsibility_key, assignee=assignee, game_date=self.current_date,
         )
+        self._invalidate_staff_cache()
         after_row = next((row for row in updated.get("responsibilities") or [] if row.get("key") == str(responsibility_key)), None)
         if before_row and after_row and str(before_row.get("assignee")) != str(after_row.get("assignee")):
             effect = self._responsibility_effect(str(responsibility_key))
@@ -1146,15 +1524,267 @@ class ManagerCareerRuntime9394(CareerHistoryRuntimeMixin, CareerMarketRuntimeMix
         return self.staff_snapshot()
 
     def _responsibility_effect(self, responsibility_key: str) -> dict[str, Any]:
+        key = str(responsibility_key)
+        cached = self._responsibility_effect_cache.get(key)
+        if cached is not None:
+            return cached
         team_id = int(self.state["team_id"])
         team = self._team_api(team_id) or self.universe.team(team_id) or {"source_id": team_id, "name": self._team_name(team_id)}
-        return responsibility_effectiveness(
+        effect = responsibility_effectiveness(
             self.state, team=team, strength=self._team_strength(team_id),
-            responsibility_key=responsibility_key, game_date=self.current_date,
+            responsibility_key=key, game_date=self.current_date, staff_snapshot=self._staff_core_snapshot(),
+        )
+        self._responsibility_effect_cache[key] = effect
+        return effect
+
+    def _league_level(self, league_id: int | None) -> int:
+        if not league_id:
+            return 0
+        cached = getattr(self, "_league_level_cache", None)
+        if cached is None:
+            cached = {int(row.get("source_id") or 0): int(row.get("level") or 0) for row in self.universe.payload.get("leagues", [])}
+            self._league_level_cache = cached
+        return int(cached.get(int(league_id)) or 0)
+
+    def _scouting_network_rating(self) -> int:
+        team_id = int(self.state["team_id"])
+        team = self._team_api(team_id) or self.universe.team(team_id) or {}
+        staff = self._staff_core_snapshot()
+        scouts = [row for row in (staff.get("members") or []) if row.get("active", True) and row.get("role") in {"scout", "chief_scout"}]
+        market_values = [int((row.get("skills") or {}).get("market_knowledge") or 10) for row in scouts]
+        avg_market = sum(market_values) / max(1, len(market_values))
+        strength = float(self._team_strength(team_id))
+        budget = max(0, int(team.get("budget") or 0))
+        members = max(0, int(team.get("members") or 0))
+        honours = team.get("honours") or {}
+        major_honours = int(honours.get("national_leagues") or 0) + int(honours.get("continental") or 0) * 2
+        rating = (
+            4.2
+            + max(0.0, strength - 55.0) * 0.22
+            + min(3.2, max(0.0, log10(max(1, budget)) - 6.0) * 1.15)
+            + min(1.5, len(scouts) * 0.5)
+            + max(-0.5, min(1.8, (avg_market - 10.0) * 0.20))
+            + min(1.2, max(0.0, log10(max(1, members)) - 3.5) * 0.9)
+            + min(1.2, major_honours / 20.0)
+        )
+        return max(4, min(20, round(rating)))
+
+    def _scouting_network_label(self, rating: int) -> str:
+        if rating >= 19: return "Red mundial de élite"
+        if rating >= 17: return "Red internacional muy amplia"
+        if rating >= 14: return "Red nacional sólida con alcance europeo"
+        if rating >= 11: return "Red nacional"
+        if rating >= 8: return "Red regional"
+        return "Red local"
+
+    def _scouting_known_estimate(self, rating: int) -> int:
+        controlled = int(self.state["team_id"])
+        home_league = self._current_league_for_team(controlled) or int(self.state.get("league_id") or 0)
+        home_country = self._team_country(controlled)
+        league_count = sum(int(team.get("squad_size") or len(self.universe.players_by_team.get(int(team.get("source_id") or 0), ()))) for team in self._teams_for_league(home_league))
+        domestic = 0
+        for team in self.universe.payload.get("teams", []):
+            tid = int(team.get("source_id") or 0)
+            if self._team_country(tid) == home_country:
+                domestic += int(team.get("squad_size") or len(self.universe.players_by_team.get(tid, ())))
+        total = len(self.universe.payload.get("players", []))
+        international_rate = max(0.03, min(0.48, (rating - 7) * 0.035))
+        return min(total, max(league_count, domestic) + round(max(0, total - domestic) * international_rate))
+
+    def _refresh_scouting_network_profile(self) -> dict[str, Any]:
+        controlled = int(self.state["team_id"])
+        cached_profile=getattr(self,"_scouting_network_profile_cache",None)
+        if cached_profile is not None and int(cached_profile.get("profile_team_id") or 0)==controlled:
+            return cached_profile
+        league_id = self._current_league_for_team(controlled) or int(self.state.get("league_id") or 0)
+        rating = self._scouting_network_rating()
+        root = self.state.get("scouting_network") or {}
+        estimate = root.get("known_players_estimate")
+        if not estimate or int(root.get("profile_team_id") or 0) != controlled:
+            estimate = self._scouting_known_estimate(rating)
+        profile = set_network_profile(
+            self.state, rating=rating, label=self._scouting_network_label(rating),
+            home_country=self._team_country(controlled), home_league_id=league_id,
+            home_league_level=self._league_level(league_id), known_players_estimate=int(estimate or 0),
+        )
+        profile["profile_team_id"] = controlled
+        profile.setdefault("started_on", self.current_date.isoformat())
+        profile["scouts"] = len([row for row in (self._staff_core_snapshot().get("members") or []) if row.get("active", True) and row.get("role") in {"scout","chief_scout"}])
+        self._scouting_network_profile_cache=profile
+        return profile
+
+    @staticmethod
+    def _stable_percent(seed: int, player_id: int, salt: int = 0) -> int:
+        return (int(seed) * 1103515245 + int(player_id) * 2654435761 + int(salt) * 97531) % 100
+
+    def _baseline_scouting_knowledge(self, player_id: int, *, target_team_id: int | None = None) -> dict[str, Any]:
+        pid = int(player_id)
+        cached = getattr(self, "_baseline_scouting_cache", None)
+        if cached is None:
+            cached = {}; self._baseline_scouting_cache = cached
+        if pid in cached:
+            return cached[pid]
+        controlled = int(self.state["team_id"])
+        target_team = int(target_team_id) if target_team_id is not None else self._current_team_id(pid)
+        if target_team == controlled:
+            result = {"level": 4, "confidence": 100, "source": "club_internal"}; cached[pid] = result; return result
+        network = self._refresh_scouting_network_profile()
+        rating = int(network.get("rating") or 10)
+        home_league = int(network.get("home_league_id") or self.state.get("league_id") or 0)
+        home_level = int(network.get("home_league_level") or self._league_level(home_league) or 0)
+        target_league = self._current_league_for_team(target_team) if target_team else None
+        target_level = self._league_level(target_league)
+        home_country = self._team_country(controlled)
+        target_country = self._team_country(target_team) if target_team else ""
+        target = self._team_api(target_team) if target_team else None
+        raw = self._player_source(pid) or {}
+        overall = int((self.state.get("player_development", {}).get(str(pid)) or {}).get("overall") or raw.get("overall") or raw.get("category") or 60)
+        level = 0; confidence = 0; source = "unknown"
+        if target_team and (int((target or {}).get("reserve_of") or 0) == controlled or int((self._team_api(controlled) or {}).get("reserve_of") or 0) == target_team):
+            level, confidence, source = 3, min(92, 64 + rating), "club_pyramid"
+        elif target_league and int(target_league) == home_league:
+            level = 3 if rating >= 17 else 2
+            confidence, source = min(90, 50 + rating * 2), "same_league"
+        elif home_country and target_country and home_country == target_country:
+            if target_level and home_level and target_level >= home_level and target_level <= home_level + 2:
+                level = 2 if rating >= 13 else 1
+                confidence, source = min(84, 38 + rating * 2), "domestic_pyramid"
+            elif rating >= 10 or overall >= 76:
+                level, confidence, source = 1, min(68, 32 + rating), "domestic_network"
+        else:
+            geography = scouting_geography(home_country, target_country)
+            pct = self._stable_percent(int(self.state.get("seed") or 9394), pid, rating)
+            if overall >= 84:
+                threshold = 100
+            elif geography.get("scope") == "europe":
+                threshold = max(4, min(76, (rating - 7) * 6 + max(0, overall - 72) * 2))
+            else:
+                threshold = max(2, min(46, (rating - 9) * 4 + max(0, overall - 76) * 2))
+            if pct < threshold:
+                level = 2 if rating >= 18 and overall >= 78 else 1
+                confidence = min(75, 28 + rating * 2 + (8 if level >= 2 else 0))
+                source = "international_network" if geography.get("scope") == "europe" else "global_network"
+        result = {"level": level, "confidence": confidence, "source": source, "freshness": "Conocimiento inicial de red" if level else "Sin conocimiento"}
+        cached[pid] = result
+        return result
+
+    def _scouting_knowledge_for_player(self, player_id: int) -> dict[str, Any]:
+        return effective_knowledge(
+            self.state, player_id=int(player_id), game_date=self.current_date,
+            baseline=self._baseline_scouting_knowledge(int(player_id)),
         )
 
+    def _scout_fit_opinion(self, player_id: int, *, knowledge_level: int | None = None) -> dict[str, Any]:
+        pid = int(player_id); raw = self._player_source(pid) or {}
+        effect = self._responsibility_effect("recruitment_search")
+        quality = max(1, min(20, int(effect.get("quality") or 10)))
+        knowledge = self._scouting_knowledge_for_player(pid)
+        level = int(knowledge_level if knowledge_level is not None else knowledge.get("level") or 0)
+        overall = int((self.state.get("player_development", {}).get(str(pid)) or {}).get("overall") or raw.get("overall") or raw.get("category") or 60)
+        own_strength = float(self._team_strength(int(self.state["team_id"])))
+        plan = FootballTactics9394(**{**_default_tactics(), **(self.state.get("tactics") or {})})
+        tactical = tactical_fit(raw, plan)
+        tactic_score = float(tactical.get("score") or 60.0) / 10.0
+        quality_score = max(1.5, min(10.0, 5.4 + (overall - own_strength) * 0.22))
+        role = role_for_player(raw)
+        squad_plan=getattr(self,"_scouting_squad_plan_cache",None)
+        if squad_plan is None:
+            squad_plan=self.squad_plan_snapshot(); self._scouting_squad_plan_cache=squad_plan
+        coverage = {str(row.get("slot") or ""): row for row in (squad_plan.get("coverage") or [])}
+        slot_row = coverage.get(str(role.squad_slot or "")) or {}
+        shortage = int(slot_row.get("shortage") or 0)
+        count = int(slot_row.get("count") or 0)
+        need_score = 8.8 if shortage > 0 else 7.0 if count <= int(slot_row.get("minimum") or 1) + 1 else 5.4
+        true_fit = max(0.0, min(10.0, tactic_score * 0.42 + quality_score * 0.43 + need_score * 0.15))
+        uncertainty = max(0.15, 2.45 - level * 0.42 - quality * 0.055)
+        unit = self._stable_percent(int(self.state.get("seed") or 9394), pid, 700 + quality + level * 13) / 99.0
+        error = (unit - 0.5) * 2.0 * uncertainty
+        opinion = max(0.0, min(10.0, true_fit + error))
+        reasons=[]
+        if quality_score >= 7.0: reasons.append("El nivel estimado mejoraría o competiría con las alternativas actuales.")
+        elif quality_score <= 4.6: reasons.append("El salto de nivel respecto a la plantilla genera dudas.")
+        if tactic_score >= 7.0: reasons.append("Sus rasgos encajan bien con la táctica que utilizas.")
+        elif tactic_score < 5.5: reasons.append("El encaje con la idea de juego actual no es natural.")
+        if shortage > 0: reasons.append(f"Cubre una necesidad detectada por el staff en {role.name}.")
+        elif count > 0: reasons.append(f"La posición {role.name} ya tiene competencia interna.")
+        if level <= 1: reasons.append("Valoración preliminar: la opinión puede cambiar mucho con más observaciones.")
+        if not reasons:
+            reasons.append("El staff ve un encaje equilibrado: no sobresale en un factor concreto, pero merece seguimiento.")
+        confidence = max(20, min(96, int(25 + level * 14 + quality * 2)))
+        return {"score": round(opinion, 1), "true_score": round(true_fit, 2), "confidence": confidence, "reasons": reasons[:4], "role": role.name}
+
+    def _portfolio_player(self, player_id: int, *, level: int | None = None, source: str = "autonomous_scouting") -> dict[str, Any]:
+        pid = int(player_id); raw = self._player_source(pid) or {}; team_id = self._current_team_id(pid)
+        knowledge = self._scouting_knowledge_for_player(pid); fit = self._scout_fit_opinion(pid, knowledge_level=level)
+        return upsert_portfolio_candidate(
+            self.state, player_id=pid, player_name=str(raw.get("display_name") or raw.get("name") or pid),
+            game_date=self.current_date, fit_score=float(fit["score"]), confidence=int(fit["confidence"]),
+            knowledge_level=int(level if level is not None else knowledge.get("level") or 0), reasons=list(fit["reasons"]),
+            observer=str(self._responsibility_effect("recruitment_search").get("assignee_name") or "Cuerpo de scouting"),
+            team_name=self._team_name(team_id) if team_id else "Agente libre", position=str(raw.get("position") or raw.get("broad_position") or fit.get("role") or "—"), source=source,
+        )
+
+    def _process_autonomous_scouting(self, game_date: date) -> list[dict[str, Any]]:
+        network = self._refresh_scouting_network_profile()
+        if not bool(network.get("auto_enabled", True)):
+            return []
+        rating = int(network.get("rating") or 10)
+        cadence = 2 if rating >= 17 else 3 if rating >= 12 else 4
+        last_text = network.get("last_auto_on")
+        if last_text:
+            try:
+                if (game_date - date.fromisoformat(str(last_text))).days < cadence:
+                    return []
+            except ValueError:
+                pass
+        candidates = getattr(self, "_scouting_candidate_rows_cache", None)
+        if candidates is None:
+            candidates = [row for row in self._all_player_rows() if not row.get("retired")]
+            self._scouting_candidate_rows_cache = candidates
+        if not candidates:
+            return []
+        batch = max(12, min(52, 10 + rating * 2))
+        cursor = int(network.get("cursor") or 0)
+        step = 97  # coprime with the historical player pool sizes in practice; wrap handles all cases.
+        controlled = int(self.state["team_id"])
+        events=[]; seen=0
+        for offset in range(batch * 3):
+            if seen >= batch: break
+            idx = (cursor + offset * step) % len(candidates)
+            raw = candidates[idx]; pid = int(raw.get("source_id") or 0)
+            if not pid or self._current_team_id(pid) == controlled: continue
+            seen += 1
+            knowledge = self._scouting_knowledge_for_player(pid)
+            level = int(knowledge.get("level") or 0)
+            if level <= 0:
+                target_team = self._current_team_id(pid)
+                scope = scouting_geography(self._team_country(controlled), self._team_country(target_team) if target_team else "").get("scope")
+                chance = max(4, min(55, rating * 2 + (8 if scope == "domestic" else 2 if scope == "europe" else -8)))
+                if self._stable_percent(int(self.state.get("seed") or 9394), pid, game_date.toordinal()) >= chance:
+                    continue
+                confidence = min(70, 26 + rating * 2)
+                register_network_discovery(self.state, player_id=pid, game_date=game_date, level=1, confidence=confidence, observer=str(self._responsibility_effect("recruitment_search").get("assignee_name") or "Cuerpo de scouting"))
+                network["discoveries"] = int(network.get("discoveries") or 0) + 1
+                level = 1
+            # Autonomous work deepens only promising preliminary leads; a manual
+            # dossier remains the fastest route to reliable/deep knowledge.
+            fit = self._scout_fit_opinion(pid, knowledge_level=level)
+            if float(fit["score"]) < 6.2:
+                continue
+            if level == 1 and rating >= 13 and float(fit["score"]) >= 7.0:
+                register_network_discovery(self.state, player_id=pid, game_date=game_date, level=2, confidence=min(82, int(fit["confidence"])), observer=str(self._responsibility_effect("recruitment_search").get("assignee_name") or "Cuerpo de scouting"))
+                level = 2
+            row = self._portfolio_player(pid, level=level)
+            events.append({"kind":"scouting_auto_candidate","date":game_date.isoformat(),"player_id":pid,"player_name":row.get("player_name"),"fit_score":row.get("fit_score"),"confidence":row.get("confidence")})
+        network["cursor"] = (cursor + batch * step) % len(candidates)
+        network["last_auto_on"] = game_date.isoformat()
+        network["reports_generated"] = int(network.get("reports_generated") or 0) + len(events)
+        return events[:8]
+
     def _scouting_capacity(self) -> int:
-        staff = self.staff_snapshot()
+        # Capacity depends on staff composition/assignment, not on the dynamic
+        # active-process annotations added by ``staff_snapshot``.
+        staff = self._staff_core_snapshot()
         members = [row for row in (staff.get("members") or []) if row.get("active", True)]
         specialists = [row for row in members if row.get("role") in {"scout", "chief_scout"}]
         capacity = max(1, len(specialists))
@@ -1171,9 +1801,11 @@ class ManagerCareerRuntime9394(CareerHistoryRuntimeMixin, CareerMarketRuntimeMix
         return str(team.get("country") or (team.get("league") or {}).get("country") or "")
 
     def scouting_snapshot(self) -> dict[str, Any]:
+        self._refresh_scouting_network_profile()
         return {
             **build_scouting_snapshot(self.state, game_date=self.current_date, capacity=self._scouting_capacity()),
             "responsibility": self._responsibility_effect("recruitment_search"),
+            "control_note": "El staff descubre y propone candidatos automáticamente. Tú decides qué dossiers profundizar y cualquier operación de mercado.",
         }
 
     def start_scouting_player(self, player_id: int) -> dict[str, Any]:
@@ -1184,6 +1816,14 @@ class ManagerCareerRuntime9394(CareerHistoryRuntimeMixin, CareerMarketRuntimeMix
         target_team = self._current_team_id(pid)
         if target_team == int(self.state["team_id"]):
             raise ValueError("tu propia plantilla se evalúa mediante el cuerpo técnico, no con un dossier de mercado")
+        knowledge = self._scouting_knowledge_for_player(pid)
+        if int(knowledge.get("level") or 0) <= 0:
+            raise ValueError("tu red todavía no conoce a este jugador; deja que el scouting lo descubra o amplía la red antes de pedir un dossier")
+        register_network_discovery(
+            self.state, player_id=pid, game_date=self.current_date, level=max(1, int(knowledge.get("level") or 1)),
+            confidence=max(25, int(knowledge.get("confidence") or 25)), source=str(knowledge.get("source") or "known_target"),
+            observer=str(knowledge.get("observer") or self._responsibility_effect("recruitment_search").get("assignee_name") or "Cuerpo de scouting"),
+        )
         geography = scouting_geography(self._team_country(int(self.state["team_id"])), self._team_country(target_team) if target_team else None)
         task = start_scouting(
             self.state, player_id=pid, game_date=self.current_date,
@@ -1191,7 +1831,9 @@ class ManagerCareerRuntime9394(CareerHistoryRuntimeMixin, CareerMarketRuntimeMix
             player_name=str(raw.get("display_name") or raw.get("name") or pid),
             capacity=self._scouting_capacity(), geography=geography,
         )
-        ids={int(x) for x in (self.state.get("watchlist") or [])}; ids.add(pid); self.state["watchlist"]=sorted(ids)
+        # A dossier is a staff assignment, not a user favourite. Keep the
+        # manager's watchlist explicit: scouting may recommend a player without
+        # silently turning that recommendation into a personal shortlist.
         self.state["updated_at"] = datetime.now(timezone.utc).isoformat()
         return task
 
@@ -1199,6 +1841,16 @@ class ManagerCareerRuntime9394(CareerHistoryRuntimeMixin, CareerMarketRuntimeMix
         controlled = int(self.state["team_id"])
         fixture = self.next_scheduled_fixture()
         next_date = date.fromisoformat(str(fixture["date"])) if fixture and fixture.get("date") else None
+        opponent = 0
+        if fixture:
+            home=int(fixture.get("home_team_id") or 0); away=int(fixture.get("away_team_id") or 0)
+            opponent = away if home == controlled else home
+        apply_auto_training_plan(
+            self.state, game_date=self.current_date, players=list(self._career_players_by_team.get(controlled, [])),
+            development=self.state["player_development"], effectiveness=self._responsibility_effect("first_team_training"),
+            next_match_date=next_date, own_strength=self._team_strength(controlled), opponent_strength=self._team_strength(opponent) if opponent else None,
+            opposition_report_quality=int(self._responsibility_effect("opposition_reports").get("quality") or 10),
+        )
         snapshot = build_training_snapshot(
             self.state, players=list(self._career_players_by_team.get(controlled, [])),
             development=self.state["player_development"], effectiveness=self._responsibility_effect("first_team_training"),
@@ -1230,16 +1882,16 @@ class ManagerCareerRuntime9394(CareerHistoryRuntimeMixin, CareerMarketRuntimeMix
         }
         snapshot["process"] = {
             "need": "Preparar al equipo sin convertir la carga en riesgo evitable.",
-            "owner": snapshot.get("responsibility", {}).get("assignee_name") or "Tú (mánager)",
-            "status": "Requiere revisión" if snapshot["medical"]["action_required"] else "En curso",
-            "next_step": "Revisar recuperación/carga de los casos críticos." if snapshot["medical"]["action_required"] else "Mantener el plan y avanzar hasta la siguiente sesión.",
+            "owner": snapshot.get("responsibility", {}).get("assignee_name") or "Cuerpo técnico",
+            "status": "Staff trabajando en automático" if snapshot.get("mode") == "auto" and not snapshot["medical"]["action_required"] else "Requiere revisión" if snapshot["medical"]["action_required"] else "Plan manual activo",
+            "next_step": "El staff ajustará carga y preparación automáticamente; sólo entra si quieres cambiar algo." if snapshot.get("mode") == "auto" and not snapshot["medical"]["action_required"] else "Revisar recuperación/carga de los casos críticos." if snapshot["medical"]["action_required"] else "Mantener el plan y avanzar hasta la siguiente sesión.",
             "consequence": "Los cambios afectan carga, condición, familiaridad y riesgo físico de las próximas sesiones.",
             "requires_action": bool(snapshot["medical"]["action_required"]),
         }
         return snapshot
 
-    def set_training_plan(self, *, intensity: str | None = None, weekly_plan: list[str] | None = None) -> dict[str, Any]:
-        update_training_plan_state(self.state, intensity=intensity, weekly_plan=weekly_plan)
+    def set_training_plan(self, *, intensity: str | None = None, weekly_plan: list[str] | None = None, mode: str | None = None) -> dict[str, Any]:
+        update_training_plan_state(self.state, intensity=intensity, weekly_plan=weekly_plan, mode=mode)
         self.state["updated_at"] = datetime.now(timezone.utc).isoformat()
         return self.training_snapshot()
 
@@ -1264,18 +1916,58 @@ class ManagerCareerRuntime9394(CareerHistoryRuntimeMixin, CareerMarketRuntimeMix
         self.state["updated_at"] = datetime.now(timezone.utc).isoformat()
         return self.training_snapshot()
 
+    def _match_plan_fixture_key(self, fixture: dict[str, Any] | None) -> str | None:
+        if not fixture: return None
+        return f"{fixture.get('fixture_type') or 'league'}:{fixture.get('id') or fixture.get('matchday') or fixture.get('date')}:{fixture.get('home_team_id')}:{fixture.get('away_team_id')}"
+
+    def _ensure_auto_match_plan(self) -> dict[str, Any]:
+        root=self.state.setdefault("match_plan_staff", {"mode":"auto","fixture_key":None,"manual_override":False,"generated_on":None,"summary":None,"confidence":0})
+        fixture=self.next_scheduled_fixture(); key=self._match_plan_fixture_key(fixture)
+        if not fixture or not key:
+            root.update({"fixture_key":None,"manual_override":False,"summary":None}); return root
+        if root.get("fixture_key") == key:
+            return root
+        controlled=int(self.state["team_id"]); home=int(fixture.get("home_team_id") or 0); away=int(fixture.get("away_team_id") or 0)
+        opponent=away if home==controlled else home
+        quality=min(int(self._responsibility_effect("opposition_reports").get("quality") or 10),int(self._responsibility_effect("match_preparation").get("quality") or 10))
+        rows=[p for p in self._career_players_by_team.get(opponent,()) if not p.get("retired")]
+        dev=self.state.get("player_development") or {}
+        rows.sort(key=lambda p:int((dev.get(str(int(p.get("source_id") or 0))) or {}).get("overall") or p.get("overall") or p.get("category") or 60),reverse=True)
+        count=3 if quality>=15 else 2 if quality>=11 else 1
+        instructions={}; names=[]
+        for player in rows[:count]:
+            pid=int(player.get("source_id") or 0); broad=str(player.get("broad_position") or "").upper(); archetype=player_archetype(player)[0]
+            order={"tight_mark": broad in {"DEL","MED","DC","AM","ST"}, "press": quality>=12, "show_foot":"none"}
+            attrs=player.get("attributes") or {}
+            left=int(attrs.get("left_foot") or 0); right=int(attrs.get("right_foot") or 0)
+            if quality>=15 and max(left,right)>0:
+                order["show_foot"]="right" if left>right else "left" if right>left else "none"
+            instructions[str(pid)]=order; names.append(str(player.get("display_name") or player.get("name") or pid))
+        tactical=ensure_tactical_plan_state(self.state)
+        tactical["opposition_instructions"]=instructions
+        root.update({
+            "mode":"auto","fixture_key":key,"manual_override":False,"generated_on":self.current_date.isoformat(),
+            "opponent_team_id":opponent,"opponent_name":self._team_name(opponent),"confidence":max(35,min(95,35+quality*3)),
+            "summary":(f"El staff ha preparado instrucciones específicas para {', '.join(names)}." if names else "El staff no detecta una amenaza individual que justifique instrucciones especiales."),
+            "targets":names,
+        })
+        return root
+
     def tactical_plan_snapshot(self) -> dict[str, Any]:
+        self._ensure_auto_match_plan()
         controlled = int(self.state["team_id"])
         fixture = self.next_scheduled_fixture()
         opponent_id = 0
         if fixture:
             home = int(fixture.get("home_team_id") or 0); away = int(fixture.get("away_team_id") or 0)
             opponent_id = away if home == controlled else home
-        return build_tactical_plan_snapshot(
+        snapshot=build_tactical_plan_snapshot(
             self.state,
             players=self._career_players_by_team.get(controlled, ()),
             opponent_players=self._career_players_by_team.get(opponent_id, ()) if opponent_id else (),
         )
+        snapshot["staff_match_plan"]=dict(self.state.get("match_plan_staff") or {})
+        return snapshot
 
     def set_tactical_phase_plan(self, *, build_up: str | None = None, final_third: str | None = None, transition: str | None = None) -> dict[str, Any]:
         update_tactical_plan_state(self.state, build_up=build_up, final_third=final_third, transition=transition, game_date=self.current_date)
@@ -1308,7 +2000,9 @@ class ManagerCareerRuntime9394(CareerHistoryRuntimeMixin, CareerMarketRuntimeMix
         opponent = int(fixture["away_team_id"] if int(fixture["home_team_id"]) == controlled else fixture["home_team_id"])
         if self._current_team_id(int(player_id)) != opponent:
             raise ValueError("el futbolista no pertenece al próximo rival")
+        self._ensure_auto_match_plan()
         set_tactical_opposition_instruction(self.state, player_id=int(player_id), tight_mark=tight_mark, press=press, show_foot=show_foot)
+        match_plan=self.state.setdefault("match_plan_staff",{}); match_plan["manual_override"]=True; match_plan["mode"]="auto_with_manual_changes"
         self.state["updated_at"] = datetime.now(timezone.utc).isoformat()
         return self.tactical_plan_snapshot()
 
@@ -1362,7 +2056,8 @@ class ManagerCareerRuntime9394(CareerHistoryRuntimeMixin, CareerMarketRuntimeMix
         elif prep_focus=="attacking": recommendation="La preparación prioriza mecanismos ofensivos y último tercio."
         elif prep_focus=="defensive": recommendation="La preparación prioriza bloque, coberturas y control de pérdidas."
         elif prep_focus=="set_pieces": recommendation="El balón parado es el foco específico de la preparación."
-        return {"fixture":dict(fixture),"opponent":{"team_id":opponent,"team_name":self._team_name(opponent),"manager":self._coach_profile(opponent)},"report":report,"known_tactics":tactics,"threats":threats,"absences":absences[:8],"own_absences":self._controlled_absences_for_fixture(fixture)[:8],"own_risk":own_risk[:6],"tactical_familiarity":tactical.get("familiarity"),"preparation_focus":prep_focus,"recommendation":recommendation}
+        staff_plan=self._ensure_auto_match_plan()
+        return {"fixture":dict(fixture),"opponent":{"team_id":opponent,"team_name":self._team_name(opponent),"manager":self._coach_profile(opponent)},"report":report,"known_tactics":tactics,"threats":threats,"absences":absences[:8],"own_absences":self._controlled_absences_for_fixture(fixture)[:8],"own_risk":own_risk[:6],"tactical_familiarity":tactical.get("familiarity"),"preparation_focus":prep_focus,"recommendation":recommendation,"staff_match_plan":dict(staff_plan)}
 
     def staff_reports_snapshot(self) -> dict[str, Any]:
         controlled=int(self.state["team_id"])
@@ -1631,11 +2326,19 @@ class ManagerCareerRuntime9394(CareerHistoryRuntimeMixin, CareerMarketRuntimeMix
         return {"state":"ready","can_advance":True,"label":"Continuar","detail":detail,"action":"home"}
 
     def _coach_profile(self, team_id: int) -> dict[str, Any] | None:
-        manager_id = (self.state.get("manager_assignments") or {}).get(str(int(team_id)))
-        return source_coach_for_team(
-            self.universe, int(team_id),
-            manager_id=(int(manager_id) if manager_id is not None else None),
-        )
+        team_id = int(team_id)
+        manager_id = (self.state.get("manager_assignments") or {}).get(str(team_id))
+        resolved_manager_id = int(manager_id) if manager_id is not None else None
+        cache = getattr(self, "_coach_profile_cache", None)
+        if cache is None:
+            cache = {}
+            self._coach_profile_cache = cache
+        key = (team_id, resolved_manager_id)
+        if key not in cache:
+            cache[key] = source_coach_for_team(
+                self.universe, team_id, manager_id=resolved_manager_id,
+            )
+        return cache[key]
 
     def _manager_name(self, manager_id: int | None) -> str:
         if not isinstance(manager_id, int):
@@ -1875,7 +2578,7 @@ class ManagerCareerRuntime9394(CareerHistoryRuntimeMixin, CareerMarketRuntimeMix
         self.state["results"]=converted
         self.state["completed_matchday"]=int(target.get("completed_round") or max((int(r.get("matchday") or 0) for r in converted),default=0))
         self.state["league_id"]=new_league
-        self._schedule_cache.clear(); self._team_league_cache.clear(); self._foreign_rule_cache.clear()
+        self._schedule_cache.clear(); self._league_round_dates_cache.clear(); self._team_league_cache.clear(); self._foreign_rule_cache.clear()
         self._ensure_world_leagues()
         profile = SPAIN_PRIMERA_SIMULATION_1993_94 if new_league == 1 else ERA_BASELINE_1993_94
         self.engine=FootballMatchEngine9394(profile=profile); self.live_engine=LiveMatchEngine9394(self.engine)
@@ -1926,6 +2629,7 @@ class ManagerCareerRuntime9394(CareerHistoryRuntimeMixin, CareerMarketRuntimeMix
         self.state.setdefault("world_events",[]).append(manager_event); self.state["world_events"]=self.state["world_events"][-600:]
         self._switch_controlled_league(new_league)
         self.state["team_id"]=new_team
+        self._invalidate_staff_cache()
         self.state["finances"]=self.state["club_finances"].setdefault(str(new_team),initial_club_finances(self.universe.team(new_team) or {},players=list(self.universe.players_by_team.get(new_team,()))))
         self.state["job_status"]="active"; self.state["board_warning_count"]=0; self.state["board_state"]={}; self.state["board_history"]=[]
         self.state["board_expectation"]={}; self.state["economy_ledger"]=[]; self.state["selection"]={}
@@ -1971,6 +2675,7 @@ class ManagerCareerRuntime9394(CareerHistoryRuntimeMixin, CareerMarketRuntimeMix
 
     def _sheet(self, team_id: int, tactics: dict[str, Any] | None = None, *, foreign_rule=None, competition_kind: str | None = None) -> TeamSheet9394:
         controlled = int(team_id) == int(self.state["team_id"])
+        if controlled: self._ensure_auto_match_plan()
         tactical_payload = dict(tactics) if tactics is not None else None
         if controlled:
             tactical_payload = engine_tactics_payload(tactical_payload or {**_default_tactics(), **(self.state.get("tactics") or {})}, self.state)
@@ -2202,6 +2907,8 @@ class ManagerCareerRuntime9394(CareerHistoryRuntimeMixin, CareerMarketRuntimeMix
                 training_quality=int(self._responsibility_effect("first_team_training").get("quality") or 10), match_played=True,
             )
             reset_opposition_instructions(self.state)
+            training_root=ensure_training_state(self.state); training_root["match_preparation_mode"]="auto"
+            self.state["match_plan_staff"]={"mode":"auto","fixture_key":None,"manual_override":False,"generated_on":None,"summary":None,"confidence":0}
             self.board_snapshot(persist=True,trigger="post_match")
 
     def _post_matchday_income(self, home_team_id: int, *, competition: str, reference: int | str) -> int:
@@ -2241,7 +2948,7 @@ class ManagerCareerRuntime9394(CareerHistoryRuntimeMixin, CareerMarketRuntimeMix
             home_sheet, away_sheet = self._sheet(home_id, home_tactics, competition_kind="league"), self._sheet(away_id, away_tactics, competition_kind="league")
             match_seed = season_seed + int(self.state["seed"]) * 1000 + int(matchday) * 100 + int(fixture["id"])
             referee = referee_for_match(league_id, seed=match_seed)
-            result = self.engine.simulate(home_sheet, away_sheet, seed=match_seed, referee=referee, venue=venue_for_team(self.universe, home_id))
+            result = self.engine.simulate(home_sheet, away_sheet, seed=match_seed, referee=referee, venue=venue_for_team(self.universe, home_id), substitution_validator=self._substitution_validator_for_fixture({"fixture_type":"league","competition_id":league_id}))
             self._apply_match_player_state(result, home_sheet, away_sheet, match_seed, competition=(self._team_api(controlled) or {}).get("league",{}).get("name") or "Liga", counts_for_league_stats=True)
             results.append(_league_match_payload(matchday, int(fixture["id"]), home_id, away_id, result.home.goals, result.away.goals, referee_id=result.referee_id, referee_name=result.referee_name, referee_source_confidence=result.referee_source_confidence))
             if controlled in (home_id,away_id): controlled_result=(home_id,away_id,int(result.home.goals),int(result.away.goals))
@@ -2249,7 +2956,7 @@ class ManagerCareerRuntime9394(CareerHistoryRuntimeMixin, CareerMarketRuntimeMix
         self.state["results"] = results
         self.state["completed_matchday"] = int(matchday)
         self.state["updated_at"] = datetime.now(timezone.utc).isoformat()
-        self._rebuild_rosters()
+        self._rebuild_rosters(sync_dynamics=False)
         if controlled_result:
             league_name=(self._team_api(controlled) or {}).get("league",{}).get("name") or "Liga"
             self._publish_controlled_result(
@@ -2312,8 +3019,16 @@ class ManagerCareerRuntime9394(CareerHistoryRuntimeMixin, CareerMarketRuntimeMix
     def _process_background_leagues_for_day(self, day: date) -> None:
         for source_key, league_state in list((self.state.get("world_leagues") or {}).items()):
             source_id=int(source_key)
-            schedule=self._league_schedule(source_id)
-            due=max((int(f["round"]) for f in schedule if date.fromisoformat(str(f["date"])) <= day), default=0)
+            round_dates = self._league_round_dates(source_id)
+            # Dates are monotonic. Stop at the first future round instead of
+            # constructing/scanning every fixture just to learn that nothing is
+            # due today. The full schedule is created lazily by
+            # _simulate_background_round only when a round must actually run.
+            due = 0
+            for index, round_date in enumerate(round_dates, start=1):
+                if round_date > day:
+                    break
+                due = index
             completed=int(league_state.get("completed_round") or 0)
             for round_number in range(completed+1,due+1):
                 self._simulate_background_round(round_number, source_id=source_id)
@@ -2352,7 +3067,10 @@ class ManagerCareerRuntime9394(CareerHistoryRuntimeMixin, CareerMarketRuntimeMix
         active_ids = self._active_club_ids()
         for team_id in active_ids:
             team = self.universe.team(team_id) or {}
-            finances = self.state["club_finances"].setdefault(str(team_id), initial_club_finances(team,players=self._career_players_by_team.get(team_id,[])))
+            finances = self.state["club_finances"].get(str(team_id))
+            if finances is None:
+                finances = initial_club_finances(team,players=self._career_players_by_team.get(team_id,[]))
+                self.state["club_finances"][str(team_id)] = finances
             stature=float(club_status(self.state, int(team_id)).get("score") or 50.0)
             posting = apply_monthly_club_finances(
                 team=team, finances=finances,
@@ -2377,6 +3095,11 @@ class ManagerCareerRuntime9394(CareerHistoryRuntimeMixin, CareerMarketRuntimeMix
                 self.state["economy_ledger"].append({"date": day.isoformat(), "kind": "monthly_operations", "amount":int(posting.get("net") or 0), **posting})
                 if events and events[-1].get("kind")=="financial_restructuring" and int(events[-1].get("team_id") or 0)==team_id:
                     self.state["economy_ledger"].append({"date":day.isoformat(),"kind":"debt_draw","amount":int(events[-1]["amount"])})
+        monthly_penalty_cache = getattr(self, "_position_penalty_cache", None)
+        if monthly_penalty_cache is None:
+            monthly_penalty_cache = {}
+            self._position_penalty_cache = monthly_penalty_cache
+
         # Contract work is staggered across clubs.  A real football world does
         # not renew 400+ squads on the same monthly tick, and doing so made long
         # careers increasingly expensive/noisy.  Each AI club still receives
@@ -2391,7 +3114,7 @@ class ManagerCareerRuntime9394(CareerHistoryRuntimeMixin, CareerMarketRuntimeMix
             players_by_team=self._career_players_by_team, development=self.state["player_development"],
             contract_overrides=self.state["contract_overrides"], seed=int(self.state["seed"]),
             max_renewals=max(1, len(renewal_ids)*10) if renewal_ids else 0, eligible_team_ids=renewal_ids,
-            club_finances=self.state["club_finances"],
+            club_finances=self.state["club_finances"], penalty_cache=monthly_penalty_cache,
         ) if renewal_ids else []
         if renewals:
             self.state["ai_contract_history"].extend(renewals)
@@ -2404,6 +3127,13 @@ class ManagerCareerRuntime9394(CareerHistoryRuntimeMixin, CareerMarketRuntimeMix
                 "clubs":len({int(row.get("team_id") or 0) for row in renewals}),
             })
         activity=max((market_activity_budget(transfer_period_status(day,country_id=self._club_country_id(tid),season=str(self.state["season"]))) for tid in active_ids),default=0)
+        # Position suitability is static during one monthly pulse.  Recruitment
+        # planning, seller release checks and post-deal audits used to recompute
+        # the same player/slot pairs thousands of times.  Share the cache for
+        # the pulse and invalidate only team-level audits touched by a deal.
+        monthly_squad_audits: dict[int, dict[str, Any]] = {}
+        monthly_period_cache: dict[tuple[str, int | None, str], Any] = {}
+        monthly_foreign_count_cache: dict[tuple[Any, ...], int] = {}
         plans=self.state.get("recruitment_plans") or {}
         refresh_all_plans=activity>0 and (day.month==7 or len(plans)<max(1,len(active_ids)-1))
         if refresh_all_plans:
@@ -2411,6 +3141,7 @@ class ManagerCareerRuntime9394(CareerHistoryRuntimeMixin, CareerMarketRuntimeMix
                 self.state,current_date=day,team_ids=active_ids,players_by_team=self._career_players_by_team,
                 development=self.state["player_development"],contracts=self.state["contract_overrides"],club_finances=self.state["club_finances"],
                 coach_profile_getter=lambda tid:self._coach_profile(int(tid)),
+                audit_cache=monthly_squad_audits,penalty_cache=monthly_penalty_cache,
             )
         first_budget=(activity+1)//2
         transfers = run_ai_transfer_window(
@@ -2420,21 +3151,33 @@ class ManagerCareerRuntime9394(CareerHistoryRuntimeMixin, CareerMarketRuntimeMix
             club_finances=self.state["club_finances"], player_team_overrides=self.state["player_team_overrides"],
             contract_overrides=self.state["contract_overrides"], seed=int(self.state["seed"]),
             max_deals=activity,
-            signing_allowed=lambda buyer,player:self._signing_eligibility(int(buyer),player,day=day)[0],
+            signing_allowed=lambda buyer,player:self._signing_eligibility(
+                int(buyer),player,day=day,period_cache=monthly_period_cache,foreign_count_cache=monthly_foreign_count_cache,
+            )[0],
             attraction_score=lambda buyer,seller,player:(float(club_status(self.state,int(buyer)).get("score") or 50)-float(club_status(self.state,int(seller)).get("score") or 50))/25.0,
             foreign_limit_getter=lambda tid:(self._domestic_foreign_rule(int(tid)).max_starting if self._domestic_foreign_rule(int(tid)) is not None else None),
             foreign_predicate=lambda tid,player:self._is_domestic_foreign(int(tid),player),
             coach_profile_getter=lambda tid: self._coach_profile(int(tid)),
             buyer_plans=self.state.get("recruitment_plans") or {},
+            penalty_cache=monthly_penalty_cache,squad_audit_cache=monthly_squad_audits,
         )
         if transfers and len(transfers)>first_budget:
             register_replacement_chain(self.state,day=day,first_deals=transfers[:first_budget],follow_up_deals=transfers[first_budget:])
         self.state["ai_transfer_history"].extend(transfers); events.extend(transfers)
         if transfers:
-            self._rebuild_rosters()
             affected=sorted({int(tid) for deal in transfers for tid in (deal.get("from_team_id"),deal.get("to_team_id")) if int(tid or 0) in active_ids})
+            # Rebuild roster indexes once, but hierarchy/dynamics only for clubs
+            # whose dressing room actually changed.
+            self._rebuild_rosters(dynamics_team_ids=set(affected))
+            for team_id in affected:
+                monthly_squad_audits.pop(int(team_id), None)
             if affected:
-                refresh_recruitment_plans(self.state,current_date=day,team_ids=affected,players_by_team=self._career_players_by_team,development=self.state["player_development"],contracts=self.state["contract_overrides"],club_finances=self.state["club_finances"],coach_profile_getter=lambda tid:self._coach_profile(int(tid)))
+                refresh_recruitment_plans(
+                    self.state,current_date=day,team_ids=affected,players_by_team=self._career_players_by_team,
+                    development=self.state["player_development"],contracts=self.state["contract_overrides"],
+                    club_finances=self.state["club_finances"],coach_profile_getter=lambda tid:self._coach_profile(int(tid)),
+                    audit_cache=monthly_squad_audits,penalty_cache=monthly_penalty_cache,
+                )
         coverage=[]
         if day.month in (7,8):
             coverage=ensure_ai_squad_coverage(
@@ -2442,11 +3185,14 @@ class ManagerCareerRuntime9394(CareerHistoryRuntimeMixin, CareerMarketRuntimeMix
                 players_by_team=self._career_players_by_team,development=self.state["player_development"],club_finances=self.state["club_finances"],
                 player_team_overrides=self.state["player_team_overrides"],contract_overrides=self.state["contract_overrides"],
                 seed=int(self.state["seed"]),max_signings=max(500,len(active_ids)*MINIMUM_SENIOR_SQUAD_SIZE_9394),
-                signing_allowed=lambda buyer,player:self._signing_eligibility(int(buyer),player,day=day)[0],
+                signing_allowed=lambda buyer,player:self._signing_eligibility(
+                int(buyer),player,day=day,period_cache=monthly_period_cache,foreign_count_cache=monthly_foreign_count_cache,
+            )[0],
                 foreign_limit_getter=lambda tid:(self._domestic_foreign_rule(int(tid)).max_starting if self._domestic_foreign_rule(int(tid)) is not None else None),
                 foreign_predicate=lambda tid,player:self._is_domestic_foreign(int(tid),player),
                 target_squad_size_getter=lambda tid:self._target_ai_squad_size(int(tid)),
                 emergency_source_team_ids=active_ids+self._market_container_ids(),
+                penalty_cache=monthly_penalty_cache,squad_audit_cache=monthly_squad_audits,
             )
             if coverage:
                 self.state["ai_transfer_history"].extend(coverage);events.extend(coverage);self._rebuild_rosters()
@@ -2454,7 +3200,13 @@ class ManagerCareerRuntime9394(CareerHistoryRuntimeMixin, CareerMarketRuntimeMix
             clubs=[]
             for team_id in active_ids:
                 if team_id==int(self.state["team_id"]): continue
-                audit=squad_audit(self._career_players_by_team.get(team_id,[]),self.state["player_development"])
+                audit=monthly_squad_audits.get(int(team_id))
+                if audit is None:
+                    audit=squad_audit(
+                        self._career_players_by_team.get(team_id,[]),self.state["player_development"],
+                        penalty_cache=monthly_penalty_cache,
+                    )
+                    monthly_squad_audits[int(team_id)]=audit
                 clubs.append({"team_id":team_id,"team_name":self._team_name(team_id),"squad_size":audit["squad_size"],"minimum_squad_size":audit["minimum_squad_size"],"depth_shortage":audit["depth_shortage"],"coverage_ok":audit["coverage_ok"],"primary_need":audit["primary_need"],"counts":audit["counts"]})
             self.state["ai_squad_audits"].append({"season":self.state.get("season"),"date":day.isoformat(),"clubs":clubs,"coverage_ok":sum(1 for row in clubs if row["coverage_ok"]),"club_count":len(clubs),"emergency_signings":len(coverage)})
             self.state["ai_squad_audits"]=self.state["ai_squad_audits"][-12:]
@@ -2694,16 +3446,60 @@ class ManagerCareerRuntime9394(CareerHistoryRuntimeMixin, CareerMarketRuntimeMix
             domestic_equivalent_country_ids=rule.domestic_equivalent_country_ids,
         )
 
-    def _signing_eligibility(self, team_id:int, player:dict[str,Any], *, day:date|None=None) -> tuple[bool,str]:
+    def _signing_eligibility(
+        self, team_id:int, player:dict[str,Any], *, day:date|None=None,
+        period_cache: dict[tuple[str, int | None, str], Any] | None = None,
+        foreign_count_cache: dict[tuple[Any, ...], int] | None = None,
+    ) -> tuple[bool,str]:
         day=day or self.current_date
-        period=transfer_period_status(day,country_id=self._club_country_id(team_id),season=str(self.state["season"]))
+        country_id=self._club_country_id(team_id)
+        season=str(self.state["season"])
+        period_key=(day.isoformat(),country_id,season)
+        if period_cache is not None and period_key in period_cache:
+            period=period_cache[period_key]
+        else:
+            period=transfer_period_status(day,country_id=country_id,season=season)
+            if period_cache is not None:
+                period_cache[period_key]=period
         if not period.open: return False,period.label
         club_ok, club_reason = club_specific_signing_eligibility(int(team_id), player)
         if not club_ok: return False, club_reason
         rule=self._domestic_foreign_rule(team_id)
         if rule is None: return True,period.label
-        ok,reason=can_register_foreign_signing(self._career_players_by_team.get(int(team_id),[]),player,rule)
-        return ok,reason if not ok else period.label
+        if foreign_count_cache is None:
+            ok,reason=can_register_foreign_signing(self._career_players_by_team.get(int(team_id),[]),player,rule)
+            return ok,reason if not ok else period.label
+
+        # During one AI market pulse the same buyer can inspect dozens of
+        # candidates while its squad is unchanged.  Count registered foreigners
+        # once per concrete roster generation (list identity + size); transfers
+        # either replace the seller list or append to the buyer, so the key
+        # invalidates naturally after every completed deal.
+        if not is_foreign_player(
+            player, home_country_id=rule.home_country_id, continental=False,
+            domestic_equivalent_country_ids=rule.domestic_equivalent_country_ids,
+        ):
+            return True,period.label
+        if rule.max_squad is None:
+            return True,period.label
+        squad=self._career_players_by_team.get(int(team_id),[])
+        roster_key=(
+            int(team_id),id(squad),len(squad),int(rule.source_id),int(rule.max_squad),
+            int(rule.home_country_id),tuple(int(x) for x in rule.domestic_equivalent_country_ids),
+        )
+        current=foreign_count_cache.get(roster_key)
+        if current is None:
+            current=sum(
+                1 for row in squad
+                if is_foreign_player(
+                    row, home_country_id=rule.home_country_id, continental=False,
+                    domestic_equivalent_country_ids=rule.domestic_equivalent_country_ids,
+                )
+            )
+            foreign_count_cache[roster_key]=current
+        if current >= int(rule.max_squad):
+            return False,f"límite de extranjeros de plantilla ({rule.max_squad}) alcanzado"
+        return True,period.label
 
     def _ensure_preseason_schedule(self) -> None:
         season=str(self.state.get("season") or "1993-94")
@@ -2778,8 +3574,29 @@ class ManagerCareerRuntime9394(CareerHistoryRuntimeMixin, CareerMarketRuntimeMix
         tid=int(team_id if team_id is not None else self.state["team_id"])
         if fixture.get("fixture_type")=="tournament":
             sid=int(fixture.get("source_id") or fixture.get("competition_id") or 0)
+            if domestic_cup_spec(sid) is not None:
+                return self._domestic_foreign_rule(tid)
             return competition_foreign_rule(self.universe,kind="tournament",source_id=sid,team_id=tid)
         return self._domestic_foreign_rule(tid)
+
+    def _substitution_validator_for_fixture(self, fixture:dict[str,Any]):
+        """Return a competition-aware validator for automatic substitutions.
+
+        The match engine only knows player ids.  The career owns nationality
+        and competition context, so it validates the *resulting on-pitch XI*
+        before an AI/instant-result substitution is committed.
+        """
+        def allowed(team_id:str, on_pitch_ids:tuple[str,...]) -> bool:
+            rule=self._foreign_rule_for_fixture(fixture,int(team_id))
+            if rule is None:
+                return True
+            players=[]
+            for raw in on_pitch_ids:
+                source=self._player_source(int(raw))
+                if source is not None:
+                    players.append(source)
+            return not validate_matchday_foreigners(players,[],rule)
+        return allowed
 
     def _validate_controlled_selection_for_fixture(self, fixture:dict[str,Any]) -> list[str]:
         selection=self.state.get("selection") or {};owned={int(p["source_id"]):p for p in self._career_players_by_team.get(int(self.state["team_id"]),[])}
@@ -2791,6 +3608,9 @@ class ManagerCareerRuntime9394(CareerHistoryRuntimeMixin, CareerMarketRuntimeMix
     def _live_match_sheets(self) -> tuple[TeamSheet9394, TeamSheet9394]:
         live=self.state.get("live_match")
         if not live: raise ValueError("no hay partido en directo")
+        cached = getattr(self, "_live_sheets_cache", None)
+        if cached is not None and cached[0] == id(live):
+            return cached[1], cached[2]
         home_id=int(live["home_team_id"]);away_id=int(live["away_team_id"]);controlled=int(self.state["team_id"])
         home_t=live.get("home_tactics") if home_id==controlled else None;away_t=live.get("away_tactics") if away_id==controlled else None
         fixture=live.get("fixture") or {}
@@ -2798,6 +3618,7 @@ class ManagerCareerRuntime9394(CareerHistoryRuntimeMixin, CareerMarketRuntimeMix
         away_rule=self._foreign_rule_for_fixture(fixture,away_id) if fixture.get("fixture_type")=="tournament" else None
         kind=str(fixture.get("fixture_type") or "league")
         home=self._sheet(home_id,home_t,foreign_rule=home_rule,competition_kind=kind);away=self._sheet(away_id,away_t,foreign_rule=away_rule,competition_kind=kind)
+        self._live_sheets_cache = (id(live), home, away)
         return home,away
 
     def start_live_match(self) -> dict[str,Any]:
@@ -2871,8 +3692,9 @@ class ManagerCareerRuntime9394(CareerHistoryRuntimeMixin, CareerMarketRuntimeMix
         referee = referee_for_match(int(self.state["league_id"]), seed=seed) if fixture.get("fixture_type") == "league" else None
         self.state["live_match"]=self.live_engine.start(home_sheet,away_sheet,seed=seed,controlled_team_id=controlled,fixture=fixture,referee=referee,venue=venue_for_team(self.universe, home_id))
         self.state["live_match"]["ai_preparation"]=preparation_api
+        self._live_sheets_cache = (id(self.state["live_match"]), home_sheet, away_sheet)
         self.state["updated_at"]=datetime.now(timezone.utc).isoformat()
-        return self.live_match_snapshot()
+        return self.live_match_snapshot(sheets=(home_sheet, away_sheet))
 
     def cancel_live_preview(self) -> dict[str, Any]:
         """Discard an unstarted preview so the manager can revise XI/tactics.
@@ -2886,13 +3708,14 @@ class ManagerCareerRuntime9394(CareerHistoryRuntimeMixin, CareerMarketRuntimeMix
         if int(live.get("minute") or 0) != 0 or str(live.get("status") or "") not in {"preview", "live"}:
             raise ValueError("el partido ya ha comenzado y no puede volver a la preparación")
         self.state["live_match"] = None
+        self._live_sheets_cache = None
         self.state["updated_at"] = datetime.now(timezone.utc).isoformat()
         return self.snapshot()
 
-    def live_match_snapshot(self) -> dict[str,Any]|None:
+    def live_match_snapshot(self, *, sheets: tuple[TeamSheet9394, TeamSheet9394] | None = None) -> dict[str,Any]|None:
         live=self.state.get("live_match")
         if not live: return None
-        snap=self.live_engine.snapshot(live); home_sheet,away_sheet=self._live_match_sheets()
+        snap=self.live_engine.snapshot(live); home_sheet,away_sheet=sheets or self._live_match_sheets()
         player_map={int(p.id):p for p in (*home_sheet.starters,*home_sheet.bench,*away_sheet.starters,*away_sheet.bench) if str(p.id).isdigit()}
         controlled=int(self.state["team_id"]); own_home=int(snap["home_team_id"])==controlled
         on_pitch=snap["home_on_pitch_ids"] if own_home else snap["away_on_pitch_ids"]
@@ -2904,9 +3727,28 @@ class ManagerCareerRuntime9394(CareerHistoryRuntimeMixin, CareerMarketRuntimeMix
         opponent_bench=snap["away_bench_ids"] if own_home else snap["home_bench_ids"]
         opponent_fatigue=snap["away_fatigue"] if own_home else snap["home_fatigue"]
         def player_row(pid:int, fatigue_map:dict[str,Any])->dict[str,Any]:
-            raw=self._player_source(int(pid)); api=self._career_player_api(raw) if raw else {"id":pid,"display_name":getattr(player_map.get(pid),"name",str(pid)),"position":getattr(player_map.get(pid),"position","")}
-            api["match_fatigue"]=round(float(fatigue_map.get(str(pid),0.0)),1);api["match_condition"]=max(0,round(100-float(fatigue_map.get(str(pid),0.0))))
-            return api
+            # Live-match payloads are hot-path UI data.  Do not embed the full
+            # career player dossier (history, medical, scouting, relationships,
+            # contracts...) for every footballer on every minute tick.  The live
+            # screen only needs stable identity/position/number plus match state.
+            # Full dossiers remain available through the dedicated player route.
+            raw=self._player_source(int(pid)) or {}
+            sheet_player=player_map.get(int(pid))
+            fatigue_value=float(fatigue_map.get(str(pid),0.0))
+            display_name=str(raw.get("display_name") or raw.get("name") or getattr(sheet_player,"name",str(pid)))
+            position=str(raw.get("position") or raw.get("broad_position") or getattr(sheet_player,"position","") or "—")
+            shirt_number=raw.get("shirt_number")
+            if shirt_number in (None,0,""):
+                shirt_number=getattr(sheet_player,"number",None)
+            return {
+                "id":int(pid),
+                "source_id":int(pid),
+                "display_name":display_name,
+                "position":position,
+                "shirt_number":shirt_number,
+                "match_fatigue":round(fatigue_value,1),
+                "match_condition":max(0,round(100-fatigue_value)),
+            }
         snap["controlled_on_pitch"]=[player_row(pid,fatigue) for pid in on_pitch]
         snap["controlled_bench"]=[player_row(pid,fatigue) for pid in bench]
         snap["controlled_sent_off"]=[player_row(pid,fatigue) for pid in sent_off]
@@ -2984,6 +3826,11 @@ class ManagerCareerRuntime9394(CareerHistoryRuntimeMixin, CareerMarketRuntimeMix
     def substitute_live_match(self,outgoing_id:int,incoming_id:int)->dict[str,Any]:
         if not self.state.get("live_match"): raise ValueError("no hay partido en directo")
         live=self.state["live_match"];snap=self.live_engine.snapshot(live);controlled=int(self.state["team_id"]);own_home=int(snap["home_team_id"])==controlled
+        if str(snap.get("status") or "")=="finished":
+            raise ValueError("el partido ya ha terminado")
+        controlled_state=live["home"] if own_home else live["away"]
+        if int(controlled_state.get("substitutions") or 0)>=LAWS_1993_94.max_used_substitutes:
+            raise ValueError("ya has utilizado los dos cambios permitidos en 1993-94")
         on_pitch=list(snap["home_on_pitch_ids"] if own_home else snap["away_on_pitch_ids"])
         forced_off=list(snap["home_forced_off_ids"] if own_home else snap["away_forced_off_ids"])
         replaceable=on_pitch+forced_off
@@ -2994,11 +3841,27 @@ class ManagerCareerRuntime9394(CareerHistoryRuntimeMixin, CareerMarketRuntimeMix
             if rule is not None:
                 issues=validate_matchday_foreigners(raw,[],rule)
                 if issues: raise ValueError(" ".join(issues))
-        home,away=self._live_match_sheets();self.live_engine.substitute(live,home,away,outgoing_id=int(outgoing_id),incoming_id=int(incoming_id));self.state["updated_at"]=datetime.now(timezone.utc).isoformat();return self.live_match_snapshot()
+        home,away=self._live_match_sheets();self.live_engine.substitute(live,home,away,outgoing_id=int(outgoing_id),incoming_id=int(incoming_id));self.state["updated_at"]=datetime.now(timezone.utc).isoformat();return self.live_match_snapshot(sheets=(home,away))
 
     def advance_live_match(self,minutes:int=5)->dict[str,Any]:
         if not self.state.get("live_match"): raise ValueError("no hay partido en directo")
-        home,away=self._live_match_sheets();self.live_engine.advance(self.state["live_match"],home,away,minutes=int(minutes));self.state["updated_at"]=datetime.now(timezone.utc).isoformat();return self.live_match_snapshot()
+        home,away=self._live_match_sheets();self.live_engine.advance(self.state["live_match"],home,away,minutes=int(minutes),substitution_validator=self._substitution_validator_for_fixture(self.state["live_match"].get("fixture") or {}));self.state["updated_at"]=datetime.now(timezone.utc).isoformat();return self.live_match_snapshot(sheets=(home,away))
+
+    def advance_live_match_until_event(self,max_minutes:int=20)->dict[str,Any]:
+        if not self.state.get("live_match"): raise ValueError("no hay partido en directo")
+        live=self.state["live_match"]
+        notable={"shot_off","save","goal","corner","yellow","red","second_yellow_red","injury","injury_forced_off","halftime","fulltime","penalty","penalty_saved","free_kick","free_kick_chance","set_piece_chance","defensive_error","tactical_adjustment"}
+        limit=max(1,min(45,int(max_minutes)))
+        home,away=self._live_match_sheets()
+        validator=self._substitution_validator_for_fixture(live.get("fixture") or {})
+        for _ in range(limit):
+            before=len(live.get("events") or [])
+            self.live_engine.advance(live,home,away,minutes=1,substitution_validator=validator)
+            fresh=(live.get("events") or [])[before:]
+            if any(str(event.get("kind") or "") in notable for event in fresh) or str(live.get("status") or "") not in {"live","preview"}:
+                break
+        self.state["updated_at"]=datetime.now(timezone.utc).isoformat()
+        return self.live_match_snapshot(sheets=(home,away))
 
     def simulate_live_match(self)->dict[str,Any]:
         """Resolve the minute-zero preview through the same live engine.
@@ -3011,9 +3874,10 @@ class ManagerCareerRuntime9394(CareerHistoryRuntimeMixin, CareerMarketRuntimeMix
         live=self.state.get("live_match")
         if not live: raise ValueError("no hay previa de partido preparada")
         if int(live.get("minute") or 0)!=0: raise ValueError("Resultado sólo está disponible antes de comenzar el partido")
+        home,away=self._live_match_sheets()
+        validator=self._substitution_validator_for_fixture(live.get("fixture") or {})
         while str(live.get("status"))!="finished":
-            home,away=self._live_match_sheets()
-            self.live_engine.advance(live,home,away,minutes=45,auto_controlled=True)
+            self.live_engine.advance(live,home,away,minutes=45,auto_controlled=True,substitution_validator=validator)
         return self.finish_live_match()
 
     def _commit_preseason_friendly(self,result,home_sheet:TeamSheet9394,away_sheet:TeamSheet9394,live:dict[str,Any])->dict[str,Any]:
@@ -3024,7 +3888,7 @@ class ManagerCareerRuntime9394(CareerHistoryRuntimeMixin, CareerMarketRuntimeMix
             if int(row.get("id") or 0)==fid:
                 row.update({"played":True,"home_goals":stored["home_goals"],"away_goals":stored["away_goals"]});break
         self.state.setdefault("preseason_history",[]).append(stored);self.state["preseason_history"]=self.state["preseason_history"][-80:]
-        self._rebuild_rosters();return stored
+        self._rebuild_rosters(sync_dynamics=False);return stored
 
     def league_matchday_summary(self, matchday: int | None = None, league_id: int | None = None) -> dict[str, Any]:
         """Return a UI-safe, persisted view of a complete league round.
@@ -3083,7 +3947,7 @@ class ManagerCareerRuntime9394(CareerHistoryRuntimeMixin, CareerMarketRuntimeMix
             if int(fx["id"])==int(fixture["id"]):
                 r=result;hs,as_=home_sheet,away_sheet
             else:
-                hs,as_=self._sheet(h,competition_kind="league"),self._sheet(a,competition_kind="league");r=self.engine.simulate(hs,as_,seed=seed,referee=referee_for_match(league_id,seed=seed),venue=venue_for_team(self.universe,h))
+                hs,as_=self._sheet(h,competition_kind="league"),self._sheet(a,competition_kind="league");r=self.engine.simulate(hs,as_,seed=seed,referee=referee_for_match(league_id,seed=seed),venue=venue_for_team(self.universe,h),substitution_validator=self._substitution_validator_for_fixture({"fixture_type":"league","competition_id":league_id}))
             self._apply_match_player_state(r,hs,as_,seed,competition=(self._team_api(controlled) or {}).get("league",{}).get("name") or "Liga",counts_for_league_stats=True)
             results.append(_league_match_payload(matchday,int(fx["id"]),h,a,r.home.goals,r.away.goals,referee_id=r.referee_id,referee_name=r.referee_name,referee_source_confidence=r.referee_source_confidence));self._post_matchday_income(h,competition=f"league:{league_id}",reference=matchday)
         self.state["results"]=results;self.state["completed_matchday"]=matchday;self._rebuild_rosters()
@@ -3093,7 +3957,7 @@ class ManagerCareerRuntime9394(CareerHistoryRuntimeMixin, CareerMarketRuntimeMix
         live=self.state.get("live_match")
         if not live: raise ValueError("no hay partido en directo")
         if live.get("status")!="finished": raise ValueError("el partido todavía no ha terminado")
-        home,away=self._live_match_sheets();result=self.live_engine.result(live);live_report=self.live_match_snapshot();events=[]
+        home,away=self._live_match_sheets();result=self.live_engine.result(live);live_report=self.live_match_snapshot(sheets=(home,away));events=[]
         if live["fixture"].get("fixture_type")=="tournament":
             played,events=commit_pending_tournament_result(self,result,home,away)
         elif live["fixture"].get("fixture_type")=="friendly":
@@ -3115,6 +3979,7 @@ class ManagerCareerRuntime9394(CareerHistoryRuntimeMixin, CareerMarketRuntimeMix
                 competition_context=fixture_context,
             )
         self.state["live_match"]=None
+        self._live_sheets_cache = None
         self._publish_controlled_result(
             competition=str(fixture_context.get("competition_name") or (self._team_api(int(self.state["team_id"])) or {}).get("league",{}).get("name") or "Partido"),
             home_team_id=int(live["home_team_id"]),away_team_id=int(live["away_team_id"]),home_goals=int(result.home.goals),away_goals=int(result.away.goals),
@@ -3156,9 +4021,19 @@ class ManagerCareerRuntime9394(CareerHistoryRuntimeMixin, CareerMarketRuntimeMix
             recovered=[pid for pid in injured_before if int((self.state.get("player_development") or {}).get(str(pid),{}).get("injury_days") or 0)==0]
             for pid in recovered:
                 register_return_from_injury(self.state,player_id=pid,players=controlled_players,date_text=tomorrow.isoformat())
-            self._rebuild_rosters()
+            self._rebuild_rosters(sync_dynamics=False)
         training_fixture = self.next_scheduled_fixture()
         training_next_date = date.fromisoformat(str(training_fixture["date"])) if training_fixture and training_fixture.get("date") else None
+        training_opponent=0
+        if training_fixture:
+            th=int(training_fixture.get("home_team_id") or 0); ta=int(training_fixture.get("away_team_id") or 0)
+            training_opponent=ta if th==int(self.state["team_id"]) else th
+        apply_auto_training_plan(
+            self.state, game_date=tomorrow, players=controlled_players, development=self.state["player_development"],
+            effectiveness=self._responsibility_effect("first_team_training"), next_match_date=training_next_date,
+            own_strength=self._team_strength(int(self.state["team_id"])), opponent_strength=self._team_strength(training_opponent) if training_opponent else None,
+            opposition_report_quality=int(self._responsibility_effect("opposition_reports").get("quality") or 10),
+        )
         training_events = process_training_day(
             self.state, game_date=tomorrow, players=controlled_players, development=self.state["player_development"],
             effectiveness=self._responsibility_effect("first_team_training"), seed=int(self.state.get("seed") or 9394),
@@ -3175,7 +4050,7 @@ class ManagerCareerRuntime9394(CareerHistoryRuntimeMixin, CareerMarketRuntimeMix
         if training_events:
             for event in training_events:
                 register_important_injury(self.state, player_id=int(event["player_id"]), days=int(event.get("expected_days") or 0), players=controlled_players, date_text=tomorrow.isoformat())
-            self._rebuild_rosters()
+            self._rebuild_rosters(sync_dynamics=False)
             self._ingest_news(training_events)
         # Every background league progresses by its own dated calendar.
         self._process_background_leagues_for_day(tomorrow)
@@ -3187,7 +4062,12 @@ class ManagerCareerRuntime9394(CareerHistoryRuntimeMixin, CareerMarketRuntimeMix
         )
         world_events.extend(scout_events)
         if scout_events:
+            for event in scout_events:
+                try: self._portfolio_player(int(event.get("player_id") or 0), level=int(event.get("knowledge_level") or 3), source="manual_dossier")
+                except (KeyError, ValueError): pass
             self._ingest_news(scout_events)
+        auto_scout_events = self._process_autonomous_scouting(tomorrow)
+        world_events.extend(auto_scout_events)
         summer_from_season=None;summer_started=None
         if tomorrow.month==7 and tomorrow.day==1:
             summer_from_season=str(self.state.get("season") or "")
@@ -3255,7 +4135,7 @@ class ManagerCareerRuntime9394(CareerHistoryRuntimeMixin, CareerMarketRuntimeMix
             issues=self._validate_controlled_selection_for_fixture(scheduled)
             if issues: raise ValueError(" ".join(issues))
             home=self._sheet(int(scheduled["home_team_id"]));away=self._sheet(int(scheduled["away_team_id"]));seed=season_start_year(self.state)*1_000_000+int(self.state["seed"])*1000+abs(int(scheduled["id"]))
-            result=self.engine.simulate(home,away,seed=seed,venue=venue_for_team(self.universe,int(scheduled["home_team_id"])))
+            result=self.engine.simulate(home,away,seed=seed,venue=venue_for_team(self.universe,int(scheduled["home_team_id"])),substitution_validator=self._substitution_validator_for_fixture(scheduled))
             played=self._commit_preseason_friendly(result,home,away,{"fixture":scheduled})
             self._publish_controlled_result(
                 competition="Pretemporada", home_team_id=int(scheduled["home_team_id"]), away_team_id=int(scheduled["away_team_id"]),
@@ -3361,10 +4241,17 @@ class ManagerCareerRuntime9394(CareerHistoryRuntimeMixin, CareerMarketRuntimeMix
 
     def _external_player_api(self, row: dict[str, Any]) -> dict[str, Any]:
         pid = int(row["source_id"])
-        return external_player_view(
+        result = external_player_view(
             self.state, api=self._career_player_api(row), player_id=pid, game_date=self.current_date,
-            effectiveness=self._responsibility_effect("recruitment_search"),
+            effectiveness=self._responsibility_effect("recruitment_search"), baseline_knowledge=self._baseline_scouting_knowledge(pid),
         )
+        portfolio = (self.state.get("scouting_portfolio") or {}).get(str(pid))
+        if portfolio:
+            result.setdefault("scout", {})["fit"] = {
+                "score": portfolio.get("fit_score"), "confidence": portfolio.get("confidence"),
+                "reasons": list(portfolio.get("reasons") or []), "observer": portfolio.get("observer"),
+            }
+        return result
 
     def player_detail(self, player_id:int) -> dict[str,Any]:
         pid=int(player_id);row=self._player_source(pid)
@@ -3428,6 +4315,26 @@ class ManagerCareerRuntime9394(CareerHistoryRuntimeMixin, CareerMarketRuntimeMix
         tid = int(team_id if team_id is not None else self.state["team_id"])
         rows = self._career_players_by_team.get(tid, [])
         return sorted((self._career_player_api(row) for row in rows), key=lambda p: (p.get("shirt_number") is None, p.get("shirt_number") or 999, p.get("display_name") or ""))
+
+    def squad_ui_snapshot(self, team_id: int | None = None) -> list[dict[str, Any]]:
+        """Browser-sized squad rows; full dossiers stay on player-detail.
+
+        The squad workspace needs identity, fit, availability and contract
+        summary, not medical history, attributes, season archives or scouting
+        dossiers for every player on every career refresh.
+        """
+        keep = {
+            "id", "source_id", "team_id", "display_name", "shirt_number",
+            "age", "nationality", "position", "overall", "form", "morale",
+            "condition", "status", "injury_days",
+            "league_suspension_matches", "league_suspension_active_for_next_match",
+            "contract", "estimated_transfer_value", "transfer_listed",
+            "identity", "tactical_fit", "squad_dynamics", "manager_relationship",
+        }
+        return [
+            {key: value for key, value in player.items() if key in keep}
+            for player in self.squad(team_id)
+        ]
 
 
 
@@ -3495,7 +4402,7 @@ class ManagerCareerRuntime9394(CareerHistoryRuntimeMixin, CareerMarketRuntimeMix
 
     def snapshot(self) -> dict[str, Any]:
         team_id=int(self.state["team_id"]); completed=int(self.state.get("completed_matchday") or 0); last_result=None
-        squad_api=self.squad(team_id)
+        squad_api=self.squad_ui_snapshot(team_id)
         dashboard=self.manager_dashboard()
         stories=self._refresh_storyline_state(dashboard=dashboard,squad_api=squad_api)
         rivalries=rivalry_snapshot(self.state,self.universe,team_id,limit=8)
@@ -3518,7 +4425,7 @@ class ManagerCareerRuntime9394(CareerHistoryRuntimeMixin, CareerMarketRuntimeMix
             "source_manager":(source_coach_for_team(self.universe,team_id,manager_id=int(self.state.get("controlled_predecessor_manager_id"))) if isinstance(self.state.get("controlled_predecessor_manager_id"),int) and int(self.state.get("controlled_predecessor_manager_id"))>0 else None),
             "venue":default_source_catalog().venue_context((self._team_api(team_id, resolve_league=False) or {}).get("stadium_id")),
             "standings":self.standings(),"next_match":next_fixture,
-            "tactics":dict(self.state.get("tactics") or {}),"tactical_identity":tactical_identity_9394(FootballTactics9394(**{**_default_tactics(),**(self.state.get("tactics") or {})})),"selection":self.selection_snapshot(),"manager_dashboard":dashboard,"finances":dict(self.state.get("finances") or {}),"economy":self.economy_snapshot(),
+            "tactics":dict(self.state.get("tactics") or {}),"tactical_identity":self.tactical_identity_snapshot(),"selection":self.selection_ui_snapshot(),"manager_dashboard":dashboard,"finances":dict(self.state.get("finances") or {}),"economy":self.economy_snapshot(),
             "transfer_history":list(self.state.get("transfer_history") or []),"ai_transfer_history":list(self.state.get("ai_transfer_history") or [])[-50:],
             "contract_history":list(self.state.get("contract_history") or [])[-50:],"international_history":list(self.state.get("international_history") or [])[-50:],"international_manager":international_manager_snapshot(self.state),"international_tournaments":list(self.state.get("international_tournaments") or [])[-6:],
             "world_progress":{key:{"completed_round":int(value.get("completed_round") or 0),"result_count":len(value.get("results") or [])} for key,value in (self.state.get("world_leagues") or {}).items()},

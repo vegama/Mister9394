@@ -41,7 +41,7 @@ def test_v041_genk_roles_and_historical_state_policy():
 
 def test_v041_genk_registry_queue_and_russia_policy_recorded():
     reg=load('created_players_registry.json'); q=load('bdfutbol_photo_queue.json')
-    rb={int(x['source_id']):x for x in reg['players']}; qb={int(x['source_id']):x for x in q['players']}
+    rb={int(x['source_id']):x for x in reg['players'] if not x.get('retired_alias_v113')}; qb={int(x['source_id']):x for x in q['players']}
     assert set(rb)==set(qb)
     ids=[9496109,9496122,9496111,9496106,9496102,9496117,9496105,9496120,9496100,9496110,9496104,9496107,9496114,9496101,9496103,9496108,9496118,9496119,9496116,9496121,9496112,9496113,9496115]
     for sid in ids:

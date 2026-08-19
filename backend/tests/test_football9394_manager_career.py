@@ -188,11 +188,11 @@ def test_rollover_can_repeat_into_9596_without_resetting_history():
     assert career.state.get('generated_players', {}) == {}
     assert all(int(row.get('retirement_count') or 0) == 0 and int(row.get('academy_intake_count') or 0) == 0 for row in snap['season_transition_log'])
     # The canonical history includes 25 playable league champions plus the
-    # four tracked tournament champions per season.  Older versions of this
-    # gate counted leagues only and silently ignored cup/continental history.
-    assert len(snap['honours'])==58
+    # fifteen tournament champions per season: Europe plus 12 domestic cups.
+    # With 25 playable leagues that is 40 honours per completed season.
+    assert len(snap['honours'])==80
     assert sum(1 for row in snap['honours'] if row.get('competition_kind')=='league')==50
-    assert sum(1 for row in snap['honours'] if row.get('competition_kind')=='tournament')==8
+    assert sum(1 for row in snap['honours'] if row.get('competition_kind')=='tournament')==30
     assert {key:len(value) for key,value in snap['continental_qualifiers'].items()}=={'1':8,'2':16,'90':32}
     assert snap['next_match']['date'].startswith('1995-')
     assert snap['next_match']['fixture_type']=='friendly'

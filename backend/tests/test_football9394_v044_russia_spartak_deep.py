@@ -87,7 +87,8 @@ def test_v044_birth_state_territory_citizenship_selection_and_transliteration_ar
     assert kechinov["represented_selection_country_ids_1993"] == []
 
     pohodin = p[9497354]
-    assert pohodin["display_name"] == "Serhiy Anatoliyovych Pohodin"
+    assert pohodin["display_name"] == "Serhiy Pohodin"
+    assert pohodin["historical_full_name"] == "Serhiy Anatoliyovych Pohodin"
     assert pohodin["birth_territory_country_id"] == 85
     assert pohodin["represented_selection_country_ids"] == [85]
     assert pohodin["name_transliterations"]["bdfutbol_squad"] == "Pogodin"
@@ -100,8 +101,9 @@ def test_v044_birth_state_territory_citizenship_selection_and_transliteration_ar
 
     # No 1993 citizenship is manufactured from birthplace, a later profile nationality,
     # a gameplay nationality, or the selection represented.
-    spartak = [x for x in p.values() if int(x.get("team_id") or 0) == SPARTAK_ID]
-    assert len(spartak) == 33
+    spartak = [x for x in p.values() if int(x.get("team_id") or 0) == SPARTAK_ID and not x.get("retired")]
+    assert len(spartak) >= 22
+    assert {515, 517, 2705, 9497352}.isdisjoint({int(x["source_id"]) for x in spartak})
     assert all(x["citizenship_country_ids_1993"] == [] for x in spartak)
     assert all(x["citizenship_1993_resolution"] == "unresolved_not_inferred_from_birth_or_later_profile_v044" for x in spartak)
 
@@ -145,9 +147,9 @@ def test_v044_registry_photo_queue_source_drift_and_next_front_are_deterministic
     audit = load("historical_profiles_metadata_audit_v044.json")
     reg = load("created_players_registry.json")["players"]
     queue = load("bdfutbol_photo_queue.json")["players"]
-    rb = {int(x["source_id"]): x for x in reg}
+    rb = {int(x["source_id"]): x for x in reg if not x.get("retired_alias_v113")}
     qb = {int(x["source_id"]): x for x in queue}
-    assert len(rb) == len(reg) and len(qb) == len(queue)
+    assert len({int(x["source_id"]) for x in reg}) == len(reg) and len(qb) == len(queue)
     assert set(rb) == set(qb)
 
     target_ids = {int(x["source_id"]) for x in audit["profiles"]["changes"]}

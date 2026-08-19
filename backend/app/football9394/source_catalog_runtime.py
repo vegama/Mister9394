@@ -100,7 +100,9 @@ class HistoricalSourceCatalog9394:
 
 
 def load_source_catalog(path: str | Path = DEFAULT_SOURCE_CATALOG_PATH) -> HistoricalSourceCatalog9394:
-    return HistoricalSourceCatalog9394(json.loads(Path(path).read_text(encoding="utf-8")))
+    with Path(path).open("r", encoding="utf-8") as handle:
+        payload = json.load(handle)
+    return HistoricalSourceCatalog9394(payload)
 
 
 @lru_cache(maxsize=1)

@@ -203,7 +203,13 @@ def test_greece_roster_gate_is_complete_unique_and_playable():
         assert sum(1 for p in active if p.get('display_name')==name)==1
     greek_team_ids=set(range(9347001,9347019))
     core=[p for p in active if int(p.get('team_id') or 0) in greek_team_ids]
-    assert len(core)==496
+    # The source roster has 496 rows, but six are verified same-season club
+    # spells of players already present elsewhere in the league. Runtime keeps
+    # one person per canonical identity and preserves both spells in metadata.
+    staging=json.loads((ROOT/'data/football9394/greece_1993_94_roster_staging.json').read_text(encoding='utf-8'))
+    canonical_ids={int(r['resolved_source_id']) for c in staging['clubs'] for r in c['players']}
+    assert len(canonical_ids)==490
+    assert len(core)==len(canonical_ids)
     assert all(p.get('historical_position_1993_94') for p in core)
     assert all(p.get('historical_position_source') for p in core)
     assert all(p.get('attributes') for p in core)

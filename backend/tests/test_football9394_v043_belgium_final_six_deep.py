@@ -80,9 +80,9 @@ def test_v043_shared_profiles_registry_photo_queue_and_single_intentional_nat_ga
     assert {x['club'] for x in snap[9496328]['historical_club_spells_1993_94']}=={'Standard Liège','Gent'}
 
     reg=load('created_players_registry.json'); q=load('bdfutbol_photo_queue.json')
-    rb={int(x['source_id']):x for x in reg['players']}; qb={int(x['source_id']):x for x in q['players']}
+    rb={int(x['source_id']):x for x in reg['players'] if not x.get('retired_alias_v113')}; qb={int(x['source_id']):x for x in q['players']}
     assert set(rb)==set(qb)
-    assert len(rb)==len(reg['players']) and len(qb)==len(q['players'])
+    assert len(rb)==len(qb)==len(q['players'])
     for sid in [int(x['source_id']) for x in audit['profiles']['changes']]:
         assert rb[sid].get('bdfutbol_id') and rb[sid].get('bdfutbol_url')
         assert qb[sid]['photo_status'] in {'ready_for_download','bundled_normalized_bdfutbol'}

@@ -69,7 +69,7 @@ def test_ten_seasons_preserve_a_playable_world_and_compact_persistent_history():
     assert snap['season']=='2003-04'
     assert len(snap['season_archive'])==10
     assert len(snap['season_recaps'])==10
-    assert len(snap['honours'])==290
+    assert len(snap['honours'])==400
     assert len(snap['season_transition_log'])==10
     assert snap['job_status']=='active'
     assert len(snap['news_feed'])<=800

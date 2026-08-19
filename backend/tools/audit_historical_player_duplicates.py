@@ -22,8 +22,8 @@ DEFAULT_REPORT = REPO_ROOT / "data" / "football9394" / "created_players_duplicat
 
 def audit(snapshot_path: Path = DEFAULT_SNAPSHOT, report_path: Path = DEFAULT_REPORT) -> dict[str, Any]:
     snapshot = json.loads(snapshot_path.read_text(encoding="utf-8"))
-    created = [p for p in snapshot.get("players", []) if p.get("external_origin") in {"world_cup_1994", "national_pool_1993_94"}]
-    base = [p for p in snapshot.get("players", []) if p.get("external_origin") not in {"world_cup_1994", "national_pool_1993_94"}]
+    created = [p for p in snapshot.get("players", []) if not p.get("retired") and p.get("external_origin") in {"world_cup_1994", "national_pool_1993_94"}]
+    base = [p for p in snapshot.get("players", []) if not p.get("retired") and p.get("external_origin") not in {"world_cup_1994", "national_pool_1993_94"}]
     index = build_identity_candidate_index(base)
     collisions: list[dict[str, Any]] = []
     checked: list[dict[str, Any]] = []

@@ -54,12 +54,12 @@ def test_v033_altay_ankaragucu_kayseri_high_confidence_corrections():
     s=load('historical_snapshot.json'); p={int(x['source_id']):x for x in s['players']}
     checks={
       9496491:('Ahmet Akuygur',1,'Right Back',84,'1967-05-29T00:00:00'),
-      9496502:('Yuriy Hryhorovych Shelepnytskyi',6,'Defensive Midfielder',85,'1965-01-18T00:00:00'),
+      9496502:('Yuriy Shelepnytskyi',6,'Defensive Midfielder',85,'1965-01-18T00:00:00'),
       9496517:('Mehmet Yıldırım',17,'Centre Forward',84,'1972-09-15T00:00:00'),
-      9496519:('Yuriy Aleksandrovich Matveev',17,'Centre Forward',40,'1967-06-08T00:00:00'),
-      9497305:('Charyar Abdurakhmanovich Mukhadov',17,'Centre Forward',206,'1969-11-12T00:00:00'),
+      9496519:('Yuriy Matveev',17,'Centre Forward',40,'1967-06-08T00:00:00'),
+      9497305:('Charyar Mukhadov',17,'Centre Forward',206,'1969-11-12T00:00:00'),
       9497315:('Öztürk Tanrıbilir',0,'Goalkeeper',84,'1966-05-03T00:00:00'),
-      9497314:('Cafer Aydın',17,'Centre Forward',84,'1971-11-17T00:00:00'),
+      9496515:('Cafer Aydın',17,'Centre Forward',84,'1971-11-17T00:00:00'),
     }
     for sid,(name,role,pos,country,dob) in checks.items():
         row=p[sid]
@@ -70,6 +70,8 @@ def test_v033_altay_ankaragucu_kayseri_high_confidence_corrections():
     assert p[9496519].get('birth_country_id') is None
     assert '(USSR)' in p[9496502]['historical_birth_place_text']
     assert '(USSR)' in p[9496519]['historical_birth_place_text']
+    assert p[9496502]['historical_full_name']=='Yuriy Hryhorovych Shelepnytskyi'
+    assert p[9497305]['historical_full_name']=='Charyar Abdurakhmanovich Mukhadov'
 
 
 def test_v033_new_bdfutbol_portraits_are_real_normalized_assets():
@@ -99,9 +101,9 @@ def test_v033_gap_audit_and_registry_queue_integrity():
     assert gaps['missing_birth_date']==194
     assert gaps['missing_international_country_id']==193
     assert gaps['missing_birth_country_id']==323
-    assert len(reg)==len(q)>=2107
+    assert len([x for x in reg if not x.get('retired_alias_v113')])==len(q)>=2080
     assert len({int(x['source_id']) for x in reg})==len(reg)
-    assert {int(x['source_id']) for x in reg}=={int(x['source_id']) for x in q}
+    assert {int(x['source_id']) for x in reg if not x.get('retired_alias_v113')}=={int(x['source_id']) for x in q}
 
 
 def test_v033_biographies_refreshed_after_role_and_identity_corrections():
@@ -117,7 +119,7 @@ def test_v033_biographies_refreshed_after_role_and_identity_corrections():
 
 def test_v033_attribute_comparables_exist_and_match_corrected_broad_position():
     s=load('historical_snapshot.json'); by={int(x['source_id']):x for x in s['players']}
-    for sid in list(GAZ_IDS)+[9496491,9496502,9496517,9496519,9497305,9497315,9497314]:
+    for sid in list(GAZ_IDS)+[9496491,9496502,9496517,9496519,9497305,9497315,9496515]:
         row=by[sid]
         for cid in row.get('attribute_comparable_source_ids') or []:
             assert int(cid) in by

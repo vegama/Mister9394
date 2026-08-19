@@ -120,33 +120,27 @@ def run_gate(gate: Gate) -> dict:
 
 def production_state() -> dict:
     vite = FRONTEND / "node_modules" / ".bin" / "vite"
-    frontend_dist = FRONTEND / "dist" / "index.html"
-    deploy_dist = ROOT / "deploy_dist" / "index.html"
-    bundle = frontend_dist if frontend_dist.is_file() else deploy_dist if deploy_dist.is_file() else None
-    if bundle is not None:
-        return {
-            "status": "available",
-            "vite": vite.is_file(),
-            "rebuild_available": vite.is_file(),
-            "dist": frontend_dist.is_file(),
-            "deploy_dist": deploy_dist.is_file(),
-            "bundle": str(bundle.relative_to(ROOT)),
-        }
+    dist = FRONTEND / "dist" / "index.html"
+    if vite.is_file() and dist.is_file():
+        return {"status": "available", "vite": True, "dist": True}
+    missing = []
+    if not vite.is_file():
+        missing.append("frontend/node_modules/.bin/vite")
+    if not dist.is_file():
+        missing.append("frontend/dist/index.html")
     return {
         "status": "blocked",
         "vite": vite.is_file(),
-        "rebuild_available": vite.is_file(),
-        "dist": False,
-        "deploy_dist": False,
-        "reason": "Falta un bundle de producción: frontend/dist/index.html o deploy_dist/index.html.",
-        "missing": ["frontend/dist/index.html o deploy_dist/index.html"],
+        "dist": dist.is_file(),
+        "reason": "Falta el bundle/dependencias locales necesarios para certificar el E2E de producción.",
+        "missing": missing,
     }
 
 
 def main() -> int:
     parser = argparse.ArgumentParser(description="Gate reproducible de preparación Beta/RC de Míster 93/94")
     parser.add_argument("--report", type=Path, default=DEFAULT_REPORT)
-    parser.add_argument("--require-production", action="store_true", help="Falla si no existe un bundle de producción (frontend/dist o deploy_dist).")
+    parser.add_argument("--require-production", action="store_true", help="Falla si no existe dist + Vite local para E2E final.")
     args = parser.parse_args()
 
     rows = []

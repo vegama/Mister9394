@@ -96,7 +96,7 @@ def test_rules_and_registration_environment_remain_frozen_after_1994():
     source_rule = career._domestic_foreign_rule()
     career.state['season'] = '2002-03'
     later_rule = career._domestic_foreign_rule()
-    assert (source_rule.max_starting, source_rule.max_squad) == (later_rule.max_starting, later_rule.max_squad) == (3, 6)
+    assert (source_rule.max_starting, source_rule.max_squad) == (later_rule.max_starting, later_rule.max_squad) == (3, 4)
     december = transfer_period_status(__import__('datetime').date(2002, 12, 20), country_id=11, season='2002-03')
     january = transfer_period_status(__import__('datetime').date(2003, 1, 10), country_id=11, season='2002-03')
     assert december.phase == 'in_season' and december.open

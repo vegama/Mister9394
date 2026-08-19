@@ -194,7 +194,12 @@ def _overall(player: dict[str, Any]) -> int:
     return int(player.get("_selection_overall") or player.get("overall") or player.get("category") or 60)
 
 
-def assign_players_to_formation(players: Iterable[dict[str, Any]], formation: str) -> list[dict[str, Any]]:
+def assign_players_to_formation(
+    players: Iterable[dict[str, Any]],
+    formation: str,
+    *,
+    penalty_cache: dict[tuple[int, str], int] | None = None,
+) -> list[dict[str, Any]]:
     """Greedily assign a supplied XI/squad to specialist formation slots.
 
     The algorithm is deterministic and deliberately cheap enough to run for AI
@@ -213,17 +218,29 @@ def assign_players_to_formation(players: Iterable[dict[str, Any]], formation: st
             pid = int(player.get("source_id") or player.get("id") or order + 1)
             if pid in used:
                 continue
-            penalty = position_penalty(player, slot)
+            cache_key = (pid, str(slot))
+            if penalty_cache is not None and cache_key in penalty_cache:
+                penalty = penalty_cache[cache_key]
+            else:
+                penalty = position_penalty(player, slot)
+                if penalty_cache is not None:
+                    penalty_cache[cache_key] = penalty
             # Position dominates a small rating advantage; a superstar can still
             # cover a nearby job, but a striker will not beat a real goalkeeper.
-            score = _overall(player) - penalty * 1.55
-            candidates.append((score, -penalty, _overall(player), -order, pid, player))
+            overall = _overall(player)
+            score = overall - penalty * 1.55
+            candidates.append((score, -penalty, overall, -order, pid, player))
         if not candidates:
             break
         candidates.sort(reverse=True, key=lambda row: row[:5])
-        _, _, _, _, pid, player = candidates[0]
+        _, neg_penalty, _, _, pid, player = candidates[0]
         used.add(pid)
-        picked[index] = {"player": player, "player_id": pid, **position_fit(player, slot)}
+        penalty = -int(neg_penalty)
+        label = "Natural" if penalty == 0 else "Muy compatible" if penalty <= 5 else "Compatible" if penalty <= 9 else "Adaptado" if penalty <= 14 else "Fuera de posición"
+        picked[index] = {
+            "player": player, "player_id": pid, "slot": slot, "penalty": penalty,
+            "label": label, "natural_role": role_api(player),
+        }
     return [picked[i] for i in range(len(slots)) if i in picked]
 
 
@@ -373,30 +390,74 @@ def assign_players_to_formation_with_foreign_limit(
             break
     return [by_slot[i] for i in range(len(slots)) if i in by_slot]
 
-def squad_role_audit(players: Iterable[dict[str, Any]]) -> dict[str, Any]:
+def squad_role_audit(
+    players: Iterable[dict[str, Any]],
+    *,
+    penalty_cache: dict[tuple[int, str], int] | None = None,
+) -> dict[str, Any]:
     """Audit specialist squad coverage without demanding every role in the DB.
 
     Natural roles remain authoritative and visible, but a historically plausible
     compatible specialist can provide depth for a job (for example an interior
     can cover the right-midfield lane).  This avoids forcing every AI club into
     the same modern template while still producing concrete needs such as LB/ST.
+
+    The market AI calls this for hundreds of clubs in the same summer pulse.
+    Walk the squad once and evaluate the eight core jobs with the already parsed
+    source role instead of calling ``position_penalty`` (and therefore
+    ``role_for_player`` + ``source_role_aptitude``) once per player/job pair.
+    The exact penalties are still populated in ``penalty_cache`` so every later
+    recruitment/release check sees byte-for-byte the same compatibility model.
     """
     rows = list(players)
+    core_slots = tuple(SQUAD_ROLE_MINIMUM_9394)
     natural_counts: dict[str, int] = {}
-    for player in rows:
-        slot = role_for_player(player).squad_slot
-        natural_counts[slot] = natural_counts.get(slot, 0) + 1
-    counts: dict[str, int] = {}
-    needs = []
-    for slot, minimum in SQUAD_ROLE_MINIMUM_9394.items():
-        # <= 9 means natural, very compatible or compatible.  We deliberately
-        # do not count merely "adapted" players as proper squad depth.
-        count = sum(1 for player in rows if position_penalty(player, slot) <= 9)
-        counts[slot] = count
-        needs.append({
-            "slot": slot, "count": count, "natural_count": int(natural_counts.get(slot, 0)),
-            "minimum": minimum, "shortage": max(0, minimum - count),
-        })
+    counts: dict[str, int] = {slot: 0 for slot in core_slots}
+
+    for order, player in enumerate(rows):
+        role = role_for_player(player)
+        natural = role.squad_slot
+        primary = role.source_id
+        natural_counts[natural] = natural_counts.get(natural, 0) + 1
+        ratings = player.get("role_ratings") or {}
+        ratings_dict = ratings if isinstance(ratings, dict) else {}
+        pid = int(player.get("source_id") or player.get("id") or order + 1)
+
+        for slot in core_slots:
+            key = (pid, slot)
+            if penalty_cache is not None and key in penalty_cache:
+                penalty = penalty_cache[key]
+            else:
+                if slot == "GK" and natural != "GK":
+                    penalty = 45
+                else:
+                    role_ids = SLOT_SOURCE_ROLES_9394.get(slot, ())
+                    aptitude = 100 if primary in role_ids else 0
+                    if aptitude < 100 and ratings_dict:
+                        for role_id in role_ids:
+                            raw = ratings_dict.get(str(role_id), ratings_dict.get(role_id, 0))
+                            try:
+                                value = int(raw or 0)
+                            except (TypeError, ValueError):
+                                continue
+                            if value > aptitude:
+                                aptitude = value
+                    if aptitude > 0:
+                        penalty = max(0, round((100 - min(100, aptitude)) * 0.20))
+                    else:
+                        penalty = int(_COMPATIBILITY_PENALTY.get(natural, {}).get(slot, 24 if natural != "GK" and slot != "GK" else 45))
+                if penalty_cache is not None:
+                    penalty_cache[key] = penalty
+            if penalty <= 9:
+                counts[slot] += 1
+
+    needs = [
+        {
+            "slot": slot, "count": counts[slot], "natural_count": int(natural_counts.get(slot, 0)),
+            "minimum": minimum, "shortage": max(0, minimum - counts[slot]),
+        }
+        for slot, minimum in SQUAD_ROLE_MINIMUM_9394.items()
+    ]
     needs.sort(key=lambda row: (-row["shortage"], row["count"], row["slot"]))
     return {
         "counts": counts, "natural_counts": natural_counts, "needs": needs,

@@ -41,12 +41,12 @@ def test_v042_key_role_corrections_and_historical_state_policy():
     assert by[9496211]['primary_role']==3       # Frank Machiels, centre-back
     assert by[6792]['primary_role']==15         # Frank Berghuis, left winger
     assert by[9496209]['primary_role']==13      # Marc Hendrikx, left midfield
-    assert by[9496345]['primary_role']==2       # Ravil Sabitov, left-back
+    assert by[9496672]['primary_role']==2       # Ravil Sabitov, left-back
     assert by[9496343]['primary_role']==15      # Hendrie Krüzen, left winger
     assert by[9496329]['primary_role']==6       # Flórián Urbán, defensive midfield
 
     # USSR != Russia: birthplace-state is not back-projected from later nationality.
-    sab=by[9496345]
+    sab=by[9496672]
     assert sab['historical_birth_place_text']=='Moscow (USSR)'
     assert sab['international_country_id']==40
     assert sab.get('birth_country_id') is None
@@ -58,16 +58,20 @@ def test_v042_key_role_corrections_and_historical_state_policy():
 
 def test_v042_registry_photo_queue_identity_gate_and_future_russia_policy():
     reg=load('created_players_registry.json'); q=load('bdfutbol_photo_queue.json')
-    rb={int(x['source_id']):x for x in reg['players']}; qb={int(x['source_id']):x for x in q['players']}
+    rb={int(x['source_id']):x for x in reg['players'] if not x.get('retired_alias_v113')}; qb={int(x['source_id']):x for x in q['players']}
     assert set(rb)==set(qb)
-    assert len(rb)==len(reg['players']) and len(qb)==len(q['players'])
+    assert len(rb)==len(qb)==len(q['players'])
 
     audit=load('historical_profiles_metadata_audit_v042.json')
     ids=[int(x['source_id']) for x in audit['profiles']['changes']]
     assert len(ids)==49 and len(set(ids))==49
     shared_prior={9496324,9496325}
-    for sid in ids:
-        expected_gate='exact_name_birthdate_source_profile_gate_v038' if sid in shared_prior else 'exact_name_birthdate_source_profile_gate_v042'
+    for historical_sid in ids:
+        sid=9496672 if historical_sid==9496345 else historical_sid
+        if historical_sid == 9496345:
+            expected_gate='individual_profile_id_identity_gate_v045'
+        else:
+            expected_gate='exact_name_birthdate_source_profile_gate_v038' if sid in shared_prior else 'exact_name_birthdate_source_profile_gate_v042'
         assert rb[sid]['duplicate_check']==expected_gate
         assert rb[sid].get('bdfutbol_id') and rb[sid].get('bdfutbol_url')
         assert qb[sid]['photo_status'] in {'ready_for_download','bundled_normalized_bdfutbol'}

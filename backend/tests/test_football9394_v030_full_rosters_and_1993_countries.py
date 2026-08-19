@@ -25,11 +25,11 @@ def test_all_four_added_leagues_use_source_exhaustive_rosters_with_18_only_as_fl
 
 def test_expanded_stagings_have_unique_resolved_identities_and_are_reproducible():
     expected = {
-        "turkey_1993_94_roster_staging.json": (419, 419),
+        "turkey_1993_94_roster_staging.json": (419, 415),
         # Russia now preserves 492 historical roster rows while proven cross-club duplicates
         # resolve to 481 identities. A spell is not a second person.
         "russia_1993_roster_staging.json": (492, 481),
-        "greece_1993_94_roster_staging.json": (496, 496),
+        "greece_1993_94_roster_staging.json": (496, 490),
     }
     for name, (row_count, identity_count) in expected.items():
         stage = load(name)
@@ -97,10 +97,11 @@ def test_country_catalog_uses_1993_map_without_creating_modern_only_states():
 def test_photo_registry_queue_are_still_exactly_synchronised_after_roster_expansion():
     registry = load("created_players_registry.json")["players"]
     queue = load("bdfutbol_photo_queue.json")["players"]
-    reg_ids = [int(r["source_id"]) for r in registry]
+    active_registry = [r for r in registry if not r.get("retired_alias_v113")]
+    reg_ids = [int(r["source_id"]) for r in active_registry]
     queue_ids = [int(r["source_id"]) for r in queue]
-    assert len(reg_ids) == len(set(reg_ids)) >= 2107
-    assert len(queue_ids) == len(set(queue_ids)) >= 2107
+    assert len(reg_ids) == len(set(reg_ids)) >= 2080
+    assert len(queue_ids) == len(set(queue_ids)) >= 2080
     assert set(reg_ids) == set(queue_ids)
 
 

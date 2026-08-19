@@ -52,7 +52,7 @@ def test_v038_jussila_and_diagne_conflicts_are_not_silently_overwritten():
 
 def test_v038_registry_queue_and_photo_profiles():
     reg=load('created_players_registry.json'); queue=load('bdfutbol_photo_queue.json')
-    rb={int(x['source_id']):x for x in reg['players']}; qb={int(x['source_id']):x for x in queue['players']}
+    rb={int(x['source_id']):x for x in reg['players'] if not x.get('retired_alias_v113')}; qb={int(x['source_id']):x for x in queue['players']}
     assert set(rb)==set(qb)
     for sid in [9496163,9496165,9496149,9496162,9496146,9496153,9496161,9495310,9496147,9496324,9496152,9496144,9496145,9496156,9496159,9496160,9496148,9496150,9496164,9496154,9496151,9496157,9496155,9496158,9496325]:
         assert rb[sid]['duplicate_check']=='exact_name_birthdate_source_profile_gate_v038'

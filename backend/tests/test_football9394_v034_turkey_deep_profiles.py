@@ -23,7 +23,11 @@ def test_v034_three_turkish_clubs_are_deepened_27_each():
     groups=curated_ids()
     assert set(groups)=={'Altay','Ankaragücü','Kayserispor'}
     assert {k:len(v) for k,v in groups.items()}=={'Altay':27,'Ankaragücü':27,'Kayserispor':27}
-    assert len(set(sum(groups.values(),[])))==81
+    # 81 staged club-spells, but Cafer Aydin is one person appearing for both
+    # Kayserispor and Ankaragucu during 1993-94.
+    assert len(sum(groups.values(),[]))==81
+    assert len(set(sum(groups.values(),[])))==80
+    assert 9496515 in groups['Kayserispor'] and 9496515 in groups['Ankaragücü']
     snap={int(p['source_id']):p for p in load('historical_snapshot.json')['players']}
     for sid in sum(groups.values(),[]):
         p=snap[sid]
@@ -50,7 +54,8 @@ def test_v034_birth_date_and_nationality_gaps_drop_without_invented_partial_date
 def test_v034_known_date_conflicts_and_dissolved_states_are_explicit():
     snap={int(p['source_id']):p for p in load('historical_snapshot.json')['players']}
     gusev=snap[9496498]
-    assert gusev['display_name']=='Sergei Yevgenovich Gusev'
+    assert gusev['display_name']=='Sergei Gusev'
+    assert gusev['historical_full_name']=='Sergei Yevgenovich Gusev'
     assert gusev['birth_date']=='1967-07-01T00:00:00'
     assert gusev['international_country_id']==85 and gusev.get('birth_country_id') is None
     assert 'BDFutbol records 07/07/1967' in gusev['historical_profile_source_note']
@@ -95,10 +100,12 @@ def test_v034_15_new_bdf_portraits_are_normalized_and_registry_synced():
     assert audit['photos']['total_bundled_normalized_bdfutbol']==69
     assert len(photo_audit['portraits'])==15
     reg=load('created_players_registry.json')['players']; queue=load('bdfutbol_photo_queue.json')['players']
-    r={int(x['source_id']):x for x in reg}; q={int(x['source_id']):x for x in queue}
-    assert len(reg)==len(q)>=2107 and set(r)==set(q)
+    r={int(x['source_id']):x for x in reg if not x.get('retired_alias_v113')}; q={int(x['source_id']):x for x in queue}
+    assert len(r)==len(q)>=2080 and set(r)==set(q)
     for row in photo_audit['portraits']:
-        sid=int(row['source_id']); asset=ROOT/row['asset']
+        historical_sid=int(row['source_id'])
+        sid=9496515 if historical_sid==9497314 else historical_sid
+        asset=ROOT/row['asset']
         assert r[sid]['photo_status']==q[sid]['photo_status']=='bundled_normalized_bdfutbol'
         assert r[sid]['photo_filename']==q[sid]['photo_filename']==f'{sid}.jpg'
         with Image.open(asset) as im:

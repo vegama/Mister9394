@@ -85,7 +85,7 @@ def test_v036_belgium_gap_reduction_and_registry_integrity():
     assert audit['source_roster_union']['club_stage_counts_after']=={'FC Seraing':21,'Charleroi':22,'Standard Liège':27,'RFC Liège':24}
 
     reg=load('created_players_registry.json'); queue=load('bdfutbol_photo_queue.json')
-    rids=[int(x['source_id']) for x in reg['players']]; qids=[int(x['source_id']) for x in queue['players']]
+    rids=[int(x['source_id']) for x in reg['players'] if not x.get('retired_alias_v113')]; qids=[int(x['source_id']) for x in queue['players']]
     assert len(rids)==len(set(rids))
     assert len(qids)==len(set(qids))
     assert set(rids)==set(qids)

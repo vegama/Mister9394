@@ -3,9 +3,12 @@ from __future__ import annotations
 from dataclasses import dataclass, field, replace
 from math import exp
 from random import Random
-from typing import Iterable
+from typing import Callable, Iterable
 
 from .laws import LAWS_1993_94, LawsOfGame9394
+
+
+SubstitutionValidator9394 = Callable[[str, tuple[str, ...]], bool]
 
 
 def _clamp(value: float, low: float, high: float) -> float:
@@ -353,7 +356,7 @@ class FootballMatchEngine9394:
         self.laws = laws
         self.profile = profile
 
-    def simulate(self, home_sheet: TeamSheet9394, away_sheet: TeamSheet9394, *, seed: int = 1, referee: RefereeProfile9394 | None = None, venue: MatchVenue9394 | None = None) -> MatchResult9394:
+    def simulate(self, home_sheet: TeamSheet9394, away_sheet: TeamSheet9394, *, seed: int = 1, referee: RefereeProfile9394 | None = None, venue: MatchVenue9394 | None = None, substitution_validator: SubstitutionValidator9394 | None = None) -> MatchResult9394:
         home_sheet.validate(self.laws)
         away_sheet.validate(self.laws)
         rng = Random(seed)
@@ -377,8 +380,8 @@ class FootballMatchEngine9394:
             if minute in (58, 70, 78):
                 self._maybe_manager_adjustment(home, away, minute, events)
                 self._maybe_manager_adjustment(away, home, minute, events)
-                self._maybe_substitute(home, minute, rng, events, opponent=away)
-                self._maybe_substitute(away, minute, rng, events, opponent=home)
+                self._maybe_substitute(home, minute, rng, events, opponent=away, substitution_validator=substitution_validator)
+                self._maybe_substitute(away, minute, rng, events, opponent=home, substitution_validator=substitution_validator)
 
             # The normal 90-minute clock excludes first-half added time in this
             # coarse engine; it is kept as an event/detail until the live clock
@@ -399,8 +402,8 @@ class FootballMatchEngine9394:
             attack, defend = (home, away) if rng.random() < home_possession else (away, home)
             attack.possession_ticks += 1
             self._resolve_attack(attack, defend, minute, rng, events, referee=referee, venue=venue)
-            self._maybe_injury(attack, minute, rng, events)
-            self._maybe_injury(defend, minute, rng, events)
+            self._maybe_injury(attack, minute, rng, events, substitution_validator=substitution_validator)
+            self._maybe_injury(defend, minute, rng, events, substitution_validator=substitution_validator)
 
         events.append(MatchEvent9394(played_minutes, "fulltime", detail="Final del partido"))
         total_possession = home.possession_ticks + away.possession_ticks
@@ -885,7 +888,7 @@ class FootballMatchEngine9394:
             score += (replacement.stamina + replacement.work_rate) / 55.0
         return score
 
-    def _maybe_substitute(self, side: _SideState, minute: int, rng: Random, events: list[MatchEvent9394], *, opponent: _SideState | None = None) -> None:
+    def _maybe_substitute(self, side: _SideState, minute: int, rng: Random, events: list[MatchEvent9394], *, opponent: _SideState | None = None, substitution_validator: SubstitutionValidator9394 | None = None) -> None:
         if side.substitutions >= self.laws.max_used_substitutes or not side.bench:
             return
         candidates = [p for p in side.available_players() if p.position.upper() not in {"GK", "POR", "PORTERO"}]
@@ -915,10 +918,17 @@ class FootballMatchEngine9394:
             return
         non_goalkeepers = [p for p in side.bench if self._position_family(p) != "GK"]
         bench_pool = non_goalkeepers or list(side.bench)
-        replacement = max(
+        ranked = sorted(
             bench_pool,
             key=lambda p: self._replacement_context_score(p, tired, trailing=trailing, leading=leading),
+            reverse=True,
         )
+        replacement = next((candidate for candidate in ranked if substitution_validator is None or substitution_validator(
+            str(side.sheet.team_id),
+            tuple(str(candidate.id if p.id == tired.id else p.id) for p in side.available_players()),
+        )), None)
+        if replacement is None:
+            return
         idx = side.on_pitch.index(tired)
         side.on_pitch[idx] = replacement
         side.bench.remove(replacement)
@@ -930,7 +940,7 @@ class FootballMatchEngine9394:
         same_position = replacement.position.upper() == outgoing.position.upper()
         return replacement.overall + (12 if same_position else 0)
 
-    def _maybe_injury(self, side: _SideState, minute: int, rng: Random, events: list[MatchEvent9394]) -> None:
+    def _maybe_injury(self, side: _SideState, minute: int, rng: Random, events: list[MatchEvent9394], *, substitution_validator: SubstitutionValidator9394 | None = None) -> None:
         players = side.available_players()
         if not players:
             return
@@ -950,12 +960,22 @@ class FootballMatchEngine9394:
         if not forced_off:
             return
         if side.substitutions < self.laws.max_used_substitutes and side.bench:
-            replacement = max(side.bench, key=lambda p: self._replacement_fit(p, player))
-            idx = side.on_pitch.index(player)
-            side.on_pitch[idx] = replacement
-            side.bench.remove(replacement)
-            side.substitutions += 1
-            events.append(MatchEvent9394(minute, "injury_substitution", side.sheet.team_id, replacement.id, replacement.name, f"Entra {replacement.name}; sale lesionado {player.name}", player.id, player.name))
+            ranked = sorted(side.bench, key=lambda p: self._replacement_fit(p, player), reverse=True)
+            replacement = next((candidate for candidate in ranked if substitution_validator is None or substitution_validator(
+                str(side.sheet.team_id),
+                tuple(str(candidate.id if p.id == player.id else p.id) for p in side.available_players()),
+            )), None)
+            if replacement is not None:
+                idx = side.on_pitch.index(player)
+                side.on_pitch[idx] = replacement
+                side.bench.remove(replacement)
+                side.substitutions += 1
+                events.append(MatchEvent9394(minute, "injury_substitution", side.sheet.team_id, replacement.id, replacement.name, f"Entra {replacement.name}; sale lesionado {player.name}", player.id, player.name))
+                return
+        side.forced_off.add(player.id)
+        detail = f"{player.name} no puede continuar"
+        if side.substitutions >= self.laws.max_used_substitutes or not side.bench:
+            detail += " y no quedan cambios"
         else:
-            side.forced_off.add(player.id)
-            events.append(MatchEvent9394(minute, "injury_forced_off", side.sheet.team_id, player.id, player.name, f"{player.name} no puede continuar y no quedan cambios"))
+            detail += "; no hay sustitución reglamentariamente válida"
+        events.append(MatchEvent9394(minute, "injury_forced_off", side.sheet.team_id, player.id, player.name, detail))

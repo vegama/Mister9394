@@ -1,0 +1,2978 @@
+{
+  "generated_at": "2026-08-18T14:08:04.746732+00:00",
+  "source": "transfermarkt_quicksearch",
+  "processed": 204,
+  "confirmed": 1,
+  "downloaded": 1,
+  "needs_review": 7,
+  "no_candidates": 125,
+  "candidates_no_real_photo": 71,
+  "confirmed_rows": [
+    {
+      "source_id": 9496483,
+      "display_name": "Ersel Uzğur",
+      "country_name": "Turquía",
+      "expected_age": 59,
+      "candidates": [
+        {
+          "spieler_id": "572884",
+          "name": "Ersel Uzğur",
+          "position": "RB",
+          "club": "Retired",
+          "age": "59",
+          "nationality": "Türkiye",
+          "thumb_url": "https://img.a.transfermarkt.technology/portrait/small/572884-1754389764.jpeg?lm=4711",
+          "has_photo": true,
+          "profile_url": "https://www.transfermarkt.com/x/profil/spieler/572884"
+        }
+      ],
+      "matched": {
+        "spieler_id": "572884",
+        "name": "Ersel Uzğur",
+        "position": "RB",
+        "club": "Retired",
+        "age": "59",
+        "nationality": "Türkiye",
+        "thumb_url": "https://img.a.transfermarkt.technology/portrait/small/572884-1754389764.jpeg?lm=4711",
+        "has_photo": true,
+        "profile_url": "https://www.transfermarkt.com/x/profil/spieler/572884"
+      },
+      "decision": "confirmed"
+    }
+  ],
+  "download_results": [
+    {
+      "source_id": 9496483,
+      "spieler_id": "572884",
+      "status": "downloaded",
+      "file": "data\\football9394\\transfermarkt_photos_raw\\9496483.jpg"
+    }
+  ],
+  "needs_review_rows": [
+    {
+      "source_id": 9497245,
+      "display_name": "Demirbay",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [
+        {
+          "spieler_id": "125858",
+          "name": "Kerem Demirbay",
+          "position": "CM",
+          "club": "Kasimpasa",
+          "age": "33",
+          "nationality": "Germany",
+          "thumb_url": "https://img.a.transfermarkt.technology/portrait/small/125858-1761574006.jpg?lm=4711",
+          "has_photo": true,
+          "profile_url": "https://www.transfermarkt.com/x/profil/spieler/125858"
+        },
+        {
+          "spieler_id": "605856",
+          "name": "Hüseyin Demirbay",
+          "position": "CF",
+          "club": "Retired",
+          "age": "53",
+          "nationality": "Türkiye",
+          "thumb_url": "https://img.a.transfermarkt.technology/portrait/small/default.jpg?lm=4711",
+          "has_photo": false,
+          "profile_url": "https://www.transfermarkt.com/x/profil/spieler/605856"
+        },
+        {
+          "spieler_id": "165997",
+          "name": "Burak Demirbay",
+          "position": "CF",
+          "club": "Hansa Scholven",
+          "age": "36",
+          "nationality": "Germany",
+          "thumb_url": "https://img.a.transfermarkt.technology/portrait/small/s_165997_97_2010_1.jpg?lm=4711",
+          "has_photo": true,
+          "profile_url": "https://www.transfermarkt.com/x/profil/spieler/165997"
+        }
+      ],
+      "decision": "needs_review"
+    },
+    {
+      "source_id": 9497309,
+      "display_name": "Ahmet Öztürk",
+      "country_name": "Turquía",
+      "expected_age": 52,
+      "candidates": [
+        {
+          "spieler_id": "1071240",
+          "name": "Ahmet Öztürk",
+          "position": "AM",
+          "club": "Kasimpasa U19",
+          "age": "19",
+          "nationality": "Türkiye",
+          "thumb_url": "https://img.a.transfermarkt.technology/portrait/small/1071240-1770390701.jpg?lm=4711",
+          "has_photo": true,
+          "profile_url": "https://www.transfermarkt.com/x/profil/spieler/1071240"
+        },
+        {
+          "spieler_id": "607745",
+          "name": "Ahmet Öztürk",
+          "position": "Midfield",
+          "club": "Retired",
+          "age": "52",
+          "nationality": "Türkiye",
+          "thumb_url": "https://img.a.transfermarkt.technology/portrait/small/default.jpg?lm=4711",
+          "has_photo": false,
+          "profile_url": "https://www.transfermarkt.com/x/profil/spieler/607745"
+        },
+        {
+          "spieler_id": "18189",
+          "name": "Ahmet Öztürk",
+          "position": "CM",
+          "club": "Unknown",
+          "age": "41",
+          "nationality": "Germany",
+          "thumb_url": "https://img.a.transfermarkt.technology/portrait/small/default.jpg?lm=4711",
+          "has_photo": false,
+          "profile_url": "https://www.transfermarkt.com/x/profil/spieler/18189"
+        },
+        {
+          "spieler_id": "292039",
+          "name": "Ahmet Öztürk",
+          "position": "Defender",
+          "club": "Unknown",
+          "age": "40",
+          "nationality": "Türkiye",
+          "thumb_url": "https://img.a.transfermarkt.technology/portrait/small/default.jpg?lm=4711",
+          "has_photo": false,
+          "profile_url": "https://www.transfermarkt.com/x/profil/spieler/292039"
+        },
+        {
+          "spieler_id": "508666",
+          "name": "Ahmet Öztürk",
+          "position": "Defender",
+          "club": "Retired",
+          "age": "55",
+          "nationality": "Türkiye",
+          "thumb_url": "https://img.a.transfermarkt.technology/portrait/small/default.jpg?lm=4711",
+          "has_photo": false,
+          "profile_url": "https://www.transfermarkt.com/x/profil/spieler/508666"
+        },
+        {
+          "spieler_id": "1414136",
+          "name": "Ahmet Öztürk",
+          "position": "Defender",
+          "club": "Retired",
+          "age": "43",
+          "nationality": "Belgium",
+          "thumb_url": "https://img.a.transfermarkt.technology/portrait/small/default.jpg?lm=4711",
+          "has_photo": false,
+          "profile_url": "https://www.transfermarkt.com/x/profil/spieler/1414136"
+        }
+      ],
+      "decision": "needs_review"
+    },
+    {
+      "source_id": 9496449,
+      "display_name": "Ali Işık",
+      "country_name": "Turquía",
+      "expected_age": 55,
+      "candidates": [
+        {
+          "spieler_id": "25476",
+          "name": "Ali Işık",
+          "position": "LM",
+          "club": "Retired",
+          "age": "43",
+          "nationality": "Türkiye",
+          "thumb_url": "https://img.a.transfermarkt.technology/portrait/small/25476-1464387576.jpg?lm=4711",
+          "has_photo": true,
+          "profile_url": "https://www.transfermarkt.com/x/profil/spieler/25476"
+        },
+        {
+          "spieler_id": "387887",
+          "name": "Ali Işık",
+          "position": "Midfield",
+          "club": "Retired",
+          "age": "55",
+          "nationality": "Türkiye",
+          "thumb_url": "https://img.a.transfermarkt.technology/portrait/small/default.jpg?lm=4711",
+          "has_photo": false,
+          "profile_url": "https://www.transfermarkt.com/x/profil/spieler/387887"
+        },
+        {
+          "spieler_id": "522696",
+          "name": "Ali Isik",
+          "position": "DM",
+          "club": "Rosenthal FC",
+          "age": "29",
+          "nationality": "Germany",
+          "thumb_url": "https://img.a.transfermarkt.technology/portrait/small/default.jpg?lm=4711",
+          "has_photo": false,
+          "profile_url": "https://www.transfermarkt.com/x/profil/spieler/522696"
+        },
+        {
+          "spieler_id": "1067922",
+          "name": "Yağız Ali Işık",
+          "position": "CM",
+          "club": "Cumayeri Belediyespor",
+          "age": "20",
+          "nationality": "Türkiye",
+          "thumb_url": "https://img.a.transfermarkt.technology/portrait/small/default.jpg?lm=4711",
+          "has_photo": false,
+          "profile_url": "https://www.transfermarkt.com/x/profil/spieler/1067922"
+        },
+        {
+          "spieler_id": "1144303",
+          "name": "Ali Isik",
+          "position": "Midfield",
+          "club": "Without Club",
+          "age": "19",
+          "nationality": "Germany",
+          "thumb_url": "https://img.a.transfermarkt.technology/portrait/small/default.jpg?lm=4711",
+          "has_photo": false,
+          "profile_url": "https://www.transfermarkt.com/x/profil/spieler/1144303"
+        }
+      ],
+      "decision": "needs_review"
+    },
+    {
+      "source_id": 9497270,
+      "display_name": "Mehmet Güler",
+      "country_name": "Turquía",
+      "expected_age": 53,
+      "candidates": [
+        {
+          "spieler_id": "598872",
+          "name": "Mehmet Güler",
+          "position": "GK",
+          "club": "Retired",
+          "age": "53",
+          "nationality": "Türkiye",
+          "thumb_url": "https://img.a.transfermarkt.technology/portrait/small/default.jpg?lm=4711",
+          "has_photo": false,
+          "profile_url": "https://www.transfermarkt.com/x/profil/spieler/598872"
+        },
+        {
+          "spieler_id": "292511",
+          "name": "Mehmet Güler",
+          "position": "DM",
+          "club": "Without Club",
+          "age": "34",
+          "nationality": "Türkiye",
+          "thumb_url": "https://img.a.transfermarkt.technology/portrait/small/292511-1640472938.jpg?lm=4711",
+          "has_photo": true,
+          "profile_url": "https://www.transfermarkt.com/x/profil/spieler/292511"
+        }
+      ],
+      "decision": "needs_review"
+    },
+    {
+      "source_id": 9497282,
+      "display_name": "Serkan Arslan",
+      "country_name": "Turquía",
+      "expected_age": 52,
+      "candidates": [
+        {
+          "spieler_id": "619057",
+          "name": "Serkan Arslan",
+          "position": "Midfield",
+          "club": "Retired",
+          "age": "52",
+          "nationality": "Türkiye",
+          "thumb_url": "https://img.a.transfermarkt.technology/portrait/small/default.jpg?lm=4711",
+          "has_photo": false,
+          "profile_url": "https://www.transfermarkt.com/x/profil/spieler/619057"
+        },
+        {
+          "spieler_id": "258060",
+          "name": "Serkan Arslan",
+          "position": "Midfield",
+          "club": "Union St. Willibald",
+          "age": "47",
+          "nationality": "Türkiye",
+          "thumb_url": "https://img.a.transfermarkt.technology/portrait/small/258060-1515193638.jpg?lm=4711",
+          "has_photo": true,
+          "profile_url": "https://www.transfermarkt.com/x/profil/spieler/258060"
+        },
+        {
+          "spieler_id": "313284",
+          "name": "Serkan Arslan",
+          "position": "AM",
+          "club": "ETuS/DJK Schwerte",
+          "age": "-",
+          "nationality": "Germany",
+          "thumb_url": "https://img.a.transfermarkt.technology/portrait/small/default.jpg?lm=4711",
+          "has_photo": false,
+          "profile_url": "https://www.transfermarkt.com/x/profil/spieler/313284"
+        },
+        {
+          "spieler_id": "1489387",
+          "name": "Serkan Arslanpınar",
+          "position": "GK",
+          "club": "Retired",
+          "age": "52",
+          "nationality": "Türkiye",
+          "thumb_url": "https://img.a.transfermarkt.technology/portrait/small/default.jpg?lm=4711",
+          "has_photo": false,
+          "profile_url": "https://www.transfermarkt.com/x/profil/spieler/1489387"
+        }
+      ],
+      "decision": "needs_review"
+    },
+    {
+      "source_id": 9497243,
+      "display_name": "Süleyman Usta",
+      "country_name": "Turquía",
+      "expected_age": 53,
+      "candidates": [
+        {
+          "spieler_id": "586737",
+          "name": "Süleyman Usta",
+          "position": "CB",
+          "club": "Retired",
+          "age": "53",
+          "nationality": "Türkiye",
+          "thumb_url": "https://img.a.transfermarkt.technology/portrait/small/default.jpg?lm=4711",
+          "has_photo": false,
+          "profile_url": "https://www.transfermarkt.com/x/profil/spieler/586737"
+        },
+        {
+          "spieler_id": "1458106",
+          "name": "Süleyman Usta",
+          "position": "LB",
+          "club": "Yataganspor",
+          "age": "24",
+          "nationality": "Türkiye",
+          "thumb_url": "https://img.a.transfermarkt.technology/portrait/small/1458106-1760864107.png?lm=4711",
+          "has_photo": true,
+          "profile_url": "https://www.transfermarkt.com/x/profil/spieler/1458106"
+        }
+      ],
+      "decision": "needs_review"
+    },
+    {
+      "source_id": 9496452,
+      "display_name": "Yunus Kara",
+      "country_name": "Turquía",
+      "expected_age": 54,
+      "candidates": [
+        {
+          "spieler_id": "576675",
+          "name": "Yunus Kara",
+          "position": "Midfield",
+          "club": "Retired",
+          "age": "54",
+          "nationality": "Türkiye",
+          "thumb_url": "https://img.a.transfermarkt.technology/portrait/small/default.jpg?lm=4711",
+          "has_photo": false,
+          "profile_url": "https://www.transfermarkt.com/x/profil/spieler/576675"
+        },
+        {
+          "spieler_id": "28948",
+          "name": "Yunus Karayün",
+          "position": "AM",
+          "club": "Retired",
+          "age": "40",
+          "nationality": "Austria",
+          "thumb_url": "https://img.a.transfermarkt.technology/portrait/small/default.jpg?lm=4711",
+          "has_photo": false,
+          "profile_url": "https://www.transfermarkt.com/x/profil/spieler/28948"
+        },
+        {
+          "spieler_id": "169886",
+          "name": "Yunus Karabacak",
+          "position": "Midfield",
+          "club": "Unknown",
+          "age": "35",
+          "nationality": "Türkiye",
+          "thumb_url": "https://img.a.transfermarkt.technology/portrait/small/169886-1466451371.jpg?lm=4711",
+          "has_photo": true,
+          "profile_url": "https://www.transfermarkt.com/x/profil/spieler/169886"
+        },
+        {
+          "spieler_id": "327179",
+          "name": "Yunus Karakaya",
+          "position": "Midfield",
+          "club": "Penzinger SV",
+          "age": "33",
+          "nationality": "Austria",
+          "thumb_url": "https://img.a.transfermarkt.technology/portrait/small/default.jpg?lm=4711",
+          "has_photo": false,
+          "profile_url": "https://www.transfermarkt.com/x/profil/spieler/327179"
+        },
+        {
+          "spieler_id": "346422",
+          "name": "Yunus Karadağ",
+          "position": "RW",
+          "club": "Sivas Gücü Belediye SK",
+          "age": "27",
+          "nationality": "Türkiye",
+          "thumb_url": "https://img.a.transfermarkt.technology/portrait/small/346422-1662375798.jpg?lm=4711",
+          "has_photo": true,
+          "profile_url": "https://www.transfermarkt.com/x/profil/spieler/346422"
+        },
+        {
+          "spieler_id": "1007742",
+          "name": "Yunus Karaaslan",
+          "position": "CB",
+          "club": "Dogubayazit FSK",
+          "age": "27",
+          "nationality": "Türkiye",
+          "thumb_url": "https://img.a.transfermarkt.technology/portrait/small/1007742-1680362367.png?lm=4711",
+          "has_photo": true,
+          "profile_url": "https://www.transfermarkt.com/x/profil/spieler/1007742"
+        },
+        {
+          "spieler_id": "1178102",
+          "name": "Yunus Karakaya",
+          "position": "DM",
+          "club": "Without Club",
+          "age": "24",
+          "nationality": "Türkiye",
+          "thumb_url": "https://img.a.transfermarkt.technology/portrait/small/1178102-1735245333.png?lm=4711",
+          "has_photo": true,
+          "profile_url": "https://www.transfermarkt.com/x/profil/spieler/1178102"
+        }
+      ],
+      "decision": "needs_review"
+    }
+  ],
+  "no_candidates_rows": [
+    {
+      "source_id": 9497507,
+      "display_name": "Akhsar Iranovich Bekoev",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9496883,
+      "display_name": "Alan Chermenovich Kokoev",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9497490,
+      "display_name": "Aleksandr Alexandrovich Epurash",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9497452,
+      "display_name": "Aleksandr Ivanovich Kazentsov",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9497402,
+      "display_name": "Aleksandr Ivanovich Mozgovoy",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9496861,
+      "display_name": "Aleksandr Mikhailovich Goncharenko",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9496902,
+      "display_name": "Aleksandr Nikolaevich Tikhonov",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9496796,
+      "display_name": "Aleksandr Nikolayevich Gorbachev",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9497444,
+      "display_name": "Aleksandr Sergeyevich Ignatyev",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9497461,
+      "display_name": "Aleksandr Vasilievich Ivanov",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9497488,
+      "display_name": "Aleksandr Vladimirovich Kislyi",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9496822,
+      "display_name": "Aleksandr Yuryevich Shchukin",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9497376,
+      "display_name": "Aleksey Alexandrovich Filippov",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9497403,
+      "display_name": "Aleksey Viktorovich Ostaev",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9497368,
+      "display_name": "Aleksey Yuryevich Perminov",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9496677,
+      "display_name": "Alexander Vladimirovich Smirnov",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9496881,
+      "display_name": "Alexey Valerievich Sobolev",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9497361,
+      "display_name": "Alexey Vyacheslavovich Sergeev",
+      "country_name": null,
+      "expected_age": 60,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9497397,
+      "display_name": "Alier Devlokhovich Ashurmamadov",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9496859,
+      "display_name": "Anatoliy Petrovich Chekanov",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9496820,
+      "display_name": "Andrey Alekseevich Rumyantsev",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9496849,
+      "display_name": "Andrey Alexandrovich Viktorovich",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9497482,
+      "display_name": "Andrey Anatolyevich Netunaev",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9497483,
+      "display_name": "Andrey Anatolyevich Ryabov",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9496666,
+      "display_name": "Andrey Ivanovich Karpenko",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9497512,
+      "display_name": "Andrey Nikolaevich Gubernskiy",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9497513,
+      "display_name": "Andrey Olegovich Lushnikov",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9496873,
+      "display_name": "Andrey Vasilievich Smirnov",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9497456,
+      "display_name": "Andrey Vasilievich Yarygin",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9496782,
+      "display_name": "Andrey Viktorovich Pocheptsov",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9496919,
+      "display_name": "Andrey Vladimirovich Kovalenko",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9497466,
+      "display_name": "Andrey Vladimirovich Lysov",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9496808,
+      "display_name": "Arsen Borisovich Papikyan",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9496879,
+      "display_name": "Bakhodyr Rabanovich Rakhmanov",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9497477,
+      "display_name": "Denis Vitalievich Koberskiy",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9496835,
+      "display_name": "Dinar Anvarovich Sharipov",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9496793,
+      "display_name": "Dmitriy Vadimovich Alekseev",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9496828,
+      "display_name": "Dmitriy Vasilievich Golubev",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9496887,
+      "display_name": "Eduard Vyacheslavovich Posylaev",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9496737,
+      "display_name": "Evgeniy Gennadievich Davletshin",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9497479,
+      "display_name": "Evgeniy Leonidovich Kasyanenko",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9496791,
+      "display_name": "Evgeniy Nikolaevich Zhirov",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9497489,
+      "display_name": "Evgeniy Vladimirovich Golovchenko",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9496801,
+      "display_name": "Fedor Ivanovich Gagloev",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9497515,
+      "display_name": "Gennadi Vladimirovich Strikalov",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9497421,
+      "display_name": "Igor Alexandrovich Arnautov",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9497415,
+      "display_name": "Igor Nikolaevich Tkachenko",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9497480,
+      "display_name": "Igor Viktorovich Perminov",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9497420,
+      "display_name": "Igor Vladimirovich Ignatov",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9497443,
+      "display_name": "Igor Yuryevich Tsaplyuk",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9496725,
+      "display_name": "Ilya Alexandrovich Ratnichkin",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9496852,
+      "display_name": "Konstantin Vladilenovich Yemelyanov",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9497487,
+      "display_name": "Leonid Vladimirovich Kienko",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9497379,
+      "display_name": "Maksim Viktorovich Layushkin",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9497416,
+      "display_name": "Marat Finatovich Safin",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9497440,
+      "display_name": "Marsel Nakipovich Tukhvatullin",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9497388,
+      "display_name": "Mikhail Alexandrovich Bukin",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9496916,
+      "display_name": "Mikhail Anatolyevich Golikov",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9497390,
+      "display_name": "Mikhail Ivanovich Maryushkin",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9496904,
+      "display_name": "Nikolay Petrovich Krestobintsev",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9496876,
+      "display_name": "Oleg Ivanovich Kokarev",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9496734,
+      "display_name": "Oleg Ivanovich Samsonenko",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9496657,
+      "display_name": "Oleg Yuryevich Rozin",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9497386,
+      "display_name": "Oleh Ivanovych Tereshchenko",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9497438,
+      "display_name": "Pavel Anatolyevich Kurakin",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9497475,
+      "display_name": "Pavel Borisovich Yumatov",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9496730,
+      "display_name": "Radik Ramilyevich Yamlikhanov",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9496896,
+      "display_name": "Ramil Kamilevich Valeev",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9496672,
+      "display_name": "Ravil Rufailovich Sabitov",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9497481,
+      "display_name": "Roman Alexandrovich Melnik",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9497486,
+      "display_name": "Roman Mikhailovich Tikhonovetskiy",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9497468,
+      "display_name": "Roman Valentinovich Gapotiy",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9496698,
+      "display_name": "Ruslan Isidorovich Khubetsov",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9497465,
+      "display_name": "Rustam Rezoevich Abdulov",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9496810,
+      "display_name": "Sergey Aleksandrovich Maslov",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9496733,
+      "display_name": "Sergey Aleksandrovich Perednya",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9496817,
+      "display_name": "Sergey Anatolyevich Kuzmin",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9497514,
+      "display_name": "Sergey Borisovich Zhilkin",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9496739,
+      "display_name": "Sergey Ivanovich Alyapkin",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9496781,
+      "display_name": "Sergey Ivanovich Nozikov",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9497516,
+      "display_name": "Sergey Mikhailovich Zhdanov",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9496702,
+      "display_name": "Sergey Pavlovich Pimenov",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9496884,
+      "display_name": "Sergey Semenovich Kozlov",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9496906,
+      "display_name": "Sergey Vasilievich Nikitin",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9497460,
+      "display_name": "Sergey Vasilievich Volobuev",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9496620,
+      "display_name": "Sergey Vasilyevich Nechay",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9497504,
+      "display_name": "Sergey Viktorovich Medvedev",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9496899,
+      "display_name": "Sergey Vladimirovich Dementjev",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9497485,
+      "display_name": "Sergey Vladimirovich Markin",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9496814,
+      "display_name": "Sergey Vyacheslavovich Ragulin",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9496868,
+      "display_name": "Sergey Yuryevich Bondarenko",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9496827,
+      "display_name": "Stanislav Alexandrovich Feoktistov",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9497484,
+      "display_name": "Tengiz Anatolyevich Gatikoev",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9496789,
+      "display_name": "Timur Gadzhievich Bogatyrev",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9497395,
+      "display_name": "Valentin Gennadievich Kiselev",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9496821,
+      "display_name": "Valerian Borisovich Saveljev",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9496865,
+      "display_name": "Valeriy Mikhailovich Lebedev",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9497384,
+      "display_name": "Valeriy Petrovich Zazdravnykh",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9497381,
+      "display_name": "Valeriy Vladimirovich Kleymenov",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9496834,
+      "display_name": "Valeriy Vladimirovich Tumaykin",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9496869,
+      "display_name": "Vasiliy Ivanovich Grytsan",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9497462,
+      "display_name": "Viktor Nikolaevich Kontsevenko",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9496776,
+      "display_name": "Vitaliy Evgenievich Milenin",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9497450,
+      "display_name": "Vladimir Nikolaevich Medvedev",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9497400,
+      "display_name": "Vladimir Viktorovich Konovalov",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9497431,
+      "display_name": "Vladimir Viktorovich Semyonov",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9497419,
+      "display_name": "Vladimir Viktorovich Titov",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9496829,
+      "display_name": "Vladimir Vladimirovich Kireev",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9497457,
+      "display_name": "Vladimir Yuryevich Kaloev",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9496886,
+      "display_name": "Vyacheslav Borisovich Lugovkin",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9497472,
+      "display_name": "Vyacheslav Viktorovich Fomin",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9497380,
+      "display_name": "Vyacheslav Vitalievich Demin",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9497448,
+      "display_name": "Vyacheslav Vyacheslavovich Protsenko",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9497499,
+      "display_name": "Yuri Ivanovich Klyuchnikov",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9496880,
+      "display_name": "Yuri Yuryevich Shpiryuk",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9496833,
+      "display_name": "Yuriy Alexandrovich Garin",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9497467,
+      "display_name": "Yuriy Gennadievich Zaranko",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9497366,
+      "display_name": "Yuriy Stepanovich Konovalov",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9497470,
+      "display_name": "Yuriy Viktorovich Semin",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9497437,
+      "display_name": "Yuriy Vladimirovich Kuznetsov",
+      "country_name": null,
+      "expected_age": null,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9496084,
+      "display_name": "Paulo Edson da Silva",
+      "country_name": "Brasil",
+      "expected_age": 50,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9496041,
+      "display_name": "Nico De Coninck",
+      "country_name": "Bélgica",
+      "expected_age": 52,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9496135,
+      "display_name": "Stefan Van Laere",
+      "country_name": "Bélgica",
+      "expected_age": 53,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9496031,
+      "display_name": "Stefan van Rumst",
+      "country_name": "Bélgica",
+      "expected_age": 54,
+      "candidates": [],
+      "decision": "no_candidates"
+    },
+    {
+      "source_id": 9496214,
+      "display_name": "Nela Petrus N'Ganzadi Kimonekene",
+      "country_name": "Zaire",
+      "expected_age": 57,
+      "candidates": [],
+      "decision": "no_candidates"
+    }
+  ],
+  "candidates_no_real_photo_rows": [
+    {
+      "source_id": 9496500,
+      "display_name": "Ali Mehmedi",
+      "country_name": "Albania",
+      "expected_age": 60,
+      "candidates": [
+        {
+          "spieler_id": "573799",
+          "name": "Ali Mehmedi",
+          "position": "CB",
+          "club": "Retired",
+          "age": "60",
+          "nationality": "Albania",
+          "thumb_url": "https://img.a.transfermarkt.technology/portrait/small/default.jpg?lm=4711",
+          "has_photo": false,
+          "profile_url": "https://www.transfermarkt.com/x/profil/spieler/573799"
+        }
+      ],
+      "decision": "candidates_no_real_photo"
+    },
+    {
+      "source_id": 9496210,
+      "display_name": "Bonide Isumgampala",
+      "country_name": "Burundi",
+      "expected_age": 58,
+      "candidates": [
+        {
+          "spieler_id": "939136",
+          "name": "Bonide Isumgampala",
+          "position": "Midfield",
+          "club": "Retired",
+          "age": "58",
+          "nationality": "Burundi",
+          "thumb_url": "https://img.a.transfermarkt.technology/portrait/small/default.jpg?lm=4711",
+          "has_photo": false,
+          "profile_url": "https://www.transfermarkt.com/x/profil/spieler/939136"
+        }
+      ],
+      "decision": "candidates_no_real_photo"
+    },
+    {
+      "source_id": 9496206,
+      "display_name": "Bart Gijbels",
+      "country_name": "Bélgica",
+      "expected_age": 54,
+      "candidates": [
+        {
+          "spieler_id": "952166",
+          "name": "Bart Gijbels",
+          "position": "Attack",
+          "club": "Retired",
+          "age": "54",
+          "nationality": "Belgium",
+          "thumb_url": "https://img.a.transfermarkt.technology/portrait/small/default.jpg?lm=4711",
+          "has_photo": false,
+          "profile_url": "https://www.transfermarkt.com/x/profil/spieler/952166"
+        }
+      ],
+      "decision": "candidates_no_real_photo"
+    },
+    {
+      "source_id": 9496215,
+      "display_name": "Bart Peeters",
+      "country_name": "Bélgica",
+      "expected_age": 52,
+      "candidates": [
+        {
+          "spieler_id": "415314",
+          "name": "Bart Peeters",
+          "position": "GK",
+          "club": "Retired",
+          "age": "52",
+          "nationality": "Belgium",
+          "thumb_url": "https://img.a.transfermarkt.technology/portrait/small/default.jpg?lm=4711",
+          "has_photo": false,
+          "profile_url": "https://www.transfermarkt.com/x/profil/spieler/415314"
+        }
+      ],
+      "decision": "candidates_no_real_photo"
+    },
+    {
+      "source_id": 9496224,
+      "display_name": "Didier Albert",
+      "country_name": "Bélgica",
+      "expected_age": 52,
+      "candidates": [
+        {
+          "spieler_id": "962507",
+          "name": "Didier Albert",
+          "position": "Attack",
+          "club": "Retired",
+          "age": "52",
+          "nationality": "N/A",
+          "thumb_url": "https://img.a.transfermarkt.technology/portrait/small/default.jpg?lm=4711",
+          "has_photo": false,
+          "profile_url": "https://www.transfermarkt.com/x/profil/spieler/962507"
+        }
+      ],
+      "decision": "candidates_no_real_photo"
+    },
+    {
+      "source_id": 9496347,
+      "display_name": "Eddy Syx",
+      "country_name": "Bélgica",
+      "expected_age": 51,
+      "candidates": [
+        {
+          "spieler_id": "851598",
+          "name": "Eddy Syx",
+          "position": "Defender",
+          "club": "Retired",
+          "age": "51",
+          "nationality": "Belgium",
+          "thumb_url": "https://img.a.transfermarkt.technology/portrait/small/default.jpg?lm=4711",
+          "has_photo": false,
+          "profile_url": "https://www.transfermarkt.com/x/profil/spieler/851598"
+        }
+      ],
+      "decision": "candidates_no_real_photo"
+    },
+    {
+      "source_id": 9496271,
+      "display_name": "Jean-François Demonceau",
+      "country_name": "Bélgica",
+      "expected_age": 52,
+      "candidates": [
+        {
+          "spieler_id": "939134",
+          "name": "Jean-Francois Demonceau",
+          "position": "Midfield",
+          "club": "Retired",
+          "age": "52",
+          "nationality": "Belgium",
+          "thumb_url": "https://img.a.transfermarkt.technology/portrait/small/default.jpg?lm=4711",
+          "has_photo": false,
+          "profile_url": "https://www.transfermarkt.com/x/profil/spieler/939134"
+        }
+      ],
+      "decision": "candidates_no_real_photo"
+    },
+    {
+      "source_id": 9496138,
+      "display_name": "Johan Vandevelde",
+      "country_name": "Bélgica",
+      "expected_age": 53,
+      "candidates": [
+        {
+          "spieler_id": "939982",
+          "name": "Johan Vandevelde",
+          "position": "Midfield",
+          "club": "Retired",
+          "age": "53",
+          "nationality": "Belgium",
+          "thumb_url": "https://img.a.transfermarkt.technology/portrait/small/default.jpg?lm=4711",
+          "has_photo": false,
+          "profile_url": "https://www.transfermarkt.com/x/profil/spieler/939982"
+        }
+      ],
+      "decision": "candidates_no_real_photo"
+    },
+    {
+      "source_id": 9496126,
+      "display_name": "Kristoff de Roy",
+      "country_name": "Bélgica",
+      "expected_age": 52,
+      "candidates": [
+        {
+          "spieler_id": "954888",
+          "name": "Kristoff De Roy",
+          "position": "Defender",
+          "club": "Retired",
+          "age": "52",
+          "nationality": "Belgium",
+          "thumb_url": "https://img.a.transfermarkt.technology/portrait/small/default.jpg?lm=4711",
+          "has_photo": false,
+          "profile_url": "https://www.transfermarkt.com/x/profil/spieler/954888"
+        }
+      ],
+      "decision": "candidates_no_real_photo"
+    },
+    {
+      "source_id": 9496174,
+      "display_name": "Marc Janssen",
+      "country_name": "Bélgica",
+      "expected_age": 52,
+      "candidates": [
+        {
+          "spieler_id": "549047",
+          "name": "Marc Janssen",
+          "position": "CB",
+          "club": "Retired",
+          "age": "52",
+          "nationality": "Belgium",
+          "thumb_url": "https://img.a.transfermarkt.technology/portrait/small/default.jpg?lm=4711",
+          "has_photo": false,
+          "profile_url": "https://www.transfermarkt.com/x/profil/spieler/549047"
+        },
+        {
+          "spieler_id": "367004",
+          "name": "Marc Janßen",
+          "position": "Defender",
+          "club": "Retired",
+          "age": "N/A",
+          "nationality": "N/A",
+          "thumb_url": "https://img.a.transfermarkt.technology/portrait/small/default.jpg?lm=4711",
+          "has_photo": false,
+          "profile_url": "https://www.transfermarkt.com/x/profil/spieler/367004"
+        },
+        {
+          "spieler_id": "1071810",
+          "name": "Marc Janssens",
+          "position": "Midfield",
+          "club": "Retired",
+          "age": "64",
+          "nationality": "Belgium",
+          "thumb_url": "https://img.a.transfermarkt.technology/portrait/small/default.jpg?lm=4711",
+          "has_photo": false,
+          "profile_url": "https://www.transfermarkt.com/x/profil/spieler/1071810"
+        }
+      ],
+      "decision": "candidates_no_real_photo"
+    },
+    {
+      "source_id": 9496236,
+      "display_name": "Olivier Malcorps",
+      "country_name": "Bélgica",
+      "expected_age": 51,
+      "candidates": [
+        {
+          "spieler_id": "566049",
+          "name": "Olivier Malcorps",
+          "position": "LB",
+          "club": "Retired",
+          "age": "51",
+          "nationality": "Belgium",
+          "thumb_url": "https://img.a.transfermarkt.technology/portrait/small/default.jpg?lm=4711",
+          "has_photo": false,
+          "profile_url": "https://www.transfermarkt.com/x/profil/spieler/566049"
+        }
+      ],
+      "decision": "candidates_no_real_photo"
+    },
+    {
+      "source_id": 9496039,
+      "display_name": "Stefaan D'Hondt",
+      "country_name": "Bélgica",
+      "expected_age": 51,
+      "candidates": [
+        {
+          "spieler_id": "903609",
+          "name": "Stefaan D'Hondt",
+          "position": "Midfield",
+          "club": "Retired",
+          "age": "51",
+          "nationality": "Belgium",
+          "thumb_url": "https://img.a.transfermarkt.technology/portrait/small/default.jpg?lm=4711",
+          "has_photo": false,
+          "profile_url": "https://www.transfermarkt.com/x/profil/spieler/903609"
+        }
+      ],
+      "decision": "candidates_no_real_photo"
+    },
+    {
+      "source_id": 9496118,
+      "display_name": "Stijn Thijs",
+      "country_name": "Bélgica",
+      "expected_age": 52,
+      "candidates": [
+        {
+          "spieler_id": "411570",
+          "name": "Stijn Thijs",
+          "position": "GK",
+          "club": "Retired",
+          "age": "52",
+          "nationality": "Belgium",
+          "thumb_url": "https://img.a.transfermarkt.technology/portrait/small/default.jpg?lm=4711",
+          "has_photo": false,
+          "profile_url": "https://www.transfermarkt.com/x/profil/spieler/411570"
+        }
+      ],
+      "decision": "candidates_no_real_photo"
+    },
+    {
+      "source_id": 9496226,
+      "display_name": "Thierry de Jaegher",
+      "country_name": "Bélgica",
+      "expected_age": 56,
+      "candidates": [
+        {
+          "spieler_id": "947622",
+          "name": "Thierry De Jaegher",
+          "position": "Defender",
+          "club": "Retired",
+          "age": "56",
+          "nationality": "Belgium",
+          "thumb_url": "https://img.a.transfermarkt.technology/portrait/small/default.jpg?lm=4711",
+          "has_photo": false,
+          "profile_url": "https://www.transfermarkt.com/x/profil/spieler/947622"
+        }
+      ],
+      "decision": "candidates_no_real_photo"
+    },
+    {
+      "source_id": 9496317,
+      "display_name": "Tim Nuyens",
+      "country_name": "Bélgica",
+      "expected_age": 52,
+      "candidates": [
+        {
+          "spieler_id": "562225",
+          "name": "Tim Nuyens",
+          "position": "GK",
+          "club": "Retired",
+          "age": "52",
+          "nationality": "Belgium",
+          "thumb_url": "https://img.a.transfermarkt.technology/portrait/small/default.jpg?lm=4711",
+          "has_photo": false,
+          "profile_url": "https://www.transfermarkt.com/x/profil/spieler/562225"
+        }
+      ],
+      "decision": "candidates_no_real_photo"
+    },
+    {
+      "source_id": 9496154,
+      "display_name": "Juha Jussila",
+      "country_name": "Finlandia",
+      "expected_age": 50,
+      "candidates": [
+        {
+          "spieler_id": "47849",
+          "name": "Juha Jussila",
+          "position": "Defender",
+          "club": "Retired",
+          "age": "50",
+          "nationality": "Finland",
+          "thumb_url": "https://img.a.transfermarkt.technology/portrait/small/default.jpg?lm=4711",
+          "has_photo": false,
+          "profile_url": "https://www.transfermarkt.com/x/profil/spieler/47849"
+        }
+      ],
+      "decision": "candidates_no_real_photo"
+    },
+    {
+      "source_id": 9496116,
+      "display_name": "Emmanuel Sarpong",
+      "country_name": "Ghana",
+      "expected_age": 54,
+      "candidates": [
+        {
+          "spieler_id": "648458",
+          "name": "Emmanuel Sarpong",
+          "position": "CF",
+          "club": "Berekum Chelsea FC",
+          "age": "28",
+          "nationality": "Ghana",
+          "thumb_url": "https://img.a.transfermarkt.technology/portrait/small/default.jpg?lm=4711",
+          "has_photo": false,
+          "profile_url": "https://www.transfermarkt.com/x/profil/spieler/648458"
+        },
+        {
+          "spieler_id": "951809",
+          "name": "Emmanuel Sarpong",
+          "position": "Attack",
+          "club": "Retired",
+          "age": "54",
+          "nationality": "Ghana",
+          "thumb_url": "https://img.a.transfermarkt.technology/portrait/small/default.jpg?lm=4711",
+          "has_photo": false,
+          "profile_url": "https://www.transfermarkt.com/x/profil/spieler/951809"
+        }
+      ],
+      "decision": "candidates_no_real_photo"
+    },
+    {
+      "source_id": 9496487,
+      "display_name": "Abdullah Kılıç",
+      "country_name": "Turquía",
+      "expected_age": 54,
+      "candidates": [
+        {
+          "spieler_id": "324026",
+          "name": "Abdullah Kılıç",
+          "position": "GK",
+          "club": "Retired",
+          "age": "54",
+          "nationality": "Türkiye",
+          "thumb_url": "https://img.a.transfermarkt.technology/portrait/small/default.jpg?lm=4711",
+          "has_photo": false,
+          "profile_url": "https://www.transfermarkt.com/x/profil/spieler/324026"
+        },
+        {
+          "spieler_id": "605789",
+          "name": "Abdullah Kilic",
+          "position": "LM",
+          "club": "Without Club",
+          "age": "25",
+          "nationality": "N/A",
+          "thumb_url": "https://img.a.transfermarkt.technology/portrait/small/default.jpg?lm=4711",
+          "has_photo": false,
+          "profile_url": "https://www.transfermarkt.com/x/profil/spieler/605789"
+        }
+      ],
+      "decision": "candidates_no_real_photo"
+    },
+    {
+      "source_id": 9497275,
+      "display_name": "Abdussamet Yiğit",
+      "country_name": "Turquía",
+      "expected_age": 51,
+      "candidates": [
+        {
+          "spieler_id": "602633",
+          "name": "Abdussamet Yiğit",
+          "position": "Defender",
+          "club": "Retired",
+          "age": "51",
+          "nationality": "Türkiye",
+          "thumb_url": "https://img.a.transfermarkt.technology/portrait/small/default.jpg?lm=4711",
+          "has_photo": false,
+          "profile_url": "https://www.transfermarkt.com/x/profil/spieler/602633"
+        }
+      ],
+      "decision": "candidates_no_real_photo"
+    },
+    {
+      "source_id": 9497341,
+      "display_name": "Ahmet Bora Orman Kocaman",
+      "country_name": "Turquía",
+      "expected_age": 54,
+      "candidates": [
+        {
+          "spieler_id": "603914",
+          "name": "Ahmet Kocaman",
+          "position": "Attack",
+          "club": "Retired",
+          "age": "54",
+          "nationality": "Türkiye",
+          "thumb_url": "https://img.a.transfermarkt.technology/portrait/small/default.jpg?lm=4711",
+          "has_photo": false,
+          "profile_url": "https://www.transfermarkt.com/x/profil/spieler/603914"
+        }
+      ],
+      "decision": "candidates_no_real_photo"
+    },
+    {
+      "source_id": 9497267,
+      "display_name": "Aykan Atik",
+      "country_name": "Turquía",
+      "expected_age": 54,
+      "candidates": [
+        {
+          "spieler_id": "351250",
+          "name": "Aykan Atik",
+          "position": "LW",
+          "club": "Retired",
+          "age": "54",
+          "nationality": "Türkiye",
+          "thumb_url": "https://img.a.transfermarkt.technology/portrait/small/default.jpg?lm=4711",
+          "has_photo": false,
+          "profile_url": "https://www.transfermarkt.com/x/profil/spieler/351250"
+        }
+      ],
+      "decision": "candidates_no_real_photo"
+    },
+    {
+      "source_id": 9497338,
+      "display_name": "Bahadır Tamsan",
+      "country_name": "Turquía",
+      "expected_age": 51,
+      "candidates": [
+        {
+          "spieler_id": "603793",
+          "name": "Bahadır Tamsan",
+          "position": "CB",
+          "club": "Retired",
+          "age": "51",
+          "nationality": "Türkiye",
+          "thumb_url": "https://img.a.transfermarkt.technology/portrait/small/default.jpg?lm=4711",
+          "has_photo": false,
+          "profile_url": "https://www.transfermarkt.com/x/profil/spieler/603793"
+        }
+      ],
+      "decision": "candidates_no_real_photo"
+    },
+    {
+      "source_id": 9497307,
+      "display_name": "Beyzat Kaya",
+      "country_name": "Turquía",
+      "expected_age": 56,
+      "candidates": [
+        {
+          "spieler_id": "576671",
+          "name": "Beyzat Kaya",
+          "position": "RW",
+          "club": "Retired",
+          "age": "56",
+          "nationality": "Türkiye",
+          "thumb_url": "https://img.a.transfermarkt.technology/portrait/small/default.jpg?lm=4711",
+          "has_photo": false,
+          "profile_url": "https://www.transfermarkt.com/x/profil/spieler/576671"
+        }
+      ],
+      "decision": "candidates_no_real_photo"
+    },
+    {
+      "source_id": 9497299,
+      "display_name": "Birand Yaytaş",
+      "country_name": "Turquía",
+      "expected_age": 51,
+      "candidates": [
+        {
+          "spieler_id": "35685",
+          "name": "Birand Yaytaş",
+          "position": "CB",
+          "club": "Retired",
+          "age": "51",
+          "nationality": "Türkiye",
+          "thumb_url": "https://img.a.transfermarkt.technology/portrait/small/default.jpg?lm=4711",
+          "has_photo": false,
+          "profile_url": "https://www.transfermarkt.com/x/profil/spieler/35685"
+        }
+      ],
+      "decision": "candidates_no_real_photo"
+    },
+    {
+      "source_id": 9497332,
+      "display_name": "Burhan Baygın",
+      "country_name": "Turquía",
+      "expected_age": 59,
+      "candidates": [
+        {
+          "spieler_id": "613370",
+          "name": "Burhan Baygın",
+          "position": "Attack",
+          "club": "Retired",
+          "age": "59",
+          "nationality": "Türkiye",
+          "thumb_url": "https://img.a.transfermarkt.technology/portrait/small/default.jpg?lm=4711",
+          "has_photo": false,
+          "profile_url": "https://www.transfermarkt.com/x/profil/spieler/613370"
+        }
+      ],
+      "decision": "candidates_no_real_photo"
+    },
+    {
+      "source_id": 9497278,
+      "display_name": "Burhanettin Turgut",
+      "country_name": "Turquía",
+      "expected_age": 55,
+      "candidates": [
+        {
+          "spieler_id": "574091",
+          "name": "Burhanettin Turgut",
+          "position": "CB",
+          "club": "Retired",
+          "age": "55",
+          "nationality": "Türkiye",
+          "thumb_url": "https://img.a.transfermarkt.technology/portrait/small/default.jpg?lm=4711",
+          "has_photo": false,
+          "profile_url": "https://www.transfermarkt.com/x/profil/spieler/574091"
+        }
+      ],
+      "decision": "candidates_no_real_photo"
+    },
+    {
+      "source_id": 9497304,
+      "display_name": "Bülent Üstüner",
+      "country_name": "Turquía",
+      "expected_age": 57,
+      "candidates": [
+        {
+          "spieler_id": "615397",
+          "name": "Bülent Üstüner",
+          "position": "Defender",
+          "club": "---",
+          "age": "-",
+          "nationality": "Türkiye",
+          "thumb_url": "https://img.a.transfermarkt.technology/portrait/small/default.jpg?lm=4711",
+          "has_photo": false,
+          "profile_url": "https://www.transfermarkt.com/x/profil/spieler/615397"
+        }
+      ],
+      "decision": "candidates_no_real_photo"
+    },
+    {
+      "source_id": 9497327,
+      "display_name": "Candan Sayın",
+      "country_name": "Turquía",
+      "expected_age": 56,
+      "candidates": [
+        {
+          "spieler_id": "115906",
+          "name": "Candan Sayın",
+          "position": "RB",
+          "club": "Retired",
+          "age": "56",
+          "nationality": "Türkiye",
+          "thumb_url": "https://img.a.transfermarkt.technology/portrait/small/default.jpg?lm=4711",
+          "has_photo": false,
+          "profile_url": "https://www.transfermarkt.com/x/profil/spieler/115906"
+        }
+      ],
+      "decision": "candidates_no_real_photo"
+    },
+    {
+      "source_id": 9497340,
+      "display_name": "Cenk Gürgenç",
+      "country_name": "Turquía",
+      "expected_age": 51,
+      "candidates": [
+        {
+          "spieler_id": "623191",
+          "name": "Cenk Gürgenç",
+          "position": "Attack",
+          "club": "Retired",
+          "age": "51",
+          "nationality": "Türkiye",
+          "thumb_url": "https://img.a.transfermarkt.technology/portrait/small/default.jpg?lm=4711",
+          "has_photo": false,
+          "profile_url": "https://www.transfermarkt.com/x/profil/spieler/623191"
+        }
+      ],
+      "decision": "candidates_no_real_photo"
+    },
+    {
+      "source_id": 9497288,
+      "display_name": "Cihan Bastık",
+      "country_name": "Turquía",
+      "expected_age": 51,
+      "candidates": [
+        {
+          "spieler_id": "619055",
+          "name": "Cihan Bastık",
+          "position": "CB",
+          "club": "Retired",
+          "age": "51",
+          "nationality": "Türkiye",
+          "thumb_url": "https://img.a.transfermarkt.technology/portrait/small/default.jpg?lm=4711",
+          "has_photo": false,
+          "profile_url": "https://www.transfermarkt.com/x/profil/spieler/619055"
+        }
+      ],
+      "decision": "candidates_no_real_photo"
+    },
+    {
+      "source_id": 9497286,
+      "display_name": "Engin Şentürk",
+      "country_name": "Turquía",
+      "expected_age": 52,
+      "candidates": [
+        {
+          "spieler_id": "324033",
+          "name": "Engin Şentürk",
+          "position": "LM",
+          "club": "Retired",
+          "age": "52",
+          "nationality": "Türkiye",
+          "thumb_url": "https://img.a.transfermarkt.technology/portrait/small/default.jpg?lm=4711",
+          "has_photo": false,
+          "profile_url": "https://www.transfermarkt.com/x/profil/spieler/324033"
+        }
+      ],
+      "decision": "candidates_no_real_photo"
+    },
+    {
+      "source_id": 9497329,
+      "display_name": "Ercan Kalkan",
+      "country_name": "Turquía",
+      "expected_age": 59,
+      "candidates": [
+        {
+          "spieler_id": "608397",
+          "name": "Ercan Kalkan",
+          "position": "Defender",
+          "club": "Retired",
+          "age": "59",
+          "nationality": "Türkiye",
+          "thumb_url": "https://img.a.transfermarkt.technology/portrait/small/default.jpg?lm=4711",
+          "has_photo": false,
+          "profile_url": "https://www.transfermarkt.com/x/profil/spieler/608397"
+        }
+      ],
+      "decision": "candidates_no_real_photo"
+    },
+    {
+      "source_id": 9497346,
+      "display_name": "Erdinç Aktaş",
+      "country_name": "Turquía",
+      "expected_age": 56,
+      "candidates": [
+        {
+          "spieler_id": "613973",
+          "name": "Erdinç Aktaş",
+          "position": "Defender",
+          "club": "Retired",
+          "age": "56",
+          "nationality": "Türkiye",
+          "thumb_url": "https://img.a.transfermarkt.technology/portrait/small/default.jpg?lm=4711",
+          "has_photo": false,
+          "profile_url": "https://www.transfermarkt.com/x/profil/spieler/613973"
+        }
+      ],
+      "decision": "candidates_no_real_photo"
+    },
+    {
+      "source_id": 9496464,
+      "display_name": "Erol Bilir",
+      "country_name": "Turquía",
+      "expected_age": 60,
+      "candidates": [
+        {
+          "spieler_id": "579108",
+          "name": "Erol Bilir",
+          "position": "GK",
+          "club": "Retired",
+          "age": "60",
+          "nationality": "Türkiye",
+          "thumb_url": "https://img.a.transfermarkt.technology/portrait/small/default.jpg?lm=4711",
+          "has_photo": false,
+          "profile_url": "https://www.transfermarkt.com/x/profil/spieler/579108"
+        }
+      ],
+      "decision": "candidates_no_real_photo"
+    },
+    {
+      "source_id": 9496546,
+      "display_name": "Erol Gündoğdu",
+      "country_name": "Turquía",
+      "expected_age": 60,
+      "candidates": [
+        {
+          "spieler_id": "586717",
+          "name": "Erol Gündoğdu",
+          "position": "Midfield",
+          "club": "Retired",
+          "age": "60",
+          "nationality": "Türkiye",
+          "thumb_url": "https://img.a.transfermarkt.technology/portrait/small/default.jpg?lm=4711",
+          "has_photo": false,
+          "profile_url": "https://www.transfermarkt.com/x/profil/spieler/586717"
+        }
+      ],
+      "decision": "candidates_no_real_photo"
+    },
+    {
+      "source_id": 9497279,
+      "display_name": "Ersin Şenyurt",
+      "country_name": "Turquía",
+      "expected_age": 54,
+      "candidates": [
+        {
+          "spieler_id": "600014",
+          "name": "Ersin Şenyurt",
+          "position": "Midfield",
+          "club": "Retired",
+          "age": "54",
+          "nationality": "Türkiye",
+          "thumb_url": "https://img.a.transfermarkt.technology/portrait/small/default.jpg?lm=4711",
+          "has_photo": false,
+          "profile_url": "https://www.transfermarkt.com/x/profil/spieler/600014"
+        }
+      ],
+      "decision": "candidates_no_real_photo"
+    },
+    {
+      "source_id": 9497290,
+      "display_name": "Fatih Çayla",
+      "country_name": "Turquía",
+      "expected_age": 50,
+      "candidates": [
+        {
+          "spieler_id": "625594",
+          "name": "Fatih Çayla",
+          "position": "Defender",
+          "club": "Retired",
+          "age": "50",
+          "nationality": "Türkiye",
+          "thumb_url": "https://img.a.transfermarkt.technology/portrait/small/default.jpg?lm=4711",
+          "has_photo": false,
+          "profile_url": "https://www.transfermarkt.com/x/profil/spieler/625594"
+        }
+      ],
+      "decision": "candidates_no_real_photo"
+    },
+    {
+      "source_id": 9496495,
+      "display_name": "Hakan Kayalar",
+      "country_name": "Turquía",
+      "expected_age": 56,
+      "candidates": [
+        {
+          "spieler_id": "607481",
+          "name": "Hakan Kayalar",
+          "position": "Attack",
+          "club": "Retired",
+          "age": "56",
+          "nationality": "Türkiye",
+          "thumb_url": "https://img.a.transfermarkt.technology/portrait/small/default.jpg?lm=4711",
+          "has_photo": false,
+          "profile_url": "https://www.transfermarkt.com/x/profil/spieler/607481"
+        }
+      ],
+      "decision": "candidates_no_real_photo"
+    },
+    {
+      "source_id": 9497335,
+      "display_name": "Hüseyin Saraç",
+      "country_name": "Turquía",
+      "expected_age": 55,
+      "candidates": [
+        {
+          "spieler_id": "613782",
+          "name": "Hüseyin Saraç",
+          "position": "Defender",
+          "club": "Retired",
+          "age": "55",
+          "nationality": "Türkiye",
+          "thumb_url": "https://img.a.transfermarkt.technology/portrait/small/default.jpg?lm=4711",
+          "has_photo": false,
+          "profile_url": "https://www.transfermarkt.com/x/profil/spieler/613782"
+        }
+      ],
+      "decision": "candidates_no_real_photo"
+    },
+    {
+      "source_id": 9496566,
+      "display_name": "Hüseyin Çoban",
+      "country_name": "Turquía",
+      "expected_age": 60,
+      "candidates": [
+        {
+          "spieler_id": "583087",
+          "name": "Hüseyin Çoban",
+          "position": "Midfield",
+          "club": "Retired",
+          "age": "60",
+          "nationality": "Türkiye",
+          "thumb_url": "https://img.a.transfermarkt.technology/portrait/small/default.jpg?lm=4711",
+          "has_photo": false,
+          "profile_url": "https://www.transfermarkt.com/x/profil/spieler/583087"
+        },
+        {
+          "spieler_id": "1566149",
+          "name": "Hüseyin Çoban",
+          "position": "Midfield",
+          "club": "Türkgücü Osnabrück",
+          "age": "24",
+          "nationality": "Türkiye",
+          "thumb_url": "https://img.a.transfermarkt.technology/portrait/small/default.jpg?lm=4711",
+          "has_photo": false,
+          "profile_url": "https://www.transfermarkt.com/x/profil/spieler/1566149"
+        }
+      ],
+      "decision": "candidates_no_real_photo"
+    },
+    {
+      "source_id": 9497333,
+      "display_name": "Kerim Tasçı",
+      "country_name": "Turquía",
+      "expected_age": 55,
+      "candidates": [
+        {
+          "spieler_id": "613574",
+          "name": "Kerim Tasçı",
+          "position": "Midfield",
+          "club": "Retired",
+          "age": "55",
+          "nationality": "Türkiye",
+          "thumb_url": "https://img.a.transfermarkt.technology/portrait/small/default.jpg?lm=4711",
+          "has_photo": false,
+          "profile_url": "https://www.transfermarkt.com/x/profil/spieler/613574"
+        }
+      ],
+      "decision": "candidates_no_real_photo"
+    },
+    {
+      "source_id": 9496562,
+      "display_name": "Levent Açıkgöz",
+      "country_name": "Turquía",
+      "expected_age": 55,
+      "candidates": [
+        {
+          "spieler_id": "115891",
+          "name": "Levent Açıkgöz",
+          "position": "CB",
+          "club": "Retired",
+          "age": "55",
+          "nationality": "Türkiye",
+          "thumb_url": "https://img.a.transfermarkt.technology/portrait/small/default.jpg?lm=4711",
+          "has_photo": false,
+          "profile_url": "https://www.transfermarkt.com/x/profil/spieler/115891"
+        }
+      ],
+      "decision": "candidates_no_real_photo"
+    },
+    {
+      "source_id": 9497238,
+      "display_name": "Mehmet Alarçin",
+      "country_name": "Turquía",
+      "expected_age": 53,
+      "candidates": [
+        {
+          "spieler_id": "613752",
+          "name": "Mehmet Alarçin",
+          "position": "CB",
+          "club": "Retired",
+          "age": "53",
+          "nationality": "Türkiye",
+          "thumb_url": "https://img.a.transfermarkt.technology/portrait/small/default.jpg?lm=4711",
+          "has_photo": false,
+          "profile_url": "https://www.transfermarkt.com/x/profil/spieler/613752"
+        }
+      ],
+      "decision": "candidates_no_real_photo"
+    },
+    {
+      "source_id": 9497310,
+      "display_name": "Mehmet Kalemci",
+      "country_name": "Turquía",
+      "expected_age": 58,
+      "candidates": [
+        {
+          "spieler_id": "577996",
+          "name": "Mehmet Kalemci",
+          "position": "CB",
+          "club": "Retired",
+          "age": "58",
+          "nationality": "Türkiye",
+          "thumb_url": "https://img.a.transfermarkt.technology/portrait/small/default.jpg?lm=4711",
+          "has_photo": false,
+          "profile_url": "https://www.transfermarkt.com/x/profil/spieler/577996"
+        }
+      ],
+      "decision": "candidates_no_real_photo"
+    },
+    {
+      "source_id": 9497325,
+      "display_name": "Mehmet Ünver",
+      "country_name": "Turquía",
+      "expected_age": 59,
+      "candidates": [
+        {
+          "spieler_id": "613769",
+          "name": "Mehmet Ünver",
+          "position": "Defender",
+          "club": "Retired",
+          "age": "59",
+          "nationality": "Türkiye",
+          "thumb_url": "https://img.a.transfermarkt.technology/portrait/small/default.jpg?lm=4711",
+          "has_photo": false,
+          "profile_url": "https://www.transfermarkt.com/x/profil/spieler/613769"
+        },
+        {
+          "spieler_id": "185381",
+          "name": "Mehmet Ünver",
+          "position": "Midfield",
+          "club": "Beckumer SV II",
+          "age": "-",
+          "nationality": "Türkiye",
+          "thumb_url": "https://img.a.transfermarkt.technology/portrait/small/default.jpg?lm=4711",
+          "has_photo": false,
+          "profile_url": "https://www.transfermarkt.com/x/profil/spieler/185381"
+        }
+      ],
+      "decision": "candidates_no_real_photo"
+    },
+    {
+      "source_id": 9497323,
+      "display_name": "Metin Aydemir",
+      "country_name": "Turquía",
+      "expected_age": 57,
+      "candidates": [
+        {
+          "spieler_id": "579056",
+          "name": "Metin Aydemir",
+          "position": "Defender",
+          "club": "Retired",
+          "age": "57",
+          "nationality": "Türkiye",
+          "thumb_url": "https://img.a.transfermarkt.technology/portrait/small/default.jpg?lm=4711",
+          "has_photo": false,
+          "profile_url": "https://www.transfermarkt.com/x/profil/spieler/579056"
+        },
+        {
+          "spieler_id": "1041577",
+          "name": "Metin Aydemir",
+          "position": "Defender",
+          "club": "Retired",
+          "age": "63",
+          "nationality": "Türkiye",
+          "thumb_url": "https://img.a.transfermarkt.technology/portrait/small/default.jpg?lm=4711",
+          "has_photo": false,
+          "profile_url": "https://www.transfermarkt.com/x/profil/spieler/1041577"
+        }
+      ],
+      "decision": "candidates_no_real_photo"
+    },
+    {
+      "source_id": 9497320,
+      "display_name": "Metin Tokoğlu",
+      "country_name": "Turquía",
+      "expected_age": 60,
+      "candidates": [
+        {
+          "spieler_id": "578013",
+          "name": "Metin Tokoğlu",
+          "position": "LB",
+          "club": "Retired",
+          "age": "60",
+          "nationality": "Türkiye",
+          "thumb_url": "https://img.a.transfermarkt.technology/portrait/small/default.jpg?lm=4711",
+          "has_photo": false,
+          "profile_url": "https://www.transfermarkt.com/x/profil/spieler/578013"
+        }
+      ],
+      "decision": "candidates_no_real_photo"
+    },
+    {
+      "source_id": 9497295,
+      "display_name": "Murat Duran",
+      "country_name": "Turquía",
+      "expected_age": 52,
+      "candidates": [
+        {
+          "spieler_id": "599155",
+          "name": "Murat Duran",
+          "position": "RB",
+          "club": "Retired",
+          "age": "52",
+          "nationality": "Türkiye",
+          "thumb_url": "https://img.a.transfermarkt.technology/portrait/small/default.jpg?lm=4711",
+          "has_photo": false,
+          "profile_url": "https://www.transfermarkt.com/x/profil/spieler/599155"
+        },
+        {
+          "spieler_id": "1001961",
+          "name": "Murat Duran",
+          "position": "Midfield",
+          "club": "Inter Eidelstedt II",
+          "age": "-",
+          "nationality": "Türkiye",
+          "thumb_url": "https://img.a.transfermarkt.technology/portrait/small/default.jpg?lm=4711",
+          "has_photo": false,
+          "profile_url": "https://www.transfermarkt.com/x/profil/spieler/1001961"
+        }
+      ],
+      "decision": "candidates_no_real_photo"
+    },
+    {
+      "source_id": 9497266,
+      "display_name": "Murat Şenvardar",
+      "country_name": "Turquía",
+      "expected_age": 54,
+      "candidates": [
+        {
+          "spieler_id": "600370",
+          "name": "Murat Şenvardar",
+          "position": "Midfield",
+          "club": "Retired",
+          "age": "54",
+          "nationality": "Türkiye",
+          "thumb_url": "https://img.a.transfermarkt.technology/portrait/small/default.jpg?lm=4711",
+          "has_photo": false,
+          "profile_url": "https://www.transfermarkt.com/x/profil/spieler/600370"
+        }
+      ],
+      "decision": "candidates_no_real_photo"
+    },
+    {
+      "source_id": 9497277,
+      "display_name": "Mustafa Oğur",
+      "country_name": "Turquía",
+      "expected_age": 51,
+      "candidates": [
+        {
+          "spieler_id": "580574",
+          "name": "Mustafa Oğur",
+          "position": "Midfield",
+          "club": "Retired",
+          "age": "51",
+          "nationality": "Türkiye",
+          "thumb_url": "https://img.a.transfermarkt.technology/portrait/small/default.jpg?lm=4711",
+          "has_photo": false,
+          "profile_url": "https://www.transfermarkt.com/x/profil/spieler/580574"
+        }
+      ],
+      "decision": "candidates_no_real_photo"
+    },
+    {
+      "source_id": 9496572,
+      "display_name": "Nejat Özyıldırım",
+      "country_name": "Turquía",
+      "expected_age": 57,
+      "candidates": [
+        {
+          "spieler_id": "613369",
+          "name": "Nejat Özyıldırım",
+          "position": "Defender",
+          "club": "Retired",
+          "age": "57",
+          "nationality": "Türkiye",
+          "thumb_url": "https://img.a.transfermarkt.technology/portrait/small/default.jpg?lm=4711",
+          "has_photo": false,
+          "profile_url": "https://www.transfermarkt.com/x/profil/spieler/613369"
+        }
+      ],
+      "decision": "candidates_no_real_photo"
+    },
+    {
+      "source_id": 9497297,
+      "display_name": "Orkan Şevket Yurtkoru",
+      "country_name": "Turquía",
+      "expected_age": 51,
+      "candidates": [
+        {
+          "spieler_id": "607128",
+          "name": "Orkan Yurtkoru",
+          "position": "Defender",
+          "club": "Retired",
+          "age": "51",
+          "nationality": "Türkiye",
+          "thumb_url": "https://img.a.transfermarkt.technology/portrait/small/default.jpg?lm=4711",
+          "has_photo": false,
+          "profile_url": "https://www.transfermarkt.com/x/profil/spieler/607128"
+        }
+      ],
+      "decision": "candidates_no_real_photo"
+    },
+    {
+      "source_id": 9497344,
+      "display_name": "Ramazan Baybatmaz",
+      "country_name": "Turquía",
+      "expected_age": 57,
+      "candidates": [
+        {
+          "spieler_id": "574013",
+          "name": "Ramazan Baybatmaz",
+          "position": "Midfield",
+          "club": "Retired",
+          "age": "57",
+          "nationality": "Türkiye",
+          "thumb_url": "https://img.a.transfermarkt.technology/portrait/small/default.jpg?lm=4711",
+          "has_photo": false,
+          "profile_url": "https://www.transfermarkt.com/x/profil/spieler/574013"
+        }
+      ],
+      "decision": "candidates_no_real_photo"
+    },
+    {
+      "source_id": 9497291,
+      "display_name": "Ramazan Gürbüz",
+      "country_name": "Turquía",
+      "expected_age": 49,
+      "candidates": [
+        {
+          "spieler_id": "625562",
+          "name": "Ramazan Gürbüz",
+          "position": "Attack",
+          "club": "Retired",
+          "age": "49",
+          "nationality": "Türkiye",
+          "thumb_url": "https://img.a.transfermarkt.technology/portrait/small/default.jpg?lm=4711",
+          "has_photo": false,
+          "profile_url": "https://www.transfermarkt.com/x/profil/spieler/625562"
+        }
+      ],
+      "decision": "candidates_no_real_photo"
+    },
+    {
+      "source_id": 9496514,
+      "display_name": "Ramazan Konya",
+      "country_name": "Turquía",
+      "expected_age": 57,
+      "candidates": [
+        {
+          "spieler_id": "577999",
+          "name": "Ramazan Konya",
+          "position": "Attack",
+          "club": "Retired",
+          "age": "57",
+          "nationality": "Türkiye",
+          "thumb_url": "https://img.a.transfermarkt.technology/portrait/small/default.jpg?lm=4711",
+          "has_photo": false,
+          "profile_url": "https://www.transfermarkt.com/x/profil/spieler/577999"
+        }
+      ],
+      "decision": "candidates_no_real_photo"
+    },
+    {
+      "source_id": 9497234,
+      "display_name": "Sadettin Demirtaş",
+      "country_name": "Turquía",
+      "expected_age": 57,
+      "candidates": [
+        {
+          "spieler_id": "607482",
+          "name": "Sadettin Demirtaş",
+          "position": "CF",
+          "club": "Retired",
+          "age": "57",
+          "nationality": "Türkiye",
+          "thumb_url": "https://img.a.transfermarkt.technology/portrait/small/default.jpg?lm=4711",
+          "has_photo": false,
+          "profile_url": "https://www.transfermarkt.com/x/profil/spieler/607482"
+        }
+      ],
+      "decision": "candidates_no_real_photo"
+    },
+    {
+      "source_id": 9497343,
+      "display_name": "Sami Başar",
+      "country_name": "Turquía",
+      "expected_age": 56,
+      "candidates": [
+        {
+          "spieler_id": "607677",
+          "name": "Sami Başar",
+          "position": "LB",
+          "club": "Retired",
+          "age": "56",
+          "nationality": "Türkiye",
+          "thumb_url": "https://img.a.transfermarkt.technology/portrait/small/default.jpg?lm=4711",
+          "has_photo": false,
+          "profile_url": "https://www.transfermarkt.com/x/profil/spieler/607677"
+        }
+      ],
+      "decision": "candidates_no_real_photo"
+    },
+    {
+      "source_id": 9497298,
+      "display_name": "Serdar Meriç",
+      "country_name": "Turquía",
+      "expected_age": 48,
+      "candidates": [
+        {
+          "spieler_id": "618670",
+          "name": "Serdar Meriç",
+          "position": "Attack",
+          "club": "Retired",
+          "age": "48",
+          "nationality": "Türkiye",
+          "thumb_url": "https://img.a.transfermarkt.technology/portrait/small/default.jpg?lm=4711",
+          "has_photo": false,
+          "profile_url": "https://www.transfermarkt.com/x/profil/spieler/618670"
+        }
+      ],
+      "decision": "candidates_no_real_photo"
+    },
+    {
+      "source_id": 9497303,
+      "display_name": "Soner Büyükergün",
+      "country_name": "Turquía",
+      "expected_age": 57,
+      "candidates": [
+        {
+          "spieler_id": "607744",
+          "name": "Soner Büyükergun",
+          "position": "CF",
+          "club": "Retired",
+          "age": "57",
+          "nationality": "Türkiye",
+          "thumb_url": "https://img.a.transfermarkt.technology/portrait/small/default.jpg?lm=4711",
+          "has_photo": false,
+          "profile_url": "https://www.transfermarkt.com/x/profil/spieler/607744"
+        }
+      ],
+      "decision": "candidates_no_real_photo"
+    },
+    {
+      "source_id": 9497342,
+      "display_name": "Talat Alptekin",
+      "country_name": "Turquía",
+      "expected_age": 54,
+      "candidates": [
+        {
+          "spieler_id": "624351",
+          "name": "Talat Alptekin",
+          "position": "Midfield",
+          "club": "Retired",
+          "age": "54",
+          "nationality": "Türkiye",
+          "thumb_url": "https://img.a.transfermarkt.technology/portrait/small/default.jpg?lm=4711",
+          "has_photo": false,
+          "profile_url": "https://www.transfermarkt.com/x/profil/spieler/624351"
+        }
+      ],
+      "decision": "candidates_no_real_photo"
+    },
+    {
+      "source_id": 9496518,
+      "display_name": "Tarık Üstün",
+      "country_name": "Turquía",
+      "expected_age": 58,
+      "candidates": [
+        {
+          "spieler_id": "576664",
+          "name": "Tarık Üstün",
+          "position": "Defender",
+          "club": "Retired",
+          "age": "58",
+          "nationality": "Türkiye",
+          "thumb_url": "https://img.a.transfermarkt.technology/portrait/small/default.jpg?lm=4711",
+          "has_photo": false,
+          "profile_url": "https://www.transfermarkt.com/x/profil/spieler/576664"
+        }
+      ],
+      "decision": "candidates_no_real_photo"
+    },
+    {
+      "source_id": 9497334,
+      "display_name": "Tolga Sarı",
+      "country_name": "Turquía",
+      "expected_age": 54,
+      "candidates": [
+        {
+          "spieler_id": "615398",
+          "name": "Tolga Sarı",
+          "position": "Midfield",
+          "club": "Retired",
+          "age": "54",
+          "nationality": "Türkiye",
+          "thumb_url": "https://img.a.transfermarkt.technology/portrait/small/default.jpg?lm=4711",
+          "has_photo": false,
+          "profile_url": "https://www.transfermarkt.com/x/profil/spieler/615398"
+        }
+      ],
+      "decision": "candidates_no_real_photo"
+    },
+    {
+      "source_id": 9497324,
+      "display_name": "Uğur Eren",
+      "country_name": "Turquía",
+      "expected_age": 60,
+      "candidates": [
+        {
+          "spieler_id": "576691",
+          "name": "Uğur Eren",
+          "position": "Midfield",
+          "club": "Retired",
+          "age": "60",
+          "nationality": "Türkiye",
+          "thumb_url": "https://img.a.transfermarkt.technology/portrait/small/default.jpg?lm=4711",
+          "has_photo": false,
+          "profile_url": "https://www.transfermarkt.com/x/profil/spieler/576691"
+        }
+      ],
+      "decision": "candidates_no_real_photo"
+    },
+    {
+      "source_id": 9496504,
+      "display_name": "Varol Özhan",
+      "country_name": "Turquía",
+      "expected_age": 58,
+      "candidates": [
+        {
+          "spieler_id": "581320",
+          "name": "Varol Özhan",
+          "position": "GK",
+          "club": "Retired",
+          "age": "58",
+          "nationality": "Türkiye",
+          "thumb_url": "https://img.a.transfermarkt.technology/portrait/small/default.jpg?lm=4711",
+          "has_photo": false,
+          "profile_url": "https://www.transfermarkt.com/x/profil/spieler/581320"
+        }
+      ],
+      "decision": "candidates_no_real_photo"
+    },
+    {
+      "source_id": 9497235,
+      "display_name": "Volkan Alpacar",
+      "country_name": "Turquía",
+      "expected_age": 53,
+      "candidates": [
+        {
+          "spieler_id": "613575",
+          "name": "Volkan Alpacar",
+          "position": "CF",
+          "club": "Retired",
+          "age": "53",
+          "nationality": "Türkiye",
+          "thumb_url": "https://img.a.transfermarkt.technology/portrait/small/default.jpg?lm=4711",
+          "has_photo": false,
+          "profile_url": "https://www.transfermarkt.com/x/profil/spieler/613575"
+        }
+      ],
+      "decision": "candidates_no_real_photo"
+    },
+    {
+      "source_id": 9497319,
+      "display_name": "Yasin Avcıoğlu",
+      "country_name": "Turquía",
+      "expected_age": 54,
+      "candidates": [
+        {
+          "spieler_id": "607480",
+          "name": "Yasin Avcıoğlu",
+          "position": "CF",
+          "club": "Retired",
+          "age": "54",
+          "nationality": "Türkiye",
+          "thumb_url": "https://img.a.transfermarkt.technology/portrait/small/default.jpg?lm=4711",
+          "has_photo": false,
+          "profile_url": "https://www.transfermarkt.com/x/profil/spieler/607480"
+        }
+      ],
+      "decision": "candidates_no_real_photo"
+    },
+    {
+      "source_id": 9497296,
+      "display_name": "Yasin Balcı",
+      "country_name": "Turquía",
+      "expected_age": 51,
+      "candidates": [
+        {
+          "spieler_id": "607483",
+          "name": "Yasin Balcı",
+          "position": "Midfield",
+          "club": "Retired",
+          "age": "51",
+          "nationality": "Türkiye",
+          "thumb_url": "https://img.a.transfermarkt.technology/portrait/small/default.jpg?lm=4711",
+          "has_photo": false,
+          "profile_url": "https://www.transfermarkt.com/x/profil/spieler/607483"
+        }
+      ],
+      "decision": "candidates_no_real_photo"
+    },
+    {
+      "source_id": 9496543,
+      "display_name": "Yusuf Uzuner",
+      "country_name": "Turquía",
+      "expected_age": 63,
+      "candidates": [
+        {
+          "spieler_id": "576646",
+          "name": "Yusuf Uzuner",
+          "position": "RB",
+          "club": "Retired",
+          "age": "63",
+          "nationality": "Türkiye",
+          "thumb_url": "https://img.a.transfermarkt.technology/portrait/small/default.jpg?lm=4711",
+          "has_photo": false,
+          "profile_url": "https://www.transfermarkt.com/x/profil/spieler/576646"
+        }
+      ],
+      "decision": "candidates_no_real_photo"
+    },
+    {
+      "source_id": 9497284,
+      "display_name": "Zafer Baştan",
+      "country_name": "Turquía",
+      "expected_age": 50,
+      "candidates": [
+        {
+          "spieler_id": "619029",
+          "name": "Zafer Baştan",
+          "position": "CM",
+          "club": "Retired",
+          "age": "50",
+          "nationality": "Türkiye",
+          "thumb_url": "https://img.a.transfermarkt.technology/portrait/small/default.jpg?lm=4711",
+          "has_photo": false,
+          "profile_url": "https://www.transfermarkt.com/x/profil/spieler/619029"
+        }
+      ],
+      "decision": "candidates_no_real_photo"
+    },
+    {
+      "source_id": 9497289,
+      "display_name": "İlker Özdemir",
+      "country_name": "Turquía",
+      "expected_age": 51,
+      "candidates": [
+        {
+          "spieler_id": "619056",
+          "name": "İlker Özdemir",
+          "position": "Midfield",
+          "club": "Retired",
+          "age": "51",
+          "nationality": "Türkiye",
+          "thumb_url": "https://img.a.transfermarkt.technology/portrait/small/default.jpg?lm=4711",
+          "has_photo": false,
+          "profile_url": "https://www.transfermarkt.com/x/profil/spieler/619056"
+        }
+      ],
+      "decision": "candidates_no_real_photo"
+    },
+    {
+      "source_id": 9497347,
+      "display_name": "Şenol Ulusavaş",
+      "country_name": "Turquía",
+      "expected_age": 63,
+      "candidates": [
+        {
+          "spieler_id": "214924",
+          "name": "Şenol Ulusavaş",
+          "position": "CF",
+          "club": "Retired",
+          "age": "63",
+          "nationality": "Türkiye",
+          "thumb_url": "https://img.a.transfermarkt.technology/portrait/small/default.jpg?lm=4711",
+          "has_photo": false,
+          "profile_url": "https://www.transfermarkt.com/x/profil/spieler/214924"
+        }
+      ],
+      "decision": "candidates_no_real_photo"
+    }
+  ],
+  "normalize_report": {
+    "status": "complete",
+    "target_size": [
+      40,
+      55
+    ],
+    "format": "JPEG",
+    "mode": "RGB",
+    "converted": 1,
+    "skipped_existing": 0,
+    "unresolved": 0,
+    "invalid": 0,
+    "converted_rows": [
+      {
+        "source": "C:\\Users\\jaric\\Documents\\Mister9394\\data\\football9394\\transfermarkt_photos_raw\\9496483.jpg",
+        "destination": "C:\\Users\\jaric\\Documents\\Mister9394\\frontend\\public\\historical9394\\players\\9496483.jpg",
+        "original_size": [
+          139,
+          181
+        ],
+        "output_size": [
+          40,
+          55
+        ],
+        "mode": "RGB",
+        "source_id": 9496483
+      }
+    ],
+    "unresolved_files": [],
+    "invalid_files": []
+  }
+}

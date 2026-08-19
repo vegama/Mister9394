@@ -76,7 +76,7 @@ def test_m10_news_is_causal_and_deduplicates_source_events():
 def test_m11_all_active_competitions_have_user_facing_directory_and_detail():
     career = ManagerCareerRuntime9394.create(team_id=16, league_id=1, seed=1115, through_matchday=7)
     directory = career.competition_directory()
-    assert len(directory) == 30
+    assert len(directory) == 41
     assert {row["kind"] for row in directory} == {"league", "tournament"}
     league_ids={int(row["source_id"]) for row in directory if row["kind"]=="league"}
     assert {930057,930015,930047} <= league_ids
@@ -103,7 +103,7 @@ def test_m12_rollover_creates_memorable_recap_honours_news_and_history():
     assert recap["champions"] and all(row.get("competition_name") and row.get("team_name") for row in recap["champions"])
     assert all("champion_manager" in row and "champion_squad" in row for row in recap["champions"])
     assert any(row.get("champion_squad") for row in recap["champions"])
-    assert len(snap["honours"]) == 29
+    assert len(snap["honours"]) == 40
     assert any(item["category"] in {"Competiciones", "Temporada"} for item in snap["news_feed"])
 
 
@@ -188,8 +188,8 @@ def test_m15_three_season_product_gate_preserves_history_world_and_playability()
     snap = career.snapshot()
     assert snap["season"] == "1996-97"
     assert len(snap["season_archive"]) == 3 and len(snap["season_recaps"]) == 3
-    assert len(snap["honours"]) == 75 and len(snap["season_transition_log"]) == 3
-    assert len(career.competition_directory()) == 30
+    assert len(snap["honours"]) == 120 and len(snap["season_transition_log"]) == 3
+    assert len(career.competition_directory()) == 41
     assert snap["news_feed"] and snap["job_status"] == "active"
 
 

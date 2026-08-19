@@ -2,9 +2,11 @@ from __future__ import annotations
 
 from pathlib import Path
 from typing import Any
-import copy, hashlib, json
+import copy, hashlib, json, sys
 
 ROOT=Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(ROOT/'backend'))
+from app.football9394.player_names import preserve_full_name_and_shorten
 DATA=ROOT/'data'/'football9394'
 SNAP=DATA/'historical_snapshot.json'; REG=DATA/'created_players_registry.json'; PHOTO=DATA/'bdfutbol_photo_queue.json'
 STAGE=DATA/'russia_1993_roster_staging.json'; LINKS=DATA/'russia_profile_links_v045.json'; CONTEXT=DATA/'country_context_1993.json'
@@ -123,6 +125,7 @@ def main()->None:
         aliases.setdefault('project_display_before_v045',old_name)
         aliases['project_display_v045']=full
         p['display_name']=full; p['first_name']=first; p['surname1']=surname
+        preserve_full_name_and_shorten(p)
         p['bdfutbol_id']=link['bdfutbol_id']; p['bdfutbol_url']=link['bdfutbol_url']; p['bdfutbol_squad_url']=link['squad_url']
         p['historical_profile_source']='BDFutbol individual profile + Russia batch identity review v0.45'
         p['historical_profile_source_url']=link['bdfutbol_url']; p['historical_profile_identity_status']='bdfutbol_individual_profile_resolved_v045'
@@ -133,7 +136,7 @@ def main()->None:
             p['citizenship_1993_resolution']='unresolved_not_inferred_from_birth_club_name_or_later_profile_v045'
         if p.get('international_country_id') is None:
             p['nationality_resolution']='1993_gameplay_identity_unresolved_no_birthplace_default_v045'
-        row.update({'resolved_display_name':full,'individual_profile_source_url':link['bdfutbol_url'],'profile_source_url':link['bdfutbol_url'],'profile_source':p['historical_profile_source'],'bdfutbol_id':link['bdfutbol_id'],'name_transliterations':aliases,'profile_identity_status':p['historical_profile_identity_status'],'profile_metadata_status':p['historical_profile_metadata_status']})
+        row.update({'resolved_display_name':p.get('display_name'),'individual_profile_source_url':link['bdfutbol_url'],'profile_source_url':link['bdfutbol_url'],'profile_source':p['historical_profile_source'],'bdfutbol_id':link['bdfutbol_id'],'name_transliterations':aliases,'profile_identity_status':p['historical_profile_identity_status'],'profile_metadata_status':p['historical_profile_metadata_status']})
         # Patch only the subset for which the individual page metadata was explicitly transcribed in this pass.
         if original_sid in DETAILS:
             dob,place,territory,profile_pos,height,weight=DETAILS[original_sid]

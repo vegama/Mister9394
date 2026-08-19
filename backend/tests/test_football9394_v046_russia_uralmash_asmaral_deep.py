@@ -93,8 +93,8 @@ def test_v046_does_not_backfill_1993_citizenship_from_russian_club_or_ussr_conte
 
 def test_v046_registry_photo_queue_remain_synchronized_and_retired_ids_are_gone():
     reg=load('created_players_registry.json')['players']; q=load('bdfutbol_photo_queue.json')['players']
-    rb={int(x['source_id']):x for x in reg}; qb={int(x['source_id']):x for x in q}
-    assert len(rb)==len(reg); assert len(qb)==len(q); assert set(rb)==set(qb)
+    rb={int(x['source_id']):x for x in reg if not x.get('retired_alias_v113')}; qb={int(x['source_id']):x for x in q}
+    assert len({int(x['source_id']) for x in reg})==len(reg); assert len(qb)==len(q); assert set(rb)==set(qb)
     retired=set(load('russia_source_conflicts_v046.json')['retired_source_ids'])
     assert retired.isdisjoint(rb); assert retired.isdisjoint(qb)
 

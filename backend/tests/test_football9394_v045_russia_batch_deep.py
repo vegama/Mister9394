@@ -78,8 +78,8 @@ def test_v045_ussr_birth_state_stays_separate_from_successor_territory_and_citiz
 
 def test_v045_registry_photo_queue_and_profile_ids_are_unique():
     reg=load('created_players_registry.json')['players']; q=load('bdfutbol_photo_queue.json')['players']
-    rb={int(x['source_id']):x for x in reg}; qb={int(x['source_id']):x for x in q}
-    assert len(rb)==len(reg); assert len(qb)==len(q); assert set(rb)==set(qb)
+    rb={int(x['source_id']):x for x in reg if not x.get('retired_alias_v113')}; qb={int(x['source_id']):x for x in q}
+    assert len({int(x['source_id']) for x in reg})==len(reg); assert len(qb)==len(q); assert set(rb)==set(qb)
     assert 9496652 not in rb and 9496652 not in qb
 
     stage=load('russia_1993_roster_staging.json')

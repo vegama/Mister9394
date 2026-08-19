@@ -24,7 +24,7 @@ def test_v039_beveren_roles_and_historical_states():
     assert by[9496032]['profile_review_required'] is True and 'sweeper' in by[9496032]['historical_profile_source_note'].lower()
 
 def test_v039_registry_queue_photo_links():
-    reg=load('created_players_registry.json'); q=load('bdfutbol_photo_queue.json'); rb={int(x['source_id']):x for x in reg['players']}; qb={int(x['source_id']):x for x in q['players']}
+    reg=load('created_players_registry.json'); q=load('bdfutbol_photo_queue.json'); rb={int(x['source_id']):x for x in reg['players'] if not x.get('retired_alias_v113')}; qb={int(x['source_id']):x for x in q['players']}
     assert set(rb)==set(qb)
     ids=[9496017,9496022,9496011,9494182,9496021,9496013,9496025,9496030,9496029,9496027,9496026,9496028,9496032,9496024,9496012,9496015,9496023,9496020,9496018,9496031,9496016,9496019,9496014]
     for sid in ids:

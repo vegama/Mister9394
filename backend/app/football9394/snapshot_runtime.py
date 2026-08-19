@@ -12,6 +12,10 @@ from dataclasses import dataclass, field
 from datetime import date, datetime
 from functools import lru_cache
 import json
+try:
+    import orjson
+except ImportError:  # pragma: no cover - compatibility fallback
+    orjson = None
 from pathlib import Path
 from typing import Any
 
@@ -125,6 +129,8 @@ class FootballUniverseSnapshot9394:
         self.players_by_id = {int(row["source_id"]): row for row in self.payload.get("players", [])}
         self.players_by_team: dict[int, list[dict[str, Any]]] = {}
         for player in self.payload.get("players", []):
+            if player.get("retired"):
+                continue
             self.players_by_team.setdefault(int(player["team_id"]), []).append(player)
         for rows in self.players_by_team.values():
             rows.sort(key=lambda p: ((p.get("shirt_number") is None), p.get("shirt_number") or 999, p.get("display_name") or ""))
@@ -196,7 +202,17 @@ class FootballUniverseSnapshot9394:
         transfers, but are not inserted into a new career.  Tournaments in this
         snapshot are already filtered by `Torneo.Admitido` and season overlap.
         """
-        return [row for row in self.competitions() if bool(row.get("admitted"))]
+        rows = [row for row in self.competitions() if bool(row.get("admitted"))]
+        # Domestic cups absent from the imported MDB selector are derived only
+        # for career play.  Keeping them out of ``competitions()`` preserves
+        # source provenance while making them first-class in the living world.
+        from .domestic_cups import domestic_cup_competition_rows
+        known={(str(row.get("kind")), int(row.get("source_id") or 0)) for row in rows}
+        for row in domestic_cup_competition_rows():
+            key=(str(row["kind"]), int(row["source_id"]))
+            if key not in known:
+                rows.append(row); known.add(key)
+        return rows
 
     def team(self, team_id: int) -> dict[str, Any] | None:
         row = self.teams_by_id.get(team_id)
@@ -358,7 +374,16 @@ class FootballUniverseSnapshot9394:
 
 
 def load_runtime_snapshot(path: str | Path = DEFAULT_SNAPSHOT_PATH) -> FootballUniverseSnapshot9394:
-    payload = json.loads(Path(path).read_text(encoding="utf-8"))
+    snapshot_path = Path(path)
+    # The bundled historical universe is ~22 MB and dominates a true cold
+    # process start. orjson already ships with the desktop backend for career
+    # saves and parses UTF-8 bytes around 2x faster than stdlib json here. Keep
+    # the stdlib fallback so source/development environments remain compatible.
+    if orjson is not None:
+        payload = orjson.loads(snapshot_path.read_bytes())
+    else:
+        with snapshot_path.open("r", encoding="utf-8") as handle:
+            payload = json.load(handle)
     return FootballUniverseSnapshot9394(payload)
 
 

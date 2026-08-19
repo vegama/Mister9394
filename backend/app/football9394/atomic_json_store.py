@@ -4,6 +4,11 @@ import json
 import logging
 import os
 import shutil
+
+try:
+    import orjson
+except ImportError:  # pragma: no cover - compatibility fallback
+    orjson = None
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Callable
@@ -27,7 +32,15 @@ def _fsync_directory(path: Path) -> None:
 
 
 def _read_json(path: Path, validator: Validator) -> dict[str, Any]:
-    payload = json.loads(path.read_text(encoding="utf-8"))
+    if orjson is not None:
+        # orjson parses UTF-8 bytes directly, avoiding Python's slower Unicode
+        # decoder + stdlib JSON scanner on 8-12 MB career saves.
+        payload = orjson.loads(path.read_bytes())
+    else:
+        # Compatibility fallback for environments where the optional wheel is
+        # not available.
+        with path.open("r", encoding="utf-8") as handle:
+            payload = json.load(handle)
     if not isinstance(payload, dict):
         raise ValueError("el save no contiene un objeto JSON")
     validator(payload)
@@ -51,9 +64,12 @@ def _publish_backup(backup: Path, encoded: bytes) -> None:
     backup.parent.mkdir(parents=True, exist_ok=True)
     previous = backup.with_suffix(backup.suffix + ".prev")
     if backup.exists():
-        previous_tmp = previous.with_suffix(previous.suffix + ".tmp")
-        _write_bytes_fsynced(previous_tmp, backup.read_bytes())
-        os.replace(previous_tmp, previous)
+        # The current backup is already a validated, fsynced file. Rotate it
+        # atomically instead of reading and rewriting another multi-megabyte
+        # copy on every action. If publishing the new backup fails afterwards,
+        # recovery still has this known-good ``.prev`` rung.
+        os.replace(backup, previous)
+        _fsync_directory(backup.parent)
     backup_tmp = backup.with_suffix(backup.suffix + ".tmp")
     _write_bytes_fsynced(backup_tmp, encoded)
     os.replace(backup_tmp, backup)
@@ -64,12 +80,21 @@ def atomic_json_save(path: Path, payload: dict[str, Any], *, validator: Validato
     path.parent.mkdir(parents=True, exist_ok=True)
     backup = _backup_path(path, backup_root)
 
-    encoded = (json.dumps(payload, ensure_ascii=False, indent=2) + "\n").encode("utf-8")
+    # Validate the in-memory state before touching disk. ``json.dumps`` below is
+    # itself the serialization gate (and still fails on non-JSON values), so
+    # parsing the just-written 10+ MB temporary file again only duplicated CPU
+    # and I/O on every player action. Compact JSON also cuts save/load bytes by
+    # roughly a third while preserving exactly the same recovery format.
+    validator(payload)
+    if orjson is not None:
+        encoded = orjson.dumps(
+            payload,
+            option=orjson.OPT_NON_STR_KEYS | orjson.OPT_APPEND_NEWLINE | orjson.OPT_PASSTHROUGH_DATETIME,
+        )
+    else:
+        encoded = (json.dumps(payload, ensure_ascii=False, separators=(",", ":")) + "\n").encode("utf-8")
     tmp = path.with_suffix(path.suffix + ".tmp")
     _write_bytes_fsynced(tmp, encoded)
-    # Validation happens before the atomic replacement, so a serialization or
-    # schema problem cannot destroy the current primary.
-    _read_json(tmp, validator)
     os.replace(tmp, path)
     _fsync_directory(path.parent)
 
@@ -78,6 +103,33 @@ def atomic_json_save(path: Path, payload: dict[str, Any], *, validator: Validato
     _publish_backup(backup, encoded)
     return path
 
+
+
+def atomic_json_checkpoint(path: Path, payload: dict[str, Any], *, validator: Validator) -> Path:
+    """Atomically publish a durable JSON checkpoint without backup rotation.
+
+    This is intended for small derivative journals/overlays whose canonical
+    parent already has the full backup ladder. The previous checkpoint remains
+    visible until the replacement has been completely written and fsynced.
+    """
+    path.parent.mkdir(parents=True, exist_ok=True)
+    validator(payload)
+    if orjson is not None:
+        encoded = orjson.dumps(
+            payload,
+            option=orjson.OPT_NON_STR_KEYS | orjson.OPT_APPEND_NEWLINE | orjson.OPT_PASSTHROUGH_DATETIME,
+        )
+    else:
+        encoded = (json.dumps(payload, ensure_ascii=False, separators=(",", ":")) + "\n").encode("utf-8")
+    tmp = path.with_suffix(path.suffix + ".tmp")
+    _write_bytes_fsynced(tmp, encoded)
+    os.replace(tmp, path)
+    _fsync_directory(path.parent)
+    return path
+
+
+def load_json_checkpoint(path: Path, *, validator: Validator) -> dict[str, Any]:
+    return _read_json(path, validator)
 
 def recover_json_load(path: Path, *, validator: Validator, backup_root: Path | None = None) -> dict[str, Any]:
     backup = _backup_path(path, backup_root)

@@ -92,8 +92,8 @@ def test_v035_twenty_new_bdf_portraits_are_normalized_and_synced():
     assert audit['photos']['total_bundled_normalized_bdfutbol']==89
     assert len(photo_audit['portraits'])==20
     reg=load('created_players_registry.json')['players']; queue=load('bdfutbol_photo_queue.json')['players']
-    r={int(x['source_id']):x for x in reg}; q={int(x['source_id']):x for x in queue}
-    assert len(reg)==len(q)>=2107 and set(r)==set(q)
+    r={int(x['source_id']):x for x in reg if not x.get('retired_alias_v113')}; q={int(x['source_id']):x for x in queue}
+    assert len(r)==len(q)>=2080 and set(r)==set(q)
     for row in photo_audit['portraits']:
         sid=int(row['source_id']); asset=ROOT/row['asset']
         assert r[sid]['photo_status']==q[sid]['photo_status']=='bundled_normalized_bdfutbol'
@@ -112,8 +112,12 @@ def test_v035_audit_counts_and_role_corrections_are_consistent():
     assert audit['profiles']['year_only_birth_records']==1
     assert audit['profiles']['role_corrections_this_batch']==69
     assert audit['biographies']=={'profiles_considered':102,'biographies_changed':102,'missing_stage_rows':0}
-    assert audit['identity_integrity']['registry_rows']==audit['identity_integrity']['unique_registry_ids']==2107
-    assert audit['identity_integrity']['sets_match'] is True
+    # Historical v0.35 audit counts are preserved as provenance; current v1.1.3
+    # identity integrity is asserted against the active registry/queue instead.
+    reg=load('created_players_registry.json')['players']; queue=load('bdfutbol_photo_queue.json')['players']
+    active=[x for x in reg if not x.get('retired_alias_v113')]
+    assert len(active)==len(queue)>=2080
+    assert {int(x['source_id']) for x in active}=={int(x['source_id']) for x in queue}
     snap={int(p['source_id']):p for p in load('historical_snapshot.json')['players']}
     for c in audit['profiles']['changes']:
         if not c['role_changed']:

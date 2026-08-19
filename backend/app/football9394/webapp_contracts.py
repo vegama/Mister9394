@@ -54,8 +54,14 @@ class ContractRenewalPayload(BaseModel):
     years: int = Field(default=3, ge=1, le=6)
     salary_offer: int | None = Field(default=None, ge=0)
 
+class LiveStartPayload(BaseModel):
+    tactics: CareerTacticsPayload | None = None
+    starter_ids: list[int] | None = None
+    bench_ids: list[int] | None = None
+
 class LiveAdvancePayload(BaseModel):
     minutes: int = Field(default=5, ge=1, le=45)
+    until_event: bool = False
 
 class LiveSubstitutionPayload(BaseModel):
     outgoing_id: int
@@ -93,6 +99,7 @@ class StaffResponsibilityPayload(BaseModel):
 class TrainingPlanPayload(BaseModel):
     intensity: str | None = None
     weekly_plan: list[str] | None = None
+    mode: str | None = None
 
 class TrainingFocusPayload(BaseModel):
     focus: str

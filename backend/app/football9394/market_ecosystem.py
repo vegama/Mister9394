@@ -55,8 +55,10 @@ def recruitment_plan(
     *, team_id: int, players: list[dict[str, Any]], development: dict[str, dict[str, Any]],
     contracts: dict[str, dict[str, Any]], cash: int, current_date: date,
     coach_profile: dict[str, Any] | None = None, replacement_for: int | None = None,
+    audit: dict[str, Any] | None = None,
+    penalty_cache: dict[tuple[int, str], int] | None = None,
 ) -> dict[str, Any]:
-    audit=squad_audit(players,development)
+    audit=audit if audit is not None else squad_audit(players,development,penalty_cache=penalty_cache)
     needs=[dict(row) for row in audit.get("needs") or [] if int(row.get("shortage") or 0)>0]
     primary=str(audit.get("primary_need") or "DEPTH")
     if replacement_for is not None:
@@ -83,14 +85,24 @@ def refresh_recruitment_plans(
     state: dict[str, Any], *, current_date: date, team_ids: list[int], players_by_team: dict[int,list[dict[str,Any]]],
     development: dict[str,dict[str,Any]], contracts: dict[str,dict[str,Any]], club_finances: dict[str,dict[str,Any]],
     coach_profile_getter=None,
+    audit_cache: dict[int, dict[str, Any]] | None = None,
+    penalty_cache: dict[tuple[int, str], int] | None = None,
 ) -> dict[str, dict[str, Any]]:
     ensure_market_ecosystem_state(state)
     plans=state["recruitment_plans"]
+    audit_cache = audit_cache if audit_cache is not None else {}
+    penalty_cache = penalty_cache if penalty_cache is not None else {}
     for tid in team_ids:
-        coach=coach_profile_getter(int(tid)) if coach_profile_getter else None
+        team_id=int(tid)
+        coach=coach_profile_getter(team_id) if coach_profile_getter else None
+        audit=audit_cache.get(team_id)
+        if audit is None:
+            audit=squad_audit(players_by_team.get(team_id,[]),development,penalty_cache=penalty_cache)
+            audit_cache[team_id]=audit
         plans[str(tid)]=recruitment_plan(
-            team_id=int(tid),players=players_by_team.get(int(tid),[]),development=development,contracts=contracts,
+            team_id=team_id,players=players_by_team.get(team_id,[]),development=development,contracts=contracts,
             cash=transfer_spending_power(club_finances.get(str(tid)) or {}),current_date=current_date,coach_profile=coach,
+            audit=audit,penalty_cache=penalty_cache,
         )
     return plans
 

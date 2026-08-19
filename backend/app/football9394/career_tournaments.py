@@ -18,6 +18,7 @@ from .rules import CompetitionRules9394
 from .schedule import generate_round_robin_cycles
 from .standings import LeagueMatch9394, build_league_table
 from .foreign_rules import competition_foreign_rule
+from .domestic_cups import DOMESTIC_CUPS_9394, SYNTHETIC_DOMESTIC_CUPS_9394, domestic_cup_spec, cup_participant_ids_from_state
 
 TOURNAMENT_CALENDAR_FIDELITY="historical_format_stage_cadence_dates_not_source_authoritative"
 
@@ -61,6 +62,18 @@ def ensure_tournament_state(state: dict[str,Any], universe) -> dict[str,Any]:
             "results":[],"group_results":{"A":[],"B":[]} if source_id==1 else None,
             "champion_team_id":None,"runner_up_team_id":None,"completed":False,"events":[],"calendar_fidelity":TOURNAMENT_CALENDAR_FIDELITY,
         }
+    for spec in SYNTHETIC_DOMESTIC_CUPS_9394:
+        key=str(spec.source_id)
+        if key in block: continue
+        current=cup_participant_ids_from_state(state,universe,spec)
+        block[key]={
+            "source_id":spec.source_id,"name":spec.name,"country_id":spec.country_id,"league_ids":list(spec.league_ids),
+            "format_style":spec.format_style,"stage_index":0,"stage":"pending","current_ids":current,"initial_ids":list(current),
+            "pending_ties":[],"byes":[],"results":[],"group_results":{} if spec.format_style=="greece_groups_two_leg" else None,
+            "champion_team_id":None,"runner_up_team_id":None,"completed":False,"events":[],
+            "calendar_fidelity":"historical_format_adapted_to_playable_clubs_dates_not_source_authoritative",
+            "historical_note":spec.historical_note,
+        }
     return block
 
 
@@ -80,8 +93,11 @@ def _prepare_reduction(ids: list[str], target: int, *, seed: int) -> tuple[list[
 def _played_leg(runtime,a:str,b:str,*,seed:int,source_id:int,neutral:bool=False) -> dict[str,Any]:
     controlled=str(int(runtime.state["team_id"]))
     tactics=dict(runtime.state.get("tactics") or {})
-    home_rule=competition_foreign_rule(runtime.universe,kind="tournament",source_id=int(source_id),team_id=int(a))
-    away_rule=competition_foreign_rule(runtime.universe,kind="tournament",source_id=int(source_id),team_id=int(b))
+    if domestic_cup_spec(int(source_id)) is not None and hasattr(runtime,"_domestic_foreign_rule"):
+        home_rule=runtime._domestic_foreign_rule(int(a));away_rule=runtime._domestic_foreign_rule(int(b))
+    else:
+        home_rule=competition_foreign_rule(runtime.universe,kind="tournament",source_id=int(source_id),team_id=int(a))
+        away_rule=competition_foreign_rule(runtime.universe,kind="tournament",source_id=int(source_id),team_id=int(b))
     home=runtime._sheet(int(a), tactics if str(a)==controlled else None, foreign_rule=home_rule)
     away=runtime._sheet(int(b), tactics if str(b)==controlled else None, foreign_rule=away_rule)
     profile=ERA_BASELINE_1993_94
@@ -89,7 +105,8 @@ def _played_leg(runtime,a:str,b:str,*,seed:int,source_id:int,neutral:bool=False)
         profile=SimulationProfile9394(id="era_1993_94_neutral",target_goals_per_match=profile.target_goals_per_match,
             goal_conversion_multiplier=profile.goal_conversion_multiplier,notable_attack_multiplier=profile.notable_attack_multiplier,
             foul_multiplier=profile.foul_multiplier,home_advantage_rating=0.0)
-    result=FootballMatchEngine9394(profile=profile).simulate(home,away,seed=seed)
+    validator=(runtime._substitution_validator_for_fixture({"fixture_type":"tournament","source_id":int(source_id),"competition_id":int(source_id)}) if hasattr(runtime,"_substitution_validator_for_fixture") else None)
+    result=FootballMatchEngine9394(profile=profile).simulate(home,away,seed=seed,substitution_validator=validator)
     runtime._apply_match_player_state(result,home,away,seed)
     return {"home_team_id":a,"away_team_id":b,"home_goals":result.home.goals,"away_goals":result.away.goals,"bootstrap":False}
 
@@ -101,7 +118,10 @@ def _single(runtime,a:str,b:str,*,seed:int,bootstrap:bool,source_id:int,neutral:
     if row["home_goals"]!=row["away_goals"]:
         winner=a if row["home_goals"]>row["away_goals"] else b;decided="single_leg"
     else:
-        home_rule=competition_foreign_rule(runtime.universe,kind="tournament",source_id=int(source_id),team_id=int(a));away_rule=competition_foreign_rule(runtime.universe,kind="tournament",source_id=int(source_id),team_id=int(b))
+        if domestic_cup_spec(int(source_id)) is not None and hasattr(runtime,"_domestic_foreign_rule"):
+            home_rule=runtime._domestic_foreign_rule(int(a));away_rule=runtime._domestic_foreign_rule(int(b))
+        else:
+            home_rule=competition_foreign_rule(runtime.universe,kind="tournament",source_id=int(source_id),team_id=int(a));away_rule=competition_foreign_rule(runtime.universe,kind="tournament",source_id=int(source_id),team_id=int(b))
         home=runtime._sheet(int(a),foreign_rule=home_rule);away=runtime._sheet(int(b),foreign_rule=away_rule)
         rng=Random(seed^0x909394);delta=(sum(p.overall for p in home.starters)-sum(p.overall for p in away.starters))/(11*120)
         winner=a if rng.random()<max(.3,min(.7,.5+delta)) else b;decided="extra_time_penalties"
@@ -144,12 +164,16 @@ def play_pending_tournament_match(runtime) -> tuple[dict[str,Any],list[dict[str,
         # Idempotence protects reload/retry after a successful save boundary.
         if not any(int(x.get("leg") or 0)==int(pending.get("leg") or 0) and str(x.get("home_team_id"))==a for x in tie["legs"]):
             tie["legs"].append(row)
+    elif dest=="greek_group":
+        group=str(pending["group"]);row.update({"round":int(pending["round"]),"group":group})
+        if not any(int(x.get("round") or 0)==int(pending["round"]) and str(x.get("home_team_id"))==a for x in s["group_results"][group]):
+            s["group_results"][group].append(row)
     else:
         raise ValueError(f"destino de partido pendiente no soportado: {dest}")
     row.update({"source_id":sid,"competition_name":s.get("name") or f"Torneo {sid}","stage":pending["stage"]})
     runtime.state["pending_world_match"]=None
     runtime._post_matchday_income(int(a),competition=f"tournament:{sid}",reference=pending["stage"])
-    runtime._rebuild_rosters()
+    runtime._rebuild_rosters(sync_dynamics=False)
     followup=process_daily_tournaments(runtime,runtime.current_date,bootstrap=False)
     return row,followup
 
@@ -179,12 +203,16 @@ def commit_pending_tournament_result(runtime, result, home_sheet, away_sheet) ->
         tie=s["pending_ties"][int(pending["tie_index"])]
         if not any(int(x.get("leg") or 0)==int(pending.get("leg") or 0) and str(x.get("home_team_id"))==a for x in tie["legs"]):
             tie["legs"].append(row)
+    elif dest=="greek_group":
+        group=str(pending["group"]);row.update({"round":int(pending["round"]),"group":group})
+        if not any(int(x.get("round") or 0)==int(pending["round"]) and str(x.get("home_team_id"))==a for x in s["group_results"][group]):
+            s["group_results"][group].append(row)
     else:
         raise ValueError(f"destino de partido pendiente no soportado: {dest}")
     row.update({"source_id":sid,"competition_name":s.get("name") or f"Torneo {sid}","stage":pending["stage"]})
     runtime.state["pending_world_match"]=None
     runtime._post_matchday_income(int(a),competition=f"tournament:{sid}",reference=pending["stage"])
-    runtime._rebuild_rosters()
+    runtime._rebuild_rosters(sync_dynamics=False)
     followup=process_daily_tournaments(runtime,runtime.current_date,bootstrap=False)
     return row,followup
 
@@ -374,6 +402,176 @@ def _process_copa(runtime,s,day:date,bootstrap:bool) -> list[dict[str,Any]]:
     return events
 
 
+
+def _cup_round_dates(round_count: int) -> list[date]:
+    templates={
+        1:[date(1994,5,18)],
+        2:[date(1994,4,20),date(1994,5,18)],
+        3:[date(1994,3,16),date(1994,4,20),date(1994,5,18)],
+        4:[date(1994,2,16),date(1994,3,16),date(1994,4,20),date(1994,5,18)],
+        5:[date(1993,12,1),date(1994,2,16),date(1994,3,16),date(1994,4,20),date(1994,5,18)],
+        6:[date(1993,11,3),date(1993,12,1),date(1994,2,16),date(1994,3,16),date(1994,4,20),date(1994,5,18)],
+        7:[date(1993,10,6),date(1993,11,3),date(1993,12,1),date(1994,2,16),date(1994,3,16),date(1994,4,20),date(1994,5,18)],
+        8:[date(1993,9,22),date(1993,10,6),date(1993,11,3),date(1993,12,1),date(1994,2,16),date(1994,3,16),date(1994,4,20),date(1994,5,18)],
+    }
+    if round_count not in templates:
+        raise ValueError(f"copa doméstica: {round_count} rondas no soportadas")
+    return templates[round_count]
+
+
+def _round_name(target: int, stage_index: int) -> str:
+    return {1:"Final",2:"Semifinales",4:"Cuartos",8:"Octavos",16:"Dieciseisavos",32:"1/32"}.get(int(target),f"Ronda {stage_index+1}")
+
+
+def _domestic_knockout_plan(spec, participant_count: int, *, greek_knockout: bool=False) -> list[dict[str,Any]]:
+    if participant_count < 2:
+        return []
+    sizes=[];n=int(participant_count)
+    while n>1:
+        target=(n+1)//2;sizes.append((n,target));n=target
+    dates=_cup_round_dates(len(sizes))
+    plan=[]
+    for idx,((before,target),leg1) in enumerate(zip(sizes,dates,strict=True)):
+        if greek_knockout:
+            legs=1 if target==1 else 2
+        elif spec.format_style=="italy_two_leg_late":
+            legs=2 if before<=16 else 1
+        elif spec.format_style=="turkey_two_leg_semis_final":
+            legs=2 if before<=4 else 1
+        elif spec.format_style=="belgium_two_leg_semis":
+            legs=2 if before<=4 and target>1 else 1
+        else:
+            legs=1
+        plan.append({
+            "name":_round_name(target,idx),"leg1":leg1.isoformat(),"leg2":date.fromordinal(leg1.toordinal()+14).isoformat() if legs==2 else None,
+            "legs":legs,"away_goals":bool(legs==2),"neutral":bool(legs==1 and target==1),
+        })
+    return plan
+
+
+def _ensure_domestic_plan(runtime, s:dict[str,Any]) -> list[dict[str,Any]]:
+    plan=s.get("round_plan")
+    if plan:
+        return plan
+    spec=domestic_cup_spec(int(s["source_id"]))
+    if spec is None:
+        raise KeyError(f"copa doméstica {s['source_id']} no registrada")
+    plan=_domestic_knockout_plan(spec,len(s.get("current_ids") or []))
+    s["round_plan"]=plan
+    return plan
+
+
+def _process_domestic_knockout(runtime,s,day:date,bootstrap:bool) -> list[dict[str,Any]]:
+    events=[];sid=int(s["source_id"]);spec=domestic_cup_spec(sid)
+    if spec is None: return events
+    plan=_ensure_domestic_plan(runtime,s);seed0=int(runtime.state["seed"])*100000+sid*17
+    while not s["completed"] and s["stage_index"]<len(plan):
+        stage=plan[s["stage_index"]];name=str(stage["name"])
+        leg1_ref=date.fromisoformat(stage["leg1"]) if isinstance(stage.get("leg1"),str) else stage["leg1"]
+        leg2_ref=date.fromisoformat(stage["leg2"]) if isinstance(stage.get("leg2"),str) else stage.get("leg2")
+        leg1_date=shift_reference_date(runtime.state,leg1_ref)
+        leg2_date=shift_reference_date(runtime.state,leg2_ref) if leg2_ref else None
+        if not s["pending_ties"]:
+            if day<leg1_date: break
+            current=list(map(str,s.get("current_ids") or []))
+            if len(current)==1:
+                s.update({"champion_team_id":current[0],"completed":True,"stage":"completed"});break
+            rng=Random(seed0+s["stage_index"]*1009);rng.shuffle(current)
+            s["byes"]=current[-1:] if len(current)%2 else []
+            playing=current[:-1] if len(current)%2 else current
+            s["pending_ties"]=[{"team_a":a,"team_b":b,"legs":[]} for a,b in _pair(playing)]
+            s["stage"]=name
+        for tie_index,tie in enumerate(s["pending_ties"]):
+            if tie["legs"]: continue
+            a,b=str(tie["team_a"]),str(tie["team_b"]);seed=seed0+s["stage_index"]*1000+tie_index*10
+            single=int(stage["legs"])==1
+            if not bootstrap and _queue_controlled_match(runtime,source_id=sid,stage=name,day=day,home_id=a,away_id=b,seed=seed,destination="tie",tie_index=tie_index,leg=1,neutral=bool(stage.get("neutral")),single=single):
+                return events+[{"kind":"controlled_match_pending","source_id":sid,"stage":name,"date":day.isoformat()}]
+            row=(_single(runtime,a,b,seed=seed,bootstrap=bootstrap,source_id=sid,neutral=bool(stage.get("neutral"))) if single else _score(runtime,a,b,seed=seed,bootstrap=bootstrap,competition_kind="tournament",source_id=sid))
+            row["leg"]=1;tie["legs"].append(row)
+        if int(stage["legs"])==2:
+            if day<leg2_date: break
+            for tie_index,tie in enumerate(s["pending_ties"]):
+                if len(tie["legs"])>=2: continue
+                a,b=str(tie["team_a"]),str(tie["team_b"]);seed=seed0+s["stage_index"]*1000+tie_index*10+1
+                if not bootstrap and _queue_controlled_match(runtime,source_id=sid,stage=name,day=day,home_id=b,away_id=a,seed=seed,destination="tie",tie_index=tie_index,leg=2,single=False):
+                    return events+[{"kind":"controlled_match_pending","source_id":sid,"stage":name,"date":day.isoformat()}]
+                row=_score(runtime,b,a,seed=seed,bootstrap=bootstrap,competition_kind="tournament",source_id=sid);row["leg"]=2;tie["legs"].append(row)
+            if not all(len(t["legs"])>=2 for t in s["pending_ties"]): break
+        elif not all(t["legs"] for t in s["pending_ties"]):
+            break
+        winners=list(map(str,s.get("byes") or []));losers=[]
+        for tie in s["pending_ties"]:
+            a,b=str(tie["team_a"]),str(tie["team_b"])
+            if int(stage["legs"])==1:
+                row=tie["legs"][0];winner=str(row["winner_team_id"]);loser=b if winner==a else a;resolved=str(row.get("decided_by") or "single_leg")
+            else:
+                winner,loser,resolved=_resolve_two_leg(tie["legs"],advantage=None,away_goals=bool(stage.get("away_goals")))
+            tie.update({"winner_team_id":winner,"loser_team_id":loser,"resolved_by":resolved});winners.append(winner);losers.append(loser)
+        s["results"].extend([row for tie in s["pending_ties"] for row in tie["legs"]]);s["current_ids"]=winners
+        s["pending_ties"]=[];s["byes"]=[];s["stage_index"]+=1
+        events.append({"kind":"competition_stage","source_id":sid,"stage":name,"date":day.isoformat(),"bootstrap":bootstrap})
+        if len(winners)==1:
+            runner=losers[-1] if losers else None
+            s.update({"champion_team_id":winners[0],"runner_up_team_id":runner,"completed":True,"stage":"completed"})
+            events.append({"kind":"competition_completed","source_id":sid,"champion_team_id":winners[0],"runner_up_team_id":runner,"date":day.isoformat(),"bootstrap":bootstrap})
+        continue
+    return events
+
+
+def _greek_group_table(group_ids:list[str], rows:list[dict[str,Any]]) -> list[dict[str,Any]]:
+    stats={str(t):{"team_id":str(t),"points":0,"gf":0,"ga":0,"wins":0} for t in group_ids}
+    for row in rows:
+        h,a=str(row["home_team_id"]),str(row["away_team_id"]);hg,ag=int(row["home_goals"]),int(row["away_goals"])
+        stats[h]["gf"]+=hg;stats[h]["ga"]+=ag;stats[a]["gf"]+=ag;stats[a]["ga"]+=hg
+        if hg>ag: stats[h]["points"]+=2;stats[h]["wins"]+=1
+        elif ag>hg: stats[a]["points"]+=2;stats[a]["wins"]+=1
+        else: stats[h]["points"]+=1;stats[a]["points"]+=1
+    return sorted(stats.values(),key=lambda r:(-r["points"],-(r["gf"]-r["ga"]),-r["gf"],-r["wins"],int(r["team_id"])))
+
+
+def _process_greek_cup(runtime,s,day:date,bootstrap:bool) -> list[dict[str,Any]]:
+    sid=int(s["source_id"]);events=[];seed0=int(runtime.state["seed"])*100000+sid*17
+    if s.get("stage") in {"pending","group_stage"} and not s.get("group_qualifiers"):
+        if not s.get("groups"):
+            pool=list(map(str,s.get("current_ids") or []));Random(seed0).shuffle(pool)
+            group_count=max(1,min(6,len(pool)//3));groups={chr(65+i):[] for i in range(group_count)}
+            for idx,tid in enumerate(pool): groups[chr(65+(idx%group_count))].append(tid)
+            s["groups"]=groups;s["group_results"]={g:[] for g in groups};s["group_round"]=0;s["stage"]="group_stage"
+        group_dates=[date(1993,10,6),date(1993,10,20),date(1993,11,3)]
+        groups=s["groups"]
+        for round_number,ref in enumerate(group_dates,start=1):
+            if int(s.get("group_round") or 0)>=round_number: continue
+            if day<shift_reference_date(runtime.state,ref): break
+            for gi,(group,ids) in enumerate(sorted(groups.items())):
+                fixtures=generate_round_robin_cycles(tuple(map(str,ids)),1)
+                for fi,fixture in enumerate([f for f in fixtures if int(f.round_number)==round_number]):
+                    already=any(int(r.get("round") or 0)==round_number and str(r.get("home_team_id"))==str(fixture.home_team_id) for r in s["group_results"][group])
+                    if already: continue
+                    a,b=str(fixture.home_team_id),str(fixture.away_team_id);seed=seed0+round_number*1000+gi*50+fi
+                    if not bootstrap and _queue_controlled_match(runtime,source_id=sid,stage=f"Grupos {group} J{round_number}",day=day,home_id=a,away_id=b,seed=seed,destination="greek_group",group=group,round_number=round_number,single=False):
+                        return events+[{"kind":"controlled_match_pending","source_id":sid,"stage":"Fase de grupos","date":day.isoformat()}]
+                    row=_score(runtime,a,b,seed=seed,bootstrap=bootstrap,competition_kind="tournament",source_id=sid);row.update({"round":round_number,"group":group});s["group_results"][group].append(row)
+            # All fixtures for this group round are now present.
+            s["group_round"]=round_number
+            events.append({"kind":"competition_stage","source_id":sid,"stage":f"grupos_j{round_number}","date":day.isoformat(),"bootstrap":bootstrap})
+        if int(s.get("group_round") or 0)>=3:
+            tables={g:_greek_group_table(list(map(str,ids)),s["group_results"][g]) for g,ids in groups.items()}
+            winners=[table[0]["team_id"] for table in tables.values() if table]
+            runners=[table[1] for table in tables.values() if len(table)>1]
+            runners.sort(key=lambda r:(-r["points"],-(r["gf"]-r["ga"]),-r["gf"],int(r["team_id"])))
+            qualifiers=(winners+[r["team_id"] for r in runners])[:8]
+            # If the adapted pool produces fewer than eight, fill by next best
+            # group positions rather than inventing a club.
+            if len(qualifiers)<8:
+                extras=[r["team_id"] for table in tables.values() for r in table[2:] if r["team_id"] not in qualifiers]
+                qualifiers.extend(extras[:8-len(qualifiers)])
+            s["group_qualifiers"]=qualifiers;s["current_ids"]=qualifiers;s["stage"]="knockout";s["stage_index"]=0
+            spec=domestic_cup_spec(sid);s["round_plan"]=_domestic_knockout_plan(spec,len(qualifiers),greek_knockout=True)
+    if s.get("group_qualifiers") and not s.get("completed"):
+        events.extend(_process_domestic_knockout(runtime,s,day,bootstrap))
+    return events
+
 def process_daily_tournaments(runtime, day: date, *, bootstrap: bool=False) -> list[dict[str,Any]]:
     ensure_tournament_state(runtime.state,runtime.universe);events=[]
     for key,s in runtime.state["daily_tournaments"].items():
@@ -382,11 +580,15 @@ def process_daily_tournaments(runtime, day: date, *, bootstrap: bool=False) -> l
         elif sid==2: new=_process_standard_knockout(runtime,s,day,bootstrap,UEFA_CUP_STAGES,2)
         elif sid==90: new=_process_standard_knockout(runtime,s,day,bootstrap,CWC_STAGES,90)
         elif sid==3: new=_process_copa(runtime,s,day,bootstrap)
+        elif domestic_cup_spec(sid) is not None:
+            new=(_process_greek_cup(runtime,s,day,bootstrap) if str(s.get("format_style"))=="greece_groups_two_leg" else _process_domestic_knockout(runtime,s,day,bootstrap))
         else: new=[]
         s["events"].extend(new);events.extend(new)
         if not bootstrap and runtime.state.get("pending_world_match"):
             break
-    if not bootstrap: runtime._rebuild_rosters()
+    # AI-only tournament progression does not change roster membership or
+    # availability. Controlled cup matches are queued and committed through
+    # the dedicated match path, which rebuilds after applying player state.
     return events
 
 

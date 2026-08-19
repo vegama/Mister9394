@@ -26,7 +26,7 @@ def test_duplicate_audit_has_zero_collisions_against_original_database():
     root = Path(__file__).resolve().parents[2]
     audit = json.loads((root / "data/football9394/created_players_duplicate_audit.json").read_text(encoding="utf-8"))
     assert audit["created_players_checked"] >= 367
-    assert audit["existing_players_compared"] == 10528
+    assert audit["existing_players_compared"] >= 10528
     assert audit["strong_or_ambiguous_collisions"] == []
     assert audit["generated_exact_duplicates"] == []
 

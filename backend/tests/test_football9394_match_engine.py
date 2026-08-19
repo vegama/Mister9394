@@ -125,3 +125,19 @@ def test_source_referee_profile_changes_discipline_without_changing_player_ratin
     result=engine.simulate(sheet('H'),sheet('A'),seed=9394,referee=strict)
     assert result.referee_id == 'strict'
     assert result.referee_name == 'Estricto'
+
+
+def test_ai_substitution_validator_can_block_a_fourth_foreigner_on_the_pitch():
+    engine=FootballMatchEngine9394()
+    home=sheet('HOME'); away=sheet('AWAY')
+    side=_SideState.from_sheet(home); opponent=_SideState.from_sheet(away)
+    foreign_ids={home.starters[1].id,home.starters[2].id,home.starters[3].id,*[p.id for p in home.bench]}
+    for footballer in side.available_players():
+        if footballer.position != 'GK':
+            side.fatigue[footballer.id]=0.0 if footballer.id in foreign_ids else 100.0
+    def legal(_team_id,proposed_ids):
+        return sum(1 for pid in proposed_ids if pid in foreign_ids)<=3
+    events=[]
+    engine._maybe_substitute(side,78,Random(9394),events,opponent=opponent,substitution_validator=legal)
+    assert side.substitutions==0
+    assert not [event for event in events if event.kind=='substitution']

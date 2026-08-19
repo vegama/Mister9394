@@ -15,6 +15,8 @@ uses that value for the European cups while still setting ``Ex11 == 3``.
 from dataclasses import dataclass
 from typing import Any, Iterable
 
+from .domestic_cups import domestic_cup_spec, team_current_league_id
+
 
 BRITISH_IRISH_DOMESTIC_GROUP = frozenset({6, 43, 44, 45, 46})  # England, Scotland, N. Ireland, Wales, Ireland
 
@@ -95,6 +97,22 @@ def competition_foreign_rule(universe: Any, *, kind: str, source_id: int, team_i
         starting_limit=_positive_or_none(comp.get("max_foreigners_starting"))
         squad_limit=_positive_or_none(comp.get("max_foreigners_squad"))
         source_note="basedatos.mdb Ex11/ExPlantilla"
+        # Contemporary Spanish rule: from 1991 Primera clubs could name four
+        # foreign players but only three could play simultaneously.  The fourth
+        # could replace one of the three.  The extension to four applied only
+        # to Primera, so the represented lower Spanish tiers retain the former
+        # three-player match quota.
+        if source_id == 1:
+            starting_limit=3; squad_limit=4
+            source_note="España Primera 1993-94: 4 disponibles / 3 simultáneos (acuerdo RFEF/LFP 1991)"
+        elif source_id in {2,3,9,10,11}:
+            starting_limit=3; squad_limit=3
+            source_note="España categorías inferiores 1993-94: ampliación a cuatro exclusiva de Primera"
+        # The Bosman case record explicitly notes that Scottish domestic
+        # football had no numerical foreign-player restriction.
+        elif source_id == 38:
+            starting_limit=None; squad_limit=None
+            source_note="Escocia doméstica 1993-94: sin restricción numérica (expediente Bosman)"
         hints = comp.get("source_rule_hints") or {}
         domestic_equivalents = frozenset(int(cid) for cid in hints.get("foreign_domestic_equivalent_country_ids", ()) if cid is not None)
         if source_id == 120:
@@ -113,7 +131,28 @@ def competition_foreign_rule(universe: Any, *, kind: str, source_id: int, team_i
             starting_limit, squad_limit,
             continental=False, source=source_note, domestic_equivalent_country_ids=domestic_equivalents,
         )
+    cup = domestic_cup_spec(source_id)
     comp = universe.tournaments_by_id.get(source_id) or {}
+    if cup is not None:
+        # Domestic cups inherit the participant club's current domestic-tier
+        # rule.  This matters in Spain: a Primera side has 4/3 while a Segunda
+        # or Segunda B side has 3/3 in the same Copa del Rey.
+        memberships=getattr(universe, "career_memberships", None)
+        league_id=team_current_league_id(universe,int(team_id),memberships) if team_id is not None else None
+        if league_id not in set(spec_leagues:=cup.league_ids):
+            league_id=int(spec_leagues[0]) if spec_leagues else None
+            team_for_rule=None
+        else:
+            team_for_rule=team_id
+        if league_id is not None:
+            inherited=competition_foreign_rule(universe,kind="league",source_id=league_id,team_id=team_for_rule)
+            return ForeignPlayerRule9394(
+                "tournament",source_id,cup.name,cup.country_id,
+                inherited.max_starting,inherited.max_squad,continental=False,
+                source=f"{cup.name}: hereda regla doméstica de {inherited.name}; {inherited.source}",
+                domestic_equivalent_country_ids=inherited.domestic_equivalent_country_ids,
+            )
+        return ForeignPlayerRule9394("tournament",source_id,cup.name,cup.country_id,None,None,continental=False,source=f"{cup.name}: regla por categoría no resoluble sin club")
     country = comp.get("country_id")
     continent = comp.get("continent_id")
     home_country = int(country) if country not in (None, 0, "0") else None
@@ -130,7 +169,6 @@ def competition_foreign_rule(universe: Any, *, kind: str, source_id: int, team_i
         _positive_or_none(comp.get("max_foreigners_squad")),
         continental=bool(continent),
     )
-
 
 def _positive_or_none(value: Any) -> int | None:
     try:

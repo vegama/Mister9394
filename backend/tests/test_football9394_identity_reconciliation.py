@@ -108,14 +108,16 @@ def test_creation_registry_and_bdfutbol_queue_contain_only_true_new_players():
             "exact_name_birthdate_source_profile_gate_v044",
             "individual_profile_id_identity_gate_v045",
             "individual_profile_id_identity_gate_v046",
+            "id_collision_restored_v113",
     }
-    assert all(row["duplicate_check"] in allowed for row in rows)
-    original_new=[row for row in rows if row["duplicate_check"]=="created_after_global_existing_player_comparison"]
+    active_rows=[row for row in rows if not row.get("retired_alias_v113")]
+    assert all(row["duplicate_check"] in allowed for row in active_rows)
+    original_new=[row for row in active_rows if row["duplicate_check"]=="created_after_global_existing_player_comparison"]
     assert all(row.get("matched_existing_id") is None for row in original_new)
     assert not any(int(row["source_id"]) == 515 for row in rows)
 
     queue = build_queue(root / "data/football9394/created_players_registry.json")
-    assert len(queue) == len(rows)
+    assert len(queue) == len(active_rows)
     assert all(row.get("photo_filename") for row in queue)
     assert all(row.get("bdfutbol_search_name") for row in queue)
     assert all(row.get("photo_status") in {"pending","pending_identity_profile","ready_for_download","bundled_normalized_bdfutbol"} for row in queue)

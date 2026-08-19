@@ -186,11 +186,12 @@ def build_snapshot_team_sheet(
     remaining = [row for row in (selection_rows if coach_profile else eligible) if int(row.get("source_id") or 0) not in selected_ids]
     bench: list[dict[str, Any]] = []
     starter_foreign=sum(1 for row in selected if foreign_predicate is not None and foreign_predicate(row))
-    # To guarantee an automatic AI cannot exceed the on-field limit after both
-    # substitutions, do not name more foreign substitutes than remaining on-field slots.
-    safe_bench_foreign=(max(0,int(max_foreign_starters)-starter_foreign) if foreign_predicate is not None and max_foreign_starters is not None else None)
-    squad_bench_foreign=(max(0,int(max_foreign_squad)-starter_foreign) if foreign_predicate is not None and max_foreign_squad is not None else None)
-    foreign_bench_cap=min(x for x in (safe_bench_foreign,squad_bench_foreign) if x is not None) if any(x is not None for x in (safe_bench_foreign,squad_bench_foreign)) else None
+    # The on-field quota and the named-match-squad quota are different rules.
+    # Spain 1993-94 is the canonical case: four foreigners could be available,
+    # while only three could be on the pitch at the same time.  Therefore the
+    # bench is constrained only by the squad cap; substitutions are validated
+    # against the on-field cap at the moment they are made.
+    foreign_bench_cap=(max(0,int(max_foreign_squad)-starter_foreign) if foreign_predicate is not None and max_foreign_squad is not None else None)
     def bench_allowed(row):
         if foreign_predicate is None or not foreign_predicate(row) or foreign_bench_cap is None: return True
         return sum(1 for p in bench if foreign_predicate(p)) < foreign_bench_cap

@@ -14,7 +14,7 @@ from typing import Any
 from .laws import LAWS_1993_94
 from .match_engine import (
     FootballMatchEngine9394, FootballTactics9394, MatchEvent9394, MatchResult9394, MatchVenue9394, RefereeProfile9394,
-    TeamMatchStats9394, TeamSheet9394, _SideState, _clamp,
+    TeamMatchStats9394, TeamSheet9394, SubstitutionValidator9394, _SideState, _clamp,
 )
 
 
@@ -91,7 +91,7 @@ class LiveMatchEngine9394:
         away_t = FootballTactics9394(**state.get("away_tactics", {}))
         return replace(home_sheet, tactics=home_t), replace(away_sheet, tactics=away_t)
 
-    def _injury(self, side: _SideState, minute: int, rng: Random, events: list[MatchEvent9394], *, auto_sub: bool) -> None:
+    def _injury(self, side: _SideState, minute: int, rng: Random, events: list[MatchEvent9394], *, auto_sub: bool, substitution_validator: SubstitutionValidator9394 | None = None) -> None:
         if rng.random() > 0.00125:
             return
         players = side.available_players()
@@ -103,21 +103,26 @@ class LiveMatchEngine9394:
         if not forced_off:
             return
         if auto_sub and side.substitutions < LAWS_1993_94.max_used_substitutes and side.bench:
-            replacement = max(side.bench, key=lambda p: self.engine._replacement_fit(p, player))
-            idx = side.on_pitch.index(player); side.on_pitch[idx] = replacement; side.bench.remove(replacement)
-            side.substitutions += 1
-            events.append(MatchEvent9394(minute, "injury_substitution", side.sheet.team_id, replacement.id, replacement.name,
-                                         f"Entra {replacement.name}; sale lesionado {player.name}", player.id, player.name))
-            return
+            ranked = sorted(side.bench, key=lambda p: self.engine._replacement_fit(p, player), reverse=True)
+            replacement = next((candidate for candidate in ranked if substitution_validator is None or substitution_validator(
+                str(side.sheet.team_id),
+                tuple(str(candidate.id if p.id == player.id else p.id) for p in side.available_players()),
+            )), None)
+            if replacement is not None:
+                idx = side.on_pitch.index(player); side.on_pitch[idx] = replacement; side.bench.remove(replacement)
+                side.substitutions += 1
+                events.append(MatchEvent9394(minute, "injury_substitution", side.sheet.team_id, replacement.id, replacement.name,
+                                             f"Entra {replacement.name}; sale lesionado {player.name}", player.id, player.name))
+                return
         side.forced_off.add(player.id)
         detail = f"{player.name} no puede continuar"
         if side.substitutions >= LAWS_1993_94.max_used_substitutes or not side.bench:
             detail += " y no quedan cambios"
         else:
-            detail += "; necesita sustitución"
+            detail += "; necesita sustitución reglamentariamente válida"
         events.append(MatchEvent9394(minute, "injury_forced_off", side.sheet.team_id, player.id, player.name, detail))
 
-    def advance(self, state: dict[str, Any], home_sheet: TeamSheet9394, away_sheet: TeamSheet9394, *, minutes: int = 5, auto_controlled: bool = False) -> dict[str, Any]:
+    def advance(self, state: dict[str, Any], home_sheet: TeamSheet9394, away_sheet: TeamSheet9394, *, minutes: int = 5, auto_controlled: bool = False, substitution_validator: SubstitutionValidator9394 | None = None) -> dict[str, Any]:
         if state.get("status") == "finished":
             return state
         if state.get("status") == "halftime":
@@ -145,10 +150,10 @@ class LiveMatchEngine9394:
             if minute in (58, 70, 78):
                 if auto_controlled or str(home.sheet.team_id) != controlled:
                     self.engine._maybe_manager_adjustment(home, away, minute, events)
-                    self.engine._maybe_substitute(home, minute, rng, events, opponent=away)
+                    self.engine._maybe_substitute(home, minute, rng, events, opponent=away, substitution_validator=substitution_validator)
                 if auto_controlled or str(away.sheet.team_id) != controlled:
                     self.engine._maybe_manager_adjustment(away, home, minute, events)
-                    self.engine._maybe_substitute(away, minute, rng, events, opponent=home)
+                    self.engine._maybe_substitute(away, minute, rng, events, opponent=home, substitution_validator=substitution_validator)
             activity = (self.engine._activity(home.sheet.tactics, venue=venue) + self.engine._activity(away.sheet.tactics, venue=venue)) / 2
             activity = _clamp(activity * self.engine.profile.notable_attack_multiplier, 0.20, 0.88)
             if rng.random() <= activity:
@@ -156,8 +161,8 @@ class LiveMatchEngine9394:
                 attack, defend = (home, away) if rng.random() < home_possession else (away, home)
                 attack.possession_ticks += 1
                 self.engine._resolve_attack(attack, defend, minute, rng, events, referee=referee, venue=venue)
-                self._injury(attack, minute, rng, events, auto_sub=auto_controlled or str(attack.sheet.team_id) != controlled)
-                self._injury(defend, minute, rng, events, auto_sub=auto_controlled or str(defend.sheet.team_id) != controlled)
+                self._injury(attack, minute, rng, events, auto_sub=auto_controlled or str(attack.sheet.team_id) != controlled, substitution_validator=substitution_validator)
+                self._injury(defend, minute, rng, events, auto_sub=auto_controlled or str(defend.sheet.team_id) != controlled, substitution_validator=substitution_validator)
             state["minute"] = minute
             if minute == 45:
                 state["status"] = "halftime"

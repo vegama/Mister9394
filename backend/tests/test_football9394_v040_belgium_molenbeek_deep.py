@@ -29,7 +29,7 @@ def test_v040_molenbeek_roles_identities_and_source_conflicts():
     assert by[9496227]['broad_position']=='DEL' and by[9496224]['broad_position']=='DEL'
 
 def test_v040_registry_queue_photo_links_and_identity_gate():
-    reg=load('created_players_registry.json'); q=load('bdfutbol_photo_queue.json'); rb={int(x['source_id']):x for x in reg['players']}; qb={int(x['source_id']):x for x in q['players']}
+    reg=load('created_players_registry.json'); q=load('bdfutbol_photo_queue.json'); rb={int(x['source_id']):x for x in reg['players'] if not x.get('retired_alias_v113')}; qb={int(x['source_id']):x for x in q['players']}
     assert set(rb)==set(qb)
     ids=[9496240,9496233,9496241,9496237,9496244,9496225,9496243,9496230,9496245,9496246,9496242,9496229,9496235,9496326,9496228,9496239,9496232,9496231,9496238,9496234,9494180,9496227,9496226,9496224,9496236]
     for sid in ids:

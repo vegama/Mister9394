@@ -65,7 +65,7 @@ def test_v037_mauritius_is_explicit_gap_not_invented_country_id():
 
 def test_v037_bdf_profile_links_and_registry_queue_integrity():
     reg=load('created_players_registry.json'); queue=load('bdfutbol_photo_queue.json')
-    rb={int(x['source_id']):x for x in reg['players']}; qb={int(x['source_id']):x for x in queue['players']}
+    rb={int(x['source_id']):x for x in reg['players'] if not x.get('retired_alias_v113')}; qb={int(x['source_id']):x for x in queue['players']}
     assert set(rb)==set(qb)
     for sid in [9496302,9494210,9496303,9496287,9496291,9496293,9496301,9496297,9496300,9495304,9496289,9496304,9496288,9496306,9496298,9496295,9496299,9496286,9496307,9496294,9496292,9496296,9496305,9496290]:
         assert rb[sid].get('bdfutbol_id')

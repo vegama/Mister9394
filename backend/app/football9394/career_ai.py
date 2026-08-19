@@ -41,8 +41,13 @@ def _position_group(player: dict[str, Any]) -> str:
     return "MID"
 
 
-def squad_audit(players: list[dict[str, Any]], development: dict[str, dict[str, Any]]) -> dict[str, Any]:
-    specialist=squad_role_audit(players)
+def squad_audit(
+    players: list[dict[str, Any]],
+    development: dict[str, dict[str, Any]],
+    *,
+    penalty_cache: dict[tuple[int, str], int] | None = None,
+) -> dict[str, Any]:
+    specialist=squad_role_audit(players, penalty_cache=penalty_cache)
     strengths: dict[str,list[int]]={}
     for player in players:
         slot=role_for_player(player).squad_slot
@@ -77,6 +82,7 @@ def renew_ai_contracts(
     max_renewals: int = 48,
     eligible_team_ids: list[int] | None = None,
     club_finances: dict[str, dict[str, Any]] | None = None,
+    penalty_cache: dict[tuple[int, str], int] | None = None,
 ) -> list[dict[str, Any]]:
     """Resolve AI retention plans in fair, batched contract cycles.
 
@@ -112,7 +118,7 @@ def renew_ai_contracts(
                 stable.append(player)
         if not expiring:
             continue
-        stable_audit=squad_role_audit(stable)
+        stable_audit=squad_role_audit(stable, penalty_cache=penalty_cache)
         shortages={str(row["slot"]):int(row["shortage"]) for row in stable_audit.get("needs") or [] if int(row["shortage"])>0}
         target_gap=max(0,TARGET_SENIOR_SQUAD_SIZE_9394-len(stable))
         ranked=[]
@@ -193,6 +199,8 @@ def run_ai_transfer_window(
     foreign_predicate=None,
     coach_profile_getter=None,
     buyer_plans: dict[str, dict[str, Any]] | None = None,
+    penalty_cache: dict[tuple[int, str], int] | None = None,
+    squad_audit_cache: dict[int, dict[str, Any]] | None = None,
 ) -> list[dict[str, Any]]:
     """Execute one deterministic, position-aware market pulse.
 
@@ -205,6 +213,8 @@ def run_ai_transfer_window(
     if max_deals <= 0:
         return []
     rng=Random(seed ^ (current_date.year*100+current_date.month) ^ 0xA19394)
+    penalty_cache = penalty_cache if penalty_cache is not None else {}
+    squad_audit_cache = squad_audit_cache if squad_audit_cache is not None else {}
     candidates_buyers=[]
     queued_buyers:set[int]=set()
     buyer_average:dict[int,float]={}
@@ -223,7 +233,10 @@ def run_ai_transfer_window(
             target_gap=max(0,TARGET_SENIOR_SQUAD_SIZE_9394-len(players))
             need=max(1,round(float(plan.get("urgency") or 0)/18.0))+shortage+depth_shortage*2+target_gap
         else:
-            audit=squad_audit(players,development)
+            audit=squad_audit_cache.get(int(tid))
+            if audit is None:
+                audit=squad_audit(players,development,penalty_cache=penalty_cache)
+                squad_audit_cache[int(tid)]=audit
             primary=audit["primary_need"] or "DEPTH"
             shortage=sum(int(row["shortage"]) for row in audit["needs"])
             depth_shortage=max(0,MINIMUM_SENIOR_SQUAD_SIZE_9394-len(players))
@@ -243,8 +256,34 @@ def run_ai_transfer_window(
     # checks for every buyer/candidate pair; in a 20-30 year career that became
     # the dominant summer cost.  Cache the result once per seller and invalidate
     # only the two squads touched by an actual deal.
-    penalty_cache:dict[tuple[int,str],int]={}
     foreign_cache:dict[tuple[int,int],bool]={}
+    value_cache:dict[int,int]={}
+    salary_cache:dict[int,int]={}
+    overall_cache:dict[int,int]={}
+
+    def cached_overall(player:dict[str,Any])->int:
+        pid=int(player.get("source_id") or player.get("id") or 0)
+        key=pid if pid else id(player)
+        value=overall_cache.get(key)
+        if value is None:
+            value=int(_overall(player,development)); overall_cache[key]=value
+        return value
+
+    def cached_value(player:dict[str,Any],overall:int|None=None)->int:
+        pid=int(player.get("source_id") or 0)
+        value=value_cache.get(pid)
+        if value is None:
+            rating=int(overall if overall is not None else cached_overall(player))
+            value=int(estimated_transfer_value(player,overall=rating)); value_cache[pid]=value
+        return value
+
+    def cached_salary(player:dict[str,Any],overall:int|None=None)->int:
+        pid=int(player.get("source_id") or 0)
+        value=salary_cache.get(pid)
+        if value is None:
+            rating=int(overall if overall is not None else cached_overall(player))
+            value=int(inferred_annual_salary(player,overall=rating)); salary_cache[pid]=value
+        return value
 
     def cached_penalty(player:dict[str,Any],slot:str)->int:
         pid=int(player.get("source_id") or 0); key=(pid,str(slot))
@@ -270,7 +309,7 @@ def run_ai_transfer_window(
             return safe
         if len(rows)<=MINIMUM_SENIOR_SQUAD_SIZE_9394:
             releaseable_by_seller[int(seller)]=set(); return set()
-        audit=squad_role_audit(rows)
+        audit=squad_role_audit(rows, penalty_cache=penalty_cache)
         guarded=[(str(need["slot"]),int(need["minimum"]),int(need["count"])) for need in audit.get("needs") or []]
         natural_gks=sum(1 for p in rows if role_for_player(p).squad_slot=="GK")
         limit=foreign_limit_getter(int(seller)) if foreign_limit_getter is not None else None
@@ -314,7 +353,7 @@ def run_ai_transfer_window(
         if seller not in exempt_sellers and len(players_by_team.get(seller,[]))<=MINIMUM_SENIOR_SQUAD_SIZE_9394:
             continue
         for player in players_by_team.get(seller,[]):
-            overall=_overall(player,development)
+            overall=cached_overall(player)
             pair=(seller,player)
             pool_by_rating.setdefault(overall,[]).append(pair)
             slot=role_for_player(player).squad_slot
@@ -351,20 +390,24 @@ def run_ai_transfer_window(
         # and only matter for the best handful of candidates a club would
         # realistically discuss with its staff.
         shortlist=[]
+        # The buyer's current wage headroom is constant while evaluating this
+        # shortlist.  Recomputing the entire squad wage commitment for every
+        # candidate was one of the dominant monthly-pulse costs.
+        buyer_wage_room=wage_budget_headroom(
+            finance,players=players_by_team.get(buyer,[]),development=development,contract_overrides=contract_overrides
+        )
         for seller,player in source_pool:
             if seller==buyer or seller==controlled_team_id:
                 continue
             pid=int(player["source_id"])
             if pid in used_players:
                 continue
-            overall=_overall(player,development)
-            value=estimated_transfer_value(player,overall=overall)
+            overall=cached_overall(player)
+            value=cached_value(player,overall)
             if value > cash*0.78:
                 continue
-            expected_salary=round(inferred_annual_salary(player,overall=overall)*1.12)
-            if expected_salary>wage_budget_headroom(
-                finance,players=players_by_team.get(buyer,[]),development=development,contract_overrides=contract_overrides
-            ):
+            expected_salary=round(cached_salary(player,overall)*1.12)
+            if expected_salary>buyer_wage_room:
                 continue
             prestige=float(attraction_score(buyer, seller, player) if attraction_score is not None else 0.0)
             shortlist.append((abs(overall-(avg+2))+rng.random()*1.25-prestige,-overall,pid,seller,player,value))
@@ -391,8 +434,8 @@ def run_ai_transfer_window(
         spend_transfer_funds(buyer_fin,fee,recorded_fee=fee)
         receive_transfer_funds(seller_fin,fee)
         player_team_overrides[str(pid)]=buyer
-        overall=_overall(player,development)
-        salary=round(inferred_annual_salary(player,overall=overall)*(1.02+rng.random()*.10))
+        overall=cached_overall(player)
+        salary=round(cached_salary(player,overall)*(1.02+rng.random()*.10))
         years=3+(1 if rng.random()<.45 else 0)
         contract_overrides[str(pid)]={
             "start":str(current_date.year),"end":str(current_date.year+years),"end_year":current_date.year+years,
@@ -401,6 +444,8 @@ def run_ai_transfer_window(
         }
         players_by_team[seller]=[p for p in players_by_team.get(seller,[]) if int(p["source_id"])!=pid]
         players_by_team.setdefault(buyer,[]).append(player)
+        squad_audit_cache.pop(int(seller), None); squad_audit_cache.pop(int(buyer), None)
+        releaseable_by_seller.pop(int(seller), None); releaseable_by_seller.pop(int(buyer), None)
         rebuild_releaseable(int(seller)); rebuild_releaseable(int(buyer))
         used_players.add(pid)
         deal={"kind":"ai_transfer","date":current_date.isoformat(),"player_id":pid,"from_team_id":seller,"to_team_id":buyer,"fee":fee,"salary":salary,"contract_years":years,"need":primary_need,"coach_fit":round(fit_score,1) if coach_plan is not None else None}
@@ -414,7 +459,10 @@ def run_ai_transfer_window(
             rows=players_by_team.get(seller,[])
             if rows:
                 new_avg=_club_average(rows,development); buyer_average[seller]=new_avg
-                audit=squad_audit(rows,development); need_slot=str(audit.get("primary_need") or role_for_player(player).squad_slot or "DEPTH")
+                audit=squad_audit_cache.get(int(seller))
+                if audit is None:
+                    audit=squad_audit(rows,development,penalty_cache=penalty_cache); squad_audit_cache[int(seller)]=audit
+                need_slot=str(audit.get("primary_need") or role_for_player(player).squad_slot or "DEPTH")
                 candidates_buyers.append((999.0-rng.random(),seller,new_avg,need_slot,pid));queued_buyers.add(seller)
     return actions
 
@@ -425,6 +473,8 @@ def ensure_ai_squad_coverage(
     contract_overrides: dict[str,dict[str,Any]], seed: int, max_signings: int = 120,
     signing_allowed=None, foreign_limit_getter=None, foreign_predicate=None, target_squad_size_getter=None,
     emergency_source_team_ids: list[int] | None = None,
+    penalty_cache: dict[tuple[int, str], int] | None = None,
+    squad_audit_cache: dict[int, dict[str, Any]] | None = None,
 ) -> list[dict[str,Any]]:
     """Emergency summer recruitment so AI clubs remain structurally playable.
 
@@ -438,6 +488,41 @@ def ensure_ai_squad_coverage(
         return []
     active_sources={int(tid) for tid in eligible_team_ids}
     used:set[int]=set();actions=[];rng=Random(seed ^ current_date.year ^ 0xC0A49394)
+    penalty_cache = penalty_cache if penalty_cache is not None else {}
+    squad_audit_cache = squad_audit_cache if squad_audit_cache is not None else {}
+    foreign_cache: dict[tuple[int, int], bool] = {}
+    salary_cache: dict[int, int] = {}
+    overall_cache: dict[int, int] = {}
+
+    def cached_overall(player: dict[str, Any]) -> int:
+        pid=int(player.get("source_id") or player.get("id") or 0)
+        key=pid if pid else id(player)
+        value=overall_cache.get(key)
+        if value is None:
+            value=int(_overall(player,development)); overall_cache[key]=value
+        return value
+
+    def cached_salary(player: dict[str, Any]) -> int:
+        pid=int(player.get("source_id") or player.get("id") or 0)
+        value=salary_cache.get(pid)
+        if value is None:
+            value=int(inferred_annual_salary(player,overall=cached_overall(player))); salary_cache[pid]=value
+        return value
+
+    def cached_penalty(player: dict[str, Any], slot: str) -> int:
+        pid=int(player.get("source_id") or player.get("id") or 0); key=(pid,str(slot))
+        value=penalty_cache.get(key)
+        if value is None:
+            value=int(position_penalty(player,slot)); penalty_cache[key]=value
+        return value
+
+    def cached_foreign(team_id: int, player: dict[str, Any]) -> bool:
+        if foreign_predicate is None:
+            return False
+        pid=int(player.get("source_id") or player.get("id") or 0); key=(int(team_id),pid)
+        if key not in foreign_cache:
+            foreign_cache[key]=bool(foreign_predicate(int(team_id),player))
+        return foreign_cache[key]
 
     # Audit clubs *before* building a global candidate index.  Mature careers
     # usually need only a handful of positional repairs; indexing every player
@@ -453,14 +538,17 @@ def ensure_ai_squad_coverage(
         minimum_squad_size=MINIMUM_SENIOR_SQUAD_SIZE_9394
         target_squad_size=int(target_squad_size_getter(tid) if target_squad_size_getter is not None else TARGET_SENIOR_SQUAD_SIZE_9394)
         target_squad_size=max(minimum_squad_size,min(25,target_squad_size))
-        audit=squad_audit(players,development)
+        audit=squad_audit_cache.get(int(tid))
+        if audit is None:
+            audit=squad_audit(players,development,penalty_cache=penalty_cache)
+            squad_audit_cache[int(tid)]=audit
         domestic_shortage=0
         if foreign_limit_getter is not None and foreign_predicate is not None:
             limit=foreign_limit_getter(tid)
             if limit is not None:
                 minimum_domestic=max(0,11-int(limit))
-                domestic_outfield=sum(1 for p in players if not foreign_predicate(tid,p) and role_for_player(p).squad_slot!="GK")
-                domestic_keeper=any(not foreign_predicate(tid,p) and role_for_player(p).squad_slot=="GK" for p in players)
+                domestic_outfield=sum(1 for p in players if not cached_foreign(tid,p) and role_for_player(p).squad_slot!="GK")
+                domestic_keeper=any(not cached_foreign(tid,p) and role_for_player(p).squad_slot=="GK" for p in players)
                 domestic_shortage=max(0,minimum_domestic-(domestic_outfield+(1 if domestic_keeper else 0)))
         needs=[row for row in audit["needs"] if int(row.get("shortage") or 0)>0]
         for row in needs:
@@ -487,22 +575,22 @@ def ensure_ai_squad_coverage(
         return 2
     # Index once. Prefer genuine free agents, then non-playable historical pools,
     # and use surplus players from active clubs only as a last-resort hard-floor repair.
-    ranked_all=sorted(candidates,key=lambda sp:(source_rank(sp[0]),-_overall(sp[1],development),int(sp[1]["source_id"])))
+    ranked_all=sorted(candidates,key=lambda sp:(source_rank(sp[0]),-cached_overall(sp[1]),int(sp[1]["source_id"])))
     ranked_by_slot:dict[str,list[tuple[int,dict[str,Any]]]]={}
     affordable_by_slot:dict[str,list[tuple[int,dict[str,Any]]]]={}
     for slot in required_slots:
         scored=[]
         for sp in candidates:
-            penalty=position_penalty(sp[1],slot)
+            penalty=cached_penalty(sp[1],slot)
             if penalty<=9:
                 scored.append((sp,penalty))
-        scored.sort(key=lambda item:(source_rank(item[0][0]),-(_overall(item[0][1],development)-item[1]*1.4),item[1],int(item[0][1]["source_id"])))
+        scored.sort(key=lambda item:(source_rank(item[0][0]),-(cached_overall(item[0][1])-item[1]*1.4),item[1],int(item[0][1]["source_id"])))
         ranked_by_slot[slot]=[sp for sp,_penalty in scored]
-        affordable=sorted(scored,key=lambda item:(source_rank(item[0][0]),inferred_annual_salary(item[0][1],overall=_overall(item[0][1],development)),item[1],-_overall(item[0][1],development),int(item[0][1]["source_id"])))
+        affordable=sorted(scored,key=lambda item:(source_rank(item[0][0]),cached_salary(item[0][1]),item[1],-cached_overall(item[0][1]),int(item[0][1]["source_id"])))
         affordable_by_slot[slot]=[sp for sp,_penalty in affordable]
     affordable_all=sorted(
         candidates,
-        key=lambda sp:(source_rank(sp[0]),inferred_annual_salary(sp[1],overall=_overall(sp[1],development)),-_overall(sp[1],development),int(sp[1]["source_id"])),
+        key=lambda sp:(source_rank(sp[0]),cached_salary(sp[1]),-cached_overall(sp[1]),int(sp[1]["source_id"])),
     )
 
     release_cache:dict[int,dict[str,Any]]={}
@@ -515,14 +603,14 @@ def ensure_ai_squad_coverage(
             "pids":{int(p.get("source_id") or 0) for p in rows},
             "size":len(rows),
             "keepers":sum(1 for p in rows if role_for_player(p).squad_slot=="GK"),
-            "audit":squad_role_audit(rows),
+            "audit":squad_role_audit(rows, penalty_cache=penalty_cache),
         }
         if foreign_limit_getter is not None and foreign_predicate is not None:
             limit=foreign_limit_getter(source_id)
             if limit is not None:
                 profile["domestic_minimum"]=max(0,11-int(limit))
-                profile["domestic_outfield"]={int(p.get("source_id") or 0) for p in rows if not foreign_predicate(source_id,p) and role_for_player(p).squad_slot!="GK"}
-                profile["domestic_keepers"]={int(p.get("source_id") or 0) for p in rows if not foreign_predicate(source_id,p) and role_for_player(p).squad_slot=="GK"}
+                profile["domestic_outfield"]={int(p.get("source_id") or 0) for p in rows if not cached_foreign(source_id,p) and role_for_player(p).squad_slot!="GK"}
+                profile["domestic_keepers"]={int(p.get("source_id") or 0) for p in rows if not cached_foreign(source_id,p) and role_for_player(p).squad_slot=="GK"}
         release_cache[source_id]=profile
         return profile
 
@@ -542,7 +630,7 @@ def ensure_ai_squad_coverage(
             return False
         for need in profile["audit"].get("needs") or []:
             slot=str(need["slot"]);minimum=int(need["minimum"]);count=int(need["count"])
-            if position_penalty(player,slot)<=9 and count<=minimum:
+            if cached_penalty(player,slot)<=9 and count<=minimum:
                 return False
         minimum_domestic=profile.get("domestic_minimum")
         if minimum_domestic is not None and pid in (profile.get("domestic_outfield") or set()) | (profile.get("domestic_keepers") or set()):
@@ -573,13 +661,15 @@ def ensure_ai_squad_coverage(
         return None
 
     def sign(tid:int, players:list[dict[str,Any]], source_id:int, candidate:dict[str,Any], need:str, *, distress:bool) -> None:
-        pid=int(candidate["source_id"]);overall=_overall(candidate,development)
-        salary=inferred_annual_salary(candidate,overall=overall)
+        pid=int(candidate["source_id"]);overall=cached_overall(candidate)
+        salary=cached_salary(candidate)
         player_team_overrides[str(pid)]=tid;used.add(pid)
         if source_id!=0:
             players_by_team[source_id]=[p for p in players_by_team.get(source_id,[]) if int(p.get("source_id") or 0)!=pid]
             release_cache.pop(source_id,None)
+            squad_audit_cache.pop(int(source_id), None)
         players.append(candidate)
+        squad_audit_cache.pop(int(tid), None)
         years=2 if distress else 3+(1 if rng.random()<.35 else 0)
         contract_overrides[str(pid)]={
             "start":str(current_date.year),"end":str(current_date.year+years),"end_year":current_date.year+years,
@@ -602,7 +692,7 @@ def ensure_ai_squad_coverage(
         meta=team_meta.get(tid) or {}
         minimum_squad_size=int(meta.get("minimum") or MINIMUM_SENIOR_SQUAD_SIZE_9394)
         target_squad_size=int(meta.get("target") or TARGET_SENIOR_SQUAD_SIZE_9394)
-        audit=meta.get("audit") or squad_audit(players,development)
+        audit=meta.get("audit") or squad_audit(players,development,penalty_cache=penalty_cache)
         finance=club_finances.get(str(tid)) or {}
         cash=int(finance.get("cash") or 0)
 
@@ -624,7 +714,7 @@ def ensure_ai_squad_coverage(
                 if picked is None:
                     break
                 source_id,candidate=picked
-                salary=inferred_annual_salary(candidate,overall=_overall(candidate,development))
+                salary=cached_salary(candidate)
                 wage_room=wage_budget_headroom(finance,players=players,development=development,contract_overrides=contract_overrides)
                 if not hard_emergency and (cash < salary//4 or salary>wage_room):
                     break
@@ -650,19 +740,19 @@ def ensure_ai_squad_coverage(
             if limit is not None:
                 minimum_domestic=max(0,11-int(limit))
                 def usable_domestic_count() -> int:
-                    outfield=sum(1 for p in players if not foreign_predicate(tid,p) and role_for_player(p).squad_slot!="GK")
-                    keepers=sum(1 for p in players if not foreign_predicate(tid,p) and role_for_player(p).squad_slot=="GK")
+                    outfield=sum(1 for p in players if not cached_foreign(tid,p) and role_for_player(p).squad_slot!="GK")
+                    keepers=sum(1 for p in players if not cached_foreign(tid,p) and role_for_player(p).squad_slot=="GK")
                     return outfield + (1 if keepers else 0)
                 while usable_domestic_count() < minimum_domestic and len(actions)<max_signings:
                     # Extra domestic goalkeepers do not help an XI once one keeper
                     # slot is covered, so prefer an outfield national/equivalent.
                     picked=eligible_candidate(
                         tid,None,
-                        predicate=lambda p, team_id=tid: (not foreign_predicate(team_id,p)) and role_for_player(p).squad_slot!="GK",
+                        predicate=lambda p, team_id=tid: (not cached_foreign(team_id,p)) and role_for_player(p).squad_slot!="GK",
                         allow_active_sources=True,prefer_affordable=True,
                     )
                     if picked is None:
-                        picked=eligible_candidate(tid,None,predicate=lambda p, team_id=tid: not foreign_predicate(team_id,p),allow_active_sources=True,prefer_affordable=True)
+                        picked=eligible_candidate(tid,None,predicate=lambda p, team_id=tid: not cached_foreign(team_id,p),allow_active_sources=True,prefer_affordable=True)
                     if picked is None:
                         break
                     source_id,candidate=picked
@@ -689,7 +779,7 @@ def ensure_ai_squad_coverage(
             if picked is None:
                 break
             source_id,candidate=picked
-            salary=inferred_annual_salary(candidate,overall=_overall(candidate,development))
+            salary=cached_salary(candidate)
             # Require both short-term cash and annual wage-budget headroom for
             # non-emergency depth; the hard 18-player floor remains protected.
             wage_room=wage_budget_headroom(finance,players=players,development=development,contract_overrides=contract_overrides)

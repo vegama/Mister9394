@@ -35,17 +35,26 @@ def _reach_matchday(career: ManagerCareerRuntime9394) -> None:
     assert step["requires_match"] is True
 
 
+def _legal_live_substitution(career: ManagerCareerRuntime9394):
+    snap=career.live_match_snapshot()
+    for incoming in [p["id"] for p in snap["controlled_bench"]]:
+        for outgoing in [p["id"] for p in snap["controlled_on_pitch"] if p["position"] not in {"POR","GK"}]:
+            try:
+                return career.substitute_live_match(outgoing,incoming)
+            except ValueError:
+                continue
+    raise AssertionError("no se encontró una sustitución reglamentariamente válida")
+
+
 def test_m5_live_match_is_persistent_interactive_and_commits_whole_round(tmp_path):
     career=ManagerCareerRuntime9394.create(team_id=16,seed=5151,through_matchday=7)
     _reach_matchday(career)
     live=career.start_live_match()
     assert live["minute"]==0 and live["status"]=="live"
-    first_starter=live["controlled_on_pitch"][1]["id"]
-    first_bench=live["controlled_bench"][0]["id"]
     career.advance_live_match(45)
     assert career.live_match_snapshot()["status"]=="halftime"
     career.set_live_tactics({"formation":"4-3-3","mentality":"attacking","tempo":"high","pressing":"high","directness":"direct","defensive_line":"high","width":"wide","offside_trap":True,"marking":"man"})
-    career.substitute_live_match(first_starter,first_bench)
+    _legal_live_substitution(career)
     assert career.live_match_snapshot()["home"]["substitutions"] + career.live_match_snapshot()["away"]["substitutions"] >= 1
 
     store=ManagerCareerStore9394(tmp_path);store.save(career.state)
@@ -75,11 +84,12 @@ def test_m5_instant_result_uses_live_engine_and_delegates_both_benches():
 
 def test_m5_historical_two_substitution_cap_is_enforced_in_live_match():
     career=ManagerCareerRuntime9394.create(team_id=16,seed=5152,through_matchday=7);_reach_matchday(career);career.start_live_match()
-    snap=career.live_match_snapshot(); starters=[p["id"] for p in snap["controlled_on_pitch"] if p["position"] not in {"POR","GK"}];bench=[p["id"] for p in snap["controlled_bench"]]
-    career.substitute_live_match(starters[0],bench[0]);snap=career.live_match_snapshot()
-    career.substitute_live_match(starters[1],snap["controlled_bench"][0]["id"])
+    _legal_live_substitution(career)
+    _legal_live_substitution(career)
     snap=career.live_match_snapshot()
-    with pytest.raises(ValueError): career.substitute_live_match(starters[2],snap["controlled_bench"][0]["id"])
+    outgoing=next(p["id"] for p in snap["controlled_on_pitch"] if p["position"] not in {"POR","GK"})
+    incoming=snap["controlled_bench"][0]["id"]
+    with pytest.raises(ValueError): career.substitute_live_match(outgoing,incoming)
 
 
 def test_m6_managed_players_build_match_ratings_assists_and_history():

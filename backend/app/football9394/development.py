@@ -72,6 +72,23 @@ def recover_one_day(state: dict[str, dict[str, Any]], *, game_date: date | None 
     """
     availability_changed = False
     for row in state.values():
+        # Most of the historical universe spends most days at its neutral
+        # recovery state. Use the validated native JSON values directly on this
+        # overwhelmingly common branch; compatibility/string coercion remains
+        # below for older or partially migrated rows.
+        try:
+            if (
+                row["injury_days"] == 0
+                and row["condition"] >= 100
+                and row["training_load"] == 0
+                and row["fatigue"] == 0
+                and row["form"] == 70
+                and "injury_risk" in row
+                and "last_training_session" in row
+            ):
+                continue
+        except (KeyError, TypeError):
+            pass
         previous_injury = max(0, int(row.get("injury_days") or 0))
         recover_medical_day(row, game_date=game_date)
         injury = max(0, int(row.get("injury_days") or 0))

@@ -6,6 +6,7 @@ from typing import Any
 
 ROOT=Path(__file__).resolve().parents[2]; sys.path.insert(0,str(ROOT/'backend'))
 from tools.review_created_player_profiles import ATTRS, materialise_attributes
+from app.football9394.player_names import preserve_full_name_and_shorten
 DATA=ROOT/'data/football9394'; SNAP=DATA/'historical_snapshot.json'; STAGE=DATA/'russia_1993_roster_staging.json'; FOUNDATION=DATA/'bel_tur_rus_1993_94_league_foundations.json'; REGISTRY=DATA/'created_players_registry.json'; AUDIT=DATA/'russia_1993_roster_gate_audit.json'
 LEAGUE_ID=930015; RUSSIA_ID=40; OTHER_RUSSIA_ID=9400040; BATCH='russia_league_rosters_0.27'
 TEAM_IDS={'Spartak Moskva':617,'Rotor Volgograd':9315001,'Dynamo Moskva':9315002,'Tekstilshchik Kamyshin':9315003,'Lokomotiv Moskva':9315004,'Spartak Vladikavkaz':9315005,'Torpedo Moskva':1087,'Uralmash':9315006,'CSKA Moskva':9315007,'KAMAZ':9315008,'Zhemchuzhina Sochi':9315009,'Dynamo Stavropol':9315010,'Lokomotiv Nizhny Novgorod':9315011,'Krylia Sovetov':9315012,'Luch Vladivostok':9315013,'Okean Nakhodka':9315014,'Rostselmash':9315015,'Asmaral Moskva':9315016}
@@ -106,6 +107,7 @@ def main():
    resolved.add(sid);p.update({'team_id':tid,'historical_club_1994':name,'historical_position_1993_94':ROLE_TO_LABEL[role],'historical_position_source':rs,'bdfutbol_name_1993_94':row['bdfutbol_name'],'historical_age_1993_94':int(row.get('age_1993_94') or -1),'historical_club_spells_1993_94':[{'club':name,'team_id':tid,'appearances':int(row.get('appearances') or 0),'starts':int(row.get('starts') or 0),'minutes':int(row.get('minutes') or 0),'goals':int(row.get('goals') or 0)}],'historical_data_source':'BDFutbol 1993 squad; identity/position audit v0.27','bdfutbol_squad_url':c['bdfutbol_squad_url'],'profile_review_required':False})
    if profile:
     p.update({'display_name':profile['display_name'],'first_name':profile['first_name'],'surname1':profile['surname1'],'birth_date':profile['birth_date'],'birth_country_id':profile['birth_country_id'],'international_country_id':profile['international_country_id'],'historical_position_1993_94':profile['position'],'historical_position_source':'bdfutbol_player_profile','bdfutbol_id':profile['bdfutbol_id'],'bdfutbol_url':profile['bdfutbol_url'],'nationality_resolution':'bdfutbol_player_profile'})
+   preserve_full_name_and_shorten(p)
    row.update({'identity_resolution':'reused_verified_national_depth' if verified_eid else ('reused_staged_identity' if eid else 'created_historical_identity'),'resolved_source_id':sid,'resolved_display_name':p['display_name'],'resolved_primary_role':role,'resolved_exact_position':ROLE_TO_LABEL[role],'position_source':rs})
    r=regby.get(sid)
    if not (p.get('external_origin') or p.get('creation_batch')):

@@ -20,6 +20,7 @@ from .special_league_runtime import DecidedMatch9394, _resolve_no_draw, _special
 from .standings import LeagueMatch9394, build_league_table
 from .team_builder import build_snapshot_team_sheet_with_repair
 from .foreign_rules import competition_foreign_rule
+from .domestic_cups import domestic_cup_spec
 
 SPECIAL_CALENDAR_FIDELITY = "historical_format_runtime_cadence_dates_not_source_authoritative"
 
@@ -87,7 +88,10 @@ def _full_score(runtime, home_id: str, away_id: str, *, seed: int, no_draw: bool
             return _synthetic_sheet(team_id,HISTORICAL_REPAIR_CLUBS[team_id])
         rule=None
         if inferred_source is not None:
-            rule=competition_foreign_rule(runtime.universe,kind=competition_kind,source_id=int(inferred_source),team_id=int(team_id))
+            if competition_kind=="tournament" and domestic_cup_spec(int(inferred_source)) is not None and hasattr(runtime,"_domestic_foreign_rule"):
+                rule=runtime._domestic_foreign_rule(int(team_id))
+            else:
+                rule=competition_foreign_rule(runtime.universe,kind=competition_kind,source_id=int(inferred_source),team_id=int(team_id))
         try:
             return runtime._sheet(int(team_id),foreign_rule=rule)
         except ValueError as exc:
@@ -107,7 +111,9 @@ def _full_score(runtime, home_id: str, away_id: str, *, seed: int, no_draw: bool
 
     home=sheet(home_id);away=sheet(away_id)
     engine=FootballMatchEngine9394(profile=ERA_BASELINE_1993_94)
-    result=engine.simulate(home,away,seed=seed)
+    fixture={"fixture_type":competition_kind,"source_id":inferred_source,"competition_id":inferred_source}
+    validator=(runtime._substitution_validator_for_fixture(fixture) if hasattr(runtime,"_substitution_validator_for_fixture") else None)
+    result=engine.simulate(home,away,seed=seed,substitution_validator=validator)
     runtime._apply_match_player_state(result,home,away,seed)
     row={"home_team_id":home_id,"away_team_id":away_id,"home_goals":result.home.goals,"away_goals":result.away.goals,"bootstrap":False}
     if no_draw:
@@ -313,8 +319,12 @@ def process_special_competitions(runtime, day: date, *, bootstrap: bool=False) -
     events.extend(_process_apsl(runtime,day,bootstrap=bootstrap))
     events.extend(_process_jleague(runtime,day,bootstrap=bootstrap))
     events.extend(_process_brazil(runtime,day,bootstrap=bootstrap))
-    if not bootstrap:
-        runtime._rebuild_rosters()
+    # Background matches use the fast score model and do not mutate player
+    # availability. Only a controlled club in one of these special leagues can
+    # execute the full match engine here, so restrict the expensive rebuild to
+    # that case and only on days where the competition actually progressed.
+    if not bootstrap and events and int(runtime.state.get("league_id") or 0) in {47, 111, 120}:
+        runtime._rebuild_rosters(sync_dynamics=False)
     return events
 
 

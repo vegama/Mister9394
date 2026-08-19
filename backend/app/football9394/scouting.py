@@ -13,7 +13,7 @@ from typing import Any, Callable
 import unicodedata
 from uuid import uuid4
 
-SCOUTING_SCHEMA_9394 = 1
+SCOUTING_SCHEMA_9394 = 2
 
 LEVEL_LABELS = {
     0: "Desconocido",
@@ -37,6 +37,16 @@ _ATTRIBUTE_LABELS = {
 def ensure_scouting_state(state: dict[str, Any]) -> None:
     state.setdefault("scouting_knowledge", {})
     state.setdefault("scouting_assignments", {})
+    network = state.setdefault("scouting_network", {})
+    network.setdefault("schema", SCOUTING_SCHEMA_9394)
+    network.setdefault("auto_enabled", True)
+    network.setdefault("rating", 10)
+    network.setdefault("label", "Red nacional")
+    network.setdefault("last_auto_on", None)
+    network.setdefault("cursor", 0)
+    network.setdefault("discoveries", 0)
+    network.setdefault("reports_generated", 0)
+    state.setdefault("scouting_portfolio", {})
 
 
 def _entry(state: dict[str, Any], player_id: int) -> dict[str, Any]:
@@ -46,6 +56,102 @@ def _entry(state: dict[str, Any], player_id: int) -> dict[str, Any]:
         "first_seen": None, "updated_on": None, "reports": 0,
         "source": None, "observer": None,
     })
+
+
+def set_network_profile(
+    state: dict[str, Any], *, rating: int, label: str, home_country: str, home_league_id: int,
+    home_league_level: int, known_players_estimate: int | None = None,
+) -> dict[str, Any]:
+    ensure_scouting_state(state)
+    root = state["scouting_network"]
+    root.update({
+        "schema": SCOUTING_SCHEMA_9394, "rating": max(1, min(20, int(rating))),
+        "label": str(label), "home_country": str(home_country or ""),
+        "home_league_id": int(home_league_id or 0), "home_league_level": int(home_league_level or 0),
+    })
+    if known_players_estimate is not None:
+        root["known_players_estimate"] = max(0, int(known_players_estimate))
+    return root
+
+
+def effective_knowledge(
+    state: dict[str, Any], *, player_id: int, game_date: date, baseline: dict[str, Any] | None = None,
+) -> dict[str, Any]:
+    """Merge durable reports with the club's structural starting knowledge.
+
+    Baseline knowledge is derived from the club network and therefore does not
+    need thousands of per-player rows in the save. Explicit scouting always
+    wins and ages normally.
+    """
+    ensure_scouting_state(state)
+    stored = (state.get("scouting_knowledge") or {}).get(str(int(player_id)))
+    base = dict(baseline or {})
+    if stored is None:
+        if int(base.get("level") or 0) <= 0:
+            return {
+                "player_id": int(player_id), "level": 0, "stored_level": 0, "confidence": 0,
+                "first_seen": None, "updated_on": None, "reports": 0, "source": "unknown",
+                "observer": None, "age_days": None, "stale": False, "freshness": "Sin conocimiento",
+            }
+        return {
+            "player_id": int(player_id), "level": max(0, min(4, int(base.get("level") or 0))),
+            "stored_level": max(0, min(4, int(base.get("level") or 0))),
+            "confidence": max(0, min(100, int(base.get("confidence") or 0))),
+            "first_seen": base.get("first_seen"), "updated_on": base.get("updated_on"),
+            "reports": 0, "source": base.get("source") or "network_baseline",
+            "observer": base.get("observer"), "age_days": 0, "stale": False,
+            "freshness": base.get("freshness") or "Conocimiento de red",
+        }
+    aged = knowledge_at_date(stored, game_date)
+    if int(base.get("level") or 0) > int(aged.get("level") or 0):
+        # Structural league/country knowledge does not disappear just because an
+        # old detailed dossier has aged. It supplies the floor, not exact truth.
+        aged["level"] = int(base.get("level") or 0)
+        aged["confidence"] = max(int(aged.get("confidence") or 0), int(base.get("confidence") or 0))
+        aged["source_floor"] = base.get("source") or "network_baseline"
+    return aged
+
+
+def register_network_discovery(
+    state: dict[str, Any], *, player_id: int, game_date: date, level: int, confidence: int,
+    source: str = "autonomous_scouting", observer: str | None = None,
+) -> dict[str, Any]:
+    row = _entry(state, int(player_id))
+    previous = int(row.get("level") or 0)
+    row.update({
+        "level": max(previous, max(1, min(3, int(level)))),
+        "confidence": max(int(row.get("confidence") or 0), max(20, min(90, int(confidence)))),
+        "first_seen": row.get("first_seen") or game_date.isoformat(),
+        "updated_on": game_date.isoformat(), "source": source,
+        "observer": observer or row.get("observer"),
+    })
+    return row
+
+
+def upsert_portfolio_candidate(
+    state: dict[str, Any], *, player_id: int, player_name: str, game_date: date, fit_score: float,
+    confidence: int, knowledge_level: int, reasons: list[str], observer: str, team_name: str | None = None,
+    position: str | None = None, source: str = "autonomous_scouting",
+) -> dict[str, Any]:
+    ensure_scouting_state(state)
+    pid = str(int(player_id))
+    previous = dict((state.get("scouting_portfolio") or {}).get(pid) or {})
+    row = {
+        **previous, "player_id": int(player_id), "player_name": str(player_name),
+        "team_name": team_name, "position": position, "fit_score": round(max(0.0, min(10.0, float(fit_score))), 1),
+        "confidence": max(0, min(100, int(confidence))), "knowledge_level": max(0, min(4, int(knowledge_level))),
+        "reasons": [str(x) for x in reasons[:4]], "observer": str(observer or "Cuerpo de scouting"),
+        "source": str(source), "discovered_on": previous.get("discovered_on") or game_date.isoformat(),
+        "updated_on": game_date.isoformat(),
+    }
+    state["scouting_portfolio"][pid] = row
+    # Keep a useful, bounded working portfolio rather than an endless archive.
+    portfolio = list(state["scouting_portfolio"].values())
+    if len(portfolio) > 80:
+        portfolio.sort(key=lambda item: (float(item.get("fit_score") or 0), int(item.get("confidence") or 0), str(item.get("updated_on") or "")), reverse=True)
+        keep = {str(int(item["player_id"])) for item in portfolio[:80]}
+        state["scouting_portfolio"] = {key: value for key, value in state["scouting_portfolio"].items() if key in keep}
+    return row
 
 
 def register_reference(state: dict[str, Any], *, player_id: int, game_date: date, source: str = "market_reference") -> dict[str, Any]:
@@ -195,11 +301,18 @@ def scouting_snapshot(state: dict[str, Any], *, game_date: date | None = None, c
             if int(row.get("level") or 0) <= 0:
                 continue
             knowledge_rows.append(knowledge_at_date(row, game_date))
+    portfolio = [dict(row) for row in (state.get("scouting_portfolio") or {}).values()]
+    portfolio.sort(key=lambda row: (float(row.get("fit_score") or 0), int(row.get("confidence") or 0), str(row.get("updated_on") or "")), reverse=True)
+    network = dict(state.get("scouting_network") or {})
+    explicit_known = len(knowledge_rows)
+    known_estimate = max(explicit_known, int(network.get("known_players_estimate") or 0))
     return {
         "schema": SCOUTING_SCHEMA_9394, "active": active, "recent_reports": completed[:12],
         "capacity": cap, "used_capacity": len(active), "available_capacity": max(0, cap - len(active)),
-        "known_players": len(knowledge_rows),
+        "known_players": known_estimate, "explicit_known_players": explicit_known,
         "stale_reports": sum(1 for row in knowledge_rows if row.get("stale")),
+        "network": network, "auto_enabled": bool(network.get("auto_enabled", True)),
+        "portfolio": portfolio[:24], "portfolio_count": len(portfolio),
     }
 
 
@@ -228,16 +341,47 @@ def _attribute_report(attributes: dict[str, Any]) -> tuple[list[str], list[str]]
 
 
 def external_player_view(
-    state: dict[str, Any], *, api: dict[str, Any], player_id: int, game_date: date, effectiveness: dict[str, Any]
+    state: dict[str, Any], *, api: dict[str, Any], player_id: int, game_date: date, effectiveness: dict[str, Any],
+    baseline_knowledge: dict[str, Any] | None = None,
 ) -> dict[str, Any]:
-    """Redact canonical data according to persistent scouting knowledge."""
+    """Redact canonical data according to persistent + structural scouting knowledge."""
     pid = int(player_id)
-    stored_knowledge = register_reference(state, player_id=pid, game_date=game_date)
-    knowledge = knowledge_at_date(stored_knowledge, game_date)
-    level = max(1, min(4, int(knowledge.get("level") or 1)))
-    confidence = max(int(knowledge.get("confidence") or 0), 25 if level == 1 else 40)
+    knowledge = effective_knowledge(state, player_id=pid, game_date=game_date, baseline=baseline_knowledge)
+    level = max(0, min(4, int(knowledge.get("level") or 0)))
+    confidence = max(int(knowledge.get("confidence") or 0), 25 if level == 1 else 40 if level >= 2 else 0)
     true_overall = _truth_overall(api)
     staff_quality = max(1, min(20, int(effectiveness.get("quality") or 10)))
+    if level == 0:
+        result = dict(api)
+        # Identity may be found through a name/contact/reference, but the market
+        # screen must not become an omniscient database of ability or price.
+        result["overall"] = None
+        result["overall_is_exact"] = False
+        result["overall_range"] = None
+        result["overall_estimate"] = None
+        result["attributes"] = {}
+        result["attribute_ranges"] = {}
+        result["estimated_transfer_value"] = None
+        result["transfer_value_is_exact"] = False
+        market = dict(result.get("market") or {})
+        market.update({"market_value": None, "value_range": None, "value_is_exact": False, "minimum_salary_hint": None})
+        result["market"] = market
+        contract = dict(result.get("contract") or {})
+        for key in ("salary", "salary_display", "release_clause", "release_clause_display"):
+            contract.pop(key, None)
+        result["contract"] = contract
+        result["tactical_fit"] = {"label": "Desconocido", "score": None, "reasons": []}
+        result["squad_dynamics"] = {"role": None, "satisfaction": None, "wants_move": False}
+        result["medical"] = {"status": "Sin información", "injury_days": None, "current_injury": None, "history": []}
+        result["scout"] = {
+            "level": 0, "knowledge": LEVEL_LABELS[0], "confidence": "0%", "confidence_value": 0,
+            "updated_on": None, "age_days": None, "stale": False, "freshness": "Sin conocimiento",
+            "stored_level": 0, "observer": None,
+            "summary": "La red todavía no conoce a este jugador. Puedes localizarlo por referencia, pero primero debe ser descubierto por scouting.",
+            "strengths": [], "weaknesses": [], "recommended_role": None, "tactical_fit": None,
+            "overall_range": None, "value_range": None,
+        }
+        return result
     spread = {1: 9, 2: 7, 3: 3, 4: 0}[level]
     error = 0 if level == 4 else _stable_error(state=state, player_id=pid, level=level, spread=max(1, spread // 2))
     estimated = max(40, min(99, true_overall + error))

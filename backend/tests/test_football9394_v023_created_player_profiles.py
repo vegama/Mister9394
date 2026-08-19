@@ -63,13 +63,15 @@ def test_high_profile_baseline_errors_are_corrected_explicitly():
 def test_created_player_registry_and_photo_queue_remain_stable():
     reg=load(REG)['players']
     assert len(reg)>=367
-    assert all(str(r.get('attribute_source') or '').startswith('fixed_source_comparable_') for r in reg)
+    created=[r for r in reg if r.get('creation_batch') and not r.get('retired_alias_v113')]
+    assert all(str(r.get('attribute_source') or '').startswith('fixed_source_comparable_') for r in created)
     pending={int(r['source_id']) for r in reg if r.get('profile_review_required')}
     assert {9495331,9495336,9495337,9495342,9496404,9496406,9496434,9496447,9496448,9496449,9496452,9496455,9496457,9496467,9496469,9497236,9497251,9497254,9497255,9497261,9497266,9497275,9497276,9497277,9497279,9497282,9497289,9497290,9497291,9497518,9497522,9498002} <= pending
-    assert all(int(r['overall'])>0 for r in reg)
+    assert all(int(r['overall'])>0 for r in created)
     queue=load(ROOT/'data/football9394/bdfutbol_photo_queue.json')['players']
-    assert len(queue)==len(reg)
-    assert {int(r['source_id']) for r in queue}=={int(r['source_id']) for r in reg}
+    active=[r for r in reg if not r.get('retired_alias_v113')]
+    assert len(queue)==len(active)
+    assert {int(r['source_id']) for r in queue}=={int(r['source_id']) for r in active}
 
 def test_popov_remains_single_existing_identity_not_a_created_player():
     snap=load(SNAP)
@@ -77,7 +79,7 @@ def test_popov_remains_single_existing_identity_not_a_created_player():
     # display form from 'Popov' to the full BDFutbol profile name.
     matches=[p for p in snap['players'] if int(p.get('source_id') or 0)==515]
     assert len(matches)==1
-    assert matches[0]['display_name'] in {'Popov','Dmitri Lvovich Popov'}
+    assert matches[0]['display_name'] in {'Popov','Dmitri Popov','Dmitri Lvovich Popov'}
     assert not matches[0].get('external_origin')
     assert str(matches[0]['birth_date']).startswith('1967-02-27')
 

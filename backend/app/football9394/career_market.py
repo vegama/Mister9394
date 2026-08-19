@@ -3,6 +3,7 @@ from __future__ import annotations
 """Compact but real transfer/contract economy for the playable 93/94 career."""
 
 from dataclasses import dataclass
+from functools import lru_cache
 from typing import Any
 
 
@@ -33,9 +34,17 @@ def _interpolate_money(rating: int, anchors: tuple[tuple[int, int], ...], *, flo
     return int(anchors[-1][1])
 
 
+@lru_cache(maxsize=128)
+def _transfer_value_for_rating(rating: int) -> int:
+    # Transfer value depends only on the effective rating. Market screens and
+    # AI windows ask this question thousands of times per pulse, while there
+    # are only 100 possible ratings. Cache the curve, not player-specific data.
+    return _interpolate_money(int(rating), _TRANSFER_VALUE_ANCHORS, floor=250_000)
+
+
 def estimated_transfer_value(player: dict[str, Any], *, overall: int | None = None) -> int:
     rating = int(overall or player.get("overall") or player.get("category") or 60)
-    return _interpolate_money(rating, _TRANSFER_VALUE_ANCHORS, floor=250_000)
+    return _transfer_value_for_rating(rating)
 
 
 def initial_finances(team: dict[str, Any]) -> dict[str, Any]:

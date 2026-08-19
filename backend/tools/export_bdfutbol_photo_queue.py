@@ -56,6 +56,8 @@ def build_queue(registry_path: Path = DEFAULT_REGISTRY) -> list[dict[str, Any]]:
     rows = payload.get("players", payload) if isinstance(payload, dict) else payload
     queue: list[dict[str, Any]] = []
     for row in rows or []:
+        if row.get("retired_alias_v113"):
+            continue
         if str(row.get("duplicate_check") or "") not in {
             "created_after_global_existing_player_comparison",
             "belgium_1993_94_identity_gate",
@@ -75,6 +77,7 @@ def build_queue(registry_path: Path = DEFAULT_REGISTRY) -> list[dict[str, Any]]:
             "exact_name_birthdate_source_profile_gate_v044",
             "individual_profile_id_identity_gate_v045",
             "individual_profile_id_identity_gate_v046",
+            "id_collision_restored_v113",
         }:
             continue
         item = {field: row.get(field) for field in QUEUE_FIELDS}

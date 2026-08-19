@@ -5,10 +5,10 @@ from fastapi import APIRouter, HTTPException
 from .manager_career import ManagerCareerRuntime9394, career_selectable_leagues
 from .national_teams import national_team_catalog, national_team_snapshot
 from .snapshot_runtime import default_runtime_snapshot
-from .manager_route_support import _career_store, _load_manager_career
+from .manager_route_support import _career_store, _load_manager_career, _remember_manager_career
 from .webapp_contracts import (
     CreateManagerCareerPayload, CareerTacticsPayload, CareerSelectionPayload, TransferOfferPayload,
-    ContractRenewalPayload, LiveAdvancePayload, LiveSubstitutionPayload, MarketNegotiationPayload,
+    ContractRenewalPayload, LiveStartPayload, LiveAdvancePayload, LiveSubstitutionPayload, MarketNegotiationPayload,
     MarketCounterPayload, WatchlistPayload, TransferListingPayload, RolePromisePayload,
     StaffResponsibilityPayload, TrainingPlanPayload, TrainingFocusPayload, TrainingRecoveryPayload,
     MatchPreparationPayload, TacticalPhasePayload, TacticalPlayerInstructionPayload,
@@ -31,7 +31,9 @@ def create_manager_career(payload: CreateManagerCareerPayload) -> dict:
         )
     except ValueError as exc:
         raise HTTPException(status_code=409, detail=str(exc)) from exc
-    _career_store().save(career.state)
+    store = _career_store()
+    store.save(career.state)
+    _remember_manager_career(career, store=store)
     return career.snapshot()
 
 @router.get("/api/football9394/careers/{career_id}")
@@ -56,17 +58,19 @@ def play_next_manager_matchday(career_id: str) -> dict:
     return snapshot
 
 @router.put("/api/football9394/careers/{career_id}/tactics")
-def update_manager_tactics(career_id: str, payload: CareerTacticsPayload) -> dict:
+def update_manager_tactics(career_id: str, payload: CareerTacticsPayload, compact: bool = False) -> dict:
     career = _load_manager_career(career_id)
     try:
         career.set_tactics(payload.model_dump())
     except (TypeError, ValueError) as exc:
         raise HTTPException(status_code=422, detail=str(exc)) from exc
-    _career_store().save(career.state)
+    (_career_store().save_hot_overlay(career.state) if compact else _career_store().save(career.state))
+    if compact:
+        return {"tactics": dict(career.state.get("tactics") or {}), "tactical_identity": career.tactical_identity_snapshot()}
     return career.snapshot()
 
 @router.put("/api/football9394/careers/{career_id}/selection")
-def update_manager_selection(career_id: str, payload: CareerSelectionPayload) -> dict:
+def update_manager_selection(career_id: str, payload: CareerSelectionPayload, compact: bool = False) -> dict:
     career = _load_manager_career(career_id)
     try:
         if payload.auto_select:
@@ -78,7 +82,9 @@ def update_manager_selection(career_id: str, payload: CareerSelectionPayload) ->
             selection = career.set_selection(payload.starter_ids, payload.bench_ids)
     except (KeyError, TypeError, ValueError) as exc:
         raise HTTPException(status_code=422, detail=str(exc)) from exc
-    _career_store().save(career.state)
+    (_career_store().save_hot_overlay(career.state) if compact else _career_store().save(career.state))
+    if compact:
+        return {"selection": career.selection_ui_snapshot()}
     return {"selection": selection, "career": career.snapshot()}
 
 @router.post("/api/football9394/careers/{career_id}/jobs/{offer_id}/accept")
@@ -189,7 +195,7 @@ def manager_career_transfer(career_id: str, player_id: int, payload: TransferOff
     return {"decision": decision, "career": career.snapshot()}
 
 @router.post("/api/football9394/careers/{career_id}/contracts/{player_id}/renew")
-def manager_career_renew_contract(career_id: str, player_id: int, payload: ContractRenewalPayload) -> dict:
+def manager_career_renew_contract(career_id: str, player_id: int, payload: ContractRenewalPayload, compact: bool = False) -> dict:
     career = _load_manager_career(career_id)
     try:
         decision = career.renew_player_contract(player_id, years=payload.years, salary_offer=payload.salary_offer)
@@ -198,16 +204,20 @@ def manager_career_renew_contract(career_id: str, player_id: int, payload: Contr
     except ValueError as exc:
         raise HTTPException(status_code=409, detail=str(exc)) from exc
     _career_store().save(career.state)
+    if compact:
+        return {"decision":decision,"squad":career.squad_ui_snapshot(),"finances":dict(career.state.get("finances") or {}),"economy":career.economy_snapshot()}
     return {"decision": decision, "career": career.snapshot()}
 
 @router.post("/api/football9394/careers/{career_id}/players/{player_id}/role-promise")
-def manager_set_role_promise(career_id: str, player_id: int, payload: RolePromisePayload) -> dict:
+def manager_set_role_promise(career_id: str, player_id: int, payload: RolePromisePayload, compact: bool = False) -> dict:
     career = _load_manager_career(career_id)
     try:
         result = career.set_role_promise(player_id, payload.role)
     except (KeyError, ValueError) as exc:
         raise HTTPException(status_code=409, detail=str(exc)) from exc
     _career_store().save(career.state)
+    if compact:
+        return {"result":result,"player":result.get("player"),"squad":career.squad_ui_snapshot(),"dressing_room":career.dressing_room_api_snapshot()}
     return {"result": result, "career": career.snapshot(), "player": result.get("player")}
 
 @router.get("/api/football9394/careers/{career_id}/players/{player_id}")
@@ -221,25 +231,34 @@ def manager_live_match(career_id: str) -> dict | None:
     return _load_manager_career(career_id).live_match_snapshot()
 
 @router.post("/api/football9394/careers/{career_id}/live/start")
-def start_manager_live_match(career_id: str) -> dict:
+def start_manager_live_match(career_id: str, payload: LiveStartPayload | None = None) -> dict:
     career=_load_manager_career(career_id)
-    try: match=career.start_live_match()
+    try:
+        # Preparing a match is one atomic action. Persist the draft XI and
+        # tactics in the same runtime/save that opens the preview instead of
+        # forcing the frontend through two extra load+save round trips.
+        if payload is not None and payload.starter_ids is not None:
+            career.set_selection(payload.starter_ids, payload.bench_ids)
+        if payload is not None and payload.tactics is not None:
+            career.set_tactics(payload.tactics.model_dump())
+        match=career.start_live_match()
     except ValueError as exc: raise HTTPException(status_code=409, detail=str(exc)) from exc
-    _career_store().save(career.state);return {"match":match,"career":career.snapshot()}
+    _career_store().save_boundary_overlay(career.state);return {"match":match}
 
 @router.delete("/api/football9394/careers/{career_id}/live/preview")
 def cancel_manager_live_preview(career_id: str) -> dict:
     career=_load_manager_career(career_id)
     try: state=career.cancel_live_preview()
     except ValueError as exc: raise HTTPException(status_code=409, detail=str(exc)) from exc
-    _career_store().save(career.state);return {"career":state}
+    _career_store().save_hot_overlay(career.state);return {"career":state}
 
 @router.post("/api/football9394/careers/{career_id}/live/advance")
 def advance_manager_live_match(career_id: str, payload: LiveAdvancePayload) -> dict:
     career=_load_manager_career(career_id)
-    try: match=career.advance_live_match(payload.minutes)
+    try:
+        match=career.advance_live_match_until_event(payload.minutes) if payload.until_event else career.advance_live_match(payload.minutes)
     except ValueError as exc: raise HTTPException(status_code=409, detail=str(exc)) from exc
-    _career_store().save(career.state);return {"match":match,"career":career.snapshot()}
+    _career_store().save_live_overlay(career.state);return {"match":match}
 
 @router.post("/api/football9394/careers/{career_id}/live/result")
 def simulate_manager_live_match(career_id: str) -> dict:
@@ -253,14 +272,14 @@ def update_manager_live_tactics(career_id: str, payload: CareerTacticsPayload) -
     career=_load_manager_career(career_id)
     try: match=career.set_live_tactics(payload.model_dump())
     except (ValueError,TypeError) as exc: raise HTTPException(status_code=422, detail=str(exc)) from exc
-    _career_store().save(career.state);return {"match":match,"career":career.snapshot()}
+    _career_store().save_live_overlay(career.state);return {"match":match}
 
 @router.post("/api/football9394/careers/{career_id}/live/substitution")
 def substitute_manager_live_match(career_id: str, payload: LiveSubstitutionPayload) -> dict:
     career=_load_manager_career(career_id)
     try: match=career.substitute_live_match(payload.outgoing_id,payload.incoming_id)
     except ValueError as exc: raise HTTPException(status_code=409, detail=str(exc)) from exc
-    _career_store().save(career.state);return {"match":match,"career":career.snapshot()}
+    _career_store().save_live_overlay(career.state);return {"match":match}
 
 @router.post("/api/football9394/careers/{career_id}/live/finish")
 def finish_manager_live_match(career_id: str) -> dict:
@@ -270,38 +289,38 @@ def finish_manager_live_match(career_id: str) -> dict:
     _career_store().save(career.state);return result
 
 @router.post("/api/football9394/careers/{career_id}/negotiations")
-def manager_open_negotiation(career_id: str, payload: MarketNegotiationPayload) -> dict:
+def manager_open_negotiation(career_id: str, payload: MarketNegotiationPayload, compact: bool = False) -> dict:
     career=_load_manager_career(career_id)
     try: row=career.open_transfer_negotiation(payload.player_id,fee_offer=payload.fee_offer,salary_offer=payload.salary_offer,contract_years=payload.contract_years,squad_role=payload.squad_role,signing_bonus=payload.signing_bonus,release_clause=payload.release_clause,deal_type=payload.deal_type,loan_wage_share=payload.loan_wage_share)
     except KeyError as exc: raise HTTPException(status_code=404,detail=str(exc)) from exc
     except ValueError as exc: raise HTTPException(status_code=409,detail=str(exc)) from exc
-    _career_store().save(career.state);return {"negotiation":row,"career":career.snapshot()}
+    (_career_store().save_boundary_overlay(career.state) if compact else _career_store().save(career.state));return ({"negotiation":row,"market_flow":career.market_snapshot()} if compact else {"negotiation":row,"career":career.snapshot()})
 
 @router.put("/api/football9394/careers/{career_id}/negotiations/{negotiation_id}")
-def manager_counter_negotiation(career_id: str, negotiation_id: str, payload: MarketCounterPayload) -> dict:
+def manager_counter_negotiation(career_id: str, negotiation_id: str, payload: MarketCounterPayload, compact: bool = False) -> dict:
     career=_load_manager_career(career_id)
     try: row=career.resubmit_transfer_negotiation(negotiation_id,fee_offer=payload.fee_offer,salary_offer=payload.salary_offer,contract_years=payload.contract_years,loan_wage_share=payload.loan_wage_share)
     except KeyError as exc: raise HTTPException(status_code=404,detail=str(exc)) from exc
     except ValueError as exc: raise HTTPException(status_code=409,detail=str(exc)) from exc
-    _career_store().save(career.state);return {"negotiation":row,"career":career.snapshot()}
+    (_career_store().save_boundary_overlay(career.state) if compact else _career_store().save(career.state));return ({"negotiation":row,"market_flow":career.market_snapshot()} if compact else {"negotiation":row,"career":career.snapshot()})
 
 @router.delete("/api/football9394/careers/{career_id}/negotiations/{negotiation_id}")
-def manager_withdraw_negotiation(career_id: str, negotiation_id: str) -> dict:
+def manager_withdraw_negotiation(career_id: str, negotiation_id: str, compact: bool = False) -> dict:
     career=_load_manager_career(career_id)
     try: row=career.withdraw_transfer_negotiation(negotiation_id)
     except KeyError as exc: raise HTTPException(status_code=404,detail=str(exc)) from exc
     except ValueError as exc: raise HTTPException(status_code=409,detail=str(exc)) from exc
-    _career_store().save(career.state);return {"negotiation":row,"career":career.snapshot()}
+    (_career_store().save_boundary_overlay(career.state) if compact else _career_store().save(career.state));return ({"negotiation":row,"market_flow":career.market_snapshot()} if compact else {"negotiation":row,"career":career.snapshot()})
 
 @router.post("/api/football9394/careers/{career_id}/transfer-list/{player_id}")
-def manager_list_player(career_id: str, player_id: int, payload: TransferListingPayload) -> dict:
+def manager_list_player(career_id: str, player_id: int, payload: TransferListingPayload, compact: bool = False) -> dict:
     career=_load_manager_career(career_id)
     try: row=career.list_player_for_transfer(player_id,asking_price=payload.asking_price)
     except KeyError as exc: raise HTTPException(status_code=404,detail=str(exc)) from exc
     except ValueError as exc: raise HTTPException(status_code=409,detail=str(exc)) from exc
-    _career_store().save(career.state);return {"listing":row,"career":career.snapshot()}
+    (_career_store().save_boundary_overlay(career.state) if compact else _career_store().save(career.state));return ({"listing":row,"market_flow":career.market_snapshot(),"squad":career.squad_ui_snapshot()} if compact else {"listing":row,"career":career.snapshot()})
 
 @router.delete("/api/football9394/careers/{career_id}/transfer-list/{player_id}")
-def manager_unlist_player(career_id: str, player_id: int) -> dict:
-    career=_load_manager_career(career_id);career.unlist_player(player_id);_career_store().save(career.state);return {"career":career.snapshot()}
+def manager_unlist_player(career_id: str, player_id: int, compact: bool = False) -> dict:
+    career=_load_manager_career(career_id);career.unlist_player(player_id);(_career_store().save_boundary_overlay(career.state) if compact else _career_store().save(career.state));return ({"market_flow":career.market_snapshot(),"squad":career.squad_ui_snapshot()} if compact else {"career":career.snapshot()})
 

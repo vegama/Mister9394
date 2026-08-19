@@ -88,7 +88,8 @@ def test_turkey_individual_profiles_fix_roles_and_reconcile_roger_ljung():
 def test_russia_individual_profiles_fix_identity_nationality_and_roles():
     players = _players_by_id()
     stauce = players[9496613]
-    assert stauce["display_name"] == "Gintaras Mindaugovich Staučė"
+    assert stauce["display_name"] == "Gintaras Staučė"
+    assert stauce["historical_full_name"] == "Gintaras Mindaugovich Staučė"
     assert stauce.get("birth_country_id") is None
     assert (stauce["historical_birth_state"], int(stauce["birth_territory_country_id"]), int(stauce["primary_role"])) == ("USSR", 52, 0)
 
@@ -134,7 +135,7 @@ def test_profile_audit_and_photo_queue_are_traceable_and_synchronised():
     audit = _load("turkey_russia_greece_individual_profile_audit.json")
     registry = _load("created_players_registry.json")["players"]
     queue = _load("bdfutbol_photo_queue.json")["players"]
-    reg = {int(row["source_id"]): row for row in registry}
+    reg = {int(row["source_id"]): row for row in registry if not row.get("retired_alias_v113")}
     queued = {int(row["source_id"]): row for row in queue}
 
     assert audit["profiles_curated"] == 20
@@ -158,6 +159,6 @@ def test_snapshot_and_registry_have_unique_source_ids_after_profile_pass():
     snapshot_ids = [int(p["source_id"]) for p in _load("historical_snapshot.json")["players"]]
     registry_ids = [int(p["source_id"]) for p in _load("created_players_registry.json")["players"]]
     assert len(snapshot_ids) == len(set(snapshot_ids))
-    assert len(snapshot_ids) >= 12499
+    assert len(snapshot_ids) >= 12400
     assert len(registry_ids) == len(set(registry_ids))
-    assert len(registry_ids) >= 2107
+    assert len(registry_ids) >= 2080

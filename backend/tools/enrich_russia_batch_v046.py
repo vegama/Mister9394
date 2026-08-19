@@ -2,9 +2,11 @@ from __future__ import annotations
 
 from pathlib import Path
 from typing import Any
-import copy, hashlib, json
+import copy, hashlib, json, sys
 
 ROOT=Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(ROOT/'backend'))
+from app.football9394.player_names import preserve_full_name_and_shorten
 DATA=ROOT/'data'/'football9394'
 SNAP=DATA/'historical_snapshot.json'; REG=DATA/'created_players_registry.json'; PHOTO=DATA/'bdfutbol_photo_queue.json'
 STAGE=DATA/'russia_1993_roster_staging.json'; LINKS=DATA/'russia_profile_links_v046.json'; CONTEXT=DATA/'country_context_1993.json'
@@ -111,6 +113,7 @@ def main()->None:
         is_preexisting=sid not in target_source_ids
         if not is_preexisting and sid not in processed_canonical:
             p['display_name']=full; p['first_name']=first; p['surname1']=surname
+            preserve_full_name_and_shorten(p)
         elif is_preexisting:
             aliases['project_display_preserved_v046']=p.get('display_name')
         p['bdfutbol_id']=str(link['bdfutbol_id']); p['bdfutbol_url']=link['bdfutbol_url']

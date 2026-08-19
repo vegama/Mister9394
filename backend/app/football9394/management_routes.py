@@ -19,13 +19,14 @@ from .webapp_contracts import (
 router = APIRouter()
 
 @router.post("/api/football9394/careers/{career_id}/captain/{player_id}")
-def manager_set_captain(career_id: str, player_id: int) -> dict:
+def manager_set_captain(career_id: str, player_id: int, compact: bool = False) -> dict:
     career = _load_manager_career(career_id)
     try:
         result = career.set_captain(player_id)
     except (KeyError, ValueError) as exc:
         raise HTTPException(status_code=409, detail=str(exc)) from exc
     _career_store().save(career.state)
+    if compact: return {"result": result, "dressing_room": career.dressing_room_api_snapshot()}
     return {"result": result, "career": career.snapshot()}
 
 @router.get("/api/football9394/careers/{career_id}/staff")
@@ -33,7 +34,7 @@ def manager_career_staff(career_id: str) -> dict:
     return _load_manager_career(career_id).staff_snapshot()
 
 @router.put("/api/football9394/careers/{career_id}/staff/responsibilities/{responsibility_key}")
-def manager_assign_staff_responsibility(career_id: str, responsibility_key: str, payload: StaffResponsibilityPayload) -> dict:
+def manager_assign_staff_responsibility(career_id: str, responsibility_key: str, payload: StaffResponsibilityPayload, compact: bool = False) -> dict:
     career = _load_manager_career(career_id)
     try:
         staff = career.set_staff_responsibility(responsibility_key, payload.assignee)
@@ -42,6 +43,7 @@ def manager_assign_staff_responsibility(career_id: str, responsibility_key: str,
     except ValueError as exc:
         raise HTTPException(status_code=409, detail=str(exc)) from exc
     _career_store().save(career.state)
+    if compact: return {"staff": staff}
     return {"staff": staff, "career": career.snapshot()}
 
 @router.get("/api/football9394/careers/{career_id}/training")
@@ -49,70 +51,72 @@ def manager_career_training(career_id: str) -> dict:
     return _load_manager_career(career_id).training_snapshot()
 
 @router.put("/api/football9394/careers/{career_id}/training")
-def manager_update_training(career_id: str, payload: TrainingPlanPayload) -> dict:
+def manager_update_training(career_id: str, payload: TrainingPlanPayload, compact: bool = False) -> dict:
     career = _load_manager_career(career_id)
     try:
-        training = career.set_training_plan(intensity=payload.intensity, weekly_plan=payload.weekly_plan)
+        training = career.set_training_plan(intensity=payload.intensity, weekly_plan=payload.weekly_plan, mode=payload.mode)
     except ValueError as exc:
         raise HTTPException(status_code=422, detail=str(exc)) from exc
-    _career_store().save(career.state)
+    (_career_store().save_hot_overlay(career.state) if compact else _career_store().save(career.state))
+    if compact: return {"training": training}
     return {"training": training, "career": career.snapshot()}
 
 @router.put("/api/football9394/careers/{career_id}/training/players/{player_id}")
-def manager_update_training_focus(career_id: str, player_id: int, payload: TrainingFocusPayload) -> dict:
+def manager_update_training_focus(career_id: str, player_id: int, payload: TrainingFocusPayload, compact: bool = False) -> dict:
     career = _load_manager_career(career_id)
     try:
         training = career.set_player_training_focus(player_id, payload.focus)
     except ValueError as exc:
         raise HTTPException(status_code=422, detail=str(exc)) from exc
-    _career_store().save(career.state)
+    (_career_store().save_hot_overlay(career.state) if compact else _career_store().save(career.state))
+    if compact: return {"training": training}
     return {"training": training, "career": career.snapshot()}
 
 @router.put("/api/football9394/careers/{career_id}/training/recovery/{player_id}")
-def manager_update_training_recovery(career_id: str, player_id: int, payload: TrainingRecoveryPayload) -> dict:
+def manager_update_training_recovery(career_id: str, player_id: int, payload: TrainingRecoveryPayload, compact: bool = False) -> dict:
     career=_load_manager_career(career_id)
     try: training=career.set_player_recovery_plan(player_id,payload.recovery)
     except ValueError as exc: raise HTTPException(status_code=422,detail=str(exc)) from exc
-    _career_store().save(career.state);return {"training":training,"career":career.snapshot()}
+    (_career_store().save_hot_overlay(career.state) if compact else _career_store().save(career.state));return {"training":training} if compact else {"training":training,"career":career.snapshot()}
 
 @router.put("/api/football9394/careers/{career_id}/training/match-preparation")
-def manager_update_match_preparation(career_id: str, payload: MatchPreparationPayload) -> dict:
+def manager_update_match_preparation(career_id: str, payload: MatchPreparationPayload, compact: bool = False) -> dict:
     career=_load_manager_career(career_id)
     try: training=career.set_match_preparation_focus(payload.focus)
     except ValueError as exc: raise HTTPException(status_code=422,detail=str(exc)) from exc
-    _career_store().save(career.state);return {"training":training,"career":career.snapshot()}
+    (_career_store().save_hot_overlay(career.state) if compact else _career_store().save(career.state));return {"training":training} if compact else {"training":training,"career":career.snapshot()}
 
 @router.get("/api/football9394/careers/{career_id}/tactical-plan")
 def manager_tactical_plan(career_id: str) -> dict:
     return _load_manager_career(career_id).tactical_plan_snapshot()
 
 @router.put("/api/football9394/careers/{career_id}/tactical-plan")
-def manager_update_tactical_plan(career_id: str, payload: TacticalPhasePayload) -> dict:
+def manager_update_tactical_plan(career_id: str, payload: TacticalPhasePayload, compact: bool = False) -> dict:
     career=_load_manager_career(career_id)
     try: plan=career.set_tactical_phase_plan(build_up=payload.build_up,final_third=payload.final_third,transition=payload.transition)
     except ValueError as exc: raise HTTPException(status_code=422,detail=str(exc)) from exc
-    _career_store().save(career.state);return {"tactical_plan":plan,"career":career.snapshot()}
+    (_career_store().save_hot_overlay(career.state) if compact else _career_store().save(career.state));return {"tactical_plan":plan} if compact else {"tactical_plan":plan,"career":career.snapshot()}
 
 @router.put("/api/football9394/careers/{career_id}/tactical-plan/players/{player_id}")
-def manager_update_player_instruction(career_id: str, player_id: int, payload: TacticalPlayerInstructionPayload) -> dict:
+def manager_update_player_instruction(career_id: str, player_id: int, payload: TacticalPlayerInstructionPayload, compact: bool = False) -> dict:
     career=_load_manager_career(career_id)
     try: plan=career.set_tactical_individual_instruction(player_id,payload.model_dump())
     except ValueError as exc: raise HTTPException(status_code=422,detail=str(exc)) from exc
-    _career_store().save(career.state);return {"tactical_plan":plan,"career":career.snapshot()}
+    (_career_store().save_hot_overlay(career.state) if compact else _career_store().save(career.state));return {"tactical_plan":plan} if compact else {"tactical_plan":plan,"career":career.snapshot()}
 
 @router.put("/api/football9394/careers/{career_id}/tactical-plan/opposition/{player_id}")
-def manager_update_opposition_instruction(career_id: str, player_id: int, payload: OppositionInstructionPayload) -> dict:
+def manager_update_opposition_instruction(career_id: str, player_id: int, payload: OppositionInstructionPayload, compact: bool = False) -> dict:
     career=_load_manager_career(career_id)
     try: plan=career.set_tactical_opposition_instruction(player_id,tight_mark=payload.tight_mark,press=payload.press,show_foot=payload.show_foot)
     except (KeyError,ValueError) as exc: raise HTTPException(status_code=422,detail=str(exc)) from exc
-    _career_store().save(career.state);return {"tactical_plan":plan,"career":career.snapshot()}
+    (_career_store().save_hot_overlay(career.state) if compact else _career_store().save(career.state));return {"tactical_plan":plan} if compact else {"tactical_plan":plan,"career":career.snapshot()}
 
 @router.put("/api/football9394/careers/{career_id}/tactical-plan/set-pieces/{kind}")
-def manager_update_set_piece_taker(career_id: str, kind: str, payload: SetPieceTakerPayload) -> dict:
+def manager_update_set_piece_taker(career_id: str, kind: str, payload: SetPieceTakerPayload, compact: bool = False) -> dict:
     career=_load_manager_career(career_id)
     try: plan=career.set_tactical_set_piece_taker(kind,payload.player_id)
     except (KeyError,ValueError) as exc: raise HTTPException(status_code=422,detail=str(exc)) from exc
-    _career_store().save(career.state);return {"tactical_plan":plan,"career":career.snapshot()}
+    (_career_store().save_hot_overlay(career.state) if compact else _career_store().save(career.state));return {"tactical_plan":plan} if compact else {"tactical_plan":plan,"career":career.snapshot()}
 
 @router.get("/api/football9394/careers/{career_id}/staff-reports")
 def manager_staff_reports(career_id: str) -> dict:
@@ -123,7 +127,7 @@ def manager_career_scouting(career_id: str) -> dict:
     return _load_manager_career(career_id).scouting_snapshot()
 
 @router.post("/api/football9394/careers/{career_id}/scouting/{player_id}")
-def manager_start_scouting(career_id: str, player_id: int) -> dict:
+def manager_start_scouting(career_id: str, player_id: int, compact: bool = False) -> dict:
     career = _load_manager_career(career_id)
     try:
         assignment = career.start_scouting_player(player_id)
@@ -132,6 +136,8 @@ def manager_start_scouting(career_id: str, player_id: int) -> dict:
     except ValueError as exc:
         raise HTTPException(status_code=409, detail=str(exc)) from exc
     _career_store().save(career.state)
+    if compact:
+        return {"assignment": assignment, "scouting": career.scouting_snapshot()}
     return {"assignment": assignment, "career": career.snapshot()}
 
 @router.get("/api/football9394/careers/{career_id}/squad-plan")
@@ -157,10 +163,23 @@ def manager_career_competitions(career_id: str) -> list[dict]:
     return _load_manager_career(career_id).competition_directory()
 
 @router.get("/api/football9394/careers/{career_id}/competitions/{kind}/{source_id}")
-def manager_career_competition(career_id: str, kind: str, source_id: int) -> dict:
+def manager_career_competition(career_id: str, kind: str, source_id: int, results_limit: int = 0, calendar_limit: int = 0) -> dict:
     career=_load_manager_career(career_id)
-    try: return career.competition_detail(kind,source_id)
-    except KeyError as exc: raise HTTPException(status_code=404,detail=str(exc)) from exc
+    try:
+        detail=career.competition_detail(kind,source_id)
+    except KeyError as exc:
+        raise HTTPException(status_code=404,detail=str(exc)) from exc
+    # The competition screen only renders a recent-results window and the next
+    # fixtures.  Keep the full endpoint contract by default, but let the UI ask
+    # for exactly what it can display instead of shipping an entire league
+    # season on every competition switch.
+    if int(results_limit or 0)>0:
+        limit=max(1,min(200,int(results_limit)))
+        detail["results"]=list(detail.get("results") or [])[-limit:]
+    if int(calendar_limit or 0)>0:
+        limit=max(1,min(200,int(calendar_limit)))
+        detail["calendar"]=[row for row in (detail.get("calendar") or []) if not row.get("played")][:limit]
+    return detail
 
 @router.get("/api/football9394/careers/{career_id}/history")
 def manager_career_history(career_id: str) -> dict:
@@ -179,17 +198,17 @@ def manager_career_economy(career_id: str) -> dict:
     }
 
 @router.post("/api/football9394/careers/{career_id}/dressing-room/concerns/{concern_id}")
-def manager_respond_concern(career_id: str, concern_id: str, payload: DressingConcernPayload) -> dict:
+def manager_respond_concern(career_id: str, concern_id: str, payload: DressingConcernPayload, compact: bool = False) -> dict:
     career=_load_manager_career(career_id)
     try: result=career.respond_dressing_room_concern(concern_id,payload.response)
     except KeyError as exc: raise HTTPException(status_code=404,detail=str(exc)) from exc
     except ValueError as exc: raise HTTPException(status_code=409,detail=str(exc)) from exc
-    _career_store().save(career.state);return {"result":result,"career":career.snapshot()}
+    _career_store().save(career.state);return ({"result":result,"dressing_room":career.dressing_room_api_snapshot(),"squad":career.squad_ui_snapshot()} if compact else {"result":result,"career":career.snapshot()})
 
 @router.post("/api/football9394/careers/{career_id}/players/{player_id}/discipline")
-def manager_discipline_player(career_id: str, player_id: int, payload: DisciplinePayload) -> dict:
+def manager_discipline_player(career_id: str, player_id: int, payload: DisciplinePayload, compact: bool = False) -> dict:
     career=_load_manager_career(career_id)
     try: result=career.discipline_player(player_id,payload.action)
     except (KeyError,ValueError) as exc: raise HTTPException(status_code=409,detail=str(exc)) from exc
-    _career_store().save(career.state);return {"result":result,"career":career.snapshot()}
+    _career_store().save(career.state);return ({"result":result,"dressing_room":career.dressing_room_api_snapshot(),"squad":career.squad_ui_snapshot()} if compact else {"result":result,"career":career.snapshot()})
 

@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+from heapq import nsmallest
+
 from dataclasses import asdict, dataclass, replace
 from datetime import date, datetime, timedelta, timezone
 from random import Random
@@ -133,25 +135,36 @@ class CareerMarketRuntimeMixin:
     def search_market(self, query: str = "", *, limit: int = 20, position: str = "", free_agents: bool = False, watched: bool = False) -> list[dict[str, Any]]:
         q = " ".join(query.casefold().split()); pos = str(position or "").upper()
         controlled = int(self.state["team_id"]); watched_ids = {int(x) for x in (self.state.get("watchlist") or [])}
+        development = self.state.get("player_development") or {}
+        overrides = self.state.get("player_team_overrides") or {}
         rows = []
+        # Preserve source ordering/duplicates because equal market-order keys are
+        # part of the established API behaviour. The hot-path win comes from
+        # avoiding per-row source lookups and full-list sorting, not deduping.
         for row in self._all_player_rows():
-            pid=int(row["source_id"]); team_id=self._current_team_id(pid)
-            if team_id == controlled or row.get("retired") or bool((self.state.get("player_development", {}).get(str(pid)) or {}).get("retired")):
+            pid=int(row["source_id"]); team_id=int(overrides.get(str(pid), row.get("team_id") or 0))
+            if team_id == controlled or row.get("retired") or bool((development.get(str(pid)) or {}).get("retired")):
                 continue
             if q and q not in str(row.get("display_name") or "").casefold():
                 continue
-            role=role_for_player(row)
-            if pos and pos not in {str(row.get("broad_position") or "").upper(), str(row.get("position") or "").upper(),role.code.upper(),role.name.upper(),role.squad_slot.upper()}:
-                continue
+            if pos:
+                role=role_for_player(row)
+                if pos not in {str(row.get("broad_position") or "").upper(), str(row.get("position") or "").upper(),role.code.upper(),role.name.upper(),role.squad_slot.upper()}:
+                    continue
             if free_agents and team_id != 0:
                 continue
             if watched and pid not in watched_ids:
+                continue
+            # Browsing the market shows what the club network actually knows. A
+            # name search may still locate an unknown identity, but it will be
+            # redacted by `_external_player_api` until scouting discovers it.
+            if not q and not watched and int((self._baseline_scouting_knowledge(pid, target_team_id=team_id) or {}).get("level") or 0) <= 0 and str(pid) not in (self.state.get("scouting_knowledge") or {}):
                 continue
             rows.append(row)
         cash=transfer_spending_power(self.state.get("finances") or {})
         def market_order(player: dict[str, Any]) -> tuple[int, int, int, int]:
             pid=int(player["source_id"])
-            overall=int(self.state["player_development"].get(str(pid), {}).get("overall") or player.get("overall") or player.get("category") or 0)
+            overall=int((development.get(str(pid)) or {}).get("overall") or player.get("overall") or player.get("category") or 0)
             value=estimated_transfer_value(player, overall=overall)
             # A market screen should contain actual decisions for the current
             # club, not just the 100 best footballers on Earth.  Watched players
@@ -164,8 +177,9 @@ class CareerMarketRuntimeMixin:
             else:
                 affordability_band = 2  # aspirational target
             return (0 if pid in watched_ids else 1, affordability_band, -overall, value)
-        rows.sort(key=market_order)
-        return [self._external_player_api(row) for row in rows[:max(1, min(int(limit), 100))]]
+        bounded_limit=max(1, min(int(limit), 100))
+        selected=nsmallest(bounded_limit, rows, key=market_order) if len(rows)>bounded_limit else sorted(rows,key=market_order)
+        return [self._external_player_api(row) for row in selected]
 
     def negotiate_player(self, player_id: int, *, fee_offer: int, salary_offer: int = 0, contract_years: int = 3) -> dict[str, Any]:
         pid = int(player_id)
