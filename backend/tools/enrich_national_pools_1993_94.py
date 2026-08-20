@@ -93,22 +93,119 @@ def build_player(row: dict[str, Any], *, team_id: int) -> dict[str, Any]:
     }
 
 
-def enrich(snapshot_path: Path = DEFAULT_SNAPSHOT, additions_path: Path = DEFAULT_ADDITIONS, report_path: Path = DEFAULT_REPORT) -> dict[str, Any]:
+def enrich(
+    snapshot_path: Path = DEFAULT_SNAPSHOT,
+    additions_path: Path = DEFAULT_ADDITIONS,
+    report_path: Path = DEFAULT_REPORT,
+    *,
+    skip_ambiguous: bool = False,
+) -> dict[str, Any]:
+    """Incorpora convocatorias reales al universo sin duplicar personas.
+
+    ``skip_ambiguous`` cambia qué se hace cuando el reconciliador no puede
+    decidir entre varios futbolistas existentes. Abortar el lote entero es lo
+    correcto con tandas curadas a mano —una ambigüedad significa que la fuente
+    necesita revisión—, pero con lotes grandes de torneos un solo homónimo
+    bloquearía a los otros mil. Apartándolos no se crea ni se toca a nadie: el
+    dudoso se queda fuera y aparece en el informe para mirarlo a mano, que es
+    la opción conservadora entre "inventar un jugador" y "no importar nada".
+    """
     snapshot = json.loads(snapshot_path.read_text(encoding="utf-8"))
     additions = json.loads(additions_path.read_text(encoding="utf-8"))
 
     # Idempotent rerun: remove only players derived by this batch. Containers are
     # stable shared ownership records and can be reused safely.
-    snapshot["players"] = [p for p in snapshot.get("players", []) if p.get("external_origin") != "national_pool_1993_94"]
+    #
+    # Con una excepción que costó cara descubrir: un alta de este lote deja de
+    # ser desechable en cuanto otra tanda ha trabajado sobre ella. A Yuri Kovtun
+    # lo creó el pool de selecciones y después v046 fusionó en su ficha una
+    # identidad rusa con su identificador de BDFutbol, sus transliteraciones y su
+    # historial de clubes. Borrarlo y recrearlo desde las convocatorias tiraba
+    # todo ese trabajo y dejaba a las referencias de v046 apuntando a una ficha
+    # desnuda. Quien lleva marcas de curación posterior se queda, y el
+    # reconciliador lo tratará como lo que es: alguien que ya existe.
+    CURATED_MARKS = (
+        "bdfutbol_id", "identity_merge_history", "name_transliterations",
+        "duplicate_resolution", "historical_club_spells_1993_94",
+        "profile_review_0_23", "verified_data_corrections",
+    )
+    snapshot["players"] = [
+        p for p in snapshot.get("players", [])
+        if p.get("external_origin") != "national_pool_1993_94"
+        or any(p.get(mark) for mark in CURATED_MARKS)
+    ]
     index = build_identity_candidate_index(snapshot.get("players", []))
     teams_by_id = {int(t["source_id"]): t for t in snapshot.get("teams", [])}
     containers_by_country = {int(t.get("country_id") or 0): t for t in snapshot.get("teams", []) if t.get("market_container")}
 
+    # Un identificador que sobrevive a la limpieza de arriba ya no está libre, y
+    # puede que ni siquiera siga siendo de quien lo pedía: la ficha 9495160 la
+    # creó este lote para Branko Milošević y una tanda posterior fusionó en ella
+    # a Cvijan Milošević. Reutilizar el número haría que dos personas
+    # compartieran ficha, así que a esas altas se les da uno nuevo y que el
+    # reconciliador decida si son alguien que ya está.
+    survivors = {int(p["source_id"]): p for p in snapshot.get("players", [])}
+    taken = set(survivors) | {int(t["source_id"]) for t in snapshot.get("teams", [])}
+    next_free = max(taken) + 1
+    reassigned = 0
+    # Decidir si el superviviente es la encarnación anterior de esta misma alta.
+    def same_person(row: dict[str, Any], other: dict[str, Any]) -> bool:
+        def key(value: Any) -> str:
+            return str(value or "").strip().casefold()
+
+        birth = str(row.get("birth_date") or "")[:10]
+        if birth and birth == str(other.get("birth_date") or "")[:10]:
+            # Mismo identificador y misma fecha de nacimiento: es él. Exigir
+            # además que coincida el apellido dejaba fuera las variantes de
+            # transliteración —"Podpaly" no está contenido en "Podpaliy"— y lo
+            # duplicaba.
+            return True
+        # Sin la fecha hay que ser mucho más estricto, porque el identificador
+        # pudo cambiar de dueño: la ficha 9495160 la creó este lote para Branko
+        # Milošević y hoy la ocupa Cvijan Milošević, que es otro.
+        surname = key(row.get("surname1"))
+        given = key(row.get("first_name"))
+        if not surname or not given:
+            return False
+        haystack = key(other.get("first_name")) + " " + key(other.get("surname1")) + " " + key(other.get("display_name"))
+        return surname in haystack and given in haystack
+
+    previous_self: dict[int, int] = {}
+    for row in additions.get("players", []):
+        source_id = int(row["source_id"])
+        if source_id not in taken:
+            taken.add(source_id)
+            continue
+        survivor = survivors.get(source_id)
+        row["source_id"] = next_free
+        if survivor is not None and same_person(row, survivor):
+            previous_self[next_free] = source_id
+        next_free += 1
+        reassigned += 1
+        taken.add(int(row["source_id"]))
+
     resolutions: list[dict[str, Any]] = []
     created = 0
     reused = 0
+    ambiguous = 0
     for row in additions.get("players", []):
         country_id = int(row["country_id"])
+        anchor = previous_self.get(int(row["source_id"]))
+        if anchor is not None:
+            player = survivors[anchor]
+            player["international_country_id"] = country_id
+            player["verified_era_pool_1993_94"] = True
+            reused += 1
+            resolutions.append({
+                "candidate_source_id": int(row["source_id"]),
+                "display_name": row["display_name"],
+                "country_id": country_id,
+                "resolution": "previous_run_of_this_same_addition",
+                "confidence": "high",
+                "matched_existing_id": anchor,
+                "action": "reused_existing",
+            })
+            continue
         candidates = identity_candidate_pool(
             index,
             display=row["display_name"],
@@ -140,7 +237,12 @@ def enrich(snapshot_path: Path = DEFAULT_SNAPSHOT, additions_path: Path = DEFAUL
             ],
         }
         if result.resolution == "ambiguous_existing_candidates":
-            raise RuntimeError(f"ambiguous historical identity: {row['display_name']}")
+            if not skip_ambiguous:
+                raise RuntimeError(f"ambiguous historical identity: {row['display_name']}")
+            audit["action"] = "skipped_ambiguous"
+            ambiguous += 1
+            resolutions.append(audit)
+            continue
         if result.player is not None:
             player = result.player
             player["international_country_id"] = country_id
@@ -180,6 +282,8 @@ def enrich(snapshot_path: Path = DEFAULT_SNAPSHOT, additions_path: Path = DEFAUL
         "candidates": len(additions.get("players", [])),
         "created": created,
         "reused_existing": reused,
+        "skipped_ambiguous": ambiguous,
+        "reassigned_source_ids": reassigned,
         "identity_policy": "global existing-player comparison; ambiguity blocks creation",
     }
     snapshot_path.write_text(json.dumps(snapshot, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
@@ -198,8 +302,14 @@ def main() -> None:
     parser.add_argument("--snapshot", type=Path, default=DEFAULT_SNAPSHOT)
     parser.add_argument("--additions", type=Path, default=DEFAULT_ADDITIONS)
     parser.add_argument("--report", type=Path, default=DEFAULT_REPORT)
+    parser.add_argument(
+        "--skip-ambiguous",
+        action="store_true",
+        help="aparta los homónimos irresolubles en el informe en vez de abortar el lote",
+    )
     args = parser.parse_args()
-    print(json.dumps(enrich(args.snapshot, args.additions, args.report), ensure_ascii=False, indent=2))
+    report = enrich(args.snapshot, args.additions, args.report, skip_ambiguous=args.skip_ambiguous)
+    print(json.dumps({k: v for k, v in report.items() if k != "resolutions"}, ensure_ascii=False, indent=2))
 
 
 if __name__ == "__main__":

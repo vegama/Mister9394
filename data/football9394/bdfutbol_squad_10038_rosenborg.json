@@ -1,0 +1,201 @@
+{
+  "bdfutbol_club_id": "10038",
+  "club_name": "Rosenborg",
+  "source": "https://www.bdfutbol.com/es/t/t1993-9410038.html",
+  "squad_scope": "plantilla de la eliminatoria europea 1993-94, no de liga",
+  "players": 19,
+  "without_birth_date": 0,
+  "warnings": [],
+  "squad": [
+    {
+      "bdfutbol_id": "709316",
+      "display_name": "Rise",
+      "full_name": "Ola By Rise",
+      "birth_date": "1960-11-14",
+      "broad_position": "POR",
+      "country_slug": "noruega",
+      "photo_url": "https://www.bdfutbol.com/i/j/709316.jpg",
+      "profile_url": "https://www.bdfutbol.com/es/j/j709316.html"
+    },
+    {
+      "bdfutbol_id": "93653",
+      "display_name": "Bragstad",
+      "full_name": "Bjørn Otto Bragstad",
+      "birth_date": "1971-01-05",
+      "broad_position": "DEF",
+      "country_slug": "noruega",
+      "photo_url": "https://www.bdfutbol.com/i/j/93653.jpg",
+      "profile_url": "https://www.bdfutbol.com/es/j/j93653.html"
+    },
+    {
+      "bdfutbol_id": "323",
+      "display_name": "Kvarme",
+      "full_name": "Bjørn Tore Kvarme",
+      "birth_date": "1972-06-17",
+      "broad_position": "DEF",
+      "country_slug": "noruega",
+      "photo_url": "https://www.bdfutbol.com/i/j/323.jpg",
+      "profile_url": "https://www.bdfutbol.com/es/j/j323.html"
+    },
+    {
+      "bdfutbol_id": "709500",
+      "display_name": "Tangen",
+      "full_name": "Rune Tangen",
+      "birth_date": "1964-12-16",
+      "broad_position": "DEF",
+      "country_slug": "noruega",
+      "photo_url": "https://www.bdfutbol.com/i/j/709500.jpg",
+      "profile_url": "https://www.bdfutbol.com/es/j/j709500.html"
+    },
+    {
+      "bdfutbol_id": "80714",
+      "display_name": "Ingebrigtsen",
+      "full_name": "Kåre Hedley Ingebrigtsen",
+      "birth_date": "1965-11-11",
+      "broad_position": "DEF",
+      "country_slug": "noruega",
+      "photo_url": "https://www.bdfutbol.com/i/j/80714.jpg",
+      "profile_url": "https://www.bdfutbol.com/es/j/j80714.html"
+    },
+    {
+      "bdfutbol_id": "709501",
+      "display_name": "Martinsen",
+      "full_name": "Ole Einar Martinsen",
+      "birth_date": "1967-03-11",
+      "broad_position": "DEF",
+      "country_slug": "noruega",
+      "photo_url": "https://www.bdfutbol.com/i/j/709501.jpg",
+      "profile_url": "https://www.bdfutbol.com/es/j/j709501.html"
+    },
+    {
+      "bdfutbol_id": "709336",
+      "display_name": "Løken",
+      "full_name": "Karl-Petter Løken",
+      "birth_date": "1966-08-14",
+      "broad_position": "DEF",
+      "country_slug": "noruega",
+      "photo_url": "https://www.bdfutbol.com/i/j/709336.jpg",
+      "profile_url": "https://www.bdfutbol.com/es/j/j709336.html"
+    },
+    {
+      "bdfutbol_id": "98502",
+      "display_name": "Skammelsrud",
+      "full_name": "Bent André Skammelsrud",
+      "birth_date": "1966-05-18",
+      "broad_position": "MED",
+      "country_slug": "noruega",
+      "photo_url": "https://www.bdfutbol.com/i/j/98502.jpg",
+      "profile_url": "https://www.bdfutbol.com/es/j/j98502.html"
+    },
+    {
+      "bdfutbol_id": "709495",
+      "display_name": "Bergersen",
+      "full_name": "Kent Roger Bergersen",
+      "birth_date": "1967-02-08",
+      "broad_position": "MED",
+      "country_slug": "noruega",
+      "photo_url": "https://www.bdfutbol.com/i/j/709495.jpg",
+      "profile_url": "https://www.bdfutbol.com/es/j/j709495.html"
+    },
+    {
+      "bdfutbol_id": "93798",
+      "display_name": "Leonhardsen",
+      "full_name": "Øyvind Leonhardsen",
+      "birth_date": "1970-08-17",
+      "broad_position": "MED",
+      "country_slug": "noruega",
+      "photo_url": "https://www.bdfutbol.com/i/j/93798.jpg",
+      "profile_url": "https://www.bdfutbol.com/es/j/j93798.html"
+    },
+    {
+      "bdfutbol_id": "44840",
+      "display_name": "Dahlum",
+      "full_name": "Tore André Dahlum",
+      "birth_date": "1968-06-21",
+      "broad_position": "DEL",
+      "country_slug": "noruega",
+      "photo_url": "https://www.bdfutbol.com/i/j/44840.jpg",
+      "profile_url": "https://www.bdfutbol.com/es/j/j44840.html"
+    },
+    {
+      "bdfutbol_id": "709503",
+      "display_name": "Selnøs",
+      "full_name": "Ivar Selnøs",
+      "birth_date": "1962-09-10",
+      "broad_position": "POR",
+      "country_slug": "noruega",
+      "photo_url": "https://www.bdfutbol.com/i/j/709503.jpg",
+      "profile_url": "https://www.bdfutbol.com/es/j/j709503.html"
+    },
+    {
+      "bdfutbol_id": "90423",
+      "display_name": "Riseth",
+      "full_name": "Vidar Riseth",
+      "birth_date": "1972-04-21",
+      "broad_position": "MED",
+      "country_slug": "noruega",
+      "photo_url": "https://www.bdfutbol.com/i/j/90423.jpg",
+      "profile_url": "https://www.bdfutbol.com/es/j/j90423.html"
+    },
+    {
+      "bdfutbol_id": "709498",
+      "display_name": "Støbakk",
+      "full_name": "Ronny Støbakk",
+      "birth_date": "1973-03-11",
+      "broad_position": "MED",
+      "country_slug": "noruega",
+      "photo_url": "https://www.bdfutbol.com/i/j/709498.jpg",
+      "profile_url": "https://www.bdfutbol.com/es/j/j709498.html"
+    },
+    {
+      "bdfutbol_id": "54510",
+      "display_name": "Henriksen",
+      "full_name": "Trond Børge Henriksen",
+      "birth_date": "1964-04-28",
+      "broad_position": "MED",
+      "country_slug": "noruega",
+      "photo_url": "https://www.bdfutbol.com/i/j/54510.jpg",
+      "profile_url": "https://www.bdfutbol.com/es/j/j54510.html"
+    },
+    {
+      "bdfutbol_id": "709502",
+      "display_name": "Johnsen",
+      "full_name": "Tor Gunnar Johnsen",
+      "birth_date": "1971-10-13",
+      "broad_position": "DEL",
+      "country_slug": "noruega",
+      "photo_url": "https://www.bdfutbol.com/i/j/709502.jpg",
+      "profile_url": "https://www.bdfutbol.com/es/j/j709502.html"
+    },
+    {
+      "bdfutbol_id": "98986",
+      "display_name": "Stensaas",
+      "full_name": "Ståle Stensaas",
+      "birth_date": "1971-07-07",
+      "broad_position": "DEF",
+      "country_slug": "noruega",
+      "photo_url": "https://www.bdfutbol.com/i/j/98986.jpg",
+      "profile_url": "https://www.bdfutbol.com/es/j/j98986.html"
+    },
+    {
+      "bdfutbol_id": "709497",
+      "display_name": "Aune",
+      "full_name": "Helge Aune",
+      "birth_date": "1973-09-06",
+      "broad_position": "DEF",
+      "country_slug": "noruega",
+      "photo_url": "https://www.bdfutbol.com/i/j/709497.jpg",
+      "profile_url": "https://www.bdfutbol.com/es/j/j709497.html"
+    },
+    {
+      "bdfutbol_id": "43372",
+      "display_name": "Strand",
+      "full_name": "Roar Strand",
+      "birth_date": "1970-02-02",
+      "broad_position": "MED",
+      "country_slug": "noruega",
+      "photo_url": "https://www.bdfutbol.com/i/j/43372.jpg",
+      "profile_url": "https://www.bdfutbol.com/es/j/j43372.html"
+    }
+  ]
+}

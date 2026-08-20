@@ -33,9 +33,9 @@ def test_duplicate_audit_has_zero_collisions_against_original_database():
     assert audit["generated_exact_duplicates"] == []
 
 
-@pytest.mark.xfail(reason=(
-    "Backlog de contenido, no regresion de codigo: ver docs/CONTENT_BACKLOG_V113.md. Uno de los cinco pools nacionales ampliados tiene 21 jugadores verificados en vez de 22."
-), strict=True)
+# Estuvo en el backlog de contenido: uno de los cinco pools se quedaba en 21
+# jugadores verificados. Las convocatorias de torneo lo han completado, así que
+# vuelve a exigirse de verdad.
 def test_five_expanded_1993_pools_have_22_verified_players_each():
     universe = default_runtime_snapshot()
     for country_id in (14, 15, 23, 41, 42):

@@ -70,6 +70,70 @@ PRESENTATION_COUNTRIES = {
     93: "Hungría",
     117: "Cabo Verde",
     120: "Guinea Ecuatorial",
+    # Selecciones que sólo pasaron a ser jugables al incorporar las
+    # convocatorias reales de la Copa África, la Copa América y la Copa Asia:
+    # antes no llegaban a once futbolistas y por eso no se catalogaban.
+    # Los nombres son los de 1993, que es cuando transcurre la partida: el 88
+    # es Zaire, no la República Democrática del Congo, que no existe hasta 1997.
+    12: "Angola",
+    24: "China",
+    29: "Costa de Marfil",
+    34: "Ecuador",
+    35: "Egipto",
+    48: "Irán",
+    69: "Perú",
+    74: "Senegal",
+    77: "Sierra Leona",
+    78: "Sudáfrica",
+    83: "Túnez",
+    86: "Venezuela",
+    88: "Zaire",
+    103: "Gabón",
+    112: "Zambia",
+    124: "Kenia",
+    169: "Liberia",
+    203: "Tailandia",
+    # Países que ya venían nombrados en el catálogo fuente pero no aquí, así que
+    # sus futbolistas enseñaban un número en vez de una nacionalidad. Son pocos
+    # jugadores cada uno y ninguno reúne plantilla para ser selección jugable
+    # —de eso ya se encarga el filtro de ``national_team_catalog``—, pero la
+    # ficha tiene que decir de dónde es la gente.
+    8: "Albania",
+    18: "Bielorrusia",
+    25: "Chipre",
+    30: "Costa Rica",
+    37: "Eslovenia",
+    39: "Estonia",
+    49: "Israel",
+    54: "Macedonia",
+    65: "Islandia",
+    67: "Malí",
+    76: "Montenegro",
+    81: "Togo",
+    92: "Guatemala",
+    104: "Georgia",
+    106: "Honduras",
+    107: "Jamaica",
+    110: "Nueva Zelanda",
+    115: "Benín",
+    119: "Guadalupe",
+    121: "Guinea-Bissau",
+    125: "Madagascar",
+    126: "Panamá",
+    130: "Azerbaiyán",
+    131: "Islas Feroe",
+    147: "El Salvador",
+    149: "Etiopía",
+    150: "Fiyi",
+    151: "Gambia",
+    170: "Libia",
+    173: "Malawi",
+    185: "Papúa Nueva Guinea",
+    194: "Santo Tomé y Príncipe",
+    200: "Surinam",
+    213: "República del Congo",
+    218: "Palestina",
+    219: "San Vicente",
 }
 
 FOOT_NAMES = {1: "Derecha", 2: "Izquierda", 3: "Ambas"}

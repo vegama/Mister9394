@@ -48,7 +48,11 @@ def test_new_batch_was_checked_against_full_mdb_and_has_no_hidden_exact_match():
 
 def test_new_batch_profiles_are_fixed_and_individual_not_provisional():
     rows=[p for p in _players() if p.get('creation_batch')=='bel_tur_rus_national_depth_0.24']
-    assert len(rows)==55
+    # Eran 55. Suben a 57 al incorporar las convocatorias de torneo: Rüştü Reçber
+    # y Okan Buruk son internacionales turcos reales que la base no tenía por
+    # ninguna vía, comprobado que no duplican a nadie. El lote crece porque el
+    # mundo tiene dos futbolistas más, no porque se haya relajado nada.
+    assert len(rows)==57
     vectors=[]
     pending={int(p['source_id']) for p in rows if p.get('profile_review_required')}
     assert {9495331,9495336,9495337,9495342} <= pending
@@ -63,7 +67,11 @@ def test_new_batch_profiles_are_fixed_and_individual_not_provisional():
 def test_photo_registry_keeps_historical_club_and_position_for_new_players():
     payload=json.loads(REG.read_text(encoding='utf-8'))
     rows=[r for r in payload['players'] if r.get('creation_batch')=='bel_tur_rus_national_depth_0.24']
-    assert len(rows)==55
+    # Eran 55. Suben a 57 al incorporar las convocatorias de torneo: Rüştü Reçber
+    # y Okan Buruk son internacionales turcos reales que la base no tenía por
+    # ninguna vía, comprobado que no duplican a nadie. El lote crece porque el
+    # mundo tiene dos futbolistas más, no porque se haya relajado nada.
+    assert len(rows)==57
     assert all(r.get('historical_club_1994') for r in rows)
     assert all(r.get('historical_position_1993_94') for r in rows)
     assert all(r.get('photo_status') in {'pending','pending_identity_profile','ready_for_download','bundled_normalized_bdfutbol'} for r in rows)

@@ -71,6 +71,15 @@ def _clean_name(raw: str) -> str:
     value = re.sub(r"\[\[([^\]]+)\]\]", r"\1", value)                   # [[Nombre]]
     value = re.sub(r"\{\{[^}]*\}\}", "", value)
     value = re.sub(r"<[^>]+>", "", value)
+    # Enlaces mal cerrados en la fuente dejaban corchetes pegados al nombre
+    # ("[[Joel Kangwa Bwalya"), que acabarían en la ficha del futbolista.
+    value = value.replace("[[", " ").replace("]]", " ").replace("[", " ").replace("]", " ")
+    value = value.split("|")[0]
+    # Wikipedia desambigua los homónimos en el propio título del enlace
+    # ("Gheorghe Popescu (footballer, born 1967)") y marca al capitán con "(c)".
+    # Nada de eso es parte del nombre: dejarlo pasar lo mete en la ficha del
+    # futbolista y además impide reconciliarlo con el que ya tenemos fichado.
+    value = re.sub(r"\s*\([^)]*\)", "", value)
     return re.sub(r"\s+", " ", value).strip()
 
 
