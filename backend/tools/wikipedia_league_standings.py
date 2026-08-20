@@ -48,7 +48,7 @@ _SPORTS_TABLE = re.compile(r"\|\s*team(\d+)\s*=\s*([^\n|]+)")
 # 1993 es el segundo. Quedarse con el destino ponia en la liga los nombres
 # modernos de los clubes, que es lo que este proyecto evita tambien con los paises.
 _TEAM_NAME = re.compile(
-    r"\|\s*name_([A-Za-z0-9]+)\s*=\s*"
+    r"\|\s*name_([^\s=|]+)\s*=\s*"
     r"(?:\[\[(?P<target>[^\]|]+)(?:\|(?P<alias>[^\]]+))?\]\]|(?P<plain>[^\n|]+))"
 )
 # Las paginas antiguas usan una tabla wiki corriente con enlaces por fila.
