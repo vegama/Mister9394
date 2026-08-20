@@ -1,0 +1,73 @@
+{
+  "country_id": "156",
+  "competitions": 1,
+  "detail": [
+    {
+      "competition": "co129",
+      "slug": "norvege-eliteserien",
+      "season_url": "https://www.mondefootball.fr/competition/co129/norvege-eliteserien/se4570/1993/results-and-standings/",
+      "clubs": [
+        {
+          "mondefootball_id": "749",
+          "slug": "fk-bodoe-glimt",
+          "crest_url": "https://s.hs-data.com/gfx/emblem/common/150x150/749.png"
+        },
+        {
+          "mondefootball_id": "850",
+          "slug": "fyllingen-fotball",
+          "crest_url": "https://s.hs-data.com/gfx/emblem/common/150x150/850.png"
+        },
+        {
+          "mondefootball_id": "941",
+          "slug": "hamarkameratene",
+          "crest_url": "https://s.hs-data.com/gfx/emblem/common/150x150/941.png"
+        },
+        {
+          "mondefootball_id": "1042",
+          "slug": "ik-start",
+          "crest_url": "https://s.hs-data.com/gfx/emblem/common/150x150/1042.png"
+        },
+        {
+          "mondefootball_id": "1144",
+          "slug": "kongsvinger-il",
+          "crest_url": "https://s.hs-data.com/gfx/emblem/common/150x150/1144.png"
+        },
+        {
+          "mondefootball_id": "1218",
+          "slug": "lillestroem-sk",
+          "crest_url": "https://s.hs-data.com/gfx/emblem/common/150x150/1218.png"
+        },
+        {
+          "mondefootball_id": "1250",
+          "slug": "lyn-oslo",
+          "crest_url": "https://s.hs-data.com/gfx/emblem/common/150x150/1250.png"
+        },
+        {
+          "mondefootball_id": "1309",
+          "slug": "molde-fk",
+          "crest_url": "https://s.hs-data.com/gfx/emblem/common/150x150/1309.png"
+        },
+        {
+          "mondefootball_id": "1578",
+          "slug": "rosenborg-bk",
+          "crest_url": "https://s.hs-data.com/gfx/emblem/common/150x150/1578.png"
+        },
+        {
+          "mondefootball_id": "1704",
+          "slug": "sk-brann",
+          "crest_url": "https://s.hs-data.com/gfx/emblem/common/150x150/1704.png"
+        },
+        {
+          "mondefootball_id": "1937",
+          "slug": "tromsoe-il",
+          "crest_url": "https://s.hs-data.com/gfx/emblem/common/150x150/1937.png"
+        },
+        {
+          "mondefootball_id": "2097",
+          "slug": "viking-fk",
+          "crest_url": "https://s.hs-data.com/gfx/emblem/common/150x150/2097.png"
+        }
+      ]
+    }
+  ]
+}

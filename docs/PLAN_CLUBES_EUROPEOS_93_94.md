@@ -454,3 +454,106 @@ al paso 1 con el Rosenborg. Si quedan fallos, serán de la misma familia: alguna
 tanda anterior escribió un campo sobre una ficha del pool y el reaplicado lo
 devuelve a su valor genérico. La lista de campos a conservar está en
 `CARRIED_OVER`, en `backend/tools/enrich_world_cup_1994.py`.
+
+---
+
+## 10. Ligas nacionales del 93-94 desde mondefootball
+
+**Decision tomada:** meter seis ligas completas, no solo los clubes que jugaron
+Europa. La fuente da la plantilla real de todos sus equipos, asi que el salto de
+"un club por pais" a "la liga entera" sale casi gratis en datos.
+
+| Liga | Clubes |
+|---|---|
+| Rumania, Liga 1 | 18 |
+| Polonia, Ekstraklasa | 18 |
+| Bulgaria, Parva Liga | 16 |
+| Suecia, Allsvenskan | 14 |
+| Noruega, Eliteserien | 12 |
+| Dinamarca, Superliga | 10 |
+
+**Finlandia queda fuera**: mondefootball solo tiene la Veikkausliiga desde 2003.
+El MyPa y el Kuusysi habra que resolverlos por otra via o dejarlos cortos.
+
+### Como se llega a los datos
+
+No hay buscador en mondefootball, asi que el identificador de club sale de esta
+cadena, que esta implementada en `mondefootball_country_clubs.py`:
+
+    /overview/cy<pais>/                -> competiciones del pais
+    /competition/co<liga>/.../          -> selector con todas las temporadas
+    .../se<temporada>/1993/...          -> los clubes, con su te
+
+Y de ahi, `mondefootball_club_squad.py` saca la plantilla de cada uno.
+
+**Todas las ligas piden `vs1993-1994`**, tambien las de ano natural. Parece
+logico que Noruega y Suecia, que juegan por ano civil, pidieran `vs1993`, pero
+no: devuelve la plantilla actual sin avisar y se pierde la liga entera. Suponerlo
+costo dos ligas en la primera pasada.
+
+### Trampas que costaron encontrar
+
+- **El titulo de la pagina miente**: dice "effectif 2026" tambien en las paginas
+  de 1993. No sirve para comprobar que se cargo la temporada correcta; hay que
+  mirar las fichas.
+- **La Allsvenskan es `co9`**, y filtrar por el texto "allsvenskan" devuelve
+  antes los play-offs (`co1843`) y los juveniles.
+- **Responde 429 si se le pide seguido.** No bloquea como Transfermarkt y se
+  recupera solo con esperas de 3, 6, 9 segundos, pero sin reintento se pierde
+  una liga a medias. El primer barrido de paises perdio uno de cada siete por
+  esto, Noruega incluida, y los fallos se tragaban en silencio.
+- **El ultimo bloque de la tabla es el cuerpo tecnico.** Sin distinguirlo, Nils
+  Arne Eggen entra en la plantilla del Rosenborg como centrocampista.
+- **Las demarcaciones estan en cabeceras de tabla**, no en `<h2>`.
+
+### Escudos y fotos, por URL predecible
+
+    escudo  https://s.hs-data.com/gfx/emblem/common/150x150/<te>.png
+    foto    https://s.hs-data.com/gfx/person/cropped/250x250/<pe>.png
+
+### Estructura de competicion: decidido
+
+**Sin ascensos ni descensos.** Solo se modela una division por pais, asi que la
+liga es un grupo cerrado que juega su calendario y no comunica con nada. Eso
+quita de encima toda la piramide, que era la parte fea de meter ligas nuevas.
+
+**Copa nacional adaptada a los clubes que haya.** Hace falta para que exista un
+campeon de copa al que clasificar para la Recopa. Con 16 clubes salen cuatro
+rondas exactas; con 10, 12, 14 o 18 algunos entran en segunda ronda, que es lo
+que pasaba de verdad.
+
+**Lo que sera generado y no historico:** el calendario. Las plantillas, los
+clubes y sus datos son reales; el orden de los partidos no, y hay que
+etiquetarlo como tal igual que el resto de lo generado.
+
+### Imagenes: orden de preferencia
+
+Hay tres origenes y no dan lo mismo, asi que se piden por orden y se para en el
+primero que responda.
+
+**Fotos de jugador**
+
+1. **BDFutbol**, buscando por nombre y **aceptando solo si la fecha de
+   nacimiento coincide exacta**. Es la herramienta que ya existe
+   (`match_bdfutbol_by_name.py`) y es el unico cruce por nombre que este
+   proyecto admite, precisamente porque la fecha lo verifica. Sus retratos ya
+   vienen en el formato nativo del juego.
+2. **mondefootball**, `gfx/person/cropped/250x250/<pe>.png`, que no hace falta
+   buscar porque el identificador viene con la plantilla.
+3. Sin foto, y anotado.
+
+**Escudos**
+
+1. Los **graficos originales del juego**, `escudos/<id_equipo>.gif`, ya en 40x40
+   y en el estilo del resto.
+2. **mondefootball**, `gfx/emblem/common/150x150/<te>.png`, normalizando.
+
+**Estadios**
+
+1. Los **graficos originales**, `estadios/<id>.gif` —hay 1.999—, y el
+   identificador de estadio viene en la propia ficha del club en el MDB.
+2. Si el club no esta en el MDB, queda sin imagen.
+
+Lo importante del orden: el material original del juego manda siempre que
+exista, para que los clubes nuevos no canten al lado de los que ya estaban.
+

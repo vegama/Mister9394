@@ -1,0 +1,66 @@
+{
+  "Albania": {
+    "cy": "3",
+    "nombre_fr": "Albanie"
+  },
+  "Chipre": {
+    "cy": "239",
+    "nombre_fr": "Chypre"
+  },
+  "Eslovenia": {
+    "cy": "191",
+    "nombre_fr": "Slovénie"
+  },
+  "Finlandia": {
+    "cy": "60",
+    "nombre_fr": "Finlande"
+  },
+  "Gales": {
+    "cy": "235",
+    "nombre_fr": "Pays de Galles"
+  },
+  "Irlanda": {
+    "cy": "86",
+    "nombre_fr": "Irlande"
+  },
+  "Irlanda del Norte": {
+    "cy": "154",
+    "nombre_fr": "Irlande du Nord"
+  },
+  "Israel": {
+    "cy": "88",
+    "nombre_fr": "Israël"
+  },
+  "Polonia": {
+    "cy": "166",
+    "nombre_fr": "Pologne"
+  },
+  "Suiza": {
+    "cy": "183",
+    "nombre_fr": "Suisse"
+  },
+  "Ucrania": {
+    "cy": "225",
+    "nombre_fr": "Ukraine"
+  },
+  "Lituania": {
+    "cy": "119",
+    "nombre_fr": "Lituanie"
+  },
+  "Luxemburgo": {
+    "cy": "120",
+    "nombre_fr": "Luxembourg"
+  },
+  "Malta": {
+    "cy": "127",
+    "nombre_fr": "Malte"
+  },
+  "Moldavia": {
+    "cy": "134",
+    "nombre_fr": "Moldavie"
+  },
+  "Letonia": {
+    "cy": "114",
+    "nombre_fr": "Lettonie"
+  }
+}

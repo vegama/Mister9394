@@ -1,0 +1,646 @@
+{
+  "seguros": [
+    {
+      "pais": "Rumania",
+      "slug": "ceahlaul-piatra-neamt",
+      "mf": "353",
+      "mdb": 1458,
+      "nombre": "FC Ceahlăul Piatra Neamț",
+      "en_juego": false
+    },
+    {
+      "pais": "Rumania",
+      "slug": "fc-dinamo-bucuresti",
+      "mf": "485",
+      "mdb": 616,
+      "nombre": "FC Dinamo Bucureşti",
+      "en_juego": false
+    },
+    {
+      "pais": "Rumania",
+      "slug": "farul-constanta",
+      "mf": "584",
+      "mdb": 1722,
+      "nombre": "FC Farul Constanța",
+      "en_juego": false
+    },
+    {
+      "pais": "Rumania",
+      "slug": "sr-brasov",
+      "mf": "606",
+      "mdb": 1561,
+      "nombre": "FC Brașov",
+      "en_juego": false
+    },
+    {
+      "pais": "Rumania",
+      "slug": "otelul-galati",
+      "mf": "1442",
+      "mdb": 777,
+      "nombre": "FC Oţelul Galaţi",
+      "en_juego": false
+    },
+    {
+      "pais": "Rumania",
+      "slug": "rapid-bucuresti",
+      "mf": "1530",
+      "mdb": 780,
+      "nombre": "FC Rapid Bucureşti",
+      "en_juego": false
+    },
+    {
+      "pais": "Rumania",
+      "slug": "universitatea-cluj",
+      "mf": "2007",
+      "mdb": 1554,
+      "nombre": "Universitatea Cluj",
+      "en_juego": false
+    },
+    {
+      "pais": "Rumania",
+      "slug": "fc-universitatea-craiova",
+      "mf": "2008",
+      "mdb": 1475,
+      "nombre": "CS Universitatea Craiova",
+      "en_juego": true
+    },
+    {
+      "pais": "Rumania",
+      "slug": "petrolul-ploiesti",
+      "mf": "17984",
+      "mdb": 1049,
+      "nombre": "FC Petrolul Ploiesti",
+      "en_juego": false
+    },
+    {
+      "pais": "Polonia",
+      "slug": "gornik-zabrze",
+      "mf": "904",
+      "mdb": 1007,
+      "nombre": "Górnik Zabrze",
+      "en_juego": false
+    },
+    {
+      "pais": "Polonia",
+      "slug": "lech-poznan",
+      "mf": "1194",
+      "mdb": 603,
+      "nombre": "KKS Lech Poznań",
+      "en_juego": true
+    },
+    {
+      "pais": "Polonia",
+      "slug": "legia-warszawa",
+      "mf": "1198",
+      "mdb": 779,
+      "nombre": "KP Legia Warszawa",
+      "en_juego": true
+    },
+    {
+      "pais": "Polonia",
+      "slug": "pogon-szczecin",
+      "mf": "1477",
+      "mdb": 1734,
+      "nombre": "MKS Pogoń Szczecin",
+      "en_juego": false
+    },
+    {
+      "pais": "Polonia",
+      "slug": "ruch-chorzow",
+      "mf": "1595",
+      "mdb": 605,
+      "nombre": "Ruch Chorzow SA",
+      "en_juego": false
+    },
+    {
+      "pais": "Polonia",
+      "slug": "widzew-lodz",
+      "mf": "2143",
+      "mdb": 1731,
+      "nombre": "Widzew Lodz",
+      "en_juego": false
+    },
+    {
+      "pais": "Bulgaria",
+      "slug": "botev-plovdiv",
+      "mf": "263",
+      "mdb": 1026,
+      "nombre": "Botev Plovdiv",
+      "en_juego": false
+    },
+    {
+      "pais": "Bulgaria",
+      "slug": "cherno-more-varna",
+      "mf": "376",
+      "mdb": 1574,
+      "nombre": "PFC Cherno More Varna",
+      "en_juego": false
+    },
+    {
+      "pais": "Bulgaria",
+      "slug": "levski-sofia",
+      "mf": "1208",
+      "mdb": 476,
+      "nombre": "Levski Sofía",
+      "en_juego": true
+    },
+    {
+      "pais": "Bulgaria",
+      "slug": "lokomotiv-plovdiv",
+      "mf": "1236",
+      "mdb": 1645,
+      "nombre": "Lokomotiv Plovdiv",
+      "en_juego": false
+    },
+    {
+      "pais": "Bulgaria",
+      "slug": "lokomotiv-sofia",
+      "mf": "1237",
+      "mdb": 1644,
+      "nombre": "Lokomotiv Sofia",
+      "en_juego": false
+    },
+    {
+      "pais": "Bulgaria",
+      "slug": "pfc-beroe",
+      "mf": "1467",
+      "mdb": 478,
+      "nombre": "PFC Beroe Stara Zagora",
+      "en_juego": false
+    },
+    {
+      "pais": "Bulgaria",
+      "slug": "slavia-sofia",
+      "mf": "1737",
+      "mdb": 1575,
+      "nombre": "Slavia Sofia",
+      "en_juego": false
+    },
+    {
+      "pais": "Bulgaria",
+      "slug": "lokomotiv-gorna-oryahovitsa",
+      "mf": "34332",
+      "mdb": 2205,
+      "nombre": "FC Lokomotiv Gorna Oryahovitsa",
+      "en_juego": false
+    },
+    {
+      "pais": "Suecia",
+      "slug": "aik-solna",
+      "mf": "72",
+      "mdb": 633,
+      "nombre": "AIK Solna",
+      "en_juego": true
+    },
+    {
+      "pais": "Suecia",
+      "slug": "bk-haecken",
+      "mf": "232",
+      "mdb": 1242,
+      "nombre": "BK Häcken",
+      "en_juego": false
+    },
+    {
+      "pais": "Suecia",
+      "slug": "degerfors-if",
+      "mf": "458",
+      "mdb": 164,
+      "nombre": "Degerfors IF",
+      "en_juego": true
+    },
+    {
+      "pais": "Suecia",
+      "slug": "halmstads-bk",
+      "mf": "940",
+      "mdb": 1245,
+      "nombre": "Halmstads BK",
+      "en_juego": false
+    },
+    {
+      "pais": "Suecia",
+      "slug": "helsingborgs-if",
+      "mf": "970",
+      "mdb": 800,
+      "nombre": "Helsingborgs IF",
+      "en_juego": false
+    },
+    {
+      "pais": "Suecia",
+      "slug": "ifk-goeteborg",
+      "mf": "1022",
+      "mdb": 636,
+      "nombre": "IFK Göteborg",
+      "en_juego": false
+    },
+    {
+      "pais": "Suecia",
+      "slug": "ifk-norrkoeping",
+      "mf": "1030",
+      "mdb": 1241,
+      "nombre": "IFK Norrköping",
+      "en_juego": false
+    },
+    {
+      "pais": "Suecia",
+      "slug": "malmoe-ff",
+      "mf": "1266",
+      "mdb": 781,
+      "nombre": "Malmö FF",
+      "en_juego": false
+    },
+    {
+      "pais": "Suecia",
+      "slug": "oerebro-sk",
+      "mf": "1428",
+      "mdb": 1247,
+      "nombre": "Örebro SK",
+      "en_juego": false
+    },
+    {
+      "pais": "Suecia",
+      "slug": "oergryte-is",
+      "mf": "1429",
+      "mdb": 1464,
+      "nombre": "Örgryte IS",
+      "en_juego": false
+    },
+    {
+      "pais": "Suecia",
+      "slug": "oesters-if",
+      "mf": "1439",
+      "mdb": 1248,
+      "nombre": "Östers IF",
+      "en_juego": false
+    },
+    {
+      "pais": "Suecia",
+      "slug": "trelleborgs-ff",
+      "mf": "1931",
+      "mdb": 1485,
+      "nombre": "Trelleborgs FF",
+      "en_juego": false
+    },
+    {
+      "pais": "Noruega",
+      "slug": "hamarkameratene",
+      "mf": "941",
+      "mdb": 1148,
+      "nombre": "Hamarkameratene",
+      "en_juego": false
+    },
+    {
+      "pais": "Noruega",
+      "slug": "ik-start",
+      "mf": "1042",
+      "mdb": 1470,
+      "nombre": "IK Start",
+      "en_juego": false
+    },
+    {
+      "pais": "Noruega",
+      "slug": "molde-fk",
+      "mf": "1309",
+      "mdb": 601,
+      "nombre": "Molde FK",
+      "en_juego": false
+    },
+    {
+      "pais": "Noruega",
+      "slug": "rosenborg-bk",
+      "mf": "1578",
+      "mdb": 599,
+      "nombre": "Rosenborg BK",
+      "en_juego": true
+    },
+    {
+      "pais": "Noruega",
+      "slug": "sk-brann",
+      "mf": "1704",
+      "mdb": 1031,
+      "nombre": "SK Brann",
+      "en_juego": false
+    },
+    {
+      "pais": "Noruega",
+      "slug": "viking-fk",
+      "mf": "2097",
+      "mdb": 1715,
+      "nombre": "Viking FK",
+      "en_juego": false
+    },
+    {
+      "pais": "Dinamarca",
+      "slug": "aalborg-bk",
+      "mf": "26",
+      "mdb": 925,
+      "nombre": "Aalborg BK",
+      "en_juego": false
+    },
+    {
+      "pais": "Dinamarca",
+      "slug": "aarhus-gf",
+      "mf": "30",
+      "mdb": 1468,
+      "nombre": "AGF Aarhus",
+      "en_juego": false
+    },
+    {
+      "pais": "Dinamarca",
+      "slug": "lyngby-bk",
+      "mf": "1251",
+      "mdb": 1461,
+      "nombre": "Lyngby BK",
+      "en_juego": false
+    },
+    {
+      "pais": "Dinamarca",
+      "slug": "odense-bk",
+      "mf": "1402",
+      "mdb": 488,
+      "nombre": "Odense BK",
+      "en_juego": true
+    },
+    {
+      "pais": "Dinamarca",
+      "slug": "silkeborg-if",
+      "mf": "1699",
+      "mdb": 1463,
+      "nombre": "Silkeborg IF",
+      "en_juego": false
+    },
+    {
+      "pais": "Dinamarca",
+      "slug": "viborg-ff",
+      "mf": "2090",
+      "mdb": 1467,
+      "nombre": "Viborg FF",
+      "en_juego": false
+    }
+  ],
+  "dudosos": [
+    {
+      "pais": "Rumania",
+      "slug": "gloria-bistrita-old",
+      "mf": "896",
+      "candidatos": []
+    },
+    {
+      "pais": "Rumania",
+      "slug": "fc-timisoara",
+      "mf": "1482",
+      "candidatos": [
+        [
+          615,
+          "FC Timisoara"
+        ],
+        [
+          1477,
+          "ACS Poli Timisoara"
+        ]
+      ]
+    },
+    {
+      "pais": "Rumania",
+      "slug": "progresul-bucuresti",
+      "mf": "1500",
+      "candidatos": []
+    },
+    {
+      "pais": "Rumania",
+      "slug": "fcsb",
+      "mf": "1821",
+      "candidatos": []
+    },
+    {
+      "pais": "Rumania",
+      "slug": "uta-arad",
+      "mf": "2033",
+      "candidatos": []
+    },
+    {
+      "pais": "Rumania",
+      "slug": "inter-sibiu",
+      "mf": "17426",
+      "candidatos": []
+    },
+    {
+      "pais": "Rumania",
+      "slug": "sportul-studentesc",
+      "mf": "17525",
+      "candidatos": []
+    },
+    {
+      "pais": "Rumania",
+      "slug": "fc-caracal",
+      "mf": "17956",
+      "candidatos": []
+    },
+    {
+      "pais": "Rumania",
+      "slug": "dacia-unirea-braila",
+      "mf": "21576",
+      "candidatos": []
+    },
+    {
+      "pais": "Polonia",
+      "slug": "lks-lodz",
+      "mf": "1229",
+      "candidatos": []
+    },
+    {
+      "pais": "Polonia",
+      "slug": "polonia-warszawa",
+      "mf": "1484",
+      "candidatos": []
+    },
+    {
+      "pais": "Polonia",
+      "slug": "stal-stalowa-wola",
+      "mf": "1815",
+      "candidatos": []
+    },
+    {
+      "pais": "Polonia",
+      "slug": "wisla-krakow",
+      "mf": "2147",
+      "candidatos": []
+    },
+    {
+      "pais": "Polonia",
+      "slug": "zaglebie-lubin",
+      "mf": "2170",
+      "candidatos": []
+    },
+    {
+      "pais": "Polonia",
+      "slug": "gks-katowice",
+      "mf": "13821",
+      "candidatos": []
+    },
+    {
+      "pais": "Polonia",
+      "slug": "warta-poznan",
+      "mf": "13825",
+      "candidatos": []
+    },
+    {
+      "pais": "Polonia",
+      "slug": "zawisza-bydgoszcz",
+      "mf": "13934",
+      "candidatos": []
+    },
+    {
+      "pais": "Polonia",
+      "slug": "hutnik-krakow",
+      "mf": "17380",
+      "candidatos": []
+    },
+    {
+      "pais": "Polonia",
+      "slug": "sokol-pniewy",
+      "mf": "17429",
+      "candidatos": []
+    },
+    {
+      "pais": "Polonia",
+      "slug": "siarka-tarnobrzeg",
+      "mf": "17449",
+      "candidatos": []
+    },
+    {
+      "pais": "Polonia",
+      "slug": "fks-stal-mielec",
+      "mf": "18342",
+      "candidatos": []
+    },
+    {
+      "pais": "Bulgaria",
+      "slug": "cska-sofia",
+      "mf": "440",
+      "candidatos": [
+        [
+          477,
+          "CSKA Sofía"
+        ],
+        [
+          2207,
+          "PFC CSKA Sofia II"
+        ]
+      ]
+    },
+    {
+      "pais": "Bulgaria",
+      "slug": "pirin-blagoevgrad",
+      "mf": "1471",
+      "candidatos": []
+    },
+    {
+      "pais": "Bulgaria",
+      "slug": "spartak-varna",
+      "mf": "1767",
+      "candidatos": []
+    },
+    {
+      "pais": "Bulgaria",
+      "slug": "etar-veliko-tarnovo",
+      "mf": "17418",
+      "candidatos": []
+    },
+    {
+      "pais": "Bulgaria",
+      "slug": "fk-dobrudzha",
+      "mf": "17463",
+      "candidatos": []
+    },
+    {
+      "pais": "Bulgaria",
+      "slug": "fc-yantra",
+      "mf": "22568",
+      "candidatos": []
+    },
+    {
+      "pais": "Bulgaria",
+      "slug": "pfc-shumen-2010",
+      "mf": "25401",
+      "candidatos": []
+    },
+    {
+      "pais": "Bulgaria",
+      "slug": "fc-chernomorets-burgas-old",
+      "mf": "141338",
+      "candidatos": []
+    },
+    {
+      "pais": "Suecia",
+      "slug": "vaestra-froelunda",
+      "mf": "17623",
+      "candidatos": []
+    },
+    {
+      "pais": "Suecia",
+      "slug": "ik-brage",
+      "mf": "19578",
+      "candidatos": []
+    },
+    {
+      "pais": "Noruega",
+      "slug": "fk-bodoe-glimt",
+      "mf": "749",
+      "candidatos": []
+    },
+    {
+      "pais": "Noruega",
+      "slug": "fyllingen-fotball",
+      "mf": "850",
+      "candidatos": []
+    },
+    {
+      "pais": "Noruega",
+      "slug": "kongsvinger-il",
+      "mf": "1144",
+      "candidatos": []
+    },
+    {
+      "pais": "Noruega",
+      "slug": "lillestroem-sk",
+      "mf": "1218",
+      "candidatos": []
+    },
+    {
+      "pais": "Noruega",
+      "slug": "lyn-oslo",
+      "mf": "1250",
+      "candidatos": []
+    },
+    {
+      "pais": "Noruega",
+      "slug": "tromsoe-il",
+      "mf": "1937",
+      "candidatos": []
+    },
+    {
+      "pais": "Dinamarca",
+      "slug": "broendby-if",
+      "mf": "279",
+      "candidatos": []
+    },
+    {
+      "pais": "Dinamarca",
+      "slug": "fc-koebenhavn",
+      "mf": "651",
+      "candidatos": []
+    },
+    {
+      "pais": "Dinamarca",
+      "slug": "naestved-bk",
+      "mf": "1335",
+      "candidatos": []
+    },
+    {
+      "pais": "Dinamarca",
+      "slug": "ikast-fs",
+      "mf": "18167",
+      "candidatos": []
+    }
+  ]
+}

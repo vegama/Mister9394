@@ -1,0 +1,484 @@
+{
+  "Rumania": {
+    "competition": "co66",
+    "slug": "roumanie-liga-1",
+    "season_url": "https://www.mondefootball.fr/competition/co66/roumanie-liga-1/se13450/1993-1994/results-and-standings/",
+    "clubs": [
+      {
+        "mondefootball_id": "353",
+        "slug": "ceahlaul-piatra-neamt",
+        "crest_url": "https://s.hs-data.com/gfx/emblem/common/150x150/353.png"
+      },
+      {
+        "mondefootball_id": "485",
+        "slug": "fc-dinamo-bucuresti",
+        "crest_url": "https://s.hs-data.com/gfx/emblem/common/150x150/485.png"
+      },
+      {
+        "mondefootball_id": "584",
+        "slug": "farul-constanta",
+        "crest_url": "https://s.hs-data.com/gfx/emblem/common/150x150/584.png"
+      },
+      {
+        "mondefootball_id": "606",
+        "slug": "sr-brasov",
+        "crest_url": "https://s.hs-data.com/gfx/emblem/common/150x150/606.png"
+      },
+      {
+        "mondefootball_id": "896",
+        "slug": "gloria-bistrita-old",
+        "crest_url": "https://s.hs-data.com/gfx/emblem/common/150x150/896.png"
+      },
+      {
+        "mondefootball_id": "1442",
+        "slug": "otelul-galati",
+        "crest_url": "https://s.hs-data.com/gfx/emblem/common/150x150/1442.png"
+      },
+      {
+        "mondefootball_id": "1482",
+        "slug": "fc-timisoara",
+        "crest_url": "https://s.hs-data.com/gfx/emblem/common/150x150/1482.png"
+      },
+      {
+        "mondefootball_id": "1500",
+        "slug": "progresul-bucuresti",
+        "crest_url": "https://s.hs-data.com/gfx/emblem/common/150x150/1500.png"
+      },
+      {
+        "mondefootball_id": "1530",
+        "slug": "rapid-bucuresti",
+        "crest_url": "https://s.hs-data.com/gfx/emblem/common/150x150/1530.png"
+      },
+      {
+        "mondefootball_id": "1821",
+        "slug": "fcsb",
+        "crest_url": "https://s.hs-data.com/gfx/emblem/common/150x150/1821.png"
+      },
+      {
+        "mondefootball_id": "2007",
+        "slug": "universitatea-cluj",
+        "crest_url": "https://s.hs-data.com/gfx/emblem/common/150x150/2007.png"
+      },
+      {
+        "mondefootball_id": "2008",
+        "slug": "fc-universitatea-craiova",
+        "crest_url": "https://s.hs-data.com/gfx/emblem/common/150x150/2008.png"
+      },
+      {
+        "mondefootball_id": "2033",
+        "slug": "uta-arad",
+        "crest_url": "https://s.hs-data.com/gfx/emblem/common/150x150/2033.png"
+      },
+      {
+        "mondefootball_id": "17426",
+        "slug": "inter-sibiu",
+        "crest_url": "https://s.hs-data.com/gfx/emblem/common/150x150/17426.png"
+      },
+      {
+        "mondefootball_id": "17525",
+        "slug": "sportul-studentesc",
+        "crest_url": "https://s.hs-data.com/gfx/emblem/common/150x150/17525.png"
+      },
+      {
+        "mondefootball_id": "17956",
+        "slug": "fc-caracal",
+        "crest_url": "https://s.hs-data.com/gfx/emblem/common/150x150/17956.png"
+      },
+      {
+        "mondefootball_id": "17984",
+        "slug": "petrolul-ploiesti",
+        "crest_url": "https://s.hs-data.com/gfx/emblem/common/150x150/17984.png"
+      },
+      {
+        "mondefootball_id": "21576",
+        "slug": "dacia-unirea-braila",
+        "crest_url": "https://s.hs-data.com/gfx/emblem/common/150x150/21576.png"
+      }
+    ]
+  },
+  "Polonia": {
+    "competition": "co35",
+    "slug": "pologne-ekstraklasa",
+    "season_url": "https://www.mondefootball.fr/competition/co35/pologne-ekstraklasa/se4830/1993-1994/results-and-standings/",
+    "clubs": [
+      {
+        "mondefootball_id": "904",
+        "slug": "gornik-zabrze",
+        "crest_url": "https://s.hs-data.com/gfx/emblem/common/150x150/904.png"
+      },
+      {
+        "mondefootball_id": "1194",
+        "slug": "lech-poznan",
+        "crest_url": "https://s.hs-data.com/gfx/emblem/common/150x150/1194.png"
+      },
+      {
+        "mondefootball_id": "1198",
+        "slug": "legia-warszawa",
+        "crest_url": "https://s.hs-data.com/gfx/emblem/common/150x150/1198.png"
+      },
+      {
+        "mondefootball_id": "1229",
+        "slug": "lks-lodz",
+        "crest_url": "https://s.hs-data.com/gfx/emblem/common/150x150/1229.png"
+      },
+      {
+        "mondefootball_id": "1477",
+        "slug": "pogon-szczecin",
+        "crest_url": "https://s.hs-data.com/gfx/emblem/common/150x150/1477.png"
+      },
+      {
+        "mondefootball_id": "1484",
+        "slug": "polonia-warszawa",
+        "crest_url": "https://s.hs-data.com/gfx/emblem/common/150x150/1484.png"
+      },
+      {
+        "mondefootball_id": "1595",
+        "slug": "ruch-chorzow",
+        "crest_url": "https://s.hs-data.com/gfx/emblem/common/150x150/1595.png"
+      },
+      {
+        "mondefootball_id": "1815",
+        "slug": "stal-stalowa-wola",
+        "crest_url": "https://s.hs-data.com/gfx/emblem/common/150x150/1815.png"
+      },
+      {
+        "mondefootball_id": "2143",
+        "slug": "widzew-lodz",
+        "crest_url": "https://s.hs-data.com/gfx/emblem/common/150x150/2143.png"
+      },
+      {
+        "mondefootball_id": "2147",
+        "slug": "wisla-krakow",
+        "crest_url": "https://s.hs-data.com/gfx/emblem/common/150x150/2147.png"
+      },
+      {
+        "mondefootball_id": "2170",
+        "slug": "zaglebie-lubin",
+        "crest_url": "https://s.hs-data.com/gfx/emblem/common/150x150/2170.png"
+      },
+      {
+        "mondefootball_id": "13821",
+        "slug": "gks-katowice",
+        "crest_url": "https://s.hs-data.com/gfx/emblem/common/150x150/13821.png"
+      },
+      {
+        "mondefootball_id": "13825",
+        "slug": "warta-poznan",
+        "crest_url": "https://s.hs-data.com/gfx/emblem/common/150x150/13825.png"
+      },
+      {
+        "mondefootball_id": "13934",
+        "slug": "zawisza-bydgoszcz",
+        "crest_url": "https://s.hs-data.com/gfx/emblem/common/150x150/13934.png"
+      },
+      {
+        "mondefootball_id": "17380",
+        "slug": "hutnik-krakow",
+        "crest_url": "https://s.hs-data.com/gfx/emblem/common/150x150/17380.png"
+      },
+      {
+        "mondefootball_id": "17429",
+        "slug": "sokol-pniewy",
+        "crest_url": "https://s.hs-data.com/gfx/emblem/common/150x150/17429.png"
+      },
+      {
+        "mondefootball_id": "17449",
+        "slug": "siarka-tarnobrzeg",
+        "crest_url": "https://s.hs-data.com/gfx/emblem/common/150x150/17449.png"
+      },
+      {
+        "mondefootball_id": "18342",
+        "slug": "fks-stal-mielec",
+        "crest_url": "https://s.hs-data.com/gfx/emblem/common/150x150/18342.png"
+      }
+    ]
+  },
+  "Bulgaria": {
+    "competition": "co138",
+    "slug": "bulgarie-parva-liga",
+    "season_url": "https://www.mondefootball.fr/competition/co138/bulgarie-parva-liga/se27000/1993-1994/results-and-standings/",
+    "clubs": [
+      {
+        "mondefootball_id": "263",
+        "slug": "botev-plovdiv",
+        "crest_url": "https://s.hs-data.com/gfx/emblem/common/150x150/263.png"
+      },
+      {
+        "mondefootball_id": "376",
+        "slug": "cherno-more-varna",
+        "crest_url": "https://s.hs-data.com/gfx/emblem/common/150x150/376.png"
+      },
+      {
+        "mondefootball_id": "440",
+        "slug": "cska-sofia",
+        "crest_url": "https://s.hs-data.com/gfx/emblem/common/150x150/440.png"
+      },
+      {
+        "mondefootball_id": "1208",
+        "slug": "levski-sofia",
+        "crest_url": "https://s.hs-data.com/gfx/emblem/common/150x150/1208.png"
+      },
+      {
+        "mondefootball_id": "1236",
+        "slug": "lokomotiv-plovdiv",
+        "crest_url": "https://s.hs-data.com/gfx/emblem/common/150x150/1236.png"
+      },
+      {
+        "mondefootball_id": "1237",
+        "slug": "lokomotiv-sofia",
+        "crest_url": "https://s.hs-data.com/gfx/emblem/common/150x150/1237.png"
+      },
+      {
+        "mondefootball_id": "1467",
+        "slug": "pfc-beroe",
+        "crest_url": "https://s.hs-data.com/gfx/emblem/common/150x150/1467.png"
+      },
+      {
+        "mondefootball_id": "1471",
+        "slug": "pirin-blagoevgrad",
+        "crest_url": "https://s.hs-data.com/gfx/emblem/common/150x150/1471.png"
+      },
+      {
+        "mondefootball_id": "1737",
+        "slug": "slavia-sofia",
+        "crest_url": "https://s.hs-data.com/gfx/emblem/common/150x150/1737.png"
+      },
+      {
+        "mondefootball_id": "1767",
+        "slug": "spartak-varna",
+        "crest_url": "https://s.hs-data.com/gfx/emblem/common/150x150/1767.png"
+      },
+      {
+        "mondefootball_id": "17418",
+        "slug": "etar-veliko-tarnovo",
+        "crest_url": "https://s.hs-data.com/gfx/emblem/common/150x150/17418.png"
+      },
+      {
+        "mondefootball_id": "17463",
+        "slug": "fk-dobrudzha",
+        "crest_url": "https://s.hs-data.com/gfx/emblem/common/150x150/17463.png"
+      },
+      {
+        "mondefootball_id": "22568",
+        "slug": "fc-yantra",
+        "crest_url": "https://s.hs-data.com/gfx/emblem/common/150x150/22568.png"
+      },
+      {
+        "mondefootball_id": "25401",
+        "slug": "pfc-shumen-2010",
+        "crest_url": "https://s.hs-data.com/gfx/emblem/common/150x150/25401.png"
+      },
+      {
+        "mondefootball_id": "34332",
+        "slug": "lokomotiv-gorna-oryahovitsa",
+        "crest_url": "https://s.hs-data.com/gfx/emblem/common/150x150/34332.png"
+      },
+      {
+        "mondefootball_id": "141338",
+        "slug": "fc-chernomorets-burgas-old",
+        "crest_url": "https://s.hs-data.com/gfx/emblem/common/150x150/141338.png"
+      }
+    ]
+  },
+  "Suecia": {
+    "competition": "co9",
+    "slug": "suede-allsvenskan",
+    "season_url": "https://www.mondefootball.fr/competition/co9/suede-allsvenskan/se20410/1993/results-and-standings/",
+    "clubs": [
+      {
+        "mondefootball_id": "72",
+        "slug": "aik-solna",
+        "crest_url": "https://s.hs-data.com/gfx/emblem/common/150x150/72.png"
+      },
+      {
+        "mondefootball_id": "232",
+        "slug": "bk-haecken",
+        "crest_url": "https://s.hs-data.com/gfx/emblem/common/150x150/232.png"
+      },
+      {
+        "mondefootball_id": "458",
+        "slug": "degerfors-if",
+        "crest_url": "https://s.hs-data.com/gfx/emblem/common/150x150/458.png"
+      },
+      {
+        "mondefootball_id": "940",
+        "slug": "halmstads-bk",
+        "crest_url": "https://s.hs-data.com/gfx/emblem/common/150x150/940.png"
+      },
+      {
+        "mondefootball_id": "970",
+        "slug": "helsingborgs-if",
+        "crest_url": "https://s.hs-data.com/gfx/emblem/common/150x150/970.png"
+      },
+      {
+        "mondefootball_id": "1022",
+        "slug": "ifk-goeteborg",
+        "crest_url": "https://s.hs-data.com/gfx/emblem/common/150x150/1022.png"
+      },
+      {
+        "mondefootball_id": "1030",
+        "slug": "ifk-norrkoeping",
+        "crest_url": "https://s.hs-data.com/gfx/emblem/common/150x150/1030.png"
+      },
+      {
+        "mondefootball_id": "1266",
+        "slug": "malmoe-ff",
+        "crest_url": "https://s.hs-data.com/gfx/emblem/common/150x150/1266.png"
+      },
+      {
+        "mondefootball_id": "1428",
+        "slug": "oerebro-sk",
+        "crest_url": "https://s.hs-data.com/gfx/emblem/common/150x150/1428.png"
+      },
+      {
+        "mondefootball_id": "1429",
+        "slug": "oergryte-is",
+        "crest_url": "https://s.hs-data.com/gfx/emblem/common/150x150/1429.png"
+      },
+      {
+        "mondefootball_id": "1439",
+        "slug": "oesters-if",
+        "crest_url": "https://s.hs-data.com/gfx/emblem/common/150x150/1439.png"
+      },
+      {
+        "mondefootball_id": "1931",
+        "slug": "trelleborgs-ff",
+        "crest_url": "https://s.hs-data.com/gfx/emblem/common/150x150/1931.png"
+      },
+      {
+        "mondefootball_id": "17623",
+        "slug": "vaestra-froelunda",
+        "crest_url": "https://s.hs-data.com/gfx/emblem/common/150x150/17623.png"
+      },
+      {
+        "mondefootball_id": "19578",
+        "slug": "ik-brage",
+        "crest_url": "https://s.hs-data.com/gfx/emblem/common/150x150/19578.png"
+      }
+    ]
+  },
+  "Noruega": {
+    "competition": "co129",
+    "slug": "norvege-eliteserien",
+    "season_url": "https://www.mondefootball.fr/competition/co129/norvege-eliteserien/se4570/1993/results-and-standings/",
+    "clubs": [
+      {
+        "mondefootball_id": "749",
+        "slug": "fk-bodoe-glimt",
+        "crest_url": "https://s.hs-data.com/gfx/emblem/common/150x150/749.png"
+      },
+      {
+        "mondefootball_id": "850",
+        "slug": "fyllingen-fotball",
+        "crest_url": "https://s.hs-data.com/gfx/emblem/common/150x150/850.png"
+      },
+      {
+        "mondefootball_id": "941",
+        "slug": "hamarkameratene",
+        "crest_url": "https://s.hs-data.com/gfx/emblem/common/150x150/941.png"
+      },
+      {
+        "mondefootball_id": "1042",
+        "slug": "ik-start",
+        "crest_url": "https://s.hs-data.com/gfx/emblem/common/150x150/1042.png"
+      },
+      {
+        "mondefootball_id": "1144",
+        "slug": "kongsvinger-il",
+        "crest_url": "https://s.hs-data.com/gfx/emblem/common/150x150/1144.png"
+      },
+      {
+        "mondefootball_id": "1218",
+        "slug": "lillestroem-sk",
+        "crest_url": "https://s.hs-data.com/gfx/emblem/common/150x150/1218.png"
+      },
+      {
+        "mondefootball_id": "1250",
+        "slug": "lyn-oslo",
+        "crest_url": "https://s.hs-data.com/gfx/emblem/common/150x150/1250.png"
+      },
+      {
+        "mondefootball_id": "1309",
+        "slug": "molde-fk",
+        "crest_url": "https://s.hs-data.com/gfx/emblem/common/150x150/1309.png"
+      },
+      {
+        "mondefootball_id": "1578",
+        "slug": "rosenborg-bk",
+        "crest_url": "https://s.hs-data.com/gfx/emblem/common/150x150/1578.png"
+      },
+      {
+        "mondefootball_id": "1704",
+        "slug": "sk-brann",
+        "crest_url": "https://s.hs-data.com/gfx/emblem/common/150x150/1704.png"
+      },
+      {
+        "mondefootball_id": "1937",
+        "slug": "tromsoe-il",
+        "crest_url": "https://s.hs-data.com/gfx/emblem/common/150x150/1937.png"
+      },
+      {
+        "mondefootball_id": "2097",
+        "slug": "viking-fk",
+        "crest_url": "https://s.hs-data.com/gfx/emblem/common/150x150/2097.png"
+      }
+    ]
+  },
+  "Dinamarca": {
+    "competition": "co109",
+    "slug": "danemark-superliga",
+    "season_url": "https://www.mondefootball.fr/competition/co109/danemark-superliga/se9661/1993-1994/results-and-standings/",
+    "clubs": [
+      {
+        "mondefootball_id": "26",
+        "slug": "aalborg-bk",
+        "crest_url": "https://s.hs-data.com/gfx/emblem/common/150x150/26.png"
+      },
+      {
+        "mondefootball_id": "30",
+        "slug": "aarhus-gf",
+        "crest_url": "https://s.hs-data.com/gfx/emblem/common/150x150/30.png"
+      },
+      {
+        "mondefootball_id": "279",
+        "slug": "broendby-if",
+        "crest_url": "https://s.hs-data.com/gfx/emblem/common/150x150/279.png"
+      },
+      {
+        "mondefootball_id": "651",
+        "slug": "fc-koebenhavn",
+        "crest_url": "https://s.hs-data.com/gfx/emblem/common/150x150/651.png"
+      },
+      {
+        "mondefootball_id": "1251",
+        "slug": "lyngby-bk",
+        "crest_url": "https://s.hs-data.com/gfx/emblem/common/150x150/1251.png"
+      },
+      {
+        "mondefootball_id": "1335",
+        "slug": "naestved-bk",
+        "crest_url": "https://s.hs-data.com/gfx/emblem/common/150x150/1335.png"
+      },
+      {
+        "mondefootball_id": "1402",
+        "slug": "odense-bk",
+        "crest_url": "https://s.hs-data.com/gfx/emblem/common/150x150/1402.png"
+      },
+      {
+        "mondefootball_id": "1699",
+        "slug": "silkeborg-if",
+        "crest_url": "https://s.hs-data.com/gfx/emblem/common/150x150/1699.png"
+      },
+      {
+        "mondefootball_id": "2090",
+        "slug": "viborg-ff",
+        "crest_url": "https://s.hs-data.com/gfx/emblem/common/150x150/2090.png"
+      },
+      {
+        "mondefootball_id": "18167",
+        "slug": "ikast-fs",
+        "crest_url": "https://s.hs-data.com/gfx/emblem/common/150x150/18167.png"
+      }
+    ]
+  }
+}
