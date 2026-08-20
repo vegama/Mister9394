@@ -102,3 +102,15 @@
 .live-context-line{display:block;margin-top:4px;font-size:12px;color:var(--football-muted,#667085);font-weight:600}
 .f9394-current-injury{margin:12px 0}
 
+/* Veredicto de la comparacion A/B/C. Cuando el club no puede separar a los
+   candidatos hay que decirlo con la misma claridad que cuando si puede: la
+   incertidumbre es informacion, no un hueco que disimular.
+   Se pinta con las variables del tema, no con colores fijos: el juego tiene modo
+   oscuro y una caja clara aqui se veria como un parche encendido. */
+.market-comparison-verdict{display:grid;gap:4px;margin:10px 0 0;padding:10px 12px;border:1px solid var(--f-line);border-left:3px solid var(--f-green);border-radius:10px;background:var(--f-soft-green,var(--f-soft))}
+.market-comparison-verdict strong{color:var(--f-green);font-size:11px;font-weight:850;letter-spacing:.04em;text-transform:uppercase}
+.market-comparison-verdict span{color:var(--f-text);font-size:13px;line-height:1.45}
+.market-comparison-verdict em{color:var(--f-muted);font-size:12px;font-style:normal;line-height:1.4}
+.market-comparison-verdict em::before{content:'→ ';color:var(--f-green)}
+.market-comparison-verdict.undecidable{border-left-color:var(--f-gold);background:var(--f-soft)}
+.market-comparison-verdict.undecidable strong{color:var(--f-gold)}
