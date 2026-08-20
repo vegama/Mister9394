@@ -39,6 +39,13 @@ PAGES = {
     "Suecia": "1993 Allsvenskan",
     "Noruega": "1993 Tippeligaen",
     "Dinamarca": "1993–94 Danish Superliga",
+    "Austria": "1993–94 Austrian Football Bundesliga",
+    "Suiza": "1993–94 Nationalliga A",
+    "Hungria": "1993–94 Nemzeti Bajnokság I",
+    "Israel": "1993–94 Liga Leumit",
+    "Irlanda": "1993–94 League of Ireland Premier Division",
+    # Ucrania y Croacia no tienen tabla legible en Wikipedia: sus clubes entran
+    # sin posicion y con el nivel por defecto hasta que haya de donde sacarla.
 }
 
 # La plantilla moderna de tablas deportivas numera los equipos con team1, team2...

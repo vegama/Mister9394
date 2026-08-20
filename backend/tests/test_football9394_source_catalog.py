@@ -28,10 +28,10 @@ def test_every_domestic_1993_manager_reference_resolves_to_recovered_manager():
     # A Grupa, Allsvenskan, Tippeligaen y Superligaen- con sus clubes reales.
     # Solo se activan los que pueden alinear once y tienen estadio en la
     # fuente; el resto queda apuntado en pending_activation.
-    assert len(domestic_teams) == 517
+    assert len(domestic_teams) == 532
     domestic_manager_ids = {int(team["manager_id"]) for team in domestic_teams if isinstance(team.get("manager_id"), int)}
     # Sube con las seis ligas del 93-94 incorporadas.
-    assert len(domestic_manager_ids) == 440
+    assert len(domestic_manager_ids) == 455
     assert not [manager_id for manager_id in domestic_manager_ids if catalog.manager(manager_id) is None]
     all_manager_ids = {int(team["manager_id"]) for team in universe.payload["teams"] if isinstance(team.get("manager_id"), int)}
     assert not [manager_id for manager_id in all_manager_ids if catalog.manager(manager_id) is None]
@@ -59,7 +59,7 @@ def test_every_historical_league_has_a_referee_pool_in_the_source():
     # A Grupa, Allsvenskan, Tippeligaen y Superligaen- con sus clubes reales.
     # Solo se activan los que pueden alinear once y tienen estadio en la
     # fuente; el resto queda apuntado en pending_activation.
-    assert len(historical_league_ids) == 33
+    assert len(historical_league_ids) == 36
     assert {league_id for league_id in historical_league_ids if not catalog.referees_for_league(league_id)} == set()
     leagues={int(row["source_id"]):row for row in universe.payload["leagues"]}
     assert leagues[930015]["source_rule_hints"]["referee_pool_size"] == 33

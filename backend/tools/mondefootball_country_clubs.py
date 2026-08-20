@@ -73,13 +73,33 @@ def competitions(country_id: str, client: httpx.Client) -> list[tuple[str, str]]
 
 
 def season_url(competition: str, slug: str, client: httpx.Client) -> str | None:
+    """URL de la temporada 93-94 de ESA competicion.
+
+    La pagina trae mas de un selector y el de temporadas no siempre es el de la
+    competicion que se pide: aceptando la primera opcion cuya etiqueta pusiera
+    "1993/1994" salieron enlaces a otras competiciones enteras. Las de Israel e
+    Irlanda acababan en el Gran Premio de Monaco de 1987, y de ahi se importaron
+    treinta y dos clubes alemanes como si fueran su liga. Se exige que el enlace
+    lleve el mismo identificador de competicion.
+    """
     response = get(client, f"{BASE}/competition/{competition}/{slug}/results-and-standings/")
     if response is None:
         return None
     for value, label in _OPTION.findall(response.text):
-        if label.strip() in SEASON_LABELS and "/se" in value:
-            return value if value.startswith("http") else BASE + value
+        if label.strip() not in SEASON_LABELS or "/se" not in value:
+            continue
+        if f"/{competition}/" not in value:
+            continue
+        return value if value.startswith("http") else BASE + value
     return None
+
+
+# Paises cuya pagina de temporada 93-94 no existe y sirve otra cosa sin avisar.
+# No es una limitacion teorica: la de Israel devolvia clubes alemanes de la
+# Oberliga, la de Irlanda tambien, y la de Croacia devolvia Arsenal y Manchester
+# United. Se comprobo cruzando con la clasificacion real de Wikipedia, donde
+# ninguno de esos clubes tenia sitio.
+SIN_DATOS_1993 = ("israel-ligat-haal", "irlande-premier-division", "croatie-1-hnl")
 
 
 def clubs_in(url: str, client: httpx.Client) -> list[dict[str, str]]:

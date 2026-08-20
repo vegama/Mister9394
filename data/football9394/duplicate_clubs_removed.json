@@ -1,0 +1,17 @@
+{
+  "policy": "el club estaba dos veces: una en su liga modelada con plantilla real y otra suelta con plantilla inventada; se borra la suelta",
+  "removed": [
+    {
+      "club": "Panathinaikos AO",
+      "borrado": 406,
+      "se_queda": 9347002,
+      "fichas": 28
+    },
+    {
+      "club": "OFI Crete FC",
+      "borrado": 891,
+      "se_queda": 9347007,
+      "fichas": 18
+    }
+  ]
+}

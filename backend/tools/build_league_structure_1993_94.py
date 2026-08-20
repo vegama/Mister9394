@@ -54,6 +54,9 @@ LEAGUES = {
     "Suecia":    {"id": 91, "name": "Allsvenskan", "country_id": 79, "level": 1},
     "Noruega":   {"id": 88, "name": "Tippeligaen", "country_id": 60, "level": 1},
     "Dinamarca": {"id": 69, "name": "Superligaen", "country_id": 33, "level": 1},
+    "Austria":   {"id": 62, "name": "Bundesliga", "country_id": 16, "level": 1},
+    "Suiza":     {"id": 55, "name": "Nationalliga A", "country_id": 80, "level": 1},
+    "Ucrania":   {"id": 12, "name": "Vyshcha Liha", "country_id": 85, "level": 1},
 }
 
 # Un club solo se activa si puede alinear once y nombrar suplentes. Con menos, el

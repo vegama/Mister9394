@@ -59,9 +59,9 @@ def test_spanish_cup_and_segunda_b_promotion_are_admitted():
 def test_every_historical_source_row_has_admission_status():
     activations, _ = _activation()
     # Sube con las seis ligas del 93-94 incorporadas.
-    assert len(activations) == 38
+    assert len(activations) == 41
     # Seis competiciones mas: las ligas del 93-94 incorporadas.
-    assert sum(row.active for row in activations.values()) == 36
+    assert sum(row.active for row in activations.values()) == 39
     assert sum(row.reason == "source_not_admitted" for row in activations.values()) == 2
 
 

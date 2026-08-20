@@ -77,7 +77,7 @@ def test_m11_all_active_competitions_have_user_facing_directory_and_detail():
     career = ManagerCareerRuntime9394.create(team_id=16, league_id=1, seed=1115, through_matchday=7)
     directory = career.competition_directory()
     # Seis competiciones mas: las ligas del 93-94 incorporadas.
-    assert len(directory) == 47
+    assert len(directory) == 50
     assert {row["kind"] for row in directory} == {"league", "tournament"}
     league_ids={int(row["source_id"]) for row in directory if row["kind"]=="league"}
     assert {930057,930015,930047} <= league_ids
@@ -191,7 +191,7 @@ def test_m15_three_season_product_gate_preserves_history_world_and_playability()
     assert len(snap["season_archive"]) == 3 and len(snap["season_recaps"]) == 3
     assert len(snap["honours"]) == 120 and len(snap["season_transition_log"]) == 3
     # Seis competiciones mas: las ligas del 93-94 incorporadas.
-    assert len(career.competition_directory()) == 47
+    assert len(career.competition_directory()) == 50
     assert snap["news_feed"] and snap["job_status"] == "active"
 
 

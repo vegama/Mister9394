@@ -7,7 +7,7 @@
       "mf": "353",
       "mdb": 1458,
       "nombre": "FC Ceahlăul Piatra Neamț",
-      "en_juego": false
+      "en_juego": true
     },
     {
       "pais": "Rumania",
@@ -15,7 +15,7 @@
       "mf": "485",
       "mdb": 616,
       "nombre": "FC Dinamo Bucureşti",
-      "en_juego": false
+      "en_juego": true
     },
     {
       "pais": "Rumania",
@@ -23,7 +23,7 @@
       "mf": "584",
       "mdb": 1722,
       "nombre": "FC Farul Constanța",
-      "en_juego": false
+      "en_juego": true
     },
     {
       "pais": "Rumania",
@@ -31,7 +31,7 @@
       "mf": "606",
       "mdb": 1561,
       "nombre": "FC Brașov",
-      "en_juego": false
+      "en_juego": true
     },
     {
       "pais": "Rumania",
@@ -39,7 +39,7 @@
       "mf": "1442",
       "mdb": 777,
       "nombre": "FC Oţelul Galaţi",
-      "en_juego": false
+      "en_juego": true
     },
     {
       "pais": "Rumania",
@@ -47,7 +47,7 @@
       "mf": "1530",
       "mdb": 780,
       "nombre": "FC Rapid Bucureşti",
-      "en_juego": false
+      "en_juego": true
     },
     {
       "pais": "Rumania",
@@ -55,7 +55,7 @@
       "mf": "2007",
       "mdb": 1554,
       "nombre": "Universitatea Cluj",
-      "en_juego": false
+      "en_juego": true
     },
     {
       "pais": "Rumania",
@@ -71,7 +71,7 @@
       "mf": "17984",
       "mdb": 1049,
       "nombre": "FC Petrolul Ploiesti",
-      "en_juego": false
+      "en_juego": true
     },
     {
       "pais": "Polonia",
@@ -79,7 +79,7 @@
       "mf": "904",
       "mdb": 1007,
       "nombre": "Górnik Zabrze",
-      "en_juego": false
+      "en_juego": true
     },
     {
       "pais": "Polonia",
@@ -103,7 +103,7 @@
       "mf": "1477",
       "mdb": 1734,
       "nombre": "MKS Pogoń Szczecin",
-      "en_juego": false
+      "en_juego": true
     },
     {
       "pais": "Polonia",
@@ -111,7 +111,7 @@
       "mf": "1595",
       "mdb": 605,
       "nombre": "Ruch Chorzow SA",
-      "en_juego": false
+      "en_juego": true
     },
     {
       "pais": "Polonia",
@@ -119,7 +119,7 @@
       "mf": "2143",
       "mdb": 1731,
       "nombre": "Widzew Lodz",
-      "en_juego": false
+      "en_juego": true
     },
     {
       "pais": "Polonia",
@@ -127,7 +127,7 @@
       "mf": "2147",
       "mdb": 604,
       "nombre": "Wisła Kraków",
-      "en_juego": false
+      "en_juego": true
     },
     {
       "pais": "Polonia",
@@ -135,7 +135,7 @@
       "mf": "2170",
       "mdb": 1641,
       "nombre": "Zagłębie Lubin SA",
-      "en_juego": false
+      "en_juego": true
     },
     {
       "pais": "Bulgaria",
@@ -143,7 +143,7 @@
       "mf": "263",
       "mdb": 1026,
       "nombre": "Botev Plovdiv",
-      "en_juego": false
+      "en_juego": true
     },
     {
       "pais": "Bulgaria",
@@ -151,7 +151,7 @@
       "mf": "376",
       "mdb": 1574,
       "nombre": "PFC Cherno More Varna",
-      "en_juego": false
+      "en_juego": true
     },
     {
       "pais": "Bulgaria",
@@ -167,7 +167,7 @@
       "mf": "1236",
       "mdb": 1645,
       "nombre": "Lokomotiv Plovdiv",
-      "en_juego": false
+      "en_juego": true
     },
     {
       "pais": "Bulgaria",
@@ -175,7 +175,7 @@
       "mf": "1237",
       "mdb": 1644,
       "nombre": "Lokomotiv Sofia",
-      "en_juego": false
+      "en_juego": true
     },
     {
       "pais": "Bulgaria",
@@ -183,7 +183,7 @@
       "mf": "1737",
       "mdb": 1575,
       "nombre": "Slavia Sofia",
-      "en_juego": false
+      "en_juego": true
     },
     {
       "pais": "Bulgaria",
@@ -191,7 +191,7 @@
       "mf": "34332",
       "mdb": 2205,
       "nombre": "FC Lokomotiv Gorna Oryahovitsa",
-      "en_juego": false
+      "en_juego": true
     },
     {
       "pais": "Suecia",
@@ -207,7 +207,7 @@
       "mf": "232",
       "mdb": 1242,
       "nombre": "BK Häcken",
-      "en_juego": false
+      "en_juego": true
     },
     {
       "pais": "Suecia",
@@ -223,7 +223,7 @@
       "mf": "940",
       "mdb": 1245,
       "nombre": "Halmstads BK",
-      "en_juego": false
+      "en_juego": true
     },
     {
       "pais": "Suecia",
@@ -231,7 +231,7 @@
       "mf": "970",
       "mdb": 800,
       "nombre": "Helsingborgs IF",
-      "en_juego": false
+      "en_juego": true
     },
     {
       "pais": "Suecia",
@@ -239,7 +239,7 @@
       "mf": "1022",
       "mdb": 636,
       "nombre": "IFK Göteborg",
-      "en_juego": false
+      "en_juego": true
     },
     {
       "pais": "Suecia",
@@ -247,7 +247,7 @@
       "mf": "1030",
       "mdb": 1241,
       "nombre": "IFK Norrköping",
-      "en_juego": false
+      "en_juego": true
     },
     {
       "pais": "Suecia",
@@ -255,7 +255,7 @@
       "mf": "1266",
       "mdb": 781,
       "nombre": "Malmö FF",
-      "en_juego": false
+      "en_juego": true
     },
     {
       "pais": "Suecia",
@@ -263,7 +263,7 @@
       "mf": "1428",
       "mdb": 1247,
       "nombre": "Örebro SK",
-      "en_juego": false
+      "en_juego": true
     },
     {
       "pais": "Suecia",
@@ -271,7 +271,7 @@
       "mf": "1429",
       "mdb": 1464,
       "nombre": "Örgryte IS",
-      "en_juego": false
+      "en_juego": true
     },
     {
       "pais": "Suecia",
@@ -279,7 +279,7 @@
       "mf": "1439",
       "mdb": 1248,
       "nombre": "Östers IF",
-      "en_juego": false
+      "en_juego": true
     },
     {
       "pais": "Suecia",
@@ -287,7 +287,7 @@
       "mf": "1931",
       "mdb": 1485,
       "nombre": "Trelleborgs FF",
-      "en_juego": false
+      "en_juego": true
     },
     {
       "pais": "Noruega",
@@ -295,7 +295,7 @@
       "mf": "749",
       "mdb": 1717,
       "nombre": "FK Bodø/Glimt",
-      "en_juego": false
+      "en_juego": true
     },
     {
       "pais": "Noruega",
@@ -303,7 +303,7 @@
       "mf": "941",
       "mdb": 1148,
       "nombre": "Hamarkameratene",
-      "en_juego": false
+      "en_juego": true
     },
     {
       "pais": "Noruega",
@@ -311,7 +311,7 @@
       "mf": "1042",
       "mdb": 1470,
       "nombre": "IK Start",
-      "en_juego": false
+      "en_juego": true
     },
     {
       "pais": "Noruega",
@@ -327,7 +327,7 @@
       "mf": "1309",
       "mdb": 601,
       "nombre": "Molde FK",
-      "en_juego": false
+      "en_juego": true
     },
     {
       "pais": "Noruega",
@@ -343,7 +343,7 @@
       "mf": "1704",
       "mdb": 1031,
       "nombre": "SK Brann",
-      "en_juego": false
+      "en_juego": true
     },
     {
       "pais": "Noruega",
@@ -351,7 +351,7 @@
       "mf": "1937",
       "mdb": 973,
       "nombre": "Tromsø IL",
-      "en_juego": false
+      "en_juego": true
     },
     {
       "pais": "Noruega",
@@ -359,7 +359,7 @@
       "mf": "2097",
       "mdb": 1715,
       "nombre": "Viking FK",
-      "en_juego": false
+      "en_juego": true
     },
     {
       "pais": "Dinamarca",
@@ -367,7 +367,7 @@
       "mf": "26",
       "mdb": 925,
       "nombre": "Aalborg BK",
-      "en_juego": false
+      "en_juego": true
     },
     {
       "pais": "Dinamarca",
@@ -391,7 +391,7 @@
       "mf": "1251",
       "mdb": 1461,
       "nombre": "Lyngby BK",
-      "en_juego": false
+      "en_juego": true
     },
     {
       "pais": "Dinamarca",
@@ -399,7 +399,7 @@
       "mf": "1335",
       "mdb": 1840,
       "nombre": "Næstved BK",
-      "en_juego": false
+      "en_juego": true
     },
     {
       "pais": "Dinamarca",
@@ -415,7 +415,7 @@
       "mf": "1699",
       "mdb": 1463,
       "nombre": "Silkeborg IF",
-      "en_juego": false
+      "en_juego": true
     },
     {
       "pais": "Dinamarca",
@@ -423,6 +423,150 @@
       "mf": "2090",
       "mdb": 1467,
       "nombre": "Viborg FF",
+      "en_juego": true
+    },
+    {
+      "pais": "Austria",
+      "slug": "fc-admira-wacker",
+      "mf": "57",
+      "mdb": 1288,
+      "nombre": "FC Admira Wacker Mödling",
+      "en_juego": false
+    },
+    {
+      "pais": "Austria",
+      "slug": "austria-wien",
+      "mf": "175",
+      "mdb": 447,
+      "nombre": "FK Austria Wien",
+      "en_juego": true
+    },
+    {
+      "pais": "Austria",
+      "slug": "fc-wacker-innsbruck",
+      "mf": "720",
+      "mdb": 189,
+      "nombre": "FC Wacker Innsbruck",
+      "en_juego": false
+    },
+    {
+      "pais": "Austria",
+      "slug": "rapid-wien",
+      "mf": "1531",
+      "mdb": 446,
+      "nombre": "SK Rapid Wien",
+      "en_juego": false
+    },
+    {
+      "pais": "Austria",
+      "slug": "sturm-graz",
+      "mf": "1837",
+      "mdb": 448,
+      "nombre": "SK Sturm Graz",
+      "en_juego": false
+    },
+    {
+      "pais": "Suiza",
+      "slug": "bsc-young-boys",
+      "mf": "283",
+      "mdb": 638,
+      "nombre": "BSC Young Boys",
+      "en_juego": false
+    },
+    {
+      "pais": "Suiza",
+      "slug": "fc-aarau",
+      "mf": "590",
+      "mdb": 1033,
+      "nombre": "FC Aarau",
+      "en_juego": true
+    },
+    {
+      "pais": "Suiza",
+      "slug": "fc-lugano",
+      "mf": "664",
+      "mdb": 1036,
+      "nombre": "FC Lugano",
+      "en_juego": true
+    },
+    {
+      "pais": "Suiza",
+      "slug": "fc-sion",
+      "mf": "699",
+      "mdb": 782,
+      "nombre": "FC Sion",
+      "en_juego": false
+    },
+    {
+      "pais": "Suiza",
+      "slug": "fc-zurich",
+      "mf": "728",
+      "mdb": 416,
+      "nombre": "FC Zürich",
+      "en_juego": false
+    },
+    {
+      "pais": "Suiza",
+      "slug": "neuchatel-xamax-fcs",
+      "mf": "1351",
+      "mdb": 198,
+      "nombre": "Neuchâtel Xamax FCS",
+      "en_juego": false
+    },
+    {
+      "pais": "Suiza",
+      "slug": "servette-fc",
+      "mf": "1678",
+      "mdb": 1034,
+      "nombre": "Servette FC",
+      "en_juego": true
+    },
+    {
+      "pais": "Ucrania",
+      "slug": "chernomorets-odessa",
+      "mf": "378",
+      "mdb": 972,
+      "nombre": "Chernomorets Odessa",
+      "en_juego": false
+    },
+    {
+      "pais": "Ucrania",
+      "slug": "dynamo-kyiv",
+      "mf": "486",
+      "mdb": 419,
+      "nombre": "FC Dynamo Kyiv",
+      "en_juego": true
+    },
+    {
+      "pais": "Ucrania",
+      "slug": "dnipro-dnipropetrovsk",
+      "mf": "495",
+      "mdb": 650,
+      "nombre": "FC Dnipro Dnipropetrovsk",
+      "en_juego": true
+    },
+    {
+      "pais": "Ucrania",
+      "slug": "metalurg-zaporizhya",
+      "mf": "1285",
+      "mdb": 1853,
+      "nombre": "Metalurg Zaporizhya",
+      "en_juego": false
+    },
+    {
+      "pais": "Ucrania",
+      "slug": "shakhtar-donetsk",
+      "mf": "1688",
+      "mdb": 647,
+      "nombre": "FC Shakhtar Donetsk",
+      "en_juego": true
+    },
+    {
+      "pais": "Ucrania",
+      "slug": "volyn-lutsk",
+      "mf": "13911",
+      "mdb": 1852,
+      "nombre": "Volyn Lutsk",
       "en_juego": false
     }
   ],
@@ -732,6 +876,204 @@
       "motivo": "ningun equipo con ese nombre en la base",
       "candidatos": [],
       "nombre_real": "Ikast FS"
+    },
+    {
+      "pais": "Austria",
+      "slug": "rb-salzburg",
+      "mf": "1536",
+      "fichas": 20,
+      "motivo": "ningun equipo con ese nombre en la base",
+      "candidatos": [],
+      "nombre_real": "Rb Salzburg"
+    },
+    {
+      "pais": "Austria",
+      "slug": "wiener-sport-club",
+      "mf": "2144",
+      "fichas": 24,
+      "motivo": "ningun equipo con ese nombre en la base",
+      "candidatos": [],
+      "nombre_real": "Wiener Sport Club"
+    },
+    {
+      "pais": "Austria",
+      "slug": "vorwaerts-steyr",
+      "mf": "17487",
+      "fichas": 25,
+      "motivo": "ningun equipo con ese nombre en la base",
+      "candidatos": [],
+      "nombre_real": "Vorwärts Steyr"
+    },
+    {
+      "pais": "Austria",
+      "slug": "vfb-moedling",
+      "mf": "17794",
+      "fichas": 23,
+      "motivo": "ningun equipo con ese nombre en la base",
+      "candidatos": [],
+      "nombre_real": "VfB Mödling"
+    },
+    {
+      "pais": "Austria",
+      "slug": "vse-st-poelten",
+      "mf": "17800",
+      "fichas": 24,
+      "motivo": "ningun equipo con ese nombre en la base",
+      "candidatos": [],
+      "nombre_real": "VSE St. Pölten"
+    },
+    {
+      "pais": "Suiza",
+      "slug": "fc-lausanne-sport",
+      "mf": "658",
+      "fichas": 22,
+      "motivo": "ningun equipo con ese nombre en la base",
+      "candidatos": [],
+      "nombre_real": "Lausanne-Sport"
+    },
+    {
+      "pais": "Suiza",
+      "slug": "fc-lucerne",
+      "mf": "667",
+      "fichas": 24,
+      "motivo": "ningun equipo con ese nombre en la base",
+      "candidatos": [],
+      "nombre_real": "Fc Lucerne"
+    },
+    {
+      "pais": "Suiza",
+      "slug": "grasshoppers",
+      "mf": "910",
+      "fichas": 22,
+      "motivo": "ningun equipo con ese nombre en la base",
+      "candidatos": [],
+      "nombre_real": "Grasshoppers"
+    },
+    {
+      "pais": "Suiza",
+      "slug": "sc-kriens",
+      "mf": "1648",
+      "fichas": 18,
+      "motivo": "ningun equipo con ese nombre en la base",
+      "candidatos": [],
+      "nombre_real": "Kriens"
+    },
+    {
+      "pais": "Suiza",
+      "slug": "yverdon-sport-fc",
+      "mf": "2168",
+      "fichas": 28,
+      "motivo": "ningun equipo con ese nombre en la base",
+      "candidatos": [],
+      "nombre_real": "Yverdon-Sport"
+    },
+    {
+      "pais": "Ucrania",
+      "slug": "fk-krivbas-old",
+      "mf": "771",
+      "fichas": 5,
+      "motivo": "ningun equipo con ese nombre en la base",
+      "candidatos": [],
+      "nombre_real": "Fk Krivbas Old"
+    },
+    {
+      "pais": "Ucrania",
+      "slug": "karpaty-lviv",
+      "mf": "1111",
+      "fichas": 12,
+      "motivo": "ningun equipo con ese nombre en la base",
+      "candidatos": [],
+      "nombre_real": "Karpaty Lviv"
+    },
+    {
+      "pais": "Ucrania",
+      "slug": "metalist-kharkiv",
+      "mf": "1281",
+      "fichas": 10,
+      "motivo": "ningun equipo con ese nombre en la base",
+      "candidatos": [],
+      "nombre_real": "Metalist Kharkiv"
+    },
+    {
+      "pais": "Ucrania",
+      "slug": "niva-ternopil",
+      "mf": "1368",
+      "fichas": 11,
+      "motivo": "ningun equipo con ese nombre en la base",
+      "candidatos": [],
+      "nombre_real": "Niva Ternopil"
+    },
+    {
+      "pais": "Ucrania",
+      "slug": "tavriya-simferopol-1958-2014",
+      "mf": "1893",
+      "fichas": 13,
+      "motivo": "ningun equipo con ese nombre en la base",
+      "candidatos": [],
+      "nombre_real": "Tavriya Simferopol 1958 2014"
+    },
+    {
+      "pais": "Ucrania",
+      "slug": "zorya-lugansk",
+      "mf": "2185",
+      "fichas": 4,
+      "motivo": "ningun equipo con ese nombre en la base",
+      "candidatos": [],
+      "nombre_real": "Zorya Lugansk"
+    },
+    {
+      "pais": "Ucrania",
+      "slug": "fk-bukovina",
+      "mf": "13889",
+      "fichas": 2,
+      "motivo": "ningun equipo con ese nombre en la base",
+      "candidatos": [],
+      "nombre_real": "Fk Bukovina"
+    },
+    {
+      "pais": "Ucrania",
+      "slug": "nk-veres",
+      "mf": "13901",
+      "fichas": 4,
+      "motivo": "ningun equipo con ese nombre en la base",
+      "candidatos": [],
+      "nombre_real": "Nk Veres"
+    },
+    {
+      "pais": "Ucrania",
+      "slug": "fk-nyva-vinnytsia",
+      "mf": "13906",
+      "fichas": 8,
+      "motivo": "ningun equipo con ese nombre en la base",
+      "candidatos": [],
+      "nombre_real": "Fk Nyva Vinnytsia"
+    },
+    {
+      "pais": "Ucrania",
+      "slug": "torpedo-zaporizhya",
+      "mf": "22473",
+      "fichas": 7,
+      "motivo": "ningun equipo con ese nombre en la base",
+      "candidatos": [],
+      "nombre_real": "Torpedo Zaporizhya"
+    },
+    {
+      "pais": "Ucrania",
+      "slug": "fk-kremin",
+      "mf": "22490",
+      "fichas": 5,
+      "motivo": "ningun equipo con ese nombre en la base",
+      "candidatos": [],
+      "nombre_real": "Fk Kremin"
+    },
+    {
+      "pais": "Ucrania",
+      "slug": "temp-shepetivka",
+      "mf": "48944",
+      "fichas": 4,
+      "motivo": "ningun equipo con ese nombre en la base",
+      "candidatos": [],
+      "nombre_real": "Temp Shepetivka"
     }
   ]
 }
