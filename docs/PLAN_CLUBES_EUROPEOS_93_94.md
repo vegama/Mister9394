@@ -248,37 +248,41 @@ contra los de las ligas reales del juego y se exige que estén dentro de rango. 
 un delantero abstracto mete 60 goles, la prueba se pone roja. Es la diferencia
 entre "parece razonable" y "está calibrado contra el propio juego".
 
-### Los del contenedor `Otros-`: decidido, van a su club real
+### Los del contenedor `Otros-`: se quedan donde están
 
-**Decisión tomada:** se les da de alta su club de verdad aunque ese club acabe
-teniendo un solo futbolista. Casi todos traen ya el dato en
-`historical_club_1994`, y en la base hay **584 clubes distintos entre ellos, 525
-sin modelar**. Es preferible un Kaizer Chiefs con tres fichas a un
-`Otros-Sudáfrica` con treinta: el jugador tiene club, el fichaje tiene origen y
-la ficha dice la verdad.
+**Decisión tomada, y corrige una anterior.** Se llegó a plantear darles su club
+real aunque acabara teniendo una sola ficha, aprovechando que casi todos traen el
+dato en `historical_club_1994`. Se descarta: eran **525 clubes sin modelar**, y
+crear quinientos equipos que nunca van a jugar ensucia listados, buscador y
+mercado a cambio de muy poco.
 
-Esto obliga a separar dos papeles que hasta ahora iban juntos:
+Así que sólo se dan de alta los **clubes que faltan de las competiciones
+europeas**, que son los que sí tienen sentido como competidores. Quien no entre
+por esa vía se queda en su contenedor `Otros-País`.
 
-**Club como empleador** —basta con un futbolista—. Da contrato, dorsal, origen
-en el mercado y, sobre todo, el nivel de competición del que cuelga la temporada
-abstracta. Los otros veinte de su plantilla simplemente no están modelados,
-igual que no lo está el resto del mundo.
+Eso deja una consecuencia que hay que resolver igual: los que se quedan en el
+contenedor **también tienen que acumular estadísticas**, o vuelven a estar
+congelados.
 
-**Club como competidor** —necesita plantilla suficiente—. Sólo estos aparecen en
-calendarios, sorteos y eliminatorias. Un club de cinco fichas nunca sale
-emparejado, porque no podría alinear once. El precedente ya existe: es el mismo
-criterio que `_functional_pool` aplica a las selecciones.
+**Cómo:** la temporada abstracta cuelga del contenedor, no de un club. El
+empleador es genérico —"club menor" del país que corresponda— y de ahí sale el
+nivel de competición. No hace falta que exista la entidad para que el futbolista
+juegue una temporada creíble.
 
-Sin esa separación, el primer sorteo europeo que le toque a un club de cinco
-revienta.
+Con un matiz que lo mejora mucho y que sale gratis: **el nombre del club sí lo
+tenemos**. De los 1.373 que viven en contenedores, **1.151 (83%) conservan su
+club real** en `historical_club_1994` —ASEC Abidjan, Al-Zamalek, Espérance,
+Persepolis, Olimpia, Cerro Porteño…—. Así que conviene separar dos cosas:
 
-Lo que hay que vigilar:
+- **El club como entidad**: no se crea. Nada de 525 equipos.
+- **El club como dato**: la ficha enseña "ASEC Abidjan" porque es verdad, y sólo
+  cae en "club menor" o "desconocido" el 17% del que no se sabe nada.
 
-- Podrían aparecer hasta 525 clubes nuevos. Hay que marcarlos para que no
-  ensucien los listados ni el buscador, y decidir si se ven o no.
-- Muchos no tendrán escudo ni en los gráficos originales ni en BDFutbol.
-- Los contenedores `Otros-País` no desaparecen: siguen siendo el sitio de quien
-  no tiene club conocido.
+El motor de estadísticas trata a los dos igual —competidor no modelado, al nivel
+de su país—, pero el jugador no aparece en un limbo llamado `Otros-Costa de
+Marfil`, que es un nombre de contenedor y no de club. Se queda casi toda la
+ganancia de dar club propio a cada uno, sin el coste de inventar quinientas
+entidades que nunca van a jugar.
 
 ### Abierto: que esos clubes compren y vendan
 

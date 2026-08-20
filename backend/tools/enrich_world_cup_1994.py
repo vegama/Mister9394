@@ -514,6 +514,7 @@ CARRIED_OVER = {
     "bdfutbol_url": "",
     "photo_status": "pending",
     "duplicate_check": "created_after_global_existing_player_comparison",
+    "attribute_source": "provisional_pending_profile_review",
 }
 
 

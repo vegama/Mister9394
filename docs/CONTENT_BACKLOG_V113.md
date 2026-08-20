@@ -43,7 +43,7 @@ Marcados en estricto, funcionan como trinquete:
 | `v042_belgium_waregem_lommel_deep` | 1 | Correcciones de rol y estado histórico de Waregem y Lommel. |
 | `v030_full_rosters_and_1993_countries` | 1 | Los stagings ampliados aún producen identidades resueltas duplicadas. |
 | `v024_bel_tur_rus_depth` | 1 | La puerta de plantilla de Grecia no está completa ni es única. |
-| `national_pool_022` | 1 | Uno de los cinco pools nacionales ampliados tiene 21 verificados en vez de 22. |
+| ~~`national_pool_022`~~ | ~~1~~ | **Resuelto.** El pool que se quedaba en 21 verificados lo completaron las convocatorias de torneo. La prueba vuelve a exigirse de verdad. |
 
 ## Tres grupos, tres decisiones distintas
 

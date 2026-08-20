@@ -148,24 +148,27 @@ def enrich(
     taken = set(survivors) | {int(t["source_id"]) for t in snapshot.get("teams", [])}
     next_free = max(taken) + 1
     reassigned = 0
-    # Compartir identificador con un superviviente no basta para ser la misma
-    # persona: la ficha 9495160 la creó este lote para Branko Milošević y hoy la
-    # ocupa Cvijan Milošević, que es otro. Pero tampoco basta exigir que
-    # coincida la fecha, porque las fuentes discrepan en un dígito —Ramiz
-    # Mamedov figura como 21 de mayo en una y 21 de agosto en otra— y entonces
-    # se duplicaba. Se pide el apellido y, además, o el nombre de pila o la
-    # fecha: Branko y Cvijan se separan por el nombre, Mamedov se reconoce por él.
+    # Decidir si el superviviente es la encarnación anterior de esta misma alta.
     def same_person(row: dict[str, Any], other: dict[str, Any]) -> bool:
         def key(value: Any) -> str:
             return str(value or "").strip().casefold()
 
-        surname = key(row.get("surname1"))
-        if not surname or surname not in key(other.get("surname1")) + " " + key(other.get("display_name")):
-            return False
-        given = key(row.get("first_name"))
-        if given and given in key(other.get("first_name")) + " " + key(other.get("display_name")):
+        birth = str(row.get("birth_date") or "")[:10]
+        if birth and birth == str(other.get("birth_date") or "")[:10]:
+            # Mismo identificador y misma fecha de nacimiento: es él. Exigir
+            # además que coincida el apellido dejaba fuera las variantes de
+            # transliteración —"Podpaly" no está contenido en "Podpaliy"— y lo
+            # duplicaba.
             return True
-        return str(row.get("birth_date") or "")[:10] == str(other.get("birth_date") or "")[:10]
+        # Sin la fecha hay que ser mucho más estricto, porque el identificador
+        # pudo cambiar de dueño: la ficha 9495160 la creó este lote para Branko
+        # Milošević y hoy la ocupa Cvijan Milošević, que es otro.
+        surname = key(row.get("surname1"))
+        given = key(row.get("first_name"))
+        if not surname or not given:
+            return False
+        haystack = key(other.get("first_name")) + " " + key(other.get("surname1")) + " " + key(other.get("display_name"))
+        return surname in haystack and given in haystack
 
     previous_self: dict[int, int] = {}
     for row in additions.get("players", []):

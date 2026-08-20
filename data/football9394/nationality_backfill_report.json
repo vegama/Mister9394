@@ -1,22 +1,9 @@
 {
   "status": "complete",
   "policy": "international_country_id = birth_country_id, marcado como inferencia",
-  "assigned": 7997,
-  "sporting_succession_applied": 7,
-  "birth_country_corrections": [
-    {
-      "source_id": 6225,
-      "display_name": "Titi Camara",
-      "before": 185,
-      "after": 91
-    },
-    {
-      "source_id": 6710,
-      "display_name": "Mohamed Sylla",
-      "before": 185,
-      "after": 91
-    }
-  ],
+  "assigned": 0,
+  "sporting_succession_applied": 0,
+  "birth_country_corrections": [],
   "left_blank_no_evidence": 462,
   "players_without_any_country": [
     {
