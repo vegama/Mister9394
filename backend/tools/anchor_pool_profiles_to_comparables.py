@@ -70,11 +70,31 @@ def anchor(snapshot_path: Path = SNAPSHOT, report_path: Path = REPORT) -> dict[s
     for rows in real.values():
         rows.sort(key=lambda p: int(p.get("overall") or 0))
 
+    # Tambien hay que rehacer los perfiles cuyos comparables ya no existen: al
+    # sustituir plantillas inventadas por reales se borraron futbolistas que
+    # servian de referencia a otros, y una ficha que apunta a alguien que no esta
+    # es una ficha sin respaldo.
+    alive = {int(p["source_id"]) for p in players}
+    def orphan_refs(player: dict[str, Any]) -> bool:
+        for comparable in player.get("attribute_comparable_source_ids") or []:
+            if int(comparable) not in alive:
+                return True
+        review = player.get("profile_review_0_23") or {}
+        for key in ("primary_comparable", "secondary_comparable"):
+            row = review.get(key) or {}
+            if row.get("source_id") and int(row["source_id"]) not in alive:
+                return True
+        return False
+
+    orphaned = [p for p in players if orphan_refs(p)]
     pending = [
         p for p in players
         if p.get("external_origin") in OWNED
         and not str(p.get("attribute_source") or "").startswith("fixed_source_comparable_")
     ]
+    for player in orphaned:
+        if player not in pending:
+            pending.append(player)
 
     used_vectors = {
         tuple(int((p.get("attributes") or {}).get(name) or 0) for name in ATTRS)
@@ -124,8 +144,18 @@ def anchor(snapshot_path: Path = SNAPSHOT, report_path: Path = REPORT) -> dict[s
         used_vectors.add(vector)
 
         player["attributes"] = attributes
-        player["attribute_source"] = BATCH
+        # A quien ya tenia perfil curado se le repara la referencia rota pero se
+        # le respeta la etiqueta de su tanda: decir que el perfil de un griego
+        # del lote 0.31 viene de este es falso y ademas borra su rastro.
+        previous = str(player.get("attribute_source") or "")
+        player["attribute_source"] = previous if previous.startswith("fixed_source_comparable_") else BATCH
         player["attribute_comparable_source_ids"] = [int(p["source_id"]) for p in nearest]
+        # Si la revision antigua apuntaba a alguien que ya no esta, sobra: el
+        # respaldo pasa a ser la pareja de comparables recien elegida.
+        review = player.get("profile_review_0_23") or {}
+        if any(int((review.get(k) or {}).get("source_id") or 0) not in alive
+               for k in ("primary_comparable", "secondary_comparable") if review.get(k)):
+            player.pop("profile_review_0_23", None)
         anchored += 1
 
     snapshot_path.write_text(json.dumps(snapshot, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")

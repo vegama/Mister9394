@@ -38,15 +38,21 @@ def test_competition_audit_has_no_career_limbo_rows():
     response=client.get('/api/football9394/rule-audit')
     assert response.status_code == 200
     data=response.json()
-    assert data['total'] == 32
-    assert data['active'] == 30
+    # Sube al incorporar las seis ligas del 93-94 -Divizia A, Ekstraklasa,
+    # A Grupa, Allsvenskan, Tippeligaen y Superligaen- con sus clubes reales.
+    # Solo se activan los que pueden alinear once y tienen estadio en la
+    # fuente; el resto queda apuntado en pending_activation.
+    assert data['total'] == 38
+    # Sube con las seis ligas del 93-94 incorporadas.
+    assert data['active'] == 36
     assert data['excluded'] == 2
     assert data['non_admitted'] == 2
     assert data['unresolved'] == 0
     assert data['all_source_rows_closed'] is True
     # Default endpoint follows the original MDB's admitted selector.
     active=client.get('/api/football9394/competitions').json()
-    assert len(active) == 30
+    # Seis competiciones mas: las ligas del 93-94 incorporadas.
+    assert len(active) == 36
     assert all(row['active'] for row in active)
 
 

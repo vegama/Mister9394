@@ -2,383 +2,389 @@
   "status": "complete",
   "leagues": 6,
   "clubs": 88,
+  "activated": 37,
+  "pending_activation": 51,
   "renamed": 0,
-  "levelled": 45,
+  "levelled": 0,
   "unplaced": 0,
   "detail": [
     {
       "country": "Rumania",
-      "league_id": 930058,
+      "league_id": 56,
       "name": "Divizia A",
       "clubs": 18,
+      "activated": 3,
       "unplaced": [],
       "renamed": [],
-      "levelled": [
+      "levelled": [],
+      "incomplete": [
         {
           "club": "FC Rapid Bucureşti",
           "posicion": 4,
-          "nivel": 74,
-          "ajuste": 1,
-          "fichas": 14
+          "fichas": 15,
+          "estadio": true
         },
         {
           "club": "FC Petrolul Ploiesti",
           "posicion": 5,
-          "nivel": 73,
-          "ajuste": 1,
-          "fichas": 12
+          "fichas": 13,
+          "estadio": true
         },
         {
           "club": "FC Farul Constanța",
           "posicion": 6,
-          "nivel": 72,
-          "ajuste": 1,
-          "fichas": 14
+          "fichas": 14,
+          "estadio": true
+        },
+        {
+          "club": "Gloria Bistrița",
+          "posicion": 7,
+          "fichas": 14,
+          "estadio": false
         },
         {
           "club": "Inter Sibiu",
           "posicion": 8,
-          "nivel": 71,
-          "ajuste": 1,
-          "fichas": 11
+          "fichas": 11,
+          "estadio": false
         },
         {
           "club": "Progresul București",
           "posicion": 9,
-          "nivel": 70,
-          "ajuste": 1,
-          "fichas": 14
+          "fichas": 14,
+          "estadio": false
         },
         {
           "club": "FC Ceahlăul Piatra Neamț",
           "posicion": 10,
-          "nivel": 69,
-          "ajuste": 1,
-          "fichas": 14
+          "fichas": 14,
+          "estadio": true
+        },
+        {
+          "club": "UTA Arad",
+          "posicion": 11,
+          "fichas": 6,
+          "estadio": false
         },
         {
           "club": "Universitatea Cluj",
           "posicion": 12,
-          "nivel": 68,
-          "ajuste": 1,
-          "fichas": 9
+          "fichas": 9,
+          "estadio": true
         },
         {
           "club": "FC Brașov",
           "posicion": 13,
-          "nivel": 67,
-          "ajuste": 1,
-          "fichas": 7
+          "fichas": 8,
+          "estadio": true
         },
         {
           "club": "Electroputere Craiova",
           "posicion": 14,
-          "nivel": 66,
-          "ajuste": -8,
-          "fichas": 16
+          "fichas": 16,
+          "estadio": false
+        },
+        {
+          "club": "FC Oţelul Galaţi",
+          "posicion": 15,
+          "fichas": 13,
+          "estadio": true
+        },
+        {
+          "club": "Sportul Studenţesc București",
+          "posicion": 16,
+          "fichas": 10,
+          "estadio": false
         },
         {
           "club": "Dacia Unirea Brăila",
           "posicion": 17,
-          "nivel": 64,
-          "ajuste": 1,
-          "fichas": 3
+          "fichas": 3,
+          "estadio": false
         },
         {
           "club": "Politehnica Timișoara",
           "posicion": 18,
-          "nivel": 63,
-          "ajuste": -1,
-          "fichas": 12
+          "fichas": 12,
+          "estadio": true
         }
       ]
     },
     {
       "country": "Polonia",
-      "league_id": 930059,
+      "league_id": 89,
       "name": "Ekstraklasa",
       "clubs": 18,
+      "activated": 6,
       "unplaced": [],
       "renamed": [],
-      "levelled": [
+      "levelled": [],
+      "incomplete": [
         {
-          "club": "KKS Lech Poznań",
-          "posicion": 6,
-          "nivel": 72,
-          "ajuste": 1,
-          "fichas": 24
+          "club": "GKS Katowice",
+          "posicion": 2,
+          "fichas": 17,
+          "estadio": false
         },
         {
-          "club": "Widzew Lodz",
-          "posicion": 8,
-          "nivel": 71,
-          "ajuste": -1,
-          "fichas": 17
+          "club": "Hutnik Kraków",
+          "posicion": 4,
+          "fichas": 18,
+          "estadio": false
+        },
+        {
+          "club": "ŁKS Łódź",
+          "posicion": 5,
+          "fichas": 17,
+          "estadio": false
+        },
+        {
+          "club": "Miliarder Pniewy",
+          "posicion": 10,
+          "fichas": 19,
+          "estadio": false
+        },
+        {
+          "club": "Polonia Warsaw",
+          "posicion": 11,
+          "fichas": 14,
+          "estadio": false
+        },
+        {
+          "club": "Stal Mielec",
+          "posicion": 12,
+          "fichas": 15,
+          "estadio": false
+        },
+        {
+          "club": "Siarka Tarnobrzeg",
+          "posicion": 13,
+          "fichas": 14,
+          "estadio": false
+        },
+        {
+          "club": "Stal Stalowa Wola",
+          "posicion": 14,
+          "fichas": 17,
+          "estadio": false
+        },
+        {
+          "club": "Zagłębie Lubin SA",
+          "posicion": 15,
+          "fichas": 15,
+          "estadio": true
+        },
+        {
+          "club": "Warta Poznań",
+          "posicion": 16,
+          "fichas": 19,
+          "estadio": false
+        },
+        {
+          "club": "Wisła Kraków",
+          "posicion": 17,
+          "fichas": 12,
+          "estadio": true
+        },
+        {
+          "club": "Zawisza Bydgoszcz",
+          "posicion": 18,
+          "fichas": 11,
+          "estadio": false
         }
       ]
     },
     {
       "country": "Bulgaria",
-      "league_id": 930060,
+      "league_id": 66,
       "name": "A Grupa",
       "clubs": 16,
+      "activated": 4,
       "unplaced": [],
       "renamed": [],
-      "levelled": [
+      "levelled": [],
+      "incomplete": [
         {
-          "club": "CSKA Sofía",
-          "posicion": 2,
-          "nivel": 75,
-          "ajuste": 1,
-          "fichas": 19
-        },
-        {
-          "club": "Botev Plovdiv",
-          "posicion": 3,
-          "nivel": 74,
-          "ajuste": 1,
-          "fichas": 20
+          "club": "PFC Cherno More Varna",
+          "posicion": 4,
+          "fichas": 3,
+          "estadio": true
         },
         {
           "club": "Chernomorets Burgas",
           "posicion": 5,
-          "nivel": 73,
-          "ajuste": 2,
-          "fichas": 2
-        },
-        {
-          "club": "Lokomotiv Plovdiv",
-          "posicion": 6,
-          "nivel": 72,
-          "ajuste": 2,
-          "fichas": 19
+          "fichas": 2,
+          "estadio": false
         },
         {
           "club": "Etar Veliko Tarnovo",
           "posicion": 7,
-          "nivel": 71,
-          "ajuste": 2,
-          "fichas": 5
+          "fichas": 6,
+          "estadio": false
         },
         {
           "club": "FC Lokomotiv Gorna Oryahovitsa",
           "posicion": 8,
-          "nivel": 70,
-          "ajuste": 3,
-          "fichas": 3
+          "fichas": 3,
+          "estadio": true
         },
         {
           "club": "Slavia Sofia",
           "posicion": 9,
-          "nivel": 69,
-          "ajuste": 3,
-          "fichas": 13
+          "fichas": 13,
+          "estadio": true
         },
         {
           "club": "Pirin Blagoevgrad",
           "posicion": 10,
-          "nivel": 68,
-          "ajuste": 2,
-          "fichas": 10
+          "fichas": 10,
+          "estadio": false
         },
         {
           "club": "Lokomotiv Sofia",
           "posicion": 11,
-          "nivel": 67,
-          "ajuste": 2,
-          "fichas": 8
+          "fichas": 8,
+          "estadio": true
         },
         {
           "club": "Spartak Varna",
           "posicion": 12,
-          "nivel": 66,
-          "ajuste": 2,
-          "fichas": 6
+          "fichas": 6,
+          "estadio": false
         },
         {
           "club": "Beroe Stara Zagora",
           "posicion": 13,
-          "nivel": 66,
-          "ajuste": -9,
-          "fichas": 2
+          "fichas": 2,
+          "estadio": false
         },
         {
           "club": "Dobrudzha Dobrich",
           "posicion": 14,
-          "nivel": 65,
-          "ajuste": -3,
-          "fichas": 3
+          "fichas": 3,
+          "estadio": false
         },
         {
           "club": "Yantra Gabrovo",
           "posicion": 15,
-          "nivel": 64,
-          "ajuste": 1,
-          "fichas": 2
+          "fichas": 2,
+          "estadio": false
         },
         {
           "club": "Shumen",
           "posicion": 16,
-          "nivel": 63,
-          "ajuste": -9,
-          "fichas": 15
+          "fichas": 15,
+          "estadio": false
         }
       ]
     },
     {
       "country": "Suecia",
-      "league_id": 930061,
+      "league_id": 91,
       "name": "Allsvenskan",
       "clubs": 14,
+      "activated": 11,
       "unplaced": [],
       "renamed": [],
-      "levelled": [
-        {
-          "club": "IFK Norrköping",
-          "posicion": 4,
-          "nivel": 73,
-          "ajuste": 1,
-          "fichas": 23
-        },
-        {
-          "club": "BK Häcken",
-          "posicion": 5,
-          "nivel": 72,
-          "ajuste": 1,
-          "fichas": 17
-        },
-        {
-          "club": "Trelleborgs FF",
-          "posicion": 6,
-          "nivel": 71,
-          "ajuste": 1,
-          "fichas": 19
-        },
-        {
-          "club": "Halmstads BK",
-          "posicion": 7,
-          "nivel": 70,
-          "ajuste": 1,
-          "fichas": 19
-        },
-        {
-          "club": "Helsingborgs IF",
-          "posicion": 8,
-          "nivel": 69,
-          "ajuste": 1,
-          "fichas": 19
-        },
+      "levelled": [],
+      "incomplete": [
         {
           "club": "Västra Frölunda",
           "posicion": 9,
-          "nivel": 68,
-          "ajuste": 1,
-          "fichas": 20
-        },
-        {
-          "club": "Östers IF",
-          "posicion": 10,
-          "nivel": 67,
-          "ajuste": 1,
-          "fichas": 19
+          "fichas": 21,
+          "estadio": false
         },
         {
           "club": "IK Brage",
           "posicion": 11,
-          "nivel": 66,
-          "ajuste": 1,
-          "fichas": 10
-        },
-        {
-          "club": "Malmö FF",
-          "posicion": 12,
-          "nivel": 65,
-          "ajuste": 1,
-          "fichas": 18
+          "fichas": 10,
+          "estadio": false
         },
         {
           "club": "Örgryte IS",
           "posicion": 13,
-          "nivel": 64,
-          "ajuste": 1,
-          "fichas": 15
-        },
-        {
-          "club": "AIK Solna",
-          "posicion": 14,
-          "nivel": 63,
-          "ajuste": -10,
-          "fichas": 23
+          "fichas": 15,
+          "estadio": true
         }
       ]
     },
     {
       "country": "Noruega",
-      "league_id": 930062,
+      "league_id": 88,
       "name": "Tippeligaen",
       "clubs": 12,
+      "activated": 5,
       "unplaced": [],
       "renamed": [],
-      "levelled": [
+      "levelled": [],
+      "incomplete": [
         {
-          "club": "Viking FK",
-          "posicion": 6,
-          "nivel": 70,
-          "ajuste": 1,
-          "fichas": 20
+          "club": "Molde FK",
+          "posicion": 3,
+          "fichas": 14,
+          "estadio": true
         },
         {
           "club": "HamKam",
           "posicion": 7,
-          "nivel": 69,
-          "ajuste": 1,
-          "fichas": 8
+          "fichas": 8,
+          "estadio": true
         },
         {
           "club": "Kongsvinger",
           "posicion": 8,
-          "nivel": 68,
-          "ajuste": 1,
-          "fichas": 16
+          "fichas": 16,
+          "estadio": false
         },
         {
           "club": "Tromsø IL",
           "posicion": 9,
-          "nivel": 67,
-          "ajuste": 2,
-          "fichas": 14
+          "fichas": 15,
+          "estadio": true
         },
         {
           "club": "IK Start",
           "posicion": 10,
-          "nivel": 65,
-          "ajuste": 2,
-          "fichas": 7
+          "fichas": 8,
+          "estadio": true
         },
         {
           "club": "Fyllingen Fotball",
           "posicion": 11,
-          "nivel": 64,
-          "ajuste": -6,
-          "fichas": 3
+          "fichas": 3,
+          "estadio": false
         },
         {
           "club": "Lyn Oslo",
           "posicion": 12,
-          "nivel": 63,
-          "ajuste": -1,
-          "fichas": 10
+          "fichas": 10,
+          "estadio": false
         }
       ]
     },
     {
       "country": "Dinamarca",
-      "league_id": 930063,
+      "league_id": 69,
       "name": "Superligaen",
       "clubs": 10,
+      "activated": 8,
       "unplaced": [],
       "renamed": [],
-      "levelled": []
+      "levelled": [],
+      "incomplete": [
+        {
+          "club": "AGF",
+          "posicion": 2,
+          "fichas": 26,
+          "estadio": false
+        },
+        {
+          "club": "Ikast FS",
+          "posicion": 5,
+          "fichas": 23,
+          "estadio": false
+        }
+      ]
     }
   ]
 }

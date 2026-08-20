@@ -110,7 +110,11 @@ def test_every_initial_active_club_can_name_a_competition_legal_ai_match_squad()
             assert len(sheet.starters)==11
             checked+=1
     # Historical league activation has expanded beyond the earlier 374-club checkpoint.
-    assert checked==444
+    # Sube al incorporar las seis ligas del 93-94 -Divizia A, Ekstraklasa,
+    # A Grupa, Allsvenskan, Tippeligaen y Superligaen- con sus clubes reales.
+    # Solo se activan los que pueden alinear once y tienen estadio en la
+    # fuente; el resto queda apuntado en pending_activation.
+    assert checked==481
 
 
 def test_apsl_cross_border_quota_uses_club_association_not_us_for_canadian_clubs():

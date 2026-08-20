@@ -43,14 +43,24 @@ MAPPING = DATA / "mondefootball_club_mapping.json"
 REPORT = DATA / "league_structure_1993_94_report.json"
 
 # Nombre de la competicion en 1993-94, no el de hoy.
+# Se reutiliza el identificador de liga del MDB en vez de inventar uno nuevo. No
+# es cosmetico: los arbitros del catalogo van por identificador de liga, y las
+# seis tienen veinte cada una. Con un identificador nuevo la competicion nacia
+# sin cuadro arbitral y el juego exige que toda liga tenga el suyo.
 LEAGUES = {
-    "Rumania":   {"name": "Divizia A",    "country_id": 72, "level": 1},
-    "Bulgaria":  {"name": "A Grupa",      "country_id": 21, "level": 1},
-    "Polonia":   {"name": "Ekstraklasa",  "country_id": 70, "level": 1},
-    "Suecia":    {"name": "Allsvenskan",  "country_id": 79, "level": 1},
-    "Noruega":   {"name": "Tippeligaen",  "country_id": 60, "level": 1},
-    "Dinamarca": {"name": "Superligaen",  "country_id": 33, "level": 1},
+    "Rumania":   {"id": 56, "name": "Divizia A",   "country_id": 72, "level": 1},
+    "Bulgaria":  {"id": 66, "name": "A Grupa",     "country_id": 21, "level": 1},
+    "Polonia":   {"id": 89, "name": "Ekstraklasa", "country_id": 70, "level": 1},
+    "Suecia":    {"id": 91, "name": "Allsvenskan", "country_id": 79, "level": 1},
+    "Noruega":   {"id": 88, "name": "Tippeligaen", "country_id": 60, "level": 1},
+    "Dinamarca": {"id": 69, "name": "Superligaen", "country_id": 33, "level": 1},
 }
+
+# Un club solo se activa si puede alinear once y nombrar suplentes. Con menos, el
+# motor de partido revienta al pedirle alineacion -"UTA Arad: solo hay 6
+# futbolistas historicos disponibles"-. Los que no llegan se quedan sin liga y
+# apuntados, para completarlos mas adelante.
+MIN_SQUAD_TO_ACTIVATE = 16
 
 # Cupo de extranjeros de la epoca: el mismo 3+2 que rige el resto del juego.
 MAX_FOREIGN_STARTING = 3
@@ -159,6 +169,8 @@ def level_for(position: int, teams: int) -> int:
 
 def build(snapshot_path: Path, squads_path: Path, standings_path: Path,
           mapping_path: Path) -> dict[str, Any]:
+    from backend.app.football9394.source_catalog_runtime import default_source_catalog
+    catalog = default_source_catalog()
     snapshot = json.loads(snapshot_path.read_text(encoding="utf-8"))
     squads = json.loads(squads_path.read_text(encoding="utf-8"))
     standings = json.loads(standings_path.read_text(encoding="utf-8"))
@@ -175,15 +187,15 @@ def build(snapshot_path: Path, squads_path: Path, standings_path: Path,
 
     # Reejecutable: se quitan las ligas que creo esta herramienta antes de
     # volver a crearlas, o cada pasada añadiria seis mas.
-    ours = {int(l["source_id"]) for l in snapshot["leagues"]
-            if l.get("structure_source", "").startswith("participantes y clasificacion")}
+    ours = {spec["id"] for spec in LEAGUES.values()} | {
+        int(l["source_id"]) for l in snapshot["leagues"]
+        if str(l.get("structure_source", "")).startswith("participantes y clasificacion")}
     snapshot["leagues"] = [l for l in snapshot["leagues"] if int(l["source_id"]) not in ours]
     for team in snapshot["teams"]:
         if int(team.get("league_id") or 0) in ours:
             team["league_id"] = None
             team["league_position"] = None
 
-    next_league = max(int(l["source_id"]) for l in snapshot["leagues"]) + 1
     players_by_team: dict[int, list[dict[str, Any]]] = {}
     for player in snapshot["players"]:
         players_by_team.setdefault(int(player.get("team_id") or 0), []).append(player)
@@ -214,7 +226,7 @@ def build(snapshot_path: Path, squads_path: Path, standings_path: Path,
 
         clubs.sort(key=lambda c: c["position"])
         league = {
-            "source_id": next_league, "country_id": spec["country_id"],
+            "source_id": spec["id"], "country_id": spec["country_id"],
             "country": country, "name": spec["name"], "short_name": spec["name"],
             "level": spec["level"], "team_count": len(clubs), "turns": 2,
             "yellow_card_cycle": 5,
@@ -228,12 +240,36 @@ def build(snapshot_path: Path, squads_path: Path, standings_path: Path,
             "promotion_relegation": False,
         }
         snapshot["leagues"].append(league)
-        next_league += 1
 
         renamed: list[dict[str, Any]] = []
         levelled: list[dict[str, Any]] = []
+        incomplete: list[dict[str, Any]] = []
         for position, row in enumerate(clubs):
             team, slug = row["team"], row["slug"]
+            alive = [p for p in players_by_team.get(int(team["source_id"]), [])
+                     if not p.get("retired")]
+            # Un club activo tambien tiene que tener estadio resuelto en el
+            # catalogo. Los que hemos creado nosotros no estan en la base
+            # original y no lo tienen, asi que tampoco pueden activarse.
+            has_venue = catalog.stadium(team.get("stadium_id")) is not None
+            if len(alive) < MIN_SQUAD_TO_ACTIVATE or not has_venue:
+                # Se queda fuera de la liga pero no se pierde: sigue en el mundo
+                # con su plantilla y queda apuntado para completarlo.
+                team["league_id"] = None
+                team["league_position"] = None
+                team["pending_activation"] = {
+                    "league": spec["name"], "country": country,
+                    "real_position": position + 1,
+                    "squad": len(alive), "needed": MIN_SQUAD_TO_ACTIVATE,
+                    "has_venue": has_venue,
+                    "reason": ("sin plantilla para alinear once y nombrar suplentes"
+                               if len(alive) < MIN_SQUAD_TO_ACTIVATE
+                               else "sin estadio en el catalogo de la fuente"),
+                }
+                incomplete.append({"club": team.get("name"), "posicion": position + 1,
+                                   "fichas": len(alive), "estadio": has_venue})
+                continue
+            team.pop("pending_activation", None)
             team["league_id"] = league["source_id"]
             team["league_position"] = position + 1
             # Solo se renombra con el nombre que ha casado con ESTE club; si no
@@ -263,14 +299,19 @@ def build(snapshot_path: Path, squads_path: Path, standings_path: Path,
                     levelled.append({"club": team["name"], "posicion": position + 1,
                                      "nivel": target, "ajuste": shift, "fichas": len(squad)})
 
+        league["team_count"] = len(clubs) - len(incomplete)
+        league["clubs_pending_activation"] = len(incomplete)
         done.append({"country": country, "league_id": league["source_id"], "name": spec["name"],
-                     "clubs": len(clubs), "unplaced": unplaced,
-                     "renamed": renamed, "levelled": levelled})
+                     "clubs": len(clubs), "activated": len(clubs) - len(incomplete),
+                     "unplaced": unplaced, "renamed": renamed, "levelled": levelled,
+                     "incomplete": incomplete})
 
     snapshot["leagues"].sort(key=lambda l: int(l["source_id"]))
     snapshot_path.write_text(json.dumps(snapshot, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     report = {"status": "complete", "leagues": len(done),
               "clubs": sum(d["clubs"] for d in done),
+              "activated": sum(d["activated"] for d in done),
+              "pending_activation": sum(len(d["incomplete"]) for d in done),
               "renamed": sum(len(d["renamed"]) for d in done),
               "levelled": sum(len(d["levelled"]) for d in done),
               "unplaced": sum(len(d["unplaced"]) for d in done),
@@ -288,12 +329,15 @@ def main() -> None:
     args = parser.parse_args()
     report = build(args.snapshot, args.squads, args.standings, args.mapping)
     print(f"ligas {report['leagues']} | clubes {report['clubs']} | "
-          f"renombrados {report['renamed']} | reniveladas {report['levelled']} | "
-          f"sin colocar {report['unplaced']}")
+          f"activados {report['activated']} | pendientes {report['pending_activation']} | "
+          f"renombrados {report['renamed']}")
     for block in report["detail"]:
         print(f"\n{block['name']} ({block['country']}, liga {block['league_id']}): {block['clubs']} clubes")
         for row in block["renamed"][:6]:
             print(f"   renombrado: {row['antes']} -> {row['ahora']}")
+        for row in block["incomplete"]:
+            marca = f"{row['fichas']} fichas" + ("" if row.get("estadio", True) else ", sin estadio")
+            print(f"   sin activar: {row['club']} ({row['posicion']}o, {marca})")
         if block["unplaced"]:
             print(f"   SIN COLOCAR: {block['unplaced']}")
 

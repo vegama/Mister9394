@@ -14,9 +14,9 @@
     },
     "baseline_note": "Rebased after source-backed Uruguay corrections exposed previously masked short squads and moved Luis Barbat to Independiente Medellin; compared with the pre-reconciliation reference, total deficit still improves 31 -> 30 and minimum depth 15 -> 16."
   },
-  "active_players": 13561,
-  "short_team_count": 15,
-  "total_deficit_to_18": 24,
+  "active_players": 14877,
+  "short_team_count": 19,
+  "total_deficit_to_18": 28,
   "minimum_admitted_squad": 16,
   "shortages": [
     {
@@ -101,11 +101,29 @@
       "deficit_to_18": 2
     },
     {
+      "team_id": 1467,
+      "team": "Viborg FF",
+      "league_id": 69,
+      "league": "Superligaen",
+      "country": "Dinamarca",
+      "active_players": 17,
+      "deficit_to_18": 1
+    },
+    {
       "team_id": 1020,
       "team": "Club Atlante",
       "league_id": 40,
       "league": "Primera División",
       "country": "México",
+      "active_players": 17,
+      "deficit_to_18": 1
+    },
+    {
+      "team_id": 1717,
+      "team": "FK Bodø/Glimt",
+      "league_id": 88,
+      "league": "Tippeligaen",
+      "country": "Noruega",
       "active_players": 17,
       "deficit_to_18": 1
     },
@@ -142,6 +160,24 @@
       "league_id": 54,
       "league": "Eerste Divisie",
       "country": "Países Bajos",
+      "active_players": 17,
+      "deficit_to_18": 1
+    },
+    {
+      "team_id": 1731,
+      "team": "Widzew Lodz",
+      "league_id": 89,
+      "league": "Ekstraklasa",
+      "country": "Polonia",
+      "active_players": 17,
+      "deficit_to_18": 1
+    },
+    {
+      "team_id": 1242,
+      "team": "BK Häcken",
+      "league_id": 91,
+      "league": "Allsvenskan",
+      "country": "Suecia",
       "active_players": 17,
       "deficit_to_18": 1
     },
