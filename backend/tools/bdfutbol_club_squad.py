@@ -50,6 +50,10 @@ _NAMES = re.compile(
     r"<span class='d-none d-md-block float-left'>([^<]*)</span>"
 )
 _POSITION = re.compile(r'<div class="fit ([a-z]+)"></div>')
+# Tras la demarcación va la edad y luego las cifras de la eliminatoria. La sexta
+# son los minutos jugados —Skammelsrud: 4 partidos, 360 minutos—, que es la única
+# señal real que hay de quién era titular y quién no.
+_NUMBERS = re.compile(r'<td class="fit(?: font-weight-bold vora-right)?">(\d+)</td>')
 
 
 def parse_rows(html: str) -> tuple[list[dict[str, str]], list[str]]:
@@ -71,12 +75,15 @@ def parse_rows(html: str) -> tuple[list[dict[str, str]], list[str]]:
             warnings.append(f"demarcacion desconocida '{code}' en el jugador {player_id}")
             continue
         country = _COUNTRY.search(row)
+        numbers = [int(n) for n in _NUMBERS.findall(row)]
         rows.append({
             "id": player_id,
             "country": country.group(1) if country else "",
             "short": names.group(1).strip(),
             "full": names.group(2).strip(),
             "position": POSITIONS[code],
+            "minutes": numbers[6] if len(numbers) > 6 else None,
+            "matches": numbers[1] if len(numbers) > 1 else None,
         })
     return rows, warnings
 
@@ -127,6 +134,8 @@ def read_squad(club_id: str, *, delay: float = 0.5) -> dict[str, Any]:
                 "birth_date": birth or None,
                 "broad_position": row["position"],
                 "country_slug": row["country"],
+                "minutes": row["minutes"],
+                "matches": row["matches"],
                 "photo_url": PHOTO_URL.format(player=player_id),
                 "profile_url": PLAYER_URL.format(player=player_id),
             })

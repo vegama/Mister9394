@@ -1,9 +1,9 @@
 {
   "status": "complete",
-  "batch": "fixed_source_comparable_national_pool_v113",
+  "batch": "fixed_source_comparable_real_squad_v113",
   "policy": "atributos derivados de dos futbolistas reales de la misma demarcación y media próxima",
-  "candidates": 1071,
-  "anchored": 1071,
+  "candidates": 14,
+  "anchored": 14,
   "skipped": 0,
   "skipped_detail": []
 }

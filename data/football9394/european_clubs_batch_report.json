@@ -1,0 +1,1691 @@
+{
+  "clubs": 28,
+  "detail": [
+    {
+      "status": "complete",
+      "club": "AIK Solna",
+      "team_source_id": 633,
+      "team_created": true,
+      "squad_read": 17,
+      "moved_from_container": [
+        {
+          "source_id": 9494102,
+          "name": "Magnus Hedman"
+        }
+      ],
+      "left_in_their_club": [
+        {
+          "source_id": 7936,
+          "name": "Johansson",
+          "team_id": 1024
+        }
+      ],
+      "created": [
+        {
+          "source_id": 9501184,
+          "name": "Peter Nils-Gösta Larsson",
+          "minutes": 180,
+          "overall": 78
+        },
+        {
+          "source_id": 9501185,
+          "name": "Kari Juhani Sündgren",
+          "minutes": 180,
+          "overall": 78
+        },
+        {
+          "source_id": 9501186,
+          "name": "Karl Johan Siward Mjällby",
+          "minutes": 180,
+          "overall": 78
+        },
+        {
+          "source_id": 9501187,
+          "name": "Björn Åke Kindlund",
+          "minutes": 175,
+          "overall": 78
+        },
+        {
+          "source_id": 9501188,
+          "name": "Michael Vitalis Borgqvist",
+          "minutes": 180,
+          "overall": 78
+        },
+        {
+          "source_id": 9501189,
+          "name": "Thomas Olof Lagerlöf",
+          "minutes": 95,
+          "overall": 75
+        },
+        {
+          "source_id": 9501190,
+          "name": "Dick Gunnar Lidman",
+          "minutes": 157,
+          "overall": 77
+        },
+        {
+          "source_id": 9501191,
+          "name": "Hans Krister Nordin",
+          "minutes": 180,
+          "overall": 78
+        },
+        {
+          "source_id": 9501192,
+          "name": "Hernando Salvatore L'Abbé Solinas",
+          "minutes": 0,
+          "overall": 72
+        },
+        {
+          "source_id": 9501193,
+          "name": "Vadym Anatolyovich Yevtushenko",
+          "minutes": 90,
+          "overall": 75
+        },
+        {
+          "source_id": 9501194,
+          "name": "Kim Hilding Bergstrand",
+          "minutes": 23,
+          "overall": 73
+        },
+        {
+          "source_id": 9501195,
+          "name": "Mattias Gillhart",
+          "minutes": 0,
+          "overall": 72
+        },
+        {
+          "source_id": 9501196,
+          "name": "Karl Vilhelm Ståhl",
+          "minutes": 0,
+          "overall": 72
+        },
+        {
+          "source_id": 9501197,
+          "name": "Jan Edgar Andersson",
+          "minutes": 0,
+          "overall": 72
+        },
+        {
+          "source_id": 9501198,
+          "name": "Stig Pierre Antonio Gallo",
+          "minutes": 0,
+          "overall": 72
+        }
+      ],
+      "not_applied": [],
+      "club_level_anchor": 78,
+      "overall_policy": "nivel del club por sus jugadores ya conocidos, repartido por minutos reales de la eliminatoria"
+    },
+    {
+      "status": "complete",
+      "club": "FC Aarau",
+      "team_source_id": 1033,
+      "team_created": true,
+      "squad_read": 7,
+      "moved_from_container": [
+        {
+          "source_id": 9494047,
+          "name": "Thomas Wyss"
+        }
+      ],
+      "left_in_their_club": [],
+      "created": [
+        {
+          "source_id": 9501199,
+          "name": "Andreas Hilfiker",
+          "minutes": 360,
+          "overall": 76
+        },
+        {
+          "source_id": 9501200,
+          "name": "René Weiler",
+          "minutes": 266,
+          "overall": 74
+        },
+        {
+          "source_id": 9501201,
+          "name": "Heinz Hermann",
+          "minutes": 360,
+          "overall": 76
+        },
+        {
+          "source_id": 9501202,
+          "name": "Marcel Heldmann",
+          "minutes": 355,
+          "overall": 76
+        },
+        {
+          "source_id": 9501203,
+          "name": "Everson Rodrígues",
+          "minutes": 350,
+          "overall": 76
+        },
+        {
+          "source_id": 9501204,
+          "name": "Bernd Kilian",
+          "minutes": 90,
+          "overall": 72
+        }
+      ],
+      "not_applied": [],
+      "club_level_anchor": 76,
+      "overall_policy": "nivel del club por sus jugadores ya conocidos, repartido por minutos reales de la eliminatoria"
+    },
+    {
+      "status": "complete",
+      "club": "Apollon Limassol",
+      "team_source_id": 482,
+      "team_created": true,
+      "squad_read": 3,
+      "moved_from_container": [
+        {
+          "source_id": 9500818,
+          "name": "Slobodan Krčmarević"
+        }
+      ],
+      "left_in_their_club": [],
+      "created": [
+        {
+          "source_id": 9501205,
+          "name": "Milenko Špoljarić",
+          "minutes": 1,
+          "overall": 65
+        },
+        {
+          "source_id": 9501206,
+          "name": "Sladjan Šćepović",
+          "minutes": 1,
+          "overall": 65
+        }
+      ],
+      "not_applied": [],
+      "club_level_anchor": 65,
+      "overall_policy": "nivel del club por sus jugadores ya conocidos, repartido por minutos reales de la eliminatoria"
+    },
+    {
+      "status": "complete",
+      "club": "Beitar Jerusalem",
+      "team_source_id": 1814,
+      "team_created": true,
+      "squad_read": 2,
+      "moved_from_container": [],
+      "left_in_their_club": [],
+      "created": [
+        {
+          "source_id": 9501207,
+          "name": "Eliahu Ohana",
+          "minutes": 2,
+          "overall": 68
+        },
+        {
+          "source_id": 9501208,
+          "name": "Ronen Harazi",
+          "minutes": 0,
+          "overall": 62
+        }
+      ],
+      "not_applied": [],
+      "club_level_anchor": 68,
+      "overall_policy": "nivel del club por sus jugadores ya conocidos, repartido por minutos reales de la eliminatoria"
+    },
+    {
+      "status": "complete",
+      "club": "Cork City FC",
+      "team_source_id": 1091,
+      "team_created": true,
+      "squad_read": 1,
+      "moved_from_container": [],
+      "left_in_their_club": [],
+      "created": [
+        {
+          "source_id": 9501209,
+          "name": "John Caulfield",
+          "minutes": 124,
+          "overall": 68
+        }
+      ],
+      "not_applied": [],
+      "club_level_anchor": 68,
+      "overall_policy": "nivel del club por sus jugadores ya conocidos, repartido por minutos reales de la eliminatoria"
+    },
+    {
+      "status": "complete",
+      "club": "FK Dinamo Minsk",
+      "team_source_id": 468,
+      "team_created": true,
+      "squad_read": 6,
+      "moved_from_container": [],
+      "left_in_their_club": [],
+      "created": [
+        {
+          "source_id": 9501210,
+          "name": "Erik Nikolayevich Yakhimovich",
+          "minutes": 180,
+          "overall": 68
+        },
+        {
+          "source_id": 9501211,
+          "name": "Vladimir Ivanavich Zhuravel",
+          "minutes": 180,
+          "overall": 68
+        },
+        {
+          "source_id": 9501212,
+          "name": "Yuri Vladimirovich Shukanov",
+          "minutes": 112,
+          "overall": 66
+        },
+        {
+          "source_id": 9501213,
+          "name": "Valery Sigizmundavich Vyalichka",
+          "minutes": 177,
+          "overall": 68
+        },
+        {
+          "source_id": 9501214,
+          "name": "Gennadiy Anatolyevich Tumilovich",
+          "minutes": 90,
+          "overall": 65
+        },
+        {
+          "source_id": 9501215,
+          "name": "Alyaksandar Anatolyevich Lukhvich",
+          "minutes": 90,
+          "overall": 65
+        }
+      ],
+      "not_applied": [],
+      "club_level_anchor": 68,
+      "overall_policy": "nivel del club por sus jugadores ya conocidos, repartido por minutos reales de la eliminatoria"
+    },
+    {
+      "status": "complete",
+      "club": "FC Dinamo Tbilisi",
+      "team_source_id": 531,
+      "team_created": true,
+      "squad_read": 12,
+      "moved_from_container": [],
+      "left_in_their_club": [
+        {
+          "source_id": 9496385,
+          "name": "Archil Arveladze",
+          "team_id": 9357002
+        },
+        {
+          "source_id": 9496380,
+          "name": "Shota Arveladze",
+          "team_id": 9357002
+        }
+      ],
+      "created": [
+        {
+          "source_id": 9501216,
+          "name": "Irakli Zoidze",
+          "minutes": 180,
+          "overall": 68
+        },
+        {
+          "source_id": 9501217,
+          "name": "Murtaz Shelia",
+          "minutes": 180,
+          "overall": 68
+        },
+        {
+          "source_id": 9501218,
+          "name": "Georgi Kinkladze",
+          "minutes": 180,
+          "overall": 68
+        },
+        {
+          "source_id": 9501219,
+          "name": "Revaz Arveladze",
+          "minutes": 180,
+          "overall": 68
+        },
+        {
+          "source_id": 9501220,
+          "name": "Gocha Jamarauli",
+          "minutes": 179,
+          "overall": 68
+        },
+        {
+          "source_id": 9501221,
+          "name": "Georgi Nemsadze",
+          "minutes": 180,
+          "overall": 68
+        },
+        {
+          "source_id": 9501222,
+          "name": "Mikheili Guramovich Kavelashvili",
+          "minutes": 171,
+          "overall": 68
+        },
+        {
+          "source_id": 9501223,
+          "name": "Nugzar Lerievich Lobzhanidze",
+          "minutes": 90,
+          "overall": 65
+        },
+        {
+          "source_id": 9501224,
+          "name": "George Anchabadze",
+          "minutes": 14,
+          "overall": 62
+        },
+        {
+          "source_id": 9501225,
+          "name": "Besik Beradze",
+          "minutes": 1,
+          "overall": 62
+        }
+      ],
+      "not_applied": [],
+      "club_level_anchor": 68,
+      "overall_policy": "nivel del club por sus jugadores ya conocidos, repartido por minutos reales de la eliminatoria"
+    },
+    {
+      "status": "complete",
+      "club": "FC Dnipro Dnipropetrovsk",
+      "team_source_id": 650,
+      "team_created": true,
+      "squad_read": 8,
+      "moved_from_container": [],
+      "left_in_their_club": [],
+      "created": [
+        {
+          "source_id": 9501226,
+          "name": "Serhiy Nikolayevich Bezhenar",
+          "minutes": 360,
+          "overall": 68
+        },
+        {
+          "source_id": 9501227,
+          "name": "Volodymyr Ivanovych Horilyi",
+          "minutes": 270,
+          "overall": 66
+        },
+        {
+          "source_id": 9501228,
+          "name": "Dmytro Stanislavovych Mykhaylenko",
+          "minutes": 360,
+          "overall": 68
+        },
+        {
+          "source_id": 9501229,
+          "name": "Serhiy Borysovych Konovalov",
+          "minutes": 360,
+          "overall": 68
+        },
+        {
+          "source_id": 9501230,
+          "name": "Andriy Viktorovych Polunin",
+          "minutes": 318,
+          "overall": 67
+        },
+        {
+          "source_id": 9501231,
+          "name": "Yevhen Vasylyovych Pokhlebayev",
+          "minutes": 360,
+          "overall": 68
+        },
+        {
+          "source_id": 9501232,
+          "name": "Yuriy Vilyovych Maksymov",
+          "minutes": 270,
+          "overall": 66
+        },
+        {
+          "source_id": 9501233,
+          "name": "Ilya Vladyslavovych Blyznyuk",
+          "minutes": 0,
+          "overall": 62
+        }
+      ],
+      "not_applied": [],
+      "club_level_anchor": 68,
+      "overall_policy": "nivel del club por sus jugadores ya conocidos, repartido por minutos reales de la eliminatoria"
+    },
+    {
+      "status": "complete",
+      "club": "F91 Dudelange",
+      "team_source_id": 582,
+      "team_created": true,
+      "squad_read": 1,
+      "moved_from_container": [],
+      "left_in_their_club": [],
+      "created": [
+        {
+          "source_id": 9501234,
+          "name": "Marco Morgante",
+          "minutes": 0,
+          "overall": 62
+        }
+      ],
+      "not_applied": [],
+      "club_level_anchor": 68,
+      "overall_policy": "nivel del club por sus jugadores ya conocidos, repartido por minutos reales de la eliminatoria"
+    },
+    {
+      "status": "complete",
+      "club": "FC Dynamo Kyiv",
+      "team_source_id": 419,
+      "team_created": true,
+      "squad_read": 15,
+      "moved_from_container": [],
+      "left_in_their_club": [],
+      "created": [
+        {
+          "source_id": 9501235,
+          "name": "Ihor Mykolayovych Kutyepov",
+          "minutes": 180,
+          "overall": 68
+        },
+        {
+          "source_id": 9501236,
+          "name": "Serhiy Serhiyovich Shmatovalenko",
+          "minutes": 180,
+          "overall": 68
+        },
+        {
+          "source_id": 9501237,
+          "name": "Anatoliy Petrovich Bezsmertnyi",
+          "minutes": 180,
+          "overall": 68
+        },
+        {
+          "source_id": 9501238,
+          "name": "Pavlo Leonidovych Shkapenko",
+          "minutes": 180,
+          "overall": 68
+        },
+        {
+          "source_id": 9501239,
+          "name": "Dmytro Mykolayovych Topchiyev",
+          "minutes": 180,
+          "overall": 68
+        },
+        {
+          "source_id": 9501240,
+          "name": "Serhiy Ivanovych Kovalets",
+          "minutes": 96,
+          "overall": 65
+        },
+        {
+          "source_id": 9501241,
+          "name": "Andriy Mykhaylovych Annenkov",
+          "minutes": 90,
+          "overall": 65
+        },
+        {
+          "source_id": 9501242,
+          "name": "Serhiy Stanislavovych Rebrov",
+          "minutes": 180,
+          "overall": 68
+        },
+        {
+          "source_id": 9501243,
+          "name": "Viktor Yevhenovych Leonenko",
+          "minutes": 164,
+          "overall": 67
+        },
+        {
+          "source_id": 9501244,
+          "name": "Andriy Oleksandrovych Kovtun",
+          "minutes": 0,
+          "overall": 62
+        },
+        {
+          "source_id": 9501245,
+          "name": "Yuriy Vasylyovych Hritsyna",
+          "minutes": 84,
+          "overall": 65
+        },
+        {
+          "source_id": 9501246,
+          "name": "Serhiy Hryhorovych Mizin",
+          "minutes": 20,
+          "overall": 63
+        },
+        {
+          "source_id": 9501247,
+          "name": "Volodymyr Bohdanovych Sharan",
+          "minutes": 16,
+          "overall": 63
+        },
+        {
+          "source_id": 9501248,
+          "name": "Oleksandr Serhiyovych Pryzetko",
+          "minutes": 0,
+          "overall": 62
+        },
+        {
+          "source_id": 9501249,
+          "name": "Vladyslav Mykolayovych Prudius",
+          "minutes": 0,
+          "overall": 62
+        }
+      ],
+      "not_applied": [],
+      "club_level_anchor": 68,
+      "overall_policy": "nivel del club por sus jugadores ya conocidos, repartido por minutos reales de la eliminatoria"
+    },
+    {
+      "status": "complete",
+      "club": "FC Karpaty Lyiv",
+      "team_source_id": 649,
+      "team_created": true,
+      "squad_read": 1,
+      "moved_from_container": [],
+      "left_in_their_club": [],
+      "created": [
+        {
+          "source_id": 9501250,
+          "name": "Mykhaylo Andriyovych Stelmakh",
+          "minutes": 0,
+          "overall": 62
+        }
+      ],
+      "not_applied": [],
+      "club_level_anchor": 68,
+      "overall_policy": "nivel del club por sus jugadores ya conocidos, repartido por minutos reales de la eliminatoria"
+    },
+    {
+      "status": "complete",
+      "club": "FC København",
+      "team_source_id": 487,
+      "team_created": true,
+      "squad_read": 18,
+      "moved_from_container": [],
+      "left_in_their_club": [],
+      "created": [
+        {
+          "source_id": 9501251,
+          "name": "Palle Emil Petersen",
+          "minutes": 390,
+          "overall": 68
+        },
+        {
+          "source_id": 9501252,
+          "name": "Brian Normann Kaus",
+          "minutes": 368,
+          "overall": 68
+        },
+        {
+          "source_id": 9501253,
+          "name": "Morten Falch Petersen",
+          "minutes": 270,
+          "overall": 66
+        },
+        {
+          "source_id": 9501254,
+          "name": "Diego Tur",
+          "minutes": 266,
+          "overall": 66
+        },
+        {
+          "source_id": 9501255,
+          "name": "Henrik Lykke",
+          "minutes": 198,
+          "overall": 65
+        },
+        {
+          "source_id": 9501256,
+          "name": "Michael Bro Johansen",
+          "minutes": 300,
+          "overall": 67
+        },
+        {
+          "source_id": 9501257,
+          "name": "Christian Lønstrup",
+          "minutes": 300,
+          "overall": 67
+        },
+        {
+          "source_id": 9501258,
+          "name": "Iørn Peter Uldbjerg",
+          "minutes": 390,
+          "overall": 68
+        },
+        {
+          "source_id": 9501259,
+          "name": "Jørgen Juul Jensen",
+          "minutes": 243,
+          "overall": 66
+        },
+        {
+          "source_id": 9501260,
+          "name": "Lars Højer Nielsen",
+          "minutes": 315,
+          "overall": 67
+        },
+        {
+          "source_id": 9501261,
+          "name": "Michael Manniche",
+          "minutes": 380,
+          "overall": 68
+        },
+        {
+          "source_id": 9501262,
+          "name": "Thomas Risum",
+          "minutes": 0,
+          "overall": 62
+        },
+        {
+          "source_id": 9501263,
+          "name": "Martin Bro Johansen",
+          "minutes": 184,
+          "overall": 65
+        },
+        {
+          "source_id": 9501264,
+          "name": "Michael Giolbas",
+          "minutes": 180,
+          "overall": 65
+        },
+        {
+          "source_id": 9501265,
+          "name": "Michael Elmer Dahl Nielsen",
+          "minutes": 171,
+          "overall": 65
+        },
+        {
+          "source_id": 9501266,
+          "name": "Peter Møller-Nielsen",
+          "minutes": 156,
+          "overall": 64
+        },
+        {
+          "source_id": 9501267,
+          "name": "Kenneth Bernhard Wegner",
+          "minutes": 112,
+          "overall": 64
+        },
+        {
+          "source_id": 9501268,
+          "name": "Kim Mikkelsen",
+          "minutes": 67,
+          "overall": 63
+        }
+      ],
+      "not_applied": [],
+      "club_level_anchor": 68,
+      "overall_policy": "nivel del club por sus jugadores ya conocidos, repartido por minutos reales de la eliminatoria"
+    },
+    {
+      "status": "complete",
+      "club": "KKS Lech Poznań",
+      "team_source_id": 603,
+      "team_created": true,
+      "squad_read": 8,
+      "moved_from_container": [],
+      "left_in_their_club": [],
+      "created": [
+        {
+          "source_id": 9501269,
+          "name": "Jarosław Bako",
+          "minutes": 226,
+          "overall": 66
+        },
+        {
+          "source_id": 9501270,
+          "name": "Jacek Waldemar Bąk",
+          "minutes": 360,
+          "overall": 68
+        },
+        {
+          "source_id": 9501271,
+          "name": "Paweł Wojtala",
+          "minutes": 200,
+          "overall": 65
+        },
+        {
+          "source_id": 9501272,
+          "name": "Kazimierz Moskal",
+          "minutes": 360,
+          "overall": 68
+        },
+        {
+          "source_id": 9501273,
+          "name": "Jerzy Piotr Podbrożny",
+          "minutes": 360,
+          "overall": 68
+        },
+        {
+          "source_id": 9501274,
+          "name": "Mirosław Wojciech Trzeciak",
+          "minutes": 309,
+          "overall": 67
+        },
+        {
+          "source_id": 9501275,
+          "name": "Jacek Piotr Dembiński",
+          "minutes": 179,
+          "overall": 65
+        },
+        {
+          "source_id": 9501276,
+          "name": "Jarosław Piotr Araszkiewicz",
+          "minutes": 90,
+          "overall": 64
+        }
+      ],
+      "not_applied": [],
+      "club_level_anchor": 68,
+      "overall_policy": "nivel del club por sus jugadores ya conocidos, repartido por minutos reales de la eliminatoria"
+    },
+    {
+      "status": "complete",
+      "club": "Levski Sofía",
+      "team_source_id": 476,
+      "team_created": true,
+      "squad_read": 7,
+      "moved_from_container": [
+        {
+          "source_id": 9494149,
+          "name": "Zlatko Yankov"
+        },
+        {
+          "source_id": 9500836,
+          "name": "Gosho Ginchev"
+        }
+      ],
+      "left_in_their_club": [
+        {
+          "source_id": 2609,
+          "name": "Houbtchev",
+          "team_id": 213
+        }
+      ],
+      "created": [
+        {
+          "source_id": 9501277,
+          "name": "Daniel Borimirov Borisov",
+          "minutes": 360,
+          "overall": 78
+        },
+        {
+          "source_id": 9501278,
+          "name": "Georgi Slavtchev",
+          "minutes": 270,
+          "overall": 76
+        },
+        {
+          "source_id": 9501279,
+          "name": "Nikolai Todorov",
+          "minutes": 360,
+          "overall": 78
+        },
+        {
+          "source_id": 9501280,
+          "name": "Petre Grigoraș",
+          "minutes": 139,
+          "overall": 74
+        }
+      ],
+      "not_applied": [],
+      "club_level_anchor": 78,
+      "overall_policy": "nivel del club por sus jugadores ya conocidos, repartido por minutos reales de la eliminatoria"
+    },
+    {
+      "status": "complete",
+      "club": "Linfield FC",
+      "team_source_id": 551,
+      "team_created": true,
+      "squad_read": 1,
+      "moved_from_container": [],
+      "left_in_their_club": [],
+      "created": [
+        {
+          "source_id": 9501281,
+          "name": "Garry Andrew Haylock",
+          "minutes": 1,
+          "overall": 68
+        }
+      ],
+      "not_applied": [],
+      "club_level_anchor": 68,
+      "overall_policy": "nivel del club por sus jugadores ya conocidos, repartido por minutos reales de la eliminatoria"
+    },
+    {
+      "status": "complete",
+      "club": "MTK Budapest",
+      "team_source_id": 1068,
+      "team_created": true,
+      "squad_read": 20,
+      "moved_from_container": [],
+      "left_in_their_club": [],
+      "created": [
+        {
+          "source_id": 9501282,
+          "name": "Zoltán Piel",
+          "minutes": 270,
+          "overall": 66
+        },
+        {
+          "source_id": 9501283,
+          "name": "István Turbék",
+          "minutes": 270,
+          "overall": 66
+        },
+        {
+          "source_id": 9501284,
+          "name": "Miklós Sztanó",
+          "minutes": 235,
+          "overall": 66
+        },
+        {
+          "source_id": 9501285,
+          "name": "Gábor Hires",
+          "minutes": 270,
+          "overall": 66
+        },
+        {
+          "source_id": 9501286,
+          "name": "Csaba Horváth",
+          "minutes": 341,
+          "overall": 68
+        },
+        {
+          "source_id": 9501287,
+          "name": "Gyula Zsivóczky",
+          "minutes": 360,
+          "overall": 68
+        },
+        {
+          "source_id": 9501288,
+          "name": "János Talapa",
+          "minutes": 270,
+          "overall": 66
+        },
+        {
+          "source_id": 9501289,
+          "name": "László Komódi",
+          "minutes": 254,
+          "overall": 66
+        },
+        {
+          "source_id": 9501290,
+          "name": "Miklós Vancsa",
+          "minutes": 360,
+          "overall": 68
+        },
+        {
+          "source_id": 9501291,
+          "name": "Ferenc Hámori",
+          "minutes": 270,
+          "overall": 66
+        },
+        {
+          "source_id": 9501292,
+          "name": "Tamás Balogh",
+          "minutes": 90,
+          "overall": 64
+        },
+        {
+          "source_id": 9501293,
+          "name": "Tibor Szabó",
+          "minutes": 193,
+          "overall": 65
+        },
+        {
+          "source_id": 9501294,
+          "name": "Róbert Jován",
+          "minutes": 111,
+          "overall": 64
+        },
+        {
+          "source_id": 9501295,
+          "name": "Zoltán Kovács",
+          "minutes": 109,
+          "overall": 64
+        },
+        {
+          "source_id": 9501296,
+          "name": "Gábor Pölöskei",
+          "minutes": 102,
+          "overall": 64
+        },
+        {
+          "source_id": 9501297,
+          "name": "József Kriszt",
+          "minutes": 90,
+          "overall": 64
+        },
+        {
+          "source_id": 9501298,
+          "name": "Zoltán Tamási",
+          "minutes": 66,
+          "overall": 63
+        },
+        {
+          "source_id": 9501299,
+          "name": "Krisztián Kenesei",
+          "minutes": 5,
+          "overall": 62
+        },
+        {
+          "source_id": 9501300,
+          "name": "Tamás Bernáth",
+          "minutes": 0,
+          "overall": 62
+        },
+        {
+          "source_id": 9501301,
+          "name": "Zsolt Bencze",
+          "minutes": 0,
+          "overall": 62
+        }
+      ],
+      "not_applied": [],
+      "club_level_anchor": 68,
+      "overall_policy": "nivel del club por sus jugadores ya conocidos, repartido por minutos reales de la eliminatoria"
+    },
+    {
+      "status": "complete",
+      "club": "MyPa-47",
+      "team_source_id": 521,
+      "team_created": true,
+      "squad_read": 3,
+      "moved_from_container": [],
+      "left_in_their_club": [],
+      "created": [
+        {
+          "source_id": 9501302,
+          "name": "Esa Pekonen",
+          "minutes": 0,
+          "overall": 62
+        },
+        {
+          "source_id": 9501303,
+          "name": "Marko Rajamäki",
+          "minutes": 0,
+          "overall": 62
+        },
+        {
+          "source_id": 9501304,
+          "name": "Tomi Kinnunen",
+          "minutes": 0,
+          "overall": 62
+        }
+      ],
+      "not_applied": [],
+      "club_level_anchor": 68,
+      "overall_policy": "nivel del club por sus jugadores ya conocidos, repartido por minutos reales de la eliminatoria"
+    },
+    {
+      "status": "complete",
+      "club": "NK Maribor",
+      "team_source_id": 509,
+      "team_created": true,
+      "squad_read": 16,
+      "moved_from_container": [],
+      "left_in_their_club": [],
+      "created": [
+        {
+          "source_id": 9501305,
+          "name": "Mladen Dabanovič",
+          "minutes": 360,
+          "overall": 68
+        },
+        {
+          "source_id": 9501306,
+          "name": "Aleš Križan",
+          "minutes": 360,
+          "overall": 68
+        },
+        {
+          "source_id": 9501307,
+          "name": "Blagoja Milevski",
+          "minutes": 360,
+          "overall": 68
+        },
+        {
+          "source_id": 9501308,
+          "name": "Emil Šterbal",
+          "minutes": 271,
+          "overall": 67
+        },
+        {
+          "source_id": 9501309,
+          "name": "Peter Binkovski",
+          "minutes": 360,
+          "overall": 68
+        },
+        {
+          "source_id": 9501310,
+          "name": "Sašo Lukič",
+          "minutes": 315,
+          "overall": 67
+        },
+        {
+          "source_id": 9501311,
+          "name": "Gregor Židan",
+          "minutes": 360,
+          "overall": 68
+        },
+        {
+          "source_id": 9501312,
+          "name": "Ivica Pešič",
+          "minutes": 218,
+          "overall": 66
+        },
+        {
+          "source_id": 9501313,
+          "name": "Mato Stanić",
+          "minutes": 357,
+          "overall": 68
+        },
+        {
+          "source_id": 9501314,
+          "name": "Ante Šimundža",
+          "minutes": 268,
+          "overall": 66
+        },
+        {
+          "source_id": 9501315,
+          "name": "Kliton Bozgo",
+          "minutes": 360,
+          "overall": 68
+        },
+        {
+          "source_id": 9501316,
+          "name": "Simon Dvoršak",
+          "minutes": 7,
+          "overall": 62
+        },
+        {
+          "source_id": 9501317,
+          "name": "Bostjan Ratkovič",
+          "minutes": 1,
+          "overall": 62
+        },
+        {
+          "source_id": 9501318,
+          "name": "Erik Cirkvenčič",
+          "minutes": 0,
+          "overall": 62
+        },
+        {
+          "source_id": 9501319,
+          "name": "Simon Korber",
+          "minutes": 0,
+          "overall": 62
+        },
+        {
+          "source_id": 9501320,
+          "name": "Saša Gajser",
+          "minutes": 0,
+          "overall": 62
+        }
+      ],
+      "not_applied": [],
+      "club_level_anchor": 68,
+      "overall_policy": "nivel del club por sus jugadores ya conocidos, repartido por minutos reales de la eliminatoria"
+    },
+    {
+      "status": "complete",
+      "club": "FK Neman",
+      "team_source_id": 2026,
+      "team_created": true,
+      "squad_read": 1,
+      "moved_from_container": [],
+      "left_in_their_club": [],
+      "created": [
+        {
+          "source_id": 9501321,
+          "name": "Sergei Vitalyevich Gurenko",
+          "minutes": 0,
+          "overall": 62
+        }
+      ],
+      "not_applied": [],
+      "club_level_anchor": 68,
+      "overall_policy": "nivel del club por sus jugadores ya conocidos, repartido por minutos reales de la eliminatoria"
+    },
+    {
+      "status": "complete",
+      "club": "NK Olimpija Ljubljana",
+      "team_source_id": 511,
+      "team_created": true,
+      "squad_read": 4,
+      "moved_from_container": [],
+      "left_in_their_club": [],
+      "created": [
+        {
+          "source_id": 9501322,
+          "name": "Marko Simeunovič",
+          "minutes": 0,
+          "overall": 62
+        },
+        {
+          "source_id": 9501323,
+          "name": "Željko Milinovič",
+          "minutes": 0,
+          "overall": 62
+        },
+        {
+          "source_id": 9501324,
+          "name": "Dejan Djuranović",
+          "minutes": 0,
+          "overall": 62
+        },
+        {
+          "source_id": 9501325,
+          "name": "Miran Pavlin",
+          "minutes": 0,
+          "overall": 62
+        }
+      ],
+      "not_applied": [],
+      "club_level_anchor": 68,
+      "overall_policy": "nivel del club por sus jugadores ya conocidos, repartido por minutos reales de la eliminatoria"
+    },
+    {
+      "status": "complete",
+      "club": "FK Partizani",
+      "team_source_id": 1112,
+      "team_created": true,
+      "squad_read": 1,
+      "moved_from_container": [],
+      "left_in_their_club": [],
+      "created": [
+        {
+          "source_id": 9501326,
+          "name": "Edmond Dosti",
+          "minutes": 0,
+          "overall": 62
+        }
+      ],
+      "not_applied": [],
+      "club_level_anchor": 68,
+      "overall_policy": "nivel del club por sus jugadores ya conocidos, repartido por minutos reales de la eliminatoria"
+    },
+    {
+      "status": "complete",
+      "club": "Servette FC",
+      "team_source_id": 1034,
+      "team_created": true,
+      "squad_read": 17,
+      "moved_from_container": [
+        {
+          "source_id": 9494031,
+          "name": "Marco Pascolo"
+        },
+        {
+          "source_id": 9494037,
+          "name": "Christophe Ohrel"
+        },
+        {
+          "source_id": 9494039,
+          "name": "André Egli"
+        },
+        {
+          "source_id": 9500831,
+          "name": "Régis Rothenbühler"
+        }
+      ],
+      "left_in_their_club": [],
+      "created": [
+        {
+          "source_id": 9501327,
+          "name": "Michel Sauthier",
+          "minutes": 360,
+          "overall": 76
+        },
+        {
+          "source_id": 9501328,
+          "name": "Boško Gjurovski",
+          "minutes": 360,
+          "overall": 76
+        },
+        {
+          "source_id": 9501329,
+          "name": "Peter Schepull",
+          "minutes": 360,
+          "overall": 76
+        },
+        {
+          "source_id": 9501330,
+          "name": "Sébastien Barberis",
+          "minutes": 229,
+          "overall": 74
+        },
+        {
+          "source_id": 9501331,
+          "name": "Denis Duchosal",
+          "minutes": 273,
+          "overall": 75
+        },
+        {
+          "source_id": 9501332,
+          "name": "Jean-Michel Aeby",
+          "minutes": 264,
+          "overall": 74
+        },
+        {
+          "source_id": 9501333,
+          "name": "José Sinval de Campos",
+          "minutes": 360,
+          "overall": 76
+        },
+        {
+          "source_id": 9501334,
+          "name": "Oliver Patric Neuville",
+          "minutes": 187,
+          "overall": 73
+        },
+        {
+          "source_id": 9501335,
+          "name": "Fabien Margairaz",
+          "minutes": 0,
+          "overall": 70
+        },
+        {
+          "source_id": 9501336,
+          "name": "Eddy Barea",
+          "minutes": 173,
+          "overall": 73
+        },
+        {
+          "source_id": 9501337,
+          "name": "Gaetano Giallanza",
+          "minutes": 90,
+          "overall": 72
+        },
+        {
+          "source_id": 9501338,
+          "name": "Philippe Gerber",
+          "minutes": 28,
+          "overall": 70
+        },
+        {
+          "source_id": 9501339,
+          "name": "Samuel Margarini",
+          "minutes": 0,
+          "overall": 70
+        }
+      ],
+      "not_applied": [],
+      "club_level_anchor": 76,
+      "overall_policy": "nivel del club por sus jugadores ya conocidos, repartido por minutos reales de la eliminatoria"
+    },
+    {
+      "status": "complete",
+      "club": "Skonto FC",
+      "team_source_id": 574,
+      "team_created": true,
+      "squad_read": 3,
+      "moved_from_container": [],
+      "left_in_their_club": [],
+      "created": [
+        {
+          "source_id": 9501340,
+          "name": "Mihails Zemļinskis",
+          "minutes": 390,
+          "overall": 68
+        },
+        {
+          "source_id": 9501341,
+          "name": "Vitālijs Astafjevs",
+          "minutes": 111,
+          "overall": 64
+        },
+        {
+          "source_id": 9501342,
+          "name": "Valentīns Lobaņovs",
+          "minutes": 0,
+          "overall": 62
+        }
+      ],
+      "not_applied": [],
+      "club_level_anchor": 68,
+      "overall_policy": "nivel del club por sus jugadores ya conocidos, repartido por minutos reales de la eliminatoria"
+    },
+    {
+      "status": "complete",
+      "club": "Sliema Wanderers",
+      "team_source_id": 590,
+      "team_created": true,
+      "squad_read": 6,
+      "moved_from_container": [],
+      "left_in_their_club": [],
+      "created": [
+        {
+          "source_id": 9501343,
+          "name": "István Tarlosi",
+          "minutes": 180,
+          "overall": 68
+        },
+        {
+          "source_id": 9501344,
+          "name": "Sandro Zammit Fava",
+          "minutes": 180,
+          "overall": 68
+        },
+        {
+          "source_id": 9501345,
+          "name": "Noel Turner",
+          "minutes": 147,
+          "overall": 67
+        },
+        {
+          "source_id": 9501346,
+          "name": "Martin Gregory",
+          "minutes": 180,
+          "overall": 68
+        },
+        {
+          "source_id": 9501347,
+          "name": "Jonathan Magri Overend",
+          "minutes": 33,
+          "overall": 63
+        },
+        {
+          "source_id": 9501348,
+          "name": "Hubert Suda",
+          "minutes": 33,
+          "overall": 63
+        }
+      ],
+      "not_applied": [],
+      "club_level_anchor": 68,
+      "overall_policy": "nivel del club por sus jugadores ya conocidos, repartido por minutos reales de la eliminatoria"
+    },
+    {
+      "status": "complete",
+      "club": "AC Sparta Praha",
+      "team_source_id": 607,
+      "team_created": true,
+      "squad_read": 19,
+      "moved_from_container": [
+        {
+          "source_id": 9500846,
+          "name": "Petr Kouba"
+        },
+        {
+          "source_id": 9500855,
+          "name": "Michal Horňák"
+        },
+        {
+          "source_id": 9500852,
+          "name": "Martin Frýdek"
+        },
+        {
+          "source_id": 9500849,
+          "name": "Pavel Nedvěd"
+        }
+      ],
+      "left_in_their_club": [],
+      "created": [
+        {
+          "source_id": 9501349,
+          "name": "Tomáš Votava",
+          "minutes": 360,
+          "overall": 67
+        },
+        {
+          "source_id": 9501350,
+          "name": "Zdeněk Svoboda",
+          "minutes": 360,
+          "overall": 67
+        },
+        {
+          "source_id": 9501351,
+          "name": "Jiří Novotný",
+          "minutes": 360,
+          "overall": 67
+        },
+        {
+          "source_id": 9501352,
+          "name": "Jozef Chovanec",
+          "minutes": 360,
+          "overall": 67
+        },
+        {
+          "source_id": 9501353,
+          "name": "Jozef Kostelník",
+          "minutes": 270,
+          "overall": 65
+        },
+        {
+          "source_id": 9501354,
+          "name": "Roman Vonášek",
+          "minutes": 208,
+          "overall": 64
+        },
+        {
+          "source_id": 9501355,
+          "name": "Jozef Kožlej",
+          "minutes": 282,
+          "overall": 66
+        },
+        {
+          "source_id": 9501356,
+          "name": "Horst Siegl",
+          "minutes": 360,
+          "overall": 67
+        },
+        {
+          "source_id": 9501357,
+          "name": "Milan Sova",
+          "minutes": 90,
+          "overall": 63
+        },
+        {
+          "source_id": 9501358,
+          "name": "Viktor Hennadiyovych Dvirnyk",
+          "minutes": 110,
+          "overall": 63
+        },
+        {
+          "source_id": 9501359,
+          "name": "Lumír Mistr",
+          "minutes": 90,
+          "overall": 63
+        },
+        {
+          "source_id": 9501360,
+          "name": "Aleš Bažant",
+          "minutes": 85,
+          "overall": 62
+        },
+        {
+          "source_id": 9501361,
+          "name": "Michal Špit",
+          "minutes": 0,
+          "overall": 61
+        },
+        {
+          "source_id": 9501362,
+          "name": "Peter Gunda",
+          "minutes": 0,
+          "overall": 61
+        },
+        {
+          "source_id": 9501363,
+          "name": "Ján Sopko",
+          "minutes": 0,
+          "overall": 61
+        }
+      ],
+      "not_applied": [],
+      "club_level_anchor": 67,
+      "overall_policy": "nivel del club por sus jugadores ya conocidos, repartido por minutos reales de la eliminatoria"
+    },
+    {
+      "status": "complete",
+      "club": "FC Steaua Bucureşti",
+      "team_source_id": 613,
+      "team_created": true,
+      "squad_read": 18,
+      "moved_from_container": [
+        {
+          "source_id": 9500842,
+          "name": "Anton Doboș"
+        },
+        {
+          "source_id": 9494016,
+          "name": "Daniel Prodan"
+        },
+        {
+          "source_id": 9494023,
+          "name": "Basarab Panduru"
+        },
+        {
+          "source_id": 9494026,
+          "name": "Constantin Gâlcă"
+        },
+        {
+          "source_id": 9494024,
+          "name": "Ion Vlădoiu"
+        },
+        {
+          "source_id": 9500844,
+          "name": "Adrian Ilie"
+        },
+        {
+          "source_id": 9494019,
+          "name": "Ilie Dumitrescu"
+        },
+        {
+          "source_id": 9500843,
+          "name": "Iulian Filipescu"
+        },
+        {
+          "source_id": 9500841,
+          "name": "Marius Lăcătuș"
+        }
+      ],
+      "left_in_their_club": [],
+      "created": [
+        {
+          "source_id": 9501364,
+          "name": "Dan Dumitru Stângaciu",
+          "minutes": 360,
+          "overall": 76
+        },
+        {
+          "source_id": 9501365,
+          "name": "Aurel Silviu Panait",
+          "minutes": 270,
+          "overall": 74
+        },
+        {
+          "source_id": 9501366,
+          "name": "Ilie Stan",
+          "minutes": 335,
+          "overall": 76
+        },
+        {
+          "source_id": 9501367,
+          "name": "Ionel Pirvu",
+          "minutes": 360,
+          "overall": 76
+        },
+        {
+          "source_id": 9501368,
+          "name": "Daniel Gherasim",
+          "minutes": 0,
+          "overall": 70
+        },
+        {
+          "source_id": 9501369,
+          "name": "Bogdan Bucur",
+          "minutes": 114,
+          "overall": 72
+        },
+        {
+          "source_id": 9501370,
+          "name": "Sorin Tufan",
+          "minutes": 62,
+          "overall": 71
+        },
+        {
+          "source_id": 9501371,
+          "name": "Tiberiu Csik",
+          "minutes": 28,
+          "overall": 70
+        },
+        {
+          "source_id": 9501372,
+          "name": "Viorel Ion",
+          "minutes": 27,
+          "overall": 70
+        }
+      ],
+      "not_applied": [],
+      "club_level_anchor": 76,
+      "overall_policy": "nivel del club por sus jugadores ya conocidos, repartido por minutos reales de la eliminatoria"
+    },
+    {
+      "status": "complete",
+      "club": "FC Zimbru Chișinău",
+      "team_source_id": 1373,
+      "team_created": true,
+      "squad_read": 4,
+      "moved_from_container": [],
+      "left_in_their_club": [],
+      "created": [
+        {
+          "source_id": 9501373,
+          "name": "Ion Testemitanu",
+          "minutes": 0,
+          "overall": 62
+        },
+        {
+          "source_id": 9501374,
+          "name": "Radu Rebeja",
+          "minutes": 0,
+          "overall": 62
+        },
+        {
+          "source_id": 9501375,
+          "name": "Alexandru Curtianu",
+          "minutes": 0,
+          "overall": 62
+        },
+        {
+          "source_id": 9501376,
+          "name": "Serghei Cleşcenco",
+          "minutes": 0,
+          "overall": 62
+        }
+      ],
+      "not_applied": [],
+      "club_level_anchor": 68,
+      "overall_policy": "nivel del club por sus jugadores ya conocidos, repartido por minutos reales de la eliminatoria"
+    },
+    {
+      "status": "complete",
+      "club": "ÍA Akranes",
+      "team_source_id": 2010,
+      "team_created": true,
+      "squad_read": 3,
+      "moved_from_container": [],
+      "left_in_their_club": [],
+      "created": [
+        {
+          "source_id": 9501377,
+          "name": "Sigurður Jónsson",
+          "minutes": 0,
+          "overall": 62
+        },
+        {
+          "source_id": 9501378,
+          "name": "Ólafur Thórdarson",
+          "minutes": 0,
+          "overall": 62
+        },
+        {
+          "source_id": 9501379,
+          "name": "Þórður Guðjónsson",
+          "minutes": 0,
+          "overall": 62
+        }
+      ],
+      "not_applied": [],
+      "club_level_anchor": 68,
+      "overall_policy": "nivel del club por sus jugadores ya conocidos, repartido por minutos reales de la eliminatoria"
+    }
+  ]
+}

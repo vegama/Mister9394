@@ -1,0 +1,121 @@
+{
+  "status": "complete",
+  "club": "Rosenborg BK",
+  "team_source_id": 599,
+  "team_created": true,
+  "squad_read": 19,
+  "moved_from_container": [
+    {
+      "source_id": 9494199,
+      "name": "Ola By Rise"
+    },
+    {
+      "source_id": 9494200,
+      "name": "Karl Petter Løken"
+    },
+    {
+      "source_id": 9494196,
+      "name": "Øyvind Leonhardsen"
+    },
+    {
+      "source_id": 9494204,
+      "name": "Roar Strand"
+    }
+  ],
+  "left_in_their_club": [
+    {
+      "source_id": 2138,
+      "name": "Ingebrigtsen",
+      "team_id": 253
+    }
+  ],
+  "created": [
+    {
+      "source_id": 9501170,
+      "name": "Bjørn Otto Bragstad",
+      "minutes": 360,
+      "overall": 75
+    },
+    {
+      "source_id": 9501171,
+      "name": "Bjørn Tore Kvarme",
+      "minutes": 360,
+      "overall": 75
+    },
+    {
+      "source_id": 9501172,
+      "name": "Rune Tangen",
+      "minutes": 360,
+      "overall": 75
+    },
+    {
+      "source_id": 9501173,
+      "name": "Ole Einar Martinsen",
+      "minutes": 349,
+      "overall": 75
+    },
+    {
+      "source_id": 9501174,
+      "name": "Bent André Skammelsrud",
+      "minutes": 360,
+      "overall": 75
+    },
+    {
+      "source_id": 9501175,
+      "name": "Kent Roger Bergersen",
+      "minutes": 340,
+      "overall": 75
+    },
+    {
+      "source_id": 9501176,
+      "name": "Tore André Dahlum",
+      "minutes": 360,
+      "overall": 75
+    },
+    {
+      "source_id": 9501177,
+      "name": "Ivar Selnøs",
+      "minutes": 0,
+      "overall": 69
+    },
+    {
+      "source_id": 9501178,
+      "name": "Vidar Riseth",
+      "minutes": 105,
+      "overall": 71
+    },
+    {
+      "source_id": 9501179,
+      "name": "Ronny Støbakk",
+      "minutes": 90,
+      "overall": 71
+    },
+    {
+      "source_id": 9501180,
+      "name": "Trond Børge Henriksen",
+      "minutes": 11,
+      "overall": 69
+    },
+    {
+      "source_id": 9501181,
+      "name": "Tor Gunnar Johnsen",
+      "minutes": 5,
+      "overall": 69
+    },
+    {
+      "source_id": 9501182,
+      "name": "Ståle Stensaas",
+      "minutes": 0,
+      "overall": 69
+    },
+    {
+      "source_id": 9501183,
+      "name": "Helge Aune",
+      "minutes": 0,
+      "overall": 69
+    }
+  ],
+  "not_applied": [],
+  "club_level_anchor": 75,
+  "overall_policy": "nivel del club por sus jugadores ya conocidos, repartido por minutos reales de la eliminatoria"
+}

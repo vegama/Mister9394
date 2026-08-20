@@ -251,6 +251,62 @@ def _unique_ids(values: Iterable[Any]) -> tuple[int, ...]:
     return tuple(sorted({int(value) for value in values if isinstance(value, int) and value > 0}))
 
 
+def normalize_team_row(row: dict[str, Any], *, activation_reason: str) -> HistoricalTeamRow9394:
+    """Convierte una fila de ``Equipo`` del MDB en la del universo.
+
+    Estaba metida dentro de ``load_historical_snapshot``, que reconstruye el
+    mundo entero. Se saca aparte para poder incorporar un club suelto —los
+    participantes europeos que el importador no seleccionó— sin rehacer la
+    importación y perder todo lo enriquecido encima.
+    """
+    team_id = int(row["Id"])
+    return HistoricalTeamRow9394(
+        source_id=team_id,
+        name=str(row.get("Nombre") or row.get("NombreCorto") or f"Equipo {team_id}"),
+        long_name=str(row.get("NombreLargo") or row.get("Nombre") or f"Equipo {team_id}"),
+        short_name=str(row.get("NombreCorto") or row.get("Nombre") or f"Equipo {team_id}"),
+        initials=str(row.get("Siglas")) if row.get("Siglas") else None,
+        league_id=_as_int(row.get("Liga")),
+        league_position=_as_int(row.get("Posicion")),
+        stadium_id=_as_int(row.get("Estadio")),
+        manager_id=_as_int(row.get("Entrenador")),
+        members=_as_int(row.get("Socios")),
+        budget=_as_int(row.get("Presupuesto")),
+        debt=_as_int(row.get("Deuda")),
+        reserve_of=_as_int(row.get("Filial_de")),
+        reserve_step=_as_int(row.get("Peldanyo_filial")),
+        academy_level=_as_int(row.get("Nivel_cantera")),
+        squad_building_style=_as_int(row.get("Confeccion_plantilla")),
+        sporting_director_level=_as_int(row.get("Secretario_tecnico_estrella")),
+        women_flag=bool(row.get("Femenino")),
+        activation_reason=activation_reason,
+        familiar_name=str(row.get("NombreFamiliar")) if row.get("NombreFamiliar") else None,
+        very_short_name=str(row.get("NombreMuyCorto")) if row.get("NombreMuyCorto") else None,
+        president=str(row.get("Presidente")) if row.get("Presidente") else None,
+        secondary_stadium_id=_as_int(row.get("EstadioSecundario")),
+        training_ground=str(row.get("CiudadDeportiva")) if row.get("CiudadDeportiva") else None,
+        youth_residence=str(row.get("ResidenciaJuveniles")) if row.get("ResidenciaJuveniles") else None,
+        main_rival_id=_as_int(row.get("MaximoRival")),
+        regional_rival_id=_as_int(row.get("MaximoRivalRegional")),
+        honours={
+            "intercontinental": _as_int(row.get("PalmaresIntercontinentales")),
+            "continental": _as_int(row.get("PalmaresContinentales")),
+            "continental_2": _as_int(row.get("PalmaresContinentales2")),
+            "continental_3": _as_int(row.get("PalmaresContinentales3")),
+            "continental_4": _as_int(row.get("PalmaresContinentales4")),
+            "continental_supercups": _as_int(row.get("PalmaresSuperCopasContinentales")),
+            "national_leagues": _as_int(row.get("PalmaresLigasNacionales")),
+            "national_cups": _as_int(row.get("PalmaresCopasNacionales")),
+            "national_cups_2": _as_int(row.get("PalmaresCopasNacionales2")),
+            "national_supercups": _as_int(row.get("PalmaresSuperCopasNacionales")),
+        },
+        academy_style=_as_int(row.get("Estilo_cantera")),
+        special_academy_pattern_id=_as_int(row.get("Canterano_especial")),
+        initial_points_sanction=_as_int(row.get("SancionPuntosInicialesLiga")),
+        fifa_registration_ban_until=_dt(row.get("SancionFIFAFichajesNoJueganHasta")),
+    )
+
+
 def load_historical_snapshot(path: str | Path) -> HistoricalSnapshot9394:
     db = Jet4MDB(path)
     raw_leagues = db.rows("Liga")
@@ -396,51 +452,7 @@ def load_historical_snapshot(path: str | Path) -> HistoricalSnapshot9394:
         reason = ("domestic_league" if team_id in domestic_team_ids else
                   "continental_participant" if team_id in continental_team_ids else
                   "historical_source_repair")
-        normalized_teams.append(HistoricalTeamRow9394(
-            source_id=team_id,
-            name=str(row.get("Nombre") or row.get("NombreCorto") or f"Equipo {team_id}"),
-            long_name=str(row.get("NombreLargo") or row.get("Nombre") or f"Equipo {team_id}"),
-            short_name=str(row.get("NombreCorto") or row.get("Nombre") or f"Equipo {team_id}"),
-            initials=str(row.get("Siglas")) if row.get("Siglas") else None,
-            league_id=_as_int(row.get("Liga")),
-            league_position=_as_int(row.get("Posicion")),
-            stadium_id=_as_int(row.get("Estadio")),
-            manager_id=_as_int(row.get("Entrenador")),
-            members=_as_int(row.get("Socios")),
-            budget=_as_int(row.get("Presupuesto")),
-            debt=_as_int(row.get("Deuda")),
-            reserve_of=_as_int(row.get("Filial_de")),
-            reserve_step=_as_int(row.get("Peldanyo_filial")),
-            academy_level=_as_int(row.get("Nivel_cantera")),
-            squad_building_style=_as_int(row.get("Confeccion_plantilla")),
-            sporting_director_level=_as_int(row.get("Secretario_tecnico_estrella")),
-            women_flag=bool(row.get("Femenino")),
-            activation_reason=reason,
-            familiar_name=str(row.get("NombreFamiliar")) if row.get("NombreFamiliar") else None,
-            very_short_name=str(row.get("NombreMuyCorto")) if row.get("NombreMuyCorto") else None,
-            president=str(row.get("Presidente")) if row.get("Presidente") else None,
-            secondary_stadium_id=_as_int(row.get("EstadioSecundario")),
-            training_ground=str(row.get("CiudadDeportiva")) if row.get("CiudadDeportiva") else None,
-            youth_residence=str(row.get("ResidenciaJuveniles")) if row.get("ResidenciaJuveniles") else None,
-            main_rival_id=_as_int(row.get("MaximoRival")),
-            regional_rival_id=_as_int(row.get("MaximoRivalRegional")),
-            honours={
-                "intercontinental": _as_int(row.get("PalmaresIntercontinentales")),
-                "continental": _as_int(row.get("PalmaresContinentales")),
-                "continental_2": _as_int(row.get("PalmaresContinentales2")),
-                "continental_3": _as_int(row.get("PalmaresContinentales3")),
-                "continental_4": _as_int(row.get("PalmaresContinentales4")),
-                "continental_supercups": _as_int(row.get("PalmaresSuperCopasContinentales")),
-                "national_leagues": _as_int(row.get("PalmaresLigasNacionales")),
-                "national_cups": _as_int(row.get("PalmaresCopasNacionales")),
-                "national_cups_2": _as_int(row.get("PalmaresCopasNacionales2")),
-                "national_supercups": _as_int(row.get("PalmaresSuperCopasNacionales")),
-            },
-            academy_style=_as_int(row.get("Estilo_cantera")),
-            special_academy_pattern_id=_as_int(row.get("Canterano_especial")),
-            initial_points_sanction=_as_int(row.get("SancionPuntosInicialesLiga")),
-            fifa_registration_ban_until=_dt(row.get("SancionFIFAFichajesNoJueganHasta")),
-        ))
+        normalized_teams.append(normalize_team_row(row, activation_reason=reason))
 
     player_attribute_map = {
         "pace": "Velocidad", "acceleration": "Aceleracion", "jumping": "Salto",

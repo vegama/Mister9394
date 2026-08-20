@@ -33,8 +33,8 @@ DATA = ROOT / "data" / "football9394"
 SNAPSHOT = DATA / "historical_snapshot.json"
 REPORT = DATA / "national_pool_profile_anchoring_report.json"
 
-BATCH = "fixed_source_comparable_national_pool_v113"
-OWNED = {"world_cup_1994", "national_pool_1993_94"}
+BATCH = "fixed_source_comparable_real_squad_v113"
+OWNED = {"world_cup_1994", "national_pool_1993_94", "european_club_1993_94"}
 
 ATTRS = (
     "pace", "acceleration", "jumping", "stamina", "strength", "tackling",
