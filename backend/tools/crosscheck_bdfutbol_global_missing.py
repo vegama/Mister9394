@@ -100,7 +100,10 @@ def search_candidates(row: dict) -> list[tuple[str, str]]:
     expected = norm(row.get("name"))
     found: list[tuple[str, str]] = []
     for search_name in query_variants(row.get("name", "")):
-        query = urlencode({"d": search_name, "bj": "on", "an1": year, "an2": year})
+        # The year filter is too strict for BDFutbol's historical index: some
+        # profiles expose a corrected year while retaining the exact DOB in
+        # the result. We validate the complete date below instead.
+        query = urlencode({"d": search_name, "bj": "on"})
         text = fetch(SEARCH + "?" + query).decode("utf-8", errors="replace")
         for match in ROW_RE.finditer(text):
             fragment = match.group(1)

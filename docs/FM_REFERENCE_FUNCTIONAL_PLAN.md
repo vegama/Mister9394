@@ -66,7 +66,11 @@ Ambientación 1993: contactos, prensa, informes, desplazamientos y material disp
 
 **Primera vertical 0.48:** conocimiento persistente por jugador, mercado con estimaciones/rangos en lugar de verdad canónica, encargo de informe con días reales, responsable y calidad, informes fiables y profundización posterior, memoria del informe y watchlist automática.
 
-**Profundización 0.49:** capacidad simultánea real según estructura de scouting, geografía compacta con tiempo de desplazamiento, calidad fijada al iniciar el encargo y obsolescencia efectiva de informes con pérdida de confianza/precisión. La UI expone ocupación, alcance y frescura. Pendiente para cerrar NF1: conocimiento territorial/por competición más fino, red de contactos y comparación A/B/C integrada.
+**Profundización 0.49:** capacidad simultánea real según estructura de scouting, geografía compacta con tiempo de desplazamiento, calidad fijada al iniciar el encargo y obsolescencia efectiva de informes con pérdida de confianza/precisión. La UI expone ocupación, alcance y frescura.
+
+**Comparación A/B/C 0.52:** `candidate_comparison` pone candidatos uno al lado del otro con lo que el club sabe de cada uno, no con la verdad del simulador. **No declara ganador cuando las horquillas se solapan**: decir cuál es mejor cuando el ojeo no da para tanto sería inventar precisión. Señala de quién se sabe más, a quién conviene observar y qué informe caducó. Una prueba fija que la salida coincide con `overall_range` del mercado, porque construida sobre la ficha cruda filtraba la media real —Dubovský salía con 74 cuando el club sólo podía estimar 71—.
+
+Pendiente para cerrar NF1: **red de contactos**, y conocimiento territorial por competición, cuya primera pasada ya existe.
 
 **Gate:** observar durante semanas produce una decisión mejor informada sin bloquear el fichaje de riesgo.
 
@@ -82,7 +86,9 @@ Bucle conectado:
 
 **Primera vertical 0.48:** el mismo `squad_audit` de la IA alimenta ya un plan del usuario con cobertura por demarcación, déficit, nivel medio, contratos próximos, sucesión y posibles excedentes. Incluso una plantilla equilibrada devuelve una lectura de seguimiento en vez de un panel vacío.
 
-**Profundización 0.49:** cada necesidad traduce su demarcación al filtro real de mercado y puede abrir la búsqueda directamente desde el planificador, reduciendo el salto entre diagnóstico y acción. Pendiente: decisiones persistentes por jugador y comparación A/B/C enlazada al plan.
+**Profundización 0.49:** cada necesidad traduce su demarcación al filtro real de mercado y puede abrir la búsqueda directamente desde el planificador, reduciendo el salto entre diagnóstico y acción.
+
+**Cierre 0.52:** decisiones persistentes por jugador y comparación A/B/C enlazada al plan, compartida con NF1: el panel del mercado enseña las tres alternativas y el veredicto dice si el club puede separarlas o todavía no.
 
 ## NF3 — Entrenamiento, preparación física y área médica · P0
 
@@ -197,3 +203,35 @@ Taquilla, socios, televisión, premios, patrocinio, salarios, primas, fichajes, 
 ## Criterio final
 
 El usuario debe dejar de manipular directamente variables ocultas del simulador y pasar a gestionar personas, información, decisiones y riesgos. El mundo puede ser profundo por debajo, pero la interfaz debe mantener siempre claro qué ocurre, quién trabaja, qué falta, qué opciones existen y qué consecuencias se esperan.
+
+---
+
+## Estado a 0.52 y huecos abiertos
+
+**De las 73 rutas del backend, 72 tienen superficie de usuario.** La única que
+faltaba era la comparación A/B/C, ya cableada. En cobertura de interfaz el plan
+está prácticamente cerrado.
+
+**Sin dueño, dentro del plan:**
+
+- **NF1 · red de contactos.** No existe en el código.
+- **NF7 · pruebas de jugadores** y ofrecer activamente a varios clubes.
+
+**Fuera del plan, y conviene que entre:**
+
+- **Hay futbolistas generados en el mundo.** La base original rellenó con su
+  generador las plantillas de los clubes cuya liga no simulaba, y también hay
+  relleno dentro de ligas modeladas. Se han eliminado 172 y quedan más. Un
+  ojeador que informa sobre alguien que no existió choca de frente con NF1 y con
+  el principio rector de distinguir dato histórico, inferido y generado. **Hace
+  falta decidir qué se hace con ellos**: sustituirlos, marcarlos o excluirlos del
+  ojeo.
+- **El mundo ha crecido y el plan no lo recoge.** De 21 ligas a 41 competiciones
+  y de 12.492 a 15.410 futbolistas. Afecta a NF1 —hay mucho más territorio que
+  cubrir— y a NF9, cuyo mercado de banquillos cruza países que antes no existían.
+- **Competiciones que faltan**: copas nacionales, sin las cuales la Recopa no
+  tiene campeón al que clasificar, y fases de clasificación de selecciones.
+- **Los clubes sin liga y los contenedores `Otros-` no generan estadísticas**, así
+  que sus futbolistas están congelados. Diseño propuesto en
+  `PLAN_CLUBES_EUROPEOS_93_94.md`.
+
