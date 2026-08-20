@@ -557,3 +557,43 @@ primero que responda.
 Lo importante del orden: el material original del juego manda siempre que
 exista, para que los clubes nuevos no canten al lado de los que ya estaban.
 
+### Clasificaciones: de Wikipedia, no de mondefootball
+
+mondefootball tiene los clubes del 93-94 pero **su tabla esta a cero**: cero
+partidos, cero puntos, sin posiciones. Las clasificaciones salen de Wikipedia,
+donde las seis ligas tienen pagina.
+
+Sirven para tres cosas, y ninguna es decorativa:
+
+* **El nivel de cada club.** Sin esto, un equipo sin ningun futbolista conocido
+  se quedaba con la media por defecto y el Malmö acababa igualado con el Cherno
+  More. La posicion final es una medida real.
+* **El orden de la liga**, sin el cual no hay campeon ni plazas europeas.
+* **El nombre de 1993**, que resulta que viene en la propia tabla.
+
+Tres trampas de esas paginas:
+
+1. **Una pagina trae varias tablas** con la misma plantilla -clasificacion,
+   rejilla de resultados, fases finales-. Barrer la pagina entera devolvia cada
+   equipo tres veces: cincuenta y cuatro puestos para una liga de dieciocho. Hay
+   que acotarse al primer bloque de `{{#invoke:Sports table}}`.
+2. **Algunas definen la tabla dos veces** -fase regular y fase final-, asi que el
+   mismo codigo de equipo aparece con dos numeros. Vale la primera aparicion.
+3. **El nombre bueno es el alias del enlace, no su destino.** La fila dice
+   `|name_ELE = [[FC Caracal (2004)|Electroputere Craiova]]`: el destino es el
+   nombre de hoy y el alias el de 1993. Quedarse con el destino llenaba la liga
+   de nombres modernos -FCSB en vez de Steaua, FC Caracal en vez de
+   Electroputere-, que es justo lo que se evita con los paises.
+
+Suecia, Noruega y Dinamarca dan mas equipos que los que tiene la liga porque sus
+paginas incluyen las fases de descenso. No importa: lo que se usa es el **orden
+relativo** de los clubes que si tenemos.
+
+### Las ligas del MDB no valen
+
+Existen en la base original, pero son de temporadas modernas: la rumana Liga 1 es
+de 2016 y la Eliteserien de 2017. Por eso el importador nunca las admitio, que
+solo acepta las marcadas con temporada 1993. Peor: los clubes que si estaban
+-Steaua, Dinamo, Craiova- arrastran su `league_id` de 2016, y alguno apunta a la
+Liga 2. Hay que crear las seis ligas como entidades del 93-94 y reasignar.
+

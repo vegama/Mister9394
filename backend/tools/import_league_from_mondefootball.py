@@ -44,9 +44,47 @@ MAPPING = DATA / "mondefootball_club_mapping.json"
 SOURCE_MDB = Path(r"C:\UNIFUTBOL\UNIFUTBOL v14.5\datos.vin\1993\basedatos\basedatos.mdb")
 REPORT = DATA / "mondefootball_league_import_report.json"
 
+# Nuestros identificadores de pais, para los clubes que no estan en la base
+# original y hay que crear desde cero.
+COUNTRY_IDS = {"Rumania": 72, "Polonia": 70, "Bulgaria": 21,
+               "Suecia": 79, "Noruega": 60, "Dinamarca": 33}
+
 BATCH = "league_squads_1993_94"
 ORIGIN = "league_club_1993_94"
 POSITION_CODES = {"POR": "GK", "DEF": "DF", "MED": "MF", "DEL": "FW"}
+
+
+def fold(text: Any) -> str:
+    import unicodedata
+    raw = str(text or "")
+    for a, b in (("ł", "l"), ("đ", "d"), ("ø", "o"), ("ţ", "t"), ("ş", "s")):
+        raw = raw.replace(a, b).replace(a.upper(), b.upper())
+    raw = unicodedata.normalize("NFKD", raw)
+    return "".join(c for c in raw if not unicodedata.combining(c)).casefold().strip()
+
+
+def same_surname_same_birthday(snapshot: dict[str, Any], surname: str,
+                               birth_date: str, country_id: int) -> dict[str, Any] | None:
+    """Ultima red antes de crear, para cuando las fuentes discrepan en el nombre.
+
+    El reconciliador general exige mas que el apellido cuando los nombres de pila
+    chocan, y en general hace bien. Pero BDFutbol llama "Dan Stangaciu" a quien
+    mondefootball llama "Dumitru", y con eso se colaban dos fichas del mismo
+    portero en el mismo Steaua. Mismo apellido, **misma fecha exacta** y mismo
+    pais no es una coincidencia posible entre dos futbolistas distintos.
+    """
+    key = fold(surname)
+    if not key or not birth_date:
+        return None
+    for player in snapshot["players"]:
+        if str(player.get("birth_date") or "")[:10] != birth_date[:10]:
+            continue
+        if fold(player.get("surname1")) != key and fold(player.get("display_name")) != key:
+            continue
+        if country_id and int(player.get("international_country_id") or 0) not in (0, country_id):
+            continue
+        return player
+    return None
 
 
 def split_name(full_name: str) -> tuple[str, str]:
@@ -128,7 +166,8 @@ def fabricated_at(snapshot: dict[str, Any], team_id: int) -> list[dict[str, Any]
             if int(p.get("team_id") or 0) == team_id and not p.get("external_origin")]
 
 
-def import_clubs(*, only_new: bool, include_existing: bool, delete_fabricated: bool,
+def import_clubs(*, only_new: bool, include_existing: bool, include_missing: bool,
+                 delete_fabricated: bool,
                  baseline: int, snapshot_path: Path,
                  squads_path: Path, mapping_path: Path, mdb_path: Path) -> dict[str, Any]:
     snapshot = json.loads(snapshot_path.read_text(encoding="utf-8"))
@@ -151,29 +190,66 @@ def import_clubs(*, only_new: bool, include_existing: bool, delete_fabricated: b
     next_id = max([int(p["source_id"]) for p in snapshot["players"]]
                   + [int(t["source_id"]) for t in snapshot["teams"]]) + 1
 
+    # Los resueltos a mano van con los seguros: son los que el emparejamiento
+    # automatico no podia decidir sin riesgo -FCSB es el nombre actual del
+    # Steaua, y crearlo habria duplicado el club-.
+    entries = list(mapping["seguros"])
+    for slug, fix in mapping.get("a_mano", {}).items():
+        found = next((c for c in by_mf.values() if c[1]["slug"] == slug), None)
+        if found is None:
+            continue
+        entries.append({"pais": found[0], "slug": slug, "mf": found[1]["mondefootball_id"],
+                        "mdb": fix["mdb"], "nombre": fix["nombre"],
+                        "en_juego": int(fix["mdb"]) in teams})
+    if include_missing:
+        for row in mapping.get("sin_equipo_en_la_base", []):
+            entries.append({"pais": row["pais"], "slug": row["slug"], "mf": row["mf"],
+                            "mdb": None, "nombre": row["nombre_real"], "en_juego": False})
+
     done: list[dict[str, Any]] = []
-    for entry in mapping["seguros"]:
+    for entry in entries:
         if only_new and entry["en_juego"]:
             continue
         if include_existing and not entry["en_juego"]:
+            continue
+        if include_missing and entry["mdb"] is not None:
             continue
         found = by_mf.get(str(entry["mf"]))
         if found is None:
             continue
         country, club = found
-        team_id = int(entry["mdb"])
-        row = mdb_rows.get(team_id)
-        team = teams.get(team_id)
+        row = mdb_rows.get(int(entry["mdb"])) if entry["mdb"] else None
+        team = teams.get(int(entry["mdb"])) if entry["mdb"] else None
         created_team = False
-        if team is None:
-            if row is None:
-                continue
+        if team is None and row is not None:
             team = json_safe(asdict(normalize_team_row(row, activation_reason="domestic_league")))
+            snapshot["teams"].append(team)
+            teams[int(entry["mdb"])] = team
+            created_team = True
+        if team is None:
+            # El club no esta en la base original: el juego nunca lo modelo. Se
+            # crea con lo que da la fuente y se marca, para que se vea que su
+            # ficha -estadio, presidente, palmares- no viene del juego.
+            team_id = next_id
+            next_id += 1
+            team = {"source_id": team_id, "name": entry["nombre"],
+                    "long_name": entry["nombre"], "short_name": entry["nombre"],
+                    "initials": None, "league_id": None, "league_position": None,
+                    "stadium_id": None, "manager_id": None, "members": None,
+                    "budget": None, "debt": None, "reserve_of": 0, "reserve_step": 0,
+                    "academy_level": 1, "squad_building_style": 2,
+                    "sporting_director_level": 1, "women_flag": False,
+                    "activation_reason": "league_source_only",
+                    "country_id": COUNTRY_IDS.get(country),
+                    "club_record_source": "mondefootball; no figura en la base original del juego",
+                    "mondefootball_id": str(entry["mf"])}
             snapshot["teams"].append(team)
             teams[team_id] = team
             created_team = True
+        team_id = int(team["source_id"])
         club_name = team.get("name") or entry["nombre"]
-        country_id = league_country.get(int(row.get("Liga") or 0), 0) if row else 0
+        country_id = (league_country.get(int(row.get("Liga") or 0), 0) if row
+                      else COUNTRY_IDS.get(country, 0))
 
         removed: list[dict[str, Any]] = []
         moved: list[dict[str, Any]] = []
@@ -206,6 +282,13 @@ def import_clubs(*, only_new: bool, include_existing: bool, delete_fabricated: b
                     kept.append({"source_id": int(player["source_id"]),
                                  "name": player.get("display_name"),
                                  "team_id": int(player.get("team_id") or 0)})
+                continue
+            twin = same_surname_same_birthday(snapshot, family, player_row["birth_date"], country_id)
+            if twin is not None:
+                skipped.append({"name": player_row["full_name"],
+                                "reason": f"ya esta como {twin.get('first_name')} "
+                                          f"{twin.get('surname1')} ({twin['source_id']}): "
+                                          "mismo apellido y misma fecha de nacimiento"})
                 continue
             pending.append(player_row)
 
@@ -259,6 +342,8 @@ def main() -> None:
                         help="salta los clubes que ya existen en el juego, que exigen borrar su plantilla inventada")
     parser.add_argument("--include-existing", action="store_true",
                         help="solo los clubes que ya estan en el juego")
+    parser.add_argument("--include-missing", action="store_true",
+                        help="solo los clubes que no figuran en la base original del juego")
     parser.add_argument("--delete-fabricated", action="store_true",
                         help="borra la plantilla inventada del club al sustituirla por la real")
     parser.add_argument("--baseline", type=int, default=68)
@@ -268,6 +353,7 @@ def main() -> None:
     parser.add_argument("--mdb", type=Path, default=SOURCE_MDB)
     args = parser.parse_args()
     report = import_clubs(only_new=args.only_new, include_existing=args.include_existing,
+                          include_missing=args.include_missing,
                           delete_fabricated=args.delete_fabricated, baseline=args.baseline,
                           snapshot_path=args.snapshot, squads_path=args.squads,
                           mapping_path=args.mapping, mdb_path=args.mdb)

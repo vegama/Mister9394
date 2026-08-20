@@ -1,201 +1,906 @@
 {
   "status": "complete",
   "batch": "league_squads_1993_94",
-  "clubs": 8,
-  "created": 122,
-  "moved_from_container": 13,
-  "left_in_their_club": 34,
-  "removed_fabricated": 75,
+  "clubs": 54,
+  "created": 79,
+  "moved_from_container": 9,
+  "left_in_their_club": 853,
+  "removed_fabricated": 51,
   "not_applied": 0,
   "detail": [
+    {
+      "country": "Rumania",
+      "club": "FC Ceahlăul Piatra Neamț",
+      "team_source_id": 1458,
+      "team_created": false,
+      "squad_read": 14,
+      "club_level_anchor": 65,
+      "created": [],
+      "moved_from_container": [],
+      "left_in_their_club": [
+        {
+          "source_id": 9501380,
+          "name": "Câmpeanu",
+          "team_id": 1458
+        },
+        {
+          "source_id": 9501381,
+          "name": "Lefter",
+          "team_id": 1458
+        },
+        {
+          "source_id": 9501382,
+          "name": "Atomulesei",
+          "team_id": 1458
+        },
+        {
+          "source_id": 9501383,
+          "name": "Axinia",
+          "team_id": 1458
+        },
+        {
+          "source_id": 9501384,
+          "name": "Ivanov",
+          "team_id": 1458
+        },
+        {
+          "source_id": 9501385,
+          "name": "Marc",
+          "team_id": 1458
+        },
+        {
+          "source_id": 9501386,
+          "name": "Şoimaru",
+          "team_id": 1458
+        },
+        {
+          "source_id": 9501387,
+          "name": "Burleanu",
+          "team_id": 1458
+        },
+        {
+          "source_id": 9501388,
+          "name": "Ionescu",
+          "team_id": 1458
+        },
+        {
+          "source_id": 9501389,
+          "name": "Pantazi",
+          "team_id": 1458
+        },
+        {
+          "source_id": 9501390,
+          "name": "Profir",
+          "team_id": 1458
+        },
+        {
+          "source_id": 9501391,
+          "name": "Axinia",
+          "team_id": 1458
+        },
+        {
+          "source_id": 9501392,
+          "name": "Enache",
+          "team_id": 1458
+        },
+        {
+          "source_id": 9501393,
+          "name": "State",
+          "team_id": 1458
+        }
+      ],
+      "removed_fabricated": [],
+      "not_applied": []
+    },
+    {
+      "country": "Rumania",
+      "club": "FC Dinamo Bucureşti",
+      "team_source_id": 616,
+      "team_created": false,
+      "squad_read": 19,
+      "club_level_anchor": 75,
+      "created": [],
+      "moved_from_container": [],
+      "left_in_their_club": [
+        {
+          "source_id": 9501394,
+          "name": "Musta",
+          "team_id": 616
+        },
+        {
+          "source_id": 9494015,
+          "name": "Florin Prunea",
+          "team_id": 616
+        },
+        {
+          "source_id": 9501395,
+          "name": "Brătianu",
+          "team_id": 616
+        },
+        {
+          "source_id": 9501396,
+          "name": "Constantinovici",
+          "team_id": 616
+        },
+        {
+          "source_id": 9501397,
+          "name": "Cristea",
+          "team_id": 616
+        },
+        {
+          "source_id": 9501398,
+          "name": "Grozavu",
+          "team_id": 616
+        },
+        {
+          "source_id": 9501399,
+          "name": "Kádár",
+          "team_id": 616
+        },
+        {
+          "source_id": 9501400,
+          "name": "Matei",
+          "team_id": 616
+        },
+        {
+          "source_id": 9494022,
+          "name": "Gheorghe Mihali",
+          "team_id": 616
+        },
+        {
+          "source_id": 9501401,
+          "name": "Pană",
+          "team_id": 616
+        },
+        {
+          "source_id": 9501402,
+          "name": "Sava",
+          "team_id": 616
+        },
+        {
+          "source_id": 9501403,
+          "name": "Coporan",
+          "team_id": 616
+        },
+        {
+          "source_id": 9501404,
+          "name": "Demollari",
+          "team_id": 616
+        },
+        {
+          "source_id": 9501405,
+          "name": "Lică",
+          "team_id": 616
+        },
+        {
+          "source_id": 9501406,
+          "name": "Militaru",
+          "team_id": 616
+        },
+        {
+          "source_id": 9501407,
+          "name": "Pană",
+          "team_id": 616
+        },
+        {
+          "source_id": 9494025,
+          "name": "Viorel Moldovan",
+          "team_id": 616
+        },
+        {
+          "source_id": 9501408,
+          "name": "Pucşaş",
+          "team_id": 616
+        },
+        {
+          "source_id": 9501409,
+          "name": "Savu",
+          "team_id": 616
+        }
+      ],
+      "removed_fabricated": [],
+      "not_applied": []
+    },
+    {
+      "country": "Rumania",
+      "club": "FC Farul Constanța",
+      "team_source_id": 1722,
+      "team_created": false,
+      "squad_read": 14,
+      "club_level_anchor": 65,
+      "created": [],
+      "moved_from_container": [],
+      "left_in_their_club": [
+        {
+          "source_id": 9501410,
+          "name": "Barbu",
+          "team_id": 1722
+        },
+        {
+          "source_id": 9501411,
+          "name": "Munteanu",
+          "team_id": 1722
+        },
+        {
+          "source_id": 9501412,
+          "name": "Niţu",
+          "team_id": 1722
+        },
+        {
+          "source_id": 9501413,
+          "name": "Curt",
+          "team_id": 1722
+        },
+        {
+          "source_id": 9501414,
+          "name": "Dinu",
+          "team_id": 1722
+        },
+        {
+          "source_id": 9501415,
+          "name": "Ghișan",
+          "team_id": 1722
+        },
+        {
+          "source_id": 9501416,
+          "name": "Nanu",
+          "team_id": 1722
+        },
+        {
+          "source_id": 9501417,
+          "name": "Barbu",
+          "team_id": 1722
+        },
+        {
+          "source_id": 9501418,
+          "name": "Butoiu",
+          "team_id": 1722
+        },
+        {
+          "source_id": 9501419,
+          "name": "Carabas",
+          "team_id": 1722
+        },
+        {
+          "source_id": 9501420,
+          "name": "Ciurea",
+          "team_id": 1722
+        },
+        {
+          "source_id": 9501421,
+          "name": "Cornățeanu",
+          "team_id": 1722
+        },
+        {
+          "source_id": 9501422,
+          "name": "Oprea",
+          "team_id": 1722
+        },
+        {
+          "source_id": 9501423,
+          "name": "Popa",
+          "team_id": 1722
+        }
+      ],
+      "removed_fabricated": [],
+      "not_applied": []
+    },
+    {
+      "country": "Rumania",
+      "club": "FC Brașov",
+      "team_source_id": 1561,
+      "team_created": false,
+      "squad_read": 8,
+      "club_level_anchor": 74,
+      "created": [],
+      "moved_from_container": [],
+      "left_in_their_club": [
+        {
+          "source_id": 9501424,
+          "name": "Bozhiqi",
+          "team_id": 1561
+        },
+        {
+          "source_id": 9501425,
+          "name": "Balint",
+          "team_id": 1561
+        },
+        {
+          "source_id": 9501426,
+          "name": "Canaj",
+          "team_id": 1561
+        },
+        {
+          "source_id": 9501427,
+          "name": "Purdea",
+          "team_id": 1561
+        },
+        {
+          "source_id": 9501428,
+          "name": "Andone",
+          "team_id": 1561
+        },
+        {
+          "source_id": 9501429,
+          "name": "Nagy",
+          "team_id": 1561
+        },
+        {
+          "source_id": 9494029,
+          "name": "Marian Ivan",
+          "team_id": 1561
+        },
+        {
+          "source_id": 9501430,
+          "name": "Săvoiu",
+          "team_id": 1561
+        }
+      ],
+      "removed_fabricated": [],
+      "not_applied": []
+    },
+    {
+      "country": "Rumania",
+      "club": "FC Oţelul Galaţi",
+      "team_source_id": 777,
+      "team_created": false,
+      "squad_read": 13,
+      "club_level_anchor": 65,
+      "created": [],
+      "moved_from_container": [],
+      "left_in_their_club": [
+        {
+          "source_id": 9501431,
+          "name": "Călugăru",
+          "team_id": 777
+        },
+        {
+          "source_id": 9501432,
+          "name": "Florea",
+          "team_id": 777
+        },
+        {
+          "source_id": 9501433,
+          "name": "Popescu",
+          "team_id": 777
+        },
+        {
+          "source_id": 9501434,
+          "name": "Tofan",
+          "team_id": 777
+        },
+        {
+          "source_id": 9501435,
+          "name": "Cioloboc",
+          "team_id": 777
+        },
+        {
+          "source_id": 9501436,
+          "name": "Dumitraşcu",
+          "team_id": 777
+        },
+        {
+          "source_id": 9501437,
+          "name": "Luta",
+          "team_id": 777
+        },
+        {
+          "source_id": 9501438,
+          "name": "Maleş",
+          "team_id": 777
+        },
+        {
+          "source_id": 9501439,
+          "name": "Pînzaru",
+          "team_id": 777
+        },
+        {
+          "source_id": 9501440,
+          "name": "Stefan",
+          "team_id": 777
+        },
+        {
+          "source_id": 9501441,
+          "name": "Tănase",
+          "team_id": 777
+        },
+        {
+          "source_id": 9501442,
+          "name": "Baston",
+          "team_id": 777
+        },
+        {
+          "source_id": 9501443,
+          "name": "Cornea",
+          "team_id": 777
+        }
+      ],
+      "removed_fabricated": [],
+      "not_applied": []
+    },
+    {
+      "country": "Rumania",
+      "club": "FC Rapid Bucureşti",
+      "team_source_id": 780,
+      "team_created": false,
+      "squad_read": 18,
+      "club_level_anchor": 72,
+      "created": [],
+      "moved_from_container": [],
+      "left_in_their_club": [
+        {
+          "source_id": 9494020,
+          "name": "Bogdan Stelea",
+          "team_id": 409
+        },
+        {
+          "source_id": 9501444,
+          "name": "Toader",
+          "team_id": 780
+        },
+        {
+          "source_id": 9501445,
+          "name": "Bogoi",
+          "team_id": 780
+        },
+        {
+          "source_id": 9501446,
+          "name": "Cîrstea",
+          "team_id": 780
+        },
+        {
+          "source_id": 9501447,
+          "name": "Guzun",
+          "team_id": 780
+        },
+        {
+          "source_id": 9501448,
+          "name": "Iovan",
+          "team_id": 780
+        },
+        {
+          "source_id": 9501449,
+          "name": "Stanciu",
+          "team_id": 780
+        },
+        {
+          "source_id": 9501450,
+          "name": "Vamescu",
+          "team_id": 780
+        },
+        {
+          "source_id": 9494018,
+          "name": "Iulian Chiriță",
+          "team_id": 780
+        },
+        {
+          "source_id": 9501451,
+          "name": "Harea",
+          "team_id": 780
+        },
+        {
+          "source_id": 9501452,
+          "name": "Iosif",
+          "team_id": 780
+        },
+        {
+          "source_id": 9497020,
+          "name": "Danut Lupu",
+          "team_id": 9347007
+        },
+        {
+          "source_id": 9501453,
+          "name": "Motroc",
+          "team_id": 780
+        },
+        {
+          "source_id": 9501454,
+          "name": "Pavel",
+          "team_id": 780
+        },
+        {
+          "source_id": 9501455,
+          "name": "Ţîră",
+          "team_id": 780
+        },
+        {
+          "source_id": 9501456,
+          "name": "Zamfir",
+          "team_id": 780
+        },
+        {
+          "source_id": 9501457,
+          "name": "Andraşi",
+          "team_id": 780
+        },
+        {
+          "source_id": 9494024,
+          "name": "Ion Vlădoiu",
+          "team_id": 613
+        }
+      ],
+      "removed_fabricated": [],
+      "not_applied": []
+    },
+    {
+      "country": "Rumania",
+      "club": "Universitatea Cluj",
+      "team_source_id": 1554,
+      "team_created": false,
+      "squad_read": 9,
+      "club_level_anchor": 65,
+      "created": [],
+      "moved_from_container": [],
+      "left_in_their_club": [
+        {
+          "source_id": 9501458,
+          "name": "Colceag",
+          "team_id": 1554
+        },
+        {
+          "source_id": 9501459,
+          "name": "Nagy",
+          "team_id": 1554
+        },
+        {
+          "source_id": 9501460,
+          "name": "Falub",
+          "team_id": 1554
+        },
+        {
+          "source_id": 9501461,
+          "name": "Gherman",
+          "team_id": 1554
+        },
+        {
+          "source_id": 9501462,
+          "name": "Necula",
+          "team_id": 1554
+        },
+        {
+          "source_id": 9501463,
+          "name": "Zanc",
+          "team_id": 1554
+        },
+        {
+          "source_id": 9501464,
+          "name": "Dican",
+          "team_id": 1554
+        },
+        {
+          "source_id": 9501465,
+          "name": "Moga",
+          "team_id": 1554
+        },
+        {
+          "source_id": 9501466,
+          "name": "Sabo",
+          "team_id": 1554
+        }
+      ],
+      "removed_fabricated": [],
+      "not_applied": []
+    },
     {
       "country": "Rumania",
       "club": "CS Universitatea Craiova",
       "team_source_id": 1475,
       "team_created": false,
       "squad_read": 20,
-      "club_level_anchor": 77,
-      "created": [
+      "club_level_anchor": 75,
+      "created": [],
+      "moved_from_container": [],
+      "left_in_their_club": [
         {
           "source_id": 9501986,
-          "name": "Dorin Arcanu",
-          "overall": 77
+          "name": "Arcanu",
+          "team_id": 1475
         },
         {
           "source_id": 9501987,
-          "name": "Silviu Lung",
-          "overall": 77
+          "name": "Lung",
+          "team_id": 1475
         },
         {
           "source_id": 9501988,
-          "name": "Eugen Vodă",
-          "overall": 76
+          "name": "Vodă",
+          "team_id": 1475
         },
         {
           "source_id": 9501989,
-          "name": "George Biţă",
-          "overall": 76
+          "name": "Biţă",
+          "team_id": 1475
         },
         {
           "source_id": 9501990,
-          "name": "Victor Cojocaru",
-          "overall": 76
+          "name": "Cojocaru",
+          "team_id": 1475
         },
         {
           "source_id": 9501991,
-          "name": "Ovidiu Dodu",
-          "overall": 75
+          "name": "Dodu",
+          "team_id": 1475
         },
         {
           "source_id": 9501992,
-          "name": "Remus Ganea",
-          "overall": 75
+          "name": "Ganea",
+          "team_id": 1475
         },
         {
           "source_id": 9501993,
-          "name": "Daniel Mogoşanu",
-          "overall": 75
+          "name": "Mogoşanu",
+          "team_id": 1475
         },
         {
           "source_id": 9501994,
-          "name": "Emil Săndoi",
-          "overall": 74
+          "name": "Săndoi",
+          "team_id": 1475
         },
         {
           "source_id": 9501995,
-          "name": "Ion Sburlea",
-          "overall": 74
+          "name": "Sburlea",
+          "team_id": 1475
         },
         {
           "source_id": 9501996,
-          "name": "Nicolae Zamfir",
-          "overall": 73
+          "name": "Zamfir",
+          "team_id": 1475
         },
         {
           "source_id": 9501997,
-          "name": "Aurel Călin",
-          "overall": 73
+          "name": "Călin",
+          "team_id": 1475
         },
         {
           "source_id": 9501998,
-          "name": "Silvian Cristescu",
-          "overall": 73
+          "name": "Cristescu",
+          "team_id": 1475
         },
-        {
-          "source_id": 9501999,
-          "name": "Cristian Vasc",
-          "overall": 72
-        },
-        {
-          "source_id": 9502000,
-          "name": "Gică Craioveanu",
-          "overall": 72
-        },
-        {
-          "source_id": 9502001,
-          "name": "Ionel Gane",
-          "overall": 72
-        },
-        {
-          "source_id": 9502002,
-          "name": "Eugen Neagoe",
-          "overall": 71
-        },
-        {
-          "source_id": 9502003,
-          "name": "Adrian Pigulea",
-          "overall": 71
-        }
-      ],
-      "moved_from_container": [
         {
           "source_id": 9494027,
-          "name": "Corneliu Papură"
+          "name": "Corneliu Papură",
+          "team_id": 1475
         },
         {
           "source_id": 9494028,
-          "name": "Ovidiu Stîngă"
+          "name": "Ovidiu Stîngă",
+          "team_id": 1475
+        },
+        {
+          "source_id": 9501999,
+          "name": "Vasc",
+          "team_id": 1475
+        },
+        {
+          "source_id": 9502000,
+          "name": "Craioveanu",
+          "team_id": 1475
+        },
+        {
+          "source_id": 9502001,
+          "name": "Gane",
+          "team_id": 1475
+        },
+        {
+          "source_id": 9502002,
+          "name": "Neagoe",
+          "team_id": 1475
+        },
+        {
+          "source_id": 9502003,
+          "name": "Pigulea",
+          "team_id": 1475
         }
       ],
-      "left_in_their_club": [],
-      "removed_fabricated": [
+      "removed_fabricated": [],
+      "not_applied": []
+    },
+    {
+      "country": "Rumania",
+      "club": "FC Petrolul Ploiesti",
+      "team_source_id": 1049,
+      "team_created": false,
+      "squad_read": 13,
+      "club_level_anchor": 73,
+      "created": [],
+      "moved_from_container": [],
+      "left_in_their_club": [
         {
-          "source_id": 15337,
-          "name": "Gunesch"
+          "source_id": 9494030,
+          "name": "Ștefan Preda",
+          "team_id": 1049
         },
         {
-          "source_id": 20593,
-          "name": "Berberović"
+          "source_id": 9501467,
+          "name": "Chiriţă",
+          "team_id": 1049
         },
         {
-          "source_id": 21801,
-          "name": "Aleksandrov"
+          "source_id": 9501468,
+          "name": "Grigore",
+          "team_id": 1049
         },
         {
-          "source_id": 23366,
-          "name": "Horj"
+          "source_id": 9501469,
+          "name": "Nemtanu",
+          "team_id": 1049
         },
         {
-          "source_id": 24913,
-          "name": "Mendes"
+          "source_id": 9501470,
+          "name": "Pitulice",
+          "team_id": 1049
         },
         {
-          "source_id": 38756,
-          "name": "Traian Mureşan"
+          "source_id": 9501471,
+          "name": "Răchită",
+          "team_id": 1049
         },
         {
-          "source_id": 38757,
-          "name": "Roşu"
+          "source_id": 9501472,
+          "name": "Ruse",
+          "team_id": 1049
         },
         {
-          "source_id": 38758,
-          "name": "Tănase"
+          "source_id": 9501473,
+          "name": "Abăluţă",
+          "team_id": 1049
         },
         {
-          "source_id": 38759,
-          "name": "Dean"
+          "source_id": 9501474,
+          "name": "Bastina",
+          "team_id": 1049
         },
         {
-          "source_id": 38760,
-          "name": "Lobont"
+          "source_id": 9501475,
+          "name": "Grama",
+          "team_id": 1049
         },
         {
-          "source_id": 38761,
-          "name": "Petre"
+          "source_id": 9501476,
+          "name": "Matei",
+          "team_id": 1049
         },
         {
-          "source_id": 38762,
-          "name": "Bud"
+          "source_id": 9501477,
+          "name": "Mihalache",
+          "team_id": 1049
         },
         {
-          "source_id": 38763,
-          "name": "Rîmniceanu"
-        },
-        {
-          "source_id": 38764,
-          "name": "Stăncioiu"
-        },
-        {
-          "source_id": 38765,
-          "name": "Sendroiu"
-        },
-        {
-          "source_id": 38766,
-          "name": "Negoiță"
-        },
-        {
-          "source_id": 38767,
-          "name": "Andone"
-        },
-        {
-          "source_id": 38768,
-          "name": "Marius"
-        },
-        {
-          "source_id": 38769,
-          "name": "Nistor"
+          "source_id": 9501478,
+          "name": "Toader",
+          "team_id": 1049
         }
       ],
+      "removed_fabricated": [],
+      "not_applied": []
+    },
+    {
+      "country": "Polonia",
+      "club": "Górnik Zabrze",
+      "team_source_id": 1007,
+      "team_created": false,
+      "squad_read": 23,
+      "club_level_anchor": 65,
+      "created": [],
+      "moved_from_container": [],
+      "left_in_their_club": [
+        {
+          "source_id": 9501479,
+          "name": "Bęben",
+          "team_id": 1007
+        },
+        {
+          "source_id": 9501480,
+          "name": "Klytta",
+          "team_id": 1007
+        },
+        {
+          "source_id": 9501481,
+          "name": "Kłak",
+          "team_id": 1007
+        },
+        {
+          "source_id": 9501482,
+          "name": "Brehmer",
+          "team_id": 1007
+        },
+        {
+          "source_id": 9501483,
+          "name": "Brzoza",
+          "team_id": 1007
+        },
+        {
+          "source_id": 9501484,
+          "name": "Grembocki",
+          "team_id": 1007
+        },
+        {
+          "source_id": 9501485,
+          "name": "Hajto",
+          "team_id": 1007
+        },
+        {
+          "source_id": 9501486,
+          "name": "Lekki",
+          "team_id": 1007
+        },
+        {
+          "source_id": 9501487,
+          "name": "Wałdoch",
+          "team_id": 1007
+        },
+        {
+          "source_id": 9501488,
+          "name": "Agafon",
+          "team_id": 1007
+        },
+        {
+          "source_id": 9501489,
+          "name": "Brosz",
+          "team_id": 1007
+        },
+        {
+          "source_id": 9501490,
+          "name": "Brzęczek",
+          "team_id": 1007
+        },
+        {
+          "source_id": 9501491,
+          "name": "Dziuk",
+          "team_id": 1007
+        },
+        {
+          "source_id": 9501492,
+          "name": "Kocyba",
+          "team_id": 1007
+        },
+        {
+          "source_id": 9501493,
+          "name": "Koseła",
+          "team_id": 1007
+        },
+        {
+          "source_id": 9501494,
+          "name": "Kubik",
+          "team_id": 1007
+        },
+        {
+          "source_id": 9501495,
+          "name": "Orzeszek",
+          "team_id": 1007
+        },
+        {
+          "source_id": 9501496,
+          "name": "Wallon",
+          "team_id": 1007
+        },
+        {
+          "source_id": 9501497,
+          "name": "Golda",
+          "team_id": 1007
+        },
+        {
+          "source_id": 9501498,
+          "name": "Mielcarski",
+          "team_id": 1007
+        },
+        {
+          "source_id": 9501499,
+          "name": "Nosal",
+          "team_id": 1007
+        },
+        {
+          "source_id": 9501500,
+          "name": "Szemoński",
+          "team_id": 1007
+        },
+        {
+          "source_id": 9501501,
+          "name": "Tarachulski",
+          "team_id": 1007
+        }
+      ],
+      "removed_fabricated": [],
       "not_applied": []
     },
     {
@@ -204,94 +909,53 @@
       "team_source_id": 603,
       "team_created": false,
       "squad_read": 22,
-      "club_level_anchor": 67,
-      "created": [
-        {
-          "source_id": 9502004,
-          "name": "Krzysztof Apolinarski",
-          "overall": 67
-        },
-        {
-          "source_id": 9502005,
-          "name": "Robert Mioduszewski",
-          "overall": 67
-        },
-        {
-          "source_id": 9502006,
-          "name": "Jacek Przybylski",
-          "overall": 66
-        },
-        {
-          "source_id": 9502007,
-          "name": "Tomasz Augustyniak",
-          "overall": 66
-        },
-        {
-          "source_id": 9502008,
-          "name": "Przemysław Bereszyński",
-          "overall": 65
-        },
-        {
-          "source_id": 9502009,
-          "name": "Marcin Drajer",
-          "overall": 65
-        },
-        {
-          "source_id": 9502010,
-          "name": "Waldemar Kryger",
-          "overall": 65
-        },
-        {
-          "source_id": 9502011,
-          "name": "Marek Rzepka",
-          "overall": 64
-        },
-        {
-          "source_id": 9502012,
-          "name": "Rafał Kasalik",
-          "overall": 64
-        },
-        {
-          "source_id": 9502013,
-          "name": "Dariusz Kofnyt",
-          "overall": 63
-        },
-        {
-          "source_id": 9502014,
-          "name": "Krzysztof Piskuła",
-          "overall": 63
-        },
-        {
-          "source_id": 9502015,
-          "name": "Arek Radomski",
-          "overall": 63
-        },
-        {
-          "source_id": 9502016,
-          "name": "Ryszard Remień",
-          "overall": 62
-        },
-        {
-          "source_id": 9502017,
-          "name": "Dariusz Skrzypczak",
-          "overall": 62
-        },
-        {
-          "source_id": 9502018,
-          "name": "Waldemar Przysiuda",
-          "overall": 61
-        },
-        {
-          "source_id": 9502019,
-          "name": "Artur Wichniarek",
-          "overall": 61
-        }
-      ],
+      "club_level_anchor": 65,
+      "created": [],
       "moved_from_container": [],
       "left_in_their_club": [
         {
+          "source_id": 9502004,
+          "name": "Apolinarski",
+          "team_id": 603
+        },
+        {
+          "source_id": 9502005,
+          "name": "Mioduszewski",
+          "team_id": 603
+        },
+        {
+          "source_id": 9502006,
+          "name": "Przybylski",
+          "team_id": 603
+        },
+        {
+          "source_id": 9502007,
+          "name": "Augustyniak",
+          "team_id": 603
+        },
+        {
           "source_id": 9501270,
           "name": "Bąk",
+          "team_id": 603
+        },
+        {
+          "source_id": 9502008,
+          "name": "Bereszyński",
+          "team_id": 603
+        },
+        {
+          "source_id": 9502009,
+          "name": "Drajer",
+          "team_id": 603
+        },
+        {
+          "source_id": 9502010,
+          "name": "Kryger",
+          "team_id": 603
+        },
+        {
+          "source_id": 9502011,
+          "name": "Rzepka",
           "team_id": 603
         },
         {
@@ -300,8 +964,38 @@
           "team_id": 603
         },
         {
+          "source_id": 9502012,
+          "name": "Kasalik",
+          "team_id": 603
+        },
+        {
+          "source_id": 9502013,
+          "name": "Kofnyt",
+          "team_id": 603
+        },
+        {
           "source_id": 9501272,
           "name": "Moskal",
+          "team_id": 603
+        },
+        {
+          "source_id": 9502014,
+          "name": "Piskuła",
+          "team_id": 603
+        },
+        {
+          "source_id": 9502015,
+          "name": "Radomski",
+          "team_id": 603
+        },
+        {
+          "source_id": 9502016,
+          "name": "Remień",
+          "team_id": 603
+        },
+        {
+          "source_id": 9502017,
+          "name": "Skrzypczak",
           "team_id": 603
         },
         {
@@ -315,8 +1009,18 @@
           "team_id": 603
         },
         {
+          "source_id": 9502018,
+          "name": "Przysiuda",
+          "team_id": 603
+        },
+        {
           "source_id": 9501274,
           "name": "Trzeciak",
+          "team_id": 603
+        },
+        {
+          "source_id": 9502019,
+          "name": "Wichniarek",
           "team_id": 603
         }
       ],
@@ -329,182 +1033,706 @@
       "team_source_id": 779,
       "team_created": false,
       "squad_read": 21,
-      "club_level_anchor": 68,
-      "created": [
+      "club_level_anchor": 65,
+      "created": [],
+      "moved_from_container": [],
+      "left_in_their_club": [
         {
           "source_id": 9502020,
-          "name": "Marcin Muszyński",
-          "overall": 68
+          "name": "Muszyński",
+          "team_id": 779
         },
         {
           "source_id": 9502021,
-          "name": "Zbigniew Robakiewicz",
-          "overall": 68
+          "name": "Robakiewicz",
+          "team_id": 779
         },
         {
           "source_id": 9502022,
-          "name": "Maciej Szczęsny",
-          "overall": 67
+          "name": "Szczęsny",
+          "team_id": 779
         },
         {
           "source_id": 9502023,
-          "name": "Marcin Jałocha",
-          "overall": 67
+          "name": "Jałocha",
+          "team_id": 779
         },
         {
           "source_id": 9502024,
-          "name": "Marek Jóźwiak",
-          "overall": 67
+          "name": "Jóźwiak",
+          "team_id": 779
         },
         {
           "source_id": 9502025,
-          "name": "Juliusz Kruszankin",
-          "overall": 66
+          "name": "Kruszankin",
+          "team_id": 779
         },
         {
           "source_id": 9502026,
-          "name": "Krzysztof Ratajczyk",
-          "overall": 66
+          "name": "Ratajczyk",
+          "team_id": 779
         },
         {
           "source_id": 9502027,
-          "name": "Tomasz Smolarczyk",
-          "overall": 66
+          "name": "Smolarczyk",
+          "team_id": 779
         },
         {
           "source_id": 9502028,
-          "name": "Jacek Zieliński",
-          "overall": 66
+          "name": "Zieliński",
+          "team_id": 779
         },
         {
           "source_id": 9502029,
-          "name": "Dariusz Bayer",
-          "overall": 65
+          "name": "Bayer",
+          "team_id": 779
         },
         {
           "source_id": 9502030,
-          "name": "Adam Fedoruk",
-          "overall": 65
+          "name": "Fedoruk",
+          "team_id": 779
         },
         {
           "source_id": 9502031,
-          "name": "Zbigniew Mandziejewicz",
-          "overall": 65
+          "name": "Mandziejewicz",
+          "team_id": 779
         },
         {
           "source_id": 9502032,
-          "name": "Radosław Michalski",
-          "overall": 64
+          "name": "Michalski",
+          "team_id": 779
         },
         {
           "source_id": 9502033,
-          "name": "Leszek Pisz",
-          "overall": 64
+          "name": "Pisz",
+          "team_id": 779
         },
         {
           "source_id": 9502034,
-          "name": "Krzysztof Przala",
-          "overall": 64
+          "name": "Przala",
+          "team_id": 779
         },
         {
           "source_id": 9502035,
-          "name": "Grzegorz Wędzyński",
-          "overall": 64
+          "name": "Wędzyński",
+          "team_id": 779
         },
         {
           "source_id": 9502036,
-          "name": "Andrzej Głowacki",
-          "overall": 63
+          "name": "Głowacki",
+          "team_id": 779
         },
         {
           "source_id": 9502037,
-          "name": "Janusz Kopec",
-          "overall": 63
+          "name": "Kopec",
+          "team_id": 779
         },
         {
           "source_id": 9502038,
-          "name": "Wojciech Kowalczyk",
-          "overall": 63
+          "name": "Kowalczyk",
+          "team_id": 779
         },
         {
           "source_id": 9502039,
-          "name": "Roman Nowicki",
-          "overall": 62
+          "name": "Nowicki",
+          "team_id": 779
         },
         {
           "source_id": 9502040,
-          "name": "Dariusz Szelag",
+          "name": "Szelag",
+          "team_id": 779
+        }
+      ],
+      "removed_fabricated": [],
+      "not_applied": []
+    },
+    {
+      "country": "Polonia",
+      "club": "Widzew Lodz",
+      "team_source_id": 1731,
+      "team_created": false,
+      "squad_read": 17,
+      "club_level_anchor": 65,
+      "created": [
+        {
+          "source_id": 9502569,
+          "name": "Andrzej Woźniak",
+          "overall": 65
+        },
+        {
+          "source_id": 9502570,
+          "name": "Witold Bendkowski",
+          "overall": 65
+        },
+        {
+          "source_id": 9502571,
+          "name": "Marek Chojnacki",
+          "overall": 64
+        },
+        {
+          "source_id": 9502572,
+          "name": "Artur Kościuk",
+          "overall": 64
+        },
+        {
+          "source_id": 9502573,
+          "name": "Grzegorz Krysiak",
+          "overall": 63
+        },
+        {
+          "source_id": 9502574,
+          "name": "Tomasz Lenart",
+          "overall": 63
+        },
+        {
+          "source_id": 9502575,
+          "name": "Zdzisław Leszczyński",
+          "overall": 63
+        },
+        {
+          "source_id": 9502576,
+          "name": "Andrzej Ambrożej",
           "overall": 62
+        },
+        {
+          "source_id": 9502577,
+          "name": "Jarosław Dziedzic",
+          "overall": 62
+        },
+        {
+          "source_id": 9502578,
+          "name": "Dariusz Janczak",
+          "overall": 62
+        },
+        {
+          "source_id": 9502579,
+          "name": "Janusz Kaczówka",
+          "overall": 61
+        },
+        {
+          "source_id": 9502580,
+          "name": "Dariusz Nowacki",
+          "overall": 61
+        },
+        {
+          "source_id": 9502581,
+          "name": "Rafał Pawlak",
+          "overall": 61
+        },
+        {
+          "source_id": 9502582,
+          "name": "Dariusz Podolski",
+          "overall": 60
+        },
+        {
+          "source_id": 9502583,
+          "name": "Tomasz Wieszczycki",
+          "overall": 60
+        },
+        {
+          "source_id": 9502584,
+          "name": "Tomasz Cebula",
+          "overall": 59
+        },
+        {
+          "source_id": 9502585,
+          "name": "Jarosław Soszyński",
+          "overall": 59
         }
       ],
       "moved_from_container": [],
       "left_in_their_club": [],
-      "removed_fabricated": [
+      "removed_fabricated": [],
+      "not_applied": []
+    },
+    {
+      "country": "Polonia",
+      "club": "MKS Pogoń Szczecin",
+      "team_source_id": 1734,
+      "team_created": false,
+      "squad_read": 20,
+      "club_level_anchor": 65,
+      "created": [],
+      "moved_from_container": [],
+      "left_in_their_club": [
         {
-          "source_id": 11129,
-          "name": "Drygas"
+          "source_id": 9501502,
+          "name": "Majdan",
+          "team_id": 1734
         },
         {
-          "source_id": 11175,
-          "name": "Kadlec"
+          "source_id": 9501503,
+          "name": "Jaskulski",
+          "team_id": 1734
         },
         {
-          "source_id": 11916,
-          "name": "Sonnerat"
+          "source_id": 9501504,
+          "name": "Miązek",
+          "team_id": 1734
         },
         {
-          "source_id": 15015,
-          "name": "Wellington"
+          "source_id": 9501505,
+          "name": "Pokładowski",
+          "team_id": 1734
         },
         {
-          "source_id": 15315,
-          "name": "Ostojic"
+          "source_id": 9501506,
+          "name": "Stolarczyk",
+          "team_id": 1734
         },
         {
-          "source_id": 15321,
-          "name": "Kosecki"
+          "source_id": 9501507,
+          "name": "Studziński",
+          "team_id": 1734
         },
         {
-          "source_id": 15327,
-          "name": "Rybus"
+          "source_id": 9501508,
+          "name": "Walburg",
+          "team_id": 1734
         },
         {
-          "source_id": 16894,
-          "name": "Pekhart"
+          "source_id": 9501509,
+          "name": "Benesz",
+          "team_id": 1734
         },
         {
-          "source_id": 18014,
-          "name": "Cywka"
+          "source_id": 9501510,
+          "name": "Drumlak",
+          "team_id": 1734
         },
         {
-          "source_id": 20622,
-          "name": "Michalski"
+          "source_id": 9501511,
+          "name": "Kuras",
+          "team_id": 1734
         },
         {
-          "source_id": 21793,
-          "name": "Galchev"
+          "source_id": 9501512,
+          "name": "Latała",
+          "team_id": 1734
         },
         {
-          "source_id": 23761,
-          "name": "Čirjak"
+          "source_id": 9501513,
+          "name": "Matlak",
+          "team_id": 1734
         },
         {
-          "source_id": 24069,
-          "name": "Skaba"
+          "source_id": 9501514,
+          "name": "Nikitin",
+          "team_id": 1734
         },
         {
-          "source_id": 24072,
-          "name": "Efir"
+          "source_id": 9501515,
+          "name": "Oleszek",
+          "team_id": 1734
         },
         {
-          "source_id": 24074,
-          "name": "Bereszyński"
+          "source_id": 9501516,
+          "name": "Szubert",
+          "team_id": 1734
         },
         {
-          "source_id": 26115,
-          "name": "Białkowski"
+          "source_id": 9501517,
+          "name": "Bugaj",
+          "team_id": 1734
+        },
+        {
+          "source_id": 9501518,
+          "name": "Dymkowski",
+          "team_id": 1734
+        },
+        {
+          "source_id": 9501519,
+          "name": "Kulbacki",
+          "team_id": 1734
+        },
+        {
+          "source_id": 9501520,
+          "name": "Moskalewicz",
+          "team_id": 1734
+        },
+        {
+          "source_id": 9501521,
+          "name": "Rafałowicz",
+          "team_id": 1734
         }
       ],
+      "removed_fabricated": [],
+      "not_applied": []
+    },
+    {
+      "country": "Polonia",
+      "club": "Ruch Chorzow SA",
+      "team_source_id": 605,
+      "team_created": false,
+      "squad_read": 22,
+      "club_level_anchor": 65,
+      "created": [],
+      "moved_from_container": [],
+      "left_in_their_club": [
+        {
+          "source_id": 9501522,
+          "name": "Kołodziejczyk",
+          "team_id": 605
+        },
+        {
+          "source_id": 9501523,
+          "name": "Lech",
+          "team_id": 605
+        },
+        {
+          "source_id": 9501524,
+          "name": "Fornalik",
+          "team_id": 605
+        },
+        {
+          "source_id": 9501525,
+          "name": "Fornalik",
+          "team_id": 605
+        },
+        {
+          "source_id": 9501526,
+          "name": "Gęsior",
+          "team_id": 605
+        },
+        {
+          "source_id": 9501527,
+          "name": "Jaworski",
+          "team_id": 605
+        },
+        {
+          "source_id": 9501528,
+          "name": "Mosór",
+          "team_id": 605
+        },
+        {
+          "source_id": 9501529,
+          "name": "Wagner",
+          "team_id": 605
+        },
+        {
+          "source_id": 9501530,
+          "name": "Wawrzyczek",
+          "team_id": 605
+        },
+        {
+          "source_id": 9501531,
+          "name": "Wleciałowski",
+          "team_id": 605
+        },
+        {
+          "source_id": 9501532,
+          "name": "Bednarz",
+          "team_id": 605
+        },
+        {
+          "source_id": 9501533,
+          "name": "Dąbrowski",
+          "team_id": 605
+        },
+        {
+          "source_id": 9501534,
+          "name": "Fornalak",
+          "team_id": 605
+        },
+        {
+          "source_id": 9501535,
+          "name": "Kryger",
+          "team_id": 605
+        },
+        {
+          "source_id": 9501536,
+          "name": "Łukasik",
+          "team_id": 605
+        },
+        {
+          "source_id": 9501537,
+          "name": "Mosór",
+          "team_id": 605
+        },
+        {
+          "source_id": 9501538,
+          "name": "Paluch",
+          "team_id": 605
+        },
+        {
+          "source_id": 9501539,
+          "name": "Baucz",
+          "team_id": 605
+        },
+        {
+          "source_id": 9501540,
+          "name": "Bizacki",
+          "team_id": 605
+        },
+        {
+          "source_id": 9501541,
+          "name": "Matysek",
+          "team_id": 605
+        },
+        {
+          "source_id": 9501542,
+          "name": "Posilek",
+          "team_id": 605
+        },
+        {
+          "source_id": 9501543,
+          "name": "Śrutwa",
+          "team_id": 605
+        }
+      ],
+      "removed_fabricated": [],
+      "not_applied": []
+    },
+    {
+      "country": "Polonia",
+      "club": "Widzew Lodz",
+      "team_source_id": 1731,
+      "team_created": false,
+      "squad_read": 17,
+      "club_level_anchor": 64,
+      "created": [],
+      "moved_from_container": [],
+      "left_in_their_club": [
+        {
+          "source_id": 9501544,
+          "name": "Ludwikowski",
+          "team_id": 1731
+        },
+        {
+          "source_id": 9501545,
+          "name": "Muchiński",
+          "team_id": 1731
+        },
+        {
+          "source_id": 9501546,
+          "name": "Bajor",
+          "team_id": 1731
+        },
+        {
+          "source_id": 9501547,
+          "name": "Boguś",
+          "team_id": 1731
+        },
+        {
+          "source_id": 9501548,
+          "name": "Bogusz",
+          "team_id": 1731
+        },
+        {
+          "source_id": 9501549,
+          "name": "Łapiński",
+          "team_id": 1731
+        },
+        {
+          "source_id": 9501550,
+          "name": "Rajkiewicz",
+          "team_id": 1731
+        },
+        {
+          "source_id": 9501551,
+          "name": "Czerwiec",
+          "team_id": 1731
+        },
+        {
+          "source_id": 9501552,
+          "name": "Gula",
+          "team_id": 1731
+        },
+        {
+          "source_id": 9501553,
+          "name": "Jóźwiak",
+          "team_id": 1731
+        },
+        {
+          "source_id": 9501554,
+          "name": "Kupka",
+          "team_id": 1731
+        },
+        {
+          "source_id": 9501555,
+          "name": "Miąszkiewicz",
+          "team_id": 1731
+        },
+        {
+          "source_id": 9501556,
+          "name": "Mikhalchuk",
+          "team_id": 1731
+        },
+        {
+          "source_id": 9501557,
+          "name": "Szarpak",
+          "team_id": 1731
+        },
+        {
+          "source_id": 9501558,
+          "name": "Wyciszkiewicz",
+          "team_id": 1731
+        },
+        {
+          "source_id": 9501559,
+          "name": "Kowalczyk",
+          "team_id": 1731
+        },
+        {
+          "source_id": 9501560,
+          "name": "Małocha",
+          "team_id": 1731
+        }
+      ],
+      "removed_fabricated": [],
+      "not_applied": []
+    },
+    {
+      "country": "Bulgaria",
+      "club": "Botev Plovdiv",
+      "team_source_id": 1026,
+      "team_created": false,
+      "squad_read": 22,
+      "club_level_anchor": 62,
+      "created": [],
+      "moved_from_container": [],
+      "left_in_their_club": [
+        {
+          "source_id": 9500835,
+          "name": "Dimitar Popov",
+          "team_id": 1026
+        },
+        {
+          "source_id": 9501561,
+          "name": "Vasilev",
+          "team_id": 1026
+        },
+        {
+          "source_id": 9501562,
+          "name": "Angelov",
+          "team_id": 1026
+        },
+        {
+          "source_id": 9501563,
+          "name": "Dimitrov",
+          "team_id": 1026
+        },
+        {
+          "source_id": 9501564,
+          "name": "Engibarov",
+          "team_id": 1026
+        },
+        {
+          "source_id": 9501565,
+          "name": "Kochev",
+          "team_id": 1026
+        },
+        {
+          "source_id": 9501566,
+          "name": "Mladenov",
+          "team_id": 1026
+        },
+        {
+          "source_id": 9501567,
+          "name": "Niklenov",
+          "team_id": 1026
+        },
+        {
+          "source_id": 9501568,
+          "name": "Sivinov",
+          "team_id": 1026
+        },
+        {
+          "source_id": 9501569,
+          "name": "Bakalov",
+          "team_id": 1026
+        },
+        {
+          "source_id": 9501570,
+          "name": "Dermendjiev",
+          "team_id": 1026
+        },
+        {
+          "source_id": 9501571,
+          "name": "Dimitrov",
+          "team_id": 1026
+        },
+        {
+          "source_id": 9501572,
+          "name": "Dobrevski",
+          "team_id": 1026
+        },
+        {
+          "source_id": 9501573,
+          "name": "Petrov",
+          "team_id": 1026
+        },
+        {
+          "source_id": 9501574,
+          "name": "Rakov",
+          "team_id": 1026
+        },
+        {
+          "source_id": 9501575,
+          "name": "Vidolov",
+          "team_id": 1026
+        },
+        {
+          "source_id": 9501576,
+          "name": "Zaitsev",
+          "team_id": 1026
+        },
+        {
+          "source_id": 9501577,
+          "name": "Donev",
+          "team_id": 1026
+        },
+        {
+          "source_id": 9500837,
+          "name": "Georgi Donkov",
+          "team_id": 1026
+        },
+        {
+          "source_id": 9501578,
+          "name": "Draganov",
+          "team_id": 1026
+        },
+        {
+          "source_id": 9501579,
+          "name": "Khvoinev",
+          "team_id": 1026
+        },
+        {
+          "source_id": 9501580,
+          "name": "Shopov",
+          "team_id": 1026
+        }
+      ],
+      "removed_fabricated": [],
+      "not_applied": []
+    },
+    {
+      "country": "Bulgaria",
+      "club": "PFC Cherno More Varna",
+      "team_source_id": 1574,
+      "team_created": false,
+      "squad_read": 3,
+      "club_level_anchor": 65,
+      "created": [],
+      "moved_from_container": [],
+      "left_in_their_club": [
+        {
+          "source_id": 9501581,
+          "name": "Stoyanov",
+          "team_id": 1574
+        },
+        {
+          "source_id": 9501582,
+          "name": "Timnev",
+          "team_id": 1574
+        },
+        {
+          "source_id": 9501583,
+          "name": "Dragolov",
+          "team_id": 1574
+        }
+      ],
+      "removed_fabricated": [],
       "not_applied": []
     },
     {
@@ -513,113 +1741,73 @@
       "team_source_id": 476,
       "team_created": false,
       "squad_read": 26,
-      "club_level_anchor": 74,
-      "created": [
+      "club_level_anchor": 73,
+      "created": [],
+      "moved_from_container": [],
+      "left_in_their_club": [
         {
           "source_id": 9502041,
-          "name": "Oleg Morgun",
-          "overall": 74
+          "name": "Morgun",
+          "team_id": 476
         },
-        {
-          "source_id": 9502042,
-          "name": "Valentin Dartilov",
-          "overall": 74
-        },
-        {
-          "source_id": 9502043,
-          "name": "Stoil Georgiev",
-          "overall": 73
-        },
-        {
-          "source_id": 9502044,
-          "name": "Aleksandar Markov",
-          "overall": 72
-        },
-        {
-          "source_id": 9502045,
-          "name": "Vladko Shalamanov",
-          "overall": 72
-        },
-        {
-          "source_id": 9502046,
-          "name": "Tzanko Tzvetanov",
-          "overall": 71
-        },
-        {
-          "source_id": 9502047,
-          "name": "Dian Angelov",
-          "overall": 71
-        },
-        {
-          "source_id": 9502048,
-          "name": "Emil Mitsanski",
-          "overall": 70
-        },
-        {
-          "source_id": 9502049,
-          "name": "Veselin Sarbakov",
-          "overall": 70
-        },
-        {
-          "source_id": 9502050,
-          "name": "Alexandar Bonchev",
-          "overall": 70
-        },
-        {
-          "source_id": 9502051,
-          "name": "Plamen Getov",
-          "overall": 69
-        },
-        {
-          "source_id": 9502052,
-          "name": "Kancho Iordanov",
-          "overall": 69
-        },
-        {
-          "source_id": 9502053,
-          "name": "Dimitar Trendafilov",
-          "overall": 68
-        }
-      ],
-      "moved_from_container": [
         {
           "source_id": 9494152,
-          "name": "Plamen Nikolov"
+          "name": "Plamen Nikolov",
+          "team_id": 476
         },
         {
           "source_id": 9500839,
-          "name": "Zdravko Zdravkov"
+          "name": "Zdravko Zdravkov",
+          "team_id": 476
         },
         {
-          "source_id": 9494146,
-          "name": "Emil Kremenliev"
+          "source_id": 9502042,
+          "name": "Dartilov",
+          "team_id": 476
         },
         {
-          "source_id": 9494151,
-          "name": "Daniel Borimirov"
+          "source_id": 9502043,
+          "name": "Georgiev",
+          "team_id": 476
         },
-        {
-          "source_id": 9494150,
-          "name": "Nasko Sirakov"
-        },
-        {
-          "source_id": 9500182,
-          "name": "Magdy Tolba"
-        },
-        {
-          "source_id": 9494154,
-          "name": "Petar Aleksandrov"
-        }
-      ],
-      "left_in_their_club": [
         {
           "source_id": 9500836,
           "name": "Gosho Ginchev",
           "team_id": 476
         },
         {
+          "source_id": 9494146,
+          "name": "Emil Kremenliev",
+          "team_id": 476
+        },
+        {
+          "source_id": 9502044,
+          "name": "Markov",
+          "team_id": 476
+        },
+        {
+          "source_id": 9502045,
+          "name": "Shalamanov",
+          "team_id": 476
+        },
+        {
           "source_id": 9501278,
           "name": "Slavtchev",
+          "team_id": 476
+        },
+        {
+          "source_id": 9502046,
+          "name": "Tzvetanov",
+          "team_id": 476
+        },
+        {
+          "source_id": 9502047,
+          "name": "Angelov",
+          "team_id": 476
+        },
+        {
+          "source_id": 9494151,
+          "name": "Daniel Borimirov",
           "team_id": 476
         },
         {
@@ -633,14 +1821,359 @@
           "team_id": 1645
         },
         {
+          "source_id": 9502048,
+          "name": "Mitsanski",
+          "team_id": 476
+        },
+        {
+          "source_id": 9502049,
+          "name": "Sarbakov",
+          "team_id": 476
+        },
+        {
+          "source_id": 9494150,
+          "name": "Nasko Sirakov",
+          "team_id": 476
+        },
+        {
           "source_id": 9501279,
           "name": "Todorov",
+          "team_id": 476
+        },
+        {
+          "source_id": 9500182,
+          "name": "Magdy Tolba",
           "team_id": 476
         },
         {
           "source_id": 9494149,
           "name": "Zlatko Yankov",
           "team_id": 476
+        },
+        {
+          "source_id": 9494154,
+          "name": "Petar Aleksandrov",
+          "team_id": 476
+        },
+        {
+          "source_id": 9502050,
+          "name": "Bonchev",
+          "team_id": 476
+        },
+        {
+          "source_id": 9502051,
+          "name": "Getov",
+          "team_id": 476
+        },
+        {
+          "source_id": 9502052,
+          "name": "Iordanov",
+          "team_id": 476
+        },
+        {
+          "source_id": 9502053,
+          "name": "Trendafilov",
+          "team_id": 476
+        }
+      ],
+      "removed_fabricated": [],
+      "not_applied": []
+    },
+    {
+      "country": "Bulgaria",
+      "club": "Lokomotiv Plovdiv",
+      "team_source_id": 1645,
+      "team_created": false,
+      "squad_read": 20,
+      "club_level_anchor": 65,
+      "created": [],
+      "moved_from_container": [],
+      "left_in_their_club": [
+        {
+          "source_id": 9501584,
+          "name": "Kolev",
+          "team_id": 1645
+        },
+        {
+          "source_id": 9501585,
+          "name": "Dimitrov",
+          "team_id": 1645
+        },
+        {
+          "source_id": 9501586,
+          "name": "Djevizov",
+          "team_id": 1645
+        },
+        {
+          "source_id": 9501587,
+          "name": "Koev",
+          "team_id": 1645
+        },
+        {
+          "source_id": 9501588,
+          "name": "Kostov",
+          "team_id": 1645
+        },
+        {
+          "source_id": 9501589,
+          "name": "Marinov",
+          "team_id": 1645
+        },
+        {
+          "source_id": 9501590,
+          "name": "Valchev",
+          "team_id": 1645
+        },
+        {
+          "source_id": 9501591,
+          "name": "Vasev",
+          "team_id": 1645
+        },
+        {
+          "source_id": 9501592,
+          "name": "Yumerski",
+          "team_id": 1645
+        },
+        {
+          "source_id": 9501593,
+          "name": "Krastev",
+          "team_id": 1645
+        },
+        {
+          "source_id": 9501594,
+          "name": "Marinov",
+          "team_id": 1645
+        },
+        {
+          "source_id": 9501595,
+          "name": "Milutinovic",
+          "team_id": 1645
+        },
+        {
+          "source_id": 9501596,
+          "name": "Petkov",
+          "team_id": 1645
+        },
+        {
+          "source_id": 9501597,
+          "name": "Vachkov",
+          "team_id": 1645
+        },
+        {
+          "source_id": 9501598,
+          "name": "Budimirović",
+          "team_id": 1645
+        },
+        {
+          "source_id": 9501599,
+          "name": "II",
+          "team_id": 1645
+        },
+        {
+          "source_id": 9501280,
+          "name": "Grigoraș",
+          "team_id": 476
+        },
+        {
+          "source_id": 9501600,
+          "name": "Ivanov",
+          "team_id": 1645
+        },
+        {
+          "source_id": 9501601,
+          "name": "Lazarov",
+          "team_id": 1645
+        },
+        {
+          "source_id": 9501602,
+          "name": "Vukojević",
+          "team_id": 1645
+        }
+      ],
+      "removed_fabricated": [],
+      "not_applied": []
+    },
+    {
+      "country": "Bulgaria",
+      "club": "Lokomotiv Sofia",
+      "team_source_id": 1644,
+      "team_created": false,
+      "squad_read": 8,
+      "club_level_anchor": 65,
+      "created": [],
+      "moved_from_container": [],
+      "left_in_their_club": [
+        {
+          "source_id": 9501603,
+          "name": "Manolkov",
+          "team_id": 1644
+        },
+        {
+          "source_id": 9501604,
+          "name": "Slavchev",
+          "team_id": 1644
+        },
+        {
+          "source_id": 9501605,
+          "name": "Zafirov",
+          "team_id": 1644
+        },
+        {
+          "source_id": 9501606,
+          "name": "Zdravkov",
+          "team_id": 1644
+        },
+        {
+          "source_id": 9501607,
+          "name": "Gruev",
+          "team_id": 1644
+        },
+        {
+          "source_id": 9501608,
+          "name": "Pavlov",
+          "team_id": 1644
+        },
+        {
+          "source_id": 9501609,
+          "name": "Vardarov",
+          "team_id": 1644
+        },
+        {
+          "source_id": 9501610,
+          "name": "Pramatov",
+          "team_id": 1644
+        }
+      ],
+      "removed_fabricated": [],
+      "not_applied": []
+    },
+    {
+      "country": "Bulgaria",
+      "club": "PFC Beroe Stara Zagora",
+      "team_source_id": 478,
+      "team_created": false,
+      "squad_read": 2,
+      "club_level_anchor": 68,
+      "created": [],
+      "moved_from_container": [],
+      "left_in_their_club": [
+        {
+          "source_id": 9501611,
+          "name": "Petrov",
+          "team_id": 478
+        },
+        {
+          "source_id": 9501612,
+          "name": "Shishkov",
+          "team_id": 478
+        }
+      ],
+      "removed_fabricated": [],
+      "not_applied": []
+    },
+    {
+      "country": "Bulgaria",
+      "club": "Slavia Sofia",
+      "team_source_id": 1575,
+      "team_created": false,
+      "squad_read": 13,
+      "club_level_anchor": 65,
+      "created": [],
+      "moved_from_container": [],
+      "left_in_their_club": [
+        {
+          "source_id": 9501613,
+          "name": "Ananiev",
+          "team_id": 1575
+        },
+        {
+          "source_id": 9501614,
+          "name": "Sheytanov",
+          "team_id": 1575
+        },
+        {
+          "source_id": 9501615,
+          "name": "Ivanov",
+          "team_id": 1575
+        },
+        {
+          "source_id": 9501616,
+          "name": "Kachamanov",
+          "team_id": 1575
+        },
+        {
+          "source_id": 9501617,
+          "name": "Paskov",
+          "team_id": 1575
+        },
+        {
+          "source_id": 9501618,
+          "name": "Pumpalov",
+          "team_id": 1575
+        },
+        {
+          "source_id": 9501619,
+          "name": "Pereira",
+          "team_id": 1575
+        },
+        {
+          "source_id": 9501620,
+          "name": "Nankov",
+          "team_id": 1575
+        },
+        {
+          "source_id": 9501621,
+          "name": "Simeonov",
+          "team_id": 1575
+        },
+        {
+          "source_id": 9501622,
+          "name": "Yonkov",
+          "team_id": 1575
+        },
+        {
+          "source_id": 9501623,
+          "name": "Chilibonov",
+          "team_id": 1575
+        },
+        {
+          "source_id": 9501624,
+          "name": "Mihaylov",
+          "team_id": 1575
+        },
+        {
+          "source_id": 9501625,
+          "name": "Petkov",
+          "team_id": 1575
+        }
+      ],
+      "removed_fabricated": [],
+      "not_applied": []
+    },
+    {
+      "country": "Bulgaria",
+      "club": "FC Lokomotiv Gorna Oryahovitsa",
+      "team_source_id": 2205,
+      "team_created": false,
+      "squad_read": 3,
+      "club_level_anchor": 65,
+      "created": [],
+      "moved_from_container": [],
+      "left_in_their_club": [
+        {
+          "source_id": 9501626,
+          "name": "Kolev",
+          "team_id": 2205
+        },
+        {
+          "source_id": 9501627,
+          "name": "Vasilev",
+          "team_id": 2205
+        },
+        {
+          "source_id": 9501628,
+          "name": "Kostadinov",
+          "team_id": 2205
         }
       ],
       "removed_fabricated": [],
@@ -652,71 +2185,15 @@
       "team_source_id": 633,
       "team_created": false,
       "squad_read": 20,
-      "club_level_anchor": 77,
-      "created": [
-        {
-          "source_id": 9502054,
-          "name": "Matts Andersson",
-          "overall": 77
-        },
-        {
-          "source_id": 9502055,
-          "name": "Fredrik Espmark",
-          "overall": 76
-        },
-        {
-          "source_id": 9502056,
-          "name": "Anders Hjelm",
-          "overall": 76
-        },
-        {
-          "source_id": 9502057,
-          "name": "Johan Mjällby",
-          "overall": 75
-        },
-        {
-          "source_id": 9502058,
-          "name": "Alexander Östlund",
-          "overall": 75
-        },
-        {
-          "source_id": 9502059,
-          "name": "Gary Sundgren",
-          "overall": 74
-        },
-        {
-          "source_id": 9502060,
-          "name": "Pierre Gallo",
-          "overall": 74
-        },
-        {
-          "source_id": 9502061,
-          "name": "Patrik Hagman",
-          "overall": 73
-        },
-        {
-          "source_id": 9502062,
-          "name": "Jesper Jansson",
-          "overall": 73
-        },
-        {
-          "source_id": 9502063,
-          "name": "Mattias Johansson",
-          "overall": 72
-        },
-        {
-          "source_id": 9502064,
-          "name": "Krister Nordin",
-          "overall": 72
-        },
-        {
-          "source_id": 9502065,
-          "name": "Pascal Simpson",
-          "overall": 71
-        }
-      ],
+      "club_level_anchor": 75,
+      "created": [],
       "moved_from_container": [],
       "left_in_their_club": [
+        {
+          "source_id": 9502054,
+          "name": "Andersson",
+          "team_id": 633
+        },
         {
           "source_id": 9494102,
           "name": "Magnus Hedman",
@@ -733,8 +2210,33 @@
           "team_id": 764
         },
         {
+          "source_id": 9502055,
+          "name": "Espmark",
+          "team_id": 633
+        },
+        {
+          "source_id": 9502056,
+          "name": "Hjelm",
+          "team_id": 633
+        },
+        {
+          "source_id": 9502057,
+          "name": "Mjällby",
+          "team_id": 633
+        },
+        {
+          "source_id": 9502058,
+          "name": "Östlund",
+          "team_id": 633
+        },
+        {
           "source_id": 9501196,
           "name": "Ståhl",
+          "team_id": 633
+        },
+        {
+          "source_id": 9502059,
+          "name": "Sundgren",
           "team_id": 633
         },
         {
@@ -743,8 +2245,33 @@
           "team_id": 633
         },
         {
+          "source_id": 9502060,
+          "name": "Gallo",
+          "team_id": 633
+        },
+        {
+          "source_id": 9502061,
+          "name": "Hagman",
+          "team_id": 633
+        },
+        {
+          "source_id": 9502062,
+          "name": "Jansson",
+          "team_id": 633
+        },
+        {
+          "source_id": 9502063,
+          "name": "Johansson",
+          "team_id": 633
+        },
+        {
           "source_id": 9501189,
           "name": "Lagerlöf",
+          "team_id": 633
+        },
+        {
+          "source_id": 9502064,
+          "name": "Nordin",
           "team_id": 633
         },
         {
@@ -756,6 +2283,110 @@
           "source_id": 9501190,
           "name": "Lidman",
           "team_id": 633
+        },
+        {
+          "source_id": 9502065,
+          "name": "Simpson",
+          "team_id": 633
+        }
+      ],
+      "removed_fabricated": [],
+      "not_applied": []
+    },
+    {
+      "country": "Suecia",
+      "club": "BK Häcken",
+      "team_source_id": 1242,
+      "team_created": false,
+      "squad_read": 17,
+      "club_level_anchor": 65,
+      "created": [],
+      "moved_from_container": [],
+      "left_in_their_club": [
+        {
+          "source_id": 9501629,
+          "name": "Johansson",
+          "team_id": 1242
+        },
+        {
+          "source_id": 9501630,
+          "name": "Olsson",
+          "team_id": 1242
+        },
+        {
+          "source_id": 9501631,
+          "name": "Enström",
+          "team_id": 1242
+        },
+        {
+          "source_id": 9501632,
+          "name": "Hollsten",
+          "team_id": 1242
+        },
+        {
+          "source_id": 9501633,
+          "name": "Lessmark",
+          "team_id": 1242
+        },
+        {
+          "source_id": 9501634,
+          "name": "Matovac",
+          "team_id": 1242
+        },
+        {
+          "source_id": 9501635,
+          "name": "Mattsson",
+          "team_id": 1242
+        },
+        {
+          "source_id": 9501636,
+          "name": "Nebrelius",
+          "team_id": 1242
+        },
+        {
+          "source_id": 9501637,
+          "name": "Palmquist",
+          "team_id": 1242
+        },
+        {
+          "source_id": 9501638,
+          "name": "Andersson",
+          "team_id": 1242
+        },
+        {
+          "source_id": 9501639,
+          "name": "Grankvist",
+          "team_id": 1242
+        },
+        {
+          "source_id": 9501640,
+          "name": "Henriksson",
+          "team_id": 1242
+        },
+        {
+          "source_id": 9501641,
+          "name": "Källström",
+          "team_id": 1242
+        },
+        {
+          "source_id": 9501642,
+          "name": "Rödlund",
+          "team_id": 1242
+        },
+        {
+          "source_id": 9501643,
+          "name": "Karlström",
+          "team_id": 1242
+        },
+        {
+          "source_id": 9501644,
+          "name": "Lajsic",
+          "team_id": 1242
+        },
+        {
+          "source_id": 9501645,
+          "name": "Orović",
+          "team_id": 1242
         }
       ],
       "removed_fabricated": [],
@@ -767,198 +2398,1527 @@
       "team_source_id": 164,
       "team_created": false,
       "squad_read": 21,
-      "club_level_anchor": 67,
-      "created": [
+      "club_level_anchor": 65,
+      "created": [],
+      "moved_from_container": [],
+      "left_in_their_club": [
         {
           "source_id": 9502066,
-          "name": "Ulf Karlsson",
-          "overall": 67
+          "name": "Karlsson",
+          "team_id": 164
         },
         {
           "source_id": 9502067,
-          "name": "Dan Larsson",
-          "overall": 67
+          "name": "Larsson",
+          "team_id": 164
         },
         {
           "source_id": 9502068,
-          "name": "Sanny Cosic",
-          "overall": 66
+          "name": "Cosic",
+          "team_id": 164
         },
         {
           "source_id": 9502069,
-          "name": "Ivan Djuric",
-          "overall": 66
+          "name": "Djuric",
+          "team_id": 164
         },
         {
           "source_id": 9502070,
-          "name": "Jonas Granath",
-          "overall": 66
+          "name": "Granath",
+          "team_id": 164
         },
         {
           "source_id": 9502071,
-          "name": "Mikael Martensson",
-          "overall": 65
+          "name": "Martensson",
+          "team_id": 164
         },
         {
           "source_id": 9502072,
-          "name": "Mikael Öhrman",
-          "overall": 65
+          "name": "Öhrman",
+          "team_id": 164
         },
-        {
-          "source_id": 9502073,
-          "name": "Johan Ström",
-          "overall": 65
-        },
-        {
-          "source_id": 9502074,
-          "name": "Henrik Berger",
-          "overall": 64
-        },
-        {
-          "source_id": 9502075,
-          "name": "Jörgen Dunberg",
-          "overall": 64
-        },
-        {
-          "source_id": 9502076,
-          "name": "Daniel Eriksson",
-          "overall": 63
-        },
-        {
-          "source_id": 9502077,
-          "name": "Leif Olsson",
-          "overall": 63
-        },
-        {
-          "source_id": 9502078,
-          "name": "Tomas Olsson",
-          "overall": 63
-        },
-        {
-          "source_id": 9502079,
-          "name": "Daniel Tjernström",
-          "overall": 62
-        },
-        {
-          "source_id": 9502080,
-          "name": "Milenko Vukčević",
-          "overall": 62
-        },
-        {
-          "source_id": 9502081,
-          "name": "Dan Fröberg",
-          "overall": 62
-        },
-        {
-          "source_id": 9502082,
-          "name": "Sebastian Henriksson",
-          "overall": 61
-        },
-        {
-          "source_id": 9502083,
-          "name": "Ulf Ottosson",
-          "overall": 61
-        }
-      ],
-      "moved_from_container": [
         {
           "source_id": 9500819,
-          "name": "Duško Radinović"
+          "name": "Duško Radinović",
+          "team_id": 164
         },
         {
           "source_id": 9500811,
-          "name": "Vujadin Stanojković"
-        }
-      ],
-      "left_in_their_club": [
+          "name": "Vujadin Stanojković",
+          "team_id": 164
+        },
+        {
+          "source_id": 9502073,
+          "name": "Ström",
+          "team_id": 164
+        },
         {
           "source_id": 9501690,
           "name": "Svensson",
           "team_id": 636
+        },
+        {
+          "source_id": 9502074,
+          "name": "Berger",
+          "team_id": 164
+        },
+        {
+          "source_id": 9502075,
+          "name": "Dunberg",
+          "team_id": 164
+        },
+        {
+          "source_id": 9502076,
+          "name": "Eriksson",
+          "team_id": 164
+        },
+        {
+          "source_id": 9502077,
+          "name": "Olsson",
+          "team_id": 164
+        },
+        {
+          "source_id": 9502078,
+          "name": "Olsson",
+          "team_id": 164
+        },
+        {
+          "source_id": 9502079,
+          "name": "Tjernström",
+          "team_id": 164
+        },
+        {
+          "source_id": 9502080,
+          "name": "Vukčević",
+          "team_id": 164
+        },
+        {
+          "source_id": 9502081,
+          "name": "Fröberg",
+          "team_id": 164
+        },
+        {
+          "source_id": 9502082,
+          "name": "Henriksson",
+          "team_id": 164
+        },
+        {
+          "source_id": 9502083,
+          "name": "Ottosson",
+          "team_id": 164
         }
       ],
+      "removed_fabricated": [],
+      "not_applied": []
+    },
+    {
+      "country": "Suecia",
+      "club": "Halmstads BK",
+      "team_source_id": 1245,
+      "team_created": false,
+      "squad_read": 19,
+      "club_level_anchor": 65,
+      "created": [],
+      "moved_from_container": [],
+      "left_in_their_club": [
+        {
+          "source_id": 9501646,
+          "name": "Nordberg",
+          "team_id": 1245
+        },
+        {
+          "source_id": 9501647,
+          "name": "Svensson",
+          "team_id": 1245
+        },
+        {
+          "source_id": 9501648,
+          "name": "Andersson",
+          "team_id": 1245
+        },
+        {
+          "source_id": 9501649,
+          "name": "Borgstrand",
+          "team_id": 1245
+        },
+        {
+          "source_id": 9501650,
+          "name": "Johansson",
+          "team_id": 1245
+        },
+        {
+          "source_id": 9501651,
+          "name": "Karlsson",
+          "team_id": 1245
+        },
+        {
+          "source_id": 9501652,
+          "name": "Alexandersson",
+          "team_id": 1245
+        },
+        {
+          "source_id": 9501653,
+          "name": "Arvidsson",
+          "team_id": 1245
+        },
+        {
+          "source_id": 9501654,
+          "name": "Gudmundsson",
+          "team_id": 1245
+        },
+        {
+          "source_id": 9501655,
+          "name": "Hedström",
+          "team_id": 1245
+        },
+        {
+          "source_id": 9501656,
+          "name": "Lennartsson",
+          "team_id": 1245
+        },
+        {
+          "source_id": 9501657,
+          "name": "Ljungberg",
+          "team_id": 1245
+        },
+        {
+          "source_id": 9501658,
+          "name": "Martinsson",
+          "team_id": 1245
+        },
+        {
+          "source_id": 9501659,
+          "name": "Smith",
+          "team_id": 1245
+        },
+        {
+          "source_id": 9501660,
+          "name": "Svensson",
+          "team_id": 1245
+        },
+        {
+          "source_id": 9501661,
+          "name": "Svensson",
+          "team_id": 1245
+        },
+        {
+          "source_id": 9501662,
+          "name": "Andersson",
+          "team_id": 1245
+        },
+        {
+          "source_id": 9501663,
+          "name": "Bertilsson",
+          "team_id": 1245
+        },
+        {
+          "source_id": 9501664,
+          "name": "Lundgren",
+          "team_id": 1245
+        }
+      ],
+      "removed_fabricated": [],
+      "not_applied": []
+    },
+    {
+      "country": "Suecia",
+      "club": "Helsingborgs IF",
+      "team_source_id": 800,
+      "team_created": false,
+      "squad_read": 21,
+      "club_level_anchor": 65,
+      "created": [],
+      "moved_from_container": [],
+      "left_in_their_club": [
+        {
+          "source_id": 9501665,
+          "name": "Andersson",
+          "team_id": 800
+        },
+        {
+          "source_id": 9501666,
+          "name": "Ivanovs",
+          "team_id": 800
+        },
+        {
+          "source_id": 9501667,
+          "name": "Ljung",
+          "team_id": 800
+        },
+        {
+          "source_id": 9501668,
+          "name": "Nilsson",
+          "team_id": 800
+        },
+        {
+          "source_id": 1817,
+          "name": "Nilsson",
+          "team_id": 337
+        },
+        {
+          "source_id": 9501669,
+          "name": "Stoltz",
+          "team_id": 800
+        },
+        {
+          "source_id": 9501670,
+          "name": "Andersson",
+          "team_id": 800
+        },
+        {
+          "source_id": 9501671,
+          "name": "Dahlgren",
+          "team_id": 800
+        },
+        {
+          "source_id": 9501672,
+          "name": "Jansson",
+          "team_id": 800
+        },
+        {
+          "source_id": 9501673,
+          "name": "Jönsson",
+          "team_id": 800
+        },
+        {
+          "source_id": 9501674,
+          "name": "Lantz",
+          "team_id": 800
+        },
+        {
+          "source_id": 9501675,
+          "name": "Ljung",
+          "team_id": 800
+        },
+        {
+          "source_id": 9501676,
+          "name": "Sundström",
+          "team_id": 800
+        },
+        {
+          "source_id": 9501677,
+          "name": "Arvidsson",
+          "team_id": 800
+        },
+        {
+          "source_id": 9501678,
+          "name": "Eklund",
+          "team_id": 800
+        },
+        {
+          "source_id": 9501679,
+          "name": "Eriksson",
+          "team_id": 800
+        },
+        {
+          "source_id": 9501680,
+          "name": "Hofvendahl",
+          "team_id": 800
+        },
+        {
+          "source_id": 6531,
+          "name": "Mike Obiku",
+          "team_id": 289
+        },
+        {
+          "source_id": 9501681,
+          "name": "Pringle",
+          "team_id": 800
+        },
+        {
+          "source_id": 9501682,
+          "name": "Ragvald",
+          "team_id": 800
+        },
+        {
+          "source_id": 9501683,
+          "name": "Skoog",
+          "team_id": 800
+        }
+      ],
+      "removed_fabricated": [],
+      "not_applied": []
+    },
+    {
+      "country": "Suecia",
+      "club": "IFK Göteborg",
+      "team_source_id": 636,
+      "team_created": false,
+      "squad_read": 22,
+      "club_level_anchor": 76,
+      "created": [],
+      "moved_from_container": [],
+      "left_in_their_club": [
+        {
+          "source_id": 9501684,
+          "name": "Last",
+          "team_id": 636
+        },
+        {
+          "source_id": 9494091,
+          "name": "Thomas Ravelli",
+          "team_id": 636
+        },
+        {
+          "source_id": 9501685,
+          "name": "Andersson",
+          "team_id": 636
+        },
+        {
+          "source_id": 9501686,
+          "name": "Anegrund",
+          "team_id": 636
+        },
+        {
+          "source_id": 9494092,
+          "name": "Joachim Björklund",
+          "team_id": 636
+        },
+        {
+          "source_id": 9494100,
+          "name": "Magnus Erlingmark",
+          "team_id": 636
+        },
+        {
+          "source_id": 9501687,
+          "name": "Johansson",
+          "team_id": 636
+        },
+        {
+          "source_id": 9494096,
+          "name": "Pontus Kåmark",
+          "team_id": 636
+        },
+        {
+          "source_id": 9501688,
+          "name": "Magnusson",
+          "team_id": 636
+        },
+        {
+          "source_id": 9494095,
+          "name": "Mikael Nilsson",
+          "team_id": 636
+        },
+        {
+          "source_id": 9501689,
+          "name": "Olsson",
+          "team_id": 636
+        },
+        {
+          "source_id": 9501690,
+          "name": "Svensson",
+          "team_id": 636
+        },
+        {
+          "source_id": 9501691,
+          "name": "Wahlstedt",
+          "team_id": 636
+        },
+        {
+          "source_id": 9501692,
+          "name": "Bengtsson",
+          "team_id": 636
+        },
+        {
+          "source_id": 9494101,
+          "name": "Jesper Blomqvist",
+          "team_id": 636
+        },
+        {
+          "source_id": 9501693,
+          "name": "Eriksson",
+          "team_id": 636
+        },
+        {
+          "source_id": 9501694,
+          "name": "Hvenfelt",
+          "team_id": 636
+        },
+        {
+          "source_id": 9501695,
+          "name": "Leksell",
+          "team_id": 636
+        },
+        {
+          "source_id": 9494098,
+          "name": "Stefan Rehn",
+          "team_id": 636
+        },
+        {
+          "source_id": 9501696,
+          "name": "Ulander",
+          "team_id": 636
+        },
+        {
+          "source_id": 9501697,
+          "name": "Gustafsson",
+          "team_id": 636
+        },
+        {
+          "source_id": 9501698,
+          "name": "Martinsson",
+          "team_id": 636
+        }
+      ],
+      "removed_fabricated": [],
+      "not_applied": []
+    },
+    {
+      "country": "Suecia",
+      "club": "IFK Norrköping",
+      "team_source_id": 1241,
+      "team_created": false,
+      "squad_read": 25,
+      "club_level_anchor": 75,
+      "created": [],
+      "moved_from_container": [],
+      "left_in_their_club": [
+        {
+          "source_id": 9494094,
+          "name": "Lars Eriksson",
+          "team_id": 1241
+        },
+        {
+          "source_id": 9501699,
+          "name": "Jerleus",
+          "team_id": 1241
+        },
+        {
+          "source_id": 9501700,
+          "name": "Hansson",
+          "team_id": 1241
+        },
+        {
+          "source_id": 9501701,
+          "name": "Lind",
+          "team_id": 1241
+        },
+        {
+          "source_id": 9501702,
+          "name": "Norrby",
+          "team_id": 1241
+        },
+        {
+          "source_id": 9501703,
+          "name": "Ström",
+          "team_id": 1241
+        },
+        {
+          "source_id": 9501704,
+          "name": "Vaattovaara",
+          "team_id": 1241
+        },
+        {
+          "source_id": 9501705,
+          "name": "Andersson",
+          "team_id": 1241
+        },
+        {
+          "source_id": 9501706,
+          "name": "Bergort",
+          "team_id": 1241
+        },
+        {
+          "source_id": 9501707,
+          "name": "Blohm",
+          "team_id": 1241
+        },
+        {
+          "source_id": 9501708,
+          "name": "Blomberg",
+          "team_id": 1241
+        },
+        {
+          "source_id": 9501709,
+          "name": "Enerby",
+          "team_id": 1241
+        },
+        {
+          "source_id": 9500806,
+          "name": "Jan Jansson",
+          "team_id": 1241
+        },
+        {
+          "source_id": 9501710,
+          "name": "Lang",
+          "team_id": 1241
+        },
+        {
+          "source_id": 9501711,
+          "name": "Marović",
+          "team_id": 1241
+        },
+        {
+          "source_id": 9501712,
+          "name": "Martinsson",
+          "team_id": 1241
+        },
+        {
+          "source_id": 9501713,
+          "name": "Samuelsson",
+          "team_id": 1241
+        },
+        {
+          "source_id": 9501714,
+          "name": "Sundell",
+          "team_id": 1241
+        },
+        {
+          "source_id": 9501715,
+          "name": "Hellström",
+          "team_id": 1241
+        },
+        {
+          "source_id": 9501716,
+          "name": "Holter",
+          "team_id": 1241
+        },
+        {
+          "source_id": 9501717,
+          "name": "Jokišić",
+          "team_id": 1241
+        },
+        {
+          "source_id": 9501718,
+          "name": "Kindvall",
+          "team_id": 1241
+        },
+        {
+          "source_id": 9501719,
+          "name": "Persson",
+          "team_id": 1241
+        },
+        {
+          "source_id": 9501720,
+          "name": "Sandström",
+          "team_id": 1241
+        },
+        {
+          "source_id": 9501721,
+          "name": "Steiner",
+          "team_id": 1241
+        }
+      ],
+      "removed_fabricated": [],
+      "not_applied": []
+    },
+    {
+      "country": "Suecia",
+      "club": "Malmö FF",
+      "team_source_id": 781,
+      "team_created": false,
+      "squad_read": 19,
+      "club_level_anchor": 65,
+      "created": [],
+      "moved_from_container": [],
+      "left_in_their_club": [
+        {
+          "source_id": 9501722,
+          "name": "Fedel",
+          "team_id": 781
+        },
+        {
+          "source_id": 9501723,
+          "name": "Olausson",
+          "team_id": 781
+        },
+        {
+          "source_id": 9501724,
+          "name": "Stringheim",
+          "team_id": 781
+        },
+        {
+          "source_id": 9501725,
+          "name": "Alvén",
+          "team_id": 781
+        },
+        {
+          "source_id": 9501726,
+          "name": "Jönsson",
+          "team_id": 781
+        },
+        {
+          "source_id": 9501727,
+          "name": "Nilsson",
+          "team_id": 781
+        },
+        {
+          "source_id": 9501728,
+          "name": "Olsson",
+          "team_id": 781
+        },
+        {
+          "source_id": 9501729,
+          "name": "Persson",
+          "team_id": 781
+        },
+        {
+          "source_id": 2261,
+          "name": "Wirmola",
+          "team_id": 336
+        },
+        {
+          "source_id": 9501730,
+          "name": "Andersson",
+          "team_id": 781
+        },
+        {
+          "source_id": 9501731,
+          "name": "Fjellström",
+          "team_id": 781
+        },
+        {
+          "source_id": 9501732,
+          "name": "Nurmela",
+          "team_id": 781
+        },
+        {
+          "source_id": 9501733,
+          "name": "Nyhlén",
+          "team_id": 781
+        },
+        {
+          "source_id": 9501734,
+          "name": "Ohlsson",
+          "team_id": 781
+        },
+        {
+          "source_id": 9501735,
+          "name": "Persson",
+          "team_id": 781
+        },
+        {
+          "source_id": 9501736,
+          "name": "Prytz",
+          "team_id": 781
+        },
+        {
+          "source_id": 9501737,
+          "name": "Dahlström",
+          "team_id": 781
+        },
+        {
+          "source_id": 9501738,
+          "name": "Hillgren",
+          "team_id": 781
+        },
+        {
+          "source_id": 9501739,
+          "name": "Pettersson",
+          "team_id": 781
+        }
+      ],
+      "removed_fabricated": [],
+      "not_applied": []
+    },
+    {
+      "country": "Suecia",
+      "club": "Örebro SK",
+      "team_source_id": 1247,
+      "team_created": false,
+      "squad_read": 22,
+      "club_level_anchor": 65,
+      "created": [],
+      "moved_from_container": [],
+      "left_in_their_club": [
+        {
+          "source_id": 9501740,
+          "name": "Målberg",
+          "team_id": 1247
+        },
+        {
+          "source_id": 9501741,
+          "name": "Andersson",
+          "team_id": 1247
+        },
+        {
+          "source_id": 9501742,
+          "name": "Karlsson",
+          "team_id": 1247
+        },
+        {
+          "source_id": 9501743,
+          "name": "Kjellin",
+          "team_id": 1247
+        },
+        {
+          "source_id": 9501744,
+          "name": "Mogren",
+          "team_id": 1247
+        },
+        {
+          "source_id": 9501745,
+          "name": "Rasck",
+          "team_id": 1247
+        },
+        {
+          "source_id": 9501746,
+          "name": "Sjögren",
+          "team_id": 1247
+        },
+        {
+          "source_id": 9501747,
+          "name": "Sköldmark",
+          "team_id": 1247
+        },
+        {
+          "source_id": 9501748,
+          "name": "Ståhl",
+          "team_id": 1247
+        },
+        {
+          "source_id": 9501749,
+          "name": "Andersson",
+          "team_id": 1247
+        },
+        {
+          "source_id": 9501750,
+          "name": "Fursth",
+          "team_id": 1247
+        },
+        {
+          "source_id": 9501751,
+          "name": "Karlsson",
+          "team_id": 1247
+        },
+        {
+          "source_id": 9501752,
+          "name": "Pelgander",
+          "team_id": 1247
+        },
+        {
+          "source_id": 9501753,
+          "name": "Stefánsson",
+          "team_id": 1247
+        },
+        {
+          "source_id": 9501754,
+          "name": "Zetterlund",
+          "team_id": 1247
+        },
+        {
+          "source_id": 9501755,
+          "name": "Blixt",
+          "team_id": 1247
+        },
+        {
+          "source_id": 9501756,
+          "name": "Fahlén",
+          "team_id": 1247
+        },
+        {
+          "source_id": 9501757,
+          "name": "Guðjohnsen",
+          "team_id": 1247
+        },
+        {
+          "source_id": 9501758,
+          "name": "Haglund",
+          "team_id": 1247
+        },
+        {
+          "source_id": 9501759,
+          "name": "Jonson",
+          "team_id": 1247
+        },
+        {
+          "source_id": 9501760,
+          "name": "Kubisztal",
+          "team_id": 1247
+        },
+        {
+          "source_id": 9501761,
+          "name": "Powell",
+          "team_id": 1247
+        }
+      ],
+      "removed_fabricated": [],
+      "not_applied": []
+    },
+    {
+      "country": "Suecia",
+      "club": "Örgryte IS",
+      "team_source_id": 1464,
+      "team_created": false,
+      "squad_read": 15,
+      "club_level_anchor": 65,
+      "created": [],
+      "moved_from_container": [],
+      "left_in_their_club": [
+        {
+          "source_id": 9501762,
+          "name": "Andersson",
+          "team_id": 1464
+        },
+        {
+          "source_id": 9501763,
+          "name": "Roth",
+          "team_id": 1464
+        },
+        {
+          "source_id": 9501764,
+          "name": "Moberg",
+          "team_id": 1464
+        },
+        {
+          "source_id": 9501765,
+          "name": "Nilsson",
+          "team_id": 1464
+        },
+        {
+          "source_id": 9501766,
+          "name": "Palm",
+          "team_id": 1464
+        },
+        {
+          "source_id": 9501767,
+          "name": "Prytz",
+          "team_id": 1464
+        },
+        {
+          "source_id": 9501768,
+          "name": "Sjöstedt",
+          "team_id": 1464
+        },
+        {
+          "source_id": 9501769,
+          "name": "Wålemark",
+          "team_id": 1464
+        },
+        {
+          "source_id": 9501770,
+          "name": "Corneliusson",
+          "team_id": 1464
+        },
+        {
+          "source_id": 9501771,
+          "name": "Karlsson",
+          "team_id": 1464
+        },
+        {
+          "source_id": 9501772,
+          "name": "Madsen",
+          "team_id": 1464
+        },
+        {
+          "source_id": 9501773,
+          "name": "Nordstrand",
+          "team_id": 1464
+        },
+        {
+          "source_id": 9501774,
+          "name": "Samuelsson",
+          "team_id": 1464
+        },
+        {
+          "source_id": 9501775,
+          "name": "Allbäck",
+          "team_id": 1464
+        },
+        {
+          "source_id": 9501776,
+          "name": "Grandelius",
+          "team_id": 1464
+        }
+      ],
+      "removed_fabricated": [],
+      "not_applied": []
+    },
+    {
+      "country": "Suecia",
+      "club": "Östers IF",
+      "team_source_id": 1248,
+      "team_created": false,
+      "squad_read": 19,
+      "club_level_anchor": 65,
+      "created": [],
+      "moved_from_container": [],
+      "left_in_their_club": [
+        {
+          "source_id": 9501777,
+          "name": "Green",
+          "team_id": 1248
+        },
+        {
+          "source_id": 9501778,
+          "name": "Lundin",
+          "team_id": 1248
+        },
+        {
+          "source_id": 9501779,
+          "name": "Bild",
+          "team_id": 1248
+        },
+        {
+          "source_id": 9501780,
+          "name": "Frisk",
+          "team_id": 1248
+        },
+        {
+          "source_id": 9501781,
+          "name": "Hansson",
+          "team_id": 1248
+        },
+        {
+          "source_id": 9501782,
+          "name": "Lilius",
+          "team_id": 1248
+        },
+        {
+          "source_id": 9501783,
+          "name": "Paldan",
+          "team_id": 1248
+        },
+        {
+          "source_id": 9501784,
+          "name": "Papadopoulos",
+          "team_id": 1248
+        },
+        {
+          "source_id": 9501785,
+          "name": "Persson",
+          "team_id": 1248
+        },
+        {
+          "source_id": 9501786,
+          "name": "Bild",
+          "team_id": 1248
+        },
+        {
+          "source_id": 9501787,
+          "name": "Burwall",
+          "team_id": 1248
+        },
+        {
+          "source_id": 9501788,
+          "name": "Johansson",
+          "team_id": 1248
+        },
+        {
+          "source_id": 9501789,
+          "name": "Landberg",
+          "team_id": 1248
+        },
+        {
+          "source_id": 9501790,
+          "name": "Nilsson",
+          "team_id": 1248
+        },
+        {
+          "source_id": 9501791,
+          "name": "Wibrån",
+          "team_id": 1248
+        },
+        {
+          "source_id": 9501792,
+          "name": "Axeldal",
+          "team_id": 1248
+        },
+        {
+          "source_id": 9501793,
+          "name": "Eklund",
+          "team_id": 1248
+        },
+        {
+          "source_id": 9501794,
+          "name": "Ernstsson",
+          "team_id": 1248
+        },
+        {
+          "source_id": 9501795,
+          "name": "Gitselov",
+          "team_id": 1248
+        }
+      ],
+      "removed_fabricated": [],
+      "not_applied": []
+    },
+    {
+      "country": "Suecia",
+      "club": "Trelleborgs FF",
+      "team_source_id": 1485,
+      "team_created": false,
+      "squad_read": 19,
+      "club_level_anchor": 65,
+      "created": [],
+      "moved_from_container": [],
+      "left_in_their_club": [
+        {
+          "source_id": 9501796,
+          "name": "Andersson",
+          "team_id": 1485
+        },
+        {
+          "source_id": 9501797,
+          "name": "Jankowski",
+          "team_id": 1485
+        },
+        {
+          "source_id": 9501798,
+          "name": "Papias",
+          "team_id": 1485
+        },
+        {
+          "source_id": 9501799,
+          "name": "Brorsson",
+          "team_id": 1485
+        },
+        {
+          "source_id": 9501800,
+          "name": "Eriksson",
+          "team_id": 1485
+        },
+        {
+          "source_id": 9501801,
+          "name": "Karlsson",
+          "team_id": 1485
+        },
+        {
+          "source_id": 9501802,
+          "name": "Mattsson",
+          "team_id": 1485
+        },
+        {
+          "source_id": 9501803,
+          "name": "Nilsson",
+          "team_id": 1485
+        },
+        {
+          "source_id": 9501804,
+          "name": "Andersson",
+          "team_id": 1485
+        },
+        {
+          "source_id": 9501805,
+          "name": "Engqvist",
+          "team_id": 1485
+        },
+        {
+          "source_id": 9501806,
+          "name": "Larsson",
+          "team_id": 1485
+        },
+        {
+          "source_id": 9501807,
+          "name": "Palmér",
+          "team_id": 1485
+        },
+        {
+          "source_id": 9501808,
+          "name": "Rasmusson",
+          "team_id": 1485
+        },
+        {
+          "source_id": 9501809,
+          "name": "Severin",
+          "team_id": 1485
+        },
+        {
+          "source_id": 9501810,
+          "name": "Blixt",
+          "team_id": 1485
+        },
+        {
+          "source_id": 9501811,
+          "name": "Hansson",
+          "team_id": 1485
+        },
+        {
+          "source_id": 9501812,
+          "name": "Karlsson",
+          "team_id": 1485
+        },
+        {
+          "source_id": 9501813,
+          "name": "Manglind",
+          "team_id": 1485
+        },
+        {
+          "source_id": 9501814,
+          "name": "Sandell",
+          "team_id": 1485
+        }
+      ],
+      "removed_fabricated": [],
+      "not_applied": []
+    },
+    {
+      "country": "Noruega",
+      "club": "Hamarkameratene",
+      "team_source_id": 1148,
+      "team_created": false,
+      "squad_read": 8,
+      "club_level_anchor": 65,
+      "created": [],
+      "moved_from_container": [],
+      "left_in_their_club": [
+        {
+          "source_id": 9501815,
+          "name": "Svalstad",
+          "team_id": 1148
+        },
+        {
+          "source_id": 9501816,
+          "name": "Erstad",
+          "team_id": 1148
+        },
+        {
+          "source_id": 9501817,
+          "name": "Hovi",
+          "team_id": 1148
+        },
+        {
+          "source_id": 9501818,
+          "name": "Ødegaard",
+          "team_id": 1148
+        },
+        {
+          "source_id": 9501819,
+          "name": "Sætre",
+          "team_id": 1148
+        },
+        {
+          "source_id": 9501820,
+          "name": "Skogheim",
+          "team_id": 1148
+        },
+        {
+          "source_id": 9501821,
+          "name": "Solbakken",
+          "team_id": 1148
+        },
+        {
+          "source_id": 9501822,
+          "name": "Ingelstad",
+          "team_id": 1148
+        }
+      ],
+      "removed_fabricated": [],
+      "not_applied": []
+    },
+    {
+      "country": "Noruega",
+      "club": "IK Start",
+      "team_source_id": 1470,
+      "team_created": false,
+      "squad_read": 9,
+      "club_level_anchor": 75,
+      "created": [],
+      "moved_from_container": [],
+      "left_in_their_club": [
+        {
+          "source_id": 9501823,
+          "name": "Olsen",
+          "team_id": 1470
+        },
+        {
+          "source_id": 9501824,
+          "name": "Skistad",
+          "team_id": 1470
+        },
+        {
+          "source_id": 9501825,
+          "name": "Bjønsaas",
+          "team_id": 1470
+        },
+        {
+          "source_id": 9501826,
+          "name": "Eftevaag",
+          "team_id": 1470
+        },
+        {
+          "source_id": 9494195,
+          "name": "Erik Mykland",
+          "team_id": 1470
+        },
+        {
+          "source_id": 9501827,
+          "name": "Larsen",
+          "team_id": 1470
+        },
+        {
+          "source_id": 9501828,
+          "name": "Belsvik",
+          "team_id": 1470
+        },
+        {
+          "source_id": 9501176,
+          "name": "Dahlum",
+          "team_id": 599
+        },
+        {
+          "source_id": 9501829,
+          "name": "Daland",
+          "team_id": 1470
+        }
+      ],
+      "removed_fabricated": [],
+      "not_applied": []
+    },
+    {
+      "country": "Noruega",
+      "club": "Lillestrøm SK",
+      "team_source_id": 1714,
+      "team_created": false,
+      "squad_read": 18,
+      "club_level_anchor": 75,
+      "created": [
+        {
+          "source_id": 9502586,
+          "name": "Jon Knudsen",
+          "overall": 75
+        },
+        {
+          "source_id": 9502587,
+          "name": "André Bergdølmo",
+          "overall": 75
+        },
+        {
+          "source_id": 9502588,
+          "name": "Thomas Berntsen",
+          "overall": 74
+        },
+        {
+          "source_id": 9502589,
+          "name": "Torgeir Bjarmann",
+          "overall": 74
+        },
+        {
+          "source_id": 9502590,
+          "name": "Anders Jacobsen",
+          "overall": 73
+        },
+        {
+          "source_id": 9502591,
+          "name": "Ronny Johnsen",
+          "overall": 73
+        },
+        {
+          "source_id": 9502592,
+          "name": "Kent Karlsen",
+          "overall": 73
+        },
+        {
+          "source_id": 9502593,
+          "name": "Dennis Schiller",
+          "overall": 72
+        },
+        {
+          "source_id": 9502594,
+          "name": "Bjarne Sognnæs",
+          "overall": 72
+        },
+        {
+          "source_id": 9502595,
+          "name": "Tom Gulbrandsen",
+          "overall": 72
+        },
+        {
+          "source_id": 9502596,
+          "name": "Patric Karlsson",
+          "overall": 71
+        },
+        {
+          "source_id": 9502597,
+          "name": "Helge Mehus",
+          "overall": 71
+        },
+        {
+          "source_id": 9502598,
+          "name": "Rune Nordengen",
+          "overall": 71
+        },
+        {
+          "source_id": 9502599,
+          "name": "Jan Ove Pedersen",
+          "overall": 70
+        },
+        {
+          "source_id": 9502600,
+          "name": "Rune Gulbrandsen",
+          "overall": 70
+        },
+        {
+          "source_id": 9502601,
+          "name": "Peter Hedman",
+          "overall": 69
+        },
+        {
+          "source_id": 9502602,
+          "name": "Mons Ivar Mjelde",
+          "overall": 69
+        }
+      ],
+      "moved_from_container": [
+        {
+          "source_id": 9494198,
+          "name": "Frode Grodås"
+        }
+      ],
+      "left_in_their_club": [],
       "removed_fabricated": [
         {
-          "source_id": 11276,
-          "name": "Bertilsson"
+          "source_id": 10688,
+          "name": "Myhra"
         },
         {
-          "source_id": 11448,
-          "name": "Klarström"
+          "source_id": 10709,
+          "name": "Bjørdal"
         },
         {
-          "source_id": 11449,
-          "name": "Ataya"
+          "source_id": 12069,
+          "name": "Nation"
         },
         {
-          "source_id": 11510,
-          "name": "Dahlin"
+          "source_id": 13333,
+          "name": "Kippe"
         },
         {
-          "source_id": 12104,
-          "name": "Tobias Claesson"
+          "source_id": 13365,
+          "name": "Stenevik"
         },
         {
-          "source_id": 12415,
-          "name": "Silverholt"
+          "source_id": 13889,
+          "name": "Olum"
         },
         {
-          "source_id": 12771,
-          "name": "Simović"
+          "source_id": 15603,
+          "name": "Anene"
         },
         {
-          "source_id": 12793,
-          "name": "Bahoui"
+          "source_id": 19602,
+          "name": "Ahlander"
         },
         {
-          "source_id": 12927,
-          "name": "Viktor Johansson"
+          "source_id": 20552,
+          "name": "Race"
         },
         {
-          "source_id": 16965,
-          "name": "Tamimi"
+          "source_id": 21085,
+          "name": "Hallfredsson"
         },
         {
-          "source_id": 17147,
-          "name": "Israelsson"
+          "source_id": 21698,
+          "name": "Frantzen"
         },
         {
-          "source_id": 17916,
-          "name": "Bengtsson"
+          "source_id": 21711,
+          "name": "Remi Hammer"
         },
         {
-          "source_id": 17921,
-          "name": "Jarl"
+          "source_id": 21713,
+          "name": "Pedersen"
         },
         {
-          "source_id": 18077,
-          "name": "Larsson"
+          "source_id": 24704,
+          "name": "Selnæs"
         },
         {
-          "source_id": 19288,
-          "name": "Olsson"
+          "source_id": 26181,
+          "name": "Gregersen"
         },
         {
-          "source_id": 19562,
-          "name": "Affane"
+          "source_id": 29209,
+          "name": "Eikeng"
         },
         {
-          "source_id": 20109,
-          "name": "Pettersson"
+          "source_id": 30847,
+          "name": "Kachi"
         },
         {
-          "source_id": 21704,
-          "name": "Thomas Nystrøm"
-        },
-        {
-          "source_id": 26164,
-          "name": "Kouakou"
-        },
-        {
-          "source_id": 28184,
-          "name": "Meram"
+          "source_id": 31102,
+          "name": "Fellah"
         }
       ],
+      "not_applied": []
+    },
+    {
+      "country": "Noruega",
+      "club": "Molde FK",
+      "team_source_id": 601,
+      "team_created": false,
+      "squad_read": 15,
+      "club_level_anchor": 65,
+      "created": [],
+      "moved_from_container": [],
+      "left_in_their_club": [
+        {
+          "source_id": 9501830,
+          "name": "Bakke",
+          "team_id": 601
+        },
+        {
+          "source_id": 9501831,
+          "name": "Hjelle",
+          "team_id": 601
+        },
+        {
+          "source_id": 9501832,
+          "name": "Eid",
+          "team_id": 601
+        },
+        {
+          "source_id": 9501833,
+          "name": "Glaría",
+          "team_id": 601
+        },
+        {
+          "source_id": 9501834,
+          "name": "Fostervold",
+          "team_id": 601
+        },
+        {
+          "source_id": 9501835,
+          "name": "Rekdal",
+          "team_id": 601
+        },
+        {
+          "source_id": 9501836,
+          "name": "Sønderland",
+          "team_id": 601
+        },
+        {
+          "source_id": 9501837,
+          "name": "Strande",
+          "team_id": 601
+        },
+        {
+          "source_id": 9501838,
+          "name": "Hestad",
+          "team_id": 601
+        },
+        {
+          "source_id": 9501839,
+          "name": "Nevstad",
+          "team_id": 601
+        },
+        {
+          "source_id": 9501840,
+          "name": "Jacobsen",
+          "team_id": 601
+        },
+        {
+          "source_id": 9501841,
+          "name": "Rudi",
+          "team_id": 601
+        },
+        {
+          "source_id": 9501842,
+          "name": "Berg",
+          "team_id": 601
+        },
+        {
+          "source_id": 9501181,
+          "name": "Johnsen",
+          "team_id": 599
+        },
+        {
+          "source_id": 9501843,
+          "name": "Solskjær",
+          "team_id": 601
+        }
+      ],
+      "removed_fabricated": [],
       "not_applied": []
     },
     {
@@ -967,39 +3927,18 @@
       "team_source_id": 599,
       "team_created": false,
       "squad_read": 16,
-      "club_level_anchor": 75,
-      "created": [
-        {
-          "source_id": 9502084,
-          "name": "Jørn Jamtfall",
-          "overall": 75
-        },
-        {
-          "source_id": 9502085,
-          "name": "Erik Hoftun",
-          "overall": 73
-        },
-        {
-          "source_id": 9502086,
-          "name": "Espen Solheim",
-          "overall": 72
-        },
-        {
-          "source_id": 9502087,
-          "name": "Harald Brattbakk",
-          "overall": 71
-        },
-        {
-          "source_id": 9502088,
-          "name": "Kjell Kaasa",
-          "overall": 69
-        }
-      ],
+      "club_level_anchor": 73,
+      "created": [],
       "moved_from_container": [],
       "left_in_their_club": [
         {
           "source_id": 9494199,
           "name": "Ola By Rise",
+          "team_id": 599
+        },
+        {
+          "source_id": 9502084,
+          "name": "Jamtfall",
           "team_id": 599
         },
         {
@@ -1010,6 +3949,11 @@
         {
           "source_id": 9501170,
           "name": "Bragstad",
+          "team_id": 599
+        },
+        {
+          "source_id": 9502085,
+          "name": "Hoftun",
           "team_id": 599
         },
         {
@@ -1043,6 +3987,11 @@
           "team_id": 599
         },
         {
+          "source_id": 9502086,
+          "name": "Solheim",
+          "team_id": 599
+        },
+        {
           "source_id": 9501179,
           "name": "Støbakk",
           "team_id": 599
@@ -1051,6 +4000,979 @@
           "source_id": 9494204,
           "name": "Roar Strand",
           "team_id": 599
+        },
+        {
+          "source_id": 9502087,
+          "name": "Brattbakk",
+          "team_id": 599
+        },
+        {
+          "source_id": 9502088,
+          "name": "Kaasa",
+          "team_id": 599
+        }
+      ],
+      "removed_fabricated": [],
+      "not_applied": []
+    },
+    {
+      "country": "Noruega",
+      "club": "SK Brann",
+      "team_source_id": 1031,
+      "team_created": false,
+      "squad_read": 20,
+      "club_level_anchor": 65,
+      "created": [],
+      "moved_from_container": [],
+      "left_in_their_club": [
+        {
+          "source_id": 9501844,
+          "name": "Hollund",
+          "team_id": 1031
+        },
+        {
+          "source_id": 9501845,
+          "name": "Sigurðsson",
+          "team_id": 1031
+        },
+        {
+          "source_id": 9501846,
+          "name": "Brendesæter",
+          "team_id": 1031
+        },
+        {
+          "source_id": 9501847,
+          "name": "Helland",
+          "team_id": 1031
+        },
+        {
+          "source_id": 9501848,
+          "name": "Johannessen",
+          "team_id": 1031
+        },
+        {
+          "source_id": 9501849,
+          "name": "Ludvigsen",
+          "team_id": 1031
+        },
+        {
+          "source_id": 9501850,
+          "name": "Ludvigsen",
+          "team_id": 1031
+        },
+        {
+          "source_id": 9501851,
+          "name": "Lundekvam",
+          "team_id": 1031
+        },
+        {
+          "source_id": 9501852,
+          "name": "Stavrum",
+          "team_id": 1031
+        },
+        {
+          "source_id": 9501853,
+          "name": "Bakkerud",
+          "team_id": 1031
+        },
+        {
+          "source_id": 9501854,
+          "name": "Berge",
+          "team_id": 1031
+        },
+        {
+          "source_id": 9501855,
+          "name": "Johansson",
+          "team_id": 1031
+        },
+        {
+          "source_id": 9501856,
+          "name": "Mordt",
+          "team_id": 1031
+        },
+        {
+          "source_id": 9501857,
+          "name": "Nordeide",
+          "team_id": 1031
+        },
+        {
+          "source_id": 9501858,
+          "name": "Norebø",
+          "team_id": 1031
+        },
+        {
+          "source_id": 9501859,
+          "name": "Soltvedt",
+          "team_id": 1031
+        },
+        {
+          "source_id": 1772,
+          "name": "Strandli",
+          "team_id": 353
+        },
+        {
+          "source_id": 9501860,
+          "name": "Hasund",
+          "team_id": 1031
+        },
+        {
+          "source_id": 9501861,
+          "name": "Karlsbakk",
+          "team_id": 1031
+        },
+        {
+          "source_id": 9501862,
+          "name": "Stavrum",
+          "team_id": 1031
+        }
+      ],
+      "removed_fabricated": [],
+      "not_applied": []
+    },
+    {
+      "country": "Noruega",
+      "club": "Viking FK",
+      "team_source_id": 1715,
+      "team_created": false,
+      "squad_read": 20,
+      "club_level_anchor": 65,
+      "created": [],
+      "moved_from_container": [],
+      "left_in_their_club": [
+        {
+          "source_id": 9501863,
+          "name": "Geitle",
+          "team_id": 1715
+        },
+        {
+          "source_id": 9501864,
+          "name": "Myhre",
+          "team_id": 1715
+        },
+        {
+          "source_id": 9501865,
+          "name": "Bøe",
+          "team_id": 1715
+        },
+        {
+          "source_id": 9501866,
+          "name": "Espevoll",
+          "team_id": 1715
+        },
+        {
+          "source_id": 9501867,
+          "name": "Karlsen",
+          "team_id": 1715
+        },
+        {
+          "source_id": 9501868,
+          "name": "Larsen",
+          "team_id": 1715
+        },
+        {
+          "source_id": 9501869,
+          "name": "Meinseth",
+          "team_id": 1715
+        },
+        {
+          "source_id": 9501870,
+          "name": "Mellemstrand",
+          "team_id": 1715
+        },
+        {
+          "source_id": 9501871,
+          "name": "Ulfstein",
+          "team_id": 1715
+        },
+        {
+          "source_id": 9501872,
+          "name": "Aarsheim",
+          "team_id": 1715
+        },
+        {
+          "source_id": 9501873,
+          "name": "Aase",
+          "team_id": 1715
+        },
+        {
+          "source_id": 9501874,
+          "name": "Bjørnsen",
+          "team_id": 1715
+        },
+        {
+          "source_id": 9501875,
+          "name": "Fuglestad",
+          "team_id": 1715
+        },
+        {
+          "source_id": 9501876,
+          "name": "Johansen",
+          "team_id": 1715
+        },
+        {
+          "source_id": 9501877,
+          "name": "Rannestad",
+          "team_id": 1715
+        },
+        {
+          "source_id": 9501878,
+          "name": "Solberg",
+          "team_id": 1715
+        },
+        {
+          "source_id": 9501879,
+          "name": "Stakkeland",
+          "team_id": 1715
+        },
+        {
+          "source_id": 9501880,
+          "name": "Storvik",
+          "team_id": 1715
+        },
+        {
+          "source_id": 9501881,
+          "name": "Medalen",
+          "team_id": 1715
+        },
+        {
+          "source_id": 9501882,
+          "name": "Østenstad",
+          "team_id": 1715
+        }
+      ],
+      "removed_fabricated": [],
+      "not_applied": []
+    },
+    {
+      "country": "Dinamarca",
+      "club": "Aalborg BK",
+      "team_source_id": 925,
+      "team_created": false,
+      "squad_read": 22,
+      "club_level_anchor": 65,
+      "created": [],
+      "moved_from_container": [],
+      "left_in_their_club": [
+        {
+          "source_id": 9501883,
+          "name": "Gill",
+          "team_id": 925
+        },
+        {
+          "source_id": 9501884,
+          "name": "Jørgensen",
+          "team_id": 925
+        },
+        {
+          "source_id": 9501885,
+          "name": "Boye",
+          "team_id": 925
+        },
+        {
+          "source_id": 9501886,
+          "name": "Hansen",
+          "team_id": 925
+        },
+        {
+          "source_id": 9501887,
+          "name": "Kristensen",
+          "team_id": 925
+        },
+        {
+          "source_id": 9501888,
+          "name": "Krüger",
+          "team_id": 925
+        },
+        {
+          "source_id": 9501889,
+          "name": "Simonsen",
+          "team_id": 925
+        },
+        {
+          "source_id": 9501890,
+          "name": "Thorst",
+          "team_id": 925
+        },
+        {
+          "source_id": 9501891,
+          "name": "Bach",
+          "team_id": 925
+        },
+        {
+          "source_id": 9501892,
+          "name": "Facius",
+          "team_id": 925
+        },
+        {
+          "source_id": 9501893,
+          "name": "Jensen",
+          "team_id": 925
+        },
+        {
+          "source_id": 9501894,
+          "name": "Jessen",
+          "team_id": 925
+        },
+        {
+          "source_id": 9501895,
+          "name": "Madsen",
+          "team_id": 925
+        },
+        {
+          "source_id": 9501896,
+          "name": "Pedersen",
+          "team_id": 925
+        },
+        {
+          "source_id": 9501897,
+          "name": "Rasmussen",
+          "team_id": 925
+        },
+        {
+          "source_id": 9501898,
+          "name": "Rosengreen",
+          "team_id": 925
+        },
+        {
+          "source_id": 9501899,
+          "name": "Thomasberg",
+          "team_id": 925
+        },
+        {
+          "source_id": 2614,
+          "name": "Woodring",
+          "team_id": 213
+        },
+        {
+          "source_id": 9501900,
+          "name": "Andersen",
+          "team_id": 925
+        },
+        {
+          "source_id": 9501901,
+          "name": "Dissing",
+          "team_id": 925
+        },
+        {
+          "source_id": 9501902,
+          "name": "Hjorth",
+          "team_id": 925
+        },
+        {
+          "source_id": 9501903,
+          "name": "Rasmussen",
+          "team_id": 925
+        }
+      ],
+      "removed_fabricated": [],
+      "not_applied": []
+    },
+    {
+      "country": "Dinamarca",
+      "club": "AGF Aarhus",
+      "team_source_id": 1468,
+      "team_created": false,
+      "squad_read": 27,
+      "club_level_anchor": 64,
+      "created": [],
+      "moved_from_container": [],
+      "left_in_their_club": [
+        {
+          "source_id": 9501904,
+          "name": "Henriksen",
+          "team_id": 1468
+        },
+        {
+          "source_id": 9501905,
+          "name": "Rasmussen",
+          "team_id": 1468
+        },
+        {
+          "source_id": 9501906,
+          "name": "Windfeld",
+          "team_id": 1468
+        },
+        {
+          "source_id": 9501907,
+          "name": "Halvorsen",
+          "team_id": 1468
+        },
+        {
+          "source_id": 9501908,
+          "name": "Harder",
+          "team_id": 1468
+        },
+        {
+          "source_id": 9501909,
+          "name": "Klausen",
+          "team_id": 1468
+        },
+        {
+          "source_id": 9501910,
+          "name": "Lind",
+          "team_id": 1468
+        },
+        {
+          "source_id": 9500793,
+          "name": "Kent Nielsen",
+          "team_id": 1468
+        },
+        {
+          "source_id": 9501911,
+          "name": "Nielsen",
+          "team_id": 1468
+        },
+        {
+          "source_id": 9501912,
+          "name": "Siim",
+          "team_id": 1468
+        },
+        {
+          "source_id": 9501913,
+          "name": "Sørensen",
+          "team_id": 1468
+        },
+        {
+          "source_id": 9500886,
+          "name": "Claus Thomsen",
+          "team_id": 1468
+        },
+        {
+          "source_id": 9501914,
+          "name": "Bartram",
+          "team_id": 1468
+        },
+        {
+          "source_id": 9501915,
+          "name": "Christensen",
+          "team_id": 1468
+        },
+        {
+          "source_id": 9500797,
+          "name": "Claus Christiansen",
+          "team_id": 1468
+        },
+        {
+          "source_id": 9501916,
+          "name": "Jørgensen",
+          "team_id": 1468
+        },
+        {
+          "source_id": 9501917,
+          "name": "Larsen",
+          "team_id": 1468
+        },
+        {
+          "source_id": 9501918,
+          "name": "Larsen",
+          "team_id": 1468
+        },
+        {
+          "source_id": 9501919,
+          "name": "Mikkelsen",
+          "team_id": 1468
+        },
+        {
+          "source_id": 9501920,
+          "name": "Rasmussen",
+          "team_id": 1468
+        },
+        {
+          "source_id": 9501921,
+          "name": "Sørensen",
+          "team_id": 1468
+        },
+        {
+          "source_id": 9501922,
+          "name": "Struck",
+          "team_id": 1468
+        },
+        {
+          "source_id": 9501923,
+          "name": "Ambrosius",
+          "team_id": 1468
+        },
+        {
+          "source_id": 9501924,
+          "name": "Iwelumo",
+          "team_id": 1468
+        },
+        {
+          "source_id": 9501925,
+          "name": "Joković",
+          "team_id": 1468
+        },
+        {
+          "source_id": 9501926,
+          "name": "Lambæk",
+          "team_id": 1468
+        },
+        {
+          "source_id": 9501927,
+          "name": "Mortensen",
+          "team_id": 1468
+        }
+      ],
+      "removed_fabricated": [],
+      "not_applied": []
+    },
+    {
+      "country": "Dinamarca",
+      "club": "Brøndby IF",
+      "team_source_id": 489,
+      "team_created": false,
+      "squad_read": 23,
+      "club_level_anchor": 68,
+      "created": [
+        {
+          "source_id": 9502603,
+          "name": "Søren Colding",
+          "overall": 68
+        },
+        {
+          "source_id": 9502604,
+          "name": "Brian Jensen",
+          "overall": 68
+        },
+        {
+          "source_id": 9502605,
+          "name": "Per Nielsen",
+          "overall": 67
+        },
+        {
+          "source_id": 9502606,
+          "name": "Ole Puggaard",
+          "overall": 67
+        },
+        {
+          "source_id": 9502607,
+          "name": "Kenneth Rasmussen",
+          "overall": 66
+        },
+        {
+          "source_id": 9502608,
+          "name": "Ole Bjur",
+          "overall": 66
+        },
+        {
+          "source_id": 9502609,
+          "name": "Kim Daugaard",
+          "overall": 65
+        },
+        {
+          "source_id": 9502610,
+          "name": "Henrik Jensen",
+          "overall": 65
+        },
+        {
+          "source_id": 9502611,
+          "name": "Jesper Kristensen",
+          "overall": 65
+        },
+        {
+          "source_id": 9502612,
+          "name": "Allan Ravn",
+          "overall": 64
+        },
+        {
+          "source_id": 9502613,
+          "name": "Tommy Schram",
+          "overall": 64
+        },
+        {
+          "source_id": 9502614,
+          "name": "Thomas Thøgersen",
+          "overall": 63
+        },
+        {
+          "source_id": 9502615,
+          "name": "Ruben Bagger",
+          "overall": 63
+        },
+        {
+          "source_id": 9502616,
+          "name": "Ebbe Sand",
+          "overall": 62
+        },
+        {
+          "source_id": 9502617,
+          "name": "Mark Strudal",
+          "overall": 62
+        }
+      ],
+      "moved_from_container": [
+        {
+          "source_id": 9500796,
+          "name": "Mogens Krogh"
+        },
+        {
+          "source_id": 9494202,
+          "name": "Dan Eggen"
+        },
+        {
+          "source_id": 9500884,
+          "name": "Jes Høgh"
+        },
+        {
+          "source_id": 9500883,
+          "name": "Marc Rieper"
+        },
+        {
+          "source_id": 9500888,
+          "name": "Jens Risager"
+        },
+        {
+          "source_id": 9500798,
+          "name": "Kim Vilfort"
+        }
+      ],
+      "left_in_their_club": [
+        {
+          "source_id": 9502095,
+          "name": "Madsen",
+          "team_id": 488
+        },
+        {
+          "source_id": 9501934,
+          "name": "Nielsen",
+          "team_id": 1461
+        }
+      ],
+      "removed_fabricated": [
+        {
+          "source_id": 16151,
+          "name": "Ring"
+        },
+        {
+          "source_id": 17061,
+          "name": "Jørgensen"
+        },
+        {
+          "source_id": 18290,
+          "name": "Seaton"
+        },
+        {
+          "source_id": 20582,
+          "name": "Gustaf Miljevic"
+        },
+        {
+          "source_id": 21410,
+          "name": "Thygesen"
+        },
+        {
+          "source_id": 21525,
+          "name": "Grill"
+        },
+        {
+          "source_id": 21721,
+          "name": "Maigaard"
+        },
+        {
+          "source_id": 23059,
+          "name": "Strange"
+        },
+        {
+          "source_id": 23286,
+          "name": "Qvist"
+        },
+        {
+          "source_id": 23323,
+          "name": "Crone"
+        },
+        {
+          "source_id": 25485,
+          "name": "Weber"
+        },
+        {
+          "source_id": 25913,
+          "name": "Somogyi"
+        },
+        {
+          "source_id": 28164,
+          "name": "Steve Lampson"
+        },
+        {
+          "source_id": 30363,
+          "name": "Rømer"
+        },
+        {
+          "source_id": 30375,
+          "name": "Xulu"
+        },
+        {
+          "source_id": 30437,
+          "name": "Peter Mikkelsen"
+        },
+        {
+          "source_id": 31560,
+          "name": "Hjörtur Schram"
+        },
+        {
+          "source_id": 33159,
+          "name": "Mlakar"
+        }
+      ],
+      "not_applied": []
+    },
+    {
+      "country": "Dinamarca",
+      "club": "FC København",
+      "team_source_id": 487,
+      "team_created": false,
+      "squad_read": 21,
+      "club_level_anchor": 66,
+      "created": [
+        {
+          "source_id": 9502618,
+          "name": "Brian Flies",
+          "overall": 66
+        },
+        {
+          "source_id": 9502619,
+          "name": "Morten Falch",
+          "overall": 65
+        },
+        {
+          "source_id": 9502620,
+          "name": "Carsten Jensen",
+          "overall": 64
+        },
+        {
+          "source_id": 9502621,
+          "name": "Ole Tobiasen",
+          "overall": 62
+        },
+        {
+          "source_id": 9502622,
+          "name": "René Tengstedt",
+          "overall": 61
+        },
+        {
+          "source_id": 9502623,
+          "name": "Peter Møller",
+          "overall": 60
+        }
+      ],
+      "moved_from_container": [
+        {
+          "source_id": 9500891,
+          "name": "Allan Nielsen"
+        }
+      ],
+      "left_in_their_club": [
+        {
+          "source_id": 9501251,
+          "name": "Petersen",
+          "team_id": 487
+        },
+        {
+          "source_id": 9501255,
+          "name": "Lykke",
+          "team_id": 487
+        },
+        {
+          "source_id": 9501265,
+          "name": "Nielsen",
+          "team_id": 487
+        },
+        {
+          "source_id": 9501254,
+          "name": "Tur",
+          "team_id": 487
+        },
+        {
+          "source_id": 9501258,
+          "name": "Uldbjerg",
+          "team_id": 487
+        },
+        {
+          "source_id": 9501267,
+          "name": "Wegner",
+          "team_id": 487
+        },
+        {
+          "source_id": 9501264,
+          "name": "Giolbas",
+          "team_id": 487
+        },
+        {
+          "source_id": 9501256,
+          "name": "Johansen",
+          "team_id": 487
+        },
+        {
+          "source_id": 9501252,
+          "name": "Kaus",
+          "team_id": 487
+        },
+        {
+          "source_id": 9501257,
+          "name": "Lønstrup",
+          "team_id": 487
+        },
+        {
+          "source_id": 9501268,
+          "name": "Mikkelsen",
+          "team_id": 487
+        },
+        {
+          "source_id": 9501260,
+          "name": "Nielsen",
+          "team_id": 487
+        },
+        {
+          "source_id": 9501263,
+          "name": "Johansen",
+          "team_id": 487
+        },
+        {
+          "source_id": 9501261,
+          "name": "Manniche",
+          "team_id": 487
+        }
+      ],
+      "removed_fabricated": [],
+      "not_applied": []
+    },
+    {
+      "country": "Dinamarca",
+      "club": "Lyngby BK",
+      "team_source_id": 1461,
+      "team_created": false,
+      "squad_read": 26,
+      "club_level_anchor": 65,
+      "created": [],
+      "moved_from_container": [],
+      "left_in_their_club": [
+        {
+          "source_id": 9501928,
+          "name": "Andersen",
+          "team_id": 1461
+        },
+        {
+          "source_id": 9501929,
+          "name": "Brodersen",
+          "team_id": 1461
+        },
+        {
+          "source_id": 9500797,
+          "name": "Claus Christiansen",
+          "team_id": 1468
+        },
+        {
+          "source_id": 9501930,
+          "name": "Frank",
+          "team_id": 1461
+        },
+        {
+          "source_id": 9501931,
+          "name": "Gothenborg",
+          "team_id": 1461
+        },
+        {
+          "source_id": 9501932,
+          "name": "Haren",
+          "team_id": 1461
+        },
+        {
+          "source_id": 9501933,
+          "name": "Larsen",
+          "team_id": 1461
+        },
+        {
+          "source_id": 9501934,
+          "name": "Nielsen",
+          "team_id": 1461
+        },
+        {
+          "source_id": 9501935,
+          "name": "Rytter",
+          "team_id": 1461
+        },
+        {
+          "source_id": 9501936,
+          "name": "Andersen",
+          "team_id": 1461
+        },
+        {
+          "source_id": 9501937,
+          "name": "Bonne",
+          "team_id": 1461
+        },
+        {
+          "source_id": 9501938,
+          "name": "Falck",
+          "team_id": 1461
+        },
+        {
+          "source_id": 9501939,
+          "name": "Hammer",
+          "team_id": 1461
+        },
+        {
+          "source_id": 9501940,
+          "name": "Jensen",
+          "team_id": 1461
+        },
+        {
+          "source_id": 9501941,
+          "name": "Jungsgaard",
+          "team_id": 1461
+        },
+        {
+          "source_id": 9501942,
+          "name": "Kuhn",
+          "team_id": 1461
+        },
+        {
+          "source_id": 9501943,
+          "name": "Larsen",
+          "team_id": 1461
+        },
+        {
+          "source_id": 9501944,
+          "name": "Larsen",
+          "team_id": 1461
+        },
+        {
+          "source_id": 9501945,
+          "name": "Nielsen",
+          "team_id": 1461
+        },
+        {
+          "source_id": 9501946,
+          "name": "Stenkilsson",
+          "team_id": 1461
+        },
+        {
+          "source_id": 9501947,
+          "name": "Jónsson",
+          "team_id": 1461
+        },
+        {
+          "source_id": 9501948,
+          "name": "Jørgensen",
+          "team_id": 1461
+        },
+        {
+          "source_id": 9501949,
+          "name": "Lyng",
+          "team_id": 1461
+        },
+        {
+          "source_id": 9501950,
+          "name": "Maale",
+          "team_id": 1461
+        },
+        {
+          "source_id": 9501951,
+          "name": "Molnar",
+          "team_id": 1461
+        },
+        {
+          "source_id": 9501952,
+          "name": "Pedersen",
+          "team_id": 1461
         }
       ],
       "removed_fabricated": [],
@@ -1062,208 +4984,695 @@
       "team_source_id": 488,
       "team_created": false,
       "squad_read": 23,
-      "club_level_anchor": 74,
-      "created": [
+      "club_level_anchor": 71,
+      "created": [],
+      "moved_from_container": [],
+      "left_in_their_club": [
         {
           "source_id": 9502089,
-          "name": "Tom Sterobo",
-          "overall": 74
+          "name": "Sterobo",
+          "team_id": 488
         },
         {
           "source_id": 9502090,
-          "name": "Carsten Dethlefsen",
-          "overall": 74
+          "name": "Dethlefsen",
+          "team_id": 488
         },
         {
           "source_id": 9502091,
-          "name": "Michael Hemmingsen",
-          "overall": 73
+          "name": "Hemmingsen",
+          "team_id": 488
         },
         {
           "source_id": 9502092,
-          "name": "Per Hjorth",
-          "overall": 73
+          "name": "Hjorth",
+          "team_id": 488
         },
         {
           "source_id": 9502093,
-          "name": "Thomas Knudsen",
-          "overall": 73
+          "name": "Knudsen",
+          "team_id": 488
         },
         {
           "source_id": 9502094,
-          "name": "Ulrik Laursen",
-          "overall": 72
+          "name": "Laursen",
+          "team_id": 488
         },
         {
           "source_id": 9502095,
-          "name": "Jens Madsen",
-          "overall": 72
+          "name": "Madsen",
+          "team_id": 488
         },
         {
           "source_id": 9502096,
-          "name": "Steen Nedergaard",
-          "overall": 72
+          "name": "Nedergaard",
+          "team_id": 488
         },
         {
           "source_id": 9502097,
-          "name": "Torben Sangild",
-          "overall": 71
+          "name": "Sangild",
+          "team_id": 488
+        },
+        {
+          "source_id": 9500885,
+          "name": "Michael Schjønberg",
+          "team_id": 488
         },
         {
           "source_id": 9502098,
-          "name": "Morten Bisgaard",
-          "overall": 71
+          "name": "Bisgaard",
+          "team_id": 488
         },
         {
           "source_id": 9502099,
-          "name": "Lars Brøgger",
-          "overall": 71
+          "name": "Brøgger",
+          "team_id": 488
         },
-        {
-          "source_id": 9502100,
-          "name": "Leon Hansen",
-          "overall": 70
-        },
-        {
-          "source_id": 9502101,
-          "name": "Carsten Hemmingsen",
-          "overall": 70
-        },
-        {
-          "source_id": 9502102,
-          "name": "Jens Melvang",
-          "overall": 70
-        },
-        {
-          "source_id": 9502103,
-          "name": "Ulrik Pedersen",
-          "overall": 69
-        },
-        {
-          "source_id": 9502104,
-          "name": "Steen Petterson",
-          "overall": 69
-        },
-        {
-          "source_id": 9502105,
-          "name": "John Damsted",
-          "overall": 69
-        },
-        {
-          "source_id": 9502106,
-          "name": "Brian Skårup",
-          "overall": 68
-        },
-        {
-          "source_id": 9502107,
-          "name": "Jess Thorup",
-          "overall": 68
-        }
-      ],
-      "moved_from_container": [
-        {
-          "source_id": 9500885,
-          "name": "Michael Schjønberg"
-        },
-        {
-          "source_id": 9494075,
-          "name": "Alphonse Tchami"
-        }
-      ],
-      "left_in_their_club": [
         {
           "source_id": 6492,
           "name": "Hansen",
           "team_id": 285
         },
         {
+          "source_id": 9502100,
+          "name": "Hansen",
+          "team_id": 488
+        },
+        {
+          "source_id": 9502101,
+          "name": "Hemmingsen",
+          "team_id": 488
+        },
+        {
+          "source_id": 9502102,
+          "name": "Melvang",
+          "team_id": 488
+        },
+        {
+          "source_id": 9502103,
+          "name": "Pedersen",
+          "team_id": 488
+        },
+        {
+          "source_id": 9502104,
+          "name": "Petterson",
+          "team_id": 488
+        },
+        {
           "source_id": 2613,
           "name": "Tøfting",
           "team_id": 213
+        },
+        {
+          "source_id": 9502105,
+          "name": "Damsted",
+          "team_id": 488
+        },
+        {
+          "source_id": 9502106,
+          "name": "Skårup",
+          "team_id": 488
+        },
+        {
+          "source_id": 9494075,
+          "name": "Alphonse Tchami",
+          "team_id": 488
+        },
+        {
+          "source_id": 9502107,
+          "name": "Thorup",
+          "team_id": 488
+        }
+      ],
+      "removed_fabricated": [],
+      "not_applied": []
+    },
+    {
+      "country": "Dinamarca",
+      "club": "Silkeborg IF",
+      "team_source_id": 1463,
+      "team_created": false,
+      "squad_read": 18,
+      "club_level_anchor": 63,
+      "created": [],
+      "moved_from_container": [],
+      "left_in_their_club": [
+        {
+          "source_id": 9501953,
+          "name": "Kjær",
+          "team_id": 1463
+        },
+        {
+          "source_id": 9501954,
+          "name": "Bech",
+          "team_id": 1463
+        },
+        {
+          "source_id": 9501955,
+          "name": "Duus",
+          "team_id": 1463
+        },
+        {
+          "source_id": 9500892,
+          "name": "Jacob Laursen",
+          "team_id": 1463
+        },
+        {
+          "source_id": 9501956,
+          "name": "Melvang",
+          "team_id": 1463
+        },
+        {
+          "source_id": 9501957,
+          "name": "Møldrup",
+          "team_id": 1463
+        },
+        {
+          "source_id": 9501958,
+          "name": "Živković",
+          "team_id": 1463
+        },
+        {
+          "source_id": 9501959,
+          "name": "Bordinggaard",
+          "team_id": 1463
+        },
+        {
+          "source_id": 9500800,
+          "name": "Morten Bruun",
+          "team_id": 1463
+        },
+        {
+          "source_id": 9501960,
+          "name": "Hansen",
+          "team_id": 1463
+        },
+        {
+          "source_id": 9501961,
+          "name": "Knudsen",
+          "team_id": 1463
+        },
+        {
+          "source_id": 9501962,
+          "name": "Larsen",
+          "team_id": 1463
+        },
+        {
+          "source_id": 9501963,
+          "name": "Sommer",
+          "team_id": 1463
+        },
+        {
+          "source_id": 9501964,
+          "name": "Sørensen",
+          "team_id": 1463
+        },
+        {
+          "source_id": 9501965,
+          "name": "Fernandez",
+          "team_id": 1463
+        },
+        {
+          "source_id": 9501966,
+          "name": "Frederiksen",
+          "team_id": 1463
+        },
+        {
+          "source_id": 9501967,
+          "name": "Kastbjerg",
+          "team_id": 1463
+        },
+        {
+          "source_id": 9501968,
+          "name": "Reese",
+          "team_id": 1463
+        }
+      ],
+      "removed_fabricated": [],
+      "not_applied": []
+    },
+    {
+      "country": "Dinamarca",
+      "club": "Viborg FF",
+      "team_source_id": 1467,
+      "team_created": false,
+      "squad_read": 18,
+      "club_level_anchor": 65,
+      "created": [],
+      "moved_from_container": [],
+      "left_in_their_club": [
+        {
+          "source_id": 9501969,
+          "name": "Lowe",
+          "team_id": 1467
+        },
+        {
+          "source_id": 9501265,
+          "name": "Nielsen",
+          "team_id": 487
+        },
+        {
+          "source_id": 9501970,
+          "name": "Hansen",
+          "team_id": 1467
+        },
+        {
+          "source_id": 9501971,
+          "name": "Hansen",
+          "team_id": 1467
+        },
+        {
+          "source_id": 9501972,
+          "name": "Pedersen",
+          "team_id": 1467
+        },
+        {
+          "source_id": 9501973,
+          "name": "Schau",
+          "team_id": 1467
+        },
+        {
+          "source_id": 9501974,
+          "name": "Stücker",
+          "team_id": 1467
+        },
+        {
+          "source_id": 9501975,
+          "name": "Tønnesen",
+          "team_id": 1467
+        },
+        {
+          "source_id": 9501976,
+          "name": "Bach",
+          "team_id": 1467
+        },
+        {
+          "source_id": 9501977,
+          "name": "Bartholomaeusen",
+          "team_id": 1467
+        },
+        {
+          "source_id": 9501978,
+          "name": "Døssing",
+          "team_id": 1467
+        },
+        {
+          "source_id": 9501979,
+          "name": "Easter",
+          "team_id": 1467
+        },
+        {
+          "source_id": 9501980,
+          "name": "Kristensen",
+          "team_id": 1467
+        },
+        {
+          "source_id": 9501981,
+          "name": "Nielsen",
+          "team_id": 1467
+        },
+        {
+          "source_id": 9501982,
+          "name": "Sørensen",
+          "team_id": 1467
+        },
+        {
+          "source_id": 9501983,
+          "name": "Andreasen",
+          "team_id": 1467
+        },
+        {
+          "source_id": 9501984,
+          "name": "Erfurt",
+          "team_id": 1467
+        },
+        {
+          "source_id": 9501985,
+          "name": "Højer",
+          "team_id": 1467
+        }
+      ],
+      "removed_fabricated": [],
+      "not_applied": []
+    },
+    {
+      "country": "Rumania",
+      "club": "FC Timisoara",
+      "team_source_id": 615,
+      "team_created": false,
+      "squad_read": 12,
+      "club_level_anchor": 65,
+      "created": [],
+      "moved_from_container": [],
+      "left_in_their_club": [
+        {
+          "source_id": 9502557,
+          "name": "Toma",
+          "team_id": 615
+        },
+        {
+          "source_id": 9502558,
+          "name": "Bătrânu",
+          "team_id": 615
+        },
+        {
+          "source_id": 9502559,
+          "name": "Contra",
+          "team_id": 615
+        },
+        {
+          "source_id": 9502560,
+          "name": "Macavei",
+          "team_id": 615
+        },
+        {
+          "source_id": 9502561,
+          "name": "Dianconescu",
+          "team_id": 615
+        },
+        {
+          "source_id": 9502562,
+          "name": "Popescu",
+          "team_id": 615
+        },
+        {
+          "source_id": 9502563,
+          "name": "Velcea",
+          "team_id": 615
+        },
+        {
+          "source_id": 9502564,
+          "name": "Vlaicu",
+          "team_id": 615
+        },
+        {
+          "source_id": 9502565,
+          "name": "Voica",
+          "team_id": 615
+        },
+        {
+          "source_id": 9502566,
+          "name": "Popescu",
+          "team_id": 615
+        },
+        {
+          "source_id": 9502567,
+          "name": "Rosenblum",
+          "team_id": 615
+        },
+        {
+          "source_id": 9502568,
+          "name": "Uleşan",
+          "team_id": 615
+        }
+      ],
+      "removed_fabricated": [],
+      "not_applied": []
+    },
+    {
+      "country": "Bulgaria",
+      "club": "CSKA Sofía",
+      "team_source_id": 477,
+      "team_created": false,
+      "squad_read": 21,
+      "club_level_anchor": 75,
+      "created": [
+        {
+          "source_id": 9502624,
+          "name": "Boban Babunski",
+          "overall": 75
+        },
+        {
+          "source_id": 9502625,
+          "name": "Kalin Bankov",
+          "overall": 75
+        },
+        {
+          "source_id": 9502626,
+          "name": "Filip Filipov",
+          "overall": 74
+        },
+        {
+          "source_id": 9502627,
+          "name": "Martin Goranov",
+          "overall": 74
+        },
+        {
+          "source_id": 9502628,
+          "name": "Zarko Machev",
+          "overall": 74
+        },
+        {
+          "source_id": 9502629,
+          "name": "Ljupčo Markovski",
+          "overall": 73
+        },
+        {
+          "source_id": 9502630,
+          "name": "Radoslav Vidov",
+          "overall": 73
+        },
+        {
+          "source_id": 9502631,
+          "name": "Aleksandar Aleksandrov",
+          "overall": 73
+        },
+        {
+          "source_id": 9502632,
+          "name": "Chavdar Atanasov",
+          "overall": 72
+        },
+        {
+          "source_id": 9502633,
+          "name": "Metodi Dejanov",
+          "overall": 72
+        },
+        {
+          "source_id": 9502634,
+          "name": "Ivaylo Ilarionov",
+          "overall": 72
+        },
+        {
+          "source_id": 9502635,
+          "name": "Ivailo Kirov",
+          "overall": 71
+        },
+        {
+          "source_id": 9502636,
+          "name": "Hristo Koilov",
+          "overall": 71
+        },
+        {
+          "source_id": 9502637,
+          "name": "Viktorio Pavlov",
+          "overall": 71
+        },
+        {
+          "source_id": 9502638,
+          "name": "Stanimir Stoilov",
+          "overall": 70
+        },
+        {
+          "source_id": 9502639,
+          "name": "Kostadin Yanchev",
+          "overall": 70
+        },
+        {
+          "source_id": 9502640,
+          "name": "Martin Zafirov",
+          "overall": 70
+        },
+        {
+          "source_id": 9502641,
+          "name": "Hristo Marashliev",
+          "overall": 69
+        },
+        {
+          "source_id": 9502642,
+          "name": "Lachezar Tanev",
+          "overall": 69
+        }
+      ],
+      "moved_from_container": [
+        {
+          "source_id": 9494156,
+          "name": "Ivaylo Andonov"
+        }
+      ],
+      "left_in_their_club": [
+        {
+          "source_id": 76,
+          "name": "Kirov",
+          "team_id": 4
         }
       ],
       "removed_fabricated": [
         {
-          "source_id": 10747,
-          "name": "Skjelbred"
+          "source_id": 11833,
+          "name": "Stoyanov"
         },
         {
-          "source_id": 11383,
-          "name": "King"
+          "source_id": 13880,
+          "name": "Bojinov"
         },
         {
-          "source_id": 12081,
-          "name": "Joensen"
+          "source_id": 14892,
+          "name": "Gigot"
         },
         {
-          "source_id": 14054,
-          "name": "Jens Dolberg"
+          "source_id": 16872,
+          "name": "David Sagbo"
         },
         {
-          "source_id": 16164,
-          "name": "Vecchia"
+          "source_id": 22276,
+          "name": "Petrus Zé"
         },
         {
-          "source_id": 19259,
-          "name": "Ayew"
+          "source_id": 22758,
+          "name": "Vutov"
         },
         {
-          "source_id": 20586,
-          "name": "Curth"
+          "source_id": 24943,
+          "name": "Rocha"
         },
         {
-          "source_id": 21730,
-          "name": "Ryan Henley"
+          "source_id": 26554,
+          "name": "Chochev"
         },
         {
-          "source_id": 21756,
-          "name": "Casper Haren"
+          "source_id": 38271,
+          "name": "Bojinov"
         },
         {
-          "source_id": 24531,
-          "name": "Tørnes"
+          "source_id": 38272,
+          "name": "Houbtchev"
         },
         {
-          "source_id": 28474,
-          "name": "Kenneth Ahlmann"
+          "source_id": 38273,
+          "name": "Genev"
         },
         {
-          "source_id": 28627,
-          "name": "Sørensen"
+          "source_id": 38274,
+          "name": "Kovachev"
         },
         {
-          "source_id": 28628,
-          "name": "Anders Felfel"
+          "source_id": 38275,
+          "name": "Tsonev"
         },
         {
-          "source_id": 30369,
-          "name": "Runsewe"
+          "source_id": 38276,
+          "name": "Miliev"
         },
         {
-          "source_id": 30404,
-          "name": "Fenger"
-        },
-        {
-          "source_id": 30427,
-          "name": "Due"
-        },
-        {
-          "source_id": 30428,
-          "name": "Jacob Gartenmann"
-        },
-        {
-          "source_id": 30429,
-          "name": "Desler"
-        },
-        {
-          "source_id": 30442,
-          "name": "Keller"
-        },
-        {
-          "source_id": 30450,
-          "name": "Oliver Sørensen"
+          "source_id": 38277,
+          "name": "Galchev"
         }
       ],
+      "not_applied": []
+    },
+    {
+      "country": "Rumania",
+      "club": "FC Steaua Bucureşti",
+      "team_source_id": 613,
+      "team_created": false,
+      "squad_read": 18,
+      "club_level_anchor": 74,
+      "created": [
+        {
+          "source_id": 9502643,
+          "name": "Dumitru Stângaciu",
+          "overall": 74
+        },
+        {
+          "source_id": 9502644,
+          "name": "Ionel Fulga",
+          "overall": 72
+        },
+        {
+          "source_id": 9502645,
+          "name": "Daniel Iftodi",
+          "overall": 71
+        },
+        {
+          "source_id": 9502646,
+          "name": "Cătălin Munteanu",
+          "overall": 70
+        },
+        {
+          "source_id": 9502647,
+          "name": "Nica Panduru",
+          "overall": 68
+        }
+      ],
+      "moved_from_container": [],
+      "left_in_their_club": [
+        {
+          "source_id": 9501368,
+          "name": "Gherasim",
+          "team_id": 613
+        },
+        {
+          "source_id": 9501369,
+          "name": "Bucur",
+          "team_id": 613
+        },
+        {
+          "source_id": 9501371,
+          "name": "Csik",
+          "team_id": 613
+        },
+        {
+          "source_id": 9500842,
+          "name": "Anton Doboș",
+          "team_id": 613
+        },
+        {
+          "source_id": 9500843,
+          "name": "Iulian Filipescu",
+          "team_id": 613
+        },
+        {
+          "source_id": 9494019,
+          "name": "Ilie Dumitrescu",
+          "team_id": 613
+        },
+        {
+          "source_id": 9494026,
+          "name": "Constantin Gâlcă",
+          "team_id": 613
+        },
+        {
+          "source_id": 9501365,
+          "name": "Panait",
+          "team_id": 613
+        },
+        {
+          "source_id": 9501367,
+          "name": "Pirvu",
+          "team_id": 613
+        },
+        {
+          "source_id": 9501366,
+          "name": "Stan",
+          "team_id": 613
+        },
+        {
+          "source_id": 9500844,
+          "name": "Adrian Ilie",
+          "team_id": 613
+        },
+        {
+          "source_id": 9501372,
+          "name": "Ion",
+          "team_id": 613
+        },
+        {
+          "source_id": 9500841,
+          "name": "Marius Lăcătuș",
+          "team_id": 613
+        }
+      ],
+      "removed_fabricated": [],
       "not_applied": []
     }
   ]
