@@ -1,0 +1,3180 @@
+{
+  "generated_at": "2026-08-20T16:55:22.089556+00:00",
+  "source": "BDFutbol global search, exact name + exact birth date",
+  "candidates": 426,
+  "downloaded": 94,
+  "no_exact_match": 332,
+  "failed": 0,
+  "results": [
+    {
+      "source_id": 9503297,
+      "name": "Conny Johansson",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503298,
+      "name": "Ole Arvid Langnes",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503299,
+      "name": "Andrzej Wozniak",
+      "status": "downloaded",
+      "source": "BDFutbol global search",
+      "bdfutbol_id": "89393",
+      "profile_label": "Player Woźniak (Andrzej Woźniak) 23/10/1965 Porto, Widzew Łódź, Braga",
+      "source_url": "https://www.bdfutbol.com/i/j/89393.jpg"
+    },
+    {
+      "source_id": 9503300,
+      "name": "Stephen Lowe",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503301,
+      "name": "Slawomir Szymaszek",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503302,
+      "name": "Artur Sarnat",
+      "status": "downloaded",
+      "source": "BDFutbol global search",
+      "bdfutbol_id": "707847",
+      "profile_label": "Player Sarnat ( Artur Sarnat ) 20/09/1970 Wisła Kraków, Diyarbakırspor",
+      "source_url": "https://www.bdfutbol.com/i/j/707847.jpg"
+    },
+    {
+      "source_id": 9503303,
+      "name": "Jacek Matyja",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503304,
+      "name": "Jaroslaw Giszka",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503305,
+      "name": "Grzegorz Burmer",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503306,
+      "name": "Grzegorz Kaliciak",
+      "status": "downloaded",
+      "source": "BDFutbol global search",
+      "bdfutbol_id": "68893",
+      "profile_label": "Player Kaliciak (Grzegorz Paweł Kaliciak) 10/03/1975 Sint-Truidense",
+      "source_url": "https://www.bdfutbol.com/i/j/68893.jpg"
+    },
+    {
+      "source_id": 9503307,
+      "name": "Dmytro Shutkov",
+      "status": "downloaded",
+      "source": "BDFutbol global search",
+      "bdfutbol_id": "1067483",
+      "profile_label": "Player Shutkov (Dmytro Anatoliyovych Shutkov) 03/04/1972 Shakhtar Donetsk",
+      "source_url": "https://www.bdfutbol.com/i/j/1067483.jpg"
+    },
+    {
+      "source_id": 9503308,
+      "name": "Roman Nesterenko",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 1
+    },
+    {
+      "source_id": 9503309,
+      "name": "Andriy Kuraev",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503310,
+      "name": "Volodymyr Gavrylov",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503311,
+      "name": "Oleksandr Martyuk",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503312,
+      "name": "Frode Lund",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503313,
+      "name": "Morten Svalstad",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503314,
+      "name": "Heine Jenssen",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503315,
+      "name": "Ronny Pedersen",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503316,
+      "name": "Knut Erik Folland",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503317,
+      "name": "Kent Karlsen",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503318,
+      "name": "Tom Henning Hovi",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503319,
+      "name": "Jon Eirik Ødegaard",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503320,
+      "name": "Arild Rebne",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503321,
+      "name": "Stein Jöran Sanden",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503322,
+      "name": "Espen Skistad",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503323,
+      "name": "Frode Olsen",
+      "status": "downloaded",
+      "source": "BDFutbol global search",
+      "bdfutbol_id": "909",
+      "profile_label": "Player Olsen ( Frode Olsen ) 12/10/1967 Sevilla, Rosenborg, Stabæk, Viking",
+      "source_url": "https://www.bdfutbol.com/i/j/909.jpg"
+    },
+    {
+      "source_id": 9503324,
+      "name": "Frank Fosseli Tönnesen",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503325,
+      "name": "Jörgen Hammersland",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503326,
+      "name": "Morten Ørum Pettersen",
+      "status": "downloaded",
+      "source": "BDFutbol global search",
+      "bdfutbol_id": "717631",
+      "profile_label": "Player Pettersen ( Morten Ørum Pettersen ) 25/02/1970 Brann",
+      "source_url": "https://www.bdfutbol.com/i/j/717631.jpg"
+    },
+    {
+      "source_id": 9503327,
+      "name": "Viggo Strömme",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503328,
+      "name": "Per Christian Osmundsen",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503329,
+      "name": "Helge Bjønsaas",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503330,
+      "name": "Pål Lydersen",
+      "status": "downloaded",
+      "source": "BDFutbol global search",
+      "bdfutbol_id": "80812",
+      "profile_label": "Player Lydersen ( Pål Lydersen ) 10/09/1965 Molde, Sturm Graz, Arsenal",
+      "source_url": "https://www.bdfutbol.com/i/j/80812.jpg"
+    },
+    {
+      "source_id": 9503331,
+      "name": "Steinar Pedersen",
+      "status": "downloaded",
+      "source": "BDFutbol global search",
+      "bdfutbol_id": "98516",
+      "profile_label": "Player Pedersen ( Steinar Pedersen ) 06/06/1975 Borussia Dortmund, Lillestrøm, Start",
+      "source_url": "https://www.bdfutbol.com/i/j/98516.jpg"
+    },
+    {
+      "source_id": 9503332,
+      "name": "Ivaylo Popov",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503333,
+      "name": "Todor Stoyanov",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503334,
+      "name": "Nedelcho Dobrev",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503335,
+      "name": "Todor Marev",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503336,
+      "name": "Veselin Branimirov",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503337,
+      "name": "Vasko Santurov",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503338,
+      "name": "Zlatin Mihaylov",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503339,
+      "name": "Valeri Grekov",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503340,
+      "name": "Todor Atanasov",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503341,
+      "name": "Milen Bakardzhiev",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503342,
+      "name": "Plamen Timnev",
+      "status": "downloaded",
+      "source": "BDFutbol global search",
+      "bdfutbol_id": "89346",
+      "profile_label": "Player Timnev ( Plamen Timnev ) 26/03/1973 Neftokhimik Burgas, Chaves",
+      "source_url": "https://www.bdfutbol.com/i/j/89346.jpg"
+    },
+    {
+      "source_id": 9503343,
+      "name": "Plamen Kazakov",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503344,
+      "name": "Boyko Kamenov",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503345,
+      "name": "Nikolay Filipov",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503346,
+      "name": "Nikola Spasov",
+      "status": "downloaded",
+      "source": "BDFutbol global search",
+      "bdfutbol_id": "88684",
+      "profile_label": "Player Spasov (Nikola Asenov Spasov) 15/12/1958 Farense, Beira-Mar, Paços de Ferreira",
+      "source_url": "https://www.bdfutbol.com/i/j/88684.jpg"
+    },
+    {
+      "source_id": 9503347,
+      "name": "Vladimir Manolkov",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503348,
+      "name": "Rumen Apostolov",
+      "status": "downloaded",
+      "source": "BDFutbol global search",
+      "bdfutbol_id": "708847",
+      "profile_label": "Player Apostolov (Rumen Marinov Apostolov) 24/08/1963 CSKA Sofia",
+      "source_url": "https://www.bdfutbol.com/i/j/708847.jpg"
+    },
+    {
+      "source_id": 9503349,
+      "name": "Aleksandar Minovski",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503350,
+      "name": "Ivan Atanasov",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503351,
+      "name": "Plamen Mechev",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503352,
+      "name": "Aleksandar Pantaleev",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503353,
+      "name": "Adalbert Zafirov",
+      "status": "downloaded",
+      "source": "BDFutbol global search",
+      "bdfutbol_id": "98509",
+      "profile_label": "Player Zafirov (Adalbert Ivanov Zafirov) 29/09/1969 CSKA Sofia, Lokomotiv Sofia, Arminia Bielefeld",
+      "source_url": "https://www.bdfutbol.com/i/j/98509.jpg"
+    },
+    {
+      "source_id": 9503354,
+      "name": "Krasimir Kostov",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503355,
+      "name": "Antoni Zdravkov",
+      "status": "downloaded",
+      "source": "BDFutbol global search",
+      "bdfutbol_id": "88792",
+      "profile_label": "Player Zdravkov (Antoni Ivanov Zdravkov) 20/08/1964 Marítimo",
+      "source_url": "https://www.bdfutbol.com/i/j/88792.jpg"
+    },
+    {
+      "source_id": 9503356,
+      "name": "Dimitar Vasev",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503357,
+      "name": "Volodymyr Marchuk",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503358,
+      "name": "Andriy Baysarovych",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503359,
+      "name": "Yaroslav Komzyuk",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503360,
+      "name": "Oleg Gula",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503361,
+      "name": "Volodymyr Antonyuk",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503362,
+      "name": "Anatoliy Polishchuk",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503363,
+      "name": "Ruslan Nikitin",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503364,
+      "name": "Sergiy Krukovets",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503365,
+      "name": "Oleg Fedyukov",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503366,
+      "name": "Igor Sarnavskyi",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503367,
+      "name": "Oleg Benko",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503368,
+      "name": "Lyubomyr Vovchuk",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503369,
+      "name": "Vitaliy Kitsak",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503370,
+      "name": "Yevgeniy Mykhayliv",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503371,
+      "name": "Vitaliy Shevchuk",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503372,
+      "name": "Valentin David",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503373,
+      "name": "Grzegorz Krysiak",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503374,
+      "name": "Witold Bendkowski",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503375,
+      "name": "Tomasz Lenart",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503376,
+      "name": "Artur Kosciuk",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503377,
+      "name": "Rafal Pawlak",
+      "status": "downloaded",
+      "source": "BDFutbol global search",
+      "bdfutbol_id": "727702",
+      "profile_label": "Player Pawlak ( Rafal Pawlak ) 16/01/1970 ŁKS, Widzew Łódź",
+      "source_url": "https://www.bdfutbol.com/i/j/727702.jpg"
+    },
+    {
+      "source_id": 9503378,
+      "name": "Zdzislaw Leszczynski",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503379,
+      "name": "Dariusz Podolski",
+      "status": "downloaded",
+      "source": "BDFutbol global search",
+      "bdfutbol_id": "727172",
+      "profile_label": "Player Podolski ( Dariusz Podolski ) 17/06/1966 Widzew Łódź",
+      "source_url": "https://www.bdfutbol.com/i/j/727172.jpg"
+    },
+    {
+      "source_id": 9503380,
+      "name": "Jaroslaw Dziedzic",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503381,
+      "name": "Marek Chojnacki",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503382,
+      "name": "Dariusz Nowacki",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503383,
+      "name": "Andrzej Ambrozej",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503384,
+      "name": "Dariusz Janczak",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503385,
+      "name": "Janusz Kaczowka",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503386,
+      "name": "Mariusz Gałaj",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503387,
+      "name": "Tomasz Wieszczycki",
+      "status": "downloaded",
+      "source": "BDFutbol global search",
+      "bdfutbol_id": "87702",
+      "profile_label": "Player Wieszczycki (Tomasz Witold Wieszczycki) 21/12/1971 Legia Warszawa, ŁKS, Polonia Warszawa, Groclin Grodzisk Wielkopolski, Le Havre",
+      "source_url": "https://www.bdfutbol.com/i/j/87702.jpg"
+    },
+    {
+      "source_id": 9503388,
+      "name": "Igor Sypniewski",
+      "status": "downloaded",
+      "source": "BDFutbol global search",
+      "bdfutbol_id": "709428",
+      "profile_label": "Player Sypniewski ( Igor Sypniewski ) 10/11/1974 Panathinaikos",
+      "source_url": "https://www.bdfutbol.com/i/j/709428.jpg"
+    },
+    {
+      "source_id": 9503389,
+      "name": "Tomasz Cebula",
+      "status": "downloaded",
+      "source": "BDFutbol global search",
+      "bdfutbol_id": "726198",
+      "profile_label": "Player Cebula ( Tomasz Cebula ) 31/03/1966 ŁKS, Legia Warszawa, Ironi Rishon, Hapoel Petah Tikvah",
+      "source_url": "https://www.bdfutbol.com/i/j/726198.jpg"
+    },
+    {
+      "source_id": 9503390,
+      "name": "Arkadiusz Onyszko",
+      "status": "downloaded",
+      "source": "BDFutbol global search",
+      "bdfutbol_id": "711090",
+      "profile_label": "Player Onyszko (Arkadiusz Jerzy Onyszko) 12/01/1974 Legia Warszawa, Widzew Łódź, Viborg, Odense",
+      "source_url": "https://www.bdfutbol.com/i/j/711090.jpg"
+    },
+    {
+      "source_id": 9503391,
+      "name": "Wiesław Rutkowski",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503392,
+      "name": "Włodzimierz Kwiatkowski",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503393,
+      "name": "Janusz Galuszka",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503394,
+      "name": "Artur Sejud",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503395,
+      "name": "Jacek Lis",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503396,
+      "name": "Andrzej Kasiak",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503397,
+      "name": "Igor Syvukha",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503398,
+      "name": "Pawel Rybak",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503399,
+      "name": "Herbert Boruc",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503400,
+      "name": "Mirosław Mścisz",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503401,
+      "name": "Jarosław Pacoń",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503402,
+      "name": "Jaromir Wieprzec",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503403,
+      "name": "Marek Piotrowicz",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503404,
+      "name": "Mieczyslaw Ozog",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503405,
+      "name": "Stanislaw Gawenda",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503406,
+      "name": "Dariusz Zgutczyński",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503407,
+      "name": "Tomasz Jurkowski",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503408,
+      "name": "Roman Miszczak",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503409,
+      "name": "Janusz Goreczny",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503410,
+      "name": "Pawel Szafran",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503411,
+      "name": "Bogusław Kawecki",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503412,
+      "name": "Janusz Jojko",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503413,
+      "name": "Marek Franczuk",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503414,
+      "name": "Krzysztof Maciejewski",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503415,
+      "name": "Andrzej Nikodem",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503416,
+      "name": "Grzegorz Borawski",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503417,
+      "name": "Rafał Góralczyk",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503418,
+      "name": "Marek Swierczewski",
+      "status": "downloaded",
+      "source": "BDFutbol global search",
+      "bdfutbol_id": "712897",
+      "profile_label": "Player Świerczewski (Marek Świerczewski) 02/03/1967 Katowice, Wisła Kraków, Sturm Graz, Austria Wien",
+      "source_url": "https://www.bdfutbol.com/i/j/712897.jpg"
+    },
+    {
+      "source_id": 9503419,
+      "name": "Kazimierz Wegrzyn",
+      "status": "downloaded",
+      "source": "BDFutbol global search",
+      "bdfutbol_id": "725614",
+      "profile_label": "Player Węgrzyn (Kazimierz Węgrzyn) 13/04/1967 Katowice, Wisła Kraków, Pogoń Szczecin, Ried",
+      "source_url": "https://www.bdfutbol.com/i/j/725614.jpg"
+    },
+    {
+      "source_id": 9503420,
+      "name": "Adam Ledwon",
+      "status": "downloaded",
+      "source": "BDFutbol global search",
+      "bdfutbol_id": "98389",
+      "profile_label": "Player Ledwoń (Adam Ryszard Ledwoń) 15/01/1974 Bayer Leverkusen, Katowice, Austria Wien, Sturm Graz",
+      "source_url": "https://www.bdfutbol.com/i/j/98389.jpg"
+    },
+    {
+      "source_id": 9503421,
+      "name": "Adam Kucz",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503422,
+      "name": "Miroslaw Widuch",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503423,
+      "name": "Zdzislaw Strojek",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503424,
+      "name": "Dariusz Grzesik",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503425,
+      "name": "Rafal Witkowski",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503426,
+      "name": "Dariusz Rzezniczek",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503427,
+      "name": "Wojciech Osyra",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503428,
+      "name": "Robert Razakowski",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503429,
+      "name": "Bartosz Karwan",
+      "status": "downloaded",
+      "source": "BDFutbol global search",
+      "bdfutbol_id": "92105",
+      "profile_label": "Player Karwan (Bartosz Jakub Karwan) 13/01/1976 Legia Warszawa, Hertha Berliner, Katowice",
+      "source_url": "https://www.bdfutbol.com/i/j/92105.jpg"
+    },
+    {
+      "source_id": 9503430,
+      "name": "Zbigniew Plesnierowicz",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503431,
+      "name": "Jerzy Zajda",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503432,
+      "name": "Krzysztof Pawlak",
+      "status": "downloaded",
+      "source": "BDFutbol global search",
+      "bdfutbol_id": "721039",
+      "profile_label": "Player Pawlak (Krzysztof Henryk Pawlak) 12/02/1958 Lokeren",
+      "source_url": "https://www.bdfutbol.com/i/j/721039.jpg"
+    },
+    {
+      "source_id": 9503433,
+      "name": "Waldemar Tesiorowski",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503434,
+      "name": "Artur Gajewski",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503435,
+      "name": "Mykola Sych",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503436,
+      "name": "Slawomir Sidorski",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503437,
+      "name": "Piotr Tomaszczak",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503438,
+      "name": "Czeslaw Jakolcewicz",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503439,
+      "name": "Jerzy Lapczynski",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503440,
+      "name": "Arkadiusz Miklosik",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503441,
+      "name": "Robert Kildanowicz",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503442,
+      "name": "Tomasz Rybarczyk",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503443,
+      "name": "Stanislaw Owca",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503444,
+      "name": "Slawomir Pawelec",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503445,
+      "name": "Roman Frydryszak",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503446,
+      "name": "Jerzy Misztur",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503447,
+      "name": "Kiril Stoykov",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503448,
+      "name": "Miroslav Mitev",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503449,
+      "name": "Kostadin Trendafilov",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503450,
+      "name": "Martin Goranov",
+      "status": "downloaded",
+      "source": "BDFutbol global search",
+      "bdfutbol_id": "724994",
+      "profile_label": "Player Goranov (Martin Milenov Goranov) 15/06/1973 CSKA Sofia, Levski Sofia",
+      "source_url": "https://www.bdfutbol.com/i/j/724994.jpg"
+    },
+    {
+      "source_id": 9503451,
+      "name": "Hristo Voynov",
+      "status": "downloaded",
+      "source": "BDFutbol global search",
+      "bdfutbol_id": "725574",
+      "profile_label": "Player Voynov (Hristo Lyubenov Voynov) 17/08/1971 CSKA Sofia",
+      "source_url": "https://www.bdfutbol.com/i/j/725574.jpg"
+    },
+    {
+      "source_id": 9503452,
+      "name": "Dobromir Mitov",
+      "status": "downloaded",
+      "source": "BDFutbol global search",
+      "bdfutbol_id": "706136",
+      "profile_label": "Player Mitov (Dobromir Boykov Mitov) 03/04/1972 CSKA Sofia",
+      "source_url": "https://www.bdfutbol.com/i/j/706136.jpg"
+    },
+    {
+      "source_id": 9503453,
+      "name": "Milen Radukanov",
+      "status": "downloaded",
+      "source": "BDFutbol global search",
+      "bdfutbol_id": "725569",
+      "profile_label": "Player Radukanov (Milen Petrov Radukanov) 12/12/1972 CSKA Sofia, Levski Sofia",
+      "source_url": "https://www.bdfutbol.com/i/j/725569.jpg"
+    },
+    {
+      "source_id": 9503454,
+      "name": "Bozhidar Yankov",
+      "status": "downloaded",
+      "source": "BDFutbol global search",
+      "bdfutbol_id": "726231",
+      "profile_label": "Player Yankov (Bozhidar Krumov Yankov) 11/05/1972 CSKA Sofia",
+      "source_url": "https://www.bdfutbol.com/i/j/726231.jpg"
+    },
+    {
+      "source_id": 9503455,
+      "name": "Velin Kefalov",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503456,
+      "name": "Morten Bakke",
+      "status": "downloaded",
+      "source": "BDFutbol global search",
+      "bdfutbol_id": "1050549",
+      "profile_label": "Player Bakke ( Morten Bakke ) 16/12/1968 Molde, Wimbledon",
+      "source_url": "https://www.bdfutbol.com/i/j/1050549.jpg"
+    },
+    {
+      "source_id": 9503457,
+      "name": "Are Lervik",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 1
+    },
+    {
+      "source_id": 9503458,
+      "name": "Björnar Hoel",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503459,
+      "name": "José Glaría",
+      "status": "downloaded",
+      "source": "BDFutbol global search",
+      "bdfutbol_id": "2758",
+      "profile_label": "Player Glaría (José María Avizanda Glaría) 24/05/1966 Rayo Vallecano, Molde",
+      "source_url": "https://www.bdfutbol.com/i/j/2758.jpg"
+    },
+    {
+      "source_id": 9503460,
+      "name": "Leontin Toader",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503461,
+      "name": "Dan Diac",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503462,
+      "name": "Gheorghe Cirstea",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503463,
+      "name": "Tor André Grenersen",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503464,
+      "name": "Bjørn Ludvigsen",
+      "status": "downloaded",
+      "source": "BDFutbol global search",
+      "bdfutbol_id": "710757",
+      "profile_label": "Player Ludvigsen ( Bjørn Ludvigsen ) 14/02/1969 Tromsø",
+      "source_url": "https://www.bdfutbol.com/i/j/710757.jpg"
+    },
+    {
+      "source_id": 9503465,
+      "name": "Tor Herold Pedersen",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503466,
+      "name": "Piotr Wojdyga",
+      "status": "downloaded",
+      "source": "BDFutbol global search",
+      "bdfutbol_id": "727130",
+      "profile_label": "Player Wojdyga ( Piotr Wojdyga ) 12/09/1962 Widzew Łódź, Polonia Warszawa",
+      "source_url": "https://www.bdfutbol.com/i/j/727130.jpg"
+    },
+    {
+      "source_id": 9503467,
+      "name": "Dariusz Piechota",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503468,
+      "name": "Robert Matuszewski",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503469,
+      "name": "Krystyn Hilscher",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503470,
+      "name": "Grzegorz Wodkiewicz",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503471,
+      "name": "Tomasz Szuflita",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503472,
+      "name": "Miroslaw Rzepa",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503473,
+      "name": "Marcin Thiede",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503474,
+      "name": "Marek Pawlak",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503475,
+      "name": "Konrad Paciorkowski",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503476,
+      "name": "Afrim Kuci",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503477,
+      "name": "Robert Piekarski",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503478,
+      "name": "Bogusław Wyparło",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503479,
+      "name": "Wieslaw Bartkowski",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503480,
+      "name": "Krzysztof Letocha",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503481,
+      "name": "Dobromir Minchev",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503482,
+      "name": "Zarko Machev",
+      "status": "downloaded",
+      "source": "BDFutbol global search",
+      "bdfutbol_id": "725068",
+      "profile_label": "Player Machev (Zarko Yozov Machev) 07/02/1967 CSKA Sofia, Slavia Sofia",
+      "source_url": "https://www.bdfutbol.com/i/j/725068.jpg"
+    },
+    {
+      "source_id": 9503483,
+      "name": "Nikolay Demirev",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503484,
+      "name": "Blagomir Mitrev",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503485,
+      "name": "Dimitar Sivov",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503486,
+      "name": "Ognyan Radev",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503487,
+      "name": "Yordan Mitev",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503488,
+      "name": "Vasil Dragolov",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503489,
+      "name": "Vanyo Shishkov",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503490,
+      "name": "Radko Kalaydzhiev",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503491,
+      "name": "Russi Petkov",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503492,
+      "name": "Yordan Galabov",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503493,
+      "name": "Nikola Borisov",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503494,
+      "name": "Shaban Shefket",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503495,
+      "name": "Tsvetomir Parvanov",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503496,
+      "name": "Aleksey Dioniseev",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503497,
+      "name": "Milen Penchev",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503498,
+      "name": "Ivan Tankov",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503499,
+      "name": "Radostin Rusev",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503500,
+      "name": "Sasho Todorov",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503501,
+      "name": "Ivaylo Filipov",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503502,
+      "name": "Aleksandar Dimov",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503503,
+      "name": "Bozhidar Iskrenov",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503504,
+      "name": "Anton Dimitrov",
+      "status": "downloaded",
+      "source": "BDFutbol global search",
+      "bdfutbol_id": "724991",
+      "profile_label": "Player Dimitrov (Anton Kostov Dimitrov) 12/08/1970 CSKA Sofia, Slavia Sofia",
+      "source_url": "https://www.bdfutbol.com/i/j/724991.jpg"
+    },
+    {
+      "source_id": 9503505,
+      "name": "Miroslav Miroslavov",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503506,
+      "name": "Plamen Lalev",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503507,
+      "name": "Johan Martin Lianes",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503508,
+      "name": "Erik Holtan",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503509,
+      "name": "Pal Håpnes",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503510,
+      "name": "Stale Bokalrud",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503511,
+      "name": "Vidar Sanderud",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503512,
+      "name": "Geir Bakke",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 1
+    },
+    {
+      "source_id": 9503513,
+      "name": "Svein Enersen",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503514,
+      "name": "Christer Basma",
+      "status": "downloaded",
+      "source": "BDFutbol global search",
+      "bdfutbol_id": "44835",
+      "profile_label": "Player Basma (Ole Christer Basma ) 01/08/1972 Rosenborg, Kongsvinger",
+      "source_url": "https://www.bdfutbol.com/i/j/44835.jpg"
+    },
+    {
+      "source_id": 9503515,
+      "name": "Ole Einar Martinsen",
+      "status": "downloaded",
+      "source": "BDFutbol global search",
+      "bdfutbol_id": "709501",
+      "profile_label": "Player Martinsen ( Ole Einar Martinsen ) 11/03/1967 Rosenborg",
+      "source_url": "https://www.bdfutbol.com/i/j/709501.jpg"
+    },
+    {
+      "source_id": 9503516,
+      "name": "Vidar Riseth",
+      "status": "downloaded",
+      "source": "BDFutbol global search",
+      "bdfutbol_id": "90423",
+      "profile_label": "Player Riseth ( Vidar Riseth ) 21/04/1972 Rosenborg, Celtic, Lillestrøm, LASK, 1860 München",
+      "source_url": "https://www.bdfutbol.com/i/j/90423.jpg"
+    },
+    {
+      "source_id": 9503517,
+      "name": "Hai Ngoc Tran",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503518,
+      "name": "Ola Storberg",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503519,
+      "name": "Jörn Karlsrud",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503520,
+      "name": "Per Gunnar Dallökken",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503521,
+      "name": "Caleb Francis",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503522,
+      "name": "Arnfinn Engerbakk",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503523,
+      "name": "Björn Torkel Berg",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503524,
+      "name": "Kim Hauvik",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503525,
+      "name": "Morten Jänichen",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503526,
+      "name": "Steen Mölbye",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503527,
+      "name": "Jan Rindom",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503528,
+      "name": "Steen Olesen",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503529,
+      "name": "Sören Würtz",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503530,
+      "name": "Kim Eriksen",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503531,
+      "name": "Dan Sørensen",
+      "status": "downloaded",
+      "source": "BDFutbol global search",
+      "bdfutbol_id": "727075",
+      "profile_label": "Player Sørensen (Dan Hirsch Sørensen) 09/07/1966 Vejle",
+      "source_url": "https://www.bdfutbol.com/i/j/727075.jpg"
+    },
+    {
+      "source_id": 9503532,
+      "name": "Flemming Linnebjerg",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503533,
+      "name": "Hagbard Andreasen",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503534,
+      "name": "Petri Helin",
+      "status": "downloaded",
+      "source": "BDFutbol global search",
+      "bdfutbol_id": "1036994",
+      "profile_label": "Player Helin (Petri Juhani Helin) 13/12/1969 Helsinki, Jokerit, Denizlispor",
+      "source_url": "https://www.bdfutbol.com/i/j/1036994.jpg"
+    },
+    {
+      "source_id": 9503535,
+      "name": "Jesper Thygesen",
+      "status": "downloaded",
+      "source": "BDFutbol global search",
+      "bdfutbol_id": "712774",
+      "profile_label": "Player Thygesen ( Jesper Thygesen ) 20/09/1969 Silkeborg, Brøndby, Ikast",
+      "source_url": "https://www.bdfutbol.com/i/j/712774.jpg"
+    },
+    {
+      "source_id": 9503536,
+      "name": "Drazen Besek",
+      "status": "downloaded",
+      "source": "BDFutbol global search",
+      "bdfutbol_id": "44134",
+      "profile_label": "Player Besek (Dražen Besek) 10/03/1963 Dinamo Zagreb, Varaždin",
+      "source_url": "https://www.bdfutbol.com/i/j/44134.jpg"
+    },
+    {
+      "source_id": 9503537,
+      "name": "Claus Steinlein",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503538,
+      "name": "Michael Elbaek",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503539,
+      "name": "Torben Sjörvad",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503540,
+      "name": "Kent Nielsen",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503541,
+      "name": "Thomas Thalhammer",
+      "status": "downloaded",
+      "source": "BDFutbol global search",
+      "bdfutbol_id": "705583",
+      "profile_label": "Player Thalhammer ( Thomas Thalhammer ) 27/06/1974 Red Bull Salzburg",
+      "source_url": "https://www.bdfutbol.com/i/j/705583.jpg"
+    },
+    {
+      "source_id": 9503542,
+      "name": "Otto Konrad",
+      "status": "downloaded",
+      "source": "BDFutbol global search",
+      "bdfutbol_id": "2145",
+      "profile_label": "Player Konrad ( Otto Konrad ) 01/11/1964 Zaragoza, Red Bull Salzburg, Sturm Graz",
+      "source_url": "https://www.bdfutbol.com/i/j/2145.jpg"
+    },
+    {
+      "source_id": 9503543,
+      "name": "Herbert Ilsanker",
+      "status": "downloaded",
+      "source": "BDFutbol global search",
+      "bdfutbol_id": "705581",
+      "profile_label": "Player Ilsanker ( Herbert Ilsanker ) 24/05/1967 Red Bull Salzburg",
+      "source_url": "https://www.bdfutbol.com/i/j/705581.jpg"
+    },
+    {
+      "source_id": 9503544,
+      "name": "Wolfgang Feiersinger",
+      "status": "downloaded",
+      "source": "BDFutbol global search",
+      "bdfutbol_id": "98225",
+      "profile_label": "Player Feiersinger ( Wolfgang Feiersinger ) 30/01/1965 Red Bull Salzburg, Borussia Dortmund, LASK",
+      "source_url": "https://www.bdfutbol.com/i/j/98225.jpg"
+    },
+    {
+      "source_id": 9503545,
+      "name": "Christian Kraiger",
+      "status": "downloaded",
+      "source": "BDFutbol global search",
+      "bdfutbol_id": "705582",
+      "profile_label": "Player Kraiger ( Christian Kraiger ) 11/08/1973 Red Bull Salzburg",
+      "source_url": "https://www.bdfutbol.com/i/j/705582.jpg"
+    },
+    {
+      "source_id": 9503546,
+      "name": "Anton Aigner",
+      "status": "downloaded",
+      "source": "BDFutbol global search",
+      "bdfutbol_id": "712014",
+      "profile_label": "Player Aigner ( Anton Aigner ) 07/12/1970 Red Bull Salzburg",
+      "source_url": "https://www.bdfutbol.com/i/j/712014.jpg"
+    },
+    {
+      "source_id": 9503547,
+      "name": "Michael Helm",
+      "status": "downloaded",
+      "source": "BDFutbol global search",
+      "bdfutbol_id": "725999",
+      "profile_label": "Player Helm ( Michael Helm ) 09/03/1969 Vorwärts Steyr",
+      "source_url": "https://www.bdfutbol.com/i/j/725999.jpg"
+    },
+    {
+      "source_id": 9503548,
+      "name": "Kurt Garger",
+      "status": "downloaded",
+      "source": "BDFutbol global search",
+      "bdfutbol_id": "41910",
+      "profile_label": "Player Garger ( Kurt Garger ) 15/09/1960 Rapid Wien, Swarovski Tirol, Red Bull Salzburg",
+      "source_url": "https://www.bdfutbol.com/i/j/41910.jpg"
+    },
+    {
+      "source_id": 9503549,
+      "name": "Heribert Weber",
+      "status": "downloaded",
+      "source": "BDFutbol global search",
+      "bdfutbol_id": "41902",
+      "profile_label": "Player Weber ( Heribert Weber ) 28/06/1955 Rapid Wien, Red Bull Salzburg, Sturm Graz",
+      "source_url": "https://www.bdfutbol.com/i/j/41902.jpg"
+    },
+    {
+      "source_id": 9503550,
+      "name": "Christian Fürstaller",
+      "status": "downloaded",
+      "source": "BDFutbol global search",
+      "bdfutbol_id": "56950",
+      "profile_label": "Player Fürstaller ( Christian Fürstaller ) 30/12/1964 Red Bull Salzburg",
+      "source_url": "https://www.bdfutbol.com/i/j/56950.jpg"
+    },
+    {
+      "source_id": 9503551,
+      "name": "Franz Aigner",
+      "status": "downloaded",
+      "source": "BDFutbol global search",
+      "bdfutbol_id": "56952",
+      "profile_label": "Player Aigner ( Franz Aigner ) 14/09/1967 Red Bull Salzburg",
+      "source_url": "https://www.bdfutbol.com/i/j/56952.jpg"
+    },
+    {
+      "source_id": 9503552,
+      "name": "Leo Lainer",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503553,
+      "name": "Thomas Winklhofer",
+      "status": "downloaded",
+      "source": "BDFutbol global search",
+      "bdfutbol_id": "705576",
+      "profile_label": "Player Winklhofer ( Thomas Winklhofer ) 30/12/1970 Red Bull Salzburg",
+      "source_url": "https://www.bdfutbol.com/i/j/705576.jpg"
+    },
+    {
+      "source_id": 9503554,
+      "name": "Peter Artner",
+      "status": "downloaded",
+      "source": "BDFutbol global search",
+      "bdfutbol_id": "2239",
+      "profile_label": "Player Artner ( Peter Artner ) 20/05/1966 Hércules, Red Bull Salzburg, Admira Wacker",
+      "source_url": "https://www.bdfutbol.com/i/j/2239.jpg"
+    },
+    {
+      "source_id": 9503555,
+      "name": "Andreas Reisinger",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503556,
+      "name": "Michael Steiner",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503557,
+      "name": "Adi Hütter",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503558,
+      "name": "Damir Muzek",
+      "status": "downloaded",
+      "source": "BDFutbol global search",
+      "bdfutbol_id": "56951",
+      "profile_label": "Player Mužek (Damir Mužek) 08/04/1967 Red Bull Salzburg, Grazer, Varaždin, Slaven Koprivnica",
+      "source_url": "https://www.bdfutbol.com/i/j/56951.jpg"
+    },
+    {
+      "source_id": 9503559,
+      "name": "Georg Majer",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503560,
+      "name": "Thomas Engelmaier",
+      "status": "downloaded",
+      "source": "BDFutbol global search",
+      "bdfutbol_id": "725997",
+      "profile_label": "Player Engelmaier ( Thomas Engelmaier ) 10/04/1970 Vorwärts Steyr",
+      "source_url": "https://www.bdfutbol.com/i/j/725997.jpg"
+    },
+    {
+      "source_id": 9503561,
+      "name": "Manfred Trost",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503562,
+      "name": "Kurt Schwarzlmüller",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503563,
+      "name": "Thomas Wieser",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 1
+    },
+    {
+      "source_id": 9503564,
+      "name": "Peter Barac",
+      "status": "downloaded",
+      "source": "BDFutbol global search",
+      "bdfutbol_id": "720136",
+      "profile_label": "Player Barac ( Peter Barac ) 14/04/1964 Vorwärts Steyr",
+      "source_url": "https://www.bdfutbol.com/i/j/720136.jpg"
+    },
+    {
+      "source_id": 9503565,
+      "name": "Zeljko Vukovic",
+      "status": "downloaded",
+      "source": "BDFutbol global search",
+      "bdfutbol_id": "722142",
+      "profile_label": "Player Vuković (Željko Vuković) 09/02/1962 Grazer, Kärnten, Vorwärts Steyr",
+      "source_url": "https://www.bdfutbol.com/i/j/722142.jpg"
+    },
+    {
+      "source_id": 9503566,
+      "name": "Bernhard Pfister",
+      "status": "downloaded",
+      "source": "BDFutbol global search",
+      "bdfutbol_id": "726002",
+      "profile_label": "Player Pfister ( Bernhard Pfister ) 09/08/1965 Vorwärts Steyr",
+      "source_url": "https://www.bdfutbol.com/i/j/726002.jpg"
+    },
+    {
+      "source_id": 9503567,
+      "name": "Herbert Linimair",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503568,
+      "name": "Thomas Gröbl",
+      "status": "downloaded",
+      "source": "BDFutbol global search",
+      "bdfutbol_id": "724964",
+      "profile_label": "Player Gröbl ( Thomas Gröbl ) 19/12/1973 Sturm Graz, Vorwärts Steyr, LASK",
+      "source_url": "https://www.bdfutbol.com/i/j/724964.jpg"
+    },
+    {
+      "source_id": 9503569,
+      "name": "Marko Felbermayer",
+      "status": "downloaded",
+      "source": "BDFutbol global search",
+      "bdfutbol_id": "725998",
+      "profile_label": "Player Felbermayer ( Marko Felbermayer ) 23/01/1972 Vorwärts Steyr",
+      "source_url": "https://www.bdfutbol.com/i/j/725998.jpg"
+    },
+    {
+      "source_id": 9503570,
+      "name": "Roman Koch",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503571,
+      "name": "Heinz Fuchsbichler",
+      "status": "downloaded",
+      "source": "BDFutbol global search",
+      "bdfutbol_id": "726000",
+      "profile_label": "Player Fuchsbichler ( Heinz Fuchsbichler ) 07/11/1967 Vorwärts Steyr",
+      "source_url": "https://www.bdfutbol.com/i/j/726000.jpg"
+    },
+    {
+      "source_id": 9503572,
+      "name": "Andreas Heraf",
+      "status": "downloaded",
+      "source": "BDFutbol global search",
+      "bdfutbol_id": "42404",
+      "profile_label": "Player Heraf ( Andreas Heraf ) 10/09/1967 Rapid Wien, First Vienna",
+      "source_url": "https://www.bdfutbol.com/i/j/42404.jpg"
+    },
+    {
+      "source_id": 9503573,
+      "name": "Oliver Heiml",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503574,
+      "name": "Daniel Madlener",
+      "status": "downloaded",
+      "source": "BDFutbol global search",
+      "bdfutbol_id": "726004",
+      "profile_label": "Player Madlener ( Daniel Madlener ) 24/08/1964 St. Gallen, Vorwärts Steyr",
+      "source_url": "https://www.bdfutbol.com/i/j/726004.jpg"
+    },
+    {
+      "source_id": 9503575,
+      "name": "Tomislav Kocijan",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503576,
+      "name": "Gernot Krinner",
+      "status": "downloaded",
+      "source": "BDFutbol global search",
+      "bdfutbol_id": "722246",
+      "profile_label": "Player Krinner ( Gernot Krinner ) 01/04/1967 Tirol Innsbruck",
+      "source_url": "https://www.bdfutbol.com/i/j/722246.jpg"
+    },
+    {
+      "source_id": 9503577,
+      "name": "Georg Heu",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503578,
+      "name": "Andreas Koch",
+      "status": "downloaded",
+      "source": "BDFutbol global search",
+      "bdfutbol_id": "42415",
+      "profile_label": "Player Koch ( Andreas Koch ) 11/09/1966 Rapid Wien, Tirol Innsbruck",
+      "source_url": "https://www.bdfutbol.com/i/j/42415.jpg"
+    },
+    {
+      "source_id": 9503579,
+      "name": "Martin Popovic",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503580,
+      "name": "Herbert Gager",
+      "status": "downloaded",
+      "source": "BDFutbol global search",
+      "bdfutbol_id": "42409",
+      "profile_label": "Player Gager ( Herbert Gager ) 18/09/1969 Rapid Wien, Admira Wacker, Austria Wien",
+      "source_url": "https://www.bdfutbol.com/i/j/42409.jpg"
+    },
+    {
+      "source_id": 9503581,
+      "name": "Franz Resch",
+      "status": "downloaded",
+      "source": "BDFutbol global search",
+      "bdfutbol_id": "42417",
+      "profile_label": "Player Resch ( Franz Resch ) 04/05/1969 Rapid Wien",
+      "source_url": "https://www.bdfutbol.com/i/j/42417.jpg"
+    },
+    {
+      "source_id": 9503582,
+      "name": "Andreas Poiger",
+      "status": "downloaded",
+      "source": "BDFutbol global search",
+      "bdfutbol_id": "42416",
+      "profile_label": "Player Poiger ( Andreas Poiger ) 04/04/1968 Rapid Wien, Tirol Innsbruck",
+      "source_url": "https://www.bdfutbol.com/i/j/42416.jpg"
+    },
+    {
+      "source_id": 9503583,
+      "name": "Ingo Kerschischnik",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503584,
+      "name": "Roman Radits",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503585,
+      "name": "Janusz Nawrocki",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503586,
+      "name": "Ernst Mader",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503587,
+      "name": "Tihomir Dragoslavic",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503588,
+      "name": "Eric Orie",
+      "status": "downloaded",
+      "source": "BDFutbol global search",
+      "bdfutbol_id": "57138",
+      "profile_label": "Player Orie (Eric Alexander Orie) 25/01/1968 Austria Wien, Venlo",
+      "source_url": "https://www.bdfutbol.com/i/j/57138.jpg"
+    },
+    {
+      "source_id": 9503589,
+      "name": "Wolfgang Schweitzer",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503590,
+      "name": "Josef Heiling",
+      "status": "downloaded",
+      "source": "BDFutbol global search",
+      "bdfutbol_id": "726235",
+      "profile_label": "Player Heiling ( Josef Heiling ) 26/04/1962 Austria Wien, Admira Wacker",
+      "source_url": "https://www.bdfutbol.com/i/j/726235.jpg"
+    },
+    {
+      "source_id": 9503591,
+      "name": "Mario Kreiker",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503592,
+      "name": "Günter Stöffelbauer",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503593,
+      "name": "Thomas Bauer",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503594,
+      "name": "Horst Kirasitsch",
+      "status": "downloaded",
+      "source": "BDFutbol global search",
+      "bdfutbol_id": "725739",
+      "profile_label": "Player Kirasitsch ( Horst Kirasitsch ) 30/11/1960 Kremser",
+      "source_url": "https://www.bdfutbol.com/i/j/725739.jpg"
+    },
+    {
+      "source_id": 9503595,
+      "name": "Michael Paal",
+      "status": "downloaded",
+      "source": "BDFutbol global search",
+      "bdfutbol_id": "725133",
+      "profile_label": "Player Paal ( Michael Paal ) 31/10/1966 Sturm Graz, Vorwärts Steyr",
+      "source_url": "https://www.bdfutbol.com/i/j/725133.jpg"
+    },
+    {
+      "source_id": 9503596,
+      "name": "Jürgen Bauer",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503597,
+      "name": "Leopold Rotter",
+      "status": "downloaded",
+      "source": "BDFutbol global search",
+      "bdfutbol_id": "712460",
+      "profile_label": "Player Rotter ( Leopold Rotter ) 14/09/1964 Rapid Wien",
+      "source_url": "https://www.bdfutbol.com/i/j/712460.jpg"
+    },
+    {
+      "source_id": 9503598,
+      "name": "Hans-Peter Frühwirth",
+      "status": "downloaded",
+      "source": "BDFutbol global search",
+      "bdfutbol_id": "712954",
+      "profile_label": "Player Frühwirth ( Hans-Peter Frühwirth ) 18/06/1966 Austria Wien",
+      "source_url": "https://www.bdfutbol.com/i/j/712954.jpg"
+    },
+    {
+      "source_id": 9503599,
+      "name": "Herbert Maul",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503600,
+      "name": "Michael Flajs",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503601,
+      "name": "Arvydas Janonis",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503602,
+      "name": "Heimo Vorderegger",
+      "status": "downloaded",
+      "source": "BDFutbol global search",
+      "bdfutbol_id": "725468",
+      "profile_label": "Player Vorderegger ( Heimo Vorderegger ) 03/07/1966 Kärnten",
+      "source_url": "https://www.bdfutbol.com/i/j/725468.jpg"
+    },
+    {
+      "source_id": 9503603,
+      "name": "Dieter Ramusch",
+      "status": "downloaded",
+      "source": "BDFutbol global search",
+      "bdfutbol_id": "725435",
+      "profile_label": "Player Ramusch ( Dieter Ramusch ) 31/10/1969 Grazer",
+      "source_url": "https://www.bdfutbol.com/i/j/725435.jpg"
+    },
+    {
+      "source_id": 9503604,
+      "name": "Frenkie Schinkels",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503605,
+      "name": "Manfred Unger",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503606,
+      "name": "Hannes Weber",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503607,
+      "name": "Tino Jessenitschnig",
+      "status": "downloaded",
+      "source": "BDFutbol global search",
+      "bdfutbol_id": "712956",
+      "profile_label": "Player Jessenitschnig ( Tino Jessenitschnig ) 02/08/1965 Austria Wien, Admira Wacker",
+      "source_url": "https://www.bdfutbol.com/i/j/712956.jpg"
+    },
+    {
+      "source_id": 9503608,
+      "name": "Anton Haiden",
+      "status": "downloaded",
+      "source": "BDFutbol global search",
+      "bdfutbol_id": "724530",
+      "profile_label": "Player Haiden ( Anton Haiden ) 12/02/1967 First Vienna, LASK",
+      "source_url": "https://www.bdfutbol.com/i/j/724530.jpg"
+    },
+    {
+      "source_id": 9503609,
+      "name": "Pius Daniels",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503610,
+      "name": "Martin Prikop",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503611,
+      "name": "Markus Siedl",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503612,
+      "name": "Fabrice Borer",
+      "status": "downloaded",
+      "source": "BDFutbol global search",
+      "bdfutbol_id": "713151",
+      "profile_label": "Player Borer ( Fabrice Borer ) 24/12/1971 Sion, Grasshopper",
+      "source_url": "https://www.bdfutbol.com/i/j/713151.jpg"
+    },
+    {
+      "source_id": 9503613,
+      "name": "Pascal Zetzmann",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503614,
+      "name": "Martin Affolter",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503615,
+      "name": "Yann Poulard",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503616,
+      "name": "Laurent Gasser",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503617,
+      "name": "Erich Hänzi",
+      "status": "downloaded",
+      "source": "BDFutbol global search",
+      "bdfutbol_id": "712925",
+      "profile_label": "Player Hänzi ( Erich Hänzi ) 27/04/1965 Lausanne, Young Boys",
+      "source_url": "https://www.bdfutbol.com/i/j/712925.jpg"
+    },
+    {
+      "source_id": 9503618,
+      "name": "Olivier Biaggi",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503619,
+      "name": "David Vernaz",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503620,
+      "name": "Patrice Viret",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503621,
+      "name": "Raphaël Comisetti",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503622,
+      "name": "Stéphane Savovic",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503623,
+      "name": "Pavel Badea",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503624,
+      "name": "Oscar Londono",
+      "status": "downloaded",
+      "source": "BDFutbol global search",
+      "bdfutbol_id": "718875",
+      "profile_label": "Player Londono ( Oscar Londono ) 07/02/1971 Lausanne, Servette",
+      "source_url": "https://www.bdfutbol.com/i/j/718875.jpg"
+    },
+    {
+      "source_id": 9503625,
+      "name": "Paulo Diogo",
+      "status": "downloaded",
+      "source": "BDFutbol global search",
+      "bdfutbol_id": "718873",
+      "profile_label": "Player Paulo Diogo ( Paulo Diogo da Cruz) 21/04/1975 Lausanne, Servette",
+      "source_url": "https://www.bdfutbol.com/i/j/718873.jpg"
+    },
+    {
+      "source_id": 9503626,
+      "name": "Adrian Pigulea",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503627,
+      "name": "Gabriel Calderón",
+      "status": "downloaded",
+      "source": "BDFutbol global search",
+      "bdfutbol_id": "3234",
+      "profile_label": "Player Calderón (Gabriel Humberto Calderón Metralla) 07/02/1960 Betis, PSG, Caen, Sion",
+      "source_url": "https://www.bdfutbol.com/i/j/3234.jpg"
+    },
+    {
+      "source_id": 9503628,
+      "name": "René Thalmann",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503629,
+      "name": "Markus Kälin",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503630,
+      "name": "Pasquale de Simone",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503631,
+      "name": "Michael Egli",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503632,
+      "name": "Mohammed Mouidi",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503633,
+      "name": "Manfred Joller",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503634,
+      "name": "Alex Germann",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503635,
+      "name": "Manfred Kern",
+      "status": "downloaded",
+      "source": "BDFutbol global search",
+      "bdfutbol_id": "712458",
+      "profile_label": "Player Kern ( Manfred Kern ) 13/02/1964 Austria Wien, Admira Wacker, Rapid Wien",
+      "source_url": "https://www.bdfutbol.com/i/j/712458.jpg"
+    },
+    {
+      "source_id": 9503636,
+      "name": "Renato Brugnoli",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503637,
+      "name": "Edgar Gwerder",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503638,
+      "name": "Daniel Reichmuth",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503639,
+      "name": "Reto Rossi",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503640,
+      "name": "Benedikt Zwyssig",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503641,
+      "name": "André Berchtold",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503642,
+      "name": "Thomas Heitzmann",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503643,
+      "name": "Guido Oser",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503644,
+      "name": "Jan Przybylo",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503645,
+      "name": "Adam Ndlovu",
+      "status": "downloaded",
+      "source": "BDFutbol global search",
+      "bdfutbol_id": "710753",
+      "profile_label": "Player Ndlovu ( Adam Ndlovu ) 26/06/1970 Zürich",
+      "source_url": "https://www.bdfutbol.com/i/j/710753.jpg"
+    },
+    {
+      "source_id": 9503646,
+      "name": "Yuriy Nikitenko",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503647,
+      "name": "Dmitriy Tyapushkin",
+      "status": "downloaded",
+      "source": "BDFutbol global search",
+      "bdfutbol_id": "1160822",
+      "profile_label": "Player Tyapushkin (Dmitriy Albertovich Tyapushkin) 06/11/1964 Spartak Moskva, CSKA Moskva, Dynamo Moskva",
+      "source_url": "https://www.bdfutbol.com/i/j/1160822.jpg"
+    },
+    {
+      "source_id": 9503648,
+      "name": "Vyacheslav Bogodelov",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503649,
+      "name": "Valeriy Goroshinskiy",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503650,
+      "name": "Igor Biskup",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503651,
+      "name": "Igor Sushka",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503652,
+      "name": "Viktor Pavlovych",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503653,
+      "name": "Andriy Nikitin",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503654,
+      "name": "Valeriy Serchenko",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503655,
+      "name": "Roman Miroshnychenko",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503656,
+      "name": "Aleksandr Mozgovoy",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 1
+    },
+    {
+      "source_id": 9503657,
+      "name": "Sergiy Yarmolych",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503658,
+      "name": "Aleksandr Gridyushko",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503659,
+      "name": "Igor Fokin",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503660,
+      "name": "Gennadiy Lytvynov",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503661,
+      "name": "Mykola Rizun",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503662,
+      "name": "Igor Kuznetsov",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503663,
+      "name": "Vitaliy Kovtun",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503664,
+      "name": "Vadim Aleksandrov",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503665,
+      "name": "Volodymyr Bednyi",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503666,
+      "name": "Volodymyr Mykytin",
+      "status": "downloaded",
+      "source": "BDFutbol global search",
+      "bdfutbol_id": "590714",
+      "profile_label": "Player Mykytyn (Volodymyr Bohdanovych Mykytin) 28/04/1970 Rostov",
+      "source_url": "https://www.bdfutbol.com/i/j/590714.jpg"
+    },
+    {
+      "source_id": 9503667,
+      "name": "Svyatoslav Syrota",
+      "status": "downloaded",
+      "source": "BDFutbol global search",
+      "bdfutbol_id": "727425",
+      "profile_label": "Player Syrota (Svyatoslav Anatoliyovych Syrota) 01/10/1970 Dynamo Kyiv",
+      "source_url": "https://www.bdfutbol.com/i/j/727425.jpg"
+    },
+    {
+      "source_id": 9503668,
+      "name": "Sergiy Kvasnikov",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503669,
+      "name": "Oleksandr Poritskyi",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503670,
+      "name": "Oleg Synytskyi",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503671,
+      "name": "Igor Tsiselskyi",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503672,
+      "name": "Oleksandr Voytyuk",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503673,
+      "name": "Sergiy Michuda",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503674,
+      "name": "Andriy Korotaev",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503675,
+      "name": "Volodymyr Knysh",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503676,
+      "name": "Igor Kharkivshchenko",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503677,
+      "name": "Igor Pokydko",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503678,
+      "name": "Oleksandr Chervonyi",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503679,
+      "name": "Mykola Zakotyuk",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503680,
+      "name": "Andriy Glushchenko",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503681,
+      "name": "Oleksandr Nogin",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503682,
+      "name": "Valentyn Mykhalko",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503683,
+      "name": "Igor Cherkun",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503684,
+      "name": "Igor Moshevych",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503685,
+      "name": "Oleksandr Sobol",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503686,
+      "name": "Oleg Vetrov",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503687,
+      "name": "Oleksandr Nefedov",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503688,
+      "name": "Elman Sultanov",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503689,
+      "name": "Oleksandr Sorokalet",
+      "status": "downloaded",
+      "source": "BDFutbol global search",
+      "bdfutbol_id": "42164",
+      "profile_label": "Player Sorokalet (Oleksandr Ivanovych Sorokalet) 16/04/1957 Dynamo Kyiv, Dnipro",
+      "source_url": "https://www.bdfutbol.com/i/j/42164.jpg"
+    },
+    {
+      "source_id": 9503690,
+      "name": "Volodymyr Bagmut",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503691,
+      "name": "Oleg Kolesov",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503692,
+      "name": "Vadym Bozhenko",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503693,
+      "name": "Taras Kogut",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503694,
+      "name": "Gocha Jorjoliani",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503695,
+      "name": "Giorgi Babuadze",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503696,
+      "name": "Oleksandr Rolevych",
+      "status": "downloaded",
+      "source": "BDFutbol global search",
+      "bdfutbol_id": "1178598",
+      "profile_label": "Player Rolevych (Oleksandr Georgievich Rolevych) 16/03/1965 Baltika",
+      "source_url": "https://www.bdfutbol.com/i/j/1178598.jpg"
+    },
+    {
+      "source_id": 9503697,
+      "name": "Igor Talko",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503698,
+      "name": "Yuriy Romanov",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503699,
+      "name": "Igor Timoshchuk",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503700,
+      "name": "Oleksandr Martsun",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 1
+    },
+    {
+      "source_id": 9503701,
+      "name": "Sergey Gomonov",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503702,
+      "name": "Giorgi Chikhradze",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503703,
+      "name": "Viktor Suslo",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503704,
+      "name": "Viktor Yalovskyi",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503705,
+      "name": "Costel Câmpeanu",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503706,
+      "name": "Valer Sasarman",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503707,
+      "name": "Simion Mironas",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503708,
+      "name": "Gabriel Cristea",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503709,
+      "name": "Bogdan Strontsitskyi",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503710,
+      "name": "Elkhan Rasulov",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503711,
+      "name": "Oleksandr Rogozhkin",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503712,
+      "name": "Ivan Gamalyi",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503713,
+      "name": "Mykola Lapko",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503714,
+      "name": "Mykhaylo Gurka",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503715,
+      "name": "Volodymyr Savchenko",
+      "status": "downloaded",
+      "source": "BDFutbol global search",
+      "bdfutbol_id": "590280",
+      "profile_label": "Player Savchenko (Volodymyr Mykolayovych Savchenko) 09/09/1973 Akhmat Grozny, Rostov",
+      "source_url": "https://www.bdfutbol.com/i/j/590280.jpg"
+    },
+    {
+      "source_id": 9503716,
+      "name": "Sergiy Dolganskyi",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503717,
+      "name": "Oleksandr Goryainov",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503718,
+      "name": "Oleg Kastornyi",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503719,
+      "name": "Asan Mustafaev",
+      "status": "downloaded",
+      "source": "BDFutbol global search",
+      "bdfutbol_id": "1179703",
+      "profile_label": "Player Mustafaev (Asan Seferovich Mustafaev) 11/05/1965 Ural",
+      "source_url": "https://www.bdfutbol.com/i/j/1179703.jpg"
+    },
+    {
+      "source_id": 9503720,
+      "name": "Vyacheslav Sydorkin",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503721,
+      "name": "Kostyantyn Pakhomov",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9503722,
+      "name": "Mykola Cherepenkin",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    }
+  ]
+}

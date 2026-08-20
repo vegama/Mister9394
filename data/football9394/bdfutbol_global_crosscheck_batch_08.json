@@ -1,0 +1,1760 @@
+{
+  "generated_at": "2026-08-20T13:57:06.924060+00:00",
+  "source": "BDFutbol global search, exact name + exact birth date",
+  "candidates": 250,
+  "downloaded": 0,
+  "no_exact_match": 241,
+  "failed": 0,
+  "results": [
+    {
+      "source_id": 9500012,
+      "name": "Iliyan Kiryakov",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500020,
+      "name": "Khaled Massad",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500031,
+      "name": "Dotun Alatishe",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500032,
+      "name": "Friday Elaho",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500038,
+      "name": "Ibrahima N'Diaye",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500039,
+      "name": "Mamadou Teuw",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500042,
+      "name": "Oumar Gueye Sène",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 1
+    },
+    {
+      "source_id": 9500044,
+      "name": "Lamine N'Diaye",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 1
+    },
+    {
+      "source_id": 9500050,
+      "name": "Moussa N'Daw",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 1
+    },
+    {
+      "source_id": 9500053,
+      "name": "Ken Kenyatta",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500054,
+      "name": "Anthony Lwanga",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500063,
+      "name": "Jules Onana",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500064,
+      "name": "Stephen Tataw",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500067,
+      "name": "Guy Tapoko",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500070,
+      "name": "Cyril Makanaky",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500073,
+      "name": "Epangala Lokose",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500074,
+      "name": "Mbaki Makengo",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500075,
+      "name": "Iyambo Mara Etshele",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500077,
+      "name": "Tueba Menayane",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500078,
+      "name": "Ngondola Assombalanga",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500079,
+      "name": "Mbala Henri Balenga",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500080,
+      "name": "Abdelkader El Brazi",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500081,
+      "name": "Badou Zaki",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 1
+    },
+    {
+      "source_id": 9500082,
+      "name": "Lahcen Abrami",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 1
+    },
+    {
+      "source_id": 9500086,
+      "name": "Hicham Dmaei",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500087,
+      "name": "Mouloud Moudakkar",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500088,
+      "name": "Driss El Mrabet",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500100,
+      "name": "Alassane Ouattara",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500106,
+      "name": "Lucien Kassy-Kouadio",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500109,
+      "name": "Abdoulaye Traoré",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 1
+    },
+    {
+      "source_id": 9500112,
+      "name": "Christian Samba",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500119,
+      "name": "Jean-Michel Mbemba",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500122,
+      "name": "Aristide Amouzoud",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500128,
+      "name": "Antar Osmani",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500140,
+      "name": "Mohamed Rahem",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500142,
+      "name": "Stanley Aborah, Sr.",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500146,
+      "name": "Abedi Pele",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500149,
+      "name": "Prince Polley",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500150,
+      "name": "David Chabala",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 1
+    },
+    {
+      "source_id": 9500152,
+      "name": "Stephen Zimba",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500153,
+      "name": "Whiteson Changwe",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500156,
+      "name": "Eston Mulenga",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500159,
+      "name": "Patrick Banda",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500167,
+      "name": "Pearson Mwanza",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500169,
+      "name": "Saafane El-Saghir",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500170,
+      "name": "Ahmed Shobair",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500177,
+      "name": "Mohamed Azima",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 1
+    },
+    {
+      "source_id": 9500184,
+      "name": "Gamal Abdelhamid",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500185,
+      "name": "Mohamed Salah Abo Greisha",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500190,
+      "name": "Karamoko Kéïta",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500191,
+      "name": "Yatouma Diop",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500192,
+      "name": "Oumar Guindo",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500194,
+      "name": "Mobido Sidibé",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500195,
+      "name": "Amadou Pathé Diallo",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500196,
+      "name": "Demba N'Diaye",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500204,
+      "name": "Bassala Touré",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500216,
+      "name": "Lofti Ben Sassi",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500221,
+      "name": "Samir Sellimi",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500223,
+      "name": "Ayedi Hamrouni",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500227,
+      "name": "Ntumba Danga",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500229,
+      "name": "Loukima Tamoukini",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500230,
+      "name": "Mansoni Ngombo",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500231,
+      "name": "José Nzau",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500234,
+      "name": "Yoko Ngwengwe",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500235,
+      "name": "Elos Elonga-Ekakia",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 1
+    },
+    {
+      "source_id": 9500237,
+      "name": "Nsumbu Ngoy",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500239,
+      "name": "Hussein El-Sayed",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500241,
+      "name": "Islam Fathi",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500246,
+      "name": "Mohamed Fikry El-Saghir",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500248,
+      "name": "Ali Yahia",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500250,
+      "name": "Yasser Rayyan",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500253,
+      "name": "Mohamed Ramadan",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500254,
+      "name": "Bashir Abdel Samad",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500257,
+      "name": "Amel Rolenga",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500260,
+      "name": "Guy Francis Koumba",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500261,
+      "name": "Tristan Ali Mombo",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500262,
+      "name": "Parfait Ndong",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500263,
+      "name": "Adrien Nkoumba",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500264,
+      "name": "Thierry Retoa",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500266,
+      "name": "Jean-Daniel N'Dong-Nze",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500268,
+      "name": "Valery Olivier Ondo",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500274,
+      "name": "Isaac Semitoje",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500276,
+      "name": "Obou Macaire",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500279,
+      "name": "Aliou Sibi Badra",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500282,
+      "name": "Adama Clofie Kone",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500283,
+      "name": "Yao Amani",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500286,
+      "name": "Brima Kamara",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500288,
+      "name": "Vannie Bockarie",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500290,
+      "name": "Abubakar Kamara",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500292,
+      "name": "Basiru King",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500294,
+      "name": "Abdoulay Sessay",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500296,
+      "name": "Abdul Thompson Conteh",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500297,
+      "name": "Lamine Conteh",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500302,
+      "name": "Matthews Tieh",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500309,
+      "name": "Kapambwe Mulenga",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500311,
+      "name": "Harrison Tembo",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500312,
+      "name": "Joel Kangwa Bwalya",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500313,
+      "name": "Tenant Chilumba",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500315,
+      "name": "Evans Sakala",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500324,
+      "name": "Edward Agyeman Duah",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500329,
+      "name": "Saliou Diallo",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 1
+    },
+    {
+      "source_id": 9500334,
+      "name": "Edgar Barbara Sylla",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500336,
+      "name": "Ousmane N'Gom Camara",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 1
+    },
+    {
+      "source_id": 9500337,
+      "name": "Sékou Oumar Drame",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500341,
+      "name": "Alkhaly Soumah",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500342,
+      "name": "Papa Waly N'Diaye",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500348,
+      "name": "Abdoul Yoro N'Diaye",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500353,
+      "name": "Roger De Sá",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500362,
+      "name": "Augustine Makalakalane",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500372,
+      "name": "Michel Ndoumbé",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500373,
+      "name": "Sunday Jang",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500375,
+      "name": "Roland Njume Ntoko",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500377,
+      "name": "Joseph Mbarga",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500380,
+      "name": "Essam Abdel-Azim",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500382,
+      "name": "Samir Ibrahim Kamouna",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 1
+    },
+    {
+      "source_id": 9500384,
+      "name": "Mohamed Kamouna",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500386,
+      "name": "Moustafa Reyad",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500388,
+      "name": "Ahmed Hassan",
+      "status": "skipped",
+      "source": "BDFutbol global search",
+      "reason": "already_exists"
+    },
+    {
+      "source_id": 9500393,
+      "name": "Ahmed \"Koushary\" Abdel Monem",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500394,
+      "name": "Orlando",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500395,
+      "name": "Simão Paulo",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500396,
+      "name": "Amadeu Cristello Nunes da Cunha",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 1
+    },
+    {
+      "source_id": 9500397,
+      "name": "António João Neto",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500398,
+      "name": "Aurélio de Sousa Soares",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 1
+    },
+    {
+      "source_id": 9500400,
+      "name": "Wilson Constantino Novo Estrela",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 1
+    },
+    {
+      "source_id": 9500402,
+      "name": "Carlos Pedro Pires de Melo",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500403,
+      "name": "Martinho Joaquim Castella Quessongo",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500405,
+      "name": "Paulo António Alves",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 1
+    },
+    {
+      "source_id": 9500406,
+      "name": "Walter Novo Estrela",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 1
+    },
+    {
+      "source_id": 9500407,
+      "name": "Akwá",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 1
+    },
+    {
+      "source_id": 9500408,
+      "name": "Luís Domingos António Cazengue",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 1
+    },
+    {
+      "source_id": 9500409,
+      "name": "Joaquim Alberto Silva",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 1
+    },
+    {
+      "source_id": 9500410,
+      "name": "João Paulo Arsénio Ribeiro",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500411,
+      "name": "Collins Mbulo",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500413,
+      "name": "James Phiri",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500417,
+      "name": "Joel Kangwa Bwalya",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500418,
+      "name": "Bilton Musonda",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500420,
+      "name": "Alex Namazaba",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500424,
+      "name": "Aomar Hamened",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500431,
+      "name": "Nacer Zekri",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500432,
+      "name": "Karim Bakhti",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500438,
+      "name": "Reda Acimi",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500441,
+      "name": "Brahima Cissé",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500443,
+      "name": "Pierre Kouada",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500446,
+      "name": "Zakaria Zeba",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500452,
+      "name": "Vincent Ye",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500454,
+      "name": "Aboubakari Ouédraogo",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500455,
+      "name": "Salif Sanou",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500456,
+      "name": "Salifou Traoré",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500458,
+      "name": "Youssouf Traoré",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500461,
+      "name": "Gbessay Bangura",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500464,
+      "name": "Ibrahim Bobson Kamara",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500465,
+      "name": "Amidu Karim",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500466,
+      "name": "Rashid Wurie",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500467,
+      "name": "Gbessay Sesay",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500470,
+      "name": "Jacques Dekousshoud",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500478,
+      "name": "Serge Ngoma",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500481,
+      "name": "Aurelien Bekogo Zolo",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500482,
+      "name": "Albin George Nbonga Nze",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500484,
+      "name": "Michel Nzamongini Babale",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500485,
+      "name": "Michel Mazingu-Dinzey",
+      "status": "skipped",
+      "source": "BDFutbol global search",
+      "reason": "already_exists"
+    },
+    {
+      "source_id": 9500487,
+      "name": "Ngamala Monka",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500490,
+      "name": "N'Diaye Kalenga",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500492,
+      "name": "Emeka Mamale",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500494,
+      "name": "Banga Kasongo",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500495,
+      "name": "Michel Ngonge",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 1
+    },
+    {
+      "source_id": 9500496,
+      "name": "Pewou Bestman",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500498,
+      "name": "Michael Wreh",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500500,
+      "name": "Terrence Dixon",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500502,
+      "name": "Alexander Theo",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500506,
+      "name": "Alexander Freeman",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500507,
+      "name": "Jonah Sarrweah",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500510,
+      "name": "Joe Thunder Armstrong Nagbe",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 1
+    },
+    {
+      "source_id": 9500511,
+      "name": "Mass Sarr Jr",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500512,
+      "name": "Jonathan Sogbie",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500513,
+      "name": "Crenstil Nanbanyin",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500518,
+      "name": "Felix Aboagye",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 1
+    },
+    {
+      "source_id": 9500523,
+      "name": "Kpassagnon Gneto",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500525,
+      "name": "Jean-Marie Kouassi",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500535,
+      "name": "Hédi Ben Rekhissa",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500536,
+      "name": "Lassad Hanini",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500540,
+      "name": "Zoubeir Baya",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 1
+    },
+    {
+      "source_id": 9500543,
+      "name": "Sofiane Fekhi",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500544,
+      "name": "Kais Ghodhbane",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500550,
+      "name": "Luis Germano Borlotes Dias",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500552,
+      "name": "Rui Evora Alves Alves",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500557,
+      "name": "Jose Zé Augusto Dlofo",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500558,
+      "name": "Ali Hassan",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 1
+    },
+    {
+      "source_id": 9500559,
+      "name": "Antonio Muchanga",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500560,
+      "name": "Danito Nhapossa",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500561,
+      "name": "Emanuel Fernando Matola",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500562,
+      "name": "Henrique Tembe",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500563,
+      "name": "Manuel Bucuane",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 1
+    },
+    {
+      "source_id": 9500564,
+      "name": "Mavó",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500565,
+      "name": "Zé Bernardo",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500567,
+      "name": "Cachela Boane",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500568,
+      "name": "Jojó",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 1
+    },
+    {
+      "source_id": 9500571,
+      "name": "Hólger Quiñónez",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 1
+    },
+    {
+      "source_id": 9500575,
+      "name": "Carlos Muñoz",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500576,
+      "name": "Nixon Carcelén",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500577,
+      "name": "Eduardo Hurtado",
+      "status": "skipped",
+      "source": "BDFutbol global search",
+      "reason": "already_exists"
+    },
+    {
+      "source_id": 9500579,
+      "name": "Víctor Mendoza",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500581,
+      "name": "Raúl Avilés",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500582,
+      "name": "Kléber Chalá",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500587,
+      "name": "José María Guerrero",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500588,
+      "name": "John Doyle",
+      "status": "skipped",
+      "source": "BDFutbol global search",
+      "reason": "already_exists"
+    },
+    {
+      "source_id": 9500594,
+      "name": "Peter Vermes",
+      "status": "skipped",
+      "source": "BDFutbol global search",
+      "reason": "already_exists"
+    },
+    {
+      "source_id": 9500597,
+      "name": "Vojislav Stanisic",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500606,
+      "name": "Jorge Orosmán da Silva",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 1
+    },
+    {
+      "source_id": 9500607,
+      "name": "José Gregorio Gómez",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500610,
+      "name": "Marcos Mathías",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500611,
+      "name": "Sergio Hernández",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500612,
+      "name": "Leonardo Lupi",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500613,
+      "name": "Leonardo Alberto González",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500616,
+      "name": "Wilson Chacón",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500617,
+      "name": "Félix Golindano",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500619,
+      "name": "Miguel Cordero",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500623,
+      "name": "Juan Enrique García",
+      "status": "skipped",
+      "source": "BDFutbol global search",
+      "reason": "already_exists"
+    },
+    {
+      "source_id": 9500625,
+      "name": "Juan Castellanos",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500632,
+      "name": "Fernando Cornejo",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500633,
+      "name": "Daniel López",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500634,
+      "name": "Juan Castillo Balcázar",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500636,
+      "name": "Teófilo Barrios",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500646,
+      "name": "Vidal Sanabria",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 1
+    },
+    {
+      "source_id": 9500652,
+      "name": "Juan Reynoso Guzmán",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500655,
+      "name": "Julio Rivera",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500656,
+      "name": "Juan Carlos Zubczuk",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 1
+    },
+    {
+      "source_id": 9500658,
+      "name": "Roberto Martínez Vera-Tudela",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500669,
+      "name": "Johnny Villarroel",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500675,
+      "name": "Iván Castillo",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 1
+    },
+    {
+      "source_id": 9500678,
+      "name": "Víctor Pacheco",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500691,
+      "name": "Richard Báez",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500705,
+      "name": "Nelson Abeijón",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500711,
+      "name": "Alexander Hezzel",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500712,
+      "name": "Dioni Guerra",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500715,
+      "name": "Stalin Rivas",
+      "status": "skipped",
+      "source": "BDFutbol global search",
+      "reason": "already_exists"
+    },
+    {
+      "source_id": 9500717,
+      "name": "Túlio Maravilha",
+      "status": "skipped",
+      "source": "BDFutbol global search",
+      "reason": "already_exists"
+    },
+    {
+      "source_id": 9500718,
+      "name": "Rodrigo José Queiroz Chagas",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 1
+    },
+    {
+      "source_id": 9500719,
+      "name": "Narciso dos Santos",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 1
+    },
+    {
+      "source_id": 9500720,
+      "name": "Joubert Araújo Martins",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 1
+    },
+    {
+      "source_id": 9500724,
+      "name": "José Santa",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500725,
+      "name": "Alex Fernández",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500727,
+      "name": "Miguel Guerrero",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500728,
+      "name": "Níver Arboleda",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500734,
+      "name": "Luis Quiñónez",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500735,
+      "name": "Francisco Cassiani",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500736,
+      "name": "José Cevallos",
+      "status": "skipped",
+      "source": "BDFutbol global search",
+      "reason": "already_exists"
+    },
+    {
+      "source_id": 9500740,
+      "name": "Patricio Hurtado",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500744,
+      "name": "Dannes Coronel",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9500746,
+      "name": "Diego Herrera",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    }
+  ]
+}

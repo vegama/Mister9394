@@ -1,0 +1,1760 @@
+{
+  "generated_at": "2026-08-20T13:55:28.490304+00:00",
+  "source": "BDFutbol global search, exact name + exact birth date",
+  "candidates": 250,
+  "downloaded": 0,
+  "no_exact_match": 250,
+  "failed": 0,
+  "results": [
+    {
+      "source_id": 5067,
+      "name": "João Miguel",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 1
+    },
+    {
+      "source_id": 5070,
+      "name": "Maurício",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 5089,
+      "name": "João Pimenta",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 1
+    },
+    {
+      "source_id": 5118,
+      "name": "José Roberto",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 1
+    },
+    {
+      "source_id": 5121,
+      "name": "Tchinda",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 1
+    },
+    {
+      "source_id": 5123,
+      "name": "Wanderley",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 1
+    },
+    {
+      "source_id": 5124,
+      "name": "Tiago Marques",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 1
+    },
+    {
+      "source_id": 5126,
+      "name": "Vítor Roriz",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 1
+    },
+    {
+      "source_id": 5127,
+      "name": "Marito",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 5130,
+      "name": "Passos",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 1
+    },
+    {
+      "source_id": 5149,
+      "name": "Rogério",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 1
+    },
+    {
+      "source_id": 5152,
+      "name": "Tapai",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 1
+    },
+    {
+      "source_id": 5158,
+      "name": "Zézinho",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 1
+    },
+    {
+      "source_id": 5184,
+      "name": "Miro",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 1
+    },
+    {
+      "source_id": 5185,
+      "name": "Barbosa",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 1
+    },
+    {
+      "source_id": 5189,
+      "name": "Magro",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 1
+    },
+    {
+      "source_id": 5213,
+      "name": "Álvaro Maciel",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 1
+    },
+    {
+      "source_id": 5219,
+      "name": "Hamilton",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 1
+    },
+    {
+      "source_id": 5237,
+      "name": "Marcos",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 1
+    },
+    {
+      "source_id": 5243,
+      "name": "Dias",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 1
+    },
+    {
+      "source_id": 5245,
+      "name": "Rui Rodrigues",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 1
+    },
+    {
+      "source_id": 5246,
+      "name": "Rui Alexandre",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 1
+    },
+    {
+      "source_id": 5265,
+      "name": "Roberto",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 1
+    },
+    {
+      "source_id": 5297,
+      "name": "Fabinho",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 1
+    },
+    {
+      "source_id": 5383,
+      "name": "Ariel Schapira",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 5396,
+      "name": "Jefferson Doe",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 5398,
+      "name": "Zen Luzniak",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 5403,
+      "name": "Scott Brennan",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 5405,
+      "name": "Moise",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 5409,
+      "name": "Chris Antonopolous",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 5411,
+      "name": "Sean Lockwood",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 5434,
+      "name": "Doug Morrill",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 5444,
+      "name": "Tony Chiarella",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 5452,
+      "name": "Ivan Jurisic",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 5454,
+      "name": "Frank Cardona",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 5471,
+      "name": "Abdel Bahri",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 5472,
+      "name": "Cameron Walker",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 5485,
+      "name": "Christian Mindru",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 6100,
+      "name": "Mamadou Kane",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 1
+    },
+    {
+      "source_id": 6241,
+      "name": "Walter",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 1
+    },
+    {
+      "source_id": 6249,
+      "name": "Alexandre",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 1
+    },
+    {
+      "source_id": 6297,
+      "name": "Couppé",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 1
+    },
+    {
+      "source_id": 6389,
+      "name": "Quarcy",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 1
+    },
+    {
+      "source_id": 6467,
+      "name": "Hoffer",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 1
+    },
+    {
+      "source_id": 6593,
+      "name": "Hans Kemming",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 1
+    },
+    {
+      "source_id": 6700,
+      "name": "Marcus",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 1
+    },
+    {
+      "source_id": 6701,
+      "name": "Schilten",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 1
+    },
+    {
+      "source_id": 6923,
+      "name": "Brinks",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 1
+    },
+    {
+      "source_id": 6950,
+      "name": "Giezen",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 6957,
+      "name": "Aalbertsen",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 1
+    },
+    {
+      "source_id": 6975,
+      "name": "Verbeek",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 1
+    },
+    {
+      "source_id": 6984,
+      "name": "Sijahillatua",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 7040,
+      "name": "Wiebenga",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 1
+    },
+    {
+      "source_id": 7509,
+      "name": "Víctor Soria",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 1
+    },
+    {
+      "source_id": 7596,
+      "name": "Leopaldi",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 7783,
+      "name": "Alex Barros",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 7921,
+      "name": "Marcão Santos",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9641,
+      "name": "Gabriel Añón",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9643,
+      "name": "Guillermo Núñez",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9644,
+      "name": "Luis Marquez",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9653,
+      "name": "José di Conza ",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9655,
+      "name": "Enrique Ferraro ",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9782,
+      "name": "Eduardo Favaro",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9996,
+      "name": "Wensley Ton",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9997,
+      "name": "van der Linden",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9999,
+      "name": "Pieter de Vries",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 10009,
+      "name": "Ambro de Vries",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 10010,
+      "name": "Schippers",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 10121,
+      "name": "Marković",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 10643,
+      "name": "Garyfallopoulos",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 10718,
+      "name": "Brayan Perlaza",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 10741,
+      "name": "Pálmi Jónsson",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 10782,
+      "name": "Mingos",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 10879,
+      "name": "Folprecht",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 10925,
+      "name": "Makridis",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 10948,
+      "name": "Dany Jiménez",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 11002,
+      "name": "Robinson García",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 11010,
+      "name": "Dayro Zapata",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 11178,
+      "name": "Daniel Guilherme",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 11317,
+      "name": "Jádson",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 11330,
+      "name": "Kalfountzos",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 11351,
+      "name": "Bouzoukis",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 11353,
+      "name": "Chatzigiovannis",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 11354,
+      "name": "Trivunovic",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 11356,
+      "name": "Angelopoulos",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 11429,
+      "name": "Fiakas",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 11459,
+      "name": "Daniel Ibson",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 11543,
+      "name": "Skouloudakis",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 11606,
+      "name": "Baldomero Toja",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 11655,
+      "name": "Sebastián Moreno",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 11773,
+      "name": "Harush",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 11818,
+      "name": "Zeman",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 11825,
+      "name": "Portin",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 11904,
+      "name": "Eran Micha",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 12007,
+      "name": "David Salazar",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 12034,
+      "name": "Maestre",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 12071,
+      "name": "Sivok",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 12167,
+      "name": "Subić",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 12177,
+      "name": "Askham",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 12206,
+      "name": "Palomino",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 12346,
+      "name": "Vernes",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 12520,
+      "name": "Serginho",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 12531,
+      "name": "Tchô",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 12534,
+      "name": "Strika",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 12562,
+      "name": "Edwin Yorleys",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 12570,
+      "name": "Éverton",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 12571,
+      "name": "Juninho",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 12578,
+      "name": "Marcus Wesley",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 12580,
+      "name": "Capixaba",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 12589,
+      "name": "Roberto Muriqui",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 12604,
+      "name": "Diego Batata",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 12613,
+      "name": "Leandro Machowski",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 12645,
+      "name": "Paulo Edno",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 12647,
+      "name": "Júlio Mattos",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 12664,
+      "name": "Marcos Netinho",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 12677,
+      "name": "Thiaguinho",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 12685,
+      "name": "Moisés",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 12687,
+      "name": "Rafael Paulo",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 12691,
+      "name": "Galhardo",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 12713,
+      "name": "Rafael César",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 12714,
+      "name": "Maurício",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 12718,
+      "name": "Fernando",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 12723,
+      "name": "Diego Soutto",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 12727,
+      "name": "Saci",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 12729,
+      "name": "Thiago Jonathan",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 12731,
+      "name": "Wallace",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 12778,
+      "name": "Fábio",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 12801,
+      "name": "Pedro Silva",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 12842,
+      "name": "Daniel Xavier",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 12849,
+      "name": "Harison",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 12871,
+      "name": "Danny Marques",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 12921,
+      "name": "Nílson",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 12924,
+      "name": "Bastakos",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 12946,
+      "name": "Franco",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 12978,
+      "name": "Ricardo Martins",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 13037,
+      "name": "Agnaldo",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 13081,
+      "name": "Paulinho",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 13097,
+      "name": "Heleno",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 13104,
+      "name": "Atzili",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 13113,
+      "name": "Neto Pardal",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 13154,
+      "name": "Sjölund",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 13176,
+      "name": "Rincón",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 13242,
+      "name": "Moulazimis",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 13383,
+      "name": "Hurtado",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 13405,
+      "name": "Öbster",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 13497,
+      "name": "Marco Angulo",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 13525,
+      "name": "Götze",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 13566,
+      "name": "Mao Rentería",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 13680,
+      "name": "Carlos Élton",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 13692,
+      "name": "Fumagalli",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 13708,
+      "name": "Aschauer",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 13741,
+      "name": "Morais",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 13751,
+      "name": "Youn",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 13778,
+      "name": "Pacheco",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 13791,
+      "name": "João Gaúcho",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 13794,
+      "name": "Lucas",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 13796,
+      "name": "Avelar",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 13820,
+      "name": "Marcão",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 13841,
+      "name": "Rafael Soares",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 13860,
+      "name": "Leandro Muriel",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 13912,
+      "name": "Okubo",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 14062,
+      "name": "Pedroza",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 14072,
+      "name": "Moreno",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 14079,
+      "name": "Banović",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 14138,
+      "name": "Efrem",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 14139,
+      "name": "Elías",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 14303,
+      "name": "Falk-Olander",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 14344,
+      "name": "Bruma",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 14369,
+      "name": "Kinsella",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 14377,
+      "name": "Memija",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 14378,
+      "name": "Pereira",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 14421,
+      "name": "Valoyes",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 14429,
+      "name": "Evmorfidis",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 14454,
+      "name": "Ben McEachran",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 14483,
+      "name": "Bellis",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 14531,
+      "name": "Turjman",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 14649,
+      "name": "Maximiliano",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 14675,
+      "name": "Vinícius Rodnei",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 14682,
+      "name": "Abecasis",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 14718,
+      "name": "Donda",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 14765,
+      "name": "Emiliano Curima",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 14833,
+      "name": "Cristian Vélez",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 14932,
+      "name": "Porath",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 14985,
+      "name": "Felipe Eduardo",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 15216,
+      "name": "Olivera",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 15239,
+      "name": "Murillo",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 15311,
+      "name": "Iñaki Gerardo",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 15317,
+      "name": "Mucha",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 15361,
+      "name": "Guillermo Arismendi",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 15377,
+      "name": "Pokorný",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 15389,
+      "name": "Walch",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 15431,
+      "name": "N´Djeng",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 15488,
+      "name": "Smith",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 15514,
+      "name": "Smith",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 15549,
+      "name": "Gunter",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 15757,
+      "name": "Einbinder",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 15767,
+      "name": "Kebano",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 15866,
+      "name": "Julián Martínez",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 15942,
+      "name": "Christiansen",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 16003,
+      "name": "Nitzan",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 16015,
+      "name": "Ecuele Appindangoyé",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 16083,
+      "name": "Bešić",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 16181,
+      "name": "Gartler",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 16353,
+      "name": "Ramos",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 16368,
+      "name": "Leandro Oliveira",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 16371,
+      "name": "Rafinha",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 16509,
+      "name": "Kløve",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 16544,
+      "name": "Starfelt",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 16546,
+      "name": "Joe Lowton",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 16601,
+      "name": "Halldór Björnsson",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 16602,
+      "name": "Rickie Lallana",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 16696,
+      "name": "Baysse",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 16790,
+      "name": "Gazal",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 16853,
+      "name": "Córdoba",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 16930,
+      "name": "Jefferson",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 16939,
+      "name": "Nuno Bühler",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 16961,
+      "name": "Elízio",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 17008,
+      "name": "Luis Carrasco",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 17029,
+      "name": "Júnior Augusto",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 17031,
+      "name": "Lopes",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 17085,
+      "name": "Nong",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 17192,
+      "name": "Cristian Herrera",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 17351,
+      "name": "Roland Tőzsér",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 17376,
+      "name": "Marc Cristian",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 17398,
+      "name": "Paulo Osvaldo",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 17447,
+      "name": "Humberto Montoya",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 17557,
+      "name": "Luis Romero",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 17611,
+      "name": "Ikonomou",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 17630,
+      "name": "Joel Cáceres",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 17645,
+      "name": "Roger Amorim",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 17694,
+      "name": "Ivo",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 17696,
+      "name": "Joílson",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 17716,
+      "name": "Douglas",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 17743,
+      "name": "Rodrigo Romário",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 17748,
+      "name": "Ygor",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 17761,
+      "name": "Eduardo",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 17765,
+      "name": "Gabriel",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 17793,
+      "name": "Zé Fernandão",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 17925,
+      "name": "Jussandro",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 17926,
+      "name": "Alemão",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 17930,
+      "name": "Wéverton",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 17938,
+      "name": "Edílson",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 17939,
+      "name": "João Jonathas",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 17957,
+      "name": "Felipe Jackson",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 17959,
+      "name": "Uvini",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 17960,
+      "name": "Anderson",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 17961,
+      "name": "Luiz Alison",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 17965,
+      "name": "Cléber",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 17966,
+      "name": "João Leandro",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 17967,
+      "name": "Rondinelly",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    }
+  ]
+}

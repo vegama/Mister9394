@@ -36,7 +36,13 @@ DEFAULT_GAME_DIR = REPO_ROOT / "frontend" / "public" / "historical9394" / "playe
 
 PLAYER_PAGE = "https://www.bdfutbol.com/en/j/j{bdfutbol_id}.html"
 PHOTO_BASE = "https://www.bdfutbol.com/i/j/"
-CAROUSEL_IMG_RE = re.compile(r'src="\.\./\.\./i/j/([^"?]+\.(?:jpg|jpeg|png))')
+# BDFutbol has used both the old carousel markup and standalone profile images.
+# Keep the path capture deliberately narrow: only /i/j/ assets are portraits;
+# /i/eg/, /i/t/ and site chrome must never be assigned to a player.
+PLAYER_IMG_RE = re.compile(
+    r'(?:src|data-src)="(?:https?://www\.bdfutbol\.com/)?(?:\.\./\.\./)?i/j/([^"?]+\.(?:jpg|jpeg|png))',
+    re.IGNORECASE,
+)
 HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; Mister9394PhotoTool/1.0)"}
 
 
@@ -65,15 +71,12 @@ def _score_candidate(content: bytes) -> tuple[int, int, int]:
 def fetch_candidate_filenames(client: httpx.Client, bdfutbol_id: str) -> list[str]:
     resp = client.get(PLAYER_PAGE.format(bdfutbol_id=bdfutbol_id), headers=HEADERS, timeout=20, follow_redirects=True)
     resp.raise_for_status()
-    idx = resp.text.find("carousel-inner")
-    if idx == -1:
-        return []
-    end = resp.text.find("</ul>", idx)
-    section = resp.text[idx:end if end != -1 else idx + 4000]
     seen: list[str] = []
-    for match in CAROUSEL_IMG_RE.finditer(section):
+    for match in PLAYER_IMG_RE.finditer(resp.text):
         name = match.group(1)
-        if name not in seen:
+        # Prefer the requested profile's own photo names. BDFutbol commonly
+        # exposes a colour and a suffix variant (e.g. 90652.jpg / 90652b.jpg).
+        if name.lower().startswith(str(bdfutbol_id).lower()) and name not in seen:
             seen.append(name)
     return seen
 

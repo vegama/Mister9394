@@ -127,6 +127,7 @@ from .scouting import (
 from .training import (
     ensure_training_state, process_training_day, training_snapshot as build_training_snapshot,
     set_training_plan as update_training_plan_state, set_individual_focus as set_training_focus_state,
+    set_individual_role_focus as set_training_role_focus_state,
     set_individual_recovery as set_training_recovery_state,
     set_match_preparation_focus as set_training_match_prep_state, set_training_mode as set_training_mode_state,
     apply_auto_training_plan, session_for_date,
@@ -598,6 +599,7 @@ class ManagerCareerRuntime9394(CareerHistoryRuntimeMixin, CareerMarketRuntimeMix
         self.state.setdefault("season_recaps", [])
         self.state.setdefault("season_dossiers", [])
         self.state.setdefault("club_strategy", {})
+        self.state.setdefault("squad_plan_decisions", {})
         self.state.setdefault("ai_squad_audits", [])
         self.state.setdefault("preseason_friendlies", [])
         self.state.setdefault("preseason_history", [])
@@ -1814,11 +1816,44 @@ class ManagerCareerRuntime9394(CareerHistoryRuntimeMixin, CareerMarketRuntimeMix
         team = self._team_api(int(team_id)) or self.universe.team(int(team_id)) or {}
         return str(team.get("country") or (team.get("league") or {}).get("country") or "")
 
+    def _scouting_reach_snapshot(self) -> list[dict[str, Any]]:
+        """Expose useful territory and competition reach without revealing truth."""
+        controlled = int(self.state["team_id"])
+        home_country = self._team_country(controlled)
+        network = self._refresh_scouting_network_profile()
+        rating = int(network.get("rating") or 10)
+        buckets: dict[tuple[str, int], dict[str, Any]] = {}
+        for team in self.universe.payload.get("teams", []):
+            tid = int(team.get("source_id") or 0)
+            country = self._team_country(tid) if tid else ""
+            league_id = self._current_league_for_team(tid) if tid else 0
+            if not country or not league_id:
+                continue
+            row = buckets.setdefault((country, int(league_id)), {"country": country, "league_id": int(league_id), "clubs": 0, "players": 0})
+            row["clubs"] += 1
+            row["players"] += len(self.universe.players_by_team.get(tid, ()))
+        rows = []
+        for row in buckets.values():
+            geo = scouting_geography(home_country, row["country"])
+            same_league = int(row["league_id"]) == int(network.get("home_league_id") or 0)
+            if same_league:
+                level, confidence, status = 3, min(92, 54 + rating * 2), "Seguimiento cercano"
+            elif geo["scope"] == "domestic":
+                level, confidence, status = (2 if rating >= 10 else 1), min(84, 42 + rating * 2), "Red nacional"
+            elif geo["scope"] == "europe" and rating >= 13:
+                level, confidence, status = 2, min(76, 34 + rating * 2), "Alcance europeo"
+            else:
+                level, confidence, status = 1, min(58, 24 + rating), "Contacto ocasional"
+            rows.append({**row, "scope": geo["scope"], "scope_label": geo["scope_label"], "level": level, "confidence": confidence, "status": status})
+        rows.sort(key=lambda item: (-int(item["level"]), -int(item["confidence"]), str(item["country"])))
+        return rows[:12]
+
     def scouting_snapshot(self) -> dict[str, Any]:
         self._refresh_scouting_network_profile()
         return {
             **build_scouting_snapshot(self.state, game_date=self.current_date, capacity=self._scouting_capacity()),
             "responsibility": self._responsibility_effect("recruitment_search"),
+            "territory": self._scouting_reach_snapshot(),
             "control_note": "El staff descubre y propone candidatos automáticamente. Tú decides qué dossiers profundizar y cualquier operación de mercado.",
         }
 
@@ -1914,6 +1949,14 @@ class ManagerCareerRuntime9394(CareerHistoryRuntimeMixin, CareerMarketRuntimeMix
         if self._current_team_id(pid) != int(self.state["team_id"]):
             raise ValueError("sólo puedes asignar trabajo individual a futbolistas de tu plantilla")
         set_training_focus_state(self.state, player_id=pid, focus=focus)
+        self.state["updated_at"] = datetime.now(timezone.utc).isoformat()
+        return self.training_snapshot()
+
+    def set_player_training_role_focus(self, player_id: int, role_focus: str) -> dict[str, Any]:
+        pid = int(player_id)
+        if self._current_team_id(pid) != int(self.state["team_id"]):
+            raise ValueError("el futbolista no pertenece a tu plantilla")
+        set_training_role_focus_state(self.state, player_id=pid, role_focus=role_focus)
         self.state["updated_at"] = datetime.now(timezone.utc).isoformat()
         return self.training_snapshot()
 
@@ -2031,8 +2074,19 @@ class ManagerCareerRuntime9394(CareerHistoryRuntimeMixin, CareerMarketRuntimeMix
         return build_squad_plan_snapshot(
             players=list(self._career_players_by_team.get(int(self.state["team_id"]), [])),
             development=self.state["player_development"], contract_overrides=self.state.get("contract_overrides", {}),
-            current_year=self.current_date.year,
+            current_year=self.current_date.year, decisions=self.state.get("squad_plan_decisions", {}),
         )
+
+    def set_squad_plan_decision(self, player_id: int, decision: str) -> dict[str, Any]:
+        allowed = {"seguimiento", "renovar", "vender", "ceder", "sustituto", "desarrollar"}
+        if decision not in allowed:
+            raise ValueError("decisión de plantilla no válida")
+        pid = int(player_id)
+        if self._current_team_id(pid) != int(self.state["team_id"]):
+            raise ValueError("el futbolista no pertenece a tu plantilla")
+        self.state.setdefault("squad_plan_decisions", {})[str(pid)] = decision
+        self.state["updated_at"] = datetime.now(timezone.utc).isoformat()
+        return self.squad_plan_snapshot()
 
     def match_briefing_snapshot(self) -> dict[str, Any] | None:
         fixture = self.next_scheduled_fixture()

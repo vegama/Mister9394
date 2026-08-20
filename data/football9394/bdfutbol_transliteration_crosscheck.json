@@ -1,0 +1,304 @@
+{
+  "generated_at": "2026-08-20T14:18:42.299120+00:00",
+  "source": "BDFutbol global search, exact name + exact birth date",
+  "candidates": 42,
+  "downloaded": 0,
+  "no_exact_match": 37,
+  "failed": 0,
+  "results": [
+    {
+      "source_id": 18399,
+      "name": "Sigurðarson",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 22017,
+      "name": "Daði Arnarson",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 22282,
+      "name": "Sigurðsson",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 23438,
+      "name": "Hólmbert Guðjónsson",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 26188,
+      "name": "Zvonimir Anđelković",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9501481,
+      "name": "Kłak",
+      "status": "skipped",
+      "source": "BDFutbol global search",
+      "reason": "already_exists"
+    },
+    {
+      "source_id": 9501493,
+      "name": "Koseła",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9501505,
+      "name": "Pokładowski",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9501512,
+      "name": "Latała",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9501531,
+      "name": "Wleciałowski",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9501536,
+      "name": "Łukasik",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9501549,
+      "name": "Łapiński",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9501560,
+      "name": "Małocha",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9501782,
+      "name": "Guðjohnsen",
+      "status": "skipped",
+      "source": "BDFutbol global search",
+      "reason": "already_exists"
+    },
+    {
+      "source_id": 9501861,
+      "name": "Sætre",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9501887,
+      "name": "Sigurðsson",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9501888,
+      "name": "Brendesæter",
+      "status": "skipped",
+      "source": "BDFutbol global search",
+      "reason": "already_exists"
+    },
+    {
+      "source_id": 9501909,
+      "name": "Kræmer",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9502006,
+      "name": "Kjær",
+      "status": "skipped",
+      "source": "BDFutbol global search",
+      "reason": "already_exists"
+    },
+    {
+      "source_id": 9502079,
+      "name": "Piskuła",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9502088,
+      "name": "Jałocha",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9502101,
+      "name": "Głowacki",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9502153,
+      "name": "Sognnæs",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9502329,
+      "name": "Gałuszka",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9502339,
+      "name": "Łatka",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9502375,
+      "name": "Szczygieł",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9502381,
+      "name": "Jakołcewicz",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9502390,
+      "name": "Łapczyński",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9502408,
+      "name": "Pawłuszek",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9502415,
+      "name": "Ziółkowski",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9502429,
+      "name": "Płaczkiewicz",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9502433,
+      "name": "Oszmałek",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9502437,
+      "name": "Gadziała",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9502460,
+      "name": "Białek",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9502464,
+      "name": "Wyparło",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9502467,
+      "name": "Łętocha",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9502583,
+      "name": "Riisnæs",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9502587,
+      "name": "Wæhler",
+      "status": "skipped",
+      "source": "BDFutbol global search",
+      "reason": "already_exists"
+    },
+    {
+      "source_id": 9502588,
+      "name": "Wæhler",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9502619,
+      "name": "Lambæk",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9502633,
+      "name": "Elbæk",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    },
+    {
+      "source_id": 9502898,
+      "name": "Đurovski",
+      "status": "no_exact_match",
+      "source": "BDFutbol global search",
+      "candidate_count": 0
+    }
+  ]
+}

@@ -47,7 +47,18 @@ def _load(path: Path) -> Any:
 
 
 def _norm(text: str | None) -> str:
-    text = unicodedata.normalize("NFKD", str(text or ""))
+    text = str(text or "")
+    # Several imported historical catalogues contain UTF-8 decoded once as
+    # Windows-1252 (e.g. FenerbahÃ§e). Repair that reversible mojibake before
+    # querying external indexes; leave genuinely invalid text untouched.
+    if any(marker in text for marker in ("Ã", "Â", "â€", "Ä", "Å")):
+        try:
+            repaired = text.encode("cp1252").decode("utf-8")
+            if repaired.count("�") <= text.count("�"):
+                text = repaired
+        except (UnicodeEncodeError, UnicodeDecodeError):
+            pass
+    text = unicodedata.normalize("NFKD", text)
     text = "".join(c for c in text if not unicodedata.combining(c)).lower()
     return re.sub(r"[^a-z0-9]+", " ", text).strip()
 
@@ -73,6 +84,11 @@ def _score_image_bytes(content: bytes) -> tuple[int, int, int]:
         rgb = im.convert("RGB")
         rgb.thumbnail((500, 500))
         pixels = list(rgb.getdata())
+        if pixels:
+            black_ratio = sum(1 for pixel in pixels if max(pixel) <= 8) / len(pixels)
+            mean = sum(sum(pixel) for pixel in pixels) / (len(pixels) * 3)
+            if black_ratio >= 0.8 or mean <= 3.0:
+                return (-100, 0, 0)
         chroma = 0.0
         if pixels:
             chroma = sum(max(p) - min(p) for p in pixels) / len(pixels)

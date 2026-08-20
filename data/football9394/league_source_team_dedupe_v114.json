@@ -1,0 +1,92 @@
+{
+  "status": "complete",
+  "duplicate_teams_removed": 14,
+  "redirects": {
+    "9503304": 9502308,
+    "9503306": 9502341,
+    "9503307": 9502359,
+    "9503308": 9502377,
+    "9503322": 9502532,
+    "9503325": 9502568,
+    "9503328": 9502621,
+    "9503329": 9502970,
+    "9503331": 9503015,
+    "9503332": 9503041,
+    "9503333": 9503065,
+    "9503334": 9503090,
+    "9503337": 9503153,
+    "9503338": 9503172
+  },
+  "removed": [
+    {
+      "removed_team_id": 9503304,
+      "kept_team_id": 9502308,
+      "team": "ŁKS Łódź"
+    },
+    {
+      "removed_team_id": 9503306,
+      "kept_team_id": 9502341,
+      "team": "Stal Stalowa Wola"
+    },
+    {
+      "removed_team_id": 9503307,
+      "kept_team_id": 9502359,
+      "team": "GKS Katowice"
+    },
+    {
+      "removed_team_id": 9503308,
+      "kept_team_id": 9502377,
+      "team": "Warta Poznań"
+    },
+    {
+      "removed_team_id": 9503322,
+      "kept_team_id": 9502532,
+      "team": "Västra Frölunda"
+    },
+    {
+      "removed_team_id": 9503325,
+      "kept_team_id": 9502568,
+      "team": "Kongsvinger"
+    },
+    {
+      "removed_team_id": 9503328,
+      "kept_team_id": 9502621,
+      "team": "Ikast FS"
+    },
+    {
+      "removed_team_id": 9503329,
+      "kept_team_id": 9502970,
+      "team": "Rb Salzburg"
+    },
+    {
+      "removed_team_id": 9503331,
+      "kept_team_id": 9503015,
+      "team": "Vorwärts Steyr"
+    },
+    {
+      "removed_team_id": 9503332,
+      "kept_team_id": 9503041,
+      "team": "VfB Mödling"
+    },
+    {
+      "removed_team_id": 9503333,
+      "kept_team_id": 9503065,
+      "team": "VSE St. Pölten"
+    },
+    {
+      "removed_team_id": 9503334,
+      "kept_team_id": 9503090,
+      "team": "Lausanne-Sport"
+    },
+    {
+      "removed_team_id": 9503337,
+      "kept_team_id": 9503153,
+      "team": "Kriens"
+    },
+    {
+      "removed_team_id": 9503338,
+      "kept_team_id": 9503172,
+      "team": "Yverdon-Sport"
+    }
+  ]
+}

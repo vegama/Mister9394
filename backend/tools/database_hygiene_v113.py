@@ -35,6 +35,7 @@ REPORT = DATA / "database_hygiene_v113.json"
 # Strong, source-backed non-exact identity matches.  The duplicated row is kept
 # as a retired alias so old saves/audits can still resolve the historical ID.
 MANUAL_MERGES: dict[int, int] = {
+    9494151: 9501277,  # Daniel Borimirov: same final club/date; keep BDFutbol identity
     9495356: 503,       # Rashid Rahimov -> Rashid Rakhimov
     9495151: 2428,      # Ned Zelic -> Nedjeljko Zelic
     9495143: 5556,      # Mixu Paatelainen -> Mika/Mixu Paatelainen
@@ -82,6 +83,7 @@ VERIFIED_DISTINCT: set[frozenset[int]] = {
     frozenset((4200, 4203)),      # Suso / Joaquin Lopez
     frozenset((8238, 8911)),      # Jose Jaime / Mario Ordiales
     frozenset((1021, 3074)),      # Pedro / Juan Diaz
+    frozenset((9500793, 9503540)),# Kent Nielsen: 1961 international vs 1972 youth player
 }
 
 # Current-club corrections use the game's 1993-94 snapshot convention: summer
@@ -215,12 +217,29 @@ PROFILE_CORRECTIONS = {
         "historical_birth_place_text": "Makhachkala (USSR)",
         "display_name_resolution": "birthplace_removed_from_display_name_v113",
     },
+    9500872: {
+        "primary_role": 12,
+        "broad_position": "DEL",
+        "historical_position_1993_94": "Right Winger",
+        "profile_position_precision": "exact",
+        "profile_review_required": False,
+        "historical_position_source": "Austria Salzburg archive + Transfermarkt season profile",
+        "historical_position_source_url": "https://wiki.austria-salzburg.at/wiki/Nikola_Jurcevic",
+        "historical_profile_source_note": "Verified as right winger/forward; previous centre-back role was erroneous.",
+        "identity_field_resolution_v113": "corrected_source_position_conflict_v113",
+    },
 }
 
 STAGING_ID_REMAP = {
     9496680: 9496512,  # Mukhsin Mukhamadiev: active 93-94 identity is Ankaragucu
     9497314: 9496515,  # Cafer Aydin duplicated across Kayserispor/Ankaragucu
     9496345: 9496672,  # Ravil Sabitov duplicated across Waregem/Lokomotiv Moskva
+}
+
+ROLE_TO_BROAD_FALLBACK = {
+    0: "POR", 1: "DEF", 2: "DEF", 3: "DEF", 4: "DEF", 5: "DEF",
+    6: "MED", 7: "MED", 8: "MED", 9: "MED", 10: "MED", 11: "DEL",
+    12: "DEL", 13: "MED", 14: "MED", 15: "DEL", 16: "DEL", 17: "DEL",
 }
 
 
@@ -549,7 +568,7 @@ def patch_staging(path: Path, aliases: dict[int, int], display_by_id: dict[int, 
 def patch_world_cup_references() -> int:
     path = DATA / "world_cup_1994_squads.json"
     payload = json.loads(path.read_text(encoding="utf-8"))
-    mapping = {9494181: 9496364, 9494201: 9496480}
+    mapping = {9494181: 9496364, 9494201: 9496480, 9494151: 9501277}
     changed = 0
     def walk(value: Any) -> None:
         nonlocal changed
@@ -855,6 +874,19 @@ def main() -> None:
         if changed_fields:
             profile_corrections.append({"source_id": sid, "display_name": player.get("display_name"), "fields": changed_fields})
 
+    # A few legacy rows carried a valid tactical role but no broad category.
+    # Fill only the missing field; never overwrite a sourced category here.
+    missing_broad_repairs = []
+    for player in players:
+        if player.get("retired") or player.get("broad_position"):
+            continue
+        role = int(player.get("primary_role") or -1)
+        broad = ROLE_TO_BROAD_FALLBACK.get(role)
+        if broad:
+            player["broad_position"] = broad
+            player["position_resolution_v113"] = "derived_from_existing_primary_role_missing_broad_position"
+            missing_broad_repairs.append({"source_id": int(player["source_id"]), "display_name": player.get("display_name"), "primary_role": role, "broad_position": broad})
+
     russian_shortened = shorten_russian_names(players, team_by_id)
     same_team_disambiguated = disambiguate_same_team_display(players)
 
@@ -925,6 +957,7 @@ def main() -> None:
         "verified_photo_alias_changes": photo_alias_changes,
         "registry_identity_sync_changes": registry_identity_sync_changes,
         "profile_corrections": profile_corrections,
+        "missing_broad_position_repairs": missing_broad_repairs,
         "notes": [
             "retired aliases remain in historical_snapshot for save/reference safety but are excluded from runtime squads/market",
             "Russian patronymics are preserved in historical_full_name and no longer used as routine display_name",

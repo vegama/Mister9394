@@ -3842,9 +3842,9 @@
           "minutes": 1644,
           "goals": 5,
           "core_18_candidate": true,
-          "identity_resolution": "reused_staged_identity",
-          "resolved_source_id": 9496680,
-          "resolved_display_name": "Mukhsin Muslimovich Mukhamadiev",
+          "identity_resolution": "reconciled_database_hygiene_v113",
+          "resolved_source_id": 9496512,
+          "resolved_display_name": "Mukhsin Mukhamadiev",
           "resolved_primary_role": 17,
           "resolved_exact_position": "Centre Forward",
           "position_source": "existing_historical_position",
@@ -3859,7 +3859,8 @@
             "project_display_v045": "Mukhsin Muslimovich Mukhamadiev"
           },
           "profile_identity_status": "bdfutbol_individual_profile_resolved_v045",
-          "profile_metadata_status": "identity_resolved_metadata_partial_v045"
+          "profile_metadata_status": "identity_resolved_metadata_partial_v045",
+          "duplicate_source_id_retired": 9496680
         },
         {
           "bdfutbol_name": "Bidzhiyev",

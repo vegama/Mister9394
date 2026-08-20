@@ -5,6 +5,22 @@ from __future__ import annotations
 from typing import Any
 
 
+def postmatch_consequence_links(snapshot: dict[str, Any], *, controlled_team_id: int, familiarity: float = 70.0) -> list[dict[str, str]]:
+    own_home = int(snapshot.get("home_team_id") or 0) == int(controlled_team_id)
+    own = dict(snapshot.get("home") if own_home else snapshot.get("away") or {})
+    opp = dict(snapshot.get("away") if own_home else snapshot.get("home") or {})
+    shot_diff = int(own.get("shots") or 0) - int(opp.get("shots") or 0)
+    links = []
+    if shot_diff >= 5 and int(own.get("goals") or 0) <= int(opp.get("goals") or 0):
+        links.append({"workspace": "training", "label": "Ajustar finalización", "detail": "El volumen existe; el siguiente trabajo debe convertir mejor las llegadas."})
+    if shot_diff <= -5 or int(own.get("possession") or 50) < 42:
+        links.append({"workspace": "tactics", "label": "Revisar salida y bloque", "detail": "La lectura territorial recomienda corregir estructura antes del próximo rival."})
+    if float(familiarity) < 60:
+        links.append({"workspace": "training", "label": "Proteger familiaridad", "detail": "Mantener principios sencillos evita acumular otra pérdida de asimilación."})
+    links.append({"workspace": "squad", "label": "Revisar vestuario", "detail": "Los minutos y el resultado actualizan satisfacción, promesas y jerarquías."})
+    return links[:4]
+
+
 def live_player_performance(snapshot: dict[str, Any], *, controlled_team_id: int) -> list[dict[str, Any]]:
     own_home = int(snapshot.get("home_team_id") or 0) == int(controlled_team_id)
     ids = list(snapshot.get("home_on_pitch_ids") if own_home else snapshot.get("away_on_pitch_ids") or [])

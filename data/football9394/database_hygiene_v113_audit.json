@@ -1,0 +1,499 @@
+{
+  "checkpoint": "1.1.3",
+  "status": "fail",
+  "active_players": 15330,
+  "retired_aliases": 81,
+  "checks": {
+    "unique_source_ids": true,
+    "retired_alias_targets_active": true,
+    "critical_russia_summer_1993_clubs": true,
+    "russian_ui_names_short": true,
+    "russian_full_name_preserved_count": 476,
+    "no_patronymics_in_routine_ui": true,
+    "no_unresolved_exact_identity_duplicates": true,
+    "identity_whitespace_clean": true,
+    "same_team_display_names_unambiguous": false,
+    "specific_identity_repairs": false,
+    "otros_ecuador_nonempty": true,
+    "world_cup_resolved_ids_active": false,
+    "world_cup_canonical_metadata_complete": false,
+    "active_market_containers_nonempty": true,
+    "staging_resolved_ids_active": true,
+    "profile_comparables_not_retired": true,
+    "russian_min_active_squad": 22,
+    "admitted_short_roster_team_count": 25,
+    "admitted_roster_total_deficit_to_18": 41,
+    "admitted_min_active_squad": 14
+  },
+  "warnings": {
+    "admitted_roster_shortages": [
+      {
+        "team_id": 404,
+        "team": "Racing de Montevideo",
+        "league_id": 49,
+        "league": "Primera División",
+        "country": "Uruguay",
+        "active_players": 14,
+        "deficit_to_18": 4
+      },
+      {
+        "team_id": 412,
+        "team": "VVV Venlo",
+        "league_id": 31,
+        "league": "Eredivisie",
+        "country": "Países Bajos",
+        "active_players": 15,
+        "deficit_to_18": 3
+      },
+      {
+        "team_id": 997,
+        "team": "Liverpool",
+        "league_id": 49,
+        "league": "Primera División",
+        "country": "Uruguay",
+        "active_players": 15,
+        "deficit_to_18": 3
+      },
+      {
+        "team_id": 1055,
+        "team": "Raith Rovers FC",
+        "league_id": 38,
+        "league": "Scottish Premier Division",
+        "country": "Escocia",
+        "active_players": 16,
+        "deficit_to_18": 2
+      },
+      {
+        "team_id": 2293,
+        "team": "Real Madrid C",
+        "league_id": 3,
+        "league": "Segunda División B G I",
+        "country": "España",
+        "active_players": 16,
+        "deficit_to_18": 2
+      },
+      {
+        "team_id": 1583,
+        "team": "Atlético Morelia",
+        "league_id": 40,
+        "league": "Primera División",
+        "country": "México",
+        "active_players": 16,
+        "deficit_to_18": 2
+      },
+      {
+        "team_id": 1585,
+        "team": "Leones Negros",
+        "league_id": 40,
+        "league": "Primera División",
+        "country": "México",
+        "active_players": 16,
+        "deficit_to_18": 2
+      },
+      {
+        "team_id": 2342,
+        "team": "Toros Hidalgo",
+        "league_id": 40,
+        "league": "Primera División",
+        "country": "México",
+        "active_players": 16,
+        "deficit_to_18": 2
+      },
+      {
+        "team_id": 299,
+        "team": "De Graafschap",
+        "league_id": 54,
+        "league": "Eerste Divisie",
+        "country": "Países Bajos",
+        "active_players": 16,
+        "deficit_to_18": 2
+      },
+      {
+        "team_id": 812,
+        "team": "FC Zwolle",
+        "league_id": 54,
+        "league": "Eerste Divisie",
+        "country": "Países Bajos",
+        "active_players": 16,
+        "deficit_to_18": 2
+      },
+      {
+        "team_id": 2352,
+        "team": "HFC Haarlem",
+        "league_id": 54,
+        "league": "Eerste Divisie",
+        "country": "Países Bajos",
+        "active_players": 16,
+        "deficit_to_18": 2
+      },
+      {
+        "team_id": 999,
+        "team": "Montevideo Wanderers",
+        "league_id": 49,
+        "league": "Primera División",
+        "country": "Uruguay",
+        "active_players": 16,
+        "deficit_to_18": 2
+      },
+      {
+        "team_id": 1467,
+        "team": "Viborg FF",
+        "league_id": 69,
+        "league": "Superligaen",
+        "country": "Dinamarca",
+        "active_players": 17,
+        "deficit_to_18": 1
+      },
+      {
+        "team_id": 1020,
+        "team": "Club Atlante",
+        "league_id": 40,
+        "league": "Primera División",
+        "country": "México",
+        "active_players": 17,
+        "deficit_to_18": 1
+      },
+      {
+        "team_id": 1490,
+        "team": "Querétaro",
+        "league_id": 40,
+        "league": "Primera División",
+        "country": "México",
+        "active_players": 17,
+        "deficit_to_18": 1
+      },
+      {
+        "team_id": 928,
+        "team": "Toluca",
+        "league_id": 40,
+        "league": "Primera División",
+        "country": "México",
+        "active_players": 17,
+        "deficit_to_18": 1
+      },
+      {
+        "team_id": 1717,
+        "team": "FK Bodø/Glimt",
+        "league_id": 88,
+        "league": "Tippeligaen",
+        "country": "Noruega",
+        "active_players": 17,
+        "deficit_to_18": 1
+      },
+      {
+        "team_id": 2351,
+        "team": "RBC Roosendaal",
+        "league_id": 54,
+        "league": "Eerste Divisie",
+        "country": "Países Bajos",
+        "active_players": 17,
+        "deficit_to_18": 1
+      },
+      {
+        "team_id": 297,
+        "team": "SC Heracles",
+        "league_id": 54,
+        "league": "Eerste Divisie",
+        "country": "Países Bajos",
+        "active_players": 17,
+        "deficit_to_18": 1
+      },
+      {
+        "team_id": 1731,
+        "team": "Widzew Lodz",
+        "league_id": 89,
+        "league": "Ekstraklasa",
+        "country": "Polonia",
+        "active_players": 17,
+        "deficit_to_18": 1
+      },
+      {
+        "team_id": 1242,
+        "team": "BK Häcken",
+        "league_id": 91,
+        "league": "Allsvenskan",
+        "country": "Suecia",
+        "active_players": 17,
+        "deficit_to_18": 1
+      },
+      {
+        "team_id": 402,
+        "team": "Club Atlético Cerro",
+        "league_id": 49,
+        "league": "Primera División",
+        "country": "Uruguay",
+        "active_players": 17,
+        "deficit_to_18": 1
+      },
+      {
+        "team_id": 2360,
+        "team": "Huracán Buceo",
+        "league_id": 49,
+        "league": "Primera División",
+        "country": "Uruguay",
+        "active_players": 17,
+        "deficit_to_18": 1
+      },
+      {
+        "team_id": 2359,
+        "team": "Progreso",
+        "league_id": 49,
+        "league": "Primera División",
+        "country": "Uruguay",
+        "active_players": 17,
+        "deficit_to_18": 1
+      },
+      {
+        "team_id": 1587,
+        "team": "Rampla Juniors",
+        "league_id": 49,
+        "league": "Primera División",
+        "country": "Uruguay",
+        "active_players": 17,
+        "deficit_to_18": 1
+      }
+    ],
+    "note": "Coverage backlog only: do not invent players; fill from verified 1993-94 sources."
+  },
+  "failures": [
+    {
+      "check": "same_team_display_names_unambiguous",
+      "rows": [
+        {
+          "team_id": 9400077,
+          "display": "amidu karim",
+          "source_ids": [
+            9500299,
+            9500465
+          ]
+        },
+        {
+          "team_id": 9400112,
+          "display": "james phiri",
+          "source_ids": [
+            9500305,
+            9500413
+          ]
+        },
+        {
+          "team_id": 9400112,
+          "display": "joel kangwa bwalya",
+          "source_ids": [
+            9500312,
+            9500417
+          ]
+        },
+        {
+          "team_id": 9400034,
+          "display": "dannes coronel",
+          "source_ids": [
+            9500584,
+            9500744
+          ]
+        },
+        {
+          "team_id": 9400086,
+          "display": "felix golindano",
+          "source_ids": [
+            9500617,
+            9500709
+          ]
+        },
+        {
+          "team_id": 9400086,
+          "display": "stalin rivas",
+          "source_ids": [
+            9500624,
+            9500715
+          ]
+        },
+        {
+          "team_id": 9400048,
+          "display": "mojtaba moharrami",
+          "source_ids": [
+            9500900,
+            9501048
+          ]
+        },
+        {
+          "team_id": 9400024,
+          "display": "hao haidong",
+          "source_ids": [
+            9500946,
+            9501109
+          ]
+        }
+      ]
+    },
+    {
+      "check": "specific_identity_repairs",
+      "rows": [
+        {
+          "source_id": 9499000,
+          "row": {
+            "source_id": 9499000,
+            "team_id": 9400015,
+            "display_name": "Branko Milošević",
+            "first_name": "Branko",
+            "surname1": "Milošević",
+            "surname2": null,
+            "birth_date": "1964-08-21T00:00:00",
+            "birth_country_id": null,
+            "international_country_id": 15,
+            "preferred_foot": 1,
+            "shirt_number": null,
+            "primary_role": 7,
+            "broad_position": "MED",
+            "overall": 69,
+            "category": 70,
+            "height_cm": null,
+            "weight_kg": null,
+            "salary": 0,
+            "release_clause": 0,
+            "contract_start_year": null,
+            "contract_end_year": null,
+            "loan": false,
+            "initially_reserve": false,
+            "retired": true,
+            "attributes": {
+              "pace": 71,
+              "acceleration": 73,
+              "jumping": 66,
+              "stamina": 70,
+              "strength": 73,
+              "tackling": 59,
+              "work_rate": 63,
+              "aggression": 64,
+              "anticipation": 65,
+              "marking": 60,
+              "discipline": 73,
+              "positioning": 72,
+              "leadership": 65,
+              "consistency": 72,
+              "vision": 69,
+              "short_pass": 71,
+              "long_pass": 69,
+              "dribbling": 71,
+              "finishing": 64,
+              "heading": 61,
+              "off_ball": 61,
+              "shot_power": 61,
+              "free_kicks": 63,
+              "penalties": 71,
+              "technique": 70
+            },
+            "birth_city_id": 0,
+            "naturalized_country_id": null,
+            "basque_origin": false,
+            "favorite_shirt_number": 0,
+            "injury_proneness": 0,
+            "progression_mean": 0,
+            "fan_affection": 5,
+            "academy_team_id": 0,
+            "previous_team_id": 0,
+            "previous_team_years": 0,
+            "buyback_option": 0,
+            "role_ratings": {
+              "0": 0,
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0,
+              "6": 35,
+              "7": 100,
+              "8": 0,
+              "9": 0,
+              "10": 0,
+              "11": 0,
+              "12": 0,
+              "13": 65,
+              "14": 0,
+              "15": 0,
+              "16": 0,
+              "17": 0
+            },
+            "hidden_traits": {
+              "individualist": false,
+              "killer_pass": false,
+              "holds_ball": false,
+              "long_shots": false,
+              "cuts_inside": false,
+              "first_time_play": false,
+              "dives": false
+            },
+            "identity_source": "National-Football-Teams · players used by the senior national team in 1993",
+            "identity_source_url": "https://www.national-football-teams.com/country/12/1993/Australia.html",
+            "historical_data_source": "National-Football-Teams · players used by the senior national team in 1993",
+            "attribute_source": "fixed_source_comparable_review_0.23",
+            "profile_review_required": false,
+            "role_detail_source": "verified_historical_broad_position",
+            "historical_club_1994": "Sydney Olympic",
+            "historical_position_1993_94": "Midfielder",
+            "market_container_origin": "Australia",
+            "external_origin": "national_pool_1993_94",
+            "creation_batch": "verified_1993_national_pools_0.22",
+            "verified_national_pool_year": 1993,
+            "verified_national_pool_1993_94": true,
+            "verified_era_pool_1993_94": true,
+            "source_confidence": "high",
+            "historical_context": "Senior Australian international recorded in 1993; ID restored after Belgium import collision v1.1.3",
+            "profile_review_0_23": {
+              "source_id": 9499000,
+              "display_name": "Branko Milošević",
+              "external_origin": "national_pool_1993_94",
+              "broad_position": "MED",
+              "batch": "created_player_profile_audit_0.23",
+              "overall_before": 69,
+              "overall_after": 69,
+              "overall_decision": "retained",
+              "overall_reason": "retained after source-scale/context review; no evidence strong enough to override the existing individual value",
+              "archetype": "balanced_mid",
+              "archetype_basis": "verified broad position; conservative profile",
+              "primary_comparable": {
+                "source_id": 1837,
+                "display_name": "Poric",
+                "overall": 68,
+                "broad_position": "MED"
+              },
+              "secondary_comparable": {
+                "source_id": 4663,
+                "display_name": "Macarro",
+                "overall": 69,
+                "broad_position": "MED"
+              },
+              "world_cup_1994_usage": null,
+              "profile_confidence": "conservative",
+              "explicit_attribute_patch": null,
+              "policy": "fixed data curation against source-backed players; no runtime rating formula"
+            },
+            "historical_exclusion_reason": "duplicate_identity_reconciled_v113",
+            "merged_into_source_id": 9498072,
+            "identity_resolution": "retired_alias_to_canonical_v113"
+          },
+          "expected_team_id": 9400015,
+          "expected_retired": false
+        }
+      ]
+    },
+    {
+      "check": "world_cup_resolved_ids_active",
+      "rows": [
+        [
+          "teams[13].players[10].resolved_source_id",
+          9494151
+        ]
+      ]
+    },
+    {
+      "check": "world_cup_canonical_metadata_complete",
+      "rows": [
+        [
+          "BGR",
+          9494151,
+          "Daniel Borimirov"
+        ]
+      ]
+    }
+  ]
+}

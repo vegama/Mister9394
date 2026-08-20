@@ -47,6 +47,23 @@ def test_player_manager_trust_is_persistent_and_exposed_in_real_player_detail():
     assert renewed["label"] in {"Profesional", "Buena relación", "Leal al mánager"}
 
 
+def test_nf9_cross_league_job_swap_preserves_both_competition_timelines():
+    career = ManagerCareerRuntime9394.create(team_id=16, league_id=1, seed=9411, through_matchday=3)
+    old_results = list(career.state.get("results") or [])
+    target_team = next(row for row in career.universe.payload.get("teams", []) if int(row.get("league_id") or 0) == 2)
+    target_id = int(target_team["source_id"])
+    career.state["user_manager"]["career_offers"] = [{
+        "id": "cross-league-test", "status": "open", "team_id": target_id,
+        "team_name": target_team.get("name"), "league_id": 2, "league_name": "Premier Division",
+        "country": "Inglaterra", "suitability": 72, "expected_position": 8, "club_score": 60,
+    }]
+    career.accept_job_offer("cross-league-test")
+    assert int(career.state["league_id"]) == 2
+    assert career.state["world_leagues"]["1"]["results"]
+    assert len(career.state["world_leagues"]["1"]["results"]) == len(old_results)
+    assert career.next_scheduled_fixture()
+
+
 def test_emergent_storylines_exist_only_when_real_conditions_exist_and_resolve():
     state = {"storylines": [], "manager_history": []}
     standings = [

@@ -1,6 +1,6 @@
 {
   "checkpoint": "1.1.3",
-  "status": "pass_with_backlog",
+  "status": "regression",
   "policy": {
     "minimum_target": 18,
     "method": "verified real 1993-94 players only; never synthetic filler",
@@ -14,11 +14,47 @@
     },
     "baseline_note": "Rebased after source-backed Uruguay corrections exposed previously masked short squads and moved Luis Barbat to Independiente Medellin; compared with the pre-reconciliation reference, total deficit still improves 31 -> 30 and minimum depth 15 -> 16."
   },
-  "active_players": 14877,
-  "short_team_count": 19,
-  "total_deficit_to_18": 28,
-  "minimum_admitted_squad": 16,
+  "active_players": 15756,
+  "short_team_count": 24,
+  "total_deficit_to_18": 41,
+  "minimum_admitted_squad": 14,
   "shortages": [
+    {
+      "team_id": 404,
+      "team": "Racing de Montevideo",
+      "league_id": 49,
+      "league": "Primera División",
+      "country": "Uruguay",
+      "active_players": 14,
+      "deficit_to_18": 4
+    },
+    {
+      "team_id": 412,
+      "team": "VVV Venlo",
+      "league_id": 31,
+      "league": "Eredivisie",
+      "country": "Países Bajos",
+      "active_players": 15,
+      "deficit_to_18": 3
+    },
+    {
+      "team_id": 997,
+      "team": "Liverpool",
+      "league_id": 49,
+      "league": "Primera División",
+      "country": "Uruguay",
+      "active_players": 15,
+      "deficit_to_18": 3
+    },
+    {
+      "team_id": 9502961,
+      "team": "Pfc Shumen 2010",
+      "league_id": 66,
+      "league": "A Grupa",
+      "country": "Bulgaria",
+      "active_players": 16,
+      "deficit_to_18": 2
+    },
     {
       "team_id": 1055,
       "team": "Raith Rovers FC",
@@ -56,6 +92,15 @@
       "deficit_to_18": 2
     },
     {
+      "team_id": 2342,
+      "team": "Toros Hidalgo",
+      "league_id": 40,
+      "league": "Primera División",
+      "country": "México",
+      "active_players": 16,
+      "deficit_to_18": 2
+    },
+    {
       "team_id": 299,
       "team": "De Graafschap",
       "league_id": 54,
@@ -65,20 +110,20 @@
       "deficit_to_18": 2
     },
     {
-      "team_id": 412,
-      "team": "VVV Venlo",
-      "league_id": 31,
-      "league": "Eredivisie",
+      "team_id": 812,
+      "team": "FC Zwolle",
+      "league_id": 54,
+      "league": "Eerste Divisie",
       "country": "Países Bajos",
       "active_players": 16,
       "deficit_to_18": 2
     },
     {
-      "team_id": 997,
-      "team": "Liverpool",
-      "league_id": 49,
-      "league": "Primera División",
-      "country": "Uruguay",
+      "team_id": 2352,
+      "team": "HFC Haarlem",
+      "league_id": 54,
+      "league": "Eerste Divisie",
+      "country": "Países Bajos",
       "active_players": 16,
       "deficit_to_18": 2
     },
@@ -92,20 +137,11 @@
       "deficit_to_18": 2
     },
     {
-      "team_id": 404,
-      "team": "Racing de Montevideo",
-      "league_id": 49,
-      "league": "Primera División",
-      "country": "Uruguay",
-      "active_players": 16,
-      "deficit_to_18": 2
-    },
-    {
-      "team_id": 1467,
-      "team": "Viborg FF",
-      "league_id": 69,
-      "league": "Superligaen",
-      "country": "Dinamarca",
+      "team_id": 1574,
+      "team": "PFC Cherno More Varna",
+      "league_id": 66,
+      "league": "A Grupa",
+      "country": "Bulgaria",
       "active_players": 17,
       "deficit_to_18": 1
     },
@@ -119,29 +155,20 @@
       "deficit_to_18": 1
     },
     {
-      "team_id": 1717,
-      "team": "FK Bodø/Glimt",
-      "league_id": 88,
-      "league": "Tippeligaen",
-      "country": "Noruega",
+      "team_id": 1490,
+      "team": "Querétaro",
+      "league_id": 40,
+      "league": "Primera División",
+      "country": "México",
       "active_players": 17,
       "deficit_to_18": 1
     },
     {
-      "team_id": 812,
-      "team": "FC Zwolle",
-      "league_id": 54,
-      "league": "Eerste Divisie",
-      "country": "Países Bajos",
-      "active_players": 17,
-      "deficit_to_18": 1
-    },
-    {
-      "team_id": 2352,
-      "team": "HFC Haarlem",
-      "league_id": 54,
-      "league": "Eerste Divisie",
-      "country": "Países Bajos",
+      "team_id": 928,
+      "team": "Toluca",
+      "league_id": 40,
+      "league": "Primera División",
+      "country": "México",
       "active_players": 17,
       "deficit_to_18": 1
     },
@@ -164,20 +191,38 @@
       "deficit_to_18": 1
     },
     {
-      "team_id": 1731,
-      "team": "Widzew Lodz",
-      "league_id": 89,
-      "league": "Ekstraklasa",
-      "country": "Polonia",
+      "team_id": 9503231,
+      "team": "Niva Ternopil",
+      "league_id": 12,
+      "league": "Vyshcha Liha",
+      "country": "Ucrania",
       "active_players": 17,
       "deficit_to_18": 1
     },
     {
-      "team_id": 1242,
-      "team": "BK Häcken",
-      "league_id": 91,
-      "league": "Allsvenskan",
-      "country": "Suecia",
+      "team_id": 402,
+      "team": "Club Atlético Cerro",
+      "league_id": 49,
+      "league": "Primera División",
+      "country": "Uruguay",
+      "active_players": 17,
+      "deficit_to_18": 1
+    },
+    {
+      "team_id": 2360,
+      "team": "Huracán Buceo",
+      "league_id": 49,
+      "league": "Primera División",
+      "country": "Uruguay",
+      "active_players": 17,
+      "deficit_to_18": 1
+    },
+    {
+      "team_id": 2359,
+      "team": "Progreso",
+      "league_id": 49,
+      "league": "Primera División",
+      "country": "Uruguay",
       "active_players": 17,
       "deficit_to_18": 1
     },
@@ -191,5 +236,9 @@
       "deficit_to_18": 1
     }
   ],
-  "regressions": []
+  "regressions": [
+    "short team count worsened: 24 > 20",
+    "total deficit worsened: 41 > 30",
+    "minimum admitted squad worsened: 14 < 16"
+  ]
 }

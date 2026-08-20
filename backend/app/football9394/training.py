@@ -43,6 +43,10 @@ FOCUS_SPECS: dict[str, dict[str, Any]] = {
     "goalkeeping": {"label": "Portería", "attributes": ("goalkeeping", "reflexes", "positioning")},
 }
 
+ROLE_FOCUS_SPECS = {
+    "none": "Sin adaptación de puesto", "goalkeeper": "Portería", "defender": "Defensa", "fullback": "Lateral", "midfielder": "Mediocentro", "winger": "Banda", "attacker": "Ataque",
+}
+
 RECOVERY_SPECS: dict[str, dict[str, Any]] = {
     "normal": {"label": "Carga normal", "load_mult": 1.0, "condition_bonus": 0},
     "reduced": {"label": "Carga reducida", "load_mult": 0.62, "condition_bonus": 1},
@@ -67,6 +71,7 @@ def ensure_training_state(state: dict[str, Any]) -> dict[str, Any]:
     root.setdefault("intensity", "normal")
     root.setdefault("weekly_plan", list(_DEFAULT_WEEK))
     root.setdefault("individual_focus", {})
+    root.setdefault("individual_role_focus", {})
     root.setdefault("individual_focus_source", {})
     root.setdefault("individual_recovery", {})
     root.setdefault("match_preparation_focus", "balanced")
@@ -130,6 +135,16 @@ def set_individual_focus(state: dict[str, Any], *, player_id: int, focus: str) -
     else:
         root["individual_focus"][pid] = key
     root.setdefault("individual_focus_source", {})[pid] = "manual"
+    return root
+
+def set_individual_role_focus(state: dict[str, Any], *, player_id: int, role_focus: str) -> dict[str, Any]:
+    root = ensure_training_state(state)
+    key = str(role_focus)
+    if key not in ROLE_FOCUS_SPECS:
+        raise ValueError("adaptación de puesto no válida")
+    pid = str(int(player_id))
+    if key == "none": root["individual_role_focus"].pop(pid, None)
+    else: root["individual_role_focus"][pid] = key
     return root
 
 
@@ -356,8 +371,12 @@ def process_training_day(
         row["condition"] = max(0, min(100, int(row.get("condition") or 100) + condition_delta))
         row["last_training_session"] = session
         focus = str(root.get("individual_focus", {}).get(str(pid)) or "none")
+        role_focus = str(root.get("individual_role_focus", {}).get(str(pid)) or "none")
         evidence = float(spec["development"]) * float(intensity_spec["dev_mult"]) * dev_quality * max(.15, float(recovery_spec["load_mult"]))
         _focus_evidence(row, focus, evidence)
+        if role_focus != "none":
+            familiarity = row.setdefault("role_familiarity", {})
+            familiarity[role_focus] = min(100, round(float(familiarity.get(role_focus) or 0) + evidence * 3.5, 2))
         risk = _player_risk(player, row)
         row["injury_risk"] = risk
         risk_rows.append((risk, pid))
@@ -409,6 +428,7 @@ def training_snapshot(
         risk = _player_risk(player, row)
         row["injury_risk"] = risk
         focus = str(root.get("individual_focus", {}).get(str(pid)) or "none")
+        role_focus = str(root.get("individual_role_focus", {}).get(str(pid)) or "none")
         recovery = str(root.get("individual_recovery", {}).get(str(pid)) or "normal")
         condition = max(0, min(100, int(row.get("condition") or 100)))
         load = max(0, min(100, int(row.get("training_load") or 0)))
@@ -420,6 +440,8 @@ def training_snapshot(
             "risk": risk, "risk_label": _risk_label(risk),
             "focus": focus, "focus_label": FOCUS_SPECS[focus]["label"],
             "focus_source": (root.get("individual_focus_source") or {}).get(str(pid)) or "auto",
+            "role_focus": role_focus, "role_focus_label": ROLE_FOCUS_SPECS.get(role_focus, ROLE_FOCUS_SPECS["none"]),
+            "role_familiarity": round(float((row.get("role_familiarity") or {}).get(role_focus) or 0), 1) if role_focus != "none" else None,
             "recovery": recovery, "recovery_label": RECOVERY_SPECS[recovery]["label"],
             "recovery_source": (root.get("individual_recovery_source") or {}).get(str(pid)) or "auto",
             "recommendation": _training_recommendation(injury_days=int(row.get("injury_days") or 0), condition=condition, load=load, risk=risk),
@@ -446,6 +468,7 @@ def training_snapshot(
         "session_options": [{"key": key, "label": value["label"]} for key, value in SESSION_SPECS.items()],
         "intensity_options": [{"key": key, "label": value["label"]} for key, value in INTENSITY_SPECS.items()],
         "focus_options": [{"key": key, "label": value["label"]} for key, value in FOCUS_SPECS.items()],
+        "role_focus_options": [{"key": key, "label": label} for key, label in ROLE_FOCUS_SPECS.items()],
         "recovery_options": [{"key": key, "label": value["label"]} for key, value in RECOVERY_SPECS.items()],
         "match_preparation_focus": root.get("match_preparation_focus") or "balanced",
         "match_preparation_focus_label": MATCH_PREP_SPECS.get(str(root.get("match_preparation_focus") or "balanced"), "Equilibrada"),

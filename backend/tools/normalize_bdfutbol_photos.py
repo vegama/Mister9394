@@ -99,7 +99,13 @@ def normalize_directory(
     for source in sorted(input_dir.iterdir()):
         if not source.is_file() or source.suffix.lower() not in SUPPORTED:
             continue
-        sid = resolution.get(source.stem)
+        stem = source.stem
+        # The European downloader keeps provenance in raw filenames as
+        # bdf_<bdfutbol_id>.jpg. Accept that form as well as the queue's plain
+        # numeric id, otherwise verified downloads remain stranded in raw/.
+        sid = resolution.get(stem)
+        if sid is None and stem.lower().startswith("bdf_"):
+            sid = resolution.get(stem[4:])
         if sid is None:
             unresolved.append(source.name)
             continue

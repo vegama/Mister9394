@@ -1,0 +1,622 @@
+{
+  "status": "pass",
+  "scope": "all_new_domestic_leagues_1993_94",
+  "leagues": [
+    {
+      "league_id": 56,
+      "league": "Divizia A",
+      "country": "Rumanía",
+      "teams_in_league": 6,
+      "active_players": 113,
+      "source_rows": 234,
+      "source_rows_matched": 232,
+      "position_source_distribution": {
+        "POR": 26,
+        "DEF": 88,
+        "MED": 78,
+        "DEL": 42
+      },
+      "database_position_distribution": {
+        "POR": 14,
+        "DEF": 48,
+        "MED": 35,
+        "DEL": 16
+      },
+      "missing_broad_position": 0,
+      "invalid_primary_roles": [],
+      "role_broad_inconsistencies": [],
+      "source_position_conflicts": [
+        {
+          "name_source": "Ilie Dumitrescu",
+          "name_database": "Ilie Dumitrescu",
+          "source_id": 9494019,
+          "mondefootball_id": "42270",
+          "source_broad_position": "MED",
+          "database_broad_position": "DEL",
+          "database_primary_role": 17,
+          "historical_position": null,
+          "profile_source_position": null,
+          "position_source": "derived_from_broad_world_cup_position"
+        },
+        {
+          "name_source": "Aurel Panait",
+          "name_database": "Panait",
+          "source_id": 9501365,
+          "mondefootball_id": "69576",
+          "source_broad_position": "MED",
+          "database_broad_position": "DEF",
+          "database_primary_role": 3,
+          "historical_position": null,
+          "profile_source_position": null,
+          "position_source": "verified_historical_broad_position"
+        },
+        {
+          "name_source": "Viorel Ion",
+          "name_database": "Ion",
+          "source_id": 9501372,
+          "mondefootball_id": "47125",
+          "source_broad_position": "DEL",
+          "database_broad_position": "MED",
+          "database_primary_role": 7,
+          "historical_position": null,
+          "profile_source_position": null,
+          "position_source": "verified_historical_broad_position"
+        },
+        {
+          "name_source": "Corneliu Papură",
+          "name_database": "Corneliu Papură",
+          "source_id": 9494027,
+          "mondefootball_id": "42395",
+          "source_broad_position": "MED",
+          "database_broad_position": "DEF",
+          "database_primary_role": 3,
+          "historical_position": null,
+          "profile_source_position": null,
+          "position_source": "derived_from_broad_world_cup_position"
+        }
+      ],
+      "unmatched_source_rows": [
+        {
+          "name": "Dumitru Stângaciu",
+          "mondefootball_id": "42265"
+        },
+        {
+          "name": "Nica Panduru",
+          "mondefootball_id": "42393"
+        }
+      ]
+    },
+    {
+      "league_id": 89,
+      "league": "Ekstraklasa",
+      "country": "Polonia",
+      "teams_in_league": 17,
+      "active_players": 396,
+      "source_rows": 313,
+      "source_rows_matched": 313,
+      "position_source_distribution": {
+        "POR": 33,
+        "DEF": 103,
+        "MED": 121,
+        "DEL": 56
+      },
+      "database_position_distribution": {
+        "POR": 50,
+        "DEF": 133,
+        "MED": 156,
+        "DEL": 57
+      },
+      "missing_broad_position": 0,
+      "invalid_primary_roles": [],
+      "role_broad_inconsistencies": [],
+      "source_position_conflicts": [],
+      "unmatched_source_rows": []
+    },
+    {
+      "league_id": 66,
+      "league": "A Grupa",
+      "country": "Bulgaria",
+      "teams_in_league": 8,
+      "active_players": 154,
+      "source_rows": 164,
+      "source_rows_matched": 161,
+      "position_source_distribution": {
+        "POR": 12,
+        "DEF": 56,
+        "MED": 58,
+        "DEL": 38
+      },
+      "database_position_distribution": {
+        "DEF": 58,
+        "MED": 48,
+        "DEL": 31,
+        "POR": 17
+      },
+      "missing_broad_position": 0,
+      "invalid_primary_roles": [],
+      "role_broad_inconsistencies": [],
+      "source_position_conflicts": [
+        {
+          "name_source": "Georgi Slavchev",
+          "name_database": "Slavtchev",
+          "source_id": 9501278,
+          "mondefootball_id": "117440",
+          "source_broad_position": "DEF",
+          "database_broad_position": "MED",
+          "database_primary_role": 7,
+          "historical_position": null,
+          "profile_source_position": null,
+          "position_source": "verified_historical_broad_position"
+        },
+        {
+          "name_source": "Nasko Sirakov",
+          "name_database": "Nasko Sirakov",
+          "source_id": 9494150,
+          "mondefootball_id": "42459",
+          "source_broad_position": "MED",
+          "database_broad_position": "DEL",
+          "database_primary_role": 17,
+          "historical_position": null,
+          "profile_source_position": null,
+          "position_source": "derived_from_broad_world_cup_position"
+        },
+        {
+          "name_source": "Nikolai Todorov",
+          "name_database": "Todorov",
+          "source_id": 9501279,
+          "mondefootball_id": "117633",
+          "source_broad_position": "MED",
+          "database_broad_position": "DEL",
+          "database_primary_role": 17,
+          "historical_position": null,
+          "profile_source_position": null,
+          "position_source": "verified_historical_broad_position"
+        }
+      ],
+      "unmatched_source_rows": [
+        {
+          "name": "Daniel Borimirov",
+          "mondefootball_id": "17778"
+        },
+        {
+          "name": "Georgi Ivanov",
+          "mondefootball_id": "117767"
+        },
+        {
+          "name": "Petar Mihtarski",
+          "mondefootball_id": "42465"
+        }
+      ]
+    },
+    {
+      "league_id": 91,
+      "league": "Allsvenskan",
+      "country": "Suecia",
+      "teams_in_league": 12,
+      "active_players": 246,
+      "source_rows": 271,
+      "source_rows_matched": 265,
+      "position_source_distribution": {
+        "POR": 27,
+        "DEF": 92,
+        "MED": 97,
+        "DEL": 55
+      },
+      "database_position_distribution": {
+        "POR": 27,
+        "DEF": 80,
+        "MED": 86,
+        "DEL": 53
+      },
+      "missing_broad_position": 0,
+      "invalid_primary_roles": [],
+      "role_broad_inconsistencies": [],
+      "source_position_conflicts": [],
+      "unmatched_source_rows": [
+        {
+          "name": "Johan Mjällby",
+          "mondefootball_id": "41247"
+        },
+        {
+          "name": "Gary Sundgren",
+          "mondefootball_id": "49213"
+        },
+        {
+          "name": "Pierre Gallo",
+          "mondefootball_id": "15483"
+        },
+        {
+          "name": "Krister Nordin",
+          "mondefootball_id": "51228"
+        },
+        {
+          "name": "Ola Svensson",
+          "mondefootball_id": "254247"
+        },
+        {
+          "name": "Thomas Andersson",
+          "mondefootball_id": "674386"
+        }
+      ]
+    },
+    {
+      "league_id": 88,
+      "league": "Tippeligaen",
+      "country": "Noruega",
+      "teams_in_league": 10,
+      "active_players": 204,
+      "source_rows": 169,
+      "source_rows_matched": 169,
+      "position_source_distribution": {
+        "POR": 20,
+        "DEF": 64,
+        "MED": 59,
+        "DEL": 26
+      },
+      "database_position_distribution": {
+        "MED": 60,
+        "POR": 31,
+        "DEF": 89,
+        "DEL": 24
+      },
+      "missing_broad_position": 0,
+      "invalid_primary_roles": [],
+      "role_broad_inconsistencies": [],
+      "source_position_conflicts": [
+        {
+          "name_source": "Kalle Løken",
+          "name_database": "Karl Petter Løken",
+          "source_id": 9494200,
+          "mondefootball_id": "45253",
+          "source_broad_position": "MED",
+          "database_broad_position": "DEF",
+          "database_primary_role": 3,
+          "historical_position": null,
+          "profile_source_position": null,
+          "position_source": "derived_from_broad_world_cup_position"
+        },
+        {
+          "name_source": "Frank Strandli",
+          "name_database": "Strandli",
+          "source_id": 1772,
+          "mondefootball_id": "91004",
+          "source_broad_position": "MED",
+          "database_broad_position": "DEL",
+          "database_primary_role": 17,
+          "historical_position": null,
+          "profile_source_position": null,
+          "position_source": null
+        }
+      ],
+      "unmatched_source_rows": []
+    },
+    {
+      "league_id": 69,
+      "league": "Superligaen",
+      "country": "Dinamarca",
+      "teams_in_league": 10,
+      "active_players": 235,
+      "source_rows": 225,
+      "source_rows_matched": 219,
+      "position_source_distribution": {
+        "POR": 18,
+        "DEF": 75,
+        "MED": 94,
+        "DEL": 38
+      },
+      "database_position_distribution": {
+        "DEL": 36,
+        "DEF": 81,
+        "MED": 96,
+        "POR": 22
+      },
+      "missing_broad_position": 0,
+      "invalid_primary_roles": [],
+      "role_broad_inconsistencies": [],
+      "source_position_conflicts": [
+        {
+          "name_source": "Iørn Uldbjerg",
+          "name_database": "Uldbjerg",
+          "source_id": 9501258,
+          "mondefootball_id": "223484",
+          "source_broad_position": "DEF",
+          "database_broad_position": "MED",
+          "database_primary_role": 7,
+          "historical_position": null,
+          "profile_source_position": null,
+          "position_source": "verified_historical_broad_position"
+        },
+        {
+          "name_source": "Brian Kaus",
+          "name_database": "Kaus",
+          "source_id": 9501252,
+          "mondefootball_id": "120881",
+          "source_broad_position": "MED",
+          "database_broad_position": "DEF",
+          "database_primary_role": 3,
+          "historical_position": null,
+          "profile_source_position": null,
+          "position_source": "verified_historical_broad_position"
+        },
+        {
+          "name_source": "Kim Mikkelsen",
+          "name_database": "Mikkelsen",
+          "source_id": 9501268,
+          "mondefootball_id": "229222",
+          "source_broad_position": "MED",
+          "database_broad_position": "DEL",
+          "database_primary_role": 17,
+          "historical_position": null,
+          "profile_source_position": null,
+          "position_source": "verified_historical_broad_position"
+        },
+        {
+          "name_source": "Martin Johansen",
+          "name_database": "Martin Johansen",
+          "source_id": 9501263,
+          "mondefootball_id": "118963",
+          "source_broad_position": "DEL",
+          "database_broad_position": "MED",
+          "database_primary_role": 7,
+          "historical_position": null,
+          "profile_source_position": null,
+          "position_source": "verified_historical_broad_position"
+        },
+        {
+          "name_source": "Michael Nielsen",
+          "name_database": "Michael Nielsen",
+          "source_id": 9501265,
+          "mondefootball_id": "672479",
+          "source_broad_position": "POR",
+          "database_broad_position": "DEF",
+          "database_primary_role": 3,
+          "historical_position": null,
+          "profile_source_position": null,
+          "position_source": "verified_historical_broad_position"
+        },
+        {
+          "name_source": "Henrik Larsen",
+          "name_database": "Henrik Larsen",
+          "source_id": 9500795,
+          "mondefootball_id": "616381",
+          "source_broad_position": "DEF",
+          "database_broad_position": "MED",
+          "database_primary_role": 7,
+          "historical_position": null,
+          "profile_source_position": null,
+          "position_source": "verified_historical_broad_position"
+        }
+      ],
+      "unmatched_source_rows": [
+        {
+          "name": "Claus Christiansen",
+          "mondefootball_id": "271629"
+        },
+        {
+          "name": "Morten Nielsen",
+          "mondefootball_id": "383865"
+        },
+        {
+          "name": "Morten Falch",
+          "mondefootball_id": "137172"
+        },
+        {
+          "name": "Michael Mio Nielsen",
+          "mondefootball_id": "121371"
+        },
+        {
+          "name": "Peter Møller",
+          "mondefootball_id": "51444"
+        },
+        {
+          "name": "Kent Nielsen",
+          "mondefootball_id": "497881"
+        }
+      ]
+    },
+    {
+      "league_id": 62,
+      "league": "Bundesliga",
+      "country": "Austria",
+      "teams_in_league": 10,
+      "active_players": 302,
+      "source_rows": 232,
+      "source_rows_matched": 232,
+      "position_source_distribution": {
+        "POR": 26,
+        "DEF": 68,
+        "MED": 88,
+        "DEL": 50
+      },
+      "database_position_distribution": {
+        "DEL": 51,
+        "DEF": 96,
+        "POR": 38,
+        "MED": 117
+      },
+      "missing_broad_position": 0,
+      "invalid_primary_roles": [],
+      "role_broad_inconsistencies": [],
+      "source_position_conflicts": [
+        {
+          "name_source": "Harald Cerny",
+          "name_database": "Cerny",
+          "source_id": 2378,
+          "mondefootball_id": "40775",
+          "source_broad_position": "DEL",
+          "database_broad_position": "MED",
+          "database_primary_role": 9,
+          "historical_position": null,
+          "profile_source_position": null,
+          "position_source": null
+        }
+      ],
+      "unmatched_source_rows": []
+    },
+    {
+      "league_id": 55,
+      "league": "Nationalliga A",
+      "country": "Suiza",
+      "teams_in_league": 12,
+      "active_players": 292,
+      "source_rows": 257,
+      "source_rows_matched": 257,
+      "position_source_distribution": {
+        "POR": 25,
+        "DEF": 82,
+        "MED": 95,
+        "DEL": 55
+      },
+      "database_position_distribution": {
+        "POR": 30,
+        "DEF": 92,
+        "MED": 115,
+        "DEL": 55
+      },
+      "missing_broad_position": 0,
+      "invalid_primary_roles": [],
+      "role_broad_inconsistencies": [],
+      "source_position_conflicts": [
+        {
+          "name_source": "Georges Bregy",
+          "name_database": "Georges Bregy",
+          "source_id": 9494036,
+          "mondefootball_id": "42360",
+          "source_broad_position": "DEL",
+          "database_broad_position": "MED",
+          "database_primary_role": 7,
+          "historical_position": null,
+          "profile_source_position": null,
+          "position_source": "derived_from_broad_world_cup_position"
+        },
+        {
+          "name_source": "Alexandre Comisetti",
+          "name_database": "Alexandre Comisetti",
+          "source_id": 9500832,
+          "mondefootball_id": "50110",
+          "source_broad_position": "DEL",
+          "database_broad_position": "MED",
+          "database_primary_role": 7,
+          "historical_position": null,
+          "profile_source_position": null,
+          "position_source": "verified_historical_broad_position"
+        },
+        {
+          "name_source": "Dominique Herr",
+          "name_database": "Dominique Herr",
+          "source_id": 9494034,
+          "mondefootball_id": "42358",
+          "source_broad_position": "DEF",
+          "database_broad_position": "MED",
+          "database_primary_role": 7,
+          "historical_position": null,
+          "profile_source_position": null,
+          "position_source": "derived_from_broad_world_cup_position"
+        },
+        {
+          "name_source": "Samuel Margarini",
+          "name_database": "Margarini",
+          "source_id": 9501339,
+          "mondefootball_id": "423498",
+          "source_broad_position": "DEF",
+          "database_broad_position": "MED",
+          "database_primary_role": 7,
+          "historical_position": null,
+          "profile_source_position": null,
+          "position_source": "verified_historical_broad_position"
+        },
+        {
+          "name_source": "Sébastien Barberis",
+          "name_database": "Barberis",
+          "source_id": 9501330,
+          "mondefootball_id": "42871",
+          "source_broad_position": "MED",
+          "database_broad_position": "DEF",
+          "database_primary_role": 3,
+          "historical_position": null,
+          "profile_source_position": null,
+          "position_source": "verified_historical_broad_position"
+        },
+        {
+          "name_source": "Christophe Ohrel",
+          "name_database": "Christophe Ohrel",
+          "source_id": 9494037,
+          "mondefootball_id": "42362",
+          "source_broad_position": "MED",
+          "database_broad_position": "DEF",
+          "database_primary_role": 3,
+          "historical_position": null,
+          "profile_source_position": null,
+          "position_source": "derived_from_broad_world_cup_position"
+        }
+      ],
+      "unmatched_source_rows": []
+    },
+    {
+      "league_id": 12,
+      "league": "Vyshcha Liha",
+      "country": "Ucrania",
+      "teams_in_league": 12,
+      "active_players": 232,
+      "source_rows": 177,
+      "source_rows_matched": 176,
+      "position_source_distribution": {
+        "POR": 18,
+        "DEF": 68,
+        "MED": 68,
+        "DEL": 23
+      },
+      "database_position_distribution": {
+        "MED": 59,
+        "DEF": 113,
+        "POR": 43,
+        "DEL": 17
+      },
+      "missing_broad_position": 0,
+      "invalid_primary_roles": [],
+      "role_broad_inconsistencies": [],
+      "source_position_conflicts": [
+        {
+          "name_source": "Viktor Leonenko",
+          "name_database": "Leonenko",
+          "source_id": 9501243,
+          "mondefootball_id": "144651",
+          "source_broad_position": "MED",
+          "database_broad_position": "DEL",
+          "database_primary_role": 17,
+          "historical_position": null,
+          "profile_source_position": null,
+          "position_source": "verified_historical_broad_position"
+        },
+        {
+          "name_source": "Serhiy Konovalov",
+          "name_database": "Konovalov",
+          "source_id": 9501229,
+          "mondefootball_id": "46775",
+          "source_broad_position": "DEL",
+          "database_broad_position": "MED",
+          "database_primary_role": 7,
+          "historical_position": null,
+          "profile_source_position": null,
+          "position_source": "verified_historical_broad_position"
+        }
+      ],
+      "unmatched_source_rows": [
+        {
+          "name": "Ilya Bliznyuk",
+          "mondefootball_id": "54832"
+        }
+      ]
+    }
+  ],
+  "global": {
+    "leagues_audited": 9,
+    "active_players_in_audited_leagues": 2174,
+    "source_rows": 2042,
+    "source_position_conflicts": 24,
+    "unmatched_source_rows": 18,
+    "invalid_primary_roles": 0,
+    "role_broad_inconsistencies": 0,
+    "missing_broad_position": 0
+  }
+}

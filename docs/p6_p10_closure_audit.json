@@ -4,16 +4,16 @@
     "matches": 120,
     "environment": {
       "matches": 120,
-      "goals": 2.642,
-      "shots": 21.7,
-      "shots_on_target": 9.308,
-      "corners": 4.55,
-      "fouls": 12.767,
-      "yellow_cards": 0.767,
-      "red_cards": 0.058,
-      "penalties": 0.108,
-      "injuries": 0.092,
-      "set_piece_chances": 2.108
+      "goals": 2.717,
+      "shots": 21.908,
+      "shots_on_target": 9.367,
+      "corners": 4.558,
+      "fouls": 12.45,
+      "yellow_cards": 0.717,
+      "red_cards": 0.083,
+      "penalties": 0.117,
+      "injuries": 0.083,
+      "set_piece_chances": 2.092
     },
     "target_goals_per_match": 2.6026315789473684,
     "signature_starts": {
@@ -27,66 +27,66 @@
     },
     "per_start": {
       "portero": {
-        "shots": 0.279,
-        "shots_on_target": 0.083,
-        "chances_created": 0.267,
+        "shots": 0.271,
+        "shots_on_target": 0.079,
+        "chances_created": 0.258,
         "set_piece_chances": 0.0,
-        "saves": 3.317,
-        "goals": 0.017,
+        "saves": 3.312,
+        "goals": 0.021,
         "assists": 0.021
       },
       "recuperador": {
-        "shots": 0.44,
-        "shots_on_target": 0.168,
-        "chances_created": 0.542,
+        "shots": 0.433,
+        "shots_on_target": 0.163,
+        "chances_created": 0.553,
         "set_piece_chances": 0.0,
         "saves": 0.0,
-        "goals": 0.046,
+        "goals": 0.045,
         "assists": 0.058
       },
       "desborde": {
-        "shots": 1.47,
-        "shots_on_target": 0.634,
-        "chances_created": 1.086,
-        "set_piece_chances": 0.125,
+        "shots": 1.456,
+        "shots_on_target": 0.639,
+        "chances_created": 1.113,
+        "set_piece_chances": 0.111,
         "saves": 0.0,
-        "goals": 0.171,
-        "assists": 0.118
+        "goals": 0.181,
+        "assists": 0.113
       },
       "creador": {
-        "shots": 1.07,
-        "shots_on_target": 0.453,
+        "shots": 1.02,
+        "shots_on_target": 0.427,
         "chances_created": 1.473,
-        "set_piece_chances": 0.057,
+        "set_piece_chances": 0.06,
         "saves": 0.0,
-        "goals": 0.15,
-        "assists": 0.183
+        "goals": 0.147,
+        "assists": 0.177
       },
       "aereo": {
-        "shots": 1.343,
-        "shots_on_target": 0.591,
-        "chances_created": 0.684,
-        "set_piece_chances": 0.015,
+        "shots": 1.385,
+        "shots_on_target": 0.61,
+        "chances_created": 0.662,
+        "set_piece_chances": 0.017,
         "saves": 0.0,
-        "goals": 0.172,
+        "goals": 0.196,
         "assists": 0.066
       },
       "balon_parado": {
-        "shots": 1.11,
-        "shots_on_target": 0.515,
-        "chances_created": 1.086,
-        "set_piece_chances": 0.379,
+        "shots": 1.114,
+        "shots_on_target": 0.52,
+        "chances_created": 1.114,
+        "set_piece_chances": 0.388,
         "saves": 0.0,
-        "goals": 0.132,
-        "assists": 0.11
+        "goals": 0.125,
+        "assists": 0.112
       },
       "finalizador": {
-        "shots": 2.25,
-        "shots_on_target": 0.896,
-        "chances_created": 0.583,
+        "shots": 2.292,
+        "shots_on_target": 0.875,
+        "chances_created": 0.562,
         "set_piece_chances": 0.0,
         "saves": 0.0,
-        "goals": 0.25,
+        "goals": 0.271,
         "assists": 0.062
       }
     },
@@ -122,12 +122,12 @@
           "league_id": 1,
           "team_id": 3,
           "matches_played": 10,
-          "lineup_decisions": 0,
+          "lineup_decisions": 1,
           "active": true,
           "next_match_available": true,
           "squad_size": 23,
-          "board_score": 12,
-          "memory_entries": 68,
+          "board_score": 4,
+          "memory_entries": 73,
           "rules_ok": true
         },
         {
@@ -135,12 +135,12 @@
           "league_id": 1,
           "team_id": 16,
           "matches_played": 10,
-          "lineup_decisions": 1,
+          "lineup_decisions": 2,
           "active": true,
           "next_match_available": true,
           "squad_size": 25,
-          "board_score": 71,
-          "memory_entries": 70,
+          "board_score": 48,
+          "memory_entries": 75,
           "rules_ok": true
         },
         {
@@ -148,12 +148,12 @@
           "league_id": 1,
           "team_id": 692,
           "matches_played": 10,
-          "lineup_decisions": 1,
+          "lineup_decisions": 0,
           "active": true,
           "next_match_available": true,
           "squad_size": 23,
-          "board_score": 63,
-          "memory_entries": 69,
+          "board_score": 46,
+          "memory_entries": 76,
           "rules_ok": true
         },
         {
@@ -165,7 +165,7 @@
           "active": true,
           "next_match_available": true,
           "squad_size": 20,
-          "board_score": 49,
+          "board_score": 52,
           "memory_entries": 68,
           "rules_ok": true
         }

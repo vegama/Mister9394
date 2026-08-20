@@ -21,8 +21,10 @@ _MARKET_POSITIONS = {
 
 
 def squad_plan_snapshot(
-    *, players: list[dict[str, Any]], development: dict[str, dict[str, Any]], contract_overrides: dict[str, dict[str, Any]], current_year: int
+    *, players: list[dict[str, Any]], development: dict[str, dict[str, Any]], contract_overrides: dict[str, dict[str, Any]], current_year: int,
+    decisions: dict[str, str] | None = None,
 ) -> dict[str, Any]:
+    decisions = decisions or {}
     audit = squad_audit(players, development)
     priorities: list[dict[str, Any]] = []
     coverage: list[dict[str, Any]] = []
@@ -68,6 +70,7 @@ def squad_plan_snapshot(
         row={
             "player_id":pid, "name":str(player.get("display_name") or player.get("name") or pid), "slot":slot,
             "slot_label":_SLOT_LABELS.get(slot,slot), "overall":overall, "contract_end_year":int(contract.get("end_year") or 0),
+            "decision":str(decisions.get(str(pid)) or "seguimiento"),
         }
         if int(contract.get("end_year") or 9999) <= int(current_year) + 1:
             expiring.append({**row,"reason":"Contrato próximo a terminar","action":"Renovar o preparar sustituto"})
@@ -84,4 +87,6 @@ def squad_plan_snapshot(
         "target_squad_size":int(audit.get("target_squad_size") or 0), "coverage_ok":bool(audit.get("coverage_ok")),
         "primary_need":audit.get("primary_need") or (priorities[0]["slot"] if priorities else None), "priorities":priorities[:8], "coverage":coverage, "expiring":expiring[:10],
         "succession":succession[:8], "surplus":surplus[:8],
+        "decisions": {str(k): str(v) for k, v in decisions.items() if any(int(p.get("source_id") or 0) == int(k) for p in players)},
+        "decision_options": [{"key":"seguimiento","label":"Seguimiento"},{"key":"renovar","label":"Renovar"},{"key":"vender","label":"Vender"},{"key":"ceder","label":"Ceder"},{"key":"sustituto","label":"Buscar sustituto"},{"key":"desarrollar","label":"Desarrollar"}],
     }

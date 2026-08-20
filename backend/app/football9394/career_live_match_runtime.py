@@ -23,7 +23,7 @@ from .career_tournaments import commit_pending_tournament_result
 from .dressing_room import reencounters_for_opponent
 from .foreign_rules import validate_matchday_foreigners
 from .laws import LAWS_1993_94
-from .match_analysis import bench_advice, live_player_performance, postmatch_diagnosis
+from .match_analysis import bench_advice, live_player_performance, postmatch_diagnosis, postmatch_consequence_links
 from .match_engine import FootballTactics9394, TeamSheet9394
 from .match_signatures import match_signature_report
 from .player_identity import player_archetype
@@ -264,6 +264,7 @@ class CareerLiveMatchRuntimeMixin:
         if str(snap.get("status") or live.get("status"))=="finished":
             familiarity=float((ensure_tactical_plan_state(self.state).get("familiarity") or {}).get("overall") or 62.0)
             snap["diagnosis"]=postmatch_diagnosis(snap,controlled_team_id=controlled,familiarity=familiarity)
+            snap["diagnosis"]["consequence_links"] = postmatch_consequence_links(snap, controlled_team_id=controlled, familiarity=familiarity)
         return snap
 
     def set_live_tactics(self,payload:dict[str,Any])->dict[str,Any]:

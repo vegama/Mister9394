@@ -18,6 +18,7 @@ from backend.tools.enrich_world_cup_1994 import build_identity_candidate_index, 
 REPO_ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_SNAPSHOT = REPO_ROOT / "data" / "football9394" / "historical_snapshot.json"
 DEFAULT_REPORT = REPO_ROOT / "data" / "football9394" / "created_players_duplicate_audit.json"
+VERIFIED_DISTINCT = {frozenset((9500793, 9503540))}
 
 
 def audit(snapshot_path: Path = DEFAULT_SNAPSHOT, report_path: Path = DEFAULT_REPORT) -> dict[str, Any]:
@@ -72,7 +73,10 @@ def audit(snapshot_path: Path = DEFAULT_SNAPSHOT, report_path: Path = DEFAULT_RE
             } for c in result.candidates],
         }
         checked.append(row)
-        if result.player is not None or result.resolution == "ambiguous_existing_candidates":
+        if result.player is not None and frozenset((int(player["source_id"]), int(result.player["source_id"]))) in VERIFIED_DISTINCT:
+            row["resolution"] = "verified_distinct_same_name_different_birth_date"
+            row["matched_existing_id"] = None
+        elif result.player is not None or result.resolution == "ambiguous_existing_candidates":
             collisions.append(row)
 
     # Generated-to-generated exact identity duplication is independently banned.

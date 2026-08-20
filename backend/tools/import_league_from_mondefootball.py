@@ -168,6 +168,7 @@ def fabricated_at(snapshot: dict[str, Any], team_id: int) -> list[dict[str, Any]
 
 def import_clubs(*, only_new: bool, include_existing: bool, include_missing: bool,
                  delete_fabricated: bool,
+                 force_source_club: bool,
                  baseline: int, snapshot_path: Path,
                  squads_path: Path, mapping_path: Path, mdb_path: Path) -> dict[str, Any]:
     snapshot = json.loads(snapshot_path.read_text(encoding="utf-8"))
@@ -273,7 +274,7 @@ def import_clubs(*, only_new: bool, include_existing: bool, include_missing: boo
             if result.player is not None:
                 player = by_id[int(result.player["source_id"])]
                 player.setdefault("mondefootball_id", player_row["mondefootball_id"])
-                if int(player.get("team_id") or 0) in containers:
+                if force_source_club or int(player.get("team_id") or 0) in containers:
                     player["team_id"] = team_id
                     player["historical_club_1994"] = club_name
                     moved.append({"source_id": int(player["source_id"]),
@@ -346,6 +347,8 @@ def main() -> None:
                         help="solo los clubes que no figuran en la base original del juego")
     parser.add_argument("--delete-fabricated", action="store_true",
                         help="borra la plantilla inventada del club al sustituirla por la real")
+    parser.add_argument("--force-source-club", action="store_true",
+                        help="para clubes nuevos, aplica el club de la plantilla historica como club de cierre")
     parser.add_argument("--baseline", type=int, default=68)
     parser.add_argument("--snapshot", type=Path, default=SNAPSHOT)
     parser.add_argument("--squads", type=Path, default=SQUADS)
@@ -354,7 +357,9 @@ def main() -> None:
     args = parser.parse_args()
     report = import_clubs(only_new=args.only_new, include_existing=args.include_existing,
                           include_missing=args.include_missing,
-                          delete_fabricated=args.delete_fabricated, baseline=args.baseline,
+                          delete_fabricated=args.delete_fabricated,
+                          force_source_club=args.force_source_club,
+                          baseline=args.baseline,
                           snapshot_path=args.snapshot, squads_path=args.squads,
                           mapping_path=args.mapping, mdb_path=args.mdb)
     print(f"clubes {report['clubs']} | creados {report['created']} | "

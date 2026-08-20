@@ -185,6 +185,11 @@ def submit_board_request(*, state: dict[str, Any], team_id: int, request_type: s
             deadline = date.fromisoformat(str(pressure["deadline"]))
             pressure["deadline"] = (deadline + timedelta(days=30)).isoformat()
             pressure["extension_granted"] = True
+    request["football_consequence"] = {
+        "extra_transfer_budget": "Aumenta el margen para una incorporación, pero también el compromiso del proyecto.",
+        "expand_staff": "Amplía la capacidad operativa del club para scouting, entrenamiento o área médica.",
+        "delay_sale_pressure": "Compra tiempo para resolver la presión financiera sin eliminar la obligación.",
+    }[request_type] if request.get("status") == "accepted" else "El proyecto mantiene sus límites actuales y la decisión queda registrada para la próxima revisión."
     project["requests"].append(request)
     project["requests"] = project["requests"][-40:]
     return dict(request)

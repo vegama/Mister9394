@@ -87,6 +87,7 @@ def test_nf10_board_requests_are_project_decisions_not_free_buttons():
     result = career.submit_board_request("expand_staff")
     assert result["request"]["status"] in {"accepted", "rejected"}
     assert result["request"]["reason"]
+    assert result["request"]["football_consequence"]
     if result["request"]["status"] == "accepted":
         assert result["project"]["max_staff_size"] == project_before["max_staff_size"] + 1
     else:
@@ -156,6 +157,8 @@ def test_nf12_longitudinal_economy_records_matchday_and_season_history_without_d
     assert snapshot["longitudinal"]["current_season"]["gate_receipts"] >= income
     assert snapshot["health"]["label"] in {"Sólida", "Controlada", "Vigilancia", "Crisis"}
 
+    assert snapshot["longitudinal"]["trend"]["direction"] in {"mejora", "empeora", "estable"}
+    assert snapshot["longitudinal"]["trend"]["reading"]
     post_long_economy(career.state, team_id=team_id, season="1994-95", category="prize_money", amount=5_000_000)
     history = longitudinal_snapshot(career.state, team_id=team_id, season="1994-95")["history"]
     assert {row["season"] for row in history} >= {"1993-94", "1994-95"}

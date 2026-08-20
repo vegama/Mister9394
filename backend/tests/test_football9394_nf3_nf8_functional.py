@@ -32,6 +32,26 @@ def test_nf3_individual_recovery_and_match_preparation_are_persistent():
     assert next(row for row in prep["players"] if row["player_id"] == pid)["recovery"] == "recovery"
 
 
+def test_nf3_role_adaptation_is_persistent_and_builds_familiarity():
+    career = _career(5015)
+    player = career.squad()[0]
+    snapshot = career.set_player_training_role_focus(player["id"], "midfielder")
+    row = next(item for item in snapshot["players"] if item["player_id"] == player["id"])
+    assert row["role_focus"] == "midfielder"
+    assert row["role_familiarity"] == 0
+    career = ManagerCareerRuntime9394(career.state)
+    assert next(item for item in career.training_snapshot()["players"] if item["player_id"] == player["id"])["role_focus"] == "midfielder"
+
+
+def test_nf2_squad_plan_decision_persists_and_rejects_external_player():
+    career = _career(5013)
+    player = career.squad()[0]
+    plan = career.set_squad_plan_decision(player["id"], "desarrollar")
+    assert plan["decisions"][str(player["id"])] == "desarrollar"
+    career = ManagerCareerRuntime9394(career.state)
+    assert career.squad_plan_snapshot()["decisions"][str(player["id"])] == "desarrollar"
+
+
 def test_nf4_phase_plan_changes_familiarity_and_reaches_match_sheet():
     career = _career(5003)
     before = float(career.tactical_plan_snapshot()["familiarity"]["overall"])
@@ -128,6 +148,14 @@ def test_nf8_briefing_contains_staff_quality_threats_absences_and_plan():
     assert "known_tactics" in briefing
     assert "tactical_familiarity" in briefing
     assert "preparation_focus" in briefing
+
+
+def test_nf1_scouting_exposes_territorial_reach_without_exact_player_truth():
+    career = _career(5014)
+    scouting = career.scouting_snapshot()
+    assert scouting["territory"]
+    assert all({"country", "league_id", "level", "confidence", "status"} <= set(row) for row in scouting["territory"])
+    assert all(0 <= int(row["confidence"]) <= 100 for row in scouting["territory"])
 
 
 def test_nf8_live_advice_performance_diagnosis_and_phase_change_apply_immediately():

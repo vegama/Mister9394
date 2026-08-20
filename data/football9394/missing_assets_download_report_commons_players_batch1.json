@@ -1,0 +1,6584 @@
+{
+  "generated_at": "2026-08-20T13:09:45.338220+00:00",
+  "manifest": "data\\football9394\\missing_assets_1993_94_current.json",
+  "network_policy": "best_effort_resumable",
+  "processed": 500,
+  "downloaded": 9,
+  "generated": 0,
+  "skipped_existing": 0,
+  "failed": 491,
+  "rows": [
+    {
+      "asset_type": "player",
+      "source_id": 836,
+      "name": "Lalo",
+      "destination": "frontend\\public\\historical9394\\players\\836.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 837,
+      "name": "Oscar II",
+      "destination": "frontend\\public\\historical9394\\players\\837.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 1001,
+      "name": "Torres",
+      "destination": "frontend\\public\\historical9394\\players\\1001.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 1119,
+      "name": "Michetti",
+      "destination": "frontend\\public\\historical9394\\players\\1119.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 1196,
+      "name": "La Torre",
+      "destination": "frontend\\public\\historical9394\\players\\1196.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "low_confidence"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 1285,
+      "name": "Assennato",
+      "destination": "frontend\\public\\historical9394\\players\\1285.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 1372,
+      "name": "Ruggiero",
+      "destination": "frontend\\public\\historical9394\\players\\1372.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 1374,
+      "name": "Castellano",
+      "destination": "frontend\\public\\historical9394\\players\\1374.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 1393,
+      "name": "Martire",
+      "destination": "frontend\\public\\historical9394\\players\\1393.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 1396,
+      "name": "Gasparini",
+      "destination": "frontend\\public\\historical9394\\players\\1396.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 1419,
+      "name": "Speranza",
+      "destination": "frontend\\public\\historical9394\\players\\1419.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 1428,
+      "name": "Turrone",
+      "destination": "frontend\\public\\historical9394\\players\\1428.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 1441,
+      "name": "Broggi",
+      "destination": "frontend\\public\\historical9394\\players\\1441.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 1449,
+      "name": "Testaferrata",
+      "destination": "frontend\\public\\historical9394\\players\\1449.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 1479,
+      "name": "De Giuseppe",
+      "destination": "frontend\\public\\historical9394\\players\\1479.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 1487,
+      "name": "Costagli",
+      "destination": "frontend\\public\\historical9394\\players\\1487.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 1488,
+      "name": "Faglioni",
+      "destination": "frontend\\public\\historical9394\\players\\1488.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 1516,
+      "name": "Guindani",
+      "destination": "frontend\\public\\historical9394\\players\\1516.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 1544,
+      "name": "Ronca",
+      "destination": "frontend\\public\\historical9394\\players\\1544.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 1564,
+      "name": "Napolitano",
+      "destination": "frontend\\public\\historical9394\\players\\1564.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 1569,
+      "name": "Erba",
+      "destination": "frontend\\public\\historical9394\\players\\1569.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 1572,
+      "name": "Frisullo",
+      "destination": "frontend\\public\\historical9394\\players\\1572.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 1575,
+      "name": "Bruno",
+      "destination": "frontend\\public\\historical9394\\players\\1575.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "low_confidence"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 1576,
+      "name": "Caprioli",
+      "destination": "frontend\\public\\historical9394\\players\\1576.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 1737,
+      "name": "Kirby",
+      "destination": "frontend\\public\\historical9394\\players\\1737.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 1840,
+      "name": "Francis",
+      "destination": "frontend\\public\\historical9394\\players\\1840.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "low_confidence"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 2877,
+      "name": "José Antonio",
+      "destination": "frontend\\public\\historical9394\\players\\2877.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "low_confidence"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 2896,
+      "name": "Cardo",
+      "destination": "frontend\\public\\historical9394\\players\\2896.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 2902,
+      "name": "Jaime II",
+      "destination": "frontend\\public\\historical9394\\players\\2902.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 2905,
+      "name": "Juan",
+      "destination": "frontend\\public\\historical9394\\players\\2905.jpg",
+      "status": "downloaded",
+      "source": "Wikimedia Commons",
+      "source_meta": {
+        "query": "Juan Getafe CF footballer",
+        "score": 4.3,
+        "title": "File:Getafe CF - Juan Valera.jpg",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Getafe_CF_-_Juan_Valera.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "width": 1704,
+        "height": 2556,
+        "mime": "image/jpeg",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "artist": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Heradiom&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Heradiom (page does not exist)\">Heradiom</a>"
+      },
+      "raw_file": "data\\football9394\\asset_recovery_raw\\player\\2905_wikimedia_commons.jpg"
+    },
+    {
+      "asset_type": "player",
+      "source_id": 2957,
+      "name": "Castro",
+      "destination": "frontend\\public\\historical9394\\players\\2957.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 2985,
+      "name": "Novegil",
+      "destination": "frontend\\public\\historical9394\\players\\2985.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3002,
+      "name": "Óscar",
+      "destination": "frontend\\public\\historical9394\\players\\3002.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3004,
+      "name": "Pepe",
+      "destination": "frontend\\public\\historical9394\\players\\3004.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3008,
+      "name": "Ufarte",
+      "destination": "frontend\\public\\historical9394\\players\\3008.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3010,
+      "name": "De Diego",
+      "destination": "frontend\\public\\historical9394\\players\\3010.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3012,
+      "name": "López",
+      "destination": "frontend\\public\\historical9394\\players\\3012.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3047,
+      "name": "Muñoz",
+      "destination": "frontend\\public\\historical9394\\players\\3047.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3049,
+      "name": "Óscar",
+      "destination": "frontend\\public\\historical9394\\players\\3049.jpg",
+      "status": "downloaded",
+      "source": "Wikimedia Commons",
+      "source_meta": {
+        "query": "Óscar CD Lugo footballer",
+        "score": 4.0,
+        "title": "File:Oscar Díaz.jpg",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Oscar_D%C3%ADaz.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "width": 1700,
+        "height": 1260,
+        "mime": "image/jpeg",
+        "license": "Public domain",
+        "license_url": null,
+        "artist": "Adrián López Fernández"
+      },
+      "raw_file": "data\\football9394\\asset_recovery_raw\\player\\3049_wikimedia_commons.jpg"
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3071,
+      "name": "Félix",
+      "destination": "frontend\\public\\historical9394\\players\\3071.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "low_confidence"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3076,
+      "name": "Manolo Martín",
+      "destination": "frontend\\public\\historical9394\\players\\3076.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "low_confidence"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3083,
+      "name": "Guirado",
+      "destination": "frontend\\public\\historical9394\\players\\3083.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3087,
+      "name": "Salas",
+      "destination": "frontend\\public\\historical9394\\players\\3087.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "low_confidence"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3092,
+      "name": "Ramón",
+      "destination": "frontend\\public\\historical9394\\players\\3092.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "low_confidence"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3095,
+      "name": "Manolo Herrero",
+      "destination": "frontend\\public\\historical9394\\players\\3095.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3096,
+      "name": "Antonio",
+      "destination": "frontend\\public\\historical9394\\players\\3096.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "low_confidence"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3097,
+      "name": "Quevedo",
+      "destination": "frontend\\public\\historical9394\\players\\3097.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "low_confidence"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3098,
+      "name": "Emilio",
+      "destination": "frontend\\public\\historical9394\\players\\3098.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "low_confidence"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3101,
+      "name": "Jesús",
+      "destination": "frontend\\public\\historical9394\\players\\3101.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "low_confidence"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3102,
+      "name": "Juan",
+      "destination": "frontend\\public\\historical9394\\players\\3102.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "low_confidence"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3160,
+      "name": "Jon",
+      "destination": "frontend\\public\\historical9394\\players\\3160.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3171,
+      "name": "Uriarte",
+      "destination": "frontend\\public\\historical9394\\players\\3171.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3187,
+      "name": "Raúl Martínez",
+      "destination": "frontend\\public\\historical9394\\players\\3187.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3195,
+      "name": "Víctor",
+      "destination": "frontend\\public\\historical9394\\players\\3195.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3198,
+      "name": "Solano",
+      "destination": "frontend\\public\\historical9394\\players\\3198.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3200,
+      "name": "Sergio",
+      "destination": "frontend\\public\\historical9394\\players\\3200.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3201,
+      "name": "Gómez",
+      "destination": "frontend\\public\\historical9394\\players\\3201.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3238,
+      "name": "Caché",
+      "destination": "frontend\\public\\historical9394\\players\\3238.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3243,
+      "name": "Carlos",
+      "destination": "frontend\\public\\historical9394\\players\\3243.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3262,
+      "name": "Alvaro",
+      "destination": "frontend\\public\\historical9394\\players\\3262.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3268,
+      "name": "Coque",
+      "destination": "frontend\\public\\historical9394\\players\\3268.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3270,
+      "name": "Álvarez",
+      "destination": "frontend\\public\\historical9394\\players\\3270.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3316,
+      "name": "Vales",
+      "destination": "frontend\\public\\historical9394\\players\\3316.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3318,
+      "name": "Salmerón",
+      "destination": "frontend\\public\\historical9394\\players\\3318.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3326,
+      "name": "Marco Antonio",
+      "destination": "frontend\\public\\historical9394\\players\\3326.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3389,
+      "name": "Unai",
+      "destination": "frontend\\public\\historical9394\\players\\3389.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3392,
+      "name": "Asier",
+      "destination": "frontend\\public\\historical9394\\players\\3392.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3407,
+      "name": "Marina",
+      "destination": "frontend\\public\\historical9394\\players\\3407.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3409,
+      "name": "Molina",
+      "destination": "frontend\\public\\historical9394\\players\\3409.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3411,
+      "name": "Mario",
+      "destination": "frontend\\public\\historical9394\\players\\3411.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3412,
+      "name": "Luisma",
+      "destination": "frontend\\public\\historical9394\\players\\3412.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3415,
+      "name": "Olmeda",
+      "destination": "frontend\\public\\historical9394\\players\\3415.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3417,
+      "name": "Luis",
+      "destination": "frontend\\public\\historical9394\\players\\3417.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3439,
+      "name": "Irizar",
+      "destination": "frontend\\public\\historical9394\\players\\3439.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3441,
+      "name": "Eneko",
+      "destination": "frontend\\public\\historical9394\\players\\3441.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3442,
+      "name": "Alfredo",
+      "destination": "frontend\\public\\historical9394\\players\\3442.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3443,
+      "name": "Aitor",
+      "destination": "frontend\\public\\historical9394\\players\\3443.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3465,
+      "name": "Luis",
+      "destination": "frontend\\public\\historical9394\\players\\3465.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3466,
+      "name": "Orbegozo",
+      "destination": "frontend\\public\\historical9394\\players\\3466.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3469,
+      "name": "Navarro",
+      "destination": "frontend\\public\\historical9394\\players\\3469.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3473,
+      "name": "Eneko",
+      "destination": "frontend\\public\\historical9394\\players\\3473.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3478,
+      "name": "Oyanluze",
+      "destination": "frontend\\public\\historical9394\\players\\3478.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3484,
+      "name": "Larraona",
+      "destination": "frontend\\public\\historical9394\\players\\3484.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3486,
+      "name": "Garikoitz",
+      "destination": "frontend\\public\\historical9394\\players\\3486.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3490,
+      "name": "Valverde",
+      "destination": "frontend\\public\\historical9394\\players\\3490.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3501,
+      "name": "De Andrés",
+      "destination": "frontend\\public\\historical9394\\players\\3501.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "low_confidence"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3508,
+      "name": "Iradi",
+      "destination": "frontend\\public\\historical9394\\players\\3508.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3510,
+      "name": "Peral",
+      "destination": "frontend\\public\\historical9394\\players\\3510.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "low_confidence"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3526,
+      "name": "Piñar",
+      "destination": "frontend\\public\\historical9394\\players\\3526.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3536,
+      "name": "Josema",
+      "destination": "frontend\\public\\historical9394\\players\\3536.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3537,
+      "name": "Juanjo",
+      "destination": "frontend\\public\\historical9394\\players\\3537.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3554,
+      "name": "David Gil",
+      "destination": "frontend\\public\\historical9394\\players\\3554.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3557,
+      "name": "Micki",
+      "destination": "frontend\\public\\historical9394\\players\\3557.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3559,
+      "name": "Lacarra",
+      "destination": "frontend\\public\\historical9394\\players\\3559.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3562,
+      "name": "Alberto",
+      "destination": "frontend\\public\\historical9394\\players\\3562.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3563,
+      "name": "Larrinoa",
+      "destination": "frontend\\public\\historical9394\\players\\3563.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3570,
+      "name": "Kiku",
+      "destination": "frontend\\public\\historical9394\\players\\3570.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3576,
+      "name": "Koldo",
+      "destination": "frontend\\public\\historical9394\\players\\3576.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3577,
+      "name": "Baptis",
+      "destination": "frontend\\public\\historical9394\\players\\3577.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3579,
+      "name": "Eguiluz",
+      "destination": "frontend\\public\\historical9394\\players\\3579.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3580,
+      "name": "Pedrosa",
+      "destination": "frontend\\public\\historical9394\\players\\3580.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3581,
+      "name": "Úbeda",
+      "destination": "frontend\\public\\historical9394\\players\\3581.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3583,
+      "name": "Aitor",
+      "destination": "frontend\\public\\historical9394\\players\\3583.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3584,
+      "name": "Sánchez",
+      "destination": "frontend\\public\\historical9394\\players\\3584.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3585,
+      "name": "Bakio",
+      "destination": "frontend\\public\\historical9394\\players\\3585.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3613,
+      "name": "Cayón",
+      "destination": "frontend\\public\\historical9394\\players\\3613.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3614,
+      "name": "San Miguel",
+      "destination": "frontend\\public\\historical9394\\players\\3614.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3628,
+      "name": "Toño",
+      "destination": "frontend\\public\\historical9394\\players\\3628.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3630,
+      "name": "Luis Alberto",
+      "destination": "frontend\\public\\historical9394\\players\\3630.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3634,
+      "name": "Gutiérrez",
+      "destination": "frontend\\public\\historical9394\\players\\3634.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3635,
+      "name": "Crespo",
+      "destination": "frontend\\public\\historical9394\\players\\3635.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3637,
+      "name": "Echevarría",
+      "destination": "frontend\\public\\historical9394\\players\\3637.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3644,
+      "name": "Colio",
+      "destination": "frontend\\public\\historical9394\\players\\3644.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3649,
+      "name": "Peralta",
+      "destination": "frontend\\public\\historical9394\\players\\3649.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3651,
+      "name": "Erdozain",
+      "destination": "frontend\\public\\historical9394\\players\\3651.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3654,
+      "name": "Mateo",
+      "destination": "frontend\\public\\historical9394\\players\\3654.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3662,
+      "name": "Mario",
+      "destination": "frontend\\public\\historical9394\\players\\3662.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3664,
+      "name": "Nieva",
+      "destination": "frontend\\public\\historical9394\\players\\3664.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3677,
+      "name": "Gorka",
+      "destination": "frontend\\public\\historical9394\\players\\3677.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "low_confidence"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3689,
+      "name": "Joseba",
+      "destination": "frontend\\public\\historical9394\\players\\3689.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3692,
+      "name": "Miguel",
+      "destination": "frontend\\public\\historical9394\\players\\3692.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "low_confidence"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3693,
+      "name": "Vázquez",
+      "destination": "frontend\\public\\historical9394\\players\\3693.jpg",
+      "status": "downloaded",
+      "source": "Wikimedia Commons",
+      "source_meta": {
+        "query": "Vázquez Real Unión footballer",
+        "score": 4.0,
+        "title": "File:Joaquín Vázquez Fernández.png",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Joaqu%C3%ADn_V%C3%A1zquez_Fern%C3%A1ndez.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "width": 190,
+        "height": 334,
+        "mime": "image/png",
+        "license": "Public domain",
+        "license_url": null,
+        "artist": "unk"
+      },
+      "raw_file": "data\\football9394\\asset_recovery_raw\\player\\3693_wikimedia_commons.png"
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3716,
+      "name": "Javi de la Torre",
+      "destination": "frontend\\public\\historical9394\\players\\3716.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3732,
+      "name": "Víctor",
+      "destination": "frontend\\public\\historical9394\\players\\3732.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "low_confidence"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3738,
+      "name": "Álvaro",
+      "destination": "frontend\\public\\historical9394\\players\\3738.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3746,
+      "name": "Ibarra",
+      "destination": "frontend\\public\\historical9394\\players\\3746.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3751,
+      "name": "Beitia",
+      "destination": "frontend\\public\\historical9394\\players\\3751.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3760,
+      "name": "Alex",
+      "destination": "frontend\\public\\historical9394\\players\\3760.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3761,
+      "name": "Javi",
+      "destination": "frontend\\public\\historical9394\\players\\3761.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3762,
+      "name": "Ruiz",
+      "destination": "frontend\\public\\historical9394\\players\\3762.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3763,
+      "name": "Iban",
+      "destination": "frontend\\public\\historical9394\\players\\3763.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3775,
+      "name": "Artajona",
+      "destination": "frontend\\public\\historical9394\\players\\3775.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3779,
+      "name": "Marcos",
+      "destination": "frontend\\public\\historical9394\\players\\3779.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3784,
+      "name": "López",
+      "destination": "frontend\\public\\historical9394\\players\\3784.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3825,
+      "name": "Antxon",
+      "destination": "frontend\\public\\historical9394\\players\\3825.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3826,
+      "name": "Roteta",
+      "destination": "frontend\\public\\historical9394\\players\\3826.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3828,
+      "name": "Alvaro",
+      "destination": "frontend\\public\\historical9394\\players\\3828.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3829,
+      "name": "Txutxi",
+      "destination": "frontend\\public\\historical9394\\players\\3829.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3830,
+      "name": "Erkicia",
+      "destination": "frontend\\public\\historical9394\\players\\3830.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3832,
+      "name": "David",
+      "destination": "frontend\\public\\historical9394\\players\\3832.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "low_confidence"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3835,
+      "name": "Federico",
+      "destination": "frontend\\public\\historical9394\\players\\3835.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3922,
+      "name": "Solá",
+      "destination": "frontend\\public\\historical9394\\players\\3922.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3944,
+      "name": "Checa",
+      "destination": "frontend\\public\\historical9394\\players\\3944.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3945,
+      "name": "Méndez",
+      "destination": "frontend\\public\\historical9394\\players\\3945.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3962,
+      "name": "Bagur",
+      "destination": "frontend\\public\\historical9394\\players\\3962.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3966,
+      "name": "Pastor",
+      "destination": "frontend\\public\\historical9394\\players\\3966.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3967,
+      "name": "Víctor",
+      "destination": "frontend\\public\\historical9394\\players\\3967.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3985,
+      "name": "Maxi",
+      "destination": "frontend\\public\\historical9394\\players\\3985.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3988,
+      "name": "Tomy",
+      "destination": "frontend\\public\\historical9394\\players\\3988.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3989,
+      "name": "Cirera",
+      "destination": "frontend\\public\\historical9394\\players\\3989.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3990,
+      "name": "Segovia",
+      "destination": "frontend\\public\\historical9394\\players\\3990.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 3991,
+      "name": "Cuesta",
+      "destination": "frontend\\public\\historical9394\\players\\3991.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 4005,
+      "name": "Lora",
+      "destination": "frontend\\public\\historical9394\\players\\4005.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 4012,
+      "name": "Felipe",
+      "destination": "frontend\\public\\historical9394\\players\\4012.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 4034,
+      "name": "Julio",
+      "destination": "frontend\\public\\historical9394\\players\\4034.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 4041,
+      "name": "Lucio",
+      "destination": "frontend\\public\\historical9394\\players\\4041.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 4059,
+      "name": "Labernia",
+      "destination": "frontend\\public\\historical9394\\players\\4059.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 4060,
+      "name": "Nacho",
+      "destination": "frontend\\public\\historical9394\\players\\4060.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 4062,
+      "name": "Moreno",
+      "destination": "frontend\\public\\historical9394\\players\\4062.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 4063,
+      "name": "Bigorra",
+      "destination": "frontend\\public\\historical9394\\players\\4063.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 4117,
+      "name": "Merino",
+      "destination": "frontend\\public\\historical9394\\players\\4117.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "low_confidence"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 4118,
+      "name": "Felin",
+      "destination": "frontend\\public\\historical9394\\players\\4118.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 4119,
+      "name": "Pedro",
+      "destination": "frontend\\public\\historical9394\\players\\4119.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "low_confidence"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 4121,
+      "name": "Nieto",
+      "destination": "frontend\\public\\historical9394\\players\\4121.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "low_confidence"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 4129,
+      "name": "Colomé",
+      "destination": "frontend\\public\\historical9394\\players\\4129.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 4130,
+      "name": "Fortí",
+      "destination": "frontend\\public\\historical9394\\players\\4130.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 4131,
+      "name": "Sala",
+      "destination": "frontend\\public\\historical9394\\players\\4131.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 4132,
+      "name": "Vicenç",
+      "destination": "frontend\\public\\historical9394\\players\\4132.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 4133,
+      "name": "Masferrer",
+      "destination": "frontend\\public\\historical9394\\players\\4133.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 4134,
+      "name": "Edu Torras",
+      "destination": "frontend\\public\\historical9394\\players\\4134.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 4135,
+      "name": "Conde",
+      "destination": "frontend\\public\\historical9394\\players\\4135.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 4136,
+      "name": "Alvarez",
+      "destination": "frontend\\public\\historical9394\\players\\4136.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 4179,
+      "name": "Masdevall",
+      "destination": "frontend\\public\\historical9394\\players\\4179.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 4196,
+      "name": "Manu",
+      "destination": "frontend\\public\\historical9394\\players\\4196.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "low_confidence"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 4206,
+      "name": "Carlos II",
+      "destination": "frontend\\public\\historical9394\\players\\4206.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 4207,
+      "name": "Tomás",
+      "destination": "frontend\\public\\historical9394\\players\\4207.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 4210,
+      "name": "Moliner",
+      "destination": "frontend\\public\\historical9394\\players\\4210.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 4211,
+      "name": "Víctor",
+      "destination": "frontend\\public\\historical9394\\players\\4211.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 4216,
+      "name": "Carlos",
+      "destination": "frontend\\public\\historical9394\\players\\4216.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 4218,
+      "name": "Martínez",
+      "destination": "frontend\\public\\historical9394\\players\\4218.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 4225,
+      "name": "Toni",
+      "destination": "frontend\\public\\historical9394\\players\\4225.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 4227,
+      "name": "Jordi",
+      "destination": "frontend\\public\\historical9394\\players\\4227.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 4230,
+      "name": "Simó",
+      "destination": "frontend\\public\\historical9394\\players\\4230.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 4235,
+      "name": "Soto",
+      "destination": "frontend\\public\\historical9394\\players\\4235.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 4236,
+      "name": "Ventura",
+      "destination": "frontend\\public\\historical9394\\players\\4236.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 4237,
+      "name": "Virdis",
+      "destination": "frontend\\public\\historical9394\\players\\4237.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 4238,
+      "name": "Martín",
+      "destination": "frontend\\public\\historical9394\\players\\4238.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "low_confidence"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 4239,
+      "name": "Ángel",
+      "destination": "frontend\\public\\historical9394\\players\\4239.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "low_confidence"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 4240,
+      "name": "Cristian",
+      "destination": "frontend\\public\\historical9394\\players\\4240.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 4255,
+      "name": "Marcelo",
+      "destination": "frontend\\public\\historical9394\\players\\4255.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 4257,
+      "name": "Jose Maria",
+      "destination": "frontend\\public\\historical9394\\players\\4257.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 4264,
+      "name": "Óscar",
+      "destination": "frontend\\public\\historical9394\\players\\4264.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "low_confidence"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 4267,
+      "name": "Pedro Mari",
+      "destination": "frontend\\public\\historical9394\\players\\4267.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 4289,
+      "name": "Fernández",
+      "destination": "frontend\\public\\historical9394\\players\\4289.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 4291,
+      "name": "Navarro",
+      "destination": "frontend\\public\\historical9394\\players\\4291.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 4292,
+      "name": "Peña",
+      "destination": "frontend\\public\\historical9394\\players\\4292.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 4293,
+      "name": "Quique",
+      "destination": "frontend\\public\\historical9394\\players\\4293.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 4294,
+      "name": "Dani",
+      "destination": "frontend\\public\\historical9394\\players\\4294.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 4295,
+      "name": "Luis",
+      "destination": "frontend\\public\\historical9394\\players\\4295.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 4296,
+      "name": "Salva",
+      "destination": "frontend\\public\\historical9394\\players\\4296.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 4297,
+      "name": "Carrazoni",
+      "destination": "frontend\\public\\historical9394\\players\\4297.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 4300,
+      "name": "Ormaechea",
+      "destination": "frontend\\public\\historical9394\\players\\4300.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 4322,
+      "name": "Font",
+      "destination": "frontend\\public\\historical9394\\players\\4322.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 4432,
+      "name": "Iván",
+      "destination": "frontend\\public\\historical9394\\players\\4432.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 4434,
+      "name": "Cortés",
+      "destination": "frontend\\public\\historical9394\\players\\4434.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 4435,
+      "name": "Toboso",
+      "destination": "frontend\\public\\historical9394\\players\\4435.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 4436,
+      "name": "Carlos",
+      "destination": "frontend\\public\\historical9394\\players\\4436.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 4455,
+      "name": "Melo",
+      "destination": "frontend\\public\\historical9394\\players\\4455.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 4484,
+      "name": "Miguel",
+      "destination": "frontend\\public\\historical9394\\players\\4484.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "low_confidence"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 4485,
+      "name": "Portillo",
+      "destination": "frontend\\public\\historical9394\\players\\4485.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 4547,
+      "name": "Paquito",
+      "destination": "frontend\\public\\historical9394\\players\\4547.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 4582,
+      "name": "Gustavo",
+      "destination": "frontend\\public\\historical9394\\players\\4582.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 4586,
+      "name": "Ramón",
+      "destination": "frontend\\public\\historical9394\\players\\4586.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 4592,
+      "name": "Ortega",
+      "destination": "frontend\\public\\historical9394\\players\\4592.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 4598,
+      "name": "Peque",
+      "destination": "frontend\\public\\historical9394\\players\\4598.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 4599,
+      "name": "Chago",
+      "destination": "frontend\\public\\historical9394\\players\\4599.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 4602,
+      "name": "Zunzunegui",
+      "destination": "frontend\\public\\historical9394\\players\\4602.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 4603,
+      "name": "Eduardo",
+      "destination": "frontend\\public\\historical9394\\players\\4603.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 4604,
+      "name": "Alemán",
+      "destination": "frontend\\public\\historical9394\\players\\4604.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 4605,
+      "name": "Chico",
+      "destination": "frontend\\public\\historical9394\\players\\4605.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 4606,
+      "name": "Luis Pérez",
+      "destination": "frontend\\public\\historical9394\\players\\4606.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 4607,
+      "name": "Charli",
+      "destination": "frontend\\public\\historical9394\\players\\4607.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 4608,
+      "name": "Jesús",
+      "destination": "frontend\\public\\historical9394\\players\\4608.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 4609,
+      "name": "Martell",
+      "destination": "frontend\\public\\historical9394\\players\\4609.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 4610,
+      "name": "Alexis I",
+      "destination": "frontend\\public\\historical9394\\players\\4610.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 4619,
+      "name": "Esquivel",
+      "destination": "frontend\\public\\historical9394\\players\\4619.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 4626,
+      "name": "Lolo",
+      "destination": "frontend\\public\\historical9394\\players\\4626.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 4629,
+      "name": "José Mari",
+      "destination": "frontend\\public\\historical9394\\players\\4629.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 4631,
+      "name": "Yeyo",
+      "destination": "frontend\\public\\historical9394\\players\\4631.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 4633,
+      "name": "Roque",
+      "destination": "frontend\\public\\historical9394\\players\\4633.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 4634,
+      "name": "Juanlu",
+      "destination": "frontend\\public\\historical9394\\players\\4634.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 4635,
+      "name": "Víctor",
+      "destination": "frontend\\public\\historical9394\\players\\4635.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 4649,
+      "name": "Robert",
+      "destination": "frontend\\public\\historical9394\\players\\4649.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 4657,
+      "name": "Cobos",
+      "destination": "frontend\\public\\historical9394\\players\\4657.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 4658,
+      "name": "Antonio Gómez",
+      "destination": "frontend\\public\\historical9394\\players\\4658.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 4676,
+      "name": "Sánchez",
+      "destination": "frontend\\public\\historical9394\\players\\4676.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 4677,
+      "name": "Andrés",
+      "destination": "frontend\\public\\historical9394\\players\\4677.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 4678,
+      "name": "Antonio",
+      "destination": "frontend\\public\\historical9394\\players\\4678.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 4679,
+      "name": "Corral",
+      "destination": "frontend\\public\\historical9394\\players\\4679.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 4691,
+      "name": "Ruiz",
+      "destination": "frontend\\public\\historical9394\\players\\4691.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "low_confidence"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 4695,
+      "name": "Lepe",
+      "destination": "frontend\\public\\historical9394\\players\\4695.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "low_confidence"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 4700,
+      "name": "Antonio Díaz",
+      "destination": "frontend\\public\\historical9394\\players\\4700.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "low_confidence"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 4702,
+      "name": "Rico",
+      "destination": "frontend\\public\\historical9394\\players\\4702.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "low_confidence"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 4727,
+      "name": "Iván",
+      "destination": "frontend\\public\\historical9394\\players\\4727.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 4770,
+      "name": "Juanlu",
+      "destination": "frontend\\public\\historical9394\\players\\4770.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 4880,
+      "name": "João Paulo",
+      "destination": "frontend\\public\\historical9394\\players\\4880.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 4914,
+      "name": "Castro",
+      "destination": "frontend\\public\\historical9394\\players\\4914.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 4938,
+      "name": "Ladeira",
+      "destination": "frontend\\public\\historical9394\\players\\4938.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 4966,
+      "name": "Pedro Brás",
+      "destination": "frontend\\public\\historical9394\\players\\4966.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 4967,
+      "name": "Fábio",
+      "destination": "frontend\\public\\historical9394\\players\\4967.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 4997,
+      "name": "Anastácio",
+      "destination": "frontend\\public\\historical9394\\players\\4997.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 4998,
+      "name": "Paulo Gomes",
+      "destination": "frontend\\public\\historical9394\\players\\4998.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 5043,
+      "name": "Shéu",
+      "destination": "frontend\\public\\historical9394\\players\\5043.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 5063,
+      "name": "Tsoumou",
+      "destination": "frontend\\public\\historical9394\\players\\5063.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 5067,
+      "name": "João Miguel",
+      "destination": "frontend\\public\\historical9394\\players\\5067.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 5070,
+      "name": "Maurício",
+      "destination": "frontend\\public\\historical9394\\players\\5070.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 5089,
+      "name": "João Pimenta",
+      "destination": "frontend\\public\\historical9394\\players\\5089.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 5118,
+      "name": "José Roberto",
+      "destination": "frontend\\public\\historical9394\\players\\5118.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 5121,
+      "name": "Tchinda",
+      "destination": "frontend\\public\\historical9394\\players\\5121.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 5123,
+      "name": "Wanderley",
+      "destination": "frontend\\public\\historical9394\\players\\5123.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 5124,
+      "name": "Tiago Marques",
+      "destination": "frontend\\public\\historical9394\\players\\5124.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 5126,
+      "name": "Vítor Roriz",
+      "destination": "frontend\\public\\historical9394\\players\\5126.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 5127,
+      "name": "Marito",
+      "destination": "frontend\\public\\historical9394\\players\\5127.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 5130,
+      "name": "Passos",
+      "destination": "frontend\\public\\historical9394\\players\\5130.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 5149,
+      "name": "Rogério",
+      "destination": "frontend\\public\\historical9394\\players\\5149.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 5152,
+      "name": "Tapai",
+      "destination": "frontend\\public\\historical9394\\players\\5152.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 5158,
+      "name": "Zézinho",
+      "destination": "frontend\\public\\historical9394\\players\\5158.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 5184,
+      "name": "Miro",
+      "destination": "frontend\\public\\historical9394\\players\\5184.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 5185,
+      "name": "Barbosa",
+      "destination": "frontend\\public\\historical9394\\players\\5185.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 5189,
+      "name": "Magro",
+      "destination": "frontend\\public\\historical9394\\players\\5189.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 5213,
+      "name": "Álvaro Maciel",
+      "destination": "frontend\\public\\historical9394\\players\\5213.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 5219,
+      "name": "Hamilton",
+      "destination": "frontend\\public\\historical9394\\players\\5219.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 5237,
+      "name": "Marcos",
+      "destination": "frontend\\public\\historical9394\\players\\5237.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 5243,
+      "name": "Dias",
+      "destination": "frontend\\public\\historical9394\\players\\5243.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 5245,
+      "name": "Rui Rodrigues",
+      "destination": "frontend\\public\\historical9394\\players\\5245.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 5246,
+      "name": "Rui Alexandre",
+      "destination": "frontend\\public\\historical9394\\players\\5246.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 5265,
+      "name": "Roberto",
+      "destination": "frontend\\public\\historical9394\\players\\5265.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "low_confidence"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 5297,
+      "name": "Fabinho",
+      "destination": "frontend\\public\\historical9394\\players\\5297.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 5383,
+      "name": "Ariel Schapira",
+      "destination": "frontend\\public\\historical9394\\players\\5383.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 5396,
+      "name": "Jefferson Doe",
+      "destination": "frontend\\public\\historical9394\\players\\5396.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 5398,
+      "name": "Zen Luzniak",
+      "destination": "frontend\\public\\historical9394\\players\\5398.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 5403,
+      "name": "Scott Brennan",
+      "destination": "frontend\\public\\historical9394\\players\\5403.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "low_confidence"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 5405,
+      "name": "Moise",
+      "destination": "frontend\\public\\historical9394\\players\\5405.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 5409,
+      "name": "Chris Antonopolous",
+      "destination": "frontend\\public\\historical9394\\players\\5409.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 5411,
+      "name": "Sean Lockwood",
+      "destination": "frontend\\public\\historical9394\\players\\5411.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 5434,
+      "name": "Doug Morrill",
+      "destination": "frontend\\public\\historical9394\\players\\5434.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 5444,
+      "name": "Tony Chiarella",
+      "destination": "frontend\\public\\historical9394\\players\\5444.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 5452,
+      "name": "Ivan Jurisic",
+      "destination": "frontend\\public\\historical9394\\players\\5452.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 5454,
+      "name": "Frank Cardona",
+      "destination": "frontend\\public\\historical9394\\players\\5454.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 5471,
+      "name": "Abdel Bahri",
+      "destination": "frontend\\public\\historical9394\\players\\5471.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 5472,
+      "name": "Cameron Walker",
+      "destination": "frontend\\public\\historical9394\\players\\5472.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "low_confidence"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 5485,
+      "name": "Christian Mindru",
+      "destination": "frontend\\public\\historical9394\\players\\5485.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 6100,
+      "name": "Mamadou Kane",
+      "destination": "frontend\\public\\historical9394\\players\\6100.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 6241,
+      "name": "Walter",
+      "destination": "frontend\\public\\historical9394\\players\\6241.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "low_confidence"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 6249,
+      "name": "Alexandre",
+      "destination": "frontend\\public\\historical9394\\players\\6249.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "low_confidence"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 6297,
+      "name": "Couppé",
+      "destination": "frontend\\public\\historical9394\\players\\6297.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 6389,
+      "name": "Quarcy",
+      "destination": "frontend\\public\\historical9394\\players\\6389.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 6467,
+      "name": "Hoffer",
+      "destination": "frontend\\public\\historical9394\\players\\6467.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 6593,
+      "name": "Hans Kemming",
+      "destination": "frontend\\public\\historical9394\\players\\6593.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 6700,
+      "name": "Marcus",
+      "destination": "frontend\\public\\historical9394\\players\\6700.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "low_confidence"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 6701,
+      "name": "Schilten",
+      "destination": "frontend\\public\\historical9394\\players\\6701.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 6923,
+      "name": "Brinks",
+      "destination": "frontend\\public\\historical9394\\players\\6923.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 6950,
+      "name": "Giezen",
+      "destination": "frontend\\public\\historical9394\\players\\6950.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 6957,
+      "name": "Aalbertsen",
+      "destination": "frontend\\public\\historical9394\\players\\6957.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 6975,
+      "name": "Verbeek",
+      "destination": "frontend\\public\\historical9394\\players\\6975.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 6984,
+      "name": "Sijahillatua",
+      "destination": "frontend\\public\\historical9394\\players\\6984.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 7040,
+      "name": "Wiebenga",
+      "destination": "frontend\\public\\historical9394\\players\\7040.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 7509,
+      "name": "Víctor Soria",
+      "destination": "frontend\\public\\historical9394\\players\\7509.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 7596,
+      "name": "Leopaldi",
+      "destination": "frontend\\public\\historical9394\\players\\7596.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 7783,
+      "name": "Alex Barros",
+      "destination": "frontend\\public\\historical9394\\players\\7783.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 7921,
+      "name": "Marcão Santos",
+      "destination": "frontend\\public\\historical9394\\players\\7921.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 9641,
+      "name": "Gabriel Añón",
+      "destination": "frontend\\public\\historical9394\\players\\9641.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 9643,
+      "name": "Guillermo Núñez",
+      "destination": "frontend\\public\\historical9394\\players\\9643.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "low_confidence"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 9644,
+      "name": "Luis Marquez",
+      "destination": "frontend\\public\\historical9394\\players\\9644.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 9653,
+      "name": "José di Conza ",
+      "destination": "frontend\\public\\historical9394\\players\\9653.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 9655,
+      "name": "Enrique Ferraro ",
+      "destination": "frontend\\public\\historical9394\\players\\9655.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 9782,
+      "name": "Eduardo Favaro",
+      "destination": "frontend\\public\\historical9394\\players\\9782.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 9996,
+      "name": "Wensley Ton",
+      "destination": "frontend\\public\\historical9394\\players\\9996.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 9997,
+      "name": "van der Linden",
+      "destination": "frontend\\public\\historical9394\\players\\9997.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 9999,
+      "name": "Pieter de Vries",
+      "destination": "frontend\\public\\historical9394\\players\\9999.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "low_confidence"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 10009,
+      "name": "Ambro de Vries",
+      "destination": "frontend\\public\\historical9394\\players\\10009.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 10010,
+      "name": "Schippers",
+      "destination": "frontend\\public\\historical9394\\players\\10010.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 10121,
+      "name": "Marković",
+      "destination": "frontend\\public\\historical9394\\players\\10121.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 10643,
+      "name": "Garyfallopoulos",
+      "destination": "frontend\\public\\historical9394\\players\\10643.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 10718,
+      "name": "Brayan Perlaza",
+      "destination": "frontend\\public\\historical9394\\players\\10718.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 10741,
+      "name": "Pálmi Jónsson",
+      "destination": "frontend\\public\\historical9394\\players\\10741.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 10782,
+      "name": "Mingos",
+      "destination": "frontend\\public\\historical9394\\players\\10782.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 10879,
+      "name": "Folprecht",
+      "destination": "frontend\\public\\historical9394\\players\\10879.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 10925,
+      "name": "Makridis",
+      "destination": "frontend\\public\\historical9394\\players\\10925.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 10948,
+      "name": "Dany Jiménez",
+      "destination": "frontend\\public\\historical9394\\players\\10948.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 11002,
+      "name": "Robinson García",
+      "destination": "frontend\\public\\historical9394\\players\\11002.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 11010,
+      "name": "Dayro Zapata",
+      "destination": "frontend\\public\\historical9394\\players\\11010.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 11178,
+      "name": "Daniel Guilherme",
+      "destination": "frontend\\public\\historical9394\\players\\11178.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 11317,
+      "name": "Jádson",
+      "destination": "frontend\\public\\historical9394\\players\\11317.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 11330,
+      "name": "Kalfountzos",
+      "destination": "frontend\\public\\historical9394\\players\\11330.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 11351,
+      "name": "Bouzoukis",
+      "destination": "frontend\\public\\historical9394\\players\\11351.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 11353,
+      "name": "Chatzigiovannis",
+      "destination": "frontend\\public\\historical9394\\players\\11353.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 11354,
+      "name": "Trivunovic",
+      "destination": "frontend\\public\\historical9394\\players\\11354.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 11356,
+      "name": "Angelopoulos",
+      "destination": "frontend\\public\\historical9394\\players\\11356.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 11429,
+      "name": "Fiakas",
+      "destination": "frontend\\public\\historical9394\\players\\11429.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 11459,
+      "name": "Daniel Ibson",
+      "destination": "frontend\\public\\historical9394\\players\\11459.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 11543,
+      "name": "Skouloudakis",
+      "destination": "frontend\\public\\historical9394\\players\\11543.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 11606,
+      "name": "Baldomero Toja",
+      "destination": "frontend\\public\\historical9394\\players\\11606.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 11655,
+      "name": "Sebastián Moreno",
+      "destination": "frontend\\public\\historical9394\\players\\11655.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 11773,
+      "name": "Harush",
+      "destination": "frontend\\public\\historical9394\\players\\11773.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 11818,
+      "name": "Zeman",
+      "destination": "frontend\\public\\historical9394\\players\\11818.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 11825,
+      "name": "Portin",
+      "destination": "frontend\\public\\historical9394\\players\\11825.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 11904,
+      "name": "Eran Micha",
+      "destination": "frontend\\public\\historical9394\\players\\11904.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 12007,
+      "name": "David Salazar",
+      "destination": "frontend\\public\\historical9394\\players\\12007.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 12034,
+      "name": "Maestre",
+      "destination": "frontend\\public\\historical9394\\players\\12034.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 12071,
+      "name": "Sivok",
+      "destination": "frontend\\public\\historical9394\\players\\12071.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 12113,
+      "name": "Silva",
+      "destination": "frontend\\public\\historical9394\\players\\12113.jpg",
+      "status": "downloaded",
+      "source": "Wikimedia Commons",
+      "source_meta": {
+        "query": "Silva América de Cali footballer",
+        "score": 4.0,
+        "title": "File:Jorge da Silva.jpg",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/5/58/Jorge_da_Silva.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "width": 772,
+        "height": 1232,
+        "mime": "image/jpeg",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "artist": "jikatu"
+      },
+      "raw_file": "data\\football9394\\asset_recovery_raw\\player\\12113_wikimedia_commons.jpg"
+    },
+    {
+      "asset_type": "player",
+      "source_id": 12167,
+      "name": "Subić",
+      "destination": "frontend\\public\\historical9394\\players\\12167.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 12177,
+      "name": "Askham",
+      "destination": "frontend\\public\\historical9394\\players\\12177.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 12206,
+      "name": "Palomino",
+      "destination": "frontend\\public\\historical9394\\players\\12206.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 12346,
+      "name": "Vernes",
+      "destination": "frontend\\public\\historical9394\\players\\12346.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 12514,
+      "name": "Henrique",
+      "destination": "frontend\\public\\historical9394\\players\\12514.jpg",
+      "status": "downloaded",
+      "source": "Wikimedia Commons",
+      "source_meta": {
+        "query": "Henrique Fortaleza footballer",
+        "score": 4.0,
+        "title": "File:Pedro Henrique Martins.jpg",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/e/ef/Pedro_Henrique_Martins.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "width": 300,
+        "height": 484,
+        "mime": "image/jpeg",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "artist": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Asaikana&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Asaikana (page does not exist)\">Asaikana</a>"
+      },
+      "raw_file": "data\\football9394\\asset_recovery_raw\\player\\12514_wikimedia_commons.jpg"
+    },
+    {
+      "asset_type": "player",
+      "source_id": 12520,
+      "name": "Serginho",
+      "destination": "frontend\\public\\historical9394\\players\\12520.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 12531,
+      "name": "Tchô",
+      "destination": "frontend\\public\\historical9394\\players\\12531.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 12534,
+      "name": "Strika",
+      "destination": "frontend\\public\\historical9394\\players\\12534.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 12562,
+      "name": "Edwin Yorleys",
+      "destination": "frontend\\public\\historical9394\\players\\12562.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 12570,
+      "name": "Éverton",
+      "destination": "frontend\\public\\historical9394\\players\\12570.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 12571,
+      "name": "Juninho",
+      "destination": "frontend\\public\\historical9394\\players\\12571.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 12578,
+      "name": "Marcus Wesley",
+      "destination": "frontend\\public\\historical9394\\players\\12578.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 12580,
+      "name": "Capixaba",
+      "destination": "frontend\\public\\historical9394\\players\\12580.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 12589,
+      "name": "Roberto Muriqui",
+      "destination": "frontend\\public\\historical9394\\players\\12589.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 12604,
+      "name": "Diego Batata",
+      "destination": "frontend\\public\\historical9394\\players\\12604.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 12613,
+      "name": "Leandro Machowski",
+      "destination": "frontend\\public\\historical9394\\players\\12613.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 12645,
+      "name": "Paulo Edno",
+      "destination": "frontend\\public\\historical9394\\players\\12645.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 12647,
+      "name": "Júlio Mattos",
+      "destination": "frontend\\public\\historical9394\\players\\12647.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 12664,
+      "name": "Marcos Netinho",
+      "destination": "frontend\\public\\historical9394\\players\\12664.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 12677,
+      "name": "Thiaguinho",
+      "destination": "frontend\\public\\historical9394\\players\\12677.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 12685,
+      "name": "Moisés",
+      "destination": "frontend\\public\\historical9394\\players\\12685.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 12687,
+      "name": "Rafael Paulo",
+      "destination": "frontend\\public\\historical9394\\players\\12687.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "low_confidence"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 12691,
+      "name": "Galhardo",
+      "destination": "frontend\\public\\historical9394\\players\\12691.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 12713,
+      "name": "Rafael César",
+      "destination": "frontend\\public\\historical9394\\players\\12713.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 12714,
+      "name": "Maurício",
+      "destination": "frontend\\public\\historical9394\\players\\12714.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 12718,
+      "name": "Fernando",
+      "destination": "frontend\\public\\historical9394\\players\\12718.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 12723,
+      "name": "Diego Soutto",
+      "destination": "frontend\\public\\historical9394\\players\\12723.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 12727,
+      "name": "Saci",
+      "destination": "frontend\\public\\historical9394\\players\\12727.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 12729,
+      "name": "Thiago Jonathan",
+      "destination": "frontend\\public\\historical9394\\players\\12729.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 12731,
+      "name": "Wallace",
+      "destination": "frontend\\public\\historical9394\\players\\12731.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "low_confidence"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 12778,
+      "name": "Fábio",
+      "destination": "frontend\\public\\historical9394\\players\\12778.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "low_confidence"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 12801,
+      "name": "Pedro Silva",
+      "destination": "frontend\\public\\historical9394\\players\\12801.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 12842,
+      "name": "Daniel Xavier",
+      "destination": "frontend\\public\\historical9394\\players\\12842.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 12849,
+      "name": "Harison",
+      "destination": "frontend\\public\\historical9394\\players\\12849.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 12871,
+      "name": "Danny Marques",
+      "destination": "frontend\\public\\historical9394\\players\\12871.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 12921,
+      "name": "Nílson",
+      "destination": "frontend\\public\\historical9394\\players\\12921.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 12924,
+      "name": "Bastakos",
+      "destination": "frontend\\public\\historical9394\\players\\12924.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 12946,
+      "name": "Franco",
+      "destination": "frontend\\public\\historical9394\\players\\12946.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 12978,
+      "name": "Ricardo Martins",
+      "destination": "frontend\\public\\historical9394\\players\\12978.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 13037,
+      "name": "Agnaldo",
+      "destination": "frontend\\public\\historical9394\\players\\13037.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 13081,
+      "name": "Paulinho",
+      "destination": "frontend\\public\\historical9394\\players\\13081.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 13097,
+      "name": "Heleno",
+      "destination": "frontend\\public\\historical9394\\players\\13097.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 13104,
+      "name": "Atzili",
+      "destination": "frontend\\public\\historical9394\\players\\13104.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 13113,
+      "name": "Neto Pardal",
+      "destination": "frontend\\public\\historical9394\\players\\13113.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 13154,
+      "name": "Sjölund",
+      "destination": "frontend\\public\\historical9394\\players\\13154.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 13176,
+      "name": "Rincón",
+      "destination": "frontend\\public\\historical9394\\players\\13176.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 13242,
+      "name": "Moulazimis",
+      "destination": "frontend\\public\\historical9394\\players\\13242.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 13383,
+      "name": "Hurtado",
+      "destination": "frontend\\public\\historical9394\\players\\13383.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 13405,
+      "name": "Öbster",
+      "destination": "frontend\\public\\historical9394\\players\\13405.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 13497,
+      "name": "Marco Angulo",
+      "destination": "frontend\\public\\historical9394\\players\\13497.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 13525,
+      "name": "Götze",
+      "destination": "frontend\\public\\historical9394\\players\\13525.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 13566,
+      "name": "Mao Rentería",
+      "destination": "frontend\\public\\historical9394\\players\\13566.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 13680,
+      "name": "Carlos Élton",
+      "destination": "frontend\\public\\historical9394\\players\\13680.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 13692,
+      "name": "Fumagalli",
+      "destination": "frontend\\public\\historical9394\\players\\13692.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 13708,
+      "name": "Aschauer",
+      "destination": "frontend\\public\\historical9394\\players\\13708.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 13741,
+      "name": "Morais",
+      "destination": "frontend\\public\\historical9394\\players\\13741.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 13751,
+      "name": "Youn",
+      "destination": "frontend\\public\\historical9394\\players\\13751.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 13778,
+      "name": "Pacheco",
+      "destination": "frontend\\public\\historical9394\\players\\13778.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 13791,
+      "name": "João Gaúcho",
+      "destination": "frontend\\public\\historical9394\\players\\13791.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "low_confidence"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 13794,
+      "name": "Lucas",
+      "destination": "frontend\\public\\historical9394\\players\\13794.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "low_confidence"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 13796,
+      "name": "Avelar",
+      "destination": "frontend\\public\\historical9394\\players\\13796.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 13805,
+      "name": "Daniel",
+      "destination": "frontend\\public\\historical9394\\players\\13805.jpg",
+      "status": "downloaded",
+      "source": "Wikimedia Commons",
+      "source_meta": {
+        "query": "Daniel Ponte Preta footballer",
+        "score": 4.0,
+        "title": "File:Copa Paulista- Juventus 0 x 2 Portuguesa - Daniel Costa.jpg",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Copa_Paulista-_Juventus_0_x_2_Portuguesa_-_Daniel_Costa.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "width": 1988,
+        "height": 2720,
+        "mime": "image/jpeg",
+        "license": "Public domain",
+        "license_url": null,
+        "artist": "SOCCER DIGITAL"
+      },
+      "raw_file": "data\\football9394\\asset_recovery_raw\\player\\13805_wikimedia_commons.jpg"
+    },
+    {
+      "asset_type": "player",
+      "source_id": 13820,
+      "name": "Marcão",
+      "destination": "frontend\\public\\historical9394\\players\\13820.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 13841,
+      "name": "Rafael Soares",
+      "destination": "frontend\\public\\historical9394\\players\\13841.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 13860,
+      "name": "Leandro Muriel",
+      "destination": "frontend\\public\\historical9394\\players\\13860.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 13912,
+      "name": "Okubo",
+      "destination": "frontend\\public\\historical9394\\players\\13912.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 13917,
+      "name": "Bernardo",
+      "destination": "frontend\\public\\historical9394\\players\\13917.jpg",
+      "status": "downloaded",
+      "source": "Wikimedia Commons",
+      "source_meta": {
+        "query": "Bernardo Deportivo Cali footballer",
+        "score": 4.3,
+        "title": "File:Bernardo Redin DT Cúcuta Deportivo.jpg",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/0/04/Bernardo_Redin_DT_C%C3%BAcuta_Deportivo.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "width": 2444,
+        "height": 2437,
+        "mime": "image/jpeg",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "artist": "<a href=\"//commons.wikimedia.org/wiki/User:Futbolero\" title=\"User:Futbolero\">Futbolero</a>"
+      },
+      "raw_file": "data\\football9394\\asset_recovery_raw\\player\\13917_wikimedia_commons.jpg"
+    },
+    {
+      "asset_type": "player",
+      "source_id": 14062,
+      "name": "Pedroza",
+      "destination": "frontend\\public\\historical9394\\players\\14062.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 14072,
+      "name": "Moreno",
+      "destination": "frontend\\public\\historical9394\\players\\14072.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 14079,
+      "name": "Banović",
+      "destination": "frontend\\public\\historical9394\\players\\14079.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 14138,
+      "name": "Efrem",
+      "destination": "frontend\\public\\historical9394\\players\\14138.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 14139,
+      "name": "Elías",
+      "destination": "frontend\\public\\historical9394\\players\\14139.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "low_confidence"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 14303,
+      "name": "Falk-Olander",
+      "destination": "frontend\\public\\historical9394\\players\\14303.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 14344,
+      "name": "Bruma",
+      "destination": "frontend\\public\\historical9394\\players\\14344.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 14369,
+      "name": "Kinsella",
+      "destination": "frontend\\public\\historical9394\\players\\14369.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 14377,
+      "name": "Memija",
+      "destination": "frontend\\public\\historical9394\\players\\14377.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 14378,
+      "name": "Pereira",
+      "destination": "frontend\\public\\historical9394\\players\\14378.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "low_confidence"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 14421,
+      "name": "Valoyes",
+      "destination": "frontend\\public\\historical9394\\players\\14421.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 14429,
+      "name": "Evmorfidis",
+      "destination": "frontend\\public\\historical9394\\players\\14429.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 14454,
+      "name": "Ben McEachran",
+      "destination": "frontend\\public\\historical9394\\players\\14454.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 14483,
+      "name": "Bellis",
+      "destination": "frontend\\public\\historical9394\\players\\14483.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 14531,
+      "name": "Turjman",
+      "destination": "frontend\\public\\historical9394\\players\\14531.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 14649,
+      "name": "Maximiliano",
+      "destination": "frontend\\public\\historical9394\\players\\14649.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "low_confidence"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 14675,
+      "name": "Vinícius Rodnei",
+      "destination": "frontend\\public\\historical9394\\players\\14675.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 14682,
+      "name": "Abecasis",
+      "destination": "frontend\\public\\historical9394\\players\\14682.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 14688,
+      "name": "Castellanos",
+      "destination": "frontend\\public\\historical9394\\players\\14688.jpg",
+      "status": "downloaded",
+      "source": "Wikimedia Commons",
+      "source_meta": {
+        "query": "Castellanos América de Cali footballer",
+        "score": 4.0,
+        "title": "File:Leandro-Castellanos-Independiente-Santa-Fe.jpg",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Leandro-Castellanos-Independiente-Santa-Fe.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "width": 800,
+        "height": 544,
+        "mime": "image/jpeg",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "artist": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:El_Actualizador&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:El Actualizador (page does not exist)\">El Actualizador</a>"
+      },
+      "raw_file": "data\\football9394\\asset_recovery_raw\\player\\14688_wikimedia_commons.jpg"
+    },
+    {
+      "asset_type": "player",
+      "source_id": 14718,
+      "name": "Donda",
+      "destination": "frontend\\public\\historical9394\\players\\14718.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 14765,
+      "name": "Emiliano Curima",
+      "destination": "frontend\\public\\historical9394\\players\\14765.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 14833,
+      "name": "Cristian Vélez",
+      "destination": "frontend\\public\\historical9394\\players\\14833.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 14932,
+      "name": "Porath",
+      "destination": "frontend\\public\\historical9394\\players\\14932.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 14985,
+      "name": "Felipe Eduardo",
+      "destination": "frontend\\public\\historical9394\\players\\14985.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 15216,
+      "name": "Olivera",
+      "destination": "frontend\\public\\historical9394\\players\\15216.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "low_confidence"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 15239,
+      "name": "Murillo",
+      "destination": "frontend\\public\\historical9394\\players\\15239.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 15311,
+      "name": "Iñaki Gerardo",
+      "destination": "frontend\\public\\historical9394\\players\\15311.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 15317,
+      "name": "Mucha",
+      "destination": "frontend\\public\\historical9394\\players\\15317.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 15361,
+      "name": "Guillermo Arismendi",
+      "destination": "frontend\\public\\historical9394\\players\\15361.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 15377,
+      "name": "Pokorný",
+      "destination": "frontend\\public\\historical9394\\players\\15377.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 15389,
+      "name": "Walch",
+      "destination": "frontend\\public\\historical9394\\players\\15389.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 15431,
+      "name": "N´Djeng",
+      "destination": "frontend\\public\\historical9394\\players\\15431.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 15488,
+      "name": "Smith",
+      "destination": "frontend\\public\\historical9394\\players\\15488.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "low_confidence"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 15514,
+      "name": "Smith",
+      "destination": "frontend\\public\\historical9394\\players\\15514.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "low_confidence"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 15549,
+      "name": "Gunter",
+      "destination": "frontend\\public\\historical9394\\players\\15549.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 15757,
+      "name": "Einbinder",
+      "destination": "frontend\\public\\historical9394\\players\\15757.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 15767,
+      "name": "Kebano",
+      "destination": "frontend\\public\\historical9394\\players\\15767.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 15866,
+      "name": "Julián Martínez",
+      "destination": "frontend\\public\\historical9394\\players\\15866.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 15942,
+      "name": "Christiansen",
+      "destination": "frontend\\public\\historical9394\\players\\15942.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 16003,
+      "name": "Nitzan",
+      "destination": "frontend\\public\\historical9394\\players\\16003.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 16015,
+      "name": "Ecuele Appindangoyé",
+      "destination": "frontend\\public\\historical9394\\players\\16015.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 16083,
+      "name": "Bešić",
+      "destination": "frontend\\public\\historical9394\\players\\16083.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 16181,
+      "name": "Gartler",
+      "destination": "frontend\\public\\historical9394\\players\\16181.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 16353,
+      "name": "Ramos",
+      "destination": "frontend\\public\\historical9394\\players\\16353.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 16368,
+      "name": "Leandro Oliveira",
+      "destination": "frontend\\public\\historical9394\\players\\16368.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 16371,
+      "name": "Rafinha",
+      "destination": "frontend\\public\\historical9394\\players\\16371.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 16509,
+      "name": "Kløve",
+      "destination": "frontend\\public\\historical9394\\players\\16509.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 16544,
+      "name": "Starfelt",
+      "destination": "frontend\\public\\historical9394\\players\\16544.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 16546,
+      "name": "Joe Lowton",
+      "destination": "frontend\\public\\historical9394\\players\\16546.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 16601,
+      "name": "Halldór Björnsson",
+      "destination": "frontend\\public\\historical9394\\players\\16601.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 16602,
+      "name": "Rickie Lallana",
+      "destination": "frontend\\public\\historical9394\\players\\16602.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 16656,
+      "name": "Willian",
+      "destination": "frontend\\public\\historical9394\\players\\16656.jpg",
+      "status": "downloaded",
+      "source": "Wikimedia Commons",
+      "source_meta": {
+        "query": "Willian Náutico footballer",
+        "score": 4.0,
+        "title": "File:Willian Fernando da Silva (2010).JPG",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Willian_Fernando_da_Silva_%282010%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "width": 241,
+        "height": 367,
+        "mime": "image/jpeg",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "artist": "<a rel=\"nofollow\" class=\"external text\" href=\"https://picasaweb.google.com/leopinheirofotos\">Galeria de Léo Pinheiro - Picasa</a>"
+      },
+      "raw_file": "data\\football9394\\asset_recovery_raw\\player\\16656_wikimedia_commons.jpg"
+    },
+    {
+      "asset_type": "player",
+      "source_id": 16696,
+      "name": "Baysse",
+      "destination": "frontend\\public\\historical9394\\players\\16696.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 16790,
+      "name": "Gazal",
+      "destination": "frontend\\public\\historical9394\\players\\16790.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 16853,
+      "name": "Córdoba",
+      "destination": "frontend\\public\\historical9394\\players\\16853.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "low_confidence"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 16930,
+      "name": "Jefferson",
+      "destination": "frontend\\public\\historical9394\\players\\16930.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 16939,
+      "name": "Nuno Bühler",
+      "destination": "frontend\\public\\historical9394\\players\\16939.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 16961,
+      "name": "Elízio",
+      "destination": "frontend\\public\\historical9394\\players\\16961.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 17008,
+      "name": "Luis Carrasco",
+      "destination": "frontend\\public\\historical9394\\players\\17008.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 17029,
+      "name": "Júnior Augusto",
+      "destination": "frontend\\public\\historical9394\\players\\17029.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "low_confidence"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 17031,
+      "name": "Lopes",
+      "destination": "frontend\\public\\historical9394\\players\\17031.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "low_confidence"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 17085,
+      "name": "Nong",
+      "destination": "frontend\\public\\historical9394\\players\\17085.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 17192,
+      "name": "Cristian Herrera",
+      "destination": "frontend\\public\\historical9394\\players\\17192.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 17351,
+      "name": "Roland Tőzsér",
+      "destination": "frontend\\public\\historical9394\\players\\17351.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 17376,
+      "name": "Marc Cristian",
+      "destination": "frontend\\public\\historical9394\\players\\17376.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 17398,
+      "name": "Paulo Osvaldo",
+      "destination": "frontend\\public\\historical9394\\players\\17398.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 17447,
+      "name": "Humberto Montoya",
+      "destination": "frontend\\public\\historical9394\\players\\17447.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 17557,
+      "name": "Luis Romero",
+      "destination": "frontend\\public\\historical9394\\players\\17557.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 17611,
+      "name": "Ikonomou",
+      "destination": "frontend\\public\\historical9394\\players\\17611.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 17630,
+      "name": "Joel Cáceres",
+      "destination": "frontend\\public\\historical9394\\players\\17630.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 17645,
+      "name": "Roger Amorim",
+      "destination": "frontend\\public\\historical9394\\players\\17645.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 17694,
+      "name": "Ivo",
+      "destination": "frontend\\public\\historical9394\\players\\17694.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 17696,
+      "name": "Joílson",
+      "destination": "frontend\\public\\historical9394\\players\\17696.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 17716,
+      "name": "Douglas",
+      "destination": "frontend\\public\\historical9394\\players\\17716.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 17743,
+      "name": "Rodrigo Romário",
+      "destination": "frontend\\public\\historical9394\\players\\17743.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 17748,
+      "name": "Ygor",
+      "destination": "frontend\\public\\historical9394\\players\\17748.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 17761,
+      "name": "Eduardo",
+      "destination": "frontend\\public\\historical9394\\players\\17761.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "low_confidence"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 17765,
+      "name": "Gabriel",
+      "destination": "frontend\\public\\historical9394\\players\\17765.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 17793,
+      "name": "Zé Fernandão",
+      "destination": "frontend\\public\\historical9394\\players\\17793.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 17925,
+      "name": "Jussandro",
+      "destination": "frontend\\public\\historical9394\\players\\17925.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "player",
+      "source_id": 17926,
+      "name": "Alemão",
+      "destination": "frontend\\public\\historical9394\\players\\17926.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,375 @@
+{
+  "status": "complete",
+  "source": "Transfermarkt historical squads",
+  "clubs": [
+    {
+      "team_id": 615,
+      "team": "Politehnica Timișoara",
+      "status": "blocked",
+      "error": "no squad rows"
+    },
+    {
+      "team_id": 777,
+      "team": "FC Oţelul Galaţi",
+      "status": "blocked",
+      "error": "Transfermarkt club not found"
+    },
+    {
+      "team_id": 1049,
+      "team": "FC Petrolul Ploiesti",
+      "status": "blocked",
+      "error": "Transfermarkt club not found"
+    },
+    {
+      "team_id": 1458,
+      "team": "FC Ceahlăul Piatra Neamț",
+      "status": "blocked",
+      "error": "Transfermarkt club not found"
+    },
+    {
+      "team_id": 1464,
+      "team": "Örgryte IS",
+      "status": "blocked",
+      "error": "no squad rows"
+    },
+    {
+      "team_id": 1554,
+      "team": "Universitatea Cluj",
+      "status": "blocked",
+      "error": "no squad rows"
+    },
+    {
+      "team_id": 1561,
+      "team": "FC Brașov",
+      "status": "blocked",
+      "error": "no squad rows"
+    },
+    {
+      "team_id": 1574,
+      "team": "PFC Cherno More Varna",
+      "transfermarkt_id": 967,
+      "slug": "cherno-more-varna",
+      "season": "1993-94",
+      "added_or_moved": 1,
+      "final_squad": 18
+    },
+    {
+      "team_id": 1575,
+      "team": "Slavia Sofia",
+      "status": "blocked",
+      "error": "no squad rows"
+    },
+    {
+      "team_id": 1641,
+      "team": "Zagłębie Lubin SA",
+      "status": "blocked",
+      "error": "Transfermarkt club not found"
+    },
+    {
+      "team_id": 1722,
+      "team": "FC Farul Constanța",
+      "status": "blocked",
+      "error": "Transfermarkt club not found"
+    },
+    {
+      "team_id": 1853,
+      "team": "Metalurg Zaporizhya",
+      "status": "blocked",
+      "error": "no squad rows"
+    },
+    {
+      "team_id": 2205,
+      "team": "FC Lokomotiv Gorna Oryahovitsa",
+      "status": "blocked",
+      "error": "no squad rows"
+    },
+    {
+      "team_id": 9502228,
+      "team": "Gloria Bistrița",
+      "transfermarkt_id": 4688,
+      "slug": "gloria-bistrita",
+      "season": "1994-95 fallback youth continuity",
+      "added_or_moved": 4,
+      "final_squad": 18
+    },
+    {
+      "team_id": 9502242,
+      "team": "Progresul București",
+      "status": "blocked",
+      "error": "Transfermarkt club not found"
+    },
+    {
+      "team_id": 9502257,
+      "team": "UTA Arad",
+      "status": "blocked",
+      "error": "no squad rows"
+    },
+    {
+      "team_id": 9502264,
+      "team": "Inter Sibiu",
+      "status": "blocked",
+      "error": "no squad rows"
+    },
+    {
+      "team_id": 9502276,
+      "team": "Sportul Studenţesc București",
+      "status": "blocked",
+      "error": "no squad rows"
+    },
+    {
+      "team_id": 9502304,
+      "team": "Dacia Unirea Brăila",
+      "status": "blocked",
+      "error": "no squad rows"
+    },
+    {
+      "team_id": 9502308,
+      "team": "ŁKS Łódź",
+      "transfermarkt_id": 256,
+      "slug": "lks-lodz",
+      "season": "1993-94",
+      "added_or_moved": 1,
+      "final_squad": 18
+    },
+    {
+      "team_id": 9502341,
+      "team": "Stal Stalowa Wola",
+      "transfermarkt_id": 8641,
+      "slug": "stal-stalowa-wola",
+      "season": "1993-94",
+      "added_or_moved": 1,
+      "final_squad": 18
+    },
+    {
+      "team_id": 9502359,
+      "team": "GKS Katowice",
+      "transfermarkt_id": 6456,
+      "slug": "gks-katowice",
+      "season": "1993-94",
+      "added_or_moved": 1,
+      "final_squad": 18
+    },
+    {
+      "team_id": 9502479,
+      "team": "Beroe Stara Zagora",
+      "transfermarkt_id": 6764,
+      "slug": "pfc-beroe-stara-zagora",
+      "season": "1994-95 fallback youth continuity",
+      "added_or_moved": 10,
+      "final_squad": 10
+    },
+    {
+      "team_id": 9502493,
+      "team": "Spartak Varna",
+      "status": "blocked",
+      "error": "no squad rows"
+    },
+    {
+      "team_id": 9502500,
+      "team": "Etar Veliko Tarnovo",
+      "transfermarkt_id": 712,
+      "slug": "etar-veliko-tarnovo",
+      "season": "1994-95 fallback youth continuity",
+      "added_or_moved": 0,
+      "final_squad": 7
+    },
+    {
+      "team_id": 9502506,
+      "team": "Dobrudzha Dobrich",
+      "status": "blocked",
+      "error": "no squad rows"
+    },
+    {
+      "team_id": 9502510,
+      "team": "Yantra Gabrovo",
+      "status": "blocked",
+      "error": "no squad rows"
+    },
+    {
+      "team_id": 9502513,
+      "team": "Shumen",
+      "transfermarkt_id": 38859,
+      "slug": "shumen-2007",
+      "season": "1994-95 fallback youth continuity",
+      "added_or_moved": 1,
+      "final_squad": 17
+    },
+    {
+      "team_id": 9502529,
+      "team": "Chernomorets Burgas",
+      "status": "blocked",
+      "error": "no squad rows"
+    },
+    {
+      "team_id": 9502532,
+      "team": "Västra Frölunda",
+      "status": "blocked",
+      "error": "no squad rows"
+    },
+    {
+      "team_id": 9502553,
+      "team": "IK Brage",
+      "status": "blocked",
+      "error": "no squad rows"
+    },
+    {
+      "team_id": 9502564,
+      "team": "Fyllingen Fotball",
+      "status": "blocked",
+      "error": "no squad rows"
+    },
+    {
+      "team_id": 9502585,
+      "team": "Lyn Oslo",
+      "status": "blocked",
+      "error": "Transfermarkt club not found"
+    },
+    {
+      "team_id": 9502955,
+      "team": "Pfc Beroe",
+      "transfermarkt_id": 6764,
+      "slug": "pfc-beroe-stara-zagora",
+      "season": "1994-95 fallback youth continuity",
+      "added_or_moved": 10,
+      "final_squad": 12
+    },
+    {
+      "team_id": 9502959,
+      "team": "Fk Dobrudzha",
+      "status": "blocked",
+      "error": "Transfermarkt club not found"
+    },
+    {
+      "team_id": 9502960,
+      "team": "Fc Yantra",
+      "status": "blocked",
+      "error": "no squad rows"
+    },
+    {
+      "team_id": 9502961,
+      "team": "Pfc Shumen 2010",
+      "status": "blocked",
+      "error": "Transfermarkt club not found"
+    },
+    {
+      "team_id": 9502970,
+      "team": "Rb Salzburg",
+      "transfermarkt_id": 409,
+      "slug": "red-bull-salzburg",
+      "season": "1993-94",
+      "added_or_moved": 1,
+      "final_squad": 18
+    },
+    {
+      "team_id": 9503041,
+      "team": "VfB Mödling",
+      "transfermarkt_id": 25598,
+      "slug": "vfb-modling",
+      "season": "1993-94",
+      "added_or_moved": 1,
+      "final_squad": 18
+    },
+    {
+      "team_id": 9503172,
+      "team": "Yverdon-Sport",
+      "status": "blocked",
+      "error": "no squad rows"
+    },
+    {
+      "team_id": 9503201,
+      "team": "Fk Krivbas Old",
+      "status": "blocked",
+      "error": "Transfermarkt club not found"
+    },
+    {
+      "team_id": 9503207,
+      "team": "Karpaty Lviv",
+      "transfermarkt_id": 2477,
+      "slug": "karpaty-lviv",
+      "season": "1993-94",
+      "added_or_moved": 6,
+      "final_squad": 18
+    },
+    {
+      "team_id": 9503220,
+      "team": "Metalist Kharkiv",
+      "transfermarkt_id": 6414,
+      "slug": "metalist-kharkiv",
+      "season": "1993-94",
+      "added_or_moved": 8,
+      "final_squad": 18
+    },
+    {
+      "team_id": 9503231,
+      "team": "Niva Ternopil",
+      "transfermarkt_id": 2712,
+      "slug": "nyva-ternopil",
+      "season": "1993-94",
+      "added_or_moved": 1,
+      "final_squad": 18
+    },
+    {
+      "team_id": 9503242,
+      "team": "Tavriya Simferopol 1958 2014",
+      "status": "blocked",
+      "error": "Transfermarkt club not found"
+    },
+    {
+      "team_id": 9503261,
+      "team": "Fk Bukovina",
+      "status": "blocked",
+      "error": "Transfermarkt club not found"
+    },
+    {
+      "team_id": 9503264,
+      "team": "Nk Veres",
+      "transfermarkt_id": 26459,
+      "slug": "nk-veres-rivne",
+      "season": "1993-94",
+      "added_or_moved": 1,
+      "final_squad": 18
+    },
+    {
+      "team_id": 9503269,
+      "team": "Fk Nyva Vinnytsia",
+      "status": "blocked",
+      "error": "Transfermarkt club not found"
+    },
+    {
+      "team_id": 9503286,
+      "team": "Fk Kremin",
+      "status": "blocked",
+      "error": "Transfermarkt club not found"
+    },
+    {
+      "team_id": 9503304,
+      "team": "ŁKS Łódź",
+      "transfermarkt_id": 256,
+      "slug": "lks-lodz",
+      "season": "1993-94",
+      "added_or_moved": 1,
+      "final_squad": 18
+    },
+    {
+      "team_id": 9503306,
+      "team": "Stal Stalowa Wola",
+      "transfermarkt_id": 8641,
+      "slug": "stal-stalowa-wola",
+      "season": "1993-94",
+      "added_or_moved": 1,
+      "final_squad": 18
+    },
+    {
+      "team_id": 9503307,
+      "team": "GKS Katowice",
+      "transfermarkt_id": 6456,
+      "slug": "gks-katowice",
+      "season": "1993-94",
+      "added_or_moved": 1,
+      "final_squad": 18
+    }
+  ],
+  "created": 18,
+  "moved": 32,
+  "fallback_1994_95": 4
+}

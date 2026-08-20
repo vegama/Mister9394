@@ -1,0 +1,34 @@
+﻿{
+  "checkpoint": "1.1.3",
+  "status": "applied",
+  "active_players_before": 15756,
+  "active_players_after": 15756,
+  "total_player_rows": 15839,
+  "verified_identity_merge_count": 0,
+  "retired_aliases_total": 81,
+  "retired_market_containers_total": [
+    9400047,
+    9400072,
+    9400080
+  ],
+  "russian_display_names_shortened": 0,
+  "identity_whitespace_fields_cleaned": 0,
+  "alias_metadata_repairs": 0,
+  "same_team_display_names_disambiguated": 0,
+  "staging_references_reconciled": 0,
+  "world_cup_references_reconciled": 0,
+  "world_cup_metadata_synced": 0,
+  "empty_market_containers_retired": [],
+  "branko_source_references_repaired": 0,
+  "profile_comparable_references_repaired": 0,
+  "registry_rows_touched": 0,
+  "verified_photo_alias_changes": 0,
+  "registry_identity_sync_changes": 0,
+  "profile_corrections": [],
+  "missing_broad_position_repairs": [],
+  "notes": [
+    "retired aliases remain in historical_snapshot for save/reference safety but are excluded from runtime squads/market",
+    "Russian patronymics are preserved in historical_full_name and no longer used as routine display_name",
+    "Russia 1993 participation does not overwrite the post-summer European 1993-94 starting club"
+  ]
+}

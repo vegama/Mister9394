@@ -1814,7 +1814,7 @@
       "verified_national_pool_year": 1993
     },
     {
-      "source_id": 9495160,
+      "source_id": 9499000,
       "display_name": "Branko Milošević",
       "first_name": "Branko",
       "surname1": "Milošević",
@@ -1829,7 +1829,8 @@
       "historical_context": "Senior national-team player recorded in 1993; club shown by the source for that year",
       "source_confidence": "high",
       "creation_batch": "verified_1993_national_pools_0.22",
-      "verified_national_pool_year": 1993
+      "verified_national_pool_year": 1993,
+      "id_collision_repaired_v113": true
     },
     {
       "source_id": 9495161,

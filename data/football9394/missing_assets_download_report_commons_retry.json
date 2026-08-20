@@ -1,0 +1,3535 @@
+{
+  "generated_at": "2026-08-20T13:14:53.120482+00:00",
+  "manifest": "data\\football9394\\missing_assets_1993_94_final.json",
+  "network_policy": "best_effort_resumable",
+  "processed": 271,
+  "downloaded": 0,
+  "generated": 0,
+  "skipped_existing": 0,
+  "failed": 271,
+  "rows": [
+    {
+      "asset_type": "club_crest",
+      "source_id": 189,
+      "name": "FC Wacker Innsbruck",
+      "destination": "frontend\\public\\historical9394\\clubs\\189.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 198,
+      "name": "Neuchâtel Xamax FCS",
+      "destination": "frontend\\public\\historical9394\\clubs\\198.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 416,
+      "name": "FC Zürich",
+      "destination": "frontend\\public\\historical9394\\clubs\\416.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 419,
+      "name": "FC Dynamo Kyiv",
+      "destination": "frontend\\public\\historical9394\\clubs\\419.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 446,
+      "name": "SK Rapid Wien",
+      "destination": "frontend\\public\\historical9394\\clubs\\446.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 448,
+      "name": "SK Sturm Graz",
+      "destination": "frontend\\public\\historical9394\\clubs\\448.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 468,
+      "name": "FK Dinamo Minsk",
+      "destination": "frontend\\public\\historical9394\\clubs\\468.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 476,
+      "name": "Levski Sofía",
+      "destination": "frontend\\public\\historical9394\\clubs\\476.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 482,
+      "name": "Apollon Limassol",
+      "destination": "frontend\\public\\historical9394\\clubs\\482.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 487,
+      "name": "F.C. Copenhagen",
+      "destination": "frontend\\public\\historical9394\\clubs\\487.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 509,
+      "name": "NK Maribor",
+      "destination": "frontend\\public\\historical9394\\clubs\\509.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 511,
+      "name": "NK Olimpija Ljubljana",
+      "destination": "frontend\\public\\historical9394\\clubs\\511.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 521,
+      "name": "MyPa-47",
+      "destination": "frontend\\public\\historical9394\\clubs\\521.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 531,
+      "name": "FC Dinamo Tbilisi",
+      "destination": "frontend\\public\\historical9394\\clubs\\531.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 551,
+      "name": "Linfield FC",
+      "destination": "frontend\\public\\historical9394\\clubs\\551.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 574,
+      "name": "Skonto FC",
+      "destination": "frontend\\public\\historical9394\\clubs\\574.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 582,
+      "name": "F91 Dudelange",
+      "destination": "frontend\\public\\historical9394\\clubs\\582.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 590,
+      "name": "Sliema Wanderers",
+      "destination": "frontend\\public\\historical9394\\clubs\\590.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 601,
+      "name": "Molde FK",
+      "destination": "frontend\\public\\historical9394\\clubs\\601.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 603,
+      "name": "KKS Lech Poznań",
+      "destination": "frontend\\public\\historical9394\\clubs\\603.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 604,
+      "name": "Wisła Kraków",
+      "destination": "frontend\\public\\historical9394\\clubs\\604.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 605,
+      "name": "Ruch Chorzow SA",
+      "destination": "frontend\\public\\historical9394\\clubs\\605.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 607,
+      "name": "AC Sparta Praha",
+      "destination": "frontend\\public\\historical9394\\clubs\\607.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 613,
+      "name": "FC Steaua Bucureşti",
+      "destination": "frontend\\public\\historical9394\\clubs\\613.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 615,
+      "name": "Politehnica Timișoara",
+      "destination": "frontend\\public\\historical9394\\clubs\\615.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 616,
+      "name": "FC Dinamo Bucureşti",
+      "destination": "frontend\\public\\historical9394\\clubs\\616.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 633,
+      "name": "AIK Solna",
+      "destination": "frontend\\public\\historical9394\\clubs\\633.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 636,
+      "name": "IFK Göteborg",
+      "destination": "frontend\\public\\historical9394\\clubs\\636.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "low_confidence"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 638,
+      "name": "BSC Young Boys",
+      "destination": "frontend\\public\\historical9394\\clubs\\638.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 649,
+      "name": "FC Karpaty Lyiv",
+      "destination": "frontend\\public\\historical9394\\clubs\\649.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 650,
+      "name": "FC Dnipro Dnipropetrovsk",
+      "destination": "frontend\\public\\historical9394\\clubs\\650.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 777,
+      "name": "FC Oţelul Galaţi",
+      "destination": "frontend\\public\\historical9394\\clubs\\777.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "low_confidence"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 780,
+      "name": "FC Rapid Bucureşti",
+      "destination": "frontend\\public\\historical9394\\clubs\\780.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 781,
+      "name": "Malmö FF",
+      "destination": "frontend\\public\\historical9394\\clubs\\781.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 782,
+      "name": "FC Sion",
+      "destination": "frontend\\public\\historical9394\\clubs\\782.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 800,
+      "name": "Helsingborgs IF",
+      "destination": "frontend\\public\\historical9394\\clubs\\800.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 925,
+      "name": "Aalborg BK",
+      "destination": "frontend\\public\\historical9394\\clubs\\925.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 972,
+      "name": "Chernomorets Odessa",
+      "destination": "frontend\\public\\historical9394\\clubs\\972.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 973,
+      "name": "Tromsø IL",
+      "destination": "frontend\\public\\historical9394\\clubs\\973.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 1007,
+      "name": "Górnik Zabrze",
+      "destination": "frontend\\public\\historical9394\\clubs\\1007.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 1026,
+      "name": "Botev Plovdiv",
+      "destination": "frontend\\public\\historical9394\\clubs\\1026.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 1031,
+      "name": "SK Brann",
+      "destination": "frontend\\public\\historical9394\\clubs\\1031.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 1033,
+      "name": "FC Aarau",
+      "destination": "frontend\\public\\historical9394\\clubs\\1033.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 1034,
+      "name": "Servette FC",
+      "destination": "frontend\\public\\historical9394\\clubs\\1034.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 1049,
+      "name": "FC Petrolul Ploiesti",
+      "destination": "frontend\\public\\historical9394\\clubs\\1049.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 1068,
+      "name": "MTK Budapest",
+      "destination": "frontend\\public\\historical9394\\clubs\\1068.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 1091,
+      "name": "Cork City FC",
+      "destination": "frontend\\public\\historical9394\\clubs\\1091.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 1112,
+      "name": "FK Partizani",
+      "destination": "frontend\\public\\historical9394\\clubs\\1112.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 1148,
+      "name": "HamKam",
+      "destination": "frontend\\public\\historical9394\\clubs\\1148.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 1241,
+      "name": "IFK Norrköping",
+      "destination": "frontend\\public\\historical9394\\clubs\\1241.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 1242,
+      "name": "BK Häcken",
+      "destination": "frontend\\public\\historical9394\\clubs\\1242.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 1245,
+      "name": "Halmstads BK",
+      "destination": "frontend\\public\\historical9394\\clubs\\1245.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 1247,
+      "name": "Örebro SK",
+      "destination": "frontend\\public\\historical9394\\clubs\\1247.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 1248,
+      "name": "Östers IF",
+      "destination": "frontend\\public\\historical9394\\clubs\\1248.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 1288,
+      "name": "FC Admira Wacker Mödling",
+      "destination": "frontend\\public\\historical9394\\clubs\\1288.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 1373,
+      "name": "FC Zimbru Chișinău",
+      "destination": "frontend\\public\\historical9394\\clubs\\1373.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 1458,
+      "name": "FC Ceahlăul Piatra Neamț",
+      "destination": "frontend\\public\\historical9394\\clubs\\1458.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 1461,
+      "name": "Lyngby BK",
+      "destination": "frontend\\public\\historical9394\\clubs\\1461.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 1463,
+      "name": "Silkeborg IF",
+      "destination": "frontend\\public\\historical9394\\clubs\\1463.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 1464,
+      "name": "Örgryte IS",
+      "destination": "frontend\\public\\historical9394\\clubs\\1464.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 1467,
+      "name": "Viborg FF",
+      "destination": "frontend\\public\\historical9394\\clubs\\1467.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 1470,
+      "name": "IK Start",
+      "destination": "frontend\\public\\historical9394\\clubs\\1470.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 1485,
+      "name": "Trelleborgs FF",
+      "destination": "frontend\\public\\historical9394\\clubs\\1485.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 1554,
+      "name": "Universitatea Cluj",
+      "destination": "frontend\\public\\historical9394\\clubs\\1554.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 1561,
+      "name": "FC Brașov",
+      "destination": "frontend\\public\\historical9394\\clubs\\1561.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "normalize: cannot identify image file <_io.BytesIO object at 0x0000019829FAE9D0>"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 1574,
+      "name": "PFC Cherno More Varna",
+      "destination": "frontend\\public\\historical9394\\clubs\\1574.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 1575,
+      "name": "Slavia Sofia",
+      "destination": "frontend\\public\\historical9394\\clubs\\1575.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 1641,
+      "name": "Zagłębie Lubin SA",
+      "destination": "frontend\\public\\historical9394\\clubs\\1641.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 1644,
+      "name": "Lokomotiv Sofia",
+      "destination": "frontend\\public\\historical9394\\clubs\\1644.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 1715,
+      "name": "Viking FK",
+      "destination": "frontend\\public\\historical9394\\clubs\\1715.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 1717,
+      "name": "FK Bodø/Glimt",
+      "destination": "frontend\\public\\historical9394\\clubs\\1717.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 1722,
+      "name": "FC Farul Constanța",
+      "destination": "frontend\\public\\historical9394\\clubs\\1722.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 1731,
+      "name": "Widzew Lodz",
+      "destination": "frontend\\public\\historical9394\\clubs\\1731.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 1734,
+      "name": "MKS Pogoń Szczecin",
+      "destination": "frontend\\public\\historical9394\\clubs\\1734.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 1814,
+      "name": "Beitar Jerusalem",
+      "destination": "frontend\\public\\historical9394\\clubs\\1814.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "normalize: cannot identify image file <_io.BytesIO object at 0x000001982917F740>"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 1840,
+      "name": "Næstved BK",
+      "destination": "frontend\\public\\historical9394\\clubs\\1840.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 1852,
+      "name": "Volyn Lutsk",
+      "destination": "frontend\\public\\historical9394\\clubs\\1852.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 1853,
+      "name": "Metalurg Zaporizhya",
+      "destination": "frontend\\public\\historical9394\\clubs\\1853.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 2010,
+      "name": "ÍA Akranes",
+      "destination": "frontend\\public\\historical9394\\clubs\\2010.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 2026,
+      "name": "FK Neman",
+      "destination": "frontend\\public\\historical9394\\clubs\\2026.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 2205,
+      "name": "FC Lokomotiv Gorna Oryahovitsa",
+      "destination": "frontend\\public\\historical9394\\clubs\\2205.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9347016,
+      "name": "Panachaiki",
+      "destination": "frontend\\public\\historical9394\\clubs\\9347016.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9400088,
+      "name": "Zaire",
+      "destination": "frontend\\public\\historical9394\\clubs\\9400088.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9502228,
+      "name": "Gloria Bistrița",
+      "destination": "frontend\\public\\historical9394\\clubs\\9502228.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9502242,
+      "name": "Progresul București",
+      "destination": "frontend\\public\\historical9394\\clubs\\9502242.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9502257,
+      "name": "UTA Arad",
+      "destination": "frontend\\public\\historical9394\\clubs\\9502257.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9502264,
+      "name": "Inter Sibiu",
+      "destination": "frontend\\public\\historical9394\\clubs\\9502264.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9502276,
+      "name": "Sportul Studenţesc București",
+      "destination": "frontend\\public\\historical9394\\clubs\\9502276.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9502287,
+      "name": "Electroputere Craiova",
+      "destination": "frontend\\public\\historical9394\\clubs\\9502287.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9502304,
+      "name": "Dacia Unirea Brăila",
+      "destination": "frontend\\public\\historical9394\\clubs\\9502304.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9502308,
+      "name": "ŁKS Łódź",
+      "destination": "frontend\\public\\historical9394\\clubs\\9502308.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9502326,
+      "name": "Polonia Warsaw",
+      "destination": "frontend\\public\\historical9394\\clubs\\9502326.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9502341,
+      "name": "Stal Stalowa Wola",
+      "destination": "frontend\\public\\historical9394\\clubs\\9502341.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9502359,
+      "name": "GKS Katowice",
+      "destination": "frontend\\public\\historical9394\\clubs\\9502359.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9502377,
+      "name": "Warta Poznań",
+      "destination": "frontend\\public\\historical9394\\clubs\\9502377.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9502397,
+      "name": "Zawisza Bydgoszcz",
+      "destination": "frontend\\public\\historical9394\\clubs\\9502397.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9502409,
+      "name": "Hutnik Kraków",
+      "destination": "frontend\\public\\historical9394\\clubs\\9502409.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9502428,
+      "name": "Miliarder Pniewy",
+      "destination": "frontend\\public\\historical9394\\clubs\\9502428.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9502448,
+      "name": "Siarka Tarnobrzeg",
+      "destination": "frontend\\public\\historical9394\\clubs\\9502448.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9502463,
+      "name": "Stal Mielec",
+      "destination": "frontend\\public\\historical9394\\clubs\\9502463.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9502479,
+      "name": "Beroe Stara Zagora",
+      "destination": "frontend\\public\\historical9394\\clubs\\9502479.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9502482,
+      "name": "Pirin Blagoevgrad",
+      "destination": "frontend\\public\\historical9394\\clubs\\9502482.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9502493,
+      "name": "Spartak Varna",
+      "destination": "frontend\\public\\historical9394\\clubs\\9502493.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9502500,
+      "name": "Etar Veliko Tarnovo",
+      "destination": "frontend\\public\\historical9394\\clubs\\9502500.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9502506,
+      "name": "Dobrudzha Dobrich",
+      "destination": "frontend\\public\\historical9394\\clubs\\9502506.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9502510,
+      "name": "Yantra Gabrovo",
+      "destination": "frontend\\public\\historical9394\\clubs\\9502510.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9502513,
+      "name": "Shumen",
+      "destination": "frontend\\public\\historical9394\\clubs\\9502513.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9502529,
+      "name": "Chernomorets Burgas",
+      "destination": "frontend\\public\\historical9394\\clubs\\9502529.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9502532,
+      "name": "Västra Frölunda",
+      "destination": "frontend\\public\\historical9394\\clubs\\9502532.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9502553,
+      "name": "IK Brage",
+      "destination": "frontend\\public\\historical9394\\clubs\\9502553.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9502564,
+      "name": "Fyllingen Fotball",
+      "destination": "frontend\\public\\historical9394\\clubs\\9502564.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9502568,
+      "name": "Kongsvinger",
+      "destination": "frontend\\public\\historical9394\\clubs\\9502568.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9502585,
+      "name": "Lyn Oslo",
+      "destination": "frontend\\public\\historical9394\\clubs\\9502585.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9502596,
+      "name": "AGF",
+      "destination": "frontend\\public\\historical9394\\clubs\\9502596.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9502621,
+      "name": "Ikast FS",
+      "destination": "frontend\\public\\historical9394\\clubs\\9502621.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9502938,
+      "name": "Gloria Bistrița",
+      "destination": "frontend\\public\\historical9394\\clubs\\9502938.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9502939,
+      "name": "Progresul București",
+      "destination": "frontend\\public\\historical9394\\clubs\\9502939.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9502940,
+      "name": "UTA Arad",
+      "destination": "frontend\\public\\historical9394\\clubs\\9502940.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9502941,
+      "name": "Inter Sibiu",
+      "destination": "frontend\\public\\historical9394\\clubs\\9502941.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9502942,
+      "name": "Sportul Studenţesc București",
+      "destination": "frontend\\public\\historical9394\\clubs\\9502942.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9502943,
+      "name": "Electroputere Craiova",
+      "destination": "frontend\\public\\historical9394\\clubs\\9502943.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9502944,
+      "name": "Dacia Unirea Brăila",
+      "destination": "frontend\\public\\historical9394\\clubs\\9502944.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9502945,
+      "name": "ŁKS Łódź",
+      "destination": "frontend\\public\\historical9394\\clubs\\9502945.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9502946,
+      "name": "Polonia Warsaw",
+      "destination": "frontend\\public\\historical9394\\clubs\\9502946.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9502947,
+      "name": "Stal Stalowa Wola",
+      "destination": "frontend\\public\\historical9394\\clubs\\9502947.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9502948,
+      "name": "GKS Katowice",
+      "destination": "frontend\\public\\historical9394\\clubs\\9502948.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9502949,
+      "name": "Warta Poznań",
+      "destination": "frontend\\public\\historical9394\\clubs\\9502949.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9502950,
+      "name": "Zawisza Bydgoszcz",
+      "destination": "frontend\\public\\historical9394\\clubs\\9502950.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9502951,
+      "name": "Hutnik Kraków",
+      "destination": "frontend\\public\\historical9394\\clubs\\9502951.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9502952,
+      "name": "Miliarder Pniewy",
+      "destination": "frontend\\public\\historical9394\\clubs\\9502952.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9502953,
+      "name": "Siarka Tarnobrzeg",
+      "destination": "frontend\\public\\historical9394\\clubs\\9502953.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9502954,
+      "name": "Stal Mielec",
+      "destination": "frontend\\public\\historical9394\\clubs\\9502954.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9502955,
+      "name": "Pfc Beroe",
+      "destination": "frontend\\public\\historical9394\\clubs\\9502955.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9502956,
+      "name": "Pirin Blagoevgrad",
+      "destination": "frontend\\public\\historical9394\\clubs\\9502956.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9502957,
+      "name": "Spartak Varna",
+      "destination": "frontend\\public\\historical9394\\clubs\\9502957.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9502958,
+      "name": "Etar Veliko Tarnovo",
+      "destination": "frontend\\public\\historical9394\\clubs\\9502958.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9502959,
+      "name": "Fk Dobrudzha",
+      "destination": "frontend\\public\\historical9394\\clubs\\9502959.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9502960,
+      "name": "Fc Yantra",
+      "destination": "frontend\\public\\historical9394\\clubs\\9502960.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9502961,
+      "name": "Pfc Shumen 2010",
+      "destination": "frontend\\public\\historical9394\\clubs\\9502961.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9502962,
+      "name": "Chernomorets Burgas",
+      "destination": "frontend\\public\\historical9394\\clubs\\9502962.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9502963,
+      "name": "Västra Frölunda",
+      "destination": "frontend\\public\\historical9394\\clubs\\9502963.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9502964,
+      "name": "IK Brage",
+      "destination": "frontend\\public\\historical9394\\clubs\\9502964.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9502965,
+      "name": "Fyllingen Fotball",
+      "destination": "frontend\\public\\historical9394\\clubs\\9502965.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9502966,
+      "name": "Kongsvinger",
+      "destination": "frontend\\public\\historical9394\\clubs\\9502966.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9502967,
+      "name": "Lyn Oslo",
+      "destination": "frontend\\public\\historical9394\\clubs\\9502967.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9502968,
+      "name": "AGF",
+      "destination": "frontend\\public\\historical9394\\clubs\\9502968.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9502969,
+      "name": "Ikast FS",
+      "destination": "frontend\\public\\historical9394\\clubs\\9502969.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9502970,
+      "name": "Rb Salzburg",
+      "destination": "frontend\\public\\historical9394\\clubs\\9502970.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9502990,
+      "name": "Wiener Sport Club",
+      "destination": "frontend\\public\\historical9394\\clubs\\9502990.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9503015,
+      "name": "Vorwärts Steyr",
+      "destination": "frontend\\public\\historical9394\\clubs\\9503015.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9503041,
+      "name": "VfB Mödling",
+      "destination": "frontend\\public\\historical9394\\clubs\\9503041.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9503065,
+      "name": "VSE St. Pölten",
+      "destination": "frontend\\public\\historical9394\\clubs\\9503065.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9503090,
+      "name": "Lausanne-Sport",
+      "destination": "frontend\\public\\historical9394\\clubs\\9503090.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9503111,
+      "name": "Fc Lucerne",
+      "destination": "frontend\\public\\historical9394\\clubs\\9503111.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9503135,
+      "name": "Grasshoppers",
+      "destination": "frontend\\public\\historical9394\\clubs\\9503135.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9503153,
+      "name": "Kriens",
+      "destination": "frontend\\public\\historical9394\\clubs\\9503153.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9503172,
+      "name": "Yverdon-Sport",
+      "destination": "frontend\\public\\historical9394\\clubs\\9503172.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9503201,
+      "name": "Fk Krivbas Old",
+      "destination": "frontend\\public\\historical9394\\clubs\\9503201.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9503207,
+      "name": "Karpaty Lviv",
+      "destination": "frontend\\public\\historical9394\\clubs\\9503207.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9503220,
+      "name": "Metalist Kharkiv",
+      "destination": "frontend\\public\\historical9394\\clubs\\9503220.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9503231,
+      "name": "Niva Ternopil",
+      "destination": "frontend\\public\\historical9394\\clubs\\9503231.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9503242,
+      "name": "Tavriya Simferopol 1958 2014",
+      "destination": "frontend\\public\\historical9394\\clubs\\9503242.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9503256,
+      "name": "Zorya Lugansk",
+      "destination": "frontend\\public\\historical9394\\clubs\\9503256.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9503261,
+      "name": "Fk Bukovina",
+      "destination": "frontend\\public\\historical9394\\clubs\\9503261.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9503264,
+      "name": "Nk Veres",
+      "destination": "frontend\\public\\historical9394\\clubs\\9503264.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9503269,
+      "name": "Fk Nyva Vinnytsia",
+      "destination": "frontend\\public\\historical9394\\clubs\\9503269.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9503278,
+      "name": "Torpedo Zaporizhya",
+      "destination": "frontend\\public\\historical9394\\clubs\\9503278.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9503286,
+      "name": "Fk Kremin",
+      "destination": "frontend\\public\\historical9394\\clubs\\9503286.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "club_crest",
+      "source_id": 9503292,
+      "name": "Temp Shepetivka",
+      "destination": "frontend\\public\\historical9394\\clubs\\9503292.gif",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "stadium",
+      "source_id": 157,
+      "name": "Tivoli-Neu",
+      "destination": "frontend\\public\\historical9394\\stadiums\\157.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "stadium",
+      "source_id": 166,
+      "name": "Stade de la Maladière",
+      "destination": "frontend\\public\\historical9394\\stadiums\\166.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "stadium",
+      "source_id": 327,
+      "name": "Letzigrund",
+      "destination": "frontend\\public\\historical9394\\stadiums\\327.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "stadium",
+      "source_id": 342,
+      "name": "Stadiumi Selman Stërmasi",
+      "destination": "frontend\\public\\historical9394\\stadiums\\342.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "stadium",
+      "source_id": 354,
+      "name": "Gerhard Hanappi Stadium",
+      "destination": "frontend\\public\\historical9394\\stadiums\\354.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "stadium",
+      "source_id": 356,
+      "name": "UPC-Arena",
+      "destination": "frontend\\public\\historical9394\\stadiums\\356.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "low_confidence"
+        }
+      ]
+    },
+    {
+      "asset_type": "stadium",
+      "source_id": 361,
+      "name": "Jan-Breydel-Stadion",
+      "destination": "frontend\\public\\historical9394\\stadiums\\361.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "stadium",
+      "source_id": 362,
+      "name": "Stade du Pays de Charleroi",
+      "destination": "frontend\\public\\historical9394\\stadiums\\362.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "stadium",
+      "source_id": 370,
+      "name": "Cristal Arena",
+      "destination": "frontend\\public\\historical9394\\stadiums\\370.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "stadium",
+      "source_id": 374,
+      "name": "Regenboogstadion",
+      "destination": "frontend\\public\\historical9394\\stadiums\\374.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "stadium",
+      "source_id": 376,
+      "name": "Dinamo Stadion",
+      "destination": "frontend\\public\\historical9394\\stadiums\\376.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "stadium",
+      "source_id": 390,
+      "name": "Tsirion Athlítiko Kentro",
+      "destination": "frontend\\public\\historical9394\\stadiums\\390.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "stadium",
+      "source_id": 395,
+      "name": "Parken Stadion",
+      "destination": "frontend\\public\\historical9394\\stadiums\\395.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "stadium",
+      "source_id": 429,
+      "name": "Kymenlaakson Sähkö Stadion",
+      "destination": "frontend\\public\\historical9394\\stadiums\\429.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "stadium",
+      "source_id": 439,
+      "name": "Boris Paichadze Dinamo Arena",
+      "destination": "frontend\\public\\historical9394\\stadiums\\439.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "low_confidence"
+        }
+      ]
+    },
+    {
+      "asset_type": "stadium",
+      "source_id": 482,
+      "name": "Skonto stadions",
+      "destination": "frontend\\public\\historical9394\\stadiums\\482.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "stadium",
+      "source_id": 490,
+      "name": "Stade Jos Nosbaum",
+      "destination": "frontend\\public\\historical9394\\stadiums\\490.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "stadium",
+      "source_id": 498,
+      "name": "Ta' Qali Stadium",
+      "destination": "frontend\\public\\historical9394\\stadiums\\498.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "low_confidence"
+        }
+      ]
+    },
+    {
+      "asset_type": "stadium",
+      "source_id": 507,
+      "name": "Lerkendal Stadion",
+      "destination": "frontend\\public\\historical9394\\stadiums\\507.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "stadium",
+      "source_id": 509,
+      "name": "Aker Stadion",
+      "destination": "frontend\\public\\historical9394\\stadiums\\509.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "stadium",
+      "source_id": 512,
+      "name": "Henryk Reyman",
+      "destination": "frontend\\public\\historical9394\\stadiums\\512.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "low_confidence"
+        }
+      ]
+    },
+    {
+      "asset_type": "stadium",
+      "source_id": 513,
+      "name": "Stadion Miejski w Chorzowie",
+      "destination": "frontend\\public\\historical9394\\stadiums\\513.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "stadium",
+      "source_id": 523,
+      "name": "Dan Paltinisanu",
+      "destination": "frontend\\public\\historical9394\\stadiums\\523.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "low_confidence"
+        }
+      ]
+    },
+    {
+      "asset_type": "stadium",
+      "source_id": 543,
+      "name": "Stade de Suisse",
+      "destination": "frontend\\public\\historical9394\\stadiums\\543.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "stadium",
+      "source_id": 696,
+      "name": "Stadionul Otelul",
+      "destination": "frontend\\public\\historical9394\\stadiums\\696.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "stadium",
+      "source_id": 699,
+      "name": "Estadio Giulesti",
+      "destination": "frontend\\public\\historical9394\\stadiums\\699.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "stadium",
+      "source_id": 701,
+      "name": "Tourbillon",
+      "destination": "frontend\\public\\historical9394\\stadiums\\701.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "stadium",
+      "source_id": 735,
+      "name": "NSK Olimpijs'kyj",
+      "destination": "frontend\\public\\historical9394\\stadiums\\735.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "stadium",
+      "source_id": 852,
+      "name": "Albertparkstadion",
+      "destination": "frontend\\public\\historical9394\\stadiums\\852.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "stadium",
+      "source_id": 861,
+      "name": "Energi Nord Arena",
+      "destination": "frontend\\public\\historical9394\\stadiums\\861.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "stadium",
+      "source_id": 916,
+      "name": "Alfheim Stadion",
+      "destination": "frontend\\public\\historical9394\\stadiums\\916.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "stadium",
+      "source_id": 923,
+      "name": "INEA Stadion",
+      "destination": "frontend\\public\\historical9394\\stadiums\\923.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "stadium",
+      "source_id": 984,
+      "name": "Bosuilstadion",
+      "destination": "frontend\\public\\historical9394\\stadiums\\984.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "low_confidence"
+        }
+      ]
+    },
+    {
+      "asset_type": "stadium",
+      "source_id": 986,
+      "name": "Stade de Genève",
+      "destination": "frontend\\public\\historical9394\\stadiums\\986.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "stadium",
+      "source_id": 1002,
+      "name": "Stadionul Ilie Oană",
+      "destination": "frontend\\public\\historical9394\\stadiums\\1002.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "stadium",
+      "source_id": 1172,
+      "name": "Norrköpings Idrottspark",
+      "destination": "frontend\\public\\historical9394\\stadiums\\1172.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "stadium",
+      "source_id": 1173,
+      "name": "Rambergsvallen",
+      "destination": "frontend\\public\\historical9394\\stadiums\\1173.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "stadium",
+      "source_id": 1176,
+      "name": "Örjans Vall",
+      "destination": "frontend\\public\\historical9394\\stadiums\\1176.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "stadium",
+      "source_id": 1178,
+      "name": "Behrn Arena",
+      "destination": "frontend\\public\\historical9394\\stadiums\\1178.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "stadium",
+      "source_id": 1229,
+      "name": "BSFZ-Arena",
+      "destination": "frontend\\public\\historical9394\\stadiums\\1229.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "stadium",
+      "source_id": 1275,
+      "name": "Zimbru Stadionul",
+      "destination": "frontend\\public\\historical9394\\stadiums\\1275.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "stadium",
+      "source_id": 1344,
+      "name": "Herman Vanderpoorten Stadion",
+      "destination": "frontend\\public\\historical9394\\stadiums\\1344.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "stadium",
+      "source_id": 1433,
+      "name": "Mascot Park",
+      "destination": "frontend\\public\\historical9394\\stadiums\\1433.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "low_confidence"
+        }
+      ]
+    },
+    {
+      "asset_type": "stadium",
+      "source_id": 1436,
+      "name": "Energi Viborg Arena",
+      "destination": "frontend\\public\\historical9394\\stadiums\\1436.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "normalize: cannot identify image file <_io.BytesIO object at 0x0000019829FAF150>"
+        }
+      ]
+    },
+    {
+      "asset_type": "stadium",
+      "source_id": 1438,
+      "name": "Lyngby Stadion",
+      "destination": "frontend\\public\\historical9394\\stadiums\\1438.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "low_confidence"
+        }
+      ]
+    },
+    {
+      "asset_type": "stadium",
+      "source_id": 1444,
+      "name": "Stadionul Ceahlăul",
+      "destination": "frontend\\public\\historical9394\\stadiums\\1444.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "stadium",
+      "source_id": 1451,
+      "name": "Generali Arena",
+      "destination": "frontend\\public\\historical9394\\stadiums\\1451.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "stadium",
+      "source_id": 1502,
+      "name": "Viking Stadion",
+      "destination": "frontend\\public\\historical9394\\stadiums\\1502.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "low_confidence"
+        }
+      ]
+    },
+    {
+      "asset_type": "stadium",
+      "source_id": 1504,
+      "name": "Aspmyra Stadion",
+      "destination": "frontend\\public\\historical9394\\stadiums\\1504.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "stadium",
+      "source_id": 1511,
+      "name": "Stadionul Farul",
+      "destination": "frontend\\public\\historical9394\\stadiums\\1511.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "stadium",
+      "source_id": 1524,
+      "name": "Stadion Miejski im. Floriana Krygiera",
+      "destination": "frontend\\public\\historical9394\\stadiums\\1524.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "stadium",
+      "source_id": 1594,
+      "name": "Teddy Stadium",
+      "destination": "frontend\\public\\historical9394\\stadiums\\1594.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "low_confidence"
+        }
+      ]
+    },
+    {
+      "asset_type": "stadium",
+      "source_id": 1634,
+      "name": "Næstved Stadion",
+      "destination": "frontend\\public\\historical9394\\stadiums\\1634.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "stadium",
+      "source_id": 1656,
+      "name": "Avanhard Stadium",
+      "destination": "frontend\\public\\historical9394\\stadiums\\1656.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "low_confidence"
+        }
+      ]
+    },
+    {
+      "asset_type": "stadium",
+      "source_id": 1657,
+      "name": "Slavutych-Arena",
+      "destination": "frontend\\public\\historical9394\\stadiums\\1657.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "stadium",
+      "source_id": 1713,
+      "name": "Briskeby Arena",
+      "destination": "frontend\\public\\historical9394\\stadiums\\1713.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "stadium",
+      "source_id": 1810,
+      "name": "Norðurálsvöllurinn",
+      "destination": "frontend\\public\\historical9394\\stadiums\\1810.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "stadium",
+      "source_id": 1837,
+      "name": "Stadyen Nyoman",
+      "destination": "frontend\\public\\historical9394\\stadiums\\1837.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "stadium",
+      "source_id": 1858,
+      "name": "Stadion Ticha",
+      "destination": "frontend\\public\\historical9394\\stadiums\\1858.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "stadium",
+      "source_id": 1953,
+      "name": "Arena Națională",
+      "destination": "frontend\\public\\historical9394\\stadiums\\1953.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "stadium",
+      "source_id": 1967,
+      "name": "Stadion Zagłębia Lubin",
+      "destination": "frontend\\public\\historical9394\\stadiums\\1967.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "low_confidence"
+        }
+      ]
+    },
+    {
+      "asset_type": "stadium",
+      "source_id": 2027,
+      "name": "Friends Arena",
+      "destination": "frontend\\public\\historical9394\\stadiums\\2027.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "stadium",
+      "source_id": 2129,
+      "name": "Lokomotiv Stadium",
+      "destination": "frontend\\public\\historical9394\\stadiums\\2129.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "stadium",
+      "source_id": 2159,
+      "name": "Nikos Goumas Stadium",
+      "destination": "frontend\\public\\historical9394\\stadiums\\2159.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "stadium",
+      "source_id": 2160,
+      "name": "Athens Olympic Stadium",
+      "destination": "frontend\\public\\historical9394\\stadiums\\2160.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "stadium",
+      "source_id": 2161,
+      "name": "Karaiskakis Stadium",
+      "destination": "frontend\\public\\historical9394\\stadiums\\2161.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "stadium",
+      "source_id": 2166,
+      "name": "Xanthi Ground",
+      "destination": "frontend\\public\\historical9394\\stadiums\\2166.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "stadium",
+      "source_id": 2167,
+      "name": "Nea Smyrni Stadium",
+      "destination": "frontend\\public\\historical9394\\stadiums\\2167.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "stadium",
+      "source_id": 2168,
+      "name": "Alcazar Stadium",
+      "destination": "frontend\\public\\historical9394\\stadiums\\2168.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "stadium",
+      "source_id": 2169,
+      "name": "Levadia Municipal Stadium",
+      "destination": "frontend\\public\\historical9394\\stadiums\\2169.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "stadium",
+      "source_id": 2170,
+      "name": "Vyronas National Stadium",
+      "destination": "frontend\\public\\historical9394\\stadiums\\2170.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "stadium",
+      "source_id": 2171,
+      "name": "Rizoupoli Stadium",
+      "destination": "frontend\\public\\historical9394\\stadiums\\2171.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "stadium",
+      "source_id": 2172,
+      "name": "Municipal Stadium of Edessa",
+      "destination": "frontend\\public\\historical9394\\stadiums\\2172.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "stadium",
+      "source_id": 2173,
+      "name": "Doxa Drama Stadium",
+      "destination": "frontend\\public\\historical9394\\stadiums\\2173.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "stadium",
+      "source_id": 2175,
+      "name": "Kalamaria Stadium",
+      "destination": "frontend\\public\\historical9394\\stadiums\\2175.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "low_confidence"
+        }
+      ]
+    },
+    {
+      "asset_type": "stadium",
+      "source_id": 2176,
+      "name": "Municipal Stadium of Naousa",
+      "destination": "frontend\\public\\historical9394\\stadiums\\2176.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "stadium",
+      "source_id": 2177,
+      "name": "Central Profsoyuz Stadion",
+      "destination": "frontend\\public\\historical9394\\stadiums\\2177.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "stadium",
+      "source_id": 2179,
+      "name": "Tekstilshchik Stadium",
+      "destination": "frontend\\public\\historical9394\\stadiums\\2179.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "stadium",
+      "source_id": 2182,
+      "name": "Central Stadium",
+      "destination": "frontend\\public\\historical9394\\stadiums\\2182.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "stadium",
+      "source_id": 2184,
+      "name": "KAMAZ Stadium",
+      "destination": "frontend\\public\\historical9394\\stadiums\\2184.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "low_confidence"
+        }
+      ]
+    },
+    {
+      "asset_type": "stadium",
+      "source_id": 2185,
+      "name": "Central Stadium",
+      "destination": "frontend\\public\\historical9394\\stadiums\\2185.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "stadium",
+      "source_id": 2188,
+      "name": "Metallurg Stadium",
+      "destination": "frontend\\public\\historical9394\\stadiums\\2188.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "stadium",
+      "source_id": 2190,
+      "name": "Vodnik Stadium",
+      "destination": "frontend\\public\\historical9394\\stadiums\\2190.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "stadium",
+      "source_id": 2191,
+      "name": "Rostselmash Stadium",
+      "destination": "frontend\\public\\historical9394\\stadiums\\2191.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "low_confidence"
+        }
+      ]
+    },
+    {
+      "asset_type": "stadium",
+      "source_id": 2192,
+      "name": "Krasnaya Presnya Stadium",
+      "destination": "frontend\\public\\historical9394\\stadiums\\2192.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "stadium",
+      "source_id": 2193,
+      "name": "Stade du Pairay",
+      "destination": "frontend\\public\\historical9394\\stadiums\\2193.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "stadium",
+      "source_id": 2194,
+      "name": "Freethielstadion",
+      "destination": "frontend\\public\\historical9394\\stadiums\\2194.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "low_confidence"
+        }
+      ]
+    },
+    {
+      "asset_type": "stadium",
+      "source_id": 2195,
+      "name": "Veltwijckpark",
+      "destination": "frontend\\public\\historical9394\\stadiums\\2195.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "stadium",
+      "source_id": 2196,
+      "name": "Stedelijk Sportstadion",
+      "destination": "frontend\\public\\historical9394\\stadiums\\2196.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "low_confidence"
+        }
+      ]
+    },
+    {
+      "asset_type": "stadium",
+      "source_id": 2197,
+      "name": "Stade Vélodrome Oscar Flesch",
+      "destination": "frontend\\public\\historical9394\\stadiums\\2197.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "stadium",
+      "source_id": 2200,
+      "name": "Hüseyin Avni Aker Stadı",
+      "destination": "frontend\\public\\historical9394\\stadiums\\2200.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "stadium",
+      "source_id": 2202,
+      "name": "İsmetpaşa Stadyumu",
+      "destination": "frontend\\public\\historical9394\\stadiums\\2202.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "stadium",
+      "source_id": 2203,
+      "name": "19 Mayıs Stadı",
+      "destination": "frontend\\public\\historical9394\\stadiums\\2203.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "stadium",
+      "source_id": 2204,
+      "name": "Kamil Ocak Stadı",
+      "destination": "frontend\\public\\historical9394\\stadiums\\2204.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "stadium",
+      "source_id": 2205,
+      "name": "Atatürk Stadı",
+      "destination": "frontend\\public\\historical9394\\stadiums\\2205.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "low_confidence"
+        }
+      ]
+    },
+    {
+      "asset_type": "stadium",
+      "source_id": 2206,
+      "name": "Atatürk Stadı",
+      "destination": "frontend\\public\\historical9394\\stadiums\\2206.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "stadium",
+      "source_id": 2207,
+      "name": "19 Mayıs Stadı",
+      "destination": "frontend\\public\\historical9394\\stadiums\\2207.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "stadium",
+      "source_id": 2208,
+      "name": "Atatürk Stadı",
+      "destination": "frontend\\public\\historical9394\\stadiums\\2208.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "stadium",
+      "source_id": 2209,
+      "name": "Zeytinburnu Stadı",
+      "destination": "frontend\\public\\historical9394\\stadiums\\2209.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "stadium",
+      "source_id": 2210,
+      "name": "Yenişehir Stadı",
+      "destination": "frontend\\public\\historical9394\\stadiums\\2210.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "stadium",
+      "source_id": 2211,
+      "name": "Atatürk Stadı",
+      "destination": "frontend\\public\\historical9394\\stadiums\\2211.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    },
+    {
+      "asset_type": "stadium",
+      "source_id": 2212,
+      "name": "Yusuf Ziya Öniş Stadyumu",
+      "destination": "frontend\\public\\historical9394\\stadiums\\2212.jpg",
+      "status": "failed",
+      "errors": [
+        {
+          "source": "Wikimedia Commons",
+          "error": "no_commons_results"
+        }
+      ]
+    }
+  ]
+}

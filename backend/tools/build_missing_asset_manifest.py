@@ -23,6 +23,7 @@ SNAPSHOT = DATA / "historical_snapshot.json"
 CATALOG = DATA / "historical_source_catalog.json"
 BDF_QUEUE = DATA / "bdfutbol_photo_queue.json"
 BELGIUM_CLUBS = DATA / "belgium_1993_94_club_assets.json"
+MONDEFOOTBALL_MAPPING = DATA / "mondefootball_club_mapping.json"
 BDF_MANAGER_OVERRIDES = DATA / "bdfutbol_manager_profile_overrides.json"
 DEFAULT_OUTPUT = DATA / "missing_assets_1993_94.json"
 
@@ -70,6 +71,18 @@ def _bdf_club_map() -> dict[int, dict[str, Any]]:
     return {int(row["team_id"]): row for row in _load(BELGIUM_CLUBS).get("clubs", [])}
 
 
+def _mondefootball_club_map() -> dict[int, dict[str, Any]]:
+    """Return only the manually validated Mondefootball↔MDB mappings."""
+    if not MONDEFOOTBALL_MAPPING.exists():
+        return {}
+    payload = _load(MONDEFOOTBALL_MAPPING)
+    rows = list(payload.get("seguros") or [])
+    manual = payload.get("a_mano") or {}
+    if isinstance(manual, dict):
+        rows.extend(dict(value, mf=key) for key, value in manual.items())
+    return {int(row["mdb"]): row for row in rows if row.get("mdb") and row.get("mf")}
+
+
 def _bdf_manager_map() -> dict[int, dict[str, Any]]:
     if not BDF_MANAGER_OVERRIDES.exists():
         return {}
@@ -111,6 +124,7 @@ def build_manifest() -> dict[str, Any]:
     countries, cities = _country_maps(catalog)
     bdf_players = _bdf_player_map()
     bdf_clubs = _bdf_club_map()
+    monde_clubs = _mondefootball_club_map()
     bdf_managers = _bdf_manager_map()
 
     player_assets = _file_ids(PUBLIC / "players", ".jpg")
@@ -224,6 +238,16 @@ def build_manifest() -> dict[str, Any]:
         bdf = bdf_clubs.get(tid)
         if bdf and bdf.get("bdfutbol_crest_url"):
             candidates.append({"source": "BDFutbol", "mode": "direct_image", "download_url": bdf["bdfutbol_crest_url"], "automatic": True})
+        monde = monde_clubs.get(tid)
+        if monde:
+            candidates.append({
+                "source": "Mondefootball",
+                "mode": "direct_image",
+                "download_url": f"https://s.hs-data.com/gfx/emblem/common/150x150/{monde['mf']}.png",
+                "profile_url": f"https://www.mondefootball.fr/teams/te{monde['mf']}/x/",
+                "automatic": True,
+                "identity_verification": {"mdb_team_id": tid, "mondefootball_id": str(monde["mf"]), "name": monde.get("nombre")},
+            })
         if not synthetic:
             candidates.extend(_candidate_common(query))
         clubs_missing.append({

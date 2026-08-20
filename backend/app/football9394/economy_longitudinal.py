@@ -80,4 +80,12 @@ def longitudinal_snapshot(state: dict[str, Any], *, team_id: int, season: str) -
     history.sort(key=lambda row: str(row.get("season") or ""))
     structural = [dict(row) for row in state.get("economy_structural_events") or [] if int(row.get("team_id") or 0) == int(team_id)]
     structural.sort(key=lambda row: (str(row.get("date") or ""), str(row.get("id") or "")))
-    return {"current_season": current, "history": history[-12:], "structural_events": structural[-20:]}
+    prior = history[-2] if len(history) > 1 else None
+    delta = int(current.get("net") or 0) - int((prior or {}).get("net") or 0)
+    if int(current.get("net") or 0) > 0:
+        reading = "El club genera más recursos de los que consume en el acumulado actual."
+    elif int(current.get("net") or 0) < 0:
+        reading = "El acumulado es negativo: el margen deportivo debe convivir con una corrección financiera."
+    else:
+        reading = "El acumulado está equilibrado; la siguiente decisión puede cambiar el margen con rapidez."
+    return {"current_season": current, "history": history[-12:], "structural_events": structural[-20:], "trend": {"net_delta_vs_previous": delta, "direction": "mejora" if delta > 0 else "empeora" if delta < 0 else "estable", "reading": reading}}

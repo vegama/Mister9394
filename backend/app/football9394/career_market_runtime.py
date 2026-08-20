@@ -567,7 +567,8 @@ class CareerMarketRuntimeMixin:
         for pid_text,listing in list((self.state.get("transfer_listings") or {}).items()):
             pid=int(pid_text)
             if self._current_team_id(pid)!=controlled: self.state["transfer_listings"].pop(pid_text,None);continue
-            if any(int(o.get("player_id") or 0)==pid and o.get("status")=="open" for o in offers): continue
+            open_for_player = [o for o in offers if int(o.get("player_id") or 0) == pid and o.get("status") == "open"]
+            if len(open_for_player) >= 3: continue
             if day<=date.fromisoformat(str(listing["listed_on"])): continue
             raw=self._player_source(pid); overall=int(self.state["player_development"].get(pid_text,{}).get("overall") or raw.get("overall") or raw.get("category") or 60); value=int(listing.get("estimated_value") or estimated_transfer_value(raw,overall=overall)); asking=int(listing.get("asking_price") or value)
             rng=Random(int(self.state["seed"]) ^ pid*9394 ^ day.toordinal())
@@ -585,9 +586,13 @@ class CareerMarketRuntimeMixin:
                 need=int(target_need["shortage"])*3+max(0,20-len(squad))+float(club_status(self.state,tid).get("score") or 50)/100
                 candidates.append((need+rng.random(),tid,cash))
             if not candidates: continue
-            candidates.sort(reverse=True); buyer=candidates[0][1]; fee=round(value*(.82+rng.random()*.20)); fee=min(fee,transfer_spending_power(self.state["club_finances"][str(buyer)]))
-            offer={"id":f"sale:{pid}:{day.isoformat()}:{buyer}","date":day.isoformat(),"expires_on":(day+timedelta(days=4)).isoformat(),"player_id":pid,"buyer_team_id":buyer,"buyer_team_name":(self._team_api(buyer) or {}).get("name"),"fee":fee,"status":"open"}
-            offers.append(offer);events.append({"kind":"incoming_transfer_offer",**offer})
+            candidates.sort(reverse=True)
+            existing_buyers={int(o.get("buyer_team_id") or 0) for o in open_for_player}
+            slots=max(1, 3-len(open_for_player))
+            for _, buyer, _ in [row for row in candidates if int(row[1]) not in existing_buyers][:slots]:
+                fee=round(value*(.82+rng.random()*.20)); fee=min(fee,transfer_spending_power(self.state["club_finances"][str(buyer)]))
+                offer={"id":f"sale:{pid}:{day.isoformat()}:{buyer}","date":day.isoformat(),"expires_on":(day+timedelta(days=4)).isoformat(),"player_id":pid,"buyer_team_id":buyer,"buyer_team_name":(self._team_api(buyer) or {}).get("name"),"fee":fee,"status":"open","source":"active_listing"}
+                offers.append(offer);events.append({"kind":"incoming_transfer_offer",**offer})
         for offer in offers:
             if offer.get("status")=="open" and date.fromisoformat(str(offer["expires_on"]))<day: offer["status"]="expired"
         return events
@@ -746,7 +751,7 @@ class CareerMarketRuntimeMixin:
             })
             if len(recent_outcomes)>=5: break
         return {
-            "watchlist":list(self.state["watchlist"]),"negotiations":negotiations,"inquiries":inquiries,"loans":list(self.state.get("loan_deals") or [])[-40:],"listings":list(self.state["transfer_listings"].values()),"incoming_offers":list(self.state["incoming_transfer_offers"])[-30:],
+            "watchlist":list(self.state["watchlist"]),"negotiations":negotiations,"inquiries":inquiries,"loans":list(self.state.get("loan_deals") or [])[-40:],"listings":[{**row,"open_offers":sum(1 for offer in self.state.get("incoming_transfer_offers") or [] if int(offer.get("player_id") or 0)==int(row.get("player_id") or 0) and offer.get("status")=="open")} for row in self.state["transfer_listings"].values()],"incoming_offers":list(self.state["incoming_transfer_offers"])[-30:],
             "period":period,"foreign_rule":rule.as_dict() if rule else None,"foreign_count":foreign_count(squad,rule) if rule else 0,"club_status":self.club_status_snapshot(),
             "recruitment_plan":dict((self.state.get("recruitment_plans") or {}).get(str(int(self.state["team_id"]))) or {}),"market_storylines":list(self.state.get("market_storylines") or [])[-30:],
             "scouting":scouting,"squad_plan":squad_plan,"workflow":workflow,"processes":processes[-12:],"recent_outcomes":recent_outcomes,

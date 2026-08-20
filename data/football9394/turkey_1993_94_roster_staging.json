@@ -547,9 +547,9 @@
           "minutes": 1613,
           "goals": 1,
           "core_18_candidate": true,
-          "identity_resolution": "reused_staged_identity",
-          "resolved_source_id": 9496362,
-          "resolved_display_name": "Andreas Wagenhaus",
+          "identity_resolution": "reconciled_database_hygiene_v113",
+          "resolved_source_id": 2727,
+          "resolved_display_name": "Wagenhaus",
           "resolved_primary_role": 3,
           "resolved_exact_position": "Centre Back",
           "position_source": "season_specific_profile_v0.32",
@@ -557,7 +557,8 @@
           "resolved_country_id": 4,
           "profile_source_url": "https://www.transfermarkt.com/fenerbahce-sk/kader/verein/36/saison_id/1993/plus/1",
           "profile_source": "Transfermarkt detailed squad 1993-94 v0.32",
-          "source_profile_position": "Centre-Back"
+          "source_profile_position": "Centre-Back",
+          "duplicate_source_id_retired": 9496362
         },
         {
           "bdfutbol_name": "Aşık",
@@ -1391,8 +1392,8 @@
           "goals": 0,
           "core_18_candidate": false,
           "source_roster_member": true,
-          "identity_resolution": "reused_staged_identity",
-          "resolved_source_id": 9497237,
+          "identity_resolution": "reconciled_database_hygiene_v113",
+          "resolved_source_id": 9496502,
           "resolved_display_name": "Yuriy Shelepnytskyi",
           "resolved_primary_role": 6,
           "resolved_exact_position": "Defensive Midfielder",
@@ -1401,7 +1402,8 @@
           "resolved_country_id": 85,
           "profile_source_url": "https://www.transfermarkt.com.tr/trabzonspor/kader/verein/449/saison_id/1993/plus/1",
           "profile_source": "Transfermarkt detailed squad 1993-94 v0.32",
-          "source_profile_position": "Defensive Midfield"
+          "source_profile_position": "Defensive Midfield",
+          "duplicate_source_id_retired": 9497237
         },
         {
           "bdfutbol_name": "Alarçin",
@@ -1496,9 +1498,9 @@
           "goals": 0,
           "core_18_candidate": false,
           "source_roster_member": true,
-          "identity_resolution": "reused_staged_identity",
-          "resolved_source_id": 9497242,
-          "resolved_display_name": "Sergiy Gusev",
+          "identity_resolution": "reconciled_database_hygiene_v113",
+          "resolved_source_id": 9496498,
+          "resolved_display_name": "Sergei Gusev",
           "resolved_primary_role": 17,
           "resolved_exact_position": "Centre Forward",
           "position_source": "season_specific_profile_v0.32",
@@ -1506,7 +1508,8 @@
           "resolved_country_id": 85,
           "profile_source_url": "https://www.transfermarkt.com.tr/trabzonspor/kader/verein/449/saison_id/1993/plus/1",
           "profile_source": "Transfermarkt detailed squad 1993-94 v0.32",
-          "source_profile_position": "Centre-Forward"
+          "source_profile_position": "Centre-Forward",
+          "duplicate_source_id_retired": 9497242
         },
         {
           "bdfutbol_name": "Usta",
@@ -2221,8 +2224,8 @@
           "minutes": 849,
           "goals": 0,
           "core_18_candidate": true,
-          "identity_resolution": "reused_staged_identity",
-          "resolved_source_id": 9496414,
+          "identity_resolution": "reconciled_database_hygiene_v113",
+          "resolved_source_id": 9496036,
           "resolved_display_name": "Marius Cheregi",
           "resolved_primary_role": 6,
           "resolved_exact_position": "Defensive Midfielder",
@@ -2231,7 +2234,8 @@
           "resolved_country_id": 72,
           "profile_source_url": "https://www.transfermarkt.com.tr/samsunspor/kader/verein/152/saison_id/1993/plus/1",
           "profile_source": "Transfermarkt detailed squad 1993-94 v0.32",
-          "source_profile_position": "Defensive Midfield"
+          "source_profile_position": "Defensive Midfield",
+          "duplicate_source_id_retired": 9496414
         },
         {
           "bdfutbol_name": "İlhan",
@@ -2345,9 +2349,9 @@
           "goals": 1,
           "core_18_candidate": false,
           "source_roster_member": true,
-          "identity_resolution": "reused_staged_identity",
-          "resolved_source_id": 9497252,
-          "resolved_display_name": "Ovidiu Hanganu",
+          "identity_resolution": "reconciled_database_hygiene_v113",
+          "resolved_source_id": 9496045,
+          "resolved_display_name": "Ovidiu Cornel Hanganu",
           "resolved_primary_role": 17,
           "resolved_exact_position": "Centre Forward",
           "position_source": "season_specific_profile_v0.32",
@@ -2355,7 +2359,8 @@
           "resolved_country_id": 72,
           "profile_source_url": "https://www.transfermarkt.com.tr/samsunspor/kader/verein/152/saison_id/1993/plus/1",
           "profile_source": "Transfermarkt detailed squad 1993-94 v0.32",
-          "source_profile_position": "Centre-Forward"
+          "source_profile_position": "Centre-Forward",
+          "duplicate_source_id_retired": 9497252
         },
         {
           "bdfutbol_name": "Işık",
@@ -2923,8 +2928,8 @@
           "goals": 0,
           "core_18_candidate": false,
           "source_roster_member": true,
-          "identity_resolution": "reused_staged_identity",
-          "resolved_source_id": 9497262,
+          "identity_resolution": "reconciled_database_hygiene_v113",
+          "resolved_source_id": 9496494,
           "resolved_display_name": "Şeyhmus Suna",
           "resolved_primary_role": 1,
           "resolved_exact_position": "Right Back",
@@ -2933,7 +2938,8 @@
           "resolved_country_id": 84,
           "profile_source_url": "https://www.transfermarkt.com.tr/kocaelispor/startseite/verein/120/saison_id/1993",
           "profile_source": "Transfermarkt Kocaelispor season squad 1993-94 v0.32",
-          "source_profile_position": "Right-Back"
+          "source_profile_position": "Right-Back",
+          "duplicate_source_id_retired": 9497262
         },
         {
           "bdfutbol_name": "Altıntaş",
@@ -6757,8 +6763,8 @@
           "goals": 0,
           "core_18_candidate": false,
           "source_roster_member": true,
-          "identity_resolution": "reused_staged_identity",
-          "resolved_source_id": 9497314,
+          "identity_resolution": "reconciled_database_hygiene_v113",
+          "resolved_source_id": 9496515,
           "resolved_display_name": "Cafer Aydın",
           "resolved_primary_role": 17,
           "resolved_exact_position": "Centre Forward",
@@ -6771,7 +6777,8 @@
           "resolved_birth_place_text": "Çorum",
           "position_source_url": "https://www.tff.org/Default.aspx?kisiId=22532&pageId=526",
           "bdfutbol_id": "702562",
-          "individual_profile_source_url": "https://www.bdfutbol.com/en/j/j702562.html"
+          "individual_profile_source_url": "https://www.bdfutbol.com/en/j/j702562.html",
+          "duplicate_source_id_retired": 9497314
         },
         {
           "bdfutbol_name": "Tanrıbilir",

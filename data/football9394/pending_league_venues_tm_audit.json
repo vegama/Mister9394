@@ -1,0 +1,43 @@
+{
+  "status": "complete",
+  "processed": 5,
+  "assigned": 5,
+  "blocked": [],
+  "assignments": [
+    {
+      "team_id": 9502428,
+      "team": "Miliarder Pniewy",
+      "stadium_id": 2323,
+      "stadium": "Municipal Stadium",
+      "source_url": "https://en.wikipedia.org/wiki/Sok%C3%B3%C5%82_Pniewy"
+    },
+    {
+      "team_id": 9503111,
+      "team": "Fc Lucerne",
+      "stadium_id": 2324,
+      "stadium": "Stadion Allmend",
+      "source_url": "https://en.wikipedia.org/wiki/FC_Luzern"
+    },
+    {
+      "team_id": 9503201,
+      "team": "Fk Krivbas Old",
+      "stadium_id": 2325,
+      "stadium": "Metalurh Stadium",
+      "source_url": "https://en.wikipedia.org/wiki/FC_Kryvbas_Kryvyi_Rih"
+    },
+    {
+      "team_id": 9503261,
+      "team": "Fk Bukovina",
+      "stadium_id": 2326,
+      "stadium": "Bukovyna Stadium",
+      "source_url": "https://en.wikipedia.org/wiki/Bukovyna_Stadium"
+    },
+    {
+      "team_id": 9503286,
+      "team": "Fk Kremin",
+      "stadium_id": 2327,
+      "stadium": "Kremin Stadium",
+      "source_url": "https://en.wikipedia.org/wiki/FC_Kremin_Kremenchuk"
+    }
+  ]
+}

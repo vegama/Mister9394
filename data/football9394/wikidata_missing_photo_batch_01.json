@@ -1,0 +1,1755 @@
+{
+  "generated_at": "2026-08-20T14:12:43.596306+00:00",
+  "candidates": 250,
+  "downloaded": 0,
+  "no_exact_match": 4,
+  "failed": 246,
+  "results": [
+    {
+      "source_id": 836,
+      "name": "Lalo",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "'str' object has no attribute 'get'"
+    },
+    {
+      "source_id": 837,
+      "name": "Oscar II",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "'str' object has no attribute 'get'"
+    },
+    {
+      "source_id": 1001,
+      "name": "Torres",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "'str' object has no attribute 'get'"
+    },
+    {
+      "source_id": 1119,
+      "name": "Michetti",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "'str' object has no attribute 'get'"
+    },
+    {
+      "source_id": 1372,
+      "name": "Ruggiero",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "'str' object has no attribute 'get'"
+    },
+    {
+      "source_id": 1393,
+      "name": "Martire",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "'str' object has no attribute 'get'"
+    },
+    {
+      "source_id": 1441,
+      "name": "Broggi",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "'str' object has no attribute 'get'"
+    },
+    {
+      "source_id": 1449,
+      "name": "Testaferrata",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "'str' object has no attribute 'get'"
+    },
+    {
+      "source_id": 1487,
+      "name": "Costagli",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "'str' object has no attribute 'get'"
+    },
+    {
+      "source_id": 1488,
+      "name": "Faglioni",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "'str' object has no attribute 'get'"
+    },
+    {
+      "source_id": 1516,
+      "name": "Guindani",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "'str' object has no attribute 'get'"
+    },
+    {
+      "source_id": 1544,
+      "name": "Ronca",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "'str' object has no attribute 'get'"
+    },
+    {
+      "source_id": 1564,
+      "name": "Napolitano",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "'str' object has no attribute 'get'"
+    },
+    {
+      "source_id": 1575,
+      "name": "Bruno",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "'str' object has no attribute 'get'"
+    },
+    {
+      "source_id": 1576,
+      "name": "Caprioli",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "'str' object has no attribute 'get'"
+    },
+    {
+      "source_id": 2877,
+      "name": "José Antonio",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "'str' object has no attribute 'get'"
+    },
+    {
+      "source_id": 2902,
+      "name": "Jaime II",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "'str' object has no attribute 'get'"
+    },
+    {
+      "source_id": 2957,
+      "name": "Castro",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "'str' object has no attribute 'get'"
+    },
+    {
+      "source_id": 2985,
+      "name": "Novegil",
+      "status": "no_exact_match",
+      "source": "Wikidata P569/P18"
+    },
+    {
+      "source_id": 3004,
+      "name": "Pepe",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "'str' object has no attribute 'get'"
+    },
+    {
+      "source_id": 3008,
+      "name": "Ufarte",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "'str' object has no attribute 'get'"
+    },
+    {
+      "source_id": 3010,
+      "name": "De Diego",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "'str' object has no attribute 'get'"
+    },
+    {
+      "source_id": 3012,
+      "name": "López",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "'str' object has no attribute 'get'"
+    },
+    {
+      "source_id": 3083,
+      "name": "Guirado",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "'str' object has no attribute 'get'"
+    },
+    {
+      "source_id": 3087,
+      "name": "Salas",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "'str' object has no attribute 'get'"
+    },
+    {
+      "source_id": 3092,
+      "name": "Ramón",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "'str' object has no attribute 'get'"
+    },
+    {
+      "source_id": 3095,
+      "name": "Manolo Herrero",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "'str' object has no attribute 'get'"
+    },
+    {
+      "source_id": 3096,
+      "name": "Antonio",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "'str' object has no attribute 'get'"
+    },
+    {
+      "source_id": 3097,
+      "name": "Quevedo",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "'str' object has no attribute 'get'"
+    },
+    {
+      "source_id": 3098,
+      "name": "Emilio",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "'str' object has no attribute 'get'"
+    },
+    {
+      "source_id": 3101,
+      "name": "Jesús",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "'str' object has no attribute 'get'"
+    },
+    {
+      "source_id": 3102,
+      "name": "Juan",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "'str' object has no attribute 'get'"
+    },
+    {
+      "source_id": 3160,
+      "name": "Jon",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "'str' object has no attribute 'get'"
+    },
+    {
+      "source_id": 3187,
+      "name": "Raúl Martínez",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "'str' object has no attribute 'get'"
+    },
+    {
+      "source_id": 3198,
+      "name": "Solano",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "'str' object has no attribute 'get'"
+    },
+    {
+      "source_id": 3200,
+      "name": "Sergio",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "'str' object has no attribute 'get'"
+    },
+    {
+      "source_id": 3238,
+      "name": "Caché",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "'str' object has no attribute 'get'"
+    },
+    {
+      "source_id": 3243,
+      "name": "Carlos",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "'str' object has no attribute 'get'"
+    },
+    {
+      "source_id": 3262,
+      "name": "Alvaro",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "'str' object has no attribute 'get'"
+    },
+    {
+      "source_id": 3268,
+      "name": "Coque",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 3270,
+      "name": "Álvarez",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "'str' object has no attribute 'get'"
+    },
+    {
+      "source_id": 3326,
+      "name": "Marco Antonio",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "'str' object has no attribute 'get'"
+    },
+    {
+      "source_id": 3389,
+      "name": "Unai",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "'str' object has no attribute 'get'"
+    },
+    {
+      "source_id": 3392,
+      "name": "Asier",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "'str' object has no attribute 'get'"
+    },
+    {
+      "source_id": 3409,
+      "name": "Molina",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "'str' object has no attribute 'get'"
+    },
+    {
+      "source_id": 3412,
+      "name": "Luisma",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "'str' object has no attribute 'get'"
+    },
+    {
+      "source_id": 3415,
+      "name": "Olmeda",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "'str' object has no attribute 'get'"
+    },
+    {
+      "source_id": 3417,
+      "name": "Luis",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "'str' object has no attribute 'get'"
+    },
+    {
+      "source_id": 3441,
+      "name": "Eneko",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "'str' object has no attribute 'get'"
+    },
+    {
+      "source_id": 3442,
+      "name": "Alfredo",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "'str' object has no attribute 'get'"
+    },
+    {
+      "source_id": 3443,
+      "name": "Aitor",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 3465,
+      "name": "Luis",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "'str' object has no attribute 'get'"
+    },
+    {
+      "source_id": 3490,
+      "name": "Valverde",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "'str' object has no attribute 'get'"
+    },
+    {
+      "source_id": 3508,
+      "name": "Iradi",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "'str' object has no attribute 'get'"
+    },
+    {
+      "source_id": 3510,
+      "name": "Peral",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "'str' object has no attribute 'get'"
+    },
+    {
+      "source_id": 3554,
+      "name": "David Gil",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "'str' object has no attribute 'get'"
+    },
+    {
+      "source_id": 3559,
+      "name": "Lacarra",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "'str' object has no attribute 'get'"
+    },
+    {
+      "source_id": 3562,
+      "name": "Alberto",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 3563,
+      "name": "Larrinoa",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "'str' object has no attribute 'get'"
+    },
+    {
+      "source_id": 3576,
+      "name": "Koldo",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "'str' object has no attribute 'get'"
+    },
+    {
+      "source_id": 3577,
+      "name": "Baptis",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "'str' object has no attribute 'get'"
+    },
+    {
+      "source_id": 3579,
+      "name": "Eguiluz",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "'str' object has no attribute 'get'"
+    },
+    {
+      "source_id": 3580,
+      "name": "Pedrosa",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "'str' object has no attribute 'get'"
+    },
+    {
+      "source_id": 3581,
+      "name": "Úbeda",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "'str' object has no attribute 'get'"
+    },
+    {
+      "source_id": 3583,
+      "name": "Aitor",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "'str' object has no attribute 'get'"
+    },
+    {
+      "source_id": 3584,
+      "name": "Sánchez",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "'str' object has no attribute 'get'"
+    },
+    {
+      "source_id": 3585,
+      "name": "Bakio",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "'str' object has no attribute 'get'"
+    },
+    {
+      "source_id": 3613,
+      "name": "Cayón",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "'str' object has no attribute 'get'"
+    },
+    {
+      "source_id": 3614,
+      "name": "San Miguel",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "'str' object has no attribute 'get'"
+    },
+    {
+      "source_id": 3635,
+      "name": "Crespo",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "'str' object has no attribute 'get'"
+    },
+    {
+      "source_id": 3637,
+      "name": "Echevarría",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 3664,
+      "name": "Nieva",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "'str' object has no attribute 'get'"
+    },
+    {
+      "source_id": 3677,
+      "name": "Gorka",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "'str' object has no attribute 'get'"
+    },
+    {
+      "source_id": 3689,
+      "name": "Joseba",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "'str' object has no attribute 'get'"
+    },
+    {
+      "source_id": 3692,
+      "name": "Miguel",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "'str' object has no attribute 'get'"
+    },
+    {
+      "source_id": 3716,
+      "name": "Javi de la Torre",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 3738,
+      "name": "Álvaro",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 3746,
+      "name": "Ibarra",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 3760,
+      "name": "Alex",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 3761,
+      "name": "Javi",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "'str' object has no attribute 'get'"
+    },
+    {
+      "source_id": 3762,
+      "name": "Ruiz",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "'str' object has no attribute 'get'"
+    },
+    {
+      "source_id": 3763,
+      "name": "Iban",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 3784,
+      "name": "López",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 3825,
+      "name": "Antxon",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 3826,
+      "name": "Roteta",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "'str' object has no attribute 'get'"
+    },
+    {
+      "source_id": 3828,
+      "name": "Alvaro",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "'str' object has no attribute 'get'"
+    },
+    {
+      "source_id": 3829,
+      "name": "Txutxi",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 3830,
+      "name": "Erkicia",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 3832,
+      "name": "David",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "'str' object has no attribute 'get'"
+    },
+    {
+      "source_id": 3835,
+      "name": "Federico",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 3922,
+      "name": "Solá",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 3944,
+      "name": "Checa",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 3945,
+      "name": "Méndez",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 3966,
+      "name": "Pastor",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 3967,
+      "name": "Víctor",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 3985,
+      "name": "Maxi",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 3990,
+      "name": "Segovia",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 3991,
+      "name": "Cuesta",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "'str' object has no attribute 'get'"
+    },
+    {
+      "source_id": 4005,
+      "name": "Lora",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "'str' object has no attribute 'get'"
+    },
+    {
+      "source_id": 4034,
+      "name": "Julio",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 4041,
+      "name": "Lucio",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "'str' object has no attribute 'get'"
+    },
+    {
+      "source_id": 4059,
+      "name": "Labernia",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 4060,
+      "name": "Nacho",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 4062,
+      "name": "Moreno",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 4063,
+      "name": "Bigorra",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 4117,
+      "name": "Merino",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 4118,
+      "name": "Felin",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "'str' object has no attribute 'get'"
+    },
+    {
+      "source_id": 4119,
+      "name": "Pedro",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 4121,
+      "name": "Nieto",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 4129,
+      "name": "Colomé",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 4130,
+      "name": "Fortí",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 4131,
+      "name": "Sala",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 4132,
+      "name": "Vicenç",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 4133,
+      "name": "Masferrer",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 4134,
+      "name": "Edu Torras",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 4135,
+      "name": "Conde",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "'str' object has no attribute 'get'"
+    },
+    {
+      "source_id": 4136,
+      "name": "Alvarez",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 4196,
+      "name": "Manu",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 4206,
+      "name": "Carlos II",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "'str' object has no attribute 'get'"
+    },
+    {
+      "source_id": 4207,
+      "name": "Tomás",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 4210,
+      "name": "Moliner",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 4211,
+      "name": "Víctor",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 4216,
+      "name": "Carlos",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 4225,
+      "name": "Toni",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "'str' object has no attribute 'get'"
+    },
+    {
+      "source_id": 4227,
+      "name": "Jordi",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 4230,
+      "name": "Simó",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "'str' object has no attribute 'get'"
+    },
+    {
+      "source_id": 4235,
+      "name": "Soto",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "'str' object has no attribute 'get'"
+    },
+    {
+      "source_id": 4237,
+      "name": "Virdis",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 4238,
+      "name": "Martín",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 4239,
+      "name": "Ángel",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "'str' object has no attribute 'get'"
+    },
+    {
+      "source_id": 4240,
+      "name": "Cristian",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 4255,
+      "name": "Marcelo",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 4257,
+      "name": "Jose Maria",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 4264,
+      "name": "Óscar",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 4267,
+      "name": "Pedro Mari",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 4289,
+      "name": "Fernández",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 4291,
+      "name": "Navarro",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 4292,
+      "name": "Peña",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 4293,
+      "name": "Quique",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 4294,
+      "name": "Dani",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 4295,
+      "name": "Luis",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 4297,
+      "name": "Carrazoni",
+      "status": "no_exact_match",
+      "source": "Wikidata P569/P18"
+    },
+    {
+      "source_id": 4300,
+      "name": "Ormaechea",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 4322,
+      "name": "Font",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 4432,
+      "name": "Iván",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 4434,
+      "name": "Cortés",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 4435,
+      "name": "Toboso",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 4436,
+      "name": "Carlos",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 4455,
+      "name": "Melo",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 4484,
+      "name": "Miguel",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 4485,
+      "name": "Portillo",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 4547,
+      "name": "Paquito",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 4582,
+      "name": "Gustavo",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "'str' object has no attribute 'get'"
+    },
+    {
+      "source_id": 4586,
+      "name": "Ramón",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "'str' object has no attribute 'get'"
+    },
+    {
+      "source_id": 4598,
+      "name": "Peque",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 4599,
+      "name": "Chago",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 4603,
+      "name": "Eduardo",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 4604,
+      "name": "Alemán",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 4605,
+      "name": "Chico",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 4606,
+      "name": "Luis Pérez",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 4607,
+      "name": "Charli",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "'str' object has no attribute 'get'"
+    },
+    {
+      "source_id": 4609,
+      "name": "Martell",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "'str' object has no attribute 'get'"
+    },
+    {
+      "source_id": 4610,
+      "name": "Alexis I",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 4619,
+      "name": "Esquivel",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 4626,
+      "name": "Lolo",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "'str' object has no attribute 'get'"
+    },
+    {
+      "source_id": 4631,
+      "name": "Yeyo",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "'str' object has no attribute 'get'"
+    },
+    {
+      "source_id": 4633,
+      "name": "Roque",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 4634,
+      "name": "Juanlu",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "'str' object has no attribute 'get'"
+    },
+    {
+      "source_id": 4635,
+      "name": "Víctor",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "'str' object has no attribute 'get'"
+    },
+    {
+      "source_id": 4657,
+      "name": "Cobos",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 4658,
+      "name": "Antonio Gómez",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 4676,
+      "name": "Sánchez",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 4677,
+      "name": "Andrés",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 4678,
+      "name": "Antonio",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 4679,
+      "name": "Corral",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 4700,
+      "name": "Antonio Díaz",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 4702,
+      "name": "Rico",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 4727,
+      "name": "Iván",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 4880,
+      "name": "João Paulo",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 4914,
+      "name": "Castro",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 4938,
+      "name": "Ladeira",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 4966,
+      "name": "Pedro Brás",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 4997,
+      "name": "Anastácio",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 5043,
+      "name": "Shéu",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 5070,
+      "name": "Maurício",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 5118,
+      "name": "José Roberto",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "'str' object has no attribute 'get'"
+    },
+    {
+      "source_id": 5121,
+      "name": "Tchinda",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 5123,
+      "name": "Wanderley",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 5126,
+      "name": "Vítor Roriz",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 5127,
+      "name": "Marito",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 5185,
+      "name": "Barbosa",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 5189,
+      "name": "Magro",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 5213,
+      "name": "Álvaro Maciel",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 5219,
+      "name": "Hamilton",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 5237,
+      "name": "Marcos",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 5243,
+      "name": "Dias",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 5245,
+      "name": "Rui Rodrigues",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 5265,
+      "name": "Roberto",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 5383,
+      "name": "Ariel Schapira",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 5396,
+      "name": "Jefferson Doe",
+      "status": "no_exact_match",
+      "source": "Wikidata P569/P18"
+    },
+    {
+      "source_id": 5398,
+      "name": "Zen Luzniak",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 5403,
+      "name": "Scott Brennan",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 5405,
+      "name": "Moise",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 5409,
+      "name": "Chris Antonopolous",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 5411,
+      "name": "Sean Lockwood",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 5434,
+      "name": "Doug Morrill",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 5444,
+      "name": "Tony Chiarella",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 5452,
+      "name": "Ivan Jurisic",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 5454,
+      "name": "Frank Cardona",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 5471,
+      "name": "Abdel Bahri",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 5472,
+      "name": "Cameron Walker",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 5485,
+      "name": "Christian Mindru",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 6100,
+      "name": "Mamadou Kane",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 6297,
+      "name": "Couppé",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 6389,
+      "name": "Quarcy",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 6467,
+      "name": "Hoffer",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 6593,
+      "name": "Hans Kemming",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 6923,
+      "name": "Brinks",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 6950,
+      "name": "Giezen",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 6957,
+      "name": "Aalbertsen",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 6984,
+      "name": "Sijahillatua",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 7040,
+      "name": "Wiebenga",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 7509,
+      "name": "Víctor Soria",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 7596,
+      "name": "Leopaldi",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 7783,
+      "name": "Alex Barros",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 7921,
+      "name": "Marcão Santos",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 9641,
+      "name": "Gabriel Añón",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 9643,
+      "name": "Guillermo Núñez",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 9644,
+      "name": "Luis Marquez",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 9653,
+      "name": "José di Conza ",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 9655,
+      "name": "Enrique Ferraro ",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 9782,
+      "name": "Eduardo Favaro",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 9996,
+      "name": "Wensley Ton",
+      "status": "no_exact_match",
+      "source": "Wikidata P569/P18"
+    },
+    {
+      "source_id": 9997,
+      "name": "van der Linden",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 9999,
+      "name": "Pieter de Vries",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 10009,
+      "name": "Ambro de Vries",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 10010,
+      "name": "Schippers",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 10121,
+      "name": "Marković",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 10643,
+      "name": "Garyfallopoulos",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 10718,
+      "name": "Brayan Perlaza",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 10741,
+      "name": "Pálmi Jónsson",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 10782,
+      "name": "Mingos",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 10879,
+      "name": "Folprecht",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 10925,
+      "name": "Makridis",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 10948,
+      "name": "Dany Jiménez",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 11002,
+      "name": "Robinson García",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 11010,
+      "name": "Dayro Zapata",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 11178,
+      "name": "Daniel Guilherme",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 11317,
+      "name": "Jádson",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": 11330,
+      "name": "Kalfountzos",
+      "status": "failed",
+      "source": "Wikidata P569/P18",
+      "reason": "HTTP Error 429: Too Many Requests"
+    }
+  ]
+}

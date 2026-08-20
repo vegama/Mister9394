@@ -96,6 +96,7 @@ const marketQuery = ref('')
 const marketPosition = ref('')
 const marketFreeAgents = ref(false)
 const marketWatchedOnly = ref(false)
+const activePlanNeed = ref(null)
 const restoredMarketTargetId = ref(null)
 const marketFlow = ref({watchlist:[],negotiations:[],listings:[],incoming_offers:[]})
 const economy = ref({currency:{code:'ESP',name:'pesetas',label:'ptas.'},cash:0,debt:0,source_budget:0,transfer_budget_total:0,transfer_budget_remaining:0,wage_budget_annual:0,wage_room_annual:0,wage_budget_usage_pct:0,monthly_wages:0,annual_wages:0,monthly_commercial_income:0,monthly_membership_income:0,monthly_television_income:0,monthly_sponsorship_income:0,monthly_operating_expense:0,monthly_debt_service:0,monthly_debt_interest:0,monthly_debt_principal:0,projected_monthly_net:0,safety_reserve:0,transfer_room:0,status:'—',top_salaries:[],recent_ledger:[],contract_data_note:''})
@@ -138,7 +139,17 @@ const competitionDetail = ref(null)
 const competitionViewMode = ref('table')
 const squad = ref([])
 const competitions = ref([])
+async function refreshCandidateComparison(careerId){
+ const ids=targets.value.slice(0,3).map(row=>Number(row[5])).filter(Boolean)
+ if(!careerId||ids.length<2){candidateComparison.value=null;return}
+ try{candidateComparison.value=await football9394Api.compareCandidates(careerId,ids)}
+ catch{candidateComparison.value=null}
+}
 const targets = ref([])
+// Veredicto de la comparacion A/B/C: lo calcula el servidor porque depende del
+// conocimiento que el club tiene de cada candidato, no de lo que se ve en la
+// tabla. Sin el, el panel enseña tres fichas y no dice si son separables.
+const candidateComparison = ref(null)
 const matches = ref([])
 const nextMatch = ref(null)
 const newsFeed = ref([])
@@ -289,6 +300,7 @@ async function refreshCareerData(state){
  matches.value=calendarRowsForUi([...recent,...upcoming],state)
  targets.value=marketRows.map(p=>[p.display_name,p.position,p.team_name,p.overall??'—',p.estimated_transfer_value??0,p.id,p])
  if(restoredMarketTargetId.value){const target=targets.value.find(row=>Number(row[5])===Number(restoredMarketTargetId.value));if(target)chooseTarget(target);restoredMarketTargetId.value=null}
+ await refreshCandidateComparison(state.career_id)
  competitions.value=competitionRows;newsFeed.value=newsRows;professionalCareer.value=careerRows;boardProject.value=projectRows;informationWorld.value=informationRows
  if(!competitionRows.some(c=>`${c.kind}:${c.source_id}`===selectedCompetition.value)&&competitionRows.length)selectedCompetition.value=`${competitionRows[0].kind}:${competitionRows[0].source_id}`
  await loadSelectedCompetitionTable()
@@ -483,10 +495,19 @@ async function disciplineSquadPlayer(payload){
  try{const result=await football9394Api.disciplinePlayer(careerId.value,payload.playerId,payload.action);applyCareerState(result.career);flash('Decisión disciplinaria registrada.')}catch(error){flash(`No se pudo aplicar la medida: ${error.message}`)}
 }
 async function applyPlanNeed(need){
+ activePlanNeed.value=need||null
  marketQuery.value=''
  marketPosition.value=need?.market_position||''
  await searchMarket()
  flash(need?.market_position?`Buscando ${need.label.toLowerCase()} según el plan de plantilla.`:'Mostrando mercado para ampliar la profundidad de plantilla.')
+}
+async function setTrainingRoleFocus(payload){
+ if(!careerId.value||!payload?.playerId)return
+ try{const result=await football9394Api.setTrainingRoleFocus(careerId.value,payload.playerId,payload.roleFocus);applyCareerState(result.career);flash('Adaptación de puesto guardada.')}catch(error){flash(`No se pudo cambiar el puesto: ${error.message}`)}
+}
+async function setSquadPlanDecision(payload){
+ if(!careerId.value||!payload?.playerId)return
+ try{const result=await football9394Api.setSquadPlanDecision(careerId.value,payload.playerId,payload.decision);applyCareerState(result.career);flash('Decisión de plantilla guardada.')}catch(error){flash(`No se pudo guardar la decisión: ${error.message}`)}
 }
 async function autoSelectLineup(){
  if(!careerId.value)return
@@ -839,6 +860,7 @@ onMounted(loadHistoricalCareer)
       :training="trainingState"
       @save-plan="saveTrainingPlan"
       @set-focus="setTrainingFocus"
+      @set-role-focus="setTrainingRoleFocus"
       @set-recovery="setTrainingRecovery"
       @set-match-preparation="setMatchPreparation"
       @open-staff="navigateTo('staff')"
@@ -951,6 +973,7 @@ onMounted(loadHistoricalCareer)
       :watched-only="marketWatchedOnly"
       :targets="targets"
       :selected-target="selectedTarget"
+      :comparison="candidateComparison"
       :transfer-fee="transferFee"
       :transfer-salary="transferSalary"
       :transfer-years="transferYears"
@@ -966,6 +989,7 @@ onMounted(loadHistoricalCareer)
       :own-squad="squad"
       :scouting="scoutingState"
       :squad-plan="squadPlan"
+      :plan-need="activePlanNeed"
       @update:query="marketQuery=$event"
       @update:position="marketPosition=$event"
       @update:free-agents="marketFreeAgents=$event"
@@ -980,6 +1004,7 @@ onMounted(loadHistoricalCareer)
       @update:transfer-loan-wage-share="transferLoanWageShare=$event"
       @search="searchMarket"
       @apply-plan="applyPlanNeed"
+      @set-plan-decision="setSquadPlanDecision"
       @watch="toggleWatch"
       @scout="scoutMarketPlayer"
       @inquire="inquireMarketPlayer"

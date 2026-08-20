@@ -12713,9 +12713,9 @@
               "score": 110
             }
           ],
-          "identity_resolution": "created_historical_identity",
-          "resolved_source_id": 9496345,
-          "resolved_display_name": "Ravil Rufailovich Sabitov",
+          "identity_resolution": "reconciled_database_hygiene_v113",
+          "resolved_source_id": 9496672,
+          "resolved_display_name": "Ravil Sabitov",
           "resolved_broad_position": "POR",
           "resolved_overall": 68,
           "resolved_primary_role": 2,
@@ -12731,7 +12731,8 @@
           "resolved_birth_place_text": "Moscow (USSR)",
           "individual_profile_source_url": "https://www.bdfutbol.com/en/j/j69694.html",
           "bdfutbol_id": "69694",
-          "profile_source_note": "BDFutbol uses the modern Russia birthplace label. Moscow in 1968 was USSR; Russia is stored separately as the 1993 citizenship/football identity, never back-projected into birth_country_id."
+          "profile_source_note": "BDFutbol uses the modern Russia birthplace label. Moscow in 1968 was USSR; Russia is stored separately as the 1993 citizenship/football identity, never back-projected into birth_country_id.",
+          "duplicate_source_id_retired": 9496345
         },
         {
           "bdfutbol_name": "Onya",

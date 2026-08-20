@@ -144,6 +144,26 @@ def manager_start_scouting(career_id: str, player_id: int, compact: bool = False
 def manager_squad_plan(career_id: str) -> dict:
     return _load_manager_career(career_id).squad_plan_snapshot()
 
+@router.put("/api/football9394/careers/{career_id}/training/roles/{player_id}")
+def manager_training_role_focus(career_id: str, player_id: int, payload: dict) -> dict:
+    career = _load_manager_career(career_id)
+    try:
+        result = career.set_player_training_role_focus(player_id, str(payload.get("role_focus") or "none"))
+    except (KeyError, ValueError) as exc:
+        raise HTTPException(status_code=409, detail=str(exc)) from exc
+    _career_store().save(career.state)
+    return {"training": result, "career": career.snapshot()}
+
+@router.put("/api/football9394/careers/{career_id}/squad-plan/players/{player_id}")
+def manager_squad_plan_decision(career_id: str, player_id: int, payload: dict) -> dict:
+    career = _load_manager_career(career_id)
+    try:
+        result = career.set_squad_plan_decision(player_id, str(payload.get("decision") or ""))
+    except (KeyError, ValueError) as exc:
+        raise HTTPException(status_code=409, detail=str(exc)) from exc
+    _career_store().save(career.state)
+    return {"squad_plan": result, "career": career.snapshot()}
+
 @router.get("/api/football9394/careers/{career_id}/teams/{team_id}")
 def manager_career_team(career_id: str, team_id: int) -> dict:
     career=_load_manager_career(career_id)
@@ -211,4 +231,3 @@ def manager_discipline_player(career_id: str, player_id: int, payload: Disciplin
     try: result=career.discipline_player(player_id,payload.action)
     except (KeyError,ValueError) as exc: raise HTTPException(status_code=409,detail=str(exc)) from exc
     _career_store().save(career.state);return ({"result":result,"dressing_room":career.dressing_room_api_snapshot(),"squad":career.squad_ui_snapshot()} if compact else {"result":result,"career":career.snapshot()})
-

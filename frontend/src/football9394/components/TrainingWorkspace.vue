@@ -7,7 +7,7 @@ import UiActionDock from '../../components/ui/UiActionDock.vue'
 const props = defineProps({
   training: { type: Object, default: () => ({ weekly_plan: [], players: [], session_options: [], intensity_options: [], focus_options: [], responsibility: {} }) },
 })
-const emit = defineEmits(['save-plan','set-focus','set-recovery','set-match-preparation','open-staff'])
+const emit = defineEmits(['save-plan','set-focus','set-role-focus','set-recovery','set-match-preparation','open-staff'])
 
 const localIntensity = ref('normal')
 const localWeek = ref([])
@@ -111,6 +111,7 @@ function resetPlan(){
           <span>{{player.training_load}} / 100</span>
           <b :class="riskClass(player.risk)">{{player.risk_label}}</b>
           <select :value="player.focus" :disabled="player.injury_days>0" @change="emit('set-focus',{playerId:player.player_id,focus:$event.target.value})"><option v-for="opt in training.focus_options || []" :key="opt.key" :value="opt.key">{{opt.label}}</option></select>
+          <select :value="player.role_focus || 'none'" :disabled="player.injury_days>0" aria-label="Adaptación de puesto" @change="emit('set-role-focus',{playerId:player.player_id,roleFocus:$event.target.value})"><option v-for="opt in training.role_focus_options || []" :key="opt.key" :value="opt.key">{{opt.label}}</option></select>
           <select :value="player.recovery || 'normal'" @change="emit('set-recovery',{playerId:player.player_id,recovery:$event.target.value})"><option v-for="opt in training.recovery_options || []" :key="opt.key" :value="opt.key">{{opt.label}}</option></select>
         </div>
       </div>

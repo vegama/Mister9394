@@ -104,8 +104,17 @@ def process_information_day(state: dict[str, Any], *, day: date) -> list[dict[st
     return events
 
 
+def _causal_chain(thread: dict[str, Any]) -> list[dict[str, Any]]:
+    chain = [{"stage": "fact", "label": "Hecho registrado", "active": bool(thread.get("fact"))}]
+    chain.append({"stage": "rumour", "label": f"Rumor · {int(thread.get('certainty') or 0)}%", "active": bool(thread.get("rumour"))})
+    chain.append({"stage": "news", "label": "Noticia confirmada", "active": bool(thread.get("news"))})
+    chain.append({"stage": "reaction", "label": "Reacción del entorno", "active": bool(thread.get("reactions"))})
+    chain.append({"stage": "consequence", "label": "Consecuencia aplicada", "active": bool(thread.get("consequences"))})
+    return chain
+
+
 def information_snapshot(state: dict[str, Any], *, limit: int = 80) -> dict[str, Any]:
     ensure_information_state(state)
     rows = list(state.get("information_threads") or [])
     rows.sort(key=lambda row: (str(row.get("date") or ""), int(str(row.get("id") or "0").split("-")[-1]) if str(row.get("id") or "").split("-")[-1].isdigit() else 0), reverse=True)
-    return {"threads": [dict(row) for row in rows[:max(1, min(200, int(limit))) ]], "media_reputation": dict(state.get("media_reputation") or {})}
+    return {"threads": [{**dict(row), "causal_chain": _causal_chain(row)} for row in rows[:max(1, min(200, int(limit))) ]], "media_reputation": dict(state.get("media_reputation") or {})}
