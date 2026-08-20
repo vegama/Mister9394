@@ -114,7 +114,22 @@ def build_player(row: dict[str, Any], *, source_id: int, team_id: int, country_i
     }
 
 
-def import_clubs(*, only_new: bool, baseline: int, snapshot_path: Path,
+def fabricated_at(snapshot: dict[str, Any], team_id: int) -> list[dict[str, Any]]:
+    """Los futbolistas inventados que la base original puso en ese club.
+
+    Se reconocen por no tener ``external_origin``: vienen de la importacion del
+    MDB. Para los clubes cuya liga el juego no simulaba, UNIFUTBOL relleno la
+    plantilla con nombres sacados de su generador, y se comprueba facil: del
+    Legia del 93 el juego tiene a Kadlec, Pekhart y Ayew -futbolistas reales de
+    los 2000 con fecha de nacimiento fabricada- y no coincide **ni una sola
+    fecha** con la plantilla verdadera.
+    """
+    return [p for p in snapshot["players"]
+            if int(p.get("team_id") or 0) == team_id and not p.get("external_origin")]
+
+
+def import_clubs(*, only_new: bool, include_existing: bool, delete_fabricated: bool,
+                 baseline: int, snapshot_path: Path,
                  squads_path: Path, mapping_path: Path, mdb_path: Path) -> dict[str, Any]:
     snapshot = json.loads(snapshot_path.read_text(encoding="utf-8"))
     squads = json.loads(squads_path.read_text(encoding="utf-8"))
@@ -140,6 +155,8 @@ def import_clubs(*, only_new: bool, baseline: int, snapshot_path: Path,
     for entry in mapping["seguros"]:
         if only_new and entry["en_juego"]:
             continue
+        if include_existing and not entry["en_juego"]:
+            continue
         found = by_mf.get(str(entry["mf"]))
         if found is None:
             continue
@@ -158,6 +175,7 @@ def import_clubs(*, only_new: bool, baseline: int, snapshot_path: Path,
         club_name = team.get("name") or entry["nombre"]
         country_id = league_country.get(int(row.get("Liga") or 0), 0) if row else 0
 
+        removed: list[dict[str, Any]] = []
         moved: list[dict[str, Any]] = []
         kept: list[dict[str, Any]] = []
         created: list[dict[str, Any]] = []
@@ -191,6 +209,19 @@ def import_clubs(*, only_new: bool, baseline: int, snapshot_path: Path,
                 continue
             pending.append(player_row)
 
+        # El borrado va aqui, con la plantilla real ya reconciliada: si la
+        # fuente no diera para once, es mejor quedarse con lo inventado que
+        # dejar un club sin equipo.
+        if delete_fabricated and len(pending) + len(moved) + len(kept) >= 11:
+            fake = fabricated_at(snapshot, team_id)
+            if fake:
+                fake_ids = {int(p["source_id"]) for p in fake}
+                snapshot["players"] = [p for p in snapshot["players"]
+                                       if int(p["source_id"]) not in fake_ids]
+                by_id_local = {int(p["source_id"]) for p in snapshot["players"]}
+                removed = [{"source_id": int(p["source_id"]), "name": p.get("display_name")}
+                           for p in fake]
+
         anchor = club_anchor(snapshot, team_id, baseline)
         for position, player_row in enumerate(pending):
             overall = squad_overall(anchor, position, len(pending))
@@ -204,7 +235,7 @@ def import_clubs(*, only_new: bool, baseline: int, snapshot_path: Path,
                      "team_created": created_team, "squad_read": len(club["squad"]),
                      "club_level_anchor": anchor, "created": created,
                      "moved_from_container": moved, "left_in_their_club": kept,
-                     "not_applied": skipped})
+                     "removed_fabricated": removed, "not_applied": skipped})
 
     snapshot["players"].sort(key=lambda p: int(p["source_id"]))
     snapshot["teams"].sort(key=lambda t: int(t["source_id"]))
@@ -214,6 +245,7 @@ def import_clubs(*, only_new: bool, baseline: int, snapshot_path: Path,
         "created": sum(len(d["created"]) for d in done),
         "moved_from_container": sum(len(d["moved_from_container"]) for d in done),
         "left_in_their_club": sum(len(d["left_in_their_club"]) for d in done),
+        "removed_fabricated": sum(len(d["removed_fabricated"]) for d in done),
         "not_applied": sum(len(d["not_applied"]) for d in done),
         "detail": done,
     }
@@ -225,16 +257,22 @@ def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--only-new", action="store_true",
                         help="salta los clubes que ya existen en el juego, que exigen borrar su plantilla inventada")
+    parser.add_argument("--include-existing", action="store_true",
+                        help="solo los clubes que ya estan en el juego")
+    parser.add_argument("--delete-fabricated", action="store_true",
+                        help="borra la plantilla inventada del club al sustituirla por la real")
     parser.add_argument("--baseline", type=int, default=68)
     parser.add_argument("--snapshot", type=Path, default=SNAPSHOT)
     parser.add_argument("--squads", type=Path, default=SQUADS)
     parser.add_argument("--mapping", type=Path, default=MAPPING)
     parser.add_argument("--mdb", type=Path, default=SOURCE_MDB)
     args = parser.parse_args()
-    report = import_clubs(only_new=args.only_new, baseline=args.baseline,
+    report = import_clubs(only_new=args.only_new, include_existing=args.include_existing,
+                          delete_fabricated=args.delete_fabricated, baseline=args.baseline,
                           snapshot_path=args.snapshot, squads_path=args.squads,
                           mapping_path=args.mapping, mdb_path=args.mdb)
     print(f"clubes {report['clubs']} | creados {report['created']} | "
+          f"borrados inventados {report['removed_fabricated']} | "
           f"del contenedor {report['moved_from_container']} | "
           f"dejados en su club {report['left_in_their_club']} | "
           f"sin aplicar {report['not_applied']}")
