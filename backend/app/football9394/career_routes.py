@@ -2,7 +2,11 @@ from __future__ import annotations
 
 from fastapi import APIRouter, HTTPException
 
+from datetime import date
+
+from .candidate_comparison import build_view, compare
 from .manager_career import ManagerCareerRuntime9394, career_selectable_leagues
+from .scouting import effective_knowledge
 from .national_teams import national_team_catalog, national_team_snapshot
 from .snapshot_runtime import default_runtime_snapshot
 from .manager_route_support import _career_store, _load_manager_career, _remember_manager_career
@@ -10,7 +14,7 @@ from .webapp_contracts import (
     CreateManagerCareerPayload, CareerTacticsPayload, CareerSelectionPayload, TransferOfferPayload,
     ContractRenewalPayload, LiveStartPayload, LiveAdvancePayload, LiveSubstitutionPayload, MarketNegotiationPayload,
     MarketCounterPayload, WatchlistPayload, TransferListingPayload, RolePromisePayload,
-    StaffResponsibilityPayload, TrainingPlanPayload, TrainingFocusPayload, TrainingRecoveryPayload,
+    CandidateComparisonPayload, StaffResponsibilityPayload, TrainingPlanPayload, TrainingFocusPayload, TrainingRecoveryPayload,
     MatchPreparationPayload, TacticalPhasePayload, TacticalPlayerInstructionPayload,
     OppositionInstructionPayload, SetPieceTakerPayload, DressingConcernPayload, DisciplinePayload,
     NationalSelectionPayload,
@@ -324,3 +328,24 @@ def manager_list_player(career_id: str, player_id: int, payload: TransferListing
 def manager_unlist_player(career_id: str, player_id: int, compact: bool = False) -> dict:
     career=_load_manager_career(career_id);career.unlist_player(player_id);(_career_store().save_boundary_overlay(career.state) if compact else _career_store().save(career.state));return ({"market_flow":career.market_snapshot(),"squad":career.squad_ui_snapshot()} if compact else {"career":career.snapshot()})
 
+
+@router.post("/api/football9394/careers/{career_id}/scouting/compare")
+def manager_compare_candidates(career_id: str, payload: CandidateComparisonPayload) -> dict:
+    """Compara candidatos con lo que el club sabe de cada uno.
+
+    Deliberadamente no consulta la media real del jugador salvo como ultimo
+    recurso: lo que se pone frente al usuario es el informe, con su horquilla y
+    su confianza. Si de alguien no se sabe nada, se dice.
+    """
+    career = _load_manager_career(career_id)
+    today = career.current_date
+    views = []
+    for player_id in payload.player_ids:
+        row = career.universe.players_by_id.get(int(player_id))
+        if row is None:
+            raise HTTPException(status_code=404, detail=f"jugador {player_id} desconocido")
+        knowledge = effective_knowledge(career.state, player_id=int(player_id), game_date=today)
+        # La representacion de mercado, no la fila cruda: es la que lleva la
+        # horquilla que el club puede estimar en vez de la media real.
+        views.append(build_view(career._external_player_api(row), knowledge, today=today))
+    return compare(views)

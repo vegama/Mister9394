@@ -87,6 +87,12 @@ class MarketCounterPayload(BaseModel):
 class WatchlistPayload(BaseModel):
     watched: bool = True
 
+class CandidateComparisonPayload(BaseModel):
+    """Los candidatos a comparar. Dos son pocos para llamarlo A/B/C y mas de
+    cinco deja de ser una decision y pasa a ser una lista."""
+    player_ids: list[int] = Field(min_length=2, max_length=5)
+
+
 class TransferListingPayload(BaseModel):
     asking_price: int | None = Field(default=None, ge=0)
 
